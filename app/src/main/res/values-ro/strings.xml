@@ -374,9 +374,9 @@
     <string name="settings_paste">Lipește</string>
     <string name="settings_api_key_saved">✓ Cheie API salvată</string>
     <string name="settings_grocery_export">Export listă de cumpărături</string>
-    <string name="settings_custom_header_description">Personalizează textul antetului când distribui lista de cumpărături. Lasă gol pentru a folosi antetul implicit.</string>
+    <string name="settings_custom_header_description">Personalizează textul antetului când distribui lista de cumpărături. Lasă gol pentru antetul implicit.</string>
     <string name="settings_custom_header_label">Antet personalizat (Opțional)</string>
-    <string name="settings_custom_header_placeholder">Lista de cumpărături a familiei mele</string>
+    <string name="settings_custom_header_placeholder">Lista de cumpărături</string>
     <string name="settings_custom_header_saved">✓ Antet personalizat salvat</string>
     <string name="settings_appearance">Aspect și accesibilitate</string>
     <string name="settings_font_family">Familie de fonturi</string>
