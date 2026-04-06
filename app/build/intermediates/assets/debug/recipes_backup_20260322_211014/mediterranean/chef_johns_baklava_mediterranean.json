@@ -1,0 +1,76 @@
+{
+  "name": "Chef John's Baklava",
+  "instructions": "1. Place walnuts, pistachios, and cinnamon in a bowl of a food processor. Pulse on and off until mixture is chopped but not too fine.\n\n2. Brush bottom of a 9-inch round baking pan with melted butter. Place one round of phyllo dough in the pan; add a second round of dough. Drip about 1 tablespoon of melted butter over the top. Add 2 more sheets and drizzle with butter. Add 2 more sheets and drip with butter creating 6 layers for the bottom. Keep the phyllo sheets covered with a damp, nearly dry, cotton towel while you work to prevent drying out.\n\n3. Sprinkle with 1/3 of the nut mixture. Top with a sheet of phyllo and drip with melted butter; repeat with 1 more sheet of phyllo. Add another 1/3 of the nut mixture. Place another sheet of phyllo on the nuts; drip with butter. Top with another sheet and drip with butter. Add the remaining nut mixture.\n\n4. Top with 2 sheets of phyllo; drip with butter. Add 2 more sheets; drip with butter. Top with the last 2 sheets and drizzle generously with the remaining butter. Cover pan with plastic and refrigerate until completely chilled, about 1 hour.\n\n5. Preheat oven to 350 degrees F (175 degrees C). Cut baklava into about 12 diamond-shaped pieces. Bake in preheated oven until browned and crisp, about an hour.\n\n6. Place sugar, honey, and cloves in a saucepan. Pour in water. Place pan over medium-high heat and whisk to combine. Bring to a boil; remove from heat. Whisk in vanilla and orange blossom water.\n\n7. After baklava has rested 5 minutes, ladle syrup over the top. Cool down to room temperature before serving.",
+  "simpleInstructions": "1. Process nuts with cinnamon.\n\n2. Layer phyllo sheets in buttered pan, alternating with nut mixture.\n\n3. Chill, cut, and bake until crisp.\n\n4. Boil syrup, add flavorings, then pour over baked baklava.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 60,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Walnuts",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pistachios",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Honey",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cloves",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/259482/chef-johns-baklava/",
+  "cuisine": "Mediterranean",
+  "id": "chef_johns_baklava",
+  "imageUrl": "recipes/images/mediterranean/chef_johns_baklava.jpg"
+}

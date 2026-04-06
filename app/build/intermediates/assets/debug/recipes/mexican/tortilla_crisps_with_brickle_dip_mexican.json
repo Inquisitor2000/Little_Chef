@@ -1,0 +1,70 @@
+{
+  "name": "Tortilla Crisps with Brickle Dip",
+  "instructions": "1. Preheat oven to 350 degrees F (175 degrees C). Line a baking sheet with parchment paper to prevent sticking.\n\n2. Cut the tortillas into triangular wedges and spread them in a single layer onto the prepared baking sheet. Mix some of the White Sugar with the Cinnamon in a small bowl. Drizzle the melted Butter evenly over the wedges, then sprinkle generously with the cinnamon-sugar mixture.\n\n3. Bake in the preheated oven until the chips are golden and crispy, about 15 minutes. They should be lightly crunchy and fragrant.\n\n4. While the chips are baking, prepare the dip. Mix the Cream Cheese, Brown Sugar, remaining White Sugar, and Vanilla Extract in a bowl until smooth and creamy. Gently fold in the Chocolate Chips until evenly distributed. Cover and chill the dip in the refrigerator until the chips are ready.\n\n5. Serve the warm, crispy chips with the cold brickle dip for a delicious contrast of temperatures and textures.",
+  "simpleInstructions": "1. Preheat oven and line baking sheet with parchment paper.\n\n2. Cut Tortillas into wedges, drizzle with melted Butter, and sprinkle with cinnamon-sugar mixture. Bake until crispy.\n\n3. Mix Cream Cheese, Brown Sugar, White Sugar, and Vanilla Extract. Fold in Chocolate Chips and chill.\n\n4. Serve warm chips with cold dip.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 15,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "APPETIZER",
+  "ingredients": [
+    {
+      "name": "Tortillas",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 4,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cream Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chocolate Chips",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/231016/tortilla-crisps-with-brickle-dip/",
+  "cuisine": "Mexican",
+  "id": "tortilla_crisps_with_brickle_dip",
+  "imageUrl": "recipes/images/mexican/tortilla_crisps_with_brickle_dip.webp"
+}

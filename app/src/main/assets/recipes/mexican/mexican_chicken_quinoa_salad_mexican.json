@@ -1,0 +1,100 @@
+{
+  "name": "Mexican Chicken Quinoa Salad",
+  "instructions": "1. Combine the Water, Quinoa, and one quarter of the Taco Seasoning in a medium saucepan. Bring to a rolling boil over high heat.\n\n2. Once boiling, reduce the heat to low, cover tightly with a lid, and simmer gently until the Quinoa is tender and fluffy and all the Water has been absorbed, about 15 minutes. Remove from heat and let stand covered for 5 minutes, then fluff with a fork.\n\n3. While the quinoa cooks, dice the Chicken Breast into bite-sized pieces and place in a bowl. Toss with the remaining Taco Seasoning until evenly coated. Let sit for the chicken to absorb the flavors, about 10 minutes.\n\n4. Heat the Butter in a large skillet over medium heat until melted and foaming. Add the seasoned chicken and cook, stirring occasionally, until the chicken is golden brown on the outside and no longer pink in the center, 5 to 10 minutes. Check that the internal temperature reaches 165 degrees F.\n\n5. Transfer the cooked chicken and Quinoa to a large bowl and place in the freezer to cool quickly, about 5 minutes, stirring once halfway through.\n\n6. Meanwhile, prepare the vegetables. In a large serving bowl, combine the diced Avocado, diced Red Onion, diced Celery, fresh Spinach leaves, shredded Carrot, diced Bell Peppers, diced Cucumber, and diced Jalapeño peppers.\n\n7. Add the cooled chicken and Quinoa mixture to the vegetables along with the Salsa. Toss everything together gently but thoroughly until well combined. Serve immediately or refrigerate until ready to serve.",
+  "simpleInstructions": "1. Cook the Quinoa with the Water and some Taco Seasoning until tender and fluffy.\n\n2. Season the diced chicken with remaining Taco Seasoning and cook in Butter until golden.\n\n3. Cool the chicken and Quinoa quickly in the freezer.\n\n4. Combine all the diced fresh vegetables in a large bowl.\n\n5. Mix everything together with the Salsa and serve.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Water",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Quinoa",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Taco Seasoning",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Chicken Breast",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Avocado",
+      "quantity": 75,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Onion",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Celery",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Spinach",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrot",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cucumber",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jalapeño",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salsa",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/242062/mexican-chicken-quinoa-salad/",
+  "cuisine": "Mexican",
+  "id": "mexican_chicken_quinoa_salad",
+  "imageUrl": "recipes/images/mexican/mexican_chicken_quinoa_salad.webp"
+}

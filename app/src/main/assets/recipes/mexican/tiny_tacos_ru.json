@@ -1,0 +1,124 @@
+{
+    "name": "Крошечные тако",
+    "instructions": "1. Добавьте оливковое масло, лук и говяжий фарш в чугунную сковороду на средне-сильном огне. Добавьте соль, порошок чили, кумин, перец чипотле, чесночный порошок, черный перец, сушеный орегано и кайенский перец. Разбейте говядину лопаткой, чтобы хорошо смешать со специями; готовьте до подрумянивания и раскрошивания на очень мелкие кусочки, 5-7 минут. Мясо должно быть полностью приготовлено и ароматно приправлено.\n\n2. Добавьте томатную пасту и воду; доведите до кипения. Уменьшите огонь до средне-слабого и готовьте, пока большая часть жидкости не испарится и смесь не загустеет, 15-20 минут. Добавьте перец халапеньо и готовьте 1 минуту для высвобождения ароматов. Выключите огонь, попробуйте и отрегулируйте приправы по вкусу.\n\n3. Разогрейте духовку до 175 градусов Цельсия. Сложите 2 или 3 тортильи за раз и используйте круглую формочку для теста, чтобы вырезать маленькие кружки из каждой стопки. Вы получите несколько маленьких кружков из каждой тортильи.\n\n4. Смешайте сыры монтерей джек и чеддер вместе. Покройте каждый кружок тортильи небольшим количеством сыра, затем добавьте примерно чайную ложку говяжьего фарша для тако и еще чайную ложку сыра сверху. Разложите на противне.\n\n5. Запекайте в разогретой духовке, пока сыр не расплавится и слегка не вздуется, около 3 минут. Выньте из духовки и осторожно сложите каждую тортилью пополам, пока она еще теплая и гибкая, формируя маленькие тако.\n\n6. Нагрейте растительное масло на антипригарной сковороде на средне-сильном огне. Обжарьте тако до хрустящей корочки и золотистого цвета с обеих сторон, около 2 минут с каждой стороны. Переложите на тарелку, застеленную бумажным полотенцем, для впитывания излишков масла перед подачей.",
+    "simpleInstructions": "1. Обжарьте говяжий фарш с луком и всеми специями до подрумянивания и раскрошивания.\n\n2. Добавьте томатную пасту и воду; тушите до загустения.\n\n3. Вырежьте маленькие кружки из тортилий, покройте смешанным сыром, мясом и еще сыром.\n\n4. Запекайте до расплавления сыра.\n\n5. Сложите тортильи пополам и обжарьте до хрустящей корочки.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 20,
+    "servings": 2,
+    "mealType": "SNACK",
+    "dishCategory": "APPETIZER",
+    "ingredients": [
+        {
+            "name": "Olive Oil",
+            "quantity": 5,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Onion",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Ground Beef",
+            "quantity": 90,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Chili Powder",
+            "quantity": 2,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cumin",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Chipotle Pepper",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic Powder",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Dried Oregano",
+            "quantity": 0.2,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cayenne Pepper",
+            "quantity": 0.25,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tomato Paste",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Water",
+            "quantity": 60,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Jalapeño",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tortillas",
+            "quantity": 90,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Monterey Jack Cheese",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Cheddar Cheese",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Vegetable Oil",
+            "quantity": 5,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/285368/tiny-tacos/",
+    "cuisine": "Mexican",
+    "id": "tiny_tacos",
+    "imageUrl": "recipes/images/mexican/tiny_tacos.webp"
+}

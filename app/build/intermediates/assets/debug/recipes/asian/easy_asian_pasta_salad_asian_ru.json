@@ -1,0 +1,82 @@
+{
+  "name": "Азиатский салат с пастой",
+  "instructions": "1. Доведите большую кастрюлю слегка подсоленной воды до сильного кипения на сильном огне. Добавьте спагетти и варите, периодически помешивая, пока они не приготовятся al dente (упругие при укусе), около 10-12 минут. Слейте воду через дуршлаг и тщательно промойте под холодной проточной водой, чтобы остановить приготовление. Переложите охлажденную пасту в большую сервировочную миску и перемешайте с оливковым маслом, чтобы предотвратить слипание.\n\n2. В средней миске взбейте венчиком соевый соус, белый сахар, рисовый уксус, поджаренные семена кунжута, сладкий соус чили и кунжутное масло до полного растворения сахара и образования однородной заправки.\n\n3. Полейте заправкой из соевого соуса пасту и хорошо перемешайте, чтобы равномерно покрыть. Добавьте нарезанный зеленый лук, нарезанный кубиками красный болгарский перец и стручковый горошек, аккуратно перемешивая для распределения овощей.\n\n4. Накройте миску и охладите в холодильнике минимум 30 минут или до ночи, чтобы позволить вкусам полностью смешаться и развиться. Перемешайте еще раз непосредственно перед подачей для освежения.",
+  "simpleInstructions": "1. Варите спагетти до al dente, промойте холодной водой и смешайте с маслом.\n\n2. Взбейте соевый соус, сахар, уксус, кунжут, чили и кунжутное масло до растворения.\n\n3. Смешайте пасту с заправкой, добавьте лук, перец и горошек.\n\n4. Охладите минимум 30 минут для смешивания вкусов, перемешайте перед подачей!",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 10,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "SALAD",
+  "ingredients": [
+    {
+      "name": "Spaghetti",
+      "quantity": 115,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 45,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rice Vinegar",
+      "quantity": 22.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 7.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sriracha",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 75,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Snap Peas",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/231269/easy-asian-pasta-salad/",
+  "cuisine": "Asian",
+  "id": "easy_asian_pasta_salad",
+  "imageUrl": "recipes/images/asian/easy_asian_pasta_salad.jpg"
+}

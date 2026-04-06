@@ -1,0 +1,88 @@
+{
+  "name": "Creveți Teriyaki Casnici",
+  "instructions": "1. Aranjați creveții congelați într-un singur strat pe o tavă metalică de copt și lăsați deoparte pentru a începe să se decongeleze ușor în timp ce pregătiți sosul.\n\n2. Într-o tigaie mare, combinați amino de cocos (sau sos de soia), ghimbirul ras, usturoiul tocat, zahărul brun, oțetul de orez și uleiul de susan. Aduceți amestecul la fierbere puternică la foc mediu, amestecând ocazional pentru a dizolva zahărul, aproximativ 3-4 minute.\n\n3. Adăugați creveții în sosul care fierbe într-un singur strat, asigurându-vă că nu se suprapun. Gătiți fără a amesteca timp de 2-3 minute pentru a permite fundurilor să se rumenească ușor.\n\n4. Întoarceți fiecare crevete și continuați să gătiți până se îndoaie în forma caracteristică de 'C' și se transformă din alb translucid în roz opac, încă aproximativ 2-3 minute. Aveți grijă să nu gătiți prea mult.\n\n5. Într-un bol mic, amestecați cu telul amidonul de porumb și apa până devine neted, fără cocoloașe rămase. Turnați amestecul în tigaie și gătiți, amestecând energic și constant, până când sosul se îngroașă într-o glazură lucioasă, aproximativ 1 minut. Scoateți imediat de pe foc.\n\n6. Serviți creveții teriyaki peste un pat de orez fierbinte gătit și decorați generos cu ceapă verde felii și o presărare de semințe de susan pentru aromă și textură suplimentară.",
+  "simpleInstructions": "1. Fierbeți amino de cocos, ghimbir, usturoi, zahăr, oțet și ulei de susan până face bule.\n\n2. Adăugați creveții în strat simplu, gătiți 2-3 minute, întoarceți și gătiți până devin roz și îndoiți.\n\n3. Amestecați amidonul cu apă, adăugați în tigaie, amestecați până devine lucios și îngroșat.\n\n4. Serviți peste orez fierbinte, decorați cu ceapă verde și susan, și savurați!",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 15,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "SEAFOOD",
+  "ingredients": [
+    {
+      "name": "Shrimp",
+      "quantity": 230,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ginger",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rice Vinegar",
+      "quantity": 7.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Rice",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Scallion",
+      "quantity": 7.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/280972/homemade-teriyaki-shrimp/",
+  "cuisine": "Asian",
+  "id": "homemade_teriyaki_shrimp",
+  "imageUrl": "recipes/images/asian/homemade_teriyaki_shrimp.jpg"
+}

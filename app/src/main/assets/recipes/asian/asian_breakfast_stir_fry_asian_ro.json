@@ -1,0 +1,100 @@
+{
+  "name": "Stir-Fry Asiatic pentru Micul Dejun",
+  "instructions": "1. Într-o cratiță medie, aduceți apa și quinoa la fierbere puternică pe foc mare. Odată ce fierbe, reduceți focul la mediu-mic, acoperiți cu un capac bine fixat și lăsați să fiarbă încet până când quinoa devine moale și a absorbit toată apa, aproximativ 15-20 de minute. Scoateți de pe foc și lăsați să stea acoperită.\n\n2. În timp ce quinoa se gătește, pregătiți legumele. Tăiați grosier morcovul, broccoli și ceapa, apoi procesați-le în robotul de bucătărie până sunt tocate fin, dar nu transformate în piure, menținând puțină textură.\n\n3. Încălziți uleiul de susan într-o tigaie mare sau wok la foc mediu până devine strălucitor. Adăugați usturoiul tocat și sotați, amestecând constant, până devine aromat și începe să se rumenească ușor, aproximativ 1 minut. Aveți grijă să nu ardeți usturoiul.\n\n4. Adăugați legumele tocate în tigaie și gătiți, amestecând frecvent, până când ceapa devine translucidă și legumele încep să se înmoaie, aproximativ 3-5 minute. Adăugați kale-ul și continuați să gătiți, amestecând totul împreună, până când kale-ul se ofilește, încă aproximativ 1 minut.\n\n5. Turnați sosul de soia și apa, amestecând pentru a combina. Lăsați amestecul să fiarbă încă 5 minute, permițând aromelor să se îmbine și lichidului să se reducă ușor. Adăugați pieptul de pui fărâmițat și quinoa gătită la amestecul de legume, amestecând bine pentru a distribui totul uniform. Gătiți până când totul este încălzit complet, aproximativ 2-3 minute.\n\n6. Transferați amestecul de stir-fry în farfurii de servire. Ungeți ușor aceeași tigaie cu spray de gătit și returna-o la foc mediu. Spargeți ouăle în tigaie și gătiți-le după preferință—ochi, întoarse sau omletă—aproximativ 3-5 minute în funcție de gradul de gătire dorit.\n\n7. Așezați cu grijă ouăle gătite deasupra stir-fry-ului pe fiecare farfurie. Dacă doriți, stropiți cu sos chili-usturoi, presărați cu frunze proaspete de coriandru și finalizați cu o cantitate generoasă de semințe de susan pentru aromă și crocant suplimentar. Serviți imediat cât este fierbinte.",
+  "simpleInstructions": "1. Fierbeți quinoa în apă până devine moale și pufoasă.\n\n2. Procesați legumele în robot până sunt tocate fin.\n\n3. Încălziți uleiul de susan, apoi sotați usturoiul până devine aromat și auriu.\n\n4. Adăugați legumele și gătiți până se înmoaie, apoi ofileți kale-ul.\n\n5. Adăugați sosul de soia și apa, apoi amestecați puiul și quinoa până se încălzesc.\n\n6. Gătiți ouăle după preferință în aceeași tigaie.\n\n7. Așezați ouăle peste stir-fry, decorați cu sos, coriandru și semințe de susan, apoi savurați!",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 35,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Water",
+      "quantity": 250,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Quinoa",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Carrot",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Broccoli",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 25,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Kale",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 25,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Breast",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Sriracha",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Cilantro",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/265277/asian-breakfast-stir-fry/",
+  "cuisine": "Asian",
+  "id": "asian_breakfast_stir_fry",
+  "imageUrl": "recipes/images/asian/asian_breakfast_stir_fry.jpg"
+}

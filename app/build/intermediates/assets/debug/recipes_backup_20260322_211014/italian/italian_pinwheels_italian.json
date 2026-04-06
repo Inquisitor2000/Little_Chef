@@ -1,0 +1,94 @@
+{
+  "name": "Italian Pinwheels",
+  "instructions": "1. Combine the Cream Cheese, grated Parmesan, chopped Sun-Dried Tomatoes, Italian Seasoning, Garlic Powder, and Italian Salad Dressing in a bowl. Mix until well blended and smooth.\n\n2. Spread half of the cream cheese mixture evenly over each Tortilla, leaving a small border around the edge to prevent spillage when rolling.\n\n3. Evenly scatter the shredded Lettuce over the cream cheese spread, then top with the Pickled Jalapeños for a spicy kick.\n\n4. Layer the Salami, Ham, and Provolone slices evenly on each tortilla, then sprinkle with the diced Bell Pepper for color and crunch.\n\n5. Starting from one edge, roll up each tortilla tightly into a log. Wrap each roll securely in plastic wrap and refrigerate for at least 1 hour to firm up and make slicing easier.\n\n6. When ready to serve, unwrap the rolls and use a sharp serrated knife to slice them into pinwheels. Arrange on a platter and serve immediately.",
+  "simpleInstructions": "1. Mix Cream Cheese with Parmesan, Sun-Dried Tomatoes, Italian Seasoning, Garlic Powder, and Italian Salad Dressing until smooth.\n\n2. Spread the mixture on Tortillas, leaving a border.\n\n3. Layer with Lettuce, Pickled Jalapeños, Salami, Ham, Provolone, and diced Bell Pepper.\n\n4. Roll tightly, wrap in plastic, and refrigerate for at least 1 hour.\n\n5. Slice into pinwheels and serve.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "APPETIZER",
+  "ingredients": [
+    {
+      "name": "Cream Cheese",
+      "quantity": 45,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Parmesan",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sun-Dried Tomatoes",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Italian Seasoning",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic Powder",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Italian Salad Dressing",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tortillas",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Lettuce",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Pickled Jalapeños",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salami",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ham",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Provolone",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/italian-pinwheels-recipe-8638178",
+  "cuisine": "Italian",
+  "id": "italian_pinwheels",
+  "imageUrl": "recipes/images/italian/italian_pinwheels.jpg"
+}

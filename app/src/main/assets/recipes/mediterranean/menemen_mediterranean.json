@@ -1,0 +1,88 @@
+{
+    "name": "Menemen",
+    "instructions": "1. Heat olive oil in a skillet over medium heat. Add onion, bell pepper, chiles, and red pepper flakes. Cook and stir until onions are soft and translucent, about 5 to 6 minutes.\n\n2. Add garlic and cook until fragrant, about 1 minute.\n\n3. Add tomatoes, with their juices, and season with salt and pepper. Cook until tomatoes are softened, about 4 to 6 minutes.\n\n4. Add eggs to the skillet, tilting the skillet until eggs cover skillet completely. Do not mix. Cook until eggs are set, about 3 to 5 minutes.\n\n5. Top with basil and feta cheese.",
+    "simpleInstructions": "1. Cook onions, peppers, and chiles in olive oil until soft.\n\n2. Add garlic and then tomatoes; cook until tomatoes soften.\n\n3. Pour beaten eggs into skillet and cook until set.\n\n4. Top with basil and feta cheese.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 15,
+    "servings": 2,
+    "mealType": "BREAKFAST",
+    "dishCategory": "VEGETARIAN",
+    "ingredients": [
+        {
+            "name": "Olive Oil",
+            "quantity": 15,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Onion",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Red Bell Pepper",
+            "quantity": 30,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Chili Pepper",
+            "quantity": 30,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Red Pepper Flakes",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tomato",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salt",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Eggs",
+            "quantity": 3,
+            "unit": "pcs",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Fresh Basil",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Feta Cheese",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/282688/menemen/",
+    "cuisine": "Mediterranean",
+    "id": "menemen",
+    "imageUrl": "recipes/images/mediterranean/menemen.jpg"
+}

@@ -1,0 +1,112 @@
+{
+    "name":  "Марокканское Рагу с Нутом",
+    "instructions":  "1. Разогрейте оливковое масло в большой кастрюле на среднем огне. Добавьте лук и чеснок; готовьте, пока лук не станет прозрачным, около 5-7 минут.  \n\n2. Добавьте молотый кумин, молотый кориандр, гарам масала, кайенский перец, порошок карри и соль; готовьте до появления аромата, около 1 минуты.  \n\n3. Добавьте картофель, нарезанные кубиками помидоры, томатный соус и изюм; добавьте достаточно воды, чтобы покрыть смесь. Доведите до кипения; готовьте, пока картофель не станет мягким, около 10-15 минут.  \n\n4. Добавьте капусту кале и нут; варите на медленном огне, пока капуста не завянет, около 3 минут.  \n\n5. Посыпьте рагу кинзой; немедленно снимите кастрюлю с огня.",
+    "simpleInstructions":  "1. Обжарьте лук и чеснок.  \n\n2. Добавьте специи и готовьте недолго.  \n\n3. Варите на медленном огне картофель, помидоры и изюм.  \n\n4. Добавьте капусту кале и нут, готовьте до увядания капусты.  \n\n5. Украсьте кинзой и снимите с огня.",
+    "prepTimeMinutes":  10,
+    "cookTimeMinutes":  20,
+    "servings":  2,
+    "mealType":  "DINNER",
+    "dishCategory":  "STEW",
+    "ingredients":  [
+                        {
+                            "name":  "Olive Oil",
+                            "quantity":  3.75,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Onion",
+                            "quantity":  75,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Garlic",
+                            "quantity":  3,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Cumin",
+                            "quantity":  2.5,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Coriander",
+                            "quantity":  2.5,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Garam Masala",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Cayenne Pepper",
+                            "quantity":  0.625,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Curry Powder",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Salt",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Potato",
+                            "quantity":  300,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Canned Tomatoes",
+                            "quantity":  200,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Tomato Sauce",
+                            "quantity":  120,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Raisins",
+                            "quantity":  120,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Kale",
+                            "quantity":  100,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Chickpeas",
+                            "quantity":  200,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Fresh Cilantro",
+                            "quantity":  15,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/217947/moroccan-chickpea-stew/",
+    "cuisine":  "Soups \u0026 Stews",
+    "id":  "moroccan_chickpea_stew",
+    "imageUrl":  "recipes/images/soups \u0026 stews/moroccan_chickpea_stew.jpg"
+}

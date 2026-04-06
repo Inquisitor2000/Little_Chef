@@ -1,0 +1,69 @@
+{
+    "id": "creamy_scallop_spaghetti",
+    "name": "Bay Scallop Spaghetti",
+    "instructions": "1. Cook the Spaghetti according to package instructions until al dente. Drain well and set aside, reserving a small amount of pasta water.\n\n2. Heat the Olive Oil in a large skillet over medium heat. Mince the Garlic finely and add to the oil. Cook, stirring frequently, until fragrant and lightly golden, about 1 minute. Be careful not to burn the garlic.\n\n3. Add the Scallops to the skillet in a single layer. Cook without moving them for about 2 minutes until they develop a golden-brown crust on one side. Flip and cook for another 1-2 minutes until just cooked through and opaque. The scallops should be tender and slightly springy. Remove from the skillet and set aside.\n\n4. In the same skillet, add the Cream and Sherry. Bring to a gentle simmer, stirring to incorporate any browned bits from the bottom of the pan. Let the sauce simmer until it thickens slightly and coats the back of a spoon, about 3-4 minutes.\n\n5. Return the cooked Scallops to the skillet along with the cooked Spaghetti. Toss everything together gently, adding a splash of reserved pasta water if needed to help the sauce coat the pasta evenly.\n\n6. Season with Salt and Black Pepper to taste. Chop the Fresh Parsley finely and sprinkle over the top as a fresh, colorful garnish before serving immediately.",
+    "simpleInstructions": "1. Cook Spaghetti until al dente, drain and set aside.\n\n2. Sauté minced Garlic in Olive Oil until fragrant, then cook Scallops until golden and just cooked through.\n\n3. Make creamy sauce with Cream and Sherry, simmering until slightly thickened.\n\n4. Combine pasta, Scallops, and sauce, tossing to coat.\n\n5. Season with Salt and Black Pepper, garnish with chopped Fresh Parsley.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 20,
+    "servings": 2,
+    "cuisine": "Italian",
+    "mealType": "DINNER",
+    "dishCategory": "PASTA",
+    "imageUrl": "recipes/images/italian/creamy_scallop_spaghetti.webp",
+    "ingredients": [
+        {
+            "name": "Spaghetti",
+            "quantity": 100,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Olive oil",
+            "quantity": 15,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Scallops",
+            "quantity": 200,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Cream",
+            "quantity": 120,
+            "unit": "ml",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Sherry",
+            "quantity": 50,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black pepper",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Fresh Parsley",
+            "quantity": 4,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ]
+}

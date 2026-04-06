@@ -1,0 +1,130 @@
+{
+    "name": "Тако аль пастор с жареной свининой",
+    "instructions": "1. Поместите сушеный перец гуахильо и пасилья в жаропрочную миску и залейте достаточным количеством кипящей воды, чтобы полностью покрыть их. Дайте перцу постоять 30 минут для размягчения и регидратации.\n\n2. Пока перец замачивается, нарежьте свиную вырезку длинными полосками толщиной около полутора сантиметров и отложите в сторону.\n\n3. Слейте воду с размягченного перца и переложите его в блендер. Добавьте свежевыжатый ананасовый сок, белый уксус, чеснок, перец чипотле, корицу, кайенский перец, кумин и сушеный орегано. Взбивайте на высокой скорости до получения полностью однородного темно-красного маринада.\n\n4. Поместите полоски свинины в большой герметичный пластиковый пакет и залейте маринадом. Закройте пакет и аккуратно разомните, чтобы равномерно покрыть всю свинину. Охлаждайте в холодильнике на ночь или минимум 4 часа, чтобы вкусы проникли в мясо.\n\n5. Разогрейте гриль на сильном огне и слегка смажьте решетку маслом, чтобы предотвратить прилипание. Выньте свинину из пакета и выбросьте маринад. Слегка промокните мясо, затем сбрызните растительным маслом и щедро приправьте солью.\n\n6. Готовьте полоски свинины на разогретом гриле до полной готовности и легкого обугливания, 7-8 минут с каждой стороны. Внутренняя температура должна достичь 63 градусов Цельсия. Дайте мясу отдохнуть 5 минут перед нарезкой на кусочки размером с укус.\n\n7. Сбрызните сковороду растительным маслом на среднем огне. Положите тортильи на сковороду и сверху на каждую положите ломтики сыра монтерей джек. Нагревайте, пока сыр не расплавится, а тортильи не станут теплыми и гибкими.\n\n8. Соберите тако, положив нарезанную свинину на каждую тортилью, затем добавив сверху нашинкованную капусту, сальсу и нарезанный халапеньо. Подавайте немедленно, пока горячие.",
+    "simpleInstructions": "1. Замочите сушеный перец в кипящей воде на 30 минут для размягчения.\n\n2. Нарежьте свиную вырезку длинными полосками.\n\n3. Взбейте размягченный перец со специями и соками для маринада, покройте свинину и охлаждайте на ночь.\n\n4. Обжарьте маринованную свинину до готовности, затем дайте отдохнуть и нарежьте.\n\n5. Нагрейте тортильи с сыром монтерей джек до расплавления.\n\n6. Соберите тако со свининой, капустой, сальсой и халапеньо.",
+    "prepTimeMinutes": 30,
+    "cookTimeMinutes": 25,
+    "servings": 2,
+    "mealType": "DINNER",
+    "dishCategory": "PORK",
+    "ingredients": [
+        {
+            "name": "Dried Guajillo Chiles",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Dried Pasilla Chiles",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Water",
+            "quantity": 240,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Pork Tenderloin",
+            "quantity": 150,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Pineapple Juice",
+            "quantity": 40,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "White Vinegar",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Chipotle Pepper",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cinnamon",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cayenne Pepper",
+            "quantity": 0.25,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cumin",
+            "quantity": 0.25,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Dried Oregano",
+            "quantity": 0.25,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Vegetable Oil",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tortillas",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Monterey Jack Cheese",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cabbage",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salsa",
+            "quantity": 30,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Jalapeño",
+            "quantity": 4,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/234270/grilled-pork-tacos-al-pastor/",
+    "cuisine": "Mexican",
+    "id": "grilled_pork_tacos_al_pastor",
+    "imageUrl": "recipes/images/mexican/grilled_pork_tacos_al_pastor.webp"
+}

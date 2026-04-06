@@ -1,0 +1,58 @@
+{
+  "name": "Burrito cu Chorizo pentru Micul Dejun",
+  "instructions": "1. Ungeți generos o tigaie mare cu spray de gătit. Gătiți și amestecați chorizo în tigaia pregătită la foc mediu-puternic până devine bine rumenit și sfărâmat.\n\n2. Adăugați ceapa și ardeiul chile; continuați să gătiți, amestecând ocazional, până când ceapa devine fragedă.\n\n3. Bateți ouăle într-un bol mediu și adăugați la amestecul de chorizo. Reduceți focul la mediu-scăzut; continuați să gătiți și să amestecați până când ouăle sunt scramble și nu mai sunt lichide.\n\n4. Încălziți tortilla de făină la microunde timp de 30 de secunde.\n\n5. Puneți amestecul de chorizo și ouă în mijlocul fiecărei tortilla și presărați cu brânză Cheddar rasă. Rulați ca un burrito.",
+  "simpleInstructions": "1. Gătiți chorizo într-o tigaie până se rumenește.\n\n2. Adăugați ceapa și ardeiul verde; gătiți până devine fraged.\n\n3. Bateți ouăle, adăugați la amestec și faceți scramble.\n\n4. Încălziți tortilla la microunde.\n\n5. Umpleți tortilla cu amestec, adăugați brânză și rulați.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 15,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Chorizo",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Red Onion",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Green Chile Peppers",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Tortillas",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cooking Spray",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/76464/chorizo-breakfast-burritos/",
+  "cuisine": "Mediterranean",
+  "id": "chorizo_breakfast_burritos",
+  "imageUrl": "recipes/images/mediterranean/chorizo_breakfast_burritos.jpg"
+}

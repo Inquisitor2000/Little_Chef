@@ -1,0 +1,100 @@
+{
+  "name": "Omletă Grecească cu Sparanghel și Brânză Feta",
+  "instructions": "1. Încălziți uleiul de măsline într-o tigaie mare la foc mediu; gătiți și amestecați sparanghelul și ardeiul gras roșu până când legumele încep să se înmoaie, aproximativ 3 minute.\n\n2. Adăugați roșiile cherry, spanacul, usturoiul, oregano, busuiocul și sare după gust. Continuați să gătiți până când roșiile sunt moi și spanacul s-a redus, încă 3 până la 5 minute.\n\n3. Scoateți de pe foc și transferați legumele pe o farfurie.\n\n4. Topiți untul într-o tigaie curată la foc mediu. Bateți ouăle și laptele într-un bol și turnați în untul fierbinte, rotind tigaia pentru a acoperi întreaga bază cu amestecul de ouă.\n\n5. Ridicați marginea omletei cu o spatulă și înclinați tigaia pentru a permite oului neîntărit să curgă dedesubt și să se gătească; continuați în jurul tigăii, ridicând marginea omletei și înclinând tigaia, până când tot amestecul de ouă este întărit. Presărați omleta cu sare.\n\n6. Puneți amestecul de sparanghel gătit pe o parte a omletei și presărați cu brânză feta și brânză cheddar. Împăturiți ușor jumătate din omletă peste legume și brânză și apăsați ușor marginile pentru a sigila umplutura.\n\n7. Gătiți până când umplutura este fierbinte și brânza cheddar s-a topit, încă 1 până la 2 minute. Tăiați în felii pentru a servi.",
+  "simpleInstructions": "1. Gătiți sparanghelul și ardeiul gras.\n\n2. Adăugați roșiile, spanacul, usturoiul și ierburile; gătiți până se înmoaie.\n\n3. Gătiți amestecul de ouă în unt.\n\n4. Umpleți omleta cu legume și brânză, împăturiți și gătiți până se topește brânza.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "VEGETARIAN",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Asparagus",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Red Bell Pepper",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cherry Tomatoes",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Spinach",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Basil",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 6,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg",
+      "quantity": 3,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Whole Milk",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Feta Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/222566/greek-omelet-with-asparagus-and-feta-cheese/",
+  "cuisine": "Mediterranean",
+  "id": "greek_omelet_with_asparagus_and_feta_cheese",
+  "imageUrl": "recipes/images/mediterranean/greek_omelet_with_asparagus_and_feta_cheese.jpg"
+}

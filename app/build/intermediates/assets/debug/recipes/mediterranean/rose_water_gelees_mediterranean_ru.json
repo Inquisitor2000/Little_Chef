@@ -1,0 +1,58 @@
+{
+  "name": "Желе с Розовой Водой",
+  "instructions": "1. Смажьте небольшую форму растительным маслом.\n\n2. Налейте примерно 40% воды в небольшую миску и посыпьте желатином сверху. Дайте постоять до размягчения, около 15 минут.\n\n3. В кастрюле смешайте оставшуюся воду, сахар и лимонный сок на среднем огне и доведите до кипения, помешивая до растворения сахара.\n\n4. Увеличьте огонь и кипятите сироп под крышкой в течение 3 минут.\n\n5. Откройте кастрюлю и прикрепите термометр для конфет сбоку. Продолжайте готовить, пока температура не достигнет 114°C, около 5 минут.\n\n6. Снимите с огня и размешайте желатиновую смесь до полного растворения.\n\n7. Добавьте розовую воду и красный пищевой краситель.\n\n8. Вылейте сироп в смазанную форму и дайте постоять при комнатной температуре до застывания, около 4 часов.\n\n9. Накройте пленкой и охладите в течение 8 часов или на ночь.\n\n10. Нарежьте застывшую смесь на квадраты размером 2,5 см и посыпьте кукурузным крахмалом.",
+  "simpleInstructions": "1. Приготовьте желатин в воде и дайте размягчиться.\n\n2. Вскипятите сахарный сироп с водой и лимонным соком, затем добавьте желатин.\n\n3. Добавьте розовую воду и краситель. Вылейте в форму.\n\n4. Дайте застыть при комнатной температуре, затем охладите.\n\n5. Нарежьте и посыпьте кукурузным крахмалом.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 13,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Vegetable Oil",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 170,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Gelatin",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Food Coloring",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/255876/rose-water-gelees/",
+  "cuisine": "Mediterranean",
+  "id": "rose_water_gelees",
+  "imageUrl": "recipes/images/mediterranean/rose_water_gelees.jpg"
+}

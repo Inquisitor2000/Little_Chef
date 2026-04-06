@@ -1,0 +1,52 @@
+{
+    "name": "Camarones a la Diabla",
+    "instructions": "1. Topiți untul într-o tigaie mare la foc mediu până când începe să facă spumă.\n\n2. Adăugați creveții curățați și fără vene în untul topit. Gătiți, amestecând ocazional, până când încep să devină roz și se îndoaie ușor, aproximativ 2-3 minute. Condimentați cu sare și piper negru după gust.\n\n3. Turnați ketchup-ul și sosul iute, amestecând pentru a acoperi creveții uniform cu sosul. Ajustați cantitatea de sos iute în funcție de nivelul de picantitate preferat.\n\n4. Continuați să gătiți, amestecând frecvent, până când creveții devin roz strălucitor, opaci în interior și complet gătiți, iar sosul fierbe și se îngroașă ușor, 7-10 minute. Aveți grijă să nu supracoaceți creveții sau vor deveni cauciucoși. Serviți imediat cu orez sau tortillas.",
+    "simpleInstructions": "1. Topiți untul într-o tigaie la foc mediu.\n\n2. Gătiți creveții până încep să devină roz, apoi condimentați cu sare și piper negru.\n\n3. Amestecați ketchup-ul și sosul iute pentru a acoperi.\n\n4. Gătiți până când creveții devin roz strălucitor și sosul fierbe.",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 10,
+    "servings": 2,
+    "mealType": "DINNER",
+    "dishCategory": "SEAFOOD",
+    "ingredients": [
+        {
+            "name": "Butter",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Shrimp",
+            "quantity": 230,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salt",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Ketchup",
+            "quantity": 120,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Hot Sauce",
+            "quantity": 120,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/232869/camarones-a-la-diabla/",
+    "cuisine": "Mexican",
+    "id": "camarones_a_la_diabla",
+    "imageUrl": "recipes/images/mexican/camarones_a_la_diabla.webp"
+}

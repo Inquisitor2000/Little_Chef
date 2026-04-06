@@ -1,0 +1,118 @@
+{
+  "name": "Asian Shrimp Rice Bowl",
+  "instructions": "1. In a small bowl, whisk together the soy sauce, hoisin sauce, honey, orange marmalade, and chili paste until well combined. Add the shrimp, stirring to coat evenly. Cover the bowl and refrigerate for 1 hour to allow the flavors to infuse into the shrimp.\n\n2. In a medium saucepan over high heat, bring the water and rice to a rolling boil. Once boiling, reduce the heat to medium-low, cover with a tight-fitting lid, and simmer gently until the rice is tender and has absorbed all the liquid, about 20 to 25 minutes. Remove from heat and let stand covered.\n\n3. When the rice is almost finished cooking, heat the oil in a large skillet or wok over medium-high heat until shimmering. Add the snap peas, sliced bell peppers, and diced onion, and sauté, stirring frequently, until the vegetables just begin to soften while retaining some crunch, about 2 to 3 minutes.\n\n4. Add the marinated shrimp along with any remaining marinade, minced garlic, grated ginger, and sesame oil to the skillet. Continue to cook, tossing everything together, until the shrimp turn pink and are cooked through, about 2 to 3 more minutes.\n\n5. Divide the hot rice among serving bowls. Top generously with the shrimp and vegetable mixture, and sprinkle with sesame seeds for a nutty finish. Serve immediately and enjoy!",
+  "simpleInstructions": "1. Whisk sauce ingredients, toss with shrimp, and chill for 1 hour.\n\n2. Simmer rice in water until fluffy and tender.\n\n3. Stir-fry snap peas, peppers, and onion until crisp-tender.\n\n4. Add marinated shrimp, garlic, ginger, and sesame oil, cooking until shrimp are pink.\n\n5. Serve the shrimp and veggies over rice, topped with sesame seeds!",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 25,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "RICE_BOWL",
+  "ingredients": [
+    {
+      "name": "Soy Sauce",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Hoisin Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Honey",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Marmalade",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sriracha",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Shrimp",
+      "quantity": 110,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 360,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jasmine Rice",
+      "quantity": 180,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Snap Peas",
+      "quantity": 110,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 1,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/148232/asian-shrimp-rice-bowl/",
+  "cuisine": "Asian",
+  "id": "asian_shrimp_rice_bowl",
+  "imageUrl": "recipes/images/asian/asian_shrimp_rice_bowl.jpg"
+}

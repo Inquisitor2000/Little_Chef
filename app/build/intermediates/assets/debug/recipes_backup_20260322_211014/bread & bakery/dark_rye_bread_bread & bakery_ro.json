@@ -1,0 +1,76 @@
+{
+  "name": "Pâine Neagră de Secară",
+  "instructions": "1. Puneți apa, melasa, uleiul vegetal și sarea în tava mașinii de pâine în ordinea recomandată de producător.  \n\n2. Adăugați făina universală, făina de secară, zahărul brun, pudra de cacao, semințele de chimen și drojdia pentru mașina de pâine deasupra ingredientelor umede.  \n\n3. Selectați ciclul Basic și apăsați Start pentru a începe procesul de preparare a pâinii.  \n\n4. Odată ce pâinea este gata, lăsați-o să se răcească și apoi tăiați pentru a servi.",
+  "simpleInstructions": "1. Adăugați ingredientele în mașina de pâine conform ordinii.  \n\n2. Selectați ciclul Basic și apăsați Start.  \n\n3. Lăsați să se răcească după gătire înainte de a servi.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BREAD",
+  "ingredients": [
+    {
+      "name": "Water",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Molasses",
+      "quantity": 75,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 37.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Rye Flour",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 75,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cocoa Powder",
+      "quantity": 37.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Caraway Seeds",
+      "quantity": 1.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bread Machine Yeast",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/7117/dark-rye-bread/",
+  "cuisine": "Bread & Bakery",
+  "id": "dark_rye_bread",
+  "imageUrl": "recipes/images/bread & bakery/dark_rye_bread.jpg"
+}

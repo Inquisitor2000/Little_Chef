@@ -1,0 +1,64 @@
+{
+  "name": "Mochi Gulung",
+  "instructions": "1. In a large mixing bowl, combine all the ingredients for the mochi dough: the glutinous rice flour (which provides the signature chewy texture), cornstarch (for smoothness), vegetable oil, sugar, coconut milk, and water. Whisk together vigorously until you have a thick, smooth paste with no lumps remaining—the consistency should be similar to pancake batter but slightly thicker.\n\n2. Prepare your steamer by filling it with water and bringing it to a rolling boil over high heat. Carefully place the bowl with the mochi batter inside the steamer basket, ensuring the bowl sits securely and won't tip. Cover with a tight-fitting lid and steam for 15-20 minutes, checking occasionally. The batter is done when it transforms from a liquid paste into a solid, translucent, stretchy mass that pulls away from the sides of the bowl. Remove carefully using oven mitts as the bowl will be very hot.\n\n3. Turn out the hot steamed mochi dough onto a large sheet of parchment paper. Place another sheet of parchment on top to prevent sticking. Using a rolling pin, roll the dough out into a square sheet measuring approximately 15 x 15 cm (6 inches) and about 6mm (1/4-inch) thick. Work while the dough is still warm as it's more pliable—if it cools and becomes too stiff, you can briefly steam it again to soften.\n\n4. Remove the top parchment paper. Using the back of a spoon or an offset spatula, gently spread half of the sweet red bean paste (dou sha) evenly over the entire surface of the mochi sheet, leaving a small border along one edge. Spread it thin enough to taste in every bite but not so thick that it oozes out when rolling.\n\n5. Starting from the edge opposite the border, carefully roll the mochi sheet tightly like a jelly roll, using the parchment paper to help guide and support the roll. Roll firmly but gently to avoid tearing the delicate mochi. Once fully rolled, pinch the seam gently to seal.\n\n6. Spread the sesame seeds or toasted glutinous rice flour generously on a clean sheet of parchment paper. Gently roll the mochi log over the coating, pressing lightly so the seeds or flour adhere evenly to the entire surface, creating a beautiful textured exterior.\n\n7. Using a sharp knife lightly oiled or dipped in water (to prevent sticking), cut the mochi roll into 6 equal pieces, wiping the knife clean between cuts for neat slices. Arrange on a serving plate and serve immediately while fresh and soft for the best texture.\n\n8. Repeat steps 3 through 7 with the remaining half of the steamed mochi dough and the other half of the red bean paste filling to make a second batch of rolls.",
+  "simpleInstructions": "1. Whisk all mochi dough ingredients into a thick, smooth paste.\n\n2. Steam the batter for 15-20 minutes until it becomes a solid, stretchy mass.\n\n3. Roll the warm dough between parchment into a 15cm square sheet.\n\n4. Spread half the red bean paste evenly over the mochi.\n\n5. Roll tightly like a jelly roll, seal the seam.\n\n6. Roll in sesame seeds or toasted flour to coat.\n\n7. Cut into 6 pieces with an oiled knife and serve fresh.\n\n8. Repeat with remaining dough and filling.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 25,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Glutinous Rice Flour",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Coconut Milk",
+      "quantity": 50,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 50,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Bean Paste",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://whattocooktoday.com/mochi-gulung-mochi-rolls.html",
+  "cuisine": "Asian",
+  "id": "mochi_gulung_mochi_rolls.html",
+  "imageUrl": "recipes/images/asian/mochi_gulung_mochi_rolls.html.jpg"
+}

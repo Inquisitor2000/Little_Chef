@@ -1,0 +1,52 @@
+{
+    "name":  "Pâine Franceză",
+    "instructions":  "1. Ungeți o tavă mare de copt și presărați cu mălai. Puneți deoparte.  \n\n2. Combinați făina, drojdia și sarea în vasul unui mixer. Adăugați apa și bateți cu accesoriul pentru aluat până se amestecă.  \n\n3. Continuați să adăugați făina rămasă, puțin câte puțin, până se încorporează.  \n\n4. Frământați aluatul pe o suprafață ușor presărată cu făină până devine neted și elastic, aproximativ 8-10 minute. Modelați într-o bilă, puneți într-un vas uns și întoarceți o dată.  \n\n5. Acoperiți și lăsați să crească într-un loc cald până se dublează ca mărime, aproximativ 1 oră.  \n\n6. Loviți aluatul și împărțiți în jumătate.  \n\n7. Scoateți pe o suprafață ușor presărată cu făină. Acoperiți și lăsați să se odihnească 10 minute.  \n\n8. Rulați fiecare jumătate într-un dreptunghi mare. Rulați, începând de la o latură lungă. Umectați marginea cu apă și sigilați. Ascuțiți capetele.  \n\n9. Puneți pâinile, cu cusătura în jos, pe tava de copt pregătită.  \n\n10. Bateți ușor albușul cu apă și ungeți pâinile.  \n\n11. Acoperiți cu o cârpă umedă și lăsați să crească până aproape se dublează, 35-40 de minute.  \n\n12. Preîncălziți cuptorul la 190 de grade Celsius. Faceți 3 sau 4 tăieturi diagonale, de aproximativ 1,25 cm adâncime, pe fiecare pâine.  \n\n13. Coaceți în cuptorul preîncălzit timp de 20 de minute.  \n\n14. Ungeți pâinile cu amestecul de albuș și continuați coacerea până când pâinile sună gol când sunt bătute, aproximativ încă 15-20 de minute.  \n\n15. Scoateți pâinile de pe tavă și răciți pe un grătar.",
+    "simpleInstructions":  "1. Pregătiți tava de copt și combinați ingredientele inițiale.  \n\n2. Frământați aluatul, lăsați să crească, loviți și modelați în pâini.  \n\n3. Ungeți cu albuș, lăsați să crească din nou și faceți tăieturi pe pâini.  \n\n4. Coaceți la 190 de grade Celsius, ungând o dată, și răciți pe grătar.",
+    "prepTimeMinutes":  10,
+    "cookTimeMinutes":  35,
+    "servings":  2,
+    "mealType":  "SNACK",
+    "dishCategory":  "BREAD",
+    "ingredients":  [
+                        {
+                            "name":  "All-Purpose Flour",
+                            "quantity":  400,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Active Dry Yeast",
+                            "quantity":  15,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Salt",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Water",
+                            "quantity":  255,
+                            "unit":  "ml",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Cornmeal",
+                            "quantity":  7.5,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Egg Whites",
+                            "quantity":  1,
+                            "unit":  "pcs",
+                            "isStarIngredient":  false
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/6882/french-bread/",
+    "cuisine":  "Bread \u0026 Bakery",
+    "id":  "french_bread",
+    "imageUrl":  "recipes/images/bread \u0026 bakery/french_bread.jpg"
+}

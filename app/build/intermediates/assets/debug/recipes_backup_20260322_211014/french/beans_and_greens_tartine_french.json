@@ -1,0 +1,118 @@
+{
+  "name": "Beans and Greens Tartine",
+  "instructions": "1. Preheat the oven to 350 degrees F (175 degrees C). Drizzle olive oil on both sides of the bread. Bake until light golden brown, about 20 minutes. 2. Bring a large pot of lightly salted water to a boil over high heat. Add Swiss chard and cook for 2 minutes. Transfer the chard to a bowl of cold water, drain, and squeeze out excess water. Roughly chop the chard. 3. Heat the olive oil in a skillet over medium heat, add the garlic, and cook until fragrant. Add the chard, lemon zest, salt, pepper, and cayenne. Remove from heat and set aside. 4. Cook bacon in a skillet over medium-high heat until crisp. Drain and crumble. 5. Remove all but 1 to of bacon fat from the skillet. Add the green onions and cook for 1 minute. Stir in the cumin, oregano, and salt. Add the beans and water, then simmer. Mash the beans to your desired texture. Adjust salt to taste. 6. Preheat the oven to 450 degrees F (230 degrees C). Spread the bean mixture on the toast, top with the chard, crumbled bacon, lemon juice, and grated pepper Jack cheese. 7. Bake until cheese starts to brown and the tartines are heated through, about 12 minutes. Serve topped with Fresno chile slices and green onions.",
+  "simpleInstructions": "1. Bake olive oil-drizzled bread until golden. 2. Cook and chop Swiss chard. 3. Sauté garlic, chard, and seasonings. 4. Cook bacon until crisp. 5. Sauté green onions, cumin, oregano, then add the beans and mash. 6. Top the toast with the beans, chard, bacon, lemon juice, and cheese, then bake. 7. Garnish and serve.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 35,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "SANDWICH",
+  "ingredients": [
+    {
+      "name": "Baguette",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Swiss Chard",
+      "quantity": 50.0,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 25.0,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 0.2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bacon",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cumin",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Pinto Beans",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 25.0,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Pepper Jack Cheese",
+      "quantity": 85,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jalapeño Pepper",
+      "quantity": 25.0,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/8524473/beans-and-greens-tartine/",
+  "cuisine": "French",
+  "id": "beans_and_greens_tartine",
+  "imageUrl": "recipes/images/french/beans_and_greens_tartine.jpg"
+}

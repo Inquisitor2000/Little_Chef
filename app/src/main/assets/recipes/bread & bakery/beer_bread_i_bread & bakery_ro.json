@@ -1,0 +1,46 @@
+{
+    "name":  "Pâine cu Bere",
+    "instructions":  "1. Preîncălziți cuptorul la 175 de grade Celsius și ungeți o tavă mică de pâine cu spray de gătit.  \n\n2. Într-un bol mare, amestecați făina, praful de copt, sarea și zahărul.  \n\n3. Turnați berea în amestecul de făină.  \n\n4. Amestecați cu o lingură de lemn și apoi cu mâinile până se combină bine; rețineți că aluatul va fi lipicios.  \n\n5. Turnați aluatul în tava pregătită.  \n\n6. Coaceți în cuptorul preîncălzit până devine auriu pe deasupra, aproximativ 50-60 de minute.",
+    "simpleInstructions":  "1. Preîncălziți cuptorul și pregătiți tava de pâine.  \n\n2. Amestecați făina, praful de copt, sarea, zahărul și berea pentru a forma aluatul.  \n\n3. Transferați aluatul în tava de pâine.  \n\n4. Coaceți până devine auriu.",
+    "prepTimeMinutes":  10,
+    "cookTimeMinutes":  50,
+    "servings":  2,
+    "mealType":  "SNACK",
+    "dishCategory":  "BREAD",
+    "ingredients":  [
+                        {
+                            "name":  "All-Purpose Flour",
+                            "quantity":  300,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Baking Powder",
+                            "quantity":  11.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Salt",
+                            "quantity":  3.75,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "White Sugar",
+                            "quantity":  11,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Beer",
+                            "quantity":  180,
+                            "unit":  "ml",
+                            "isStarIngredient":  true
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/6717/beer-bread-i/",
+    "cuisine":  "Bread \u0026 Bakery",
+    "id":  "beer_bread_i",
+    "imageUrl":  "recipes/images/bread \u0026 bakery/beer_bread_i.jpg"
+}

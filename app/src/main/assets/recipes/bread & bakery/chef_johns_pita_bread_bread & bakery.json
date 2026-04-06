@@ -1,0 +1,46 @@
+{
+  "name": "Homemade Pita Bread",
+  "instructions": "1. Place the yeast in the bowl of a stand mixer and add the warm water and flour. Whisk together, then let sit until mixture bubbles and foams, about 15 minutes.\n\n2. Add the olive oil and salt into the yeast mixture, followed by the remaining flour. Mix at low speed, using a dough hook attachment, until dough is soft, supple, and slightly sticky. Knead dough with machine on low speed until slightly springy and still soft, 5 to 6 minutes. If dough sticks to the sides of the bowl, add a little more flour.\n\n3. Turn dough out onto a floured work surface and form into a ball.\n\n4. Wipe inside of bowl with olive oil. Turn dough around in bowl to lightly cover with oil; cover bowl with foil and let rise until dough has doubled in size, about 2 hours.\n\n5. Once dough has doubled, remove from bowl and place onto a lightly floured work surface. Lightly pat into a flat shape about 2.5 cm thick. Use a knife to cut dough into 2 equal pieces.\n\n6. Form each piece into a small round ball with a smooth top, pulling dough from the sides and tucking the ends underneath the bottom. Cover dough balls with lightly oiled plastic wrap and let rest for 30 minutes.\n\n7. Transfer the dough balls to a lightly floured work surface and sprinkle the tops with flour. One at a time, gently pat the dough with your fingers, forming a flat, round disc about 0.5 cm thick. Let the shaped dough rest for 5 minutes.\n\n8. Brush a cast iron skillet with olive oil and place over medium-high heat. Lay one round of dough into the hot skillet; cook for 30 seconds, then flip and cook for 1 to 2 minutes. Flip again and cook the first side for 1 to 2 minutes more, until both sides are golden brown.\n\n9. Stack cooked breads on a plate; when cool enough to handle, slice breads in half to open the pocket inside for stuffing.",
+  "simpleInstructions": "1. Mix yeast, water, and flour; let foam for 15 mins.\n\n2. Add olive oil, salt, and more flour; knead until soft.\n\n3. Shape dough into a ball, let rise for 2 hours.\n\n4. Cut into 2 pieces, shape into balls, rest 30 mins.\n\n5. Flatten into discs, rest for 5 mins.\n\n6. Cook on skillet until both sides are golden.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 10,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BREAD",
+  "ingredients": [
+    {
+      "name": "Active Dry Yeast",
+      "quantity": 3.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 350,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/232719/chef-johns-pita-bread/",
+  "cuisine": "Bread & Bakery",
+  "id": "chef_johns_pita_bread",
+  "imageUrl": "recipes/images/bread & bakery/chef_johns_pita_bread.jpg"
+}

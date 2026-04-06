@@ -1,0 +1,76 @@
+{
+    "name": "Tiramisu",
+    "instructions": "1. Într-o cratiță medie, bateți gălbenușurile de ou și zahărul până se amestecă bine și devin ușor palide. Adăugați treptat laptele bătând până devine neted. Puneți cratița la foc mediu și gătiți, amestecând constant cu o lingură de lemn sau tel, până când amestecul se îngroașă ușor și ajunge la o fierbere ușoară. Această bază de cremă ar trebui să acopere spatele unei linguri. Fierbeți ușor timp de 1 minut pentru a elimina gustul de ou crud, apoi scoateți imediat de pe foc. Lăsați să se răcească ușor, apoi acoperiți suprafața cu folie de plastic pentru a preveni formarea unei pielițe. Răciți în frigider timp de 1 oră până este complet rece.\n\n2. Într-un bol mediu, bateți smântâna și extractul de vanilie cu un mixer electric la viteză medie-mare până se formează vârfuri ferme. Smântâna ar trebui să își mențină forma când telurile sunt ridicate. Puneți deoparte. Scoateți amestecul de gălbenușuri răcit din frigider. Adăugați brânza mascarpone și bateți energic până când amestecul este neted și cremos fără cocoloașe.\n\n3. Într-o farfurie puțin adâncă, combinați cafeaua preparată și romul, amestecând pentru a mixa. Împărțiți pișcoturile în jumătate pe lungime pentru a crea straturi mai subțiri. Lucrând cu câteva bucăți la un moment dat, înmuiați rapid fiecare jumătate de pișcot în amestecul de cafea, permițându-i să absoarbă lichidul dar fără a deveni moale. Aranjați jumătate din pișcoturile înmuiate într-un singur strat pe fundul unei forme de servire, potrivindu-le strâns împreună.\n\n4. Întindeți jumătate din amestecul de mascarpone uniform peste stratul de pișcoturi, netezind cu o spatulă. Întindeți ușor jumătate din smântâna bătută peste stratul de mascarpone. Repetați straturile încă o dată: pișcoturi înmuiate, restul amestecului de mascarpone și restul smântânii bătute. Netezi stratul de deasupra.\n\n5. Folosind o sită cu ochiuri fine sau un sifon, presărați generos pudră de cacao peste întreaga suprafață de deasupra a tiramisu-ului, creând o pudră uniformă.\n\n6. Acoperiți forma cu folie de plastic și răciți în frigider până când desertul se întărește și aromele se îmbină, 4-6 ore sau peste noapte pentru cele mai bune rezultate. Pișcoturile se vor înmuia și straturile se vor îmbina într-un desert cremos și coerent. Serviți rece.",
+    "simpleInstructions": "1. Gătiți gălbenușurile cu zahăr și lapte până se îngroașă, apoi răciți o oră.\n\n2. Bateți smântâna cu vanilie, apoi amestecați mascarpone în amestecul de gălbenușuri răcit.\n\n3. Înmuiați pișcoturile împărțite în amestecul de cafea-rom și stratificați în formă.\n\n4. Alternați straturi de amestec de mascarpone și smântână bătută.\n\n5. Presărați generos cu pudră de cacao și răciți 4-6 ore înainte de servire.",
+    "prepTimeMinutes": 30,
+    "cookTimeMinutes": 5,
+    "servings": 2,
+    "mealType": "DESSERT",
+    "dishCategory": "DESSERT",
+    "ingredients": [
+        {
+            "name": "Egg Yolks",
+            "quantity": 1,
+            "unit": "pcs",
+            "isStarIngredient": true
+        },
+        {
+            "name": "White Sugar",
+            "quantity": 25,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Milk",
+            "quantity": 30,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cream",
+            "quantity": 50,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Vanilla Extract",
+            "quantity": 2.5,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mascarpone",
+            "quantity": 75,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Brewed Coffee",
+            "quantity": 20,
+            "unit": "ml",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Rum",
+            "quantity": 5,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Ladyfinger Cookies",
+            "quantity": 50,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Cocoa Powder",
+            "quantity": 2.5,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/21412/tiramisu-ii/",
+    "cuisine": "Italian",
+    "id": "tiramisu_ii",
+    "imageUrl": "recipes/images/italian/tiramisu_ii.webp"
+}

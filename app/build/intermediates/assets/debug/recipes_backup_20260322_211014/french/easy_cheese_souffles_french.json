@@ -1,0 +1,82 @@
+{
+  "name": "Easy Cheese Soufflés",
+  "instructions": "1. Preheat the oven to 400 degrees F (200 degrees C). 2. Brush butter on the bottom and up the sides of two 5 half-ounce ramekins. Scoop in some sugar; rotate ramekins to coat while pouring most of the sugar back into its container. Place the ramekins on a shallow baking pan. 3. Separate eggs between 2 bowls. Add the sugar, flour, 1/salt, vanilla extract, lemon zest, cream cheese, and Cheddar cheese to the yolks. Mix the souffle base with a spatula until sugar and flour disappear. 4. Sprinkle a pinch of salt over the room-temperature egg whites. Beat with a whisk until soft peaks form; peaks should hold their shape but not be stiff or dry. 5. Stir and fold half of the egg whites into the souffle base until combined. Gently fold the rest of the egg whites into the batter. 6. Fill ramekins up to the lip with the batter. 7. Bake in the preheated oven until puffed and browned, about 12 minutes. Serve immediately.",
+  "simpleInstructions": "1. Preheat oven and prepare ramekins with the butter and sugar. 2. Mix yolk mixture with the cream cheese, Cheddar, sugar, flour, salt, vanilla, and lemon zest. 3. Beat egg whites until soft peaks form. 4. Fold egg whites into yolk mixture gently. 5. Fill ramekins with batter and bake for 12 minutes.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 12,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "BAKED_DISH",
+  "ingredients": [
+    {
+      "name": "Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cream Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 90,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/263829/easy-cheese-souffles/",
+  "cuisine": "French",
+  "id": "easy_cheese_souffles",
+  "imageUrl": "recipes/images/french/easy_cheese_souffles.jpg"
+}

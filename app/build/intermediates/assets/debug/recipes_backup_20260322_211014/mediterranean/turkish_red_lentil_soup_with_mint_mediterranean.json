@@ -1,0 +1,100 @@
+{
+  "name": "Turkish Red Lentil Soup with Mint",
+  "instructions": "1. Heat olive oil in a large pot over medium heat. Add onion and sauté until beginning to soften, about 2 minutes. Stir in garlic and cook for additional 2 minutes.\n\n2. Add diced tomatoes and cook for 10 minutes. Stir in chicken stock, lentils, bulgur, rice, tomato paste, mint, paprika, cayenne pepper, salt, and black pepper; bring to a boil. Reduce heat to medium-low and simmer until lentils and rice are tender, about 30 minutes.\n\n3. Puree soup with an immersion blender until smooth. Serve with additional mint and lemon wedges if desired.",
+  "simpleInstructions": "1. Sauté onion and garlic in olive oil.\n\n2. Add tomatoes and cook, then add remaining ingredients and simmer.\n\n3. Puree until smooth and serve.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 50,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Tomatoes",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 420,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Red Lentils",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Bulgur",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rice",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato Paste",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Mint",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Paprika",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/219817/turkish-red-lentil-soup-with-mint/",
+  "cuisine": "Mediterranean",
+  "id": "turkish_red_lentil_soup_with_mint",
+  "imageUrl": "recipes/images/mediterranean/turkish_red_lentil_soup_with_mint.jpg"
+}

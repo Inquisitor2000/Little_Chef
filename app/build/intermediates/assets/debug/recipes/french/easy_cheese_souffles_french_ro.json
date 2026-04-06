@@ -1,0 +1,82 @@
+{
+  "name": "Sufleuri Ușoare cu Brânză",
+  "instructions": "1. Preîncălziți cuptorul la 200 de grade C (204 de grade Celsius).  \n\n2. Ungeți fundul și laturile a două ramekin-uri de 5 uncii cu unt. Presărați zahărul alb; rotiți ramekin-urile pentru a acoperi, în timp ce turnați cea mai mare parte din zahărul alb înapoi în recipientul său. Așezați ramekin-urile pe o tavă de copt puțin adâncă.  \n\n3. Separati ouăle între 2 boluri. Adăugați zahărul alb, făina universală, sare, extractul de vanilie, coaja de lămâie, brânza cremă și brânza Cheddar la gălbenușuri. Amestecați baza sufleului cu o spatulă până când zahărul și făina dispar.  \n\n4. Presărați un praf de sare peste albușurile de ou la temperatura camerei. Bateți cu un tel până se formează vârfuri moi; vârfurile ar trebui să-și mențină forma, dar să nu fie ferme sau uscate.  \n\n5. Amestecați și încorporați jumătate din albușurile bătute în baza sufleului până se combină. Îndoiți ușor restul albușurilor în aluat.  \n\n6. Umpleți ramekin-urile până la margine cu aluat.  \n\n7. Coaceți în cuptorul preîncălzit până când se umflă și se rumenesc, aproximativ 12 minute. Serviți imediat.",
+  "simpleInstructions": "1. Preîncălziți cuptorul și pregătiți ramekin-urile cu unt și zahăr alb.  \n\n2. Amestecați ingredientele pentru gălbenușuri cu brânza cremă, brânza Cheddar, zahărul alb, făina universală, sarea, extractul de vanilie și coaja de lămâie.  \n\n3. Bateți albușurile până se formează vârfuri moi.  \n\n4. Îndoiți albușurile în amestecul de gălbenușuri cu grijă.  \n\n5. Umpleți ramekin-urile cu aluat și coaceți timp de 12 minute.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 12,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "BAKED_DISH",
+  "ingredients": [
+    {
+      "name": "Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cream Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 90,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/263829/easy-cheese-souffles/",
+  "cuisine": "French",
+  "id": "easy_cheese_souffles",
+  "imageUrl": "recipes/images/french/easy_cheese_souffles.jpg"
+}

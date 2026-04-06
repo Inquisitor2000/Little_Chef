@@ -1,0 +1,58 @@
+{
+  "name": "Petrecere Savuroasă",
+  "instructions": "1. Taie brânza de capră în bucăți de un inch și așaz-o într-un singur strat pe un platou mare.  \n\n2. Presară uleiul de măsline, roșiile uscate la soare, măslinele negre, busuiocul proaspăt și rozmarinul proaspăt peste brânză.  \n\n3. Folosind scobitori, înfige căței de usturoi în brânză, dispersându-i în amestec.  \n\n4. Lasă amestecul să se marineze timp de 6 ore sau peste noapte în frigider.  \n\n5. Îndepărtează scobitorile și servește cu pâine franțuzească feliată.",
+  "simpleInstructions": "1. Taie brânza de capră și așaz-o pe platou.  \n\n2. Adaugă ulei de măsline, roșii uscate la soare, măsline negre, busuioc proaspăt, rozmarin proaspăt.  \n\n3. Înfige usturoiul cu scobitori.  \n\n4. Marinează 6+ ore în frigider.  \n\n5. Servește cu pâine franțuzească.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "APPETIZER",
+  "ingredients": [
+    {
+      "name": "Goat Cheese",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sun-Dried Tomatoes",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Black Olives",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Fresh Basil",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Rosemary",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/20509/best-ever-party-appetizer/",
+  "cuisine": "French",
+  "id": "best_ever_party_appetizer",
+  "imageUrl": "recipes/images/french/best_ever_party_appetizer.jpg"
+}

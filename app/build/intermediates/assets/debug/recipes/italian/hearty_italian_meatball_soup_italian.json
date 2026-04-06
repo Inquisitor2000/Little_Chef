@@ -1,0 +1,70 @@
+{
+  "name": "Hearty Italian Meatball Soup",
+  "instructions": "1. Form the Italian Sausage into small meatballs, rolling them between your palms to create uniform balls. Dice the Carrot and Zucchini into small, bite-sized pieces.\n\n2. Combine the Canned Tomatoes, Beef Broth, Water, and Italian Seasoning in a large pot. Bring to a rolling boil over high heat, stirring occasionally.\n\n3. Add the meatballs, diced Carrot, diced Zucchini, and Orzo Pasta to the boiling liquid. Return to a boil, then reduce the heat to medium-low. Simmer gently, stirring occasionally, until the meatballs are cooked through with no pink remaining, the vegetables are tender, and the pasta is al dente, about 10 minutes.\n\n4. Divide the hot soup among serving bowls. Garnish generously with freshly grated Parmesan cheese and serve immediately while steaming hot.",
+  "simpleInstructions": "1. Form Italian Sausage into small meatballs and dice Carrot and Zucchini into bite-sized pieces.\n\n2. Bring Canned Tomatoes, Beef Broth, Water, and Italian Seasoning to a boil in a large pot.\n\n3. Add meatballs, vegetables, and Orzo Pasta. Simmer until meatballs are cooked through and pasta is tender, about 10 minutes.\n\n4. Serve hot in bowls, garnished with grated Parmesan cheese.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Canned Tomatoes",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Beef Broth",
+      "quantity": 400,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 180,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Italian Seasoning",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Italian Sausage",
+      "quantity": 110,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Carrot",
+      "quantity": 45,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Zucchini",
+      "quantity": 45,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Orzo Pasta",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Parmesan",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/231282/hearty-italian-meatball-soup/",
+  "cuisine": "Italian",
+  "id": "hearty_italian_meatball_soup",
+  "imageUrl": "recipes/images/italian/hearty_italian_meatball_soup.jpg"
+}

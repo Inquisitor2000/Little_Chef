@@ -1,0 +1,64 @@
+{
+  "name": "Egg Roll Bowl",
+  "instructions": "1. In a large skillet over medium heat, cook the pork sausage, breaking it apart with a wooden spoon or spatula, until browned and completely crumbly, about 10 minutes. Drain and discard the excess grease from the skillet.\n\n2. Add the coleslaw mix (shredded cabbage and carrots), soy sauce, sesame oil, grated fresh ginger, and minced garlic to the skillet with the sausage. Cook, stirring frequently, until the cabbage becomes tender and wilts down, about 8 minutes.\n\n3. Stir in the fresh lemon zest and chopped cilantro, mixing to combine. Continue cooking until the flavors meld and the herbs wilt, about 2 minutes. Serve hot straight from the skillet.",
+  "simpleInstructions": "1. Brown sausage until crumbly, then drain the grease.\n\n2. Add coleslaw mix, soy sauce, sesame oil, ginger, and garlic, cooking until tender.\n\n3. Stir in lemon zest and cilantro, let flavors meld, and dig in!",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Bulk Pork Sausage",
+      "quantity": 230,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cabbage",
+      "quantity": 230,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 7.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Cilantro",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/257429/egg-roll-bowl/",
+  "cuisine": "Asian",
+  "id": "egg_roll_bowl",
+  "imageUrl": "recipes/images/asian/egg_roll_bowl.jpg"
+}

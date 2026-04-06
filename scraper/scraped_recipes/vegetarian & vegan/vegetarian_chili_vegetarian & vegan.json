@@ -1,0 +1,88 @@
+{
+  "name": "Vegetarian Chili",
+  "instructions": "1. In a large pot or Dutch oven, combine the tofu (note: use tofu as burger-style crumbles substitute), black beans (drained and rinsed if using canned), kidney beans (drained and rinsed), diced canned tomatoes with their juice, tomato juice, diced onions, chili powder, ground cumin, garlic powder, bay leaves, salt, and black pepper. Stir everything together thoroughly to ensure all ingredients are well mixed and the spices are evenly distributed. 2. Place the pot over medium-high heat and bring the mixture to a gentle simmer, stirring occasionally. Once it starts to bubble, reduce the heat to low and cover the pot with a lid. 3. Let the chili simmer gently on low heat for at least 1 hour, stirring every 15-20 minutes to prevent sticking and to ensure even cooking. The longer it simmers, the better the flavors will meld together. You can simmer for up to 2 hours for even richer flavor. If the chili becomes too thick during cooking, add a splash of water or vegetable broth to reach your desired consistency. 4. After simmering, taste the chili and adjust the seasoning if needed - add more salt, pepper, or chili powder to suit your taste. Remove and discard the bay leaves before serving. 5. Ladle the hot chili into bowls and serve immediately. This hearty vegetarian chili is delicious on its own or topped with shredded cheese, sour cream, diced avocado, chopped cilantro, sliced green onions, or crushed tortilla chips. It also pairs wonderfully with cornbread, rice, or over baked potatoes. The chili tastes even better the next day, so it's perfect for meal prep!",
+  "simpleInstructions": "1. In large pot, combine tofu, black beans, kidney beans, diced tomatoes, tomato juice, onions, chili powder, cumin, garlic powder, bay leaves, salt, and pepper; stir well. 2. Bring to simmer over medium-high heat, then reduce to low and cover. 3. Simmer at least 1 hour, stirring every 15-20 minutes. Add water if too thick. 4. Remove bay leaves, taste, and adjust seasoning. 5. Serve hot with toppings like cheese, sour cream, avocado, or cilantro.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 60,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Tofu",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Black Beans",
+      "quantity": 140,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Kidney Beans",
+      "quantity": 140,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Canned Tomatoes",
+      "quantity": 240,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato Juice",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chili Powder",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ground Cumin",
+      "quantity": 7.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic Powder",
+      "quantity": 7.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bay Leaves",
+      "quantity": 0.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/15084/vegetarian-chili/",
+  "cuisine": "American",
+  "id": "vegetarian_chili",
+  "imageUrl": "recipes/images/vegetarian & vegan/vegetarian_chili.jpg"
+}

@@ -1,0 +1,82 @@
+{
+  "name": "Quick Tomato and Bean Soup Provencal",
+  "instructions": "1. Heat the olive oil in a large saucepan over medium heat. Add the onion and saute until tender and translucent, 3 to 4 minutes.\\n\\n2. Stir in the garlic and cook until fragrant, about 30 seconds.\\n\\n3. Stir in the tomatoes, chicken broth, water, and red pepper flakes. Bring to a boil, reduce heat, and simmer, uncovered, for 10 minutes.\\n\\n4. Add the butter beans and cook until heated through, about 5 minutes.\\n\\n5. Stir in the spinach and heat until wilted.\\n\\n6. Season to taste with the salt and pepper. Garnish with Parmesan cheese, and serve hot.",
+  "simpleInstructions": "1. Saute onion.\\n\\n2. Add the garlic, then tomatoes, broth, water, and red pepper. Simmer.\\n\\n3. Add the beans, then spinach.\\n\\n4. Season and serve with Parmesan.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Garlic",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Tomatoes",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 240,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Pepper Flakes",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lima Beans",
+      "quantity": 230,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Baby Spinach",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Parmesan",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/quick-tomato-and-bean-soup-provencal-recipe-8660754",
+  "cuisine": "French",
+  "id": "quick_tomato_and_bean_soup_provencal",
+  "imageUrl": "recipes/images/french/quick_tomato_and_bean_soup_provencal.jpg"
+}

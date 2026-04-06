@@ -1,0 +1,82 @@
+{
+  "name": "Supă Rapidă de Roșii și Fasole Provencale",
+  "instructions": "1. Încălziți uleiul de măsline într-o oală mare la foc mediu. Adăugați ceapa și sotează până devine moale și translucidă, aproximativ 3 până la 4 minute.\n\n2. Adăugați usturoiul și gătiți până devine aromat, aproximativ 30 de secunde.\n\n3. Adăugați roșiile conservate, bulionul de pui, apa și fulgii de ardei roșu. Aduceți la fierbere, reduceți focul și lăsați să fiarbă, neacoperită, timp de 10 minute.\n\n4. Adăugați fasolea lima și gătiți până se încălzește, aproximativ 5 minute.\n\n5. Adăugați spanacul baby și încălziți până se ofilește.\n\n6. Condimentați după gust cu sare și piper. Garnisiți cu parmezan și serviți fierbinte.",
+  "simpleInstructions": "1. Sotează ceapa.\n\n2. Adaugă usturoiul, apoi roșiile conservate, bulionul de pui, apa și fulgii de ardei roșu. Lasă să fiarbă.\n\n3. Adaugă fasolea lima, apoi spanacul baby.\n\n4. Condimentează cu sare și servește cu parmezan.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Garlic",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Tomatoes",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 240,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Pepper Flakes",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lima Beans",
+      "quantity": 230,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Baby Spinach",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Parmesan",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/quick-tomato-and-bean-soup-provencal-recipe-8660754",
+  "cuisine": "French",
+  "id": "quick_tomato_and_bean_soup_provencal",
+  "imageUrl": "recipes/images/french/quick_tomato_and_bean_soup_provencal.jpg"
+}

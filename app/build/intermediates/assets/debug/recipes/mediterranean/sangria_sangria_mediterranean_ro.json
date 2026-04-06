@@ -1,0 +1,76 @@
+{
+  "name": "Sangria! Sangria!",
+  "instructions": "1. Amestecați vinul roșu, coniacul, triple sec, concentratul de limonadă, sucul de portocale, sucul de lămâie și zahărul (opțional) împreună într-un bol.\n\n2. Adăugați feliile de portocală, lămâie și lime, și cireșele maraschino.\n\n3. Serviți imediat peste gheață sau refrigerați timp de 8 ore până peste noapte pentru cea mai bună aromă.\n\n4. Pentru o sangria efervescentă, adăugați apă carbogazoasă chiar înainte de servire.",
+  "simpleInstructions": "1. Amestecați băuturile și sucurile.\n\n2. Adăugați feliile de fructe.\n\n3. Serviți sau refrigerați.\n\n4. Adăugați apă carbogazoasă pentru efervescență înainte de servire.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BEVERAGE",
+  "ingredients": [
+    {
+      "name": "Red Wine",
+      "quantity": 250,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Rum",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Orange Juice",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Orange",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Lemon",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cherry",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sparkling Water",
+      "quantity": 160,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/72612/sangria-sangria/",
+  "cuisine": "Mediterranean",
+  "id": "sangria_sangria",
+  "imageUrl": "recipes/images/mediterranean/sangria_sangria.jpg"
+}

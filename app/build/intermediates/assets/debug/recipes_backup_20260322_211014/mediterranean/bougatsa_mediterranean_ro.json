@@ -1,0 +1,82 @@
+{
+  "name": "Bougatsa",
+  "instructions": "1. Preîncălziți cuptorul la 175 grade C.\n\n2. Bateți ouăle într-un mixer până devin spumoase. Adăugați zahărul și bateți până devine gros și spumos.\n\n3. Încălziți laptele într-o cratiță până începe să fiarbă. Adăugați treptat laptele la amestecul de ouă, apoi returnați-l în cratiță.\n\n4. Gătiți amestecul de lapte până se îngroașă ușor, apoi amestecați făina de griș până crema se îngroașă.\n\n5. Amestecați untul rece în cremă, apoi adăugați coaja de lămâie, sucul de lămâie și vanilia.\n\n6. Ungeți o tavă de copt cu unt topit. Stratificați 8 foi de foietaj în tavă, ungând fiecare cu unt.\n\n7. Întindeți crema peste foietaj, apoi acoperiți cu încă 2 foi de foietaj, ungând fiecare cu unt.\n\n8. Împăturiți restul de 8 foi de foietaj în stil acordeon și așezați în tavă, ungând fiecare cu unt.\n\n9. Coaceți până devine auriu și crocant, apoi lăsați să se răcească 30 de minute. Pudrati cu zahăr pudră și scorțișoară, tăiați și serviți.",
+  "simpleInstructions": "1. Preîncălziți cuptorul și bateți ouăle cu zahărul.\n\n2. Încălziți laptele, adăugați la ouă și îngroșați cu griș.\n\n3. Amestecați untul, coaja de lămâie, sucul și vanilia.\n\n4. Stratificați foietajul cu unt și cremă într-o tavă.\n\n5. Coaceți până devine auriu, răciți, pudrați cu zahăr și serviți.",
+  "prepTimeMinutes": 18,
+  "cookTimeMinutes": 22,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Egg",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Whole Milk",
+      "quantity": 125,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Flour",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/bougatsa-recipe-8654345",
+  "cuisine": "Mediterranean",
+  "id": "bougatsa",
+  "imageUrl": "recipes/images/mediterranean/bougatsa.jpg"
+}

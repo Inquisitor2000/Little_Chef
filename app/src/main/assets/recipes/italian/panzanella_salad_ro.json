@@ -1,0 +1,84 @@
+{
+    "name": "Salată panzanella",
+    "instructions": "1. Preîncălziți cuptorul la 200 grade Celsius.\n\n2. Tocați mărunt usturoiul. Tăiați sau rupeți pâinea în cuburi de dimensiunea unei mușcături. Într-un bol mare, amestecați cuburile de pâine cu ulei de măsline, sare, piper negru și usturoi tocat mărunt până sunt acoperite uniform.\n\n3. Întindeți cuburile de pâine condimentate într-un singur strat pe o tavă de copt. Prăjiți în cuptorul preîncălzit până devin aurii și crocante pe margini, aproximativ 5-10 minute. Urmăriți cu atenție pentru a preveni arderea.\n\n4. Transferați pâinea prăjită înapoi în bolul mare și lăsați să se răcească ușor în timp ce pregătiți celelalte ingrediente.\n\n5. Într-un bol mic, bateți împreună uleiul de măsline rămas și oțetul balsamic până se emulsionează. Puneți vinegreta deoparte.\n\n6. Tăiați roșiile în bucăți de dimensiunea unei mușcături și tocați fin ceapa roșie. Rupeți frunzele de busuioc proaspăt. Adăugați roșiile, ceapa, busuiocul, măslinele verzi și mozzarella în bolul cu pâinea prăjită. Stropiți vinegreta peste tot și amestecați ușor pentru a combina, asigurându-vă că toate ingredientele sunt acoperite.\n\n7. Lăsați salata să stea la temperatura camerei timp de 20 de minute înainte de servire. Acest lucru permite pâinii să absoarbă sucurile din roșii și vinegretă, creând textura perfectă. Pâinea ar trebui să fie înmuiată, dar să aibă încă puțină consistență.",
+    "simpleInstructions": "1. Preîncălziți cuptorul și prăjiți cuburile de pâine condimentate până devin aurii.\n\n2. Răciți pâinea în timp ce pregătiți vinegreta.\n\n3. Combinați pâinea prăjită cu roșii, ceapă, busuioc, măsline și mozzarella.\n\n4. Amestecați cu vinegretă și lăsați să stea 20 de minute înainte de servire.",
+    "prepTimeMinutes": 30,
+    "cookTimeMinutes": 5,
+    "servings": 2,
+    "mealType": "SNACK",
+    "dishCategory": "SALAD",
+    "ingredients": [
+        {
+            "name": "White Bread",
+            "quantity": 150,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 110,
+            "unit": "ml",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Tomato",
+            "quantity": 200,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Red Onion",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Fresh Basil",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Green Olives",
+            "quantity": 25,
+            "unit": "g",
+            "isStarIngredient": false,
+            "optional": true
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false,
+            "optional": true
+        },
+        {
+            "name": "Balsamic Vinegar",
+            "quantity": 30,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/104982/panzanella-salad/",
+    "cuisine": "Italian",
+    "id": "panzanella_salad",
+    "imageUrl": "recipes/images/italian/panzanella_salad.webp"
+}

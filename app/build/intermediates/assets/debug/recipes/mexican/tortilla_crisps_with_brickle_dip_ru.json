@@ -1,0 +1,70 @@
+{
+    "name": "Чипсы из тортильи с шоколадным соусом",
+    "instructions": "1. Разогрейте духовку до 175 градусов Цельсия. Застелите противень пергаментной бумагой для предотвращения прилипания.\n\n2. Нарежьте тортильи на треугольные дольки и разложите в один слой на подготовленном противне. Смешайте часть белого сахара с корицей в небольшой миске. Равномерно полейте дольки растопленным маслом, затем щедро посыпьте смесью корицы и сахара.\n\n3. Выпекайте в разогретой духовке до золотистого цвета и хрустящей корочки, около 15 минут. Они должны быть легко хрустящими и ароматными.\n\n4. Пока чипсы пекутся, приготовьте соус. Смешайте сливочный сыр, коричневый сахар, оставшийся белый сахар и ванильный экстракт в миске до однородной кремовой консистенции. Аккуратно добавьте шоколадные чипсы до равномерного распределения. Накройте и охладите соус в холодильнике до готовности чипсов.\n\n5. Подавайте теплые хрустящие чипсы с холодным шоколадным соусом для восхитительного контраста температур и текстур.",
+    "simpleInstructions": "1. Разогрейте духовку и застелите противень пергаментной бумагой.\n\n2. Нарежьте тортильи на дольки, полейте растопленным маслом и посыпьте смесью корицы и сахара. Запекайте до хрустящей корочки.\n\n3. Смешайте сливочный сыр, коричневый сахар, белый сахар и ванильный экстракт. Добавьте шоколадные чипсы и охладите.\n\n4. Подавайте теплые чипсы с холодным соусом.",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 15,
+    "servings": 2,
+    "mealType": "SNACK",
+    "dishCategory": "APPETIZER",
+    "ingredients": [
+        {
+            "name": "Tortillas",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "White Sugar",
+            "quantity": 4,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cinnamon",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Butter",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cream Cheese",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Brown Sugar",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "White Sugar",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Vanilla Extract",
+            "quantity": 2.5,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Chocolate Chips",
+            "quantity": 30,
+            "unit": "g",
+            "isStarIngredient": true
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/231016/tortilla-crisps-with-brickle-dip/",
+    "cuisine": "Mexican",
+    "id": "tortilla_crisps_with_brickle_dip",
+    "imageUrl": "recipes/images/mexican/tortilla_crisps_with_brickle_dip.webp"
+}

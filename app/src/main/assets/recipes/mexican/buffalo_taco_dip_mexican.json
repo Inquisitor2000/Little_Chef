@@ -1,0 +1,82 @@
+{
+  "name": "Buffalo Taco Dip",
+  "instructions": "1. Preheat your oven to 350 degrees Fahrenheit (175 degrees Celsius). Lightly spray a small baking dish with nonstick cooking spray to prevent sticking, ensuring you coat the bottom and sides evenly.\n\n2. Heat the olive oil in a large skillet over medium heat until it shimmers. Add the diced onion and cook, stirring occasionally, until it becomes soft and translucent, about 5 minutes. The onion should not brown, just soften and become fragrant.\n\n3. Add the ground buffalo meat to the skillet with the onions. Break up the meat with a wooden spoon or spatula as it cooks, crumbling it into small pieces. Continue cooking, stirring occasionally, until the meat is fully browned with no pink remaining, about 10 minutes. If excess fat accumulates, you can drain it off.\n\n4. Sprinkle half of the taco seasoning packet over the cooked meat and onion mixture. Stir well to distribute the seasoning evenly throughout the meat, coating every piece. The spices will become fragrant as they heat. Remove from heat and set aside.\n\n5. In a small bowl, combine the remaining half of the taco seasoning packet with the refried beans. Mix thoroughly until the seasoning is evenly distributed throughout the beans, creating a flavorful base layer.\n\n6. Spread the seasoned refried beans evenly across the bottom of the prepared baking dish, creating a smooth first layer. Next, layer the buffalo and onion mixture over the beans, spreading it out evenly. Add a layer of guacamole, spreading it gently to avoid mixing with the meat layer. Finally, spread the sour cream over the guacamole as the top creamy layer.\n\n7. Sprinkle the sliced black olives, chopped green onions, and diced jalapeño peppers evenly over the sour cream layer. Top everything with the shredded cheddar cheese, covering the entire surface for maximum cheesy goodness.\n\n8. Place the baking dish in the preheated oven and bake until the cheese is fully melted and bubbly, and all the ingredients are heated through, about 30 minutes. The edges should be slightly golden and the dip should be hot throughout. Serve warm with tortilla chips for dipping.",
+  "simpleInstructions": "1. Preheat oven to 350 degrees Fahrenheit and spray baking dish.\n\n2. Sauté onion until soft, then brown the buffalo meat, breaking it up as it cooks.\n\n3. Season meat with half the taco seasoning, mix beans with remaining seasoning.\n\n4. Layer seasoned beans, meat mixture, guacamole, and sour cream in the dish.\n\n5. Top with olives, green onions, jalapeños, and shredded cheese.\n\n6. Bake until cheese melts and dip is hot throughout, about 30 minutes.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 45,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "APPETIZER",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ground Buffalo",
+      "quantity": 90,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Taco Seasoning",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Refried Beans",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Guacamole",
+      "quantity": 90,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 90,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Olives",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jalapeño",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 90,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/180131/buffalo-taco-dip/",
+  "cuisine": "Mexican",
+  "id": "buffalo_taco_dip",
+  "imageUrl": "recipes/images/mexican/buffalo_taco_dip.webp"
+}

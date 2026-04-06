@@ -1,0 +1,58 @@
+{
+    "name": "Vinete parmigiana",
+    "instructions": "1. Preîncălziți cuptorul la 175 de grade Celsius.\n\n2. Tăiați vânăta în rondele. Bateți oul într-o farfurie plată. Puneți pesmetul într-o altă farfurie plată. Înmuiați fiecare felie de vânătă mai întâi în oul bătut, lăsând excesul să se scurgă, apoi acoperiți complet în pesmet. Așezați feliile acoperite într-un singur strat pe o tavă de copt.\n\n3. Coaceți în cuptorul preîncălzit timp de 5 minute până când acoperirea începe să se fixeze. Întoarceți fiecare felie cu grijă și coaceți încă 5 minute până devine ușor aurie și vânăta este fragedă.\n\n4. Întindeți un strat subțire de sos marinara pe fundul unei tăvi de copt pentru a preveni lipirea. Aranjați un strat de felii de vânătă coapte deasupra. Presărați generos cu mozzarella rasă și parmezan ras.\n\n5. Repetați straturile cu sosul, vânăta și brânzeturile rămase, terminând cu un strat generos de brânză deasupra. Presărați busuiocul uscat uniform peste stratul final de brânză pentru aromă suplimentară.\n\n6. Coaceți în cuptorul preîncălzit până când brânza se topește, face bule și devine aurie pe deasupra, aproximativ 35 de minute. Marginile ar trebui să facă bule și brânza să fie ușor rumenită. Lăsați să se odihnească 5 minute înainte de a servi fierbinte.",
+    "simpleInstructions": "1. Preîncălziți cuptorul la 175 de grade Celsius.\n\n2. Tăiați vânăta în rondele, înmuiați în ou bătut, apoi acoperiți cu pesmet.\n\n3. Coaceți feliile de vânătă 5 minute, întoarceți și coaceți încă 5 minute.\n\n4. Stratificați sosul marinara, vânăta coaptă, mozzarella și parmezanul într-o tavă de copt. Repetați straturile, terminând cu brânză și busuioc uscat.\n\n5. Coaceți până devine aurie și face bule, aproximativ 35 de minute.",
+    "prepTimeMinutes": 25,
+    "cookTimeMinutes": 35,
+    "servings": 2,
+    "mealType": "LUNCH",
+    "dishCategory": "MAIN_COURSE",
+    "ingredients": [
+        {
+            "name": "Eggplant",
+            "quantity": 300,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Eggs",
+            "quantity": 1,
+            "unit": "pcs",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Breadcrumbs",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Marinara Sauce",
+            "quantity": 240,
+            "unit": "ml",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 150,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Parmesan",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Dried Basil",
+            "quantity": 0.75,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/25321/eggplant-parmesan-ii/",
+    "cuisine": "Italian",
+    "id": "eggplant_parmesan_ii",
+    "imageUrl": "recipes/images/italian/eggplant_parmesan_ii.webp"
+}

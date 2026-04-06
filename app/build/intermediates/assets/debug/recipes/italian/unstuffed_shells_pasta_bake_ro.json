@@ -1,0 +1,105 @@
+{
+    "id": "unstuffed_shells_pasta_bake",
+    "name": "Paste scoici la cuptor fără umplutură",
+    "instructions": "1. Aduceți la fierbere o oală mare cu apă generos sărată. Adăugați scoicile de paste și gătiți, amestecând ocazional, până devin fragede dar ferme la mușcat, aproximativ 9 minute. Scurgeți bine într-o strecurătoare, scuturând excesul de apă, și puneți deoparte.\n\n2. Preîncălziți cuptorul la 180 grade Celsius. Ungeți ușor o tavă de copt cu spray de gătit sau puțin ulei de măsline.\n\n3. Încălziți uleiul de măsline într-o tigaie mare la foc mediu-mare. Adăugați carnea tocată de vită, sfărâmând-o cu o lingură de lemn. Condimentați cu sare, condiment italian și piper negru. Gătiți, amestecând ocazional, până când carnea este ușor rumenită și nu mai este roz, aproximativ 5 minute. Scurgeți excesul de grăsime dacă este necesar.\n\n4. Adăugați ceapa tăiată cubulețe și usturoiul tocat mărunt în tigaie cu carnea. Gătiți, amestecând frecvent, până când ceapa se înmoaie și devine translucidă, aproximativ 5 minute.\n\n5. Reduceți focul la mediu. Adăugați sosul marinara și gătiți, amestecând ocazional, până când sosul începe să fiarbă și aromele se îmbină, aproximativ 3 minute. Scoateți de pe foc și puneți deoparte.\n\n6. Într-un bol mare de amestecare, combinați ricotta, brânza cremă, parmezanul ras, busuiocul proaspăt tocat, oul, restul de usturoi tocat mărunt, sarea, condimentul italian și piperul negru. Amestecați cu o spatulă sau lingură de lemn până când toate ingredientele sunt bine combinate și amestecul este neted.\n\n7. Adăugați scoicile de paste gătite la amestecul de brânză. Adăugați-le ușor cu o spatulă până când fiecare scoică este acoperită cu amestecul cremos de brânză.\n\n8. Întindeți jumătate din amestecul de carne și marinara uniform pe fundul tavii de copt pregătite. Puneți cu lingura amestecul de paste și brânză deasupra, întinzându-l într-un strat uniform. Turnați restul amestecului de carne peste stratul de paste, întinzându-l pentru a acoperi. Presărați mozzarella rasă uniform peste partea de deasupra.\n\n9. Acoperiți tava ușor cu folie de aluminiu pentru a preveni rumenirea excesivă. Puneți în cuptorul preîncălzit și coaceți până când tava face bule în jurul marginilor și brânza începe să se topească, aproximativ 25 de minute. Îndepărtați folia și continuați să coaceți până când mozzarella este complet topită și ușor aurie deasupra, încă aproximativ 10 minute.\n\n10. Scoateți din cuptor și lăsați să se odihnească câteva minute înainte de servire. Decorați cu frunze de busuioc proaspăt și serviți fierbinte.",
+    "simpleInstructions": "1. Gătiți scoicile de paste până devin al dente, scurgeți și puneți deoparte.\n\n2. Preîncălziți cuptorul și ungeți tava de copt.\n\n3. Rumeniți carnea tocată cu condimente, apoi adăugați ceapa și usturoiul până se înmoaie.\n\n4. Adăugați sosul marinara și fierbeți scurt.\n\n5. Amestecați brânzeturile cu ou, ierburi și condimente, apoi adăugați pastele gătite.\n\n6. Stratificați jumătate din amestecul de carne în tavă, adăugați amestecul de paste, acoperiți cu restul cărnii și mozzarella.\n\n7. Coaceți acoperit, apoi descoperit până face bule și devine auriu.\n\n8. Decorați cu busuioc și serviți fierbinte.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 45,
+    "servings": 2,
+    "cuisine": "Italian",
+    "mealType": "DINNER",
+    "dishCategory": "BAKED_DISH",
+    "imageUrl": "recipes/images/italian/unstuffed_shells_pasta_bake.webp",
+    "ingredients": [
+        {
+            "name": "Medium Pasta Shells",
+            "quantity": 90,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Ground Beef",
+            "quantity": 230,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salt",
+            "quantity": 6,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Italian Seasoning",
+            "quantity": 2,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Yellow Onion",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Marinara Sauce",
+            "quantity": 180,
+            "unit": "ml",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Ricotta",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Cream Cheese",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Parmesan",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Fresh Basil",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Eggs",
+            "quantity": 1,
+            "unit": "pcs",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": true
+        }
+    ]
+}

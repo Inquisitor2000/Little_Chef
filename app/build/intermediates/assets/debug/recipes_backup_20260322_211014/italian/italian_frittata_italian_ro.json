@@ -1,0 +1,106 @@
+{
+    "name": "Frittata italiană",
+    "instructions": "1. Preîncălziți cuptorul la 220 grade Celsius. Ungeți o tavă de copt puțin adâncă.\n\n2. Încălziți uleiul de măsline într-o tigaie la foc mediu. Adăugați salamul feliat și gătiți până devine ușor crocant, aproximativ 2 minute. Adăugați anghinarea scursă și tocată, roșiile cherry tăiate în jumătate și ciupercile feliate. Gătiți amestecând ocazional până când legumele se înmoaie și eliberează aromele, aproximativ 4 minute. Transferați amestecul de salam în tava de copt pregătită.\n\n3. Într-un bol mare, bateți ouăle cu laptele până se combină bine. Adăugați ceapa verde tocată, usturoiul tocat mărunt, busuiocul uscat, pudra de ceapă, sarea și piperul negru. Bateți până când condimentele sunt distribuite uniform. Turnați amestecul de ouă peste amestecul de salam din tavă, asigurându-vă că acoperă uniform.\n\n4. Presărați mozzarella și parmezanul ras peste suprafață, distribuind uniform pentru o acoperire completă.\n\n5. Coaceți în cuptorul preîncălzit până când ouăle sunt complet întărite în centru și brânza este topită și ușor aurie, aproximativ 20 de minute. Frittata este gata când un cuțit introdus în centru iese curat. Lăsați să se răcească câteva minute înainte de a tăia și servi.",
+    "simpleInstructions": "1. Preîncălziți cuptorul și ungeți tava de copt.\n\n2. Gătiți salamul cu legumele în ulei de măsline până se înmoaie.\n\n3. Bateți ouăle cu laptele și condimentele, apoi turnați peste amestecul de salam.\n\n4. Presărați brânzeturile deasupra și coaceți până se întărește.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 25,
+    "servings": 2,
+    "mealType": "LUNCH",
+    "dishCategory": "MAIN_COURSE",
+    "ingredients": [
+        {
+            "name": "Olive Oil",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salami",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Canned Artichokes",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cherry Tomatoes",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Button Mushroom",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Eggs",
+            "quantity": 2,
+            "unit": "pcs",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Milk",
+            "quantity": 30,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Scallion",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 2.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Dried Basil",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Onion Powder",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Parmesan",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": true
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/228687/italian-frittata/",
+    "cuisine": "Italian",
+    "id": "italian_frittata",
+    "imageUrl": "recipes/images/italian/italian_frittata.jpg"
+}

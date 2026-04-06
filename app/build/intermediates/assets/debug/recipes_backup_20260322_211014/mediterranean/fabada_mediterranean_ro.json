@@ -1,0 +1,58 @@
+{
+  "name": "Fabada",
+  "instructions": "1. Acoperiți fasolea cu apă fierbinte abundentă și lăsați să stea peste noapte.\n\n2. Umpleți o oală olandeză pe jumătate cu apă și aduceți la fierbere la foc mare. Adăugați slănina și lăsați să fiarbă 5 minute, apoi scoateți. Aruncați apa.\n\n3. Scurgeți apa din fasole și puneți-o în oala olandeză. Turnați 2,5 L de apă, apoi aduceți la fierbere la foc mare. Fierbeți 15 minute, îndepărtând și aruncând spuma care se formează deasupra.\n\n4. Amestecați șofranul, slănina și șunca cubulețe; lăsați să fiarbă 5 minute.\n\n5. Adăugați cârnații chorizo și morcilla și gătiți încă 5 minute. Îndepărtați orice spumă care se formează deasupra.\n\n6. Reduceți focul la mic, adăugați frunza de dafin, acoperiți și lăsați să fiarbă până când fasolea este fragedă, 2 până la 3 ore, adăugând apă dacă este necesar pentru a menține fasolea umedă.\n\n7. Lăsați fasolea să stea 20 de minute în afara focului înainte de a servi.",
+  "simpleInstructions": "1. Înmuiați fasolea peste noapte.\n\n2. Fierbeți slănina scurt și aruncați apa.\n\n3. Fierbeți fasolea, apoi adăugați ingredientele rămase și lăsați să fiarbă.\n\n4. Lăsați să stea înainte de a servi.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 150,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Lima Beans",
+      "quantity": 110,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pork Belly",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 2.5,
+      "unit": "L",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ham",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Chorizo",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Sausage",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bay Leaves",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/102591/fabada/",
+  "cuisine": "Mediterranean",
+  "id": "fabada",
+  "imageUrl": "recipes/images/mediterranean/fabada.jpg"
+}

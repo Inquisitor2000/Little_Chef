@@ -1,0 +1,64 @@
+{
+    "name": "Omletă Spaniolă cu Cartofi",
+    "instructions": "1. Încălziți uleiul de măsline la foc mediu-mare într-o tigaie mare. Adăugați cartofii tăiați subțire și condimentați ușor cu sare și piper; gătiți, amestecând ocazional, până devin aurii și crocante, aproximativ 10 până la 14 minute.\n\n2. Adăugați ceapa tăiată subțire; gătiți și amestecați până devine moale și începe să se rumenească, aproximativ 6 până la 8 minute.\n\n3. Bateți ouăle într-un bol; condimentați cu sare și piper.\n\n4. Turnați ouăle în tigaie și amestecați ușor pentru a combina cu cartofii și ceapa.\n\n5. Reduceți focul la mic și gătiți până când ouăle încep să se rumenească pe fund, aproximativ 4 până la 5 minute.\n\n6. Dezlipiți omleta cu o spatulă. Întoarceți o farfurie mare peste tigaie și răsturnați cu grijă omleta pe farfurie. Glisați omleta, cu partea negătită în jos, înapoi în tigaie. Gătiți până când ouăle sunt întărite, aproximativ 4 până la 5 minute.\n\n7. Serviți caldă, decorată cu roșii tocate și ceapă verde tocată dacă doriți.",
+    "simpleInstructions": "1. Încălziți uleiul de măsline, gătiți cartofii până devin aurii.\n\n2. Adăugați și gătiți ceapa până se înmoaie.\n\n3. Bateți ouăle, condimentați și adăugați în tigaie.\n\n4. Gătiți la foc mic până se rumenește fundul.\n\n5. Întoarceți omleta cu o farfurie, gătiți cealaltă parte.\n\n6. Serviți cu garnituri opționale.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 20,
+    "servings": 2,
+    "mealType": "BREAKFAST",
+    "dishCategory": "MAIN_COURSE",
+    "ingredients": [
+        {
+            "name": "Olive Oil",
+            "quantity": 120,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Potato",
+            "quantity": 230,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Onion",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Eggs",
+            "quantity": 2,
+            "unit": "pcs",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tomato",
+            "quantity": 150,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Scallion",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/20198/spanish-potato-omelet/",
+    "cuisine": "Mediterranean",
+    "id": "spanish_potato_omelet",
+    "imageUrl": "recipes/images/mediterranean/spanish_potato_omelet.jpg"
+}

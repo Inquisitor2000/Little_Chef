@@ -1,0 +1,118 @@
+{
+  "name": "Тартин с бобами и зеленью",
+  "instructions": "1. Разогрейте духовку до 175 градусов Цельсия. Полейте оливковым маслом обе стороны багета. Выпекайте до светло-золотистого цвета, около 20 минут.\n\n2. В большой кастрюле доведите до кипения слегка подсоленную воду на сильном огне. Добавьте мангольд и готовьте 2 минуты. Перенесите мангольд в миску с холодной водой, откиньте на друшлаг и отожмите лишнюю воду. Грубо нарежьте мангольд.\n\n3. Нагрейте оливковое масло на сковороде на среднем огне, добавьте чеснок и готовьте до появления аромата. Затем добавьте мангольд, цедру лимона, соль и кайенский перец. Снимите с огня и отложите.\n\n4. Обжарьте бекон на сковороде на среднем-высоком огне до хрустящей корочки. Откиньте на бумажное полотенце и покрошите.\n\n5. Удалите из сковороды все, кроме 1 столовой ложки беконного жира. Добавьте зелёный лук и готовьте 1 минуту. Вмешайте кумин, сушеный орегано и соль. Добавьте консервированную фасоль пинто и воду, потом тушите. Разомните бобы до желаемой текстуры. Добавьте соль по вкусу.\n\n6. Разогрейте духовку до 230 градусов Цельсия. Намажьте смесью бобов тосты, сверху положите мангольд, крошёный бекон, лимонный сок и тертый сыр пеппер джек.\n\n7. Выпекайте, пока сыр не начнёт коричневеть, а тартин не прогреется, около 12 минут. Подавайте, украсив ломтиками перца халапеньо и зелёным луком.",
+  "simpleInstructions": "1. Выпеките багет, политый оливковым маслом, до золотистого цвета. 2. Приготовьте и нарежьте мангольд. 3. Обжарьте чеснок, мангольд и специи. 4. Обжарьте бекон до хрустящей корочки. 5. Обжарьте зелёный лук, кумин, орегано, затем добавьте фасоль и разомните. 6. Намажьте тосты смесью фасоли, мангольда, бекона, лимонного сока и сыра, затем выпекайте. 7. Украсьте и подавайте.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 35,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "SANDWICH",
+  "ingredients": [
+    {
+      "name": "Baguette",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Swiss Chard",
+      "quantity": 50.0,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 25.0,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 0.2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bacon",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cumin",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Pinto Beans",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 25.0,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Pepper Jack Cheese",
+      "quantity": 85,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jalapeño Pepper",
+      "quantity": 25.0,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/8524473/beans-and-greens-tartine/",
+  "cuisine": "French",
+  "id": "beans_and_greens_tartine",
+  "imageUrl": "recipes/images/french/beans_and_greens_tartine.jpg"
+}

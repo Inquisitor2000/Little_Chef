@@ -1,0 +1,76 @@
+{
+  "name": "Sangria! Sangria!",
+  "instructions": "1. Mix red wine, brandy, triple sec, lemonade concentrate, orange juice, lemon juice, and sugar (optional) together in a bowl.\n\n2. Add orange, lemon, and lime slices, and maraschino cherries.\n\n3. Serve immediately over ice, or refrigerate for 8 hours to overnight for best flavor.\n\n4. For a fizzy sangria, add carbonated water just before serving.",
+  "simpleInstructions": "1. Mix beverages and juices.\n\n2. Add fruit slices.\n\n3. Serve or refrigerate.\n\n4. Add carbonated water for fizz before serving.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BEVERAGE",
+  "ingredients": [
+    {
+      "name": "Red Wine",
+      "quantity": 250,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Rum",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Orange Juice",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Orange",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Lemon",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cherry",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sparkling Water",
+      "quantity": 160,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/72612/sangria-sangria/",
+  "cuisine": "Mediterranean",
+  "id": "sangria_sangria",
+  "imageUrl": "recipes/images/mediterranean/sangria_sangria.jpg"
+}

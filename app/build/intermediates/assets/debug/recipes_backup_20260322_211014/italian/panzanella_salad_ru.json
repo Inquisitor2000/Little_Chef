@@ -1,0 +1,84 @@
+{
+    "name": "Салат панцанелла",
+    "instructions": "1. Разогрейте духовку до 200 градусов Цельсия.\n\n2. Мелко измельчите чеснок. Нарежьте или порвите хлеб на кусочки размером с укус. В большой миске перемешайте кубики хлеба с оливковым маслом, солью, черным перцем и измельченным чесноком до равномерного покрытия.\n\n3. Разложите приправленные кубики хлеба в один слой на противне. Поджарьте в разогретой духовке до золотисто-коричневого цвета и хрустящих краев, около 5-10 минут. Внимательно следите, чтобы не подгорело.\n\n4. Переложите поджаренный хлеб обратно в большую миску и дайте немного остыть, пока готовите другие ингредиенты.\n\n5. В небольшой миске взбейте вместе оставшееся оливковое масло и бальзамический уксус до эмульсии. Отложите винегрет в сторону.\n\n6. Нарежьте помидоры на кусочки размером с укус и мелко нарежьте красный лук. Порвите листья свежего базилика. Добавьте помидоры, лук, базилик, зеленые оливки и моцареллу в миску с поджаренным хлебом. Полейте винегретом все ингредиенты и аккуратно перемешайте, убедившись, что все покрыто.\n\n7. Дайте салату постоять при комнатной температуре 20 минут перед подачей. Это позволяет хлебу впитать соки из помидоров и винегрета, создавая идеальную текстуру. Хлеб должен размягчиться, но все еще иметь некоторую упругость.",
+    "simpleInstructions": "1. Разогрейте духовку и поджарьте приправленные кубики хлеба до золотистого цвета.\n\n2. Охладите хлеб, пока готовите винегрет.\n\n3. Соедините поджаренный хлеб с помидорами, луком, базиликом, оливками и моцареллой.\n\n4. Перемешайте с винегретом и дайте постоять 20 минут перед подачей.",
+    "prepTimeMinutes": 30,
+    "cookTimeMinutes": 5,
+    "servings": 2,
+    "mealType": "SNACK",
+    "dishCategory": "SALAD",
+    "ingredients": [
+        {
+            "name": "White Bread",
+            "quantity": 150,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Olive oil",
+            "quantity": 110,
+            "unit": "ml",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Tomato",
+            "quantity": 200,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Red onion",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Fresh Basil",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Green olives",
+            "quantity": 25,
+            "unit": "g",
+            "isStarIngredient": false,
+            "optional": true
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false,
+            "optional": true
+        },
+        {
+            "name": "Balsamic vinegar",
+            "quantity": 30,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black pepper",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/104982/panzanella-salad/",
+    "cuisine": "Italian",
+    "id": "panzanella_salad",
+    "imageUrl": "recipes/images/italian/panzanella_salad.webp"
+}

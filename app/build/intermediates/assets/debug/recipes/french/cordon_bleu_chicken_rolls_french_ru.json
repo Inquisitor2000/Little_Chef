@@ -1,0 +1,76 @@
+{
+  "name": "Куриные рулеты Кордон Блю",
+  "instructions": "1. Разогрейте духовку до 200 градусов Цельсия и слегка смажьте форму для запекания сливочным маслом.\n\n2. Уложите каждую половинку куриной грудки между пленкой и отбейте до толщины 1/20.3 см.\n\n3. Поместите ломтик швейцарского сыра на каждый ломтик ветчины, приправьте сушеным тимьяном, солью и перцем, затем сверните рулетом, как желе.\n\n4. Оберните каждое куриное филе вокруг ветчины и сыра, заворачивая концы и закрепляя зубочистками.\n\n5. Обмакните каждый куриный рулет в растопленное сливочное масло, обваляйте в кукурузных хлопьях и выложите в форму для запекания.\n\n6. Запекайте примерно 40 минут до золотистой корочки и пока сок не станет прозрачным.\n\n7. Для соуса нагрейте куриный бульон, сметану и лимонный сок на медленном огне до соединения.\n\n8. Подавайте горячий соус поверх куриных рулетов.",
+  "simpleInstructions": "1. Разогрейте и смажьте форму для запекания сливочным маслом.\n\n2. Отбейте куриную грудку, заверните швейцарский сыр в ветчину, сверните с курицей.\n\n3. Обваляйте в сливочном масле и кукурузных хлопьях, запеките.\n\n4. Приготовьте соус из куриного бульона, сметаны и лимонного сока, подайте с куриными рулетами.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 40,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "CHICKEN",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ham",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Swiss Cheese",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Thyme",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornflakes",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 160,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/16602/cordon-bleu-chicken-rolls/",
+  "cuisine": "French",
+  "id": "cordon_bleu_chicken_rolls",
+  "imageUrl": "recipes/images/french/cordon_bleu_chicken_rolls.jpg"
+}

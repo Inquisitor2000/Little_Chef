@@ -1,0 +1,46 @@
+{
+  "name": "Grilled Pork Tenderloin",
+  "instructions": "1. Preheat your outdoor grill to medium heat (about 350-375°F/175-190°C) for indirect grilling. If using a gas grill, light only one side of burners; if using charcoal, bank the coals to one side. Lightly oil the grill grates with a paper towel dipped in vegetable oil to prevent sticking. \n\n2. Pat the pork tenderloin dry with paper towels. Season it generously on all sides with the garlic powder, salt, and black pepper, rubbing the seasonings into the meat with your hands to help them adhere. \n\n3. Pour about half of the BBQ sauce into a small bowl and set it aside for basting during cooking. Reserve the remaining BBQ sauce in its original container for serving at the table. This prevents cross-contamination from the raw meat. \n\n4. Place the seasoned pork tenderloin on the cooler side of the grill (the indirect heat zone), not directly over the flames or coals. Close the grill lid to create an oven-like environment. \n\n5. Cook the pork for about 30 minutes with the lid closed, turning it once halfway through to ensure even cooking. The pork should start to develop some color and grill marks. \n\n6. After 30 minutes, brush the pork generously with the reserved basting BBQ sauce. Turn the pork over and brush the other side as well, coating it completely. \n\n7. Continue grilling with the lid closed for another 15-20 minutes, turning and basting with more BBQ sauce every 5-7 minutes. The pork is done when an instant-read thermometer inserted into the thickest part reads 145°F (63°C). The exterior should be caramelized and slightly charred, with a beautiful glaze from the BBQ sauce. \n\n8. Remove the pork from the grill and transfer it to a cutting board. Tent it loosely with aluminum foil and let it rest for 10 minutes. This resting period allows the juices to redistribute throughout the meat, ensuring it stays moist and tender when sliced. \n\n9. After resting, slice the pork tenderloin crosswise into 1/2-inch thick medallions. Arrange the slices on a serving platter. \n\n10. Serve immediately with the reserved BBQ sauce on the side for drizzling or dipping. This pairs wonderfully with coleslaw, corn on the cob, baked beans, or a fresh salad.",
+  "simpleInstructions": "1. Preheat grill to medium heat for indirect grilling and oil the grates. \n\n2. Pat pork dry and season all sides with garlic powder, salt, and pepper. \n\n3. Pour half the BBQ sauce into a bowl for basting; reserve the rest for serving. \n\n4. Place pork on indirect heat side of grill and close lid. \n\n5. Grill 30 minutes with lid closed, turning once halfway through. \n\n6. Brush pork with BBQ sauce and turn; brush other side. \n\n7. Continue grilling 15-20 minutes, turning and basting every 5-7 minutes, until internal temperature reaches 145°F. \n\n8. Remove from grill, tent with foil, and rest 10 minutes. \n\n9. Slice into 1/2-inch medallions. \n\n10. Serve with reserved BBQ sauce and sides.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 45,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "PORK",
+  "ingredients": [
+    {
+      "name": "Pork Tenderloin",
+      "quantity": 450,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "BBQ Sauce",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Garlic Powder",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/14726/grilled-pork-tenderloin/",
+  "cuisine": "American",
+  "id": "grilled_pork_tenderloin",
+  "imageUrl": "recipes/images/meat dishes/grilled_pork_tenderloin.jpg"
+}

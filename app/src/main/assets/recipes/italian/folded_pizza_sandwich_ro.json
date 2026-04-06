@@ -1,0 +1,76 @@
+{
+    "name": "Sandviș-pizza pliat",
+    "instructions": "1. Puneți aluatul pentru pizza într-un bol mediu uns cu spray de gătit și acoperiți ușor cu folie de plastic. Lăsați la temperatura camerei până devine moale și maleabil, aproximativ 1 oră. Aluatul ar trebui să se simtă relaxat și ușor de întins.\n\n2. În timp ce aluatul se odihnește, preîncălziți cuptorul la 230 de grade Celsius cu un raft în poziția centrală. Radeți usturoiul fin și amestecați cu jumătate din uleiul de măsline într-un bol mic pentru a face ulei de usturoi. Într-un bol separat, bateți oțetul de vin roșu, sarea și uleiul de măsline rămas pentru a face o vinegretă. Puneți ambele deoparte.\n\n3. Scoateți aluatul pe o foaie mare de pergament și tăiați în 2 bucăți egale. Lucrând cu o bucată o dată, întindeți și rulați aluatul într-un cerc. Ungeți aluatul generos cu amestecul de ulei de usturoi, apoi pliați cercul în jumătate pentru a crea o formă de semilună. Ungeți partea de sus ușor cu mai mult ulei de usturoi. Așezați pe o tavă căptușită cu pergament. Repetați cu aluatul și uleiul de usturoi rămas.\n\n4. Coaceți în cuptorul preîncălzit până se umflă și devine auriu, 8-10 minute. Pâinea ar trebui să fie crocantă pe exterior și moale în interior. Lăsați să se răcească aproximativ 3 minute pentru a facilita manipularea.\n\n5. Amestecați spanacul baby cu o parte din vinegretă într-un bol mediu până este ușor acoperit. Rupeți burrata în bucăți. Deschideți ușor fiecare pâine pentru pizza și puneți bucăți de burrata pe jumătatea de jos a fiecăreia.\n\n6. Umpleți uniform fiecare pâine pentru pizza cu spanacul baby condimentat, carnea afumată amestecată și pepperoncini feliat, distribuind generos umplutura.\n\n7. Stropiți cu vinegreta rămasă și glazura balsamică pentru o notă finală. Serviți imediat în timp ce pâinea este încă caldă și brânza este cremoasă.",
+    "simpleInstructions": "1. Lăsați aluatul pentru pizza la temperatura camerei timp de 1 oră până devine moale și maleabil.\n\n2. Preîncălziți cuptorul la 230 de grade Celsius și pregătiți uleiul de usturoi cu usturoiul și jumătate din uleiul de măsline, plus vinegreta cu oțetul de vin roșu, sarea și uleiul de măsline rămas.\n\n3. Tăiați aluatul în jumătate, formați cercuri, ungeți cu ulei de usturoi, pliați în jumătate și ungeți partea de sus.\n\n4. Coaceți 8-10 minute până se umflă și devine auriu, apoi răciți scurt.\n\n5. Amestecați spanacul baby cu o parte din vinegretă, rupeți burrata și puneți în pâinea pentru pizza deschisă.\n\n6. Umpleți cu spanac, carne afumată amestecată și pepperoncini feliat.\n\n7. Stropiți cu vinegreta rămasă și glazura balsamică, serviți imediat.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 20,
+    "servings": 2,
+    "mealType": "SNACK",
+    "dishCategory": "APPETIZER",
+    "ingredients": [
+        {
+            "name": "Refrigerated Pizza Dough",
+            "quantity": 230,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Garlic",
+            "quantity": 6,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 60,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Red Wine Vinegar",
+            "quantity": 15,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Baby Spinach",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Burrata",
+            "quantity": 110,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Mixed Cured Meats",
+            "quantity": 85,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Sliced Pepperoncini",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Balsamic Glaze",
+            "quantity": 15,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/folded-pizza-sandwich-recipe-8666883",
+    "cuisine": "Italian",
+    "id": "folded_pizza_sandwich",
+    "imageUrl": "recipes/images/italian/folded_pizza_sandwich.webp"
+}

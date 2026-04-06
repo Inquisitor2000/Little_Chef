@@ -1,0 +1,70 @@
+{
+  "name": "Киш Лорен",
+  "instructions": "1. Разогрейте духовку до 220 градусов Цельсия.\n\n2. Обжарьте бекон на большой сковороде на среднем огне до равномерной золотистой корочки, около 10 минут. Выложите на бумажные полотенца и крупно нарежьте.\n\n3. Посыпьте нарезанным беконом, швейцарским сыром и нарезанным луком подготовленное замороженное слоеное тесто для пирога.\n\n4. В средней миске взбейте вместе жирные сливки, яйца, соль, белый сахар и кайенский перец. Вылейте эту смесь в корж.\n\n5. Выпекайте в разогретой духовке в течение 15 минут. Уменьшите температуру до 150 градусов Цельсия и продолжайте выпекать, пока нож, вставленный на 2.5 см от края, не выйдет чистым, примерно 30 минут.\n\n6. Дайте кишу постоять 10 минут перед тем, как нарезать на сегменты и подавать.",
+  "simpleInstructions": "1. Разогрейте духовку до 220 градусов Цельсия.\n\n2. Обжарьте и нарежьте бекон; посыпьте сыром и луком в тесте для пирога.\n\n3. Смешайте сливки, яйца, соль, сахар и кайенский перец; вылейте в корж.\n\n4. Выпекайте 15 минут при 220 градусах Цельсия; снизьте до 150 градусов Цельсия и выпекайте 30 минут.\n\n5. Дайте постоять 10 минут перед подачей.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 55,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Bacon",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Swiss Cheese",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Onion",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Heavy Cream",
+      "quantity": 160,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 0.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/17515/quiche-lorraine-i/",
+  "cuisine": "French",
+  "id": "quiche_lorraine_i",
+  "imageUrl": "recipes/images/french/quiche_lorraine_i.jpg"
+}

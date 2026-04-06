@@ -1,0 +1,118 @@
+{
+    "name": "Мексиканский куриный салат",
+    "instructions": "1. Примечание по подготовке: Убедитесь, что куриная грудка полностью приготовлена и остыла перед началом. Вы можете приготовить ее на гриле, запечь или отварить, затем нарезать на кусочки размером с укус. В большой миске аккуратно соедините нарезанную кубиками приготовленную курицу, тертую морковь, нарезанный кубиками болгарский перец, нарезанную кубиками хикаму, нарезанный кубиками красный лук, зерна кукурузы, разрезанные пополам помидоры черри, нарезанное кубиками авокадо и нарезанную свежую кинзу. Аккуратно перемешайте для равномерного распределения.\n\n2. В отдельной небольшой миске взбейте венчиком сметану, майонез, свежевыжатый лимонный сок, кумин, соль, черный перец, приправу для тако и острый соус до однородности и хорошего смешивания. Попробуйте и при необходимости отрегулируйте приправы.\n\n3. Полейте кремовой заправкой смесь салата и аккуратно, но тщательно перемешайте, чтобы равномерно покрыть все ингредиенты, не размяв авокадо.\n\n4. Плотно накройте миску пищевой пленкой и охлаждайте минимум 1 час, чтобы вкусы смешались. Подавайте охлажденным как основное блюдо или в тортильях в виде роллов.",
+    "simpleInstructions": "1. Соедините все нарезанные кубиками ингредиенты салата, включая приготовленную курицу, в большой миске.\n\n2. Взбейте венчиком ингредиенты для заправки в отдельной миске.\n\n3. Полейте салат заправкой и аккуратно перемешайте для покрытия.\n\n4. Охлаждайте минимум 1 час перед подачей в охлажденном виде.",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 0,
+    "servings": 2,
+    "mealType": "LUNCH",
+    "dishCategory": "CHICKEN",
+    "ingredients": [
+        {
+            "name": "Chicken Breast",
+            "quantity": 210,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Carrot",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Bell Pepper",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Jicama",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Red Onion",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Corn",
+            "quantity": 180,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Cherry Tomatoes",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Avocado",
+            "quantity": 100,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Fresh Cilantro",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Sour Cream",
+            "quantity": 40,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mayonnaise",
+            "quantity": 45,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Lemon Juice",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cumin",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Taco Seasoning",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Hot Sauce",
+            "quantity": 2.5,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/86916/kikis-mexican-chicken-salad/",
+    "cuisine": "Mexican",
+    "id": "kikis_mexican_chicken_salad",
+    "imageUrl": "recipes/images/mexican/kikis_mexican_chicken_salad.webp"
+}

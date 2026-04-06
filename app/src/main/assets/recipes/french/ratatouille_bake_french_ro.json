@@ -1,0 +1,94 @@
+{
+  "name": "Tocăniță de legume la cuptor",
+  "instructions": "1. Preîncălziți cuptorul la 350 grade F (175 grade C). Ungeți o tavă de copt de 2 ½ litri cu spray de gătit.  \n\n2. Încălziți uleiul de măsline într-o tigaie mare la foc mediu. Adăugați vânăta, ceapa și usturoiul; gătiți și amestecați până când legumele încep să se înmoaie, aproximativ 8 minute.  \n\n3. Încorporați dovlecelul, roșiile conservate, ardeiul gras verde, busuiocul uscat, pătrunjelul uscat, sarea și piperul negru; aduceți la fierbere, amestecând frecvent. Reduceți focul la mediu-mic; lăsați să fiarbă până când legumele sunt fragede, aproximativ 20 de minute.  \n\n4. Între timp, umpleți o oală cu apă sărată și aduceți la fierbere. Adăugați tăițeii cu ou și gătiți descoperit până când tăițeii plutesc și umplutura este caldă, 3 până la 5 minute. Scurgeți.  \n\n5. Transferați tăițeii cu ou în fundul tăvii pregătite; adăugați amestecul de legume fierbinte deasupra. Presărați cu mozzarella.  \n\n6. Coaceți până când se formează bule și brânza este topită, aproximativ 20 de minute.",
+  "simpleInstructions": "1. Preîncălziți cuptorul și pregătiți tava.  \n\n2. Gătiți vânăta, ceapa și usturoiul în tigaie.  \n\n3. Adăugați dovlecelul, roșiile, ardeiul gras, condimentele și lăsați să fiarbă.  \n\n4. Fierbeți și scurgeți tăițeii cu ou.  \n\n5. Asamblați tava și adăugați mozzarella.  \n\n6. Coaceți până când brânza se topește.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "BAKED_DISH",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggplant",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Onion",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 12.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Zucchini",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Tomatoes",
+      "quantity": 240,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Green Bell Pepper",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Basil",
+      "quantity": 7.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Parsley",
+      "quantity": 7.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg Noodles",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mozzarella",
+      "quantity": 55,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/200877/ratatouille-bake/",
+  "cuisine": "French",
+  "id": "ratatouille_bake",
+  "imageUrl": "recipes/images/french/ratatouille_bake.jpg"
+}

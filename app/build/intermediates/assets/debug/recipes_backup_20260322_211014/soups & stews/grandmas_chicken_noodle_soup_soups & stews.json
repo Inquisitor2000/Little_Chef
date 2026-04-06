@@ -1,0 +1,76 @@
+{
+  "name": "Chicken Noodle Soup",
+  "instructions": "1. Bring a large pot of lightly salted water to a boil. Add egg noodles and oil, and boil until noodles are tender, about 8 minutes. Drain, rinse under cool running water, and drain again.  \n\n2. Bring the broth, salt, and poultry seasoning to a boil in a Dutch oven. Stir in the celery and onion; reduce the heat, cover, and simmer until vegetables have softened, about 15 minutes.  \n\n3. Mix the cornstarch and water together in a small bowl until cornstarch is completely dissolved; gradually stir into soup.  \n\n4. Stir in noodles and chicken, and cook until heated through, 2 to 3 minutes.  \n\n5. Serve hot and enjoy!",
+  "simpleInstructions": "1. Cook egg noodles.  \n\n2. Boil broth with salt and seasoning, add celery and onion, simmer.  \n\n3. Mix cornstarch and water, add to soup.  \n\n4. Add noodles and chicken, heat through.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    {
+      "name": "Egg Noodles",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 1.25,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 2000,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Poultry Seasoning",
+      "quantity": 1.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Celery",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Breast",
+      "quantity": 500,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/13206/grandmas-chicken-noodle-soup/",
+  "cuisine": "Soups & Stews",
+  "id": "grandmas_chicken_noodle_soup",
+  "imageUrl": "recipes/images/soups & stews/grandmas_chicken_noodle_soup.jpg"
+}

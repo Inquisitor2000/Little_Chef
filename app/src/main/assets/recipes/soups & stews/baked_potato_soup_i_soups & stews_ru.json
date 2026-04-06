@@ -1,0 +1,76 @@
+{
+    "name":  "Суп из Печеного Картофеля",
+    "instructions":  "1. Положите бекон в большую сковороду и готовьте на среднем огне, периодически переворачивая, до равномерного подрумянивания, около 8-10 минут. Слейте ломтики бекона на бумажные полотенца; раскрошите и отложите в сторону.  \n\n2. Тем временем растопите масло в большой кастрюле или жаровне на среднем огне. Постепенно добавляйте муку, взбивая до хорошего смешивания. Медленно влейте молоко, постоянно взбивая до гладкости и загустения.  \n\n3. Добавьте картофель и лук и доведите до кипения, часто помешивая. Уменьшите огонь и варите на медленном огне в течение 10 минут.  \n\n4. Добавьте раскрошенный бекон, сыр, сметану, соль и перец. Продолжайте готовить и помешивать, пока сыр не расплавится.",
+    "simpleInstructions":  "1. Приготовьте и раскрошите бекон.  \n\n2. Растопите масло, взбейте муку, затем молоко до гладкости.  \n\n3. Добавьте картофель и лук, доведите до кипения, затем варите на медленном огне.  \n\n4. Добавьте бекон, сыр, сметану, приправьте и готовьте до расплавления сыра.",
+    "prepTimeMinutes":  15,
+    "cookTimeMinutes":  25,
+    "servings":  2,
+    "mealType":  "DINNER",
+    "dishCategory":  "SOUP",
+    "ingredients":  [
+                        {
+                            "name":  "Bacon",
+                            "quantity":  60,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Butter",
+                            "quantity":  50,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "All-Purpose Flour",
+                            "quantity":  40,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Milk",
+                            "quantity":  580,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Potato",
+                            "quantity":  1300,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Scallion",
+                            "quantity":  20,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Cheddar Cheese",
+                            "quantity":  100,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Sour Cream",
+                            "quantity":  80,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Salt",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Black Pepper",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/12997/baked-potato-soup-i/",
+    "cuisine":  "Soups \u0026 Stews",
+    "id":  "baked_potato_soup_i",
+    "imageUrl":  "recipes/images/soups \u0026 stews/baked_potato_soup_i.jpg"
+}

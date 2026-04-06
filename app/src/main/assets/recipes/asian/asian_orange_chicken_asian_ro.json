@@ -1,0 +1,118 @@
+{
+  "name": "Pui Asiatic cu Portocale",
+  "instructions": "1. Într-o cratiță medie la foc mediu-mare, combinați apa, oțetul de orez, sucul de lămâie, sosul de soia și sucul de portocale. Adăugați zahărul brun, ceapa verde tocată, coaja de portocală, ghimbirul tocat, usturoiul tocat și fulgii de ardei roșu. Aduceți amestecul la fierbere puternică, amestecând ocazional pentru a dizolva zahărul. Scoateți de pe foc și lăsați sosul să se răcească timp de 10-15 minute până ajunge la temperatura camerei.\n\n2. Puneți bucățile de pui într-o pungă mare de plastic resigilabilă. Turnați jumătate din sosul răcit peste pui, asigurându-vă că toate bucățile sunt acoperite. Sigilați punga, eliminând aerul în exces, și refrigerați cel puțin 2 ore pentru a permite aromelor să pătrundă în carne. Transferați sosul rămas într-un recipient și refrigerați separat.\n\n3. Într-o altă pungă de plastic resigilabilă, combinați făina, sarea și piperul negru, scuturând pentru a amesteca uniform ingredientele uscate.\n\n4. Scoateți puiul marinat din pungă, lăsând marinata în exces să se scurgă. Puneți bucățile de pui în punga cu făină condimentată, sigilați-o și scuturați vigoroas până când fiecare bucată este acoperită complet cu amestecul de făină.\n\n5. Încălziți uleiul de măsline într-o tigaie mare la foc mediu până devine strălucitor. Adăugați bucățile de pui înfăinate și gătiți până devin aurii și crocante pe ambele părți, aproximativ 3-4 minute pe fiecare parte. Transferați puiul rumenit pe o farfurie căptușită cu prosop de hârtie și acoperiți ușor cu folie de aluminiu pentru a-l menține cald.\n\n6. Turnați sosul rezervat în aceeași tigaie și aduceți la fierbere la foc mediu-mare. Într-un bol mic, amestecați amidonul de porumb cu o cantitate mică de apă până devine complet neted, fără cocoloașe. Adăugați încet amestecul de amidon în sosul care fierbe, amestecând constant până când sosul se îngroașă și devine lucios.\n\n7. Reduceți focul la mediu-mic și returna puiul în tigaie. Lăsați să fiarbă încet, amestecând ocazional și acoperind puiul cu sosul, până când puiul este gătit complet și temperatura internă ajunge la 74°C, aproximativ 5 minute. Serviți fierbinte peste orez fiert și bucurați-vă!",
+  "simpleInstructions": "1. Fierbeți ingredientele pentru sos împreună, apoi răciți la temperatura camerei.\n\n2. Marinați puiul în jumătate din sos cel puțin 2 ore, păstrați restul.\n\n3. Scuturați puiul în făină condimentată până este bine acoperit.\n\n4. Prăjiți puiul până devine auriu și crocant pe ambele părți.\n\n5. Fierbeți sosul rezervat, îngroșați cu amidon, adăugați puiul înapoi și gătiți la foc mic până este gătit complet. Serviți peste orez!",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "CHICKEN",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 180,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rice Vinegar",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Orange Juice",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Pepper Flakes",
+      "quantity": 1.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 125,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/61024/asian-orange-chicken/",
+  "cuisine": "Asian",
+  "id": "asian_orange_chicken",
+  "imageUrl": "recipes/images/asian/asian_orange_chicken.jpg"
+}

@@ -1,0 +1,70 @@
+{
+    "name": "Брускетта с сыром",
+    "instructions": "1. Разогрейте духовку до 175 градусов Цельсия.\n\n2. Нарежьте багет на диагональные ломтики. Разложите ломтики в один слой на противне.\n\n3. Щедро смажьте обе стороны каждого ломтика оливковым маслом, чтобы они стали хрустящими и приобрели аромат.\n\n4. Тонко нарежьте помидоры и разложите ломтики поверх хлеба. Порвите или нарежьте свежий базилик и посыпьте помидоры вместе с сушеным орегано.\n\n5. Приправьте чесночным порошком и белым перцем, равномерно распределяя по всем ломтикам.\n\n6. Покройте ломтики помидоров тертой моцареллой и проволоне, убедившись, что каждый ломтик хорошо покрыт сыром.\n\n7. Положите дополнительные листья свежего базилика, еще щепотку сушеного орегано и дополнительные ломтики помидоров поверх сыра для усиления вкуса и презентации.\n\n8. Выпекайте в разогретой духовке до тех пор, пока сыр не расплавится, не начнет пузыриться и слегка не подрумянится, около 7-10 минут. Подавайте теплым.",
+    "simpleInstructions": "1. Разогрейте духовку и разложите ломтики багета на противне.\n\n2. Смажьте ломтики оливковым маслом с обеих сторон.\n\n3. Покройте нарезанными помидорами, свежим базиликом, сушеным орегано, чесночным порошком и белым перцем.\n\n4. Покройте моцареллой и проволоне, добавьте больше трав и помидоров, затем запекайте до появления пузырьков.",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 10,
+    "servings": 2,
+    "mealType": "BREAKFAST",
+    "dishCategory": "APPETIZER",
+    "ingredients": [
+        {
+            "name": "Baguette",
+            "quantity": 100,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Olive oil",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tomato",
+            "quantity": 70,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Fresh Basil",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Dried Oregano",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic powder",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "White pepper",
+            "quantity": 0.25,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Provolone",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/20545/bruschetta-iii/",
+    "cuisine": "Italian",
+    "id": "bruschetta_iii",
+    "imageUrl": "recipes/images/italian/bruschetta_iii.webp"
+}

@@ -1,0 +1,52 @@
+{
+    "name":  "French Bread",
+    "instructions":  "1. Grease a large baking sheet and sprinkle with the cornmeal. Set aside.\n\n2. Combine the flour, yeast, and salt in the bowl of a stand mixer. Stir in the water and beat with the dough hook attachment until blended.\n\n3. Continue adding remaining flour, a little at a time, until incorporated.\n\n4. Knead dough on a lightly floured surface until smooth and elastic, about 8 to 10 minutes. Shape into a ball, place in a greased bowl, and turn once.\n\n5. Cover and let rise in a warm place until doubled in size, about 1 hour.\n\n6. Punch dough down and divide in half.\n\n7. Turn out onto a lightly floured surface. Cover and let rest for 10 minutes.\n\n8. Roll each half into a large rectangle. Roll up, starting from a long side. Moisten edge with water and seal. Taper ends.\n\n9. Place loaves, seam-side down, on the prepared baking sheet.\n\n10. Lightly beat the egg white with water and brush over loaves.\n\n11. Cover with a damp cloth and let rise until nearly doubled, 35 to 40 minutes.\n\n12. Preheat the oven to 190 degrees Celsius. Make 3 or 4 diagonal cuts, about 1.25 cm deep, across each loaf.\n\n13. Bake in the preheated oven for 20 minutes.\n\n14. Brush loaves with the egg white mixture and continue baking until loaves sound hollow when tapped, about 15 to 20 minutes more.\n\n15. Remove loaves from the baking sheet and cool on a wire rack.",
+    "simpleInstructions":  "1. Prepare baking sheet and combine initial ingredients.\n\n2. Knead the dough, let rise, punch down, and shape into loaves.\n\n3. Brush with egg wash, rise again, and make cuts on loaves.\n\n4. Bake at 190 degrees Celsius, brushing once, and cool on wire rack.",
+    "prepTimeMinutes":  10,
+    "cookTimeMinutes":  35,
+    "servings":  2,
+    "mealType":  "SNACK",
+    "dishCategory":  "BREAD",
+    "ingredients":  [
+                        {
+                            "name":  "All-Purpose Flour",
+                            "quantity":  400,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Active Dry Yeast",
+                            "quantity":  15,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Salt",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Water",
+                            "quantity":  255,
+                            "unit":  "ml",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Cornmeal",
+                            "quantity":  7.5,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Egg Whites",
+                            "quantity":  1,
+                            "unit":  "pcs",
+                            "isStarIngredient":  false
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/6882/french-bread/",
+    "cuisine":  "Bread \u0026 Bakery",
+    "id":  "french_bread",
+    "imageUrl":  "recipes/images/bread \u0026 bakery/french_bread.jpg"
+}

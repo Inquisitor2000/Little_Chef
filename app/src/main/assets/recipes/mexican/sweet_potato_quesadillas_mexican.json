@@ -1,0 +1,58 @@
+{
+  "name": "Sweet Potato Quesadillas",
+  "instructions": "1. Poke several holes into the Sweet Potato using a fork to allow steam to escape. Microwave on high until the flesh is soft throughout when poked with a fork, 3 to 4 minutes. The sweet potato should yield easily to pressure. Let cool before handling and peeling, at least 10 minutes.\n\n2. Peel the cooled Sweet Potato and mash the flesh in a bowl until smooth. Chop the Pecans into small pieces and stir into the mashed Sweet Potato along with the Nutmeg. Mix until well combined and fragrant.\n\n3. Spread the sweet potato mixture evenly over half of each tortilla, leaving a small border around the edges. Dice the Red Onion finely and sprinkle over the filling along with crumbled Feta Cheese. Fold the Tortillas in half and press the edges together firmly to seal and prevent filling from spilling out during cooking.\n\n4. Heat the Vegetable Oil in a medium skillet over medium heat until shimmering. Cook each quesadilla until golden brown and crispy on the bottom, about 2 minutes, then carefully flip and cook the other side until equally golden, about 2 minutes more. The cheese should be slightly melted and the tortilla crispy. Remove from the skillet and let rest for a minute before cutting into wedges for serving.",
+  "simpleInstructions": "1. Poke holes in the Sweet Potato and microwave until soft. Let cool and peel.\n\n2. Mash the Sweet Potato and mix in chopped Pecans and Nutmeg.\n\n3. Spread the mixture on half of each Tortilla, add diced Red Onion and Feta Cheese, then fold in half.\n\n4. Cook the quesadillas in Vegetable Oil until golden brown on both sides, then cut into wedges.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 5,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "VEGETARIAN",
+  "ingredients": [
+    {
+      "name": "Sweet Potato",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pecans",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Nutmeg",
+      "quantity": 0.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tortillas",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Red Onion",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Feta Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/276314/sweet-potato-quesadillas/",
+  "cuisine": "Mexican",
+  "id": "sweet_potato_quesadillas",
+  "imageUrl": "recipes/images/mexican/sweet_potato_quesadillas.webp"
+}

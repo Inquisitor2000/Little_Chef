@@ -1,0 +1,64 @@
+{
+    "name":  "Суп из Говяжьих Ребрышек",
+    "instructions":  "1. Положите ребрышки в большую кастрюлю и залейте водой. Доведите до кипения; уменьшите огонь до средне-слабого, накройте крышкой и варите на медленном огне, пока мясо не начнет отделяться от костей, около 2 часов.  \n\n2. Выньте ребрышки и дайте остыть. Срежьте мясо с ребер и нарежьте небольшими кусочками; поставьте в холодильник.  \n\n3. Продолжайте варить бульон на медленном огне, пока он не уменьшится; поставьте в холодильник, пока жир не застынет сверху.  \n\n4. Снимите и выбросьте застывший жир.  \n\n5. Влейте бульон в кастрюлю вместе с кусочками мяса, говяжьим бульоном, картофелем, морковью, грибами, солью и перцем. Доведите до кипения; уменьшите огонь до средне-слабого, накройте крышкой и варите на медленном огне, пока картофель не станет мягким, около 20 минут.  \n\n6. Посыпьте зеленым луком перед подачей.",
+    "simpleInstructions":  "1. Варите ребрышки в воде 2 часа до мягкости мяса.  \n\n2. Срежьте мясо и поставьте в холодильник.  \n\n3. Варите бульон, затем охладите для удаления жира.  \n\n4. Снимите жир.  \n\n5. Готовьте бульон с говядиной, бульоном, овощами, солью и перцем.  \n\n6. Подавайте с зеленым луком.",
+    "prepTimeMinutes":  15,
+    "cookTimeMinutes":  180,
+    "servings":  2,
+    "mealType":  "DINNER",
+    "dishCategory":  "SOUP",
+    "ingredients":  [
+                        {
+                            "name":  "Beef Ribs",
+                            "quantity":  400,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Beef Broth",
+                            "quantity":  240,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Potato",
+                            "quantity":  200,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Carrot",
+                            "quantity":  100,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Button Mushroom",
+                            "quantity":  110,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Salt",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Black Pepper",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Fresh Chives",
+                            "quantity":  15,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/158518/prime-rib-soup/",
+    "cuisine":  "Soups \u0026 Stews",
+    "id":  "prime_rib_soup",
+    "imageUrl":  "recipes/images/soups \u0026 stews/prime_rib_soup.jpg"
+}

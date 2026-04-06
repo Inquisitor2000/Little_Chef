@@ -1,0 +1,76 @@
+{
+  "name": "Tiramisu Cheesecake",
+  "instructions": "1. Preheat the oven to 175 degrees Celsius. Place a shallow pan filled with water on the lowest oven rack to create a water bath that will help prevent cracking.\n\n2. To make the crust: Place the ladyfinger cookies in a food processor and pulse until they form fine, even crumbs. Transfer the crumbs to a medium bowl and add the melted butter and rum. Stir with a fork until the mixture is evenly moistened and holds together when pressed. Press the mixture firmly and evenly into the bottom of a 9-inch springform pan, creating a compact layer. Use the bottom of a glass to help pack it down.\n\n3. To make the filling: In a large bowl, beat the cream cheese, mascarpone cheese, and sugar with an electric mixer on medium-high speed until very smooth and creamy with no lumps, about 2 to 3 minutes. Stop and scrape down the sides of the bowl with a spatula. Add the rum and mix until incorporated. Add the flour and eggs, then mix on low speed just until smooth and combined. Avoid overmixing. If the batter seems too thick and difficult to pour, mix in the heavy cream to loosen it slightly.\n\n4. Pour the filling over the prepared crust, spreading it evenly to the edges. Gently tap the pan on the counter a few times to release any air bubbles. Place the springform pan on the center rack of the preheated oven. Bake until the cheesecake is just set around the edges but still slightly jiggly in the center, about 40 to 45 minutes. The center will firm up as it cools.\n\n5. When done, open the oven door and turn off the heat. Leave the cheesecake inside the oven with the door ajar for 20 minutes. This gradual cooling helps prevent cracking.\n\n6. Remove the cheesecake from the oven and transfer to a wire rack. Allow it to cool completely at room temperature, about 30 more minutes.\n\n7. Once cooled, cover the cheesecake with plastic wrap and refrigerate for at least 3 hours, or preferably overnight, to allow it to set completely and develop the best flavor and texture.\n\n8. Just before serving, use a fine grater or microplane to grate the dark chocolate over the top of the cheesecake, creating an even dusting. Run a knife around the edge of the pan, then carefully release and remove the springform ring. Slice and serve chilled.",
+  "simpleInstructions": "1. Preheat oven with water bath on lowest rack.\n\n2. Crush ladyfingers, mix with butter and rum, press into springform pan.\n\n3. Beat cheeses with sugar, add rum, flour, and eggs until smooth.\n\n4. Pour over crust and bake until just set, about 40-45 minutes.\n\n5. Cool gradually in oven, then at room temperature.\n\n6. Refrigerate at least 3 hours or overnight.\n\n7. Grate chocolate on top before serving.",
+  "prepTimeMinutes": 25,
+  "cookTimeMinutes": 40,
+  "servings": 8,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Ladyfinger Cookies",
+      "quantity": 320,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rum",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cream Cheese",
+      "quantity": 640,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mascarpone",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 160,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Heavy Cream",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dark Chocolate",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/7757/tiramisu-cheesecake/",
+  "cuisine": "Italian",
+  "id": "tiramisu_cheesecake",
+  "imageUrl": "recipes/images/italian/tiramisu_cheesecake.jpg"
+}

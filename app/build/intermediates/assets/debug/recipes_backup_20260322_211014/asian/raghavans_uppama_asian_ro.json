@@ -1,0 +1,88 @@
+{
+  "name": "Uppama lui Raghavan",
+  "instructions": "1. Topiți ghee-ul într-o tigaie mare cu fund gros la foc mediu, lăsându-l să se topească complet și să devină clar. Turnați cerealele de grâu cremoase (cream of wheat/semolina) și prăjiți, amestecând frecvent cu o lingură de lemn pentru a preveni arderea, timp de 5-8 minute. Veți ști că este gata când cerealele devin maro deschis auriu și emană un parfum bogat, de nuci, prăjit. Transferați imediat cerealele prăjite într-un bol pentru a opri gătirea și lăsați deoparte. Ștergeți tigaia cu un prosop de hârtie pentru a îndepărta orice resturi.\n\n2. Încălziți ghee-ul rămas în aceeași tigaie la foc mediu-mare până strălucește. Adăugați semințele de muștar și acoperiți imediat tigaia cu un capac pentru a preveni împrăștierea—veți auzi semințele începând să pocnească și să sară. Așteptați aproximativ 30 secunde până când pocniturile încetinesc și se opresc aproape complet, ceea ce indică faptul că semințele și-au eliberat aromele.\n\n3. Scoateți capacul și adăugați cajul și ardeii chili întregi. Sotați, amestecând constant, timp de 1-2 minute până când cajul devine auriu profund și aromat, iar ardeii se înnegresc ușor pe margini și eliberează căldura lor aromată în ulei. Aveți grijă să nu ardeți nucile.\n\n4. Adăugați morcovul tăiat cubulețe, mazărea, frunzele proaspete de curry (care adaugă o aromă citrice distinctă) și curcuma măcinată. Sotați, amestecând bine, timp de aproximativ 2 minute până când legumele încep să se înmoaie și curcuma colorează totul într-o nuanță galbenă strălucitoare. Turnați apa și adăugați sarea, amestecând pentru a combina. Creșteți focul și aduceți amestecul la o fierbere puternică.\n\n5. Odată ce fierbe, reduceți focul la mediu și lăsați să fiarbă la foc mic, acoperit cu un capac, timp de 3-5 minute până când morcovii sunt moi la furculiță dar încă au o ușoară rezistență—nu îi supragătiți sau vor deveni moi.\n\n6. Reduceți focul la mediu-mic și adăugați treptat cerealele de grâu prăjite, presărându-le uniform în timp ce amestecați constant pentru a preveni formarea cocoloașelor. Odată ce toate cerealele sunt încorporate, acoperiți tigaia și gătiți timp de aproximativ 5 minute, amestecând ocazional, până când cerealele se înmoaie complet și absorb lichidul, devenind cremoase și asemănătoare terciurilor.\n\n7. Scoateți tigaia de pe foc și lăsați să stea acoperită timp de 3-5 minute pentru a permite cerealelor să se înmoaie în continuare și aromele să se îmbine. Dacă preferați o textură mai cremoasă, mai asemănătoare terciurilor, amestecați apa suplimentară până ajungeți la consistența dorită. Gustați și ajustați condimentarea dacă este necesar. Transferați în boluri de servire, presărați generos cu frunze proaspete de coriandru tocat pentru prospețime și serviți cald ca un mic dejun reconfortant sau o gustare ușoară.",
+  "simpleInstructions": "1. Prăjiți cerealele în ghee până miros a nuci și devin aurii, apoi lăsați deoparte.\n\n2. Pocniți semințele de muștar în ghee, apoi prăjiți cajul și ardeii până sunt aurii.\n\n3. Sotați morcovul, mazărea, frunzele de curry și curcuma, apoi fierbeți cu apă și sare.\n\n4. Adăugați cerealele prăjite, acoperiți și gătiți până se înmoaie complet.\n\n5. Lăsați să stea acoperit, adăugați apă pentru cremozitatate dacă doriți, presărați cu coriandru și serviți cald.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 25,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "VEGETARIAN",
+  "ingredients": [
+    {
+      "name": "Ghee",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Oats",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mustard Seeds",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cashews",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrot",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Peas",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Curry Leaves",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Turmeric",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 360,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sea Salt",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Cilantro",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/8338276/raghavans-uppama/",
+  "cuisine": "Asian",
+  "id": "raghavans_uppama",
+  "imageUrl": "recipes/images/asian/raghavans_uppama.jpg"
+}

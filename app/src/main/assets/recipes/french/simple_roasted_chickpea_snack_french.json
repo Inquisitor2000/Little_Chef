@@ -1,0 +1,64 @@
+{
+  "name": "Simple Roasted Chickpea Snack",
+  "instructions": "1. Preheat the oven to 350 degrees F (175 degrees C). 2. Whisk the olive oil, ground cumin, garlic powder, chili powder, sea salt, black pepper, and crushed red pepper together in a small bowl. 3. Add the chickpeas and toss to coat. 4. Spread in a single layer on a baking sheet. 5. Roast in the preheated oven, stirring occasionally, until nicely browned and slightly crispy, about 45 minutes.",
+  "simpleInstructions": "1. Preheat oven. 2. Mix oil and spices. 3. Coat chickpeas. 4. Spread on sheet. 5. Roast until crispy.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 45,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "VEGETARIAN",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cumin",
+      "quantity": 7.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic Powder",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chili Powder",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sea Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Pepper Flakes",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chickpeas",
+      "quantity": 210,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/197683/simple-roasted-chickpea-snack/",
+  "cuisine": "French",
+  "id": "simple_roasted_chickpea_snack",
+  "imageUrl": "recipes/images/french/simple_roasted_chickpea_snack.jpg"
+}

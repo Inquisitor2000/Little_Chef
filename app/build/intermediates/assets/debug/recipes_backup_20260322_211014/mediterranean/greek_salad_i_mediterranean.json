@@ -1,0 +1,88 @@
+{
+  "name": "Greek Salad",
+  "instructions": "1. Combine the romaine lettuce, cucumber, tomatoes, olives, bell peppers, and red onion in a large bowl.\n\n2. Sprinkle the salad mixture with crumbled feta cheese.\n\n3. In a small bowl, whisk together the olive oil, lemon juice, dried oregano, and ground black pepper.\n\n4. Pour the dressing over the salad and toss well to combine.\n\n5. Serve immediately or chill in the refrigerator for later.",
+  "simpleInstructions": "1. Mix salad ingredients in a bowl.\n\n2. Sprinkle with feta cheese.\n\n3. Whisk dressing ingredients.\n\n4. Toss salad with dressing.\n\n5. Serve or chill.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "VEGETARIAN",
+  "ingredients": [
+    {
+      "name": "Lettuce",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cucumber",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Tomato",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Black Olives",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Green Bell Pepper",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Bell Pepper",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Onion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Feta Cheese",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/14373/greek-salad-i/",
+  "cuisine": "Mediterranean",
+  "id": "greek_salad_i",
+  "imageUrl": "recipes/images/mediterranean/greek_salad_i.jpg"
+}

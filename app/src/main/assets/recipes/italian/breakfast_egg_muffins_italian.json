@@ -1,0 +1,94 @@
+{
+  "name": "Breakfast Egg Muffins",
+  "instructions": "1. Preheat the oven to 375 degrees F (190 degrees C). Grease muffin cups with cooking spray to prevent sticking.\n\n2. Beat the whole Eggs in a large bowl until well combined. Add the Egg Whites and beat until smooth and slightly frothy.\n\n3. Stir in the diced Ham, chopped Spinach, diced Red Bell Pepper, diced Green Bell Pepper, and diced Jalapeño Pepper. Mix until the vegetables and ham are evenly distributed throughout the egg mixture.\n\n4. Add the minced Garlic, Italian Seasoning, Onion Powder, Cayenne Pepper, Salt, and Black Pepper. Stir well to ensure all seasonings are incorporated.\n\n5. Ladle the egg mixture into the prepared muffin cups, filling each about three-quarters full to allow room for rising during baking.\n\n6. Bake in the preheated oven until the centers are set and the tops are lightly golden, 25 to 30 minutes. A toothpick inserted in the center should come out clean. Let cool slightly before removing from the pan.",
+  "simpleInstructions": "1. Preheat oven and grease muffin cups with cooking spray.\n\n2. Beat the whole Eggs and Egg Whites until smooth.\n\n3. Stir in diced Ham, chopped Spinach, diced Bell Peppers, Jalapeño, minced Garlic, and all seasonings.\n\n4. Ladle the mixture into muffin cups, filling three-quarters full.\n\n5. Bake for 25-30 minutes until set and golden.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 25,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Egg Whites",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ham",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Spinach",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Bell Pepper",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Green Bell Pepper",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jalapeño Pepper",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Italian Seasoning",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion Powder",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/236039/breakfast-egg-muffins/",
+  "cuisine": "Italian",
+  "id": "breakfast_egg_muffins",
+  "imageUrl": "recipes/images/italian/breakfast_egg_muffins.jpg"
+}

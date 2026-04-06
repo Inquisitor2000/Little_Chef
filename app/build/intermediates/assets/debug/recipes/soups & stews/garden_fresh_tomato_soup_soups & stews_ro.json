@@ -1,0 +1,64 @@
+{
+    "name":  "Supă de Roșii Proaspete",
+    "instructions":  "1. Combinați roșiile, bulionul de pui, usturoiul și ceapa într-o oală mare la foc mediu. Aduceți la fierbere și lăsați să fiarbă ușor timp de aproximativ 15-20 de minute pentru a amesteca aromele.  \n\n2. Scoateți de pe foc și treceți amestecul printr-o moară de alimente într-un bol mare sau tigaie. Aruncați orice pulpă rămasă în moară.  \n\n3. Topiți untul la foc mediu în oala acum goală. Amestecați făina pentru a face un roux, gătind și amestecând constant cu telul, până devine maro mediu.  \n\n4. Amestecați treptat cu telul puțin din amestecul de roșii pentru a preveni formarea cocoloașelor, apoi amestecați restul.  \n\n5. Condimentați cu zahăr și sare după gust. Serviți fierbinte și bucurați-vă!",
+    "simpleInstructions":  "1. Gătiți roșiile, bulionul, usturoiul și ceapa.  \n\n2. Pasați și strecurați.  \n\n3. Faceți și incorporați roux-ul.  \n\n4. Condimentați și serviți.",
+    "prepTimeMinutes":  5,
+    "cookTimeMinutes":  25,
+    "servings":  2,
+    "mealType":  "LUNCH",
+    "dishCategory":  "SOUP",
+    "ingredients":  [
+                        {
+                            "name":  "Tomato",
+                            "quantity":  140,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Chicken Broth",
+                            "quantity":  60,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Garlic",
+                            "quantity":  6,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Onion",
+                            "quantity":  75,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Butter",
+                            "quantity":  10,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "All-Purpose Flour",
+                            "quantity":  10,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "White Sugar",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Salt",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/39544/garden-fresh-tomato-soup/",
+    "cuisine":  "Soups \u0026 Stews",
+    "id":  "garden_fresh_tomato_soup",
+    "imageUrl":  "recipes/images/soups \u0026 stews/garden_fresh_tomato_soup.jpg"
+}

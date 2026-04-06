@@ -1,0 +1,46 @@
+{
+  "name": "Bulete cu Brânză și Bacon",
+  "instructions": "1. Pune bacon-ul într-o tigaie mare și adâncă. Gătește la foc mediu-mare până devine uniform maronie. Scurge, sfărâmă și pune deoparte.  \n\n2. Preîncălzește cuptorul la funcția de gratinare.  \n\n3. Într-un bol mediu, combină bacon-ul, brânza cheddar, muștarul și maioneza. Amestecă bine pentru a obține o compoziție omogenă.  \n\n4. Așază feliile de pâine albă pe o tavă de copt. Pune amestecul de bacon, brânză cheddar, muștar și maioneză pe fiecare felie de pâine albă.  \n\n5. Gratinează timp de 5 minute sau până devin spumoase și aurii.",
+  "simpleInstructions": "1. Gătește bacon-ul, sfârâmă-l și pune-l deoparte.  \n\n2. Preîncălzește cuptorul la gratinare.  \n\n3. Combină bacon-ul, brânza cheddar, muștarul și maioneza.  \n\n4. Pune amestecul pe feliile de pâine albă. Gratinează până devine spumos.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 5,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "APPETIZER",
+  "ingredients": [
+    {
+      "name": "Bacon",
+      "quantity": 45,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mustard",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Bread",
+      "quantity": 90,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/16504/bacon-cheese-puffs/",
+  "cuisine": "French",
+  "id": "bacon_cheese_puffs",
+  "imageUrl": "recipes/images/french/bacon_cheese_puffs.jpg"
+}

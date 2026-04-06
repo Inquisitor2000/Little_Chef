@@ -1,0 +1,88 @@
+{
+  "name": "Salată Grecească",
+  "instructions": "1. Combinați salata romaine, castravetele, roșiile, măslinele, ardeii grași și ceapa roșie într-un bol mare.\n\n2. Presărați amestecul de salată cu brânză feta sfărâmată.\n\n3. Într-un bol mic, amestecați uleiul de măsline, sucul de lămâie, oregano uscat și piperul negru măcinat.\n\n4. Turnați dressingul peste salată și amestecați bine pentru a combina.\n\n5. Serviți imediat sau refrigerați pentru mai târziu.",
+  "simpleInstructions": "1. Amestecați ingredientele pentru salată într-un bol.\n\n2. Presărați cu brânză feta.\n\n3. Amestecați ingredientele pentru dressing.\n\n4. Amestecați salata cu dressingul.\n\n5. Serviți sau refrigerați.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "VEGETARIAN",
+  "ingredients": [
+    {
+      "name": "Lettuce",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cucumber",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Tomato",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Black Olives",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Green Bell Pepper",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Bell Pepper",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Onion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Feta Cheese",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/14373/greek-salad-i/",
+  "cuisine": "Mediterranean",
+  "id": "greek_salad_i",
+  "imageUrl": "recipes/images/mediterranean/greek_salad_i.jpg"
+}

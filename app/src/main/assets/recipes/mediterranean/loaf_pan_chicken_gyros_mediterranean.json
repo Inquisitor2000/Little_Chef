@@ -1,0 +1,106 @@
+{
+  "name": "Loaf Pan Chicken Gyros",
+  "instructions": "1. Preheat the oven to 400 degrees F (200 degrees C). Line a 9x5-inch loaf pan with parchment paper.\n\n2. Whisk together yogurt, lemon zest, lemon juice, olive oil, minced garlic, oregano, salt, paprika, dill, and pepper in a large bowl.\n\n3. Add chicken and toss to coat in the marinade.\n\n4. Layer chicken thighs in the prepared loaf pan and insert bamboo skewers vertically through the chicken to hold it in place. Pour any remaining marinade over the chicken.\n\n5. Bake until chicken is browned and an instant-read thermometer reads 170 degrees F (77 degrees C), for about 1 hour and 10 minutes.\n\n6. Let the chicken stand for 10 minutes before slicing.\n\n7. Drain liquid from the pan, remove skewers, and slice chicken.\n\n8. Serve with Greek pita flatbreads, tzatziki, sliced tomato, and red onion.",
+  "simpleInstructions": "1. Preheat oven and prepare loaf pan with parchment.\n\n2. Mix yogurt, lemon, oil, garlic, and spices for marinade.\n\n3. Coat chicken with marinade and layer in loaf pan.\n\n4. Bake chicken, then let it rest.\n\n5. Slice the chicken and serve with pitas, tzatziki, tomato, and onion.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 70,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "CHICKEN",
+  "ingredients": [
+    {
+      "name": "Greek Yogurt",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Paprika",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Dill",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Thigh",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pita Bread",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Greek Yogurt",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Tomato",
+      "quantity": 75,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Onion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/loaf-pan-chicken-gyros-recipe-11791504",
+  "cuisine": "Mediterranean",
+  "id": "loaf_pan_chicken_gyros",
+  "imageUrl": "recipes/images/mediterranean/loaf_pan_chicken_gyros.jpg"
+}

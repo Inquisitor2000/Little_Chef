@@ -1,0 +1,100 @@
+{
+  "name": "Турецкий Суп из Красной Чечевицы с Мятой",
+  "instructions": "1. Разогрейте оливковое масло в большой кастрюле на среднем огне. Добавьте лук и обжарьте до начала размягчения, около 2 минут. Добавьте чеснок и готовьте еще 2 минуты.\n\n2. Добавьте нарезанные кубиками помидоры и готовьте 10 минут. Добавьте куриный бульон, чечевицу, булгур, рис, томатную пасту, мяту, паприку, кайенский перец, соль и черный перец; доведите до кипения. Уменьшите огонь до средне-слабого и варите до мягкости чечевицы и риса, около 30 минут.\n\n3. Пюрируйте суп погружным блендером до однородности. Подавайте с дополнительной мятой и дольками лимона по желанию.",
+  "simpleInstructions": "1. Обжарьте лук и чеснок в оливковом масле.\n\n2. Добавьте помидоры и готовьте, затем добавьте оставшиеся ингредиенты и варите.\n\n3. Пюрируйте до однородности и подавайте.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 50,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Tomatoes",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 420,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Red Lentils",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Bulgur",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rice",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato Paste",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Mint",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Paprika",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/219817/turkish-red-lentil-soup-with-mint/",
+  "cuisine": "Mediterranean",
+  "id": "turkish_red_lentil_soup_with_mint",
+  "imageUrl": "recipes/images/mediterranean/turkish_red_lentil_soup_with_mint.jpg"
+}

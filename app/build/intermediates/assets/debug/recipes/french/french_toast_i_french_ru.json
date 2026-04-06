@@ -1,0 +1,58 @@
+{
+  "name": "Французский тост",
+  "instructions": "1. Взбейте молоко, яйца, ванильный экстракт, корицу и соль вместе в неглубокой миске до однородности и гладкости.  \n\n2. Легко смажьте сковороду или гриль несоленым сливочным маслом и разогрейте на среднем огне.  \n\n3. Замачивайте каждый ломтик белого хлеба в яичной смеси, около 5-10 секунд с каждой стороны, позволяя ему впитать смесь, не становясь мокрым.  \n\n4. Перенесите на горячую сковороду и готовьте до золотисто-коричневого цвета и слегка хрустящей корочки, 3-4 минуты с каждой стороны.  \n\n5. Подавайте горячими и наслаждайтесь с несоленым сливочным маслом и сиропом.",
+  "simpleInstructions": "1. Смешайте молоко, яйца, ванильный экстракт, корицу и соль.  \n\n2. Замочите белый хлеб в смеси.  \n\n3. Готовьте на смазанной несоленым сливочным маслом сковороде до золотистого цвета.  \n\n4. Подавайте горячими с несоленым сливочным маслом и сиропом.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 10,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Milk",
+      "quantity": 110,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Bread",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/7016/french-toast-i/",
+  "cuisine": "French",
+  "id": "french_toast_i",
+  "imageUrl": "recipes/images/french/french_toast_i.jpg"
+}

@@ -1,0 +1,82 @@
+{
+  "name": "Beef Wellington",
+  "instructions": "1. Preheat your oven to 425°F (220°C) and position the rack in the center. Pat the beef tenderloin dry with paper towels and season lightly with salt and pepper. 2. Spread about 10g of softened butter evenly over the entire surface of the beef tenderloin. Place it in a small baking dish or on a rimmed baking sheet. 3. Roast in the preheated oven for 10-15 minutes, until the beef is nicely browned on the outside but still rare inside. The internal temperature should be about 100°F (38°C). Remove from the oven and transfer the beef to a plate, reserving all the pan juices in the dish. Let the beef cool completely to room temperature, about 30-45 minutes. 4. While the beef cools, increase the oven temperature to 450°F (230°C). 5. Melt about 10g of butter in a medium skillet over medium heat. Add the diced onion and sliced mushrooms, stirring frequently, and sauté for about 5 minutes until the vegetables are softened and any liquid has evaporated. Remove from heat and let cool completely. 6. In a small bowl, mix the liver paté with the remaining 10g of softened butter until smooth and well combined. Season with a pinch of salt and black pepper to taste. 7. Once the beef is completely cool, spread the paté mixture evenly over the entire surface of the beef, coating it like a thin layer. 8. Top the paté layer with the cooled onion and mushroom mixture, pressing it gently to adhere. 9. On a lightly floured surface, roll out the thawed puff pastry to about 1/4-inch (6mm) thickness, large enough to completely wrap the beef (approximately 10x12 inches). Place the beef in the center of the pastry. 10. Fold the pastry over the beef, wrapping it completely and tucking the ends underneath. Press the seams together firmly to seal, trimming any excess pastry if needed. Make sure the seams aren't too thick or they won't cook properly. 11. Carefully transfer the wrapped beef seam-side down to a parchment-lined baking sheet or the same baking dish. Using a sharp knife, cut 3-4 small slits in the top of the pastry to allow steam to escape. 12. In a small bowl, beat the egg yolk with a teaspoon of water. Brush this egg wash evenly over the entire surface of the pastry for a beautiful golden finish. 13. Bake in the preheated 450°F oven for 10 minutes to set the pastry, then reduce the temperature to 425°F (220°C) and continue baking for another 10-15 minutes, until the pastry is deep golden brown and crispy. For medium-rare beef, the internal temperature should reach 122-130°F (50-54°C). Use an instant-read thermometer inserted through a slit to check. 14. Remove from the oven and let the beef Wellington rest for 10 minutes before slicing. This allows the juices to redistribute. 15. While the beef rests, make the sauce: Pour the reserved pan juices into a small saucepan and place over high heat. Add the beef broth and white wine (note: use white wine as red wine substitute), stirring to combine. Bring to a boil and cook for about 5 minutes, until the sauce is slightly reduced and flavorful. Taste and adjust seasoning with salt and pepper if needed. 16. Strain the sauce through a fine-mesh sieve into a serving bowl or gravy boat. 17. Slice the beef Wellington into thick slices (about 1-1.5 inches) and serve immediately with the warm sauce on the side.",
+  "simpleInstructions": "1. Preheat oven to 425°F. Season and butter the beef tenderloin. 2. Roast 10-15 minutes until browned. Reserve pan juices and cool beef completely. 3. Increase oven to 450°F. 4. Sauté onion and mushrooms in butter for 5 minutes; cool. 5. Mix paté with butter, season, and spread over cooled beef. 6. Top with mushroom mixture. 7. Roll out puff pastry and place beef in center. 8. Wrap beef in pastry, seal seams, and place seam-side down on baking sheet. 9. Cut slits in top and brush with beaten egg yolk. 10. Bake 10 minutes at 450°F, then reduce to 425°F and bake 10-15 minutes more until golden. 11. Rest 10 minutes. 12. Make sauce: Boil reserved juices with broth and wine for 5 minutes. 13. Strain sauce and serve with sliced beef Wellington.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Beef Tenderloin",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Liver Paté",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Button Mushroom",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Beef Broth",
+      "quantity": 65,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Wine",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg Yolks",
+      "quantity": 0.5,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/16899/beef-wellington/",
+  "cuisine": "American",
+  "id": "beef_wellington",
+  "imageUrl": "recipes/images/meat dishes/beef_wellington.jpg"
+}

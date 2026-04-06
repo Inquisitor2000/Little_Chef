@@ -1,0 +1,88 @@
+{
+  "name": "Raghavan's Uppama",
+  "instructions": "1. Melt the ghee in a large heavy-bottomed skillet over medium heat, letting it melt completely and become clear. Pour in the creamy wheat cereal (cream of wheat/semolina) and toast, stirring frequently with a wooden spoon to prevent burning, for 5-8 minutes. You'll know it's ready when the cereal turns light golden brown and releases a rich, nutty, toasted aroma. Immediately transfer the toasted cereal to a bowl to stop the cooking and set aside. Wipe the skillet clean with a paper towel to remove any residue.\n\n2. Heat the remaining ghee in the same skillet over medium-high heat until it shimmers. Add the mustard seeds and immediately cover the skillet with a lid to prevent splattering—you'll hear the seeds start to pop and jump. Wait about 30 seconds until the popping slows down and almost completely stops, which indicates the seeds have released their flavors.\n\n3. Remove the lid and add the cashews and whole chiles. Stir-fry, stirring constantly, for 1-2 minutes until the cashews turn deep golden and aromatic, and the chiles blacken slightly on the edges and release their aromatic heat into the oil. Be careful not to burn the nuts.\n\n4. Stir in the diced carrot, peas, fresh curry leaves (which add a distinctive citrusy aroma), and ground turmeric. Stir-fry, mixing well, for about 2 minutes until the vegetables begin to soften and the turmeric colors everything a bright yellow hue. Pour in the water and add the salt, stirring to combine. Increase the heat and bring the mixture to a rolling boil.\n\n5. Once boiling, reduce the heat to medium and simmer, covered with a lid, for 3-5 minutes until the carrots are fork-tender but still have a slight bite—don't overcook or they'll become mushy.\n\n6. Reduce the heat to medium-low and gradually add the toasted wheat cereal, sprinkling it in evenly while stirring constantly to prevent lumps from forming. Once all the cereal is incorporated, cover the skillet and cook for about 5 minutes, stirring occasionally, until the cereal is fully softened and has absorbed the liquid, becoming creamy and porridge-like.\n\n7. Remove the skillet from the heat and let it stand, covered, for 3-5 minutes to allow the cereal to continue softening and the flavors to meld. If you prefer a creamier, more porridge-like texture, stir in the additional water until you reach your desired consistency. Taste and adjust seasoning if needed. Transfer to serving bowls, sprinkle generously with fresh chopped cilantro for brightness, and serve warm as a comforting breakfast or light snack.",
+  "simpleInstructions": "1. Toast cereal in ghee until nutty and golden, then set aside.\n\n2. Pop mustard seeds in ghee, then fry cashews and chiles until golden.\n\n3. Sauté carrot, peas, curry leaves, and turmeric, then boil with water and salt.\n\n4. Stir in toasted cereal, cover, and cook until fully softened.\n\n5. Let stand covered, add water for creaminess if desired, sprinkle with cilantro, and serve warm.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 25,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "VEGETARIAN",
+  "ingredients": [
+    {
+      "name": "Ghee",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Oats",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mustard Seeds",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cashews",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrot",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Peas",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Curry Leaves",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Turmeric",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 360,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sea Salt",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Cilantro",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/8338276/raghavans-uppama/",
+  "cuisine": "Asian",
+  "id": "raghavans_uppama",
+  "imageUrl": "recipes/images/asian/raghavans_uppama.jpg"
+}

@@ -1,0 +1,93 @@
+{
+    "id": "salsa_verde_mozzarella",
+    "name": "Моцарелла с зеленым соусом",
+    "instructions": "1. Добавьте каперсы, анчоусы, зубчики чеснока, зеленый лук, листья свежей петрушки и листья свежей мяты в кухонный комбайн. Измельчайте короткими импульсами до тех пор, пока все ингредиенты не будут очень мелко нарезаны и хорошо объединены, соскребая со стенок по мере необходимости. Смесь должна иметь грубую текстурированную консистенцию, а не гладкое пюре.\n\n2. Переложите травяную смесь в среднюю сервировочную миску.\n\n3. Используя мелкую терку или микроплан, натрите цедру лимона прямо над миской, чтобы захватить ароматные масла. Разрежьте лимон пополам и выжмите сок в смесь, удаляя семена. Добавьте оливковое масло, хлопья красного перца, порванные кусочки моцареллы и разрезанные пополам помидоры черри. Аккуратно перемешайте, чтобы объединить все ингредиенты.\n\n4. Попробуйте и приправьте солью и черным перцем по мере необходимости. Каперсы и анчоусы добавляют соленость, поэтому регулируйте осторожно.\n\n5. Накройте миску пищевой пленкой и охлаждайте в холодильнике минимум 2 часа, чтобы вкусы объединились и развились. Чем дольше маринуется, тем более ароматным становится. Подавайте охлажденным или при комнатной температуре с хрустящим хлебом.",
+    "simpleInstructions": "1. Измельчите травы, каперсы и анчоусы в кухонном комбайне до мелкой консистенции.\n\n2. Переложите в миску и добавьте цедру лимона, сок, масло, хлопья перца, моцареллу и помидоры.\n\n3. Приправьте солью и перцем, затем маринуйте минимум 2 часа перед подачей.",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 0,
+    "servings": 2,
+    "cuisine": "Italian",
+    "mealType": "LUNCH",
+    "dishCategory": "APPETIZER",
+    "imageUrl": "recipes/images/italian/salsa_verde_mozzarella.webp",
+    "ingredients": [
+        {
+            "name": "Capers",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Anchovies",
+            "quantity": 4,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Scallion",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Fresh Parsley",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Fresh Mint",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 60,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Lemon",
+            "quantity": 50,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Red Pepper Flakes",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 90,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Cherry Tomatoes",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salt",
+            "quantity": 0.3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 0.3,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ]
+}

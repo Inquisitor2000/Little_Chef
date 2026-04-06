@@ -1,0 +1,88 @@
+{
+  "name": "Chicken Paillard",
+  "instructions": "1. Pound chicken breasts to a thickness of one-quarter inch using a meat tenderizer. 2. Whisk together wine, half the lemon juice, shallot, olive oil, and garlic in a bowl. Add chicken and marinate for 15 minutes. 3. In a large bowl, whisk remaining lemon juice, vinegar, olive oil, lemon zest, and each of salt and pepper. Add the arugula and tomatoes, tossing to combine. 4. Preheat grill or skillet to high heat and lightly oil. 5. Remove chicken from marinade, season with remaining salt and pepper, and discard marinade. Grill chicken for 2-3 minutes per side, ensuring it reaches at least 74 degrees Celsius. 6. Plate chicken and top with the arugula salad.",
+  "simpleInstructions": "1. Tenderize chicken and marinate. 2. Prepare salad with dressing. 3. Grill chicken and serve with salad.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 5,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "CHICKEN",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Wine",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Shallot",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 25.0,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Wine Vinegar",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Arugula",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cherry Tomatoes",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/246243/chicken-paillard/",
+  "cuisine": "French",
+  "id": "chicken_paillard",
+  "imageUrl": "recipes/images/french/chicken_paillard.jpg"
+}

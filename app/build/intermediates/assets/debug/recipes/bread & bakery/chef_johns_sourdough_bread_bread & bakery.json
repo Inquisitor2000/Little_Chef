@@ -1,0 +1,46 @@
+{
+  "name": "Sourdough Bread",
+  "instructions": "1. Place the starter into a bowl. Add the bread flour, water, and salt; mix until well blended and sticky.\n\n2. Cover with aluminum foil and let stand for 4 hours at 21 to 24 degrees Celsius.\n\n3. Uncover dough and use wet hands to fold it over onto itself three to four times. Cover again with foil and let ferment for 2 more hours.\n\n4. Generously dust a proofing basket (banneton) with the rice flour. Scrape dough out onto a lightly floured work surface. Shape into a ball with a smooth, unbroken surface, using just enough flour on the surface to keep it from sticking. Place dough into the prepared basket with the smooth side down. Pinch the rougher edges on the surface together toward the center to smooth them while maintaining a round ball shape.\n\n5. Cover and refrigerate for 12 hours to slow the fermentation process.\n\n6. Remove the banneton from the refrigerator. Let sit in a warm spot until dough springs back slowly and retains a slight indentation when poked gently with a finger, about 3 to 5 hours.\n\n7. Preheat the oven to 230 degrees Celsius. Line a rimmed baking sheet with parchment paper. Dust surface of dough with flour. Gently invert the banneton over the center of the baking sheet and flip dough out onto the parchment paper. Gently brush off excess rice flour. Score top of dough about 0.3 cm deep with a sharp knife to create a shallow slit running across the center. Mist the entire surface lightly with water.\n\n8. Bake in the center of the preheated oven until beautifully browned, 25 to 30 minutes.\n\n9. Transfer loaf to a wire rack and let cool completely before slicing.",
+  "simpleInstructions": "1. Mix starter, flour, water, and salt.\n\n2. Let stand, fold, and ferment.\n\n3. Shape and refrigerate the dough.\n\n4. Let dough rise, then bake.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 25,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BREAD",
+  "ingredients": [
+    {
+      "name": "Sourdough Starter",
+      "quantity": 25,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Bread Flour",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rice Flour",
+      "quantity": 4,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/260540/chef-johns-sourdough-bread/",
+  "cuisine": "Bread & Bakery",
+  "id": "chef_johns_sourdough_bread",
+  "imageUrl": "recipes/images/bread & bakery/chef_johns_sourdough_bread.jpg"
+}

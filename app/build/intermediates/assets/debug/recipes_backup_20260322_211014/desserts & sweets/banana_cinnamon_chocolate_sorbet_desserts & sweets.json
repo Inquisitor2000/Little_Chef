@@ -1,0 +1,52 @@
+{
+  "name": "Banana-Cinnamon Chocolate Sorbet",
+  "instructions": "1. Peel the very ripe bananas and cut them into 1-inch slices. Arrange the banana slices in a single layer on a parchment-lined baking sheet, making sure they don't touch each other. \n\n2. Freeze the banana slices for at least 4 hours or overnight until completely solid. This step is crucial for achieving the right sorbet texture. \n\n3. Once frozen solid, remove the banana slices from the freezer and let them sit at room temperature for 2-3 minutes to slightly soften - this makes blending much easier and prevents strain on your blender. \n\n4. Add the frozen banana slices, almond milk, cocoa powder, vanilla extract, cinnamon, and salt to a high-speed blender or food processor. \n\n5. Blend on high speed, stopping frequently to scrape down the sides and break up any chunks with a spatula. Continue blending for 2-3 minutes until the mixture is completely smooth and has a soft-serve ice cream consistency. You may need to use the tamper tool if using a high-speed blender, or add a splash more almond milk if the mixture is too thick. \n\n6. At this point, you can serve immediately for a soft-serve texture, or transfer to a freezer-safe container, cover, and freeze for 1-2 hours for a firmer sorbet consistency. \n\n7. If frozen solid, let the sorbet sit at room temperature for 5-10 minutes before scooping to soften slightly. Serve in chilled bowls and enjoy this healthy, dairy-free frozen treat.",
+  "simpleInstructions": "1. Slice bananas and freeze for at least 4 hours until solid. \n\n2. Let frozen bananas soften for 2-3 minutes at room temperature. \n\n3. Blend frozen bananas with almond milk, cocoa powder, vanilla, cinnamon, and salt until smooth. \n\n4. Serve immediately for soft-serve texture, or freeze 1-2 hours for firmer sorbet. \n\n5. If frozen solid, let sit 5-10 minutes before scooping.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Banana",
+      "quantity": 360,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Almond Milk",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cocoa Powder",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 3.75,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/274174/banana-cinnamon-chocolate-sorbet/",
+  "cuisine": "American",
+  "id": "banana_cinnamon_chocolate_sorbet",
+  "imageUrl": "recipes/images/desserts & sweets/banana_cinnamon_chocolate_sorbet.jpg"
+}

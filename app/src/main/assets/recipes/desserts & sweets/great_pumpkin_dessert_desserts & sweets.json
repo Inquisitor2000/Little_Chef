@@ -1,0 +1,64 @@
+{
+  "name": "Easy Pumpkin Dessert",
+  "instructions": "1. Preheat your oven to 350°F (175°C) and position the rack in the center. Lightly grease a small 8x8-inch or 9x9-inch baking dish with butter or cooking spray. \n\n2. In a medium bowl, whisk together the pumpkin puree, evaporated milk, sugar, egg, and cinnamon (note: use cinnamon as pumpkin pie spice substitute) until smooth and well combined. \n\n3. Pour the pumpkin mixture into the prepared baking dish, spreading it evenly to cover the bottom. \n\n4. Sprinkle the all-purpose flour (note: use as cake mix substitute) evenly over the top of the pumpkin layer. Try to cover the entire surface - don't stir or mix it in, just sprinkle it on top. \n\n5. Drizzle the melted butter evenly over the flour layer in a back-and-forth pattern to cover as much surface as possible. \n\n6. Sprinkle the chopped walnuts evenly over the top as the final layer. \n\n7. Bake in the preheated oven for about 60 minutes, or until a toothpick inserted in the center comes out clean and the top is golden brown. The edges should be set and slightly pulling away from the sides of the pan. \n\n8. Remove from the oven and let cool at room temperature for at least 30 minutes before cutting. The dessert can be served warm or completely cooled. For best texture, let it cool completely, about 2 hours, before cutting into squares. \n\n9. Cut into portions and serve as is, or top with whipped cream or vanilla ice cream if desired. Store any leftovers covered in the refrigerator for up to 3 days.",
+  "simpleInstructions": "1. Preheat oven to 350°F and grease a small baking dish. \n\n2. Mix pumpkin, evaporated milk, sugar, egg, and cinnamon until smooth. \n\n3. Pour into prepared dish. \n\n4. Sprinkle flour evenly over pumpkin layer. \n\n5. Drizzle melted butter over flour. \n\n6. Sprinkle walnuts on top. \n\n7. Bake 60 minutes until toothpick comes out clean. \n\n8. Cool at least 30 minutes before cutting. \n\n9. Serve warm or cold, optionally with whipped cream.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 60,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "BAKED_DISH",
+  "ingredients": [
+    {
+      "name": "Canned Pumpkin",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Evaporated Milk",
+      "quantity": 100,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 125,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Walnuts",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/8404/great-pumpkin-dessert/",
+  "cuisine": "American",
+  "id": "great_pumpkin_dessert",
+  "imageUrl": "recipes/images/desserts & sweets/great_pumpkin_dessert.jpg"
+}

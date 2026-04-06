@@ -1,0 +1,306 @@
+package com.familymealplanner
+
+import android.content.Context
+import android.os.Bundle
+import android.util.Log
+import androidx.activity.ComponentActivity
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.material3.Icon
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.NavigationBar
+import androidx.compose.material3.NavigationBarItem
+import androidx.compose.material3.Scaffold
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalFocusManager
+import androidx.compose.ui.unit.dp
+import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.viewModelScope
+import androidx.navigation.NavDestination.Companion.hierarchy
+import androidx.navigation.NavGraph.Companion.findStartDestination
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
+import com.familymealplanner.data.preferences.LocaleManager
+import com.familymealplanner.data.preferences.OnboardingPreferences
+import com.familymealplanner.ui.navigation.AppNavHost
+import com.familymealplanner.ui.navigation.NavDestination
+import com.familymealplanner.ui.onboarding.OnboardingScreen
+import com.familymealplanner.ui.theme.FamilyMealPlannerTheme
+import dagger.hilt.android.AndroidEntryPoint
+import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.SharingStarted
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.flow.stateIn
+import kotlinx.coroutines.launch
+import javax.inject.Inject
+
+@AndroidEntryPoint
+class MainActivity : ComponentActivity() {
+    
+    companion object {
+        private const val TAG = "MainActivity"
+    }
+    
+    @Inject
+    lateinit var localeManager: LocaleManager
+    
+    @Inject
+    lateinit var translationSystem: com.familymealplanner.data.local.TranslationSystem
+    
+    @Inject
+    lateinit var preloadCuisineAllergensUseCase: com.familymealplanner.domain.usecase.PreloadCuisineAllergensUseCase
+    
+    override fun attachBaseContext(newBase: Context) {
+        val localeManager = LocaleManager(newBase)
+        val savedLanguage = localeManager.getLanguage()
+        
+        val contextWithLocale = localeManager.applyLocale(newBase)
+        
+        super.attachBaseContext(contextWithLocale)
+    }
+    
+    override fun onCreate(savedInstanceState: Bundle?) {
+        val currentLocale = resources.configuration.locales[0].language
+        
+        super.onCreate(savedInstanceState)
+        
+        // Check if we have pending onboarding completion (after recreation)
+        lifecycleScope.launch {
+            val onboardingPrefs = OnboardingPreferences(applicationContext)
+            if (onboardingPrefs.hasPendingOnboardingCompletion.first()) {
+                onboardingPrefs.setOnboardingCompleted()
+            }
+        }
+        
+        // Reload translations after activity recreation to apply new locale
+        val currentLanguage = localeManager.getLanguage()
+        translationSystem.reloadTranslations(currentLanguage)
+        
+        // Preload allergen cache in background to prevent frame drops when opening cuisine screens
+        preloadCuisineAllergensUseCase.preload()
+        
+        // Extract deep link data
+        val deepLinkFamilyId = intent?.data?.getQueryParameter("familyId")
+        
+        // Pre-load accent colors synchronously to avoid flash on startup
+        val onboardingPrefs = OnboardingPreferences(applicationContext)
+        val initialAccentColorLight = kotlinx.coroutines.runBlocking {
+            onboardingPrefs.accentColorLight.first()
+        }
+        val initialAccentColorDark = kotlinx.coroutines.runBlocking {
+            onboardingPrefs.accentColorDark.first()
+        }
+        val initialTextScale = kotlinx.coroutines.runBlocking {
+            onboardingPrefs.textScale.first()
+        }
+        val initialAppFont = kotlinx.coroutines.runBlocking {
+            onboardingPrefs.appFont.first()
+        }
+        
+        setContent {
+            // Force recomposition when configuration changes
+            val configuration = androidx.compose.ui.platform.LocalConfiguration.current
+            
+            val viewModel: MainViewModel = hiltViewModel()
+            val textScale by viewModel.textScale.collectAsState()
+            val appFont by viewModel.appFont.collectAsState()
+            val isDarkTheme = androidx.compose.foundation.isSystemInDarkTheme()
+            val accentColorLight by viewModel.accentColorLight.collectAsState()
+            val accentColorDark by viewModel.accentColorDark.collectAsState()
+            
+            // Use pre-loaded values on first render, then switch to reactive values
+            val effectiveTextScale = if (textScale == 1.0f) initialTextScale else textScale
+            val effectiveAppFont = if (appFont == "Roboto Medium") initialAppFont else appFont
+            val effectiveAccentColorLight = if (accentColorLight == 0xFFD68C45L) initialAccentColorLight else accentColorLight
+            val effectiveAccentColorDark = if (accentColorDark == 0xFF5398beL) initialAccentColorDark else accentColorDark
+            
+            val accentColor = if (isDarkTheme) effectiveAccentColorDark else effectiveAccentColorLight
+            val fontFamily = com.familymealplanner.ui.theme.AppFonts.getFontFamily(effectiveAppFont)
+            
+            FamilyMealPlannerTheme(
+                textScale = effectiveTextScale, 
+                fontFamily = fontFamily,
+                accentColor = androidx.compose.ui.graphics.Color(accentColor)
+            ) {
+                val focusManager = LocalFocusManager.current
+                Surface(
+                    modifier = Modifier
+                        .fillMaxSize()
+                        .clickable(
+                            interactionSource = remember { MutableInteractionSource() },
+                            indication = null
+                        ) { focusManager.clearFocus() },
+                    color = MaterialTheme.colorScheme.background
+                ) {
+                    MainScreen(deepLinkFamilyId = deepLinkFamilyId)
+                }
+            }
+        }
+    }
+}
+
+@HiltViewModel
+class MainViewModel @Inject constructor(
+    private val onboardingPreferences: OnboardingPreferences
+) : ViewModel() {
+    // Use nullable Boolean to track loading state
+    val isOnboardingComplete: StateFlow<Boolean?> = onboardingPreferences.hasCompletedOnboarding
+        .stateIn(
+            scope = viewModelScope,
+            started = SharingStarted.Eagerly,
+            initialValue = null // null means we're still loading
+        )
+    
+    val textScale: StateFlow<Float> = onboardingPreferences.textScale.stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.Eagerly,
+        initialValue = 1.0f
+    )
+    
+    val appFont: StateFlow<String> = onboardingPreferences.appFont.stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.Eagerly,
+        initialValue = "Roboto Medium"
+    )
+    
+    val accentColorLight: StateFlow<Long> = onboardingPreferences.accentColorLight.stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.Eagerly,
+        initialValue = 0xFFD68C45 // Toasted Almond
+    )
+    
+    val accentColorDark: StateFlow<Long> = onboardingPreferences.accentColorDark.stateIn(
+        scope = viewModelScope,
+        started = SharingStarted.Eagerly,
+        initialValue = 0xFF5398be // Blue Bell
+    )
+}
+
+@Composable
+fun MainScreen(
+    viewModel: MainViewModel = hiltViewModel(),
+    deepLinkFamilyId: String? = null
+) {
+    val isOnboardingComplete by viewModel.isOnboardingComplete.collectAsState()
+
+    Box(modifier = Modifier.fillMaxSize()) {
+        androidx.compose.animation.Crossfade(
+            targetState = when {
+                isOnboardingComplete == null -> "loading"
+                isOnboardingComplete == true -> "main"
+                else -> "onboarding"
+            },
+            animationSpec = androidx.compose.animation.core.tween(
+                durationMillis = 300,
+                easing = androidx.compose.animation.core.FastOutSlowInEasing
+            ),
+            label = "main_screen_transition"
+        ) { state ->
+            when (state) {
+                "loading" -> {
+                    // Show blank screen while loading preferences
+                    Box(
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .background(MaterialTheme.colorScheme.background)
+                    )
+                }
+                "main" -> {
+                    MainAppScreen()
+                }
+                "onboarding" -> {
+                    OnboardingScreen()
+                }
+            }
+        }
+    }
+}
+
+@Composable
+fun MainAppScreen() {
+    val navController = rememberNavController()
+    
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentDestination = navBackStackEntry?.destination
+
+    Scaffold(
+        bottomBar = {
+            NavigationBar(
+                modifier = Modifier.fillMaxWidth(),
+                containerColor = MaterialTheme.colorScheme.surface,
+                tonalElevation = 0.dp
+            ) {
+                NavDestination.bottomNavItems.forEach { destination ->
+                    val selected = currentDestination?.hierarchy?.any { 
+                        it.route == destination.route 
+                    } == true
+                    
+                    NavigationBarItem(
+                        modifier = Modifier.weight(1f),
+                        icon = {
+                            Box(
+                                modifier = Modifier.size(24.dp),
+                                contentAlignment = Alignment.Center
+                            ) {
+                                Icon(
+                                    imageVector = if (selected) destination.selectedIcon else destination.unselectedIcon,
+                                    contentDescription = androidx.compose.ui.res.stringResource(destination.titleRes),
+                                    modifier = Modifier.size(24.dp)
+                                )
+                            }
+                        },
+                        label = { 
+                            Text(
+                                text = androidx.compose.ui.res.stringResource(
+                                    destination.shortTitleRes ?: destination.titleRes
+                                ),
+                                style = MaterialTheme.typography.bodyMedium,
+                                modifier = Modifier.padding(top = 4.dp)
+                            )
+                        },
+                        selected = selected,
+                        alwaysShowLabel = true,
+                        onClick = {
+                            navController.navigate(destination.route) {
+                                // Pop up to the start destination and clear the back stack
+                                popUpTo(navController.graph.findStartDestination().id) {
+                                    inclusive = false
+                                }
+                                // Avoid multiple copies of the same destination
+                                launchSingleTop = true
+                                // Don't restore state - always start fresh
+                                restoreState = false
+                            }
+                        }
+                    )
+                }
+            }
+        }
+    ) { innerPadding ->
+        AppNavHost(
+            navController = navController,
+            modifier = Modifier.padding(innerPadding)
+        )
+    }
+}

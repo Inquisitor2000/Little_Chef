@@ -1,0 +1,94 @@
+{
+  "name": "Greek Lemon Chicken Soup",
+  "instructions": "1. Combine chicken broth, lemon juice, carrots, onions, celery, chicken soup base, and white pepper in a large pot. Bring to a boil over high heat, then reduce heat and simmer for 15 to 20 minutes.\n\n2. Blend butter and flour in a small bowl; gradually stir into soup mixture. Simmer, stirring frequently, for 8 to 10 minutes.\n\n3. Beat egg yolks in a bowl until light in color. Gradually whisk in some hot soup, using a ladle to pour in a thin stream while whisking the egg yolks vigorously. Add egg mixture to the pot, and heat through.\n\n4. Add rice and chicken; cook until warmed through. Ladle hot soup into bowls and garnish with lemon slices.",
+  "simpleInstructions": "1. Simmer broth, lemon juice, vegetables, and spices.\n\n2. Stir in butter-flour mix.\n\n3. Gradually incorporate eggs.\n\n4. Heat with rice and chicken, garnish with lemon.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "CHICKEN",
+  "ingredients": [
+    {
+      "name": "Chicken Broth",
+      "quantity": 240,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Carrot",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Celery",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Pepper",
+      "quantity": 0.2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg Yolks",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Rice",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Chicken Breast",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Lemon",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/12963/greek-lemon-chicken-soup/",
+  "cuisine": "Mediterranean",
+  "id": "greek_lemon_chicken_soup",
+  "imageUrl": "recipes/images/mediterranean/greek_lemon_chicken_soup.jpg"
+}

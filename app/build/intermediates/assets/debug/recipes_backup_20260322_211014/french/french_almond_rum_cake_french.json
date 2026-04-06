@@ -1,0 +1,142 @@
+{
+  "name": "French Almond Rum Cake",
+  "instructions": "1. Preheat the oven to 350 degrees F (175 degrees C). Grease an small round cake pan with the butter and line the bottom with parchment; butter the parchment. 2. For the cake, beat the butter, brown sugar, white sugar, salt, and nutmeg together in a large bowl until light and fluffy, about 3 minutes. Add in almond flour and beat for 1 minute. 3. Add in eggs one at a time, beating well after each addition. After the last egg is incorporated, beat the batter at medium-high speed for 3 minutes. 4. Mix in rum, lemon zest, vanilla, and almond extract until combined. Reduce speed to low and add in flour and baking powder, mixing until just incorporated. 5. Pour batter into prepared pan and smooth into an even layer. Bake until browned and a toothpick comes out clean, 45 to 50 minutes. Let cool in pan for 10 minutes, then invert onto a rack. 6. For syrup, place the water and sugar in a saucepan over medium-low heat, cooking until the sugar is dissolved and simmering, 2 to 3 minutes. Remove from heat, stir in rum, and cook for an additional 2 minutes. Remove from heat. 7. Brush warm syrup over the warm cake until absorbed. Cool completely for 30 minutes. 8. For icing, whisk the lemon juice, powdered sugar, salt, and heavy cream until smooth. Adjust thickness as needed. 9. Place cake on a platter. Pour icing over the cake, smoothing the top. Sprinkle with the toasted almonds and let set before serving.",
+  "simpleInstructions": "1. Preheat oven and prepare pan. 2. Beat the butter and sugars, then add the almond flour. 3. Incorporate eggs, then beat batter. 4. Mix in wet ingredients, then add the flour mixture. 5. Bake and cool the cake. 6. Prepare and apply syrup. 7. Make and apply icing. 8. Garnish with the almonds.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 55,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Unsalted Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Nutmeg",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Almond Flour",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Rum",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 1.2,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rum",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.2,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Heavy Cream",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Almonds",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/french-almond-rum-cake-recipe-8733619",
+  "cuisine": "French",
+  "id": "french_almond_rum_cake",
+  "imageUrl": "recipes/images/french/french_almond_rum_cake.jpg"
+}

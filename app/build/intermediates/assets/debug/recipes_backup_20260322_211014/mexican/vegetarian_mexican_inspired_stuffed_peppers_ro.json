@@ -1,0 +1,88 @@
+{
+    "name": "Ardei umpluți vegetarieni în stil mexican",
+    "instructions": "1. Notă: Asigurați-vă că orezul brun este gătit înainte de a începe această rețetă. Preîncălziți cuptorul la 175 de grade Celsius.\n\n2. Aduceți la fierbere o oală mare cu apă și puțină sare. Adăugați ardeii grași verzi și gătiți până se înmoaie ușor, dar își păstrează încă forma, 3-4 minute. Ardeii ar trebui să fie suficient de fragezi pentru a fi umpluți, dar nu moi. Scurgeți bine ardeii grași și aranjați-i cu partea tăiată în sus într-o tavă de copt.\n\n3. Încălziți uleiul de măsline într-o tigaie la foc mediu. Adăugați ceapa tăiată cubulețe și gătiți, amestecând ocazional, până se înmoaie și devine translucidă, 5-10 minute. Ceapa ar trebui să fie aromată și ușor aurie.\n\n4. Transferați ceapa gătită într-un bol mare. Adăugați orezul brun gătit, fasolea neagră conservată (scursă și clătită) și roșiile tăiate cubulețe în stil chili cu sucurile lor. Amestecați pudra de chili, sarea de usturoi, chimionul și sarea rămasă până când totul este bine combinat și aromat. Adăugați cea mai mare parte din amestecul de brânzeturi mexicane, rezervând puțin pentru topping.\n\n5. Umpleți uniform fiecare ardei gras cu amestecul de orez, presând ușor dar ferm. Presărați generos amestecul de brânzeturi mexicane rămas peste fiecare ardei umplut.\n\n6. Coaceți în cuptorul preîncălzit până când brânza se topește și face bule, iar ardeii sunt fragezi, aproximativ 30 de minute. Brânza ar trebui să fie aurie și umplutura încălzită complet. Lăsați să se odihnească câteva minute înainte de servire.",
+    "simpleInstructions": "1. Notă: Gătiți orezul brun înainte de a începe. Preîncălziți cuptorul la 175 de grade Celsius. Fierbeți ardeii grași în apă sărată până se înmoaie ușor.\n\n2. Gătiți ceapa tăiată cubulețe în ulei de măsline până se înmoaie. Amestecați cu orezul brun gătit, fasolea neagră conservată, roșiile tăiate cubulețe, condimentele și cea mai mare parte din amestecul de brânzeturi mexicane.\n\n3. Umpleți ardeii grași cu amestecul, acoperiți cu brânza rămasă și coaceți până se topește și face bule.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 20,
+    "servings": 2,
+    "mealType": "DINNER",
+    "dishCategory": "VEGETARIAN",
+    "ingredients": [
+        {
+            "name": "Water",
+            "quantity": 2000,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Bell Pepper",
+            "quantity": 300,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 5,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Onion",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Brown Rice",
+            "quantity": 240,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Canned Black Beans",
+            "quantity": 215,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Canned Tomatoes",
+            "quantity": 205,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Chili Powder",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cumin",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mexican Cheese Blend",
+            "quantity": 170,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/231514/vegetarian-mexican-inspired-stuffed-peppers/",
+    "cuisine": "Mexican",
+    "id": "vegetarian_mexican_inspired_stuffed_peppers",
+    "imageUrl": "recipes/images/mexican/vegetarian_mexican_inspired_stuffed_peppers.webp"
+}

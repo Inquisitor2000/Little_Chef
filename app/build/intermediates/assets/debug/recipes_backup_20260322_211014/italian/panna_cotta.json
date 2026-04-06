@@ -1,0 +1,46 @@
+{
+    "name": "Panna Cotta",
+    "instructions": "1. Pour the milk into a small bowl. Sprinkle the gelatin powder evenly over the surface of the milk and stir gently until fully combined. The gelatin needs to bloom and absorb the liquid. Set aside while you prepare the cream.\n\n2. In a saucepan, combine the heavy cream and sugar. Place over medium heat and stir occasionally as the mixture warms. Bring to a gentle boil, watching carefully to prevent it from boiling over.\n\n3. As soon as the cream reaches a boil, remove from heat and immediately stir in the gelatin mixture. Stir continuously until the gelatin is completely dissolved with no granules remaining, about 1 minute. The mixture should be smooth and silky.\n\n4. Stir in the vanilla extract until evenly distributed. Carefully pour the cream mixture into ramekins, dividing equally. Place on a flat surface and allow to cool at room temperature until no longer warm to the touch, about 20 minutes.\n\n5. Once cooled, cover each ramekin tightly with plastic wrap to prevent a skin from forming. Refrigerate until fully set and jiggly, at least 4 hours, though overnight chilling produces the best texture. The panna cotta should wobble when gently shaken but hold its shape.",
+    "simpleInstructions": "1. Bloom gelatin in milk and set aside.\n\n2. Boil cream with sugar, then stir in gelatin mixture until dissolved.\n\n3. Add vanilla, pour into ramekins, and cool.\n\n4. Cover and refrigerate until set, at least 4 hours.",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 10,
+    "servings": 2,
+    "mealType": "DESSERT",
+    "dishCategory": "DESSERT",
+    "ingredients": [
+        {
+            "name": "Skim milk",
+            "quantity": 27,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Gelatin",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cream",
+            "quantity": 210,
+            "unit": "ml",
+            "isStarIngredient": true
+        },
+        {
+            "name": "White sugar",
+            "quantity": 30,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Vanilla extract",
+            "quantity": 2.5,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/72567/panna-cotta/",
+    "cuisine": "Italian",
+    "id": "panna_cotta",
+    "imageUrl": "recipes/images/italian/panna_cotta.webp"
+}

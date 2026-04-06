@@ -1,0 +1,88 @@
+{
+  "name": "Pumpkin Baklava",
+  "instructions": "1. First make the syrup: Add white sugar, water, cinnamon stick, and citrus peel to a medium saucepan. Place over medium heat and bring to a boil. Once boiling, boil for 2 minutes and remove from heat. Let cool completely.\n\n2. Preheat the oven to 350 degrees F (180 degrees C). Brush a 9x13-inch baking dish with some of the melted butter. Place walnut halves in a food processor and pulse several times until they resemble fine crumbs. Combine walnuts with shredded pumpkin, breadcrumbs, olive oil, sugar, cinnamon, and ground cloves. Stir until well combined.\n\n3. Unroll phyllo dough and remove one sheet from the stack. Cover remaining phyllo with a dampened tea towel to keep from drying out as you work. Brush the sheet of dough with melted butter and lay in the prepared baking dish; press lightly so the sheet covers the bottom of the dish and comes up the sides. Repeat until you have 8 sheets layered.\n\n4. Spoon the pumpkin mixture over the phyllo base and level out to the sides. Fold the overhanging phyllo over the top of the pumpkin mixture. Brush another sheet of phyllo dough with melted butter and lay over the pumpkin mixture. Repeat until you've topped with 6 to 8 sheets.\n\n5. Using a sharp knife, cut into diamond or square shapes all the way through the top layers of phyllo; do not cut through the bottom layers.\n\n6. Bake in the preheated oven until the phyllo is a deep golden brown, 50 to 60 minutes.\n\n7. Remove baklava from the oven and immediately ladle the cool syrup over the hot baklava. Add one ladleful at a time until all of the syrup has been added. Set aside and let rest, uncovered, for 8 hours or overnight before serving.",
+  "simpleInstructions": "1. Make the syrup and let cool. Preheat the oven.\n\n2. Process walnuts and mix with pumpkin mixture.\n\n3. Layer phyllo with butter, add pumpkin mix, and cover with more phyllo.\n\n4. Cut into shapes and bake.\n\n5. Drizzle syrup, let rest for 8 hours before serving.",
+  "prepTimeMinutes": 45,
+  "cookTimeMinutes": 60,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "White Sugar",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 130,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon Sticks",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Walnuts",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pumpkin",
+      "quantity": 190,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Breadcrumbs",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cloves",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 160,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/pumpkin-baklava-recipe-8751495",
+  "cuisine": "Mediterranean",
+  "id": "pumpkin_baklava",
+  "imageUrl": "recipes/images/mediterranean/pumpkin_baklava.jpg"
+}

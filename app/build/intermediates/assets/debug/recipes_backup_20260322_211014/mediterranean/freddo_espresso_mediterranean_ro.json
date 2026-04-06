@@ -1,0 +1,28 @@
+{
+  "name": "Freddo Espresso",
+  "instructions": "1. Turnați espresso și zahărul într-un shaker pentru cocktailuri.\n\n2. Adăugați 4 cuburi de gheață, acoperiți și agitați până când cafeaua este spumoasă și rece și gheața s-a topit.\n\n3. Umpleți un pahar cu gheață și turnați cafeaua agitată peste gheață.",
+  "simpleInstructions": "1. Agitați espresso și zahărul cu gheață.\n\n2. Turnați peste gheață într-un pahar.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BEVERAGE",
+  "ingredients": [
+    {
+      "name": "Brewed Coffee",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/freddo-espresso-recipe-11739755",
+  "cuisine": "Mediterranean",
+  "id": "freddo_espresso",
+  "imageUrl": "recipes/images/mediterranean/freddo_espresso.jpg"
+}

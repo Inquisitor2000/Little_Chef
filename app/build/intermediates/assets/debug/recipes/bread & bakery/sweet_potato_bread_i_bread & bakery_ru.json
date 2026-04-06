@@ -1,0 +1,82 @@
+{
+    "name":  "Хлеб из Сладкого Картофеля",
+    "instructions":  "1. Разогрейте духовку до 175 градусов Цельсия. Смажьте форму для хлеба.  \n\n2. В большой миске смешайте сахар и масло и хорошо взбейте.  \n\n3. Добавьте яйцо и взбейте до однородности.  \n\n4. В отдельной миске смешайте муку, пищевую соду, молотую корицу, молотый мускатный орех и соль.  \n\n5. Постепенно вмешивайте мучную смесь в яичную смесь, чередуя с водой.  \n\n6. Вмешайте сладкий картофель и пеканы.  \n\n7. Вылейте тесто в подготовленную форму для хлеба.  \n\n8. Выпекайте в разогретой духовке около 1 часа или пока зубочистка, вставленная в центр, не выйдет чистой.",
+    "simpleInstructions":  "1. Разогрейте духовку до 175 градусов Цельсия и смажьте форму для хлеба.  \n\n2. Смешайте сахар и масло в миске, затем добавьте яйцо и взбейте.  \n\n3. Смешайте муку, пищевую соду, молотую корицу, молотый мускатный орех и соль в другой миске.  \n\n4. Постепенно добавляйте сухую смесь к влажной, чередуя с водой.  \n\n5. Вмешайте сладкий картофель и пеканы.  \n\n6. Вылейте в форму для хлеба и выпекайте 1 час.",
+    "prepTimeMinutes":  15,
+    "cookTimeMinutes":  60,
+    "servings":  2,
+    "mealType":  "SNACK",
+    "dishCategory":  "BREAD",
+    "ingredients":  [
+                        {
+                            "name":  "White Sugar",
+                            "quantity":  75,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Vegetable Oil",
+                            "quantity":  20,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Eggs",
+                            "quantity":  1,
+                            "unit":  "pcs",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "All-Purpose Flour",
+                            "quantity":  140,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Baking Soda",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Cinnamon",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Nutmeg",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Salt",
+                            "quantity":  0.625,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Water",
+                            "quantity":  20,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Sweet Potato",
+                            "quantity":  170,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Pecans",
+                            "quantity":  20,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/6666/sweet-potato-bread-i/",
+    "cuisine":  "Bread \u0026 Bakery",
+    "id":  "sweet_potato_bread_i",
+    "imageUrl":  "recipes/images/bread \u0026 bakery/sweet_potato_bread_i.jpg"
+}

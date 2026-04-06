@@ -1,0 +1,52 @@
+{
+  "name": "Real Sopapillas",
+  "instructions": "1. In a large mixing bowl, combine the All-Purpose Flour, Shortening, Baking Powder, and Salt. Use your fingers or a pastry cutter to work the shortening into the flour until the mixture resembles coarse crumbs. Gradually stir in the warm Water and mix until the dough comes together and is smooth and elastic. Cover the bowl with a clean kitchen towel and let the dough rest for 20 minutes to relax the gluten.\n\n2. Heat the Vegetable Oil in a deep fryer or large heavy pot to 375 degrees F (190 degrees C). Use a thermometer to ensure accurate temperature for perfectly puffed sopapillas.\n\n3. On a lightly floured board or work surface, roll out the dough until it is between 1/8 and 1/4 inch thick. Use a sharp knife or pizza cutter to cut the dough into 3-inch squares, re-rolling scraps as needed.\n\n4. Carefully slide a few dough squares at a time into the hot oil, being careful not to overcrowd the pot. Fry, turning once with tongs or a slotted spoon, until the sopapillas are puffed and golden brown on both sides, about 1 to 2 minutes per side. They should balloon up beautifully.\n\n5. Remove the fried sopapillas with a slotted spoon and drain on paper towels. Serve hot, dusted with powdered sugar and drizzled with honey, or filled with savory ingredients.",
+  "simpleInstructions": "1. Mix the All-Purpose Flour, Shortening, Baking Powder, and Salt, then add warm Water to form smooth dough. Let rest for 20 minutes.\n\n2. Heat the Vegetable Oil to 375 degrees F in a deep fryer.\n\n3. Roll the dough thin and cut into 3-inch squares.\n\n4. Fry the squares in hot oil until puffed and golden on both sides.\n\n5. Drain on paper towels and serve hot with toppings.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 90,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Shortening",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/23047/real-sopapillas/",
+  "cuisine": "Mexican",
+  "id": "real_sopapillas",
+  "imageUrl": "recipes/images/mexican/real_sopapillas.webp"
+}

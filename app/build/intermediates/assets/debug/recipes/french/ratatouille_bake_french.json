@@ -1,0 +1,94 @@
+{
+  "name": "Ratatouille Bake",
+  "instructions": "1. Preheat the oven to 350 degrees F (175 degrees C). Coat a 2 ½-quart baking dish with cooking spray. 2. Heat the olive oil in a large skillet over medium heat. Add the eggplant, onion, and garlic; cook and stir until the vegetables begin to soften, about 8 minutes. 3. Stir in the zucchini, canned tomatoes, green bell pepper, dried basil, dried parsley, salt, and black pepper; bring to a boil, stirring frequently. Reduce heat to medium-low; simmer until the vegetables are tender, about 20 minutes. 4. Meanwhile, fill a pot with salted water and bring to a boil. Add the egg noodles, cook uncovered until the noodles float and are tender, about 3 to 5 minutes. Drain. 5. Transfer the egg noodles to the bottom of the prepared baking dish; spoon the hot vegetable mixture over the top. Sprinkle with the mozzarella cheese. 6. Bake until bubbling and the cheese is melted, about 20 minutes.",
+  "simpleInstructions": "1. Preheat oven and prepare dish. 2. Cook eggplant, onion, and garlic in skillet. 3. Add remaining veggies and spices, simmer. 4. Boil and drain egg noodles. 5. Assemble dish and add the cheese. 6. Bake until cheese melts.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "BAKED_DISH",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggplant",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Onion",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 12.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Zucchini",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Tomatoes",
+      "quantity": 240,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Green Bell Pepper",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Basil",
+      "quantity": 7.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Parsley",
+      "quantity": 7.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg Noodles",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mozzarella",
+      "quantity": 55,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/200877/ratatouille-bake/",
+  "cuisine": "French",
+  "id": "ratatouille_bake",
+  "imageUrl": "recipes/images/french/ratatouille_bake.jpg"
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Pâine cu Maia",
+  "instructions": "1. Puneți maia într-un bol. Adăugați făina pentru pâine, apa și sarea; amestecați până se combină bine și devine lipicios.  \n\n2. Acoperiți cu folie de aluminiu și lăsați să stea 4 ore la 21-24 grade Celsius.  \n\n3. Descoperiți aluatul și folosiți mâini ude pentru a-l îndoi peste el însuși de 3-4 ori. Acoperiți din nou cu folie și lăsați să fermenteze încă 2 ore.  \n\n4. Presărați generos un coș de dospire (banneton) cu făina de orez. Răzuiți aluatul pe o suprafață de lucru ușor presărată cu făină. Modelați într-o bilă cu suprafață netedă, folosind doar suficientă făină pe suprafață pentru a nu se lipi. Puneți aluatul în coșul pregătit cu partea netedă în jos. Ciupiți marginile mai aspre de pe suprafață spre centru pentru a le netezi menținând forma de bilă rotundă.  \n\n5. Acoperiți și refrigerați 12 ore pentru a încetini procesul de fermentare.  \n\n6. Scoateți bannetonul din frigider. Lăsați să stea într-un loc cald până când aluatul revine încet și păstrează o ușoară adâncitură când este împuns ușor cu un deget, aproximativ 3-5 ore.  \n\n7. Preîncălziți cuptorul la 230 de grade Celsius. Căptușiți o tavă cu margini cu hârtie de copt. Presărați suprafața aluatului cu făină. Întoarceți ușor bannetonul peste centrul tăvii și răsturnați aluatul pe hârtia de copt. Îndepărtați ușor excesul de făină de orez. Faceți o tăietură de aproximativ 0,3 cm adâncime pe deasupra aluatului cu un cuțit ascuțit pentru a crea o crăpătură superficială care trece prin centru. Pulverizați ușor întreaga suprafață cu apă.  \n\n8. Coaceți în centrul cuptorului preîncălzit până devine frumos rumenit, 25-30 de minute.  \n\n9. Transferați pâinea pe un grătar și lăsați să se răcească complet înainte de a tăia.",
+  "simpleInstructions": "1. Amestecați maia, făina, apa și sarea.  \n\n2. Lăsați să stea, îndoiți și fermentați.  \n\n3. Modelați și refrigerați aluatul.  \n\n4. Lăsați aluatul să crească, apoi coaceți.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 25,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BREAD",
+  "ingredients": [
+    {
+      "name": "Sourdough Starter",
+      "quantity": 25,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Bread Flour",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rice Flour",
+      "quantity": 4,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/260540/chef-johns-sourdough-bread/",
+  "cuisine": "Bread & Bakery",
+  "id": "chef_johns_sourdough_bread",
+  "imageUrl": "recipes/images/bread & bakery/chef_johns_sourdough_bread.jpg"
+}

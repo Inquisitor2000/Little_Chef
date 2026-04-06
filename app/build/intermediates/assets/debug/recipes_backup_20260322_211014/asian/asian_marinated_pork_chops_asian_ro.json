@@ -1,0 +1,58 @@
+{
+  "name": "Cotlete de Porc Marinate în Stil Asiatic",
+  "instructions": "1. Într-o pungă mare de plastic resigilabilă rezistentă, combinați sosul de soia, zahărul brun, usturoiul tocat, pudra de ghimbir, chimenul măcinat și pasta de chili roșu. Sigilați punga și masați-o cu degetele timp de aproximativ un minut pentru a amesteca bine toate ingredientele și a dizolva complet zahărul brun.\n\n2. Adăugați cotletele de porc în marinată, asigurându-vă că sunt complet acoperite. Sigilați punga, eliminând cât mai mult aer posibil, și puneți la frigider. Lăsați cotletele să se marineze timp de 30-45 de minute, întorcând punga ocazional pentru a asigura o acoperire uniformă.\n\n3. În timp ce carnea se marinează, preîncălziți grătarul în aer liber la foc mediu. Odată încins, ungeți ușor grătarul folosind un prosop de hârtie înmuiat în ulei de gătit pentru a preveni lipirea.\n\n4. Scoateți cotletele de porc din marinată și aruncați marinata rămasă. Scuturaț excesul de lichid și așezați cotletele pe grătarul preîncălzit. Grătați până când carnea de porc este frumos rumenită cu urme distincte de grătar și nu mai este roz în centru, aproximativ 5-7 minute pe fiecare parte. Pentru cele mai bune rezultate, folosiți un termometru pentru carne cu citire instantanee introdus în partea cea mai groasă a unei cotlete—ar trebui să arate cel puțin 63°C. Lăsați cotletele să se odihnească câteva minute înainte de servire.",
+  "simpleInstructions": "1. Combinați ingredientele pentru marinată într-o pungă și masați pentru a dizolva zahărul.\n\n2. Adăugați cotletele și marinați 30-45 minute la frigider.\n\n3. Preîncălziți și ungeți grătarul la foc mediu.\n\n4. Grătați cotletele până se rumenesc frumos, 5-7 minute pe parte, apoi odihniți și serviți!",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 15,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "PORK",
+  "ingredients": [
+    {
+      "name": "Soy Sauce",
+      "quantity": 80,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger Powder",
+      "quantity": 7.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ground Cumin",
+      "quantity": 7.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sriracha",
+      "quantity": 7.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Pork Chop",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/218072/asian-marinated-pork-chops/",
+  "cuisine": "Asian",
+  "id": "asian_marinated_pork_chops",
+  "imageUrl": "recipes/images/asian/asian_marinated_pork_chops.jpg"
+}

@@ -1,0 +1,100 @@
+{
+  "name": "Turkish Pogaça",
+  "instructions": "1. Dissolve yeast and sugar in warm milk in a bowl. Let stand until yeast softens and begins to form a creamy foam, about 5 minutes.\n\n2. Combine all-purpose flour, whole wheat flour, water, vegetable oil, salt, and yeast mixture in the bowl of a stand mixer fitted with the hook attachment; knead until pliable and not too sticky. Adjust with flour or water as needed.\n\n3. Cover with a wet cloth and let sit at room temperature for 45 to 50 minutes.\n\n4. Preheat the oven to 350 degrees F (175 degrees C). Grease a baking tray with butter.\n\n5. Mix feta cheese, parsley, salt, pepper, and chili powder together in a bowl until well combined.\n\n6. Knead dough for 2 minutes. Divide it into 2 equal portions, and roll each one into a ball.\n\n7. Flatten each ball into a 2- to 3-inch circle. Add a spoon of cheese filling in the middle and fold the edges upward like a bundle, pressing to secure.\n\n8. Place on the prepared baking tray, folded-sides down. Brush with milk and sprinkle with poppy seeds.\n\n9. Bake on the top rack of the preheated oven until golden, 30 to 32 minutes.",
+  "simpleInstructions": "1. Activate yeast with sugar and milk.\n\n2. Combine dough ingredients and knead.\n\n3. Let dough rise for 45-50 minutes.\n\n4. Preheat oven and prepare baking tray.\n\n5. Mix filling ingredients.\n\n6. Divide and shape dough, add filling, and seal.\n\n7. Brush with milk, add poppy seeds.\n\n8. Bake for 30-32 minutes until golden.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 30,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BREAD",
+  "ingredients": [
+    {
+      "name": "Active Dry Yeast",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Whole Wheat Flour",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Feta Cheese",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Fresh Parsley",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chili Powder",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Poppy Seeds",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/282554/turkish-pogaca/",
+  "cuisine": "Mediterranean",
+  "id": "turkish_pogaca",
+  "imageUrl": "recipes/images/mediterranean/turkish_pogaca.jpg"
+}

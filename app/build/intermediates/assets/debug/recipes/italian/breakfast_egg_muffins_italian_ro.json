@@ -1,0 +1,94 @@
+{
+    "name": "Brioșe cu ouă pentru micul dejun",
+    "instructions": "1. Preîncălziți cuptorul la 190 de grade Celsius. Ungeți formele pentru brioșe cu spray de gătit pentru a preveni lipirea.\n\n2. Bateți ouăle întregi într-un bol mare până se combină bine. Adăugați albușurile și bateți până devin netede și ușor spumoase.\n\n3. Adăugați șunca tăiată cubulețe, spanacul tocat, ardeiul gras roșu tăiat cubulețe, ardeiul gras verde tăiat cubulețe și ardeiul jalapeño tăiat cubulețe. Amestecați până când legumele și șunca sunt distribuite uniform în amestecul de ouă.\n\n4. Adăugați usturoiul tocat mărunt, condimentul italian, pudra de ceapă, piperul cayenne, sarea și piperul negru. Amestecați bine pentru a asigura încorporarea tuturor condimentelor.\n\n5. Turnați amestecul de ouă în formele pentru brioșe pregătite, umplând fiecare aproximativ trei sferturi pentru a lăsa spațiu pentru creștere în timpul coacerii.\n\n6. Coaceți în cuptorul preîncălzit până când centrul se întărește și suprafața devine ușor aurie, 25-30 de minute. Un scobitoare introdusă în centru ar trebui să iasă curată. Lăsați să se răcească ușor înainte de a scoate din tavă.",
+    "simpleInstructions": "1. Preîncălziți cuptorul și ungeți formele pentru brioșe cu spray de gătit.\n\n2. Bateți ouăle întregi și albușurile până devin netede.\n\n3. Adăugați șunca tăiată cubulețe, spanacul tocat, ardeii tăiați cubulețe, jalapeño, usturoiul tocat mărunt și toate condimentele.\n\n4. Turnați amestecul în formele pentru brioșe, umplând trei sferturi.\n\n5. Coaceți 25-30 de minute până se întăresc și devin aurii.",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 25,
+    "servings": 2,
+    "mealType": "BREAKFAST",
+    "dishCategory": "MAIN_COURSE",
+    "ingredients": [
+        {
+            "name": "Eggs",
+            "quantity": 2,
+            "unit": "pcs",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Egg Whites",
+            "quantity": 2,
+            "unit": "pcs",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Ham",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Spinach",
+            "quantity": 70,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Red Bell Pepper",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Green Bell Pepper",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Jalapeño Pepper",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 2.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Italian Seasoning",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Onion Powder",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cayenne Pepper",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 2,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/236039/breakfast-egg-muffins/",
+    "cuisine": "Italian",
+    "id": "breakfast_egg_muffins",
+    "imageUrl": "recipes/images/italian/breakfast_egg_muffins.jpg"
+}

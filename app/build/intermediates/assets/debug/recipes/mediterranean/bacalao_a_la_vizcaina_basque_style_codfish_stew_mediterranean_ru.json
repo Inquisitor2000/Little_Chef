@@ -1,0 +1,100 @@
+{
+    "name": "Баскское Рагу из Трески",
+    "instructions": "1. Замочите соленую треску примерно в 2 литрах воды, меняя воду три раза в течение 8 часов. Слейте воду, затем нарежьте треску на кусочки размером с укус.\n\n2. Выложите слоями половину каждого ингредиента в кастрюлю в следующем порядке: картофель, треска, лук, вареные яйца, каперсы, чеснок, оливки, жареный красный перец и изюм.\n\n3. Положите лавровый лист на изюм, затем вылейте половину томатного соуса и половину оливкового масла сверху. Повторите слои в том же порядке, пропуская лавровый лист.\n\n4. Вылейте воду и белое вино сверху; не перемешивайте.\n\n5. Накройте и доведите до кипения на среднем огне. Уменьшите огонь до средне-слабого и варите до мягкости картофеля, около 30 минут.",
+    "simpleInstructions": "1. Замочите треску и нарежьте на кусочки.\n\n2. Выложите ингредиенты слоями в кастрюлю.\n\n3. Вылейте жидкости сверху и варите до мягкости.",
+    "prepTimeMinutes": 30,
+    "cookTimeMinutes": 35,
+    "servings": 2,
+    "mealType": "LUNCH",
+    "dishCategory": "SEAFOOD",
+    "ingredients": [
+        {
+            "name": "Cod",
+            "quantity": 110,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Potato",
+            "quantity": 180,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Onion",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Eggs",
+            "quantity": 1,
+            "unit": "pcs",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Capers",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Green Olives",
+            "quantity": 30,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Red Bell Pepper",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Raisins",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Bay Leaves",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tomato Sauce",
+            "quantity": 60,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 60,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Water",
+            "quantity": 60,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "White Wine",
+            "quantity": 30,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/214972/bacalao-a-la-vizcaina-basque-style-codfish-stew/",
+    "cuisine": "Mediterranean",
+    "id": "bacalao_a_la_vizcaina_basque_style_codfish_stew",
+    "imageUrl": "recipes/images/mediterranean/bacalao_a_la_vizcaina_basque_style_codfish_stew.jpg"
+}

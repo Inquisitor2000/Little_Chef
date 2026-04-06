@@ -1,0 +1,64 @@
+{
+  "name": "Cheesecake Japonez Tremurător",
+  "instructions": "1. Preîncălziți cuptorul la 150°C și pregătiți o baie de apă plasând o tavă mare de copt pe raftul inferior al cuptorului și umplând-o cu apă fierbinte până ajunge aproximativ la jumătatea înălțimii—aceasta creează abur pentru o coacere uniformă și blândă. Căptușiți o formă rotundă de tort de 20 cm cu hârtie de copt pe fund și laturi, asigurându-vă că hârtia se extinde ușor deasupra marginii pentru a ajuta la scoatere mai târziu.\n\n2. Separați cu grijă ouăle, punând gălbenușurile într-un bol și albușurile într-un bol mare și curat de amestecare—chiar și o urmă de gălbenuș va împiedica albușurile să se bată corect. Într-o cratiță medie la foc mic, combinați brânza cremă, untul și laptele, amestecând constant cu un tel până când amestecul este complet neted, topit și bine combinat fără cocoloașe rămase. Scoateți de pe foc și lăsați să se răcească ușor timp de 2-3 minute.\n\n3. Cerneti împreună amidonul de porumb, sarea și făina într-un bol mic pentru a îndepărta orice cocoloașe și a asigura distribuție uniformă. Amestecați ingredientele uscate cernute în amestecul cald de brânză cremă până devine complet neted și nu rămân dungi de făină. Adăugați gălbenușurile unul câte unul, amestecând temeinic după fiecare adăugare până când aluatul este mătăsos și omogen. Lăsați deoparte.\n\n4. Folosind un mixer electric la viteză medie, începeți să bateți albușurile până devin spumoase. Adăugați treptat zahărul, câte o lingură odată, în timp ce continuați să bateți. Creșteți viteza la mediu-mare și bateți până se formează vârfuri moi și lucioase care se îndoaie ușor când ridicați bătătoarele—nu bateți excesiv sau bezea va deveni grăunțoasă. Folosind o spatulă mare, încorporați ușor aproximativ o treime din bezea în aluatul de brânză cremă pentru a-l înlesni, apoi încorporați cu grijă bezea rămasă în două adăugări, folosind mișcări largi și ample de jos în sus pentru a păstra cât mai mult aer posibil.\n\n5. Turnați aluatul aerat în forma pregătită, netezind vârful ușor. Bateți forma ușor pe tejghea pentru a elibera orice bule mari de aer. Așezați cu grijă forma în baia de apă în cuptorul preîncălzit. Coaceți timp de 30 minute cu ușa cuptorului complet închisă pentru a permite tortului să crească. Apoi, deschideți ușa cuptorului aproximativ 2-3 cm și coaceți încă 20 minute pentru a preveni brunirea excesivă în timp ce continuă să se gătească. În final, închideți din nou ușa și coaceți încă 20 minute până când vârful este auriu și tortul se mișcă ușor dar este în mare parte întărit când este scuturat ușor.\n\n6. Scoateți tortul din cuptor și din baia de apă imediat. Lăsați-l să se răcească în formă timp de 10 minute, apoi treceți un cuțit pe margini și răsturnați cu grijă pe o farfurie. Îndepărtați hârtia de copt, apoi răsturnați din nou pe o farfurie de servire astfel încât vârful auriu să fie cu fața în sus. Serviți cald pentru textura caracteristică tremurătoare, sau răciți pentru o consistență mai densă, mai tradițională de cheesecake.",
+  "simpleInstructions": "1. Preîncălziți cuptorul cu baie de apă, căptușiți forma cu hârtie de copt.\n\n2. Separați ouăle; topiți și amestecați brânza cremă, untul și laptele până devine neted.\n\n3. Cerneti ingredientele uscate în amestecul de brânză, apoi amestecați gălbenușurile unul câte unul.\n\n4. Bateți albușurile cu zahăr până la vârfuri moi, încorporați ușor în aluat.\n\n5. Turnați în formă, coaceți în baie de apă: 30 min închis, 20 min ușă crăpată, 20 min închis.\n\n6. Răciți scurt, răsturnați de două ori, serviți cald pentru textură tremurătoare.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 50,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Cream Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Whole Milk",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.spatuladesserts.com/jiggly-japanese-cheesecake/",
+  "cuisine": "Asian",
+  "id": "jiggly_japanese_cheesecake",
+  "imageUrl": "recipes/images/asian/jiggly_japanese_cheesecake.jpg"
+}

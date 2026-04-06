@@ -1,0 +1,94 @@
+{
+  "name": "Tarte cu Brânză Coapte Hokkaido",
+  "instructions": "1. Începeți prin a pregăti aluatul fraged. Puneți untul în congelator timp de 10-15 minute până devine foarte rece dar nu înghețat solid. Între timp, cerneti împreună făina, zahărul pudră, făina de migdale și un praf de sare într-un bol mare pentru a asigura absența cocoloașelor și distribuție uniformă.\n\n2. Folosind vârfurile degetelor, frecați rapid untul rece în amestecul uscat, lucrându-l între degete până seamănă cu nisip grosier fără bucăți mari de unt rămase. Aceasta creează textura foietată. Faceți o groapă în centru, adăugați oul și frământați ușor doar până când aluatul se unește într-o bilă netedă—nu lucrați excesiv sau va deveni tare. Întindeți aluatul între două covorașe de silicon la o grosime uniformă de 2mm, rotind ocazional pentru uniformitate.\n\n3. Transferați aluatul întins (încă între covorașe) în congelator timp de 10-15 minute pentru a se întări, facilitând tăierea curată. Scoateți și tăiați cercuri ușor mai mari decât formele de tartă folosind o formă de biscuiți sau un pahar. Apăsați ușor cercurile de aluat în forme, asigurându-vă că se potrivesc strâns pe laturi și fund fără buzunare de aer. Congelați timp de 1 oră pentru a preveni contracția în timpul coacerii.\n\n4. Preîncălziți cuptorul la 170°C. Pre-coaceți cojile de tartă înghețate direct din congelator timp de 10 minute până sunt ușor aurii și întărite dar nu brunate. Scoateți din cuptor și lăsați să se răcească complet pe un grătar.\n\n5. Pregătiți umplutura cremoasă bătând împreună brânza cremă, parmezanul ras, untul și zahărul într-un bol până devine complet neted și pufos fără cocoloașe. Adăugați gălbenușurile unul câte unul, amestecând bine după fiecare adăugare. Cerneti amidonul de porumb pentru a preveni formarea cocoloașelor, apoi turnați treptat laptele și smântâna grasă, amestecând până amestecul devine mătăsos și bine combinat.\n\n6. Turnați cu grijă umplutura în cojile de tartă răcite, umplându-le aproximativ 80% pentru a permite o ușoară expansiune. Coaceți la 170°C timp de 12-15 minute, urmărind cu atenție. Umplutura este gata când marginile sunt întărite dar centrul are încă o mișcare ușoară când scuturați tava—se va întări pe măsură ce se răcește.\n\n7. Scoateți din cuptor și lăsați tartele să se răcească în formele lor timp de 10 minute, apoi scoateți cu grijă din forme. Aceste tarte sunt delicioase servite calde cu centrul lor cremos, asemănător cremei, sau răcite pentru o textură mai fermă, asemănătoare cheesecake-ului.",
+  "simpleInstructions": "1. Răciți untul, apoi amestecați cu ingredientele uscate până devine nisipos.\n\n2. Adăugați oul, întindeți aluatul subțire, tăiați cercuri și congelați în forme.\n\n3. Pre-coaceți cojile până sunt ușor aurii, apoi răciți.\n\n4. Amestecați umplutura de brânză cremă până devine netedă și turnați în coji.\n\n5. Coaceți până se întărește cu o mișcare. Serviți cald sau rece.",
+  "prepTimeMinutes": 40,
+  "cookTimeMinutes": 25,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Almond Flour",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cream Cheese",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Parmesan",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Heavy Cream",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg Yolks",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.spatuladesserts.com/hokkaido-baked-cheese-tarts/",
+  "cuisine": "Asian",
+  "id": "hokkaido_baked_cheese_tarts",
+  "imageUrl": "recipes/images/asian/hokkaido_baked_cheese_tarts.jpg"
+}

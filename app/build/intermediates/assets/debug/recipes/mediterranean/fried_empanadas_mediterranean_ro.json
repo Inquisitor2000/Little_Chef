@@ -1,0 +1,100 @@
+{
+    "name": "Empanadas Prăjite",
+    "instructions": "1. Preparați aluatul amestecând făina și sarea, tăind grăsimea vegetală și adăugând apă până se formează un aluat. Înveliți și refrigerați timp de 1 oră.\n\n2. Între timp, preparați umplutura sotând ceapa în ulei de măsline, apoi adăugând carnea tocată de vită, boia, chimenul, piperul și sarea. Gătiți până când carnea este rumenită, apoi amestecați stafidele și oțetul. Refrigerați timp de 1 oră.\n\n3. Întindeți aluatul și împărțiți-l în bile mici. Aplatizați fiecare bilă, umpleți cu amestecul de carne și împăturiți în formă de semilună, sigilând marginile.\n\n4. Prăjiți empanadas în ulei fierbinte până se rumenesc, aproximativ 2,5 minute pe fiecare parte. Scurgeți pe prosoape de hârtie și serviți fierbinți.",
+    "simpleInstructions": "1. Preparați aluatul și răciți.\n\n2. Preparați și răciți umplutura de carne.\n\n3. Modelați aluatul, umpleți și sigilați empanadas.\n\n4. Prăjiți și serviți fierbinți.",
+    "prepTimeMinutes": 50,
+    "cookTimeMinutes": 70,
+    "servings": 2,
+    "mealType": "SNACK",
+    "dishCategory": "BEEF",
+    "ingredients": [
+        {
+            "name": "All-Purpose Flour",
+            "quantity": 90,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 3.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Shortening",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Water",
+            "quantity": 30,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 5,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Onion",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Ground Beef",
+            "quantity": 140,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Paprika",
+            "quantity": 2,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cumin",
+            "quantity": 7,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Raisins",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "White Vinegar",
+            "quantity": 5,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Eggs",
+            "quantity": 1,
+            "unit": "pcs",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Vegetable Oil",
+            "quantity": 250,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/71805/fried-empanadas/",
+    "cuisine": "Mediterranean",
+    "id": "fried_empanadas",
+    "imageUrl": "recipes/images/mediterranean/fried_empanadas.jpg"
+}

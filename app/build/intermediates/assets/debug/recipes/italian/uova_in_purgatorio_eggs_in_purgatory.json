@@ -1,0 +1,76 @@
+{
+    "name": "Eggs in Purgatory",
+    "instructions": "1. Heat the olive oil in a large skillet over low heat. Add the minced garlic, sliced olives, capers, and anchovy. Cook gently, stirring occasionally, until the garlic becomes fragrant and the anchovy begins to dissolve into the oil, about 1 to 2 minutes. Be careful not to burn the garlic.\n\n2. Add the tomato sauce and water to the skillet, stirring to combine. Increase heat to bring the mixture to a boil, then reduce to a simmer. Let it cook gently, stirring occasionally, until the flavors meld together and the sauce thickens slightly, about 10 minutes. Stir in the chopped fresh parsley and season with salt to taste. Remember that the olives, capers, and anchovy already add saltiness.\n\n3. Using a spoon, create small wells or indentations in the tomato sauce. Carefully crack the eggs one at a time directly into these wells, being careful not to break the yolks. The eggs should sit nestled in the sauce. Cover the skillet with a lid and cook over low heat until the egg whites are set but the yolks are still slightly runny, about 3 to 5 minutes. For firmer yolks, cook a bit longer. Serve immediately with crusty bread for dipping.",
+    "simpleInstructions": "1. Sauté garlic, olives, capers, and anchovy in oil until fragrant.\n\n2. Add tomato sauce and water, simmer until flavors combine, then add parsley and salt.\n\n3. Create wells in sauce, crack eggs into them, cover and cook until whites are set.",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 15,
+    "servings": 2,
+    "mealType": "BREAKFAST",
+    "dishCategory": "MAIN_COURSE",
+    "ingredients": [
+        {
+            "name": "Olive Oil",
+            "quantity": 30,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Olives",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Capers",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Anchovies",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tomato Sauce",
+            "quantity": 200,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Water",
+            "quantity": 120,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Fresh Parsley",
+            "quantity": 2,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Eggs",
+            "quantity": 2,
+            "unit": "pcs",
+            "isStarIngredient": true
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/265087/uova-in-purgatorio-eggs-in-purgatory/",
+    "cuisine": "Italian",
+    "id": "uova_in_purgatorio_eggs_in_purgatory",
+    "imageUrl": "recipes/images/italian/uova_in_purgatorio_eggs_in_purgatory.webp"
+}

@@ -1,0 +1,118 @@
+{
+  "name": "Кубинское тушеное мясо",
+  "instructions": "1. В большой сковороде для соте разогрейте оливковое масло на среднем огне. \n\n2. Разогрейте масло в большой сковороде или сковороде для соте на среднем огне до блеска. Добавьте лук и чеснок, часто помешивая деревянной ложкой, и готовьте 3-5 минут, пока лук не станет мягким, прозрачным и ароматным. Не давайте чесноку подрумяниться. \n\n3. Добавьте кубики говядины и готовьте до подрумянивания, около 3-5 минут. \n\n4. Добавьте красный болгарский перец, лавровые листья, тмин и орегано; готовьте 2-3 минуты. \n\n5. Добавьте сухой херес, томатный соус, красный винный уксус, оливки, изюм и каперсы. \n\n6. Налейте достаточно воды, чтобы только покрыть мясо. \n\n7. Доведите до кипения, уменьшите огонь до слабого и накройте. \n\n8. Доведите до кипения и готовьте, периодически помешивая, пока ингредиенты не станут мягкими, а соус слегка не загустеет. \n\n9. Добавьте больше воды, если рагу становится слишком густым. \n\n10. Добавьте картофель в рагу. \n\n11. Приправьте солью и перцем по вкусу. \n\n12. Готовьте под крышкой, пока картофель почти не станет мягким, около 3-5 минут. Проверьте готовность перед продолжением. \n\n13. Откройте крышку и готовьте до готовности, около 3-5 минут. Проверьте готовность перед продолжением. \n\n14. Примечание: Используйте сухой херес.",
+  "simpleInstructions": "1. В большой сковороде для соте разогрейте оливковое масло на среднем огне. \n\n2. Готовьте лук и чеснок в масле. \n\n3. Добавьте кубики говядины и готовьте. \n\n4. Добавьте красный болгарский перец, лавровые листья, тмин и орегано; готовьте 2-3 минуты. \n\n5. Добавьте сухой херес, томатный соус, красный винный уксус, оливки, изюм и каперсы. \n\n6. Налейте достаточно воды, чтобы покрыть мясо. \n\n7. Доведите до кипения, уменьшите огонь до слабого и накройте. \n\n8. Тушите на медленном огне. \n\n9. Добавьте больше воды, если рагу становится слишком густым. \n\n10. Добавьте картофель в рагу. \n\n11. Приправьте солью и перцем по вкусу. \n\n12. Готовьте под крышкой. \n\n13. Откройте крышку и готовьте. \n\n14. Примечание: Используйте сухой херес.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 120,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "BEEF",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Beef Steak",
+      "quantity": 340,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Bay Leaves",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ground Cumin",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sherry",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato Sauce",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Red Wine Vinegar",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Green Olives",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Raisins",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Capers",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Potato",
+      "quantity": 240,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/14660/cuban-beef-stew/",
+  "cuisine": "American",
+  "id": "cuban_beef_stew",
+  "imageUrl": "recipes/images/meat dishes/cuban_beef_stew.jpg"
+}

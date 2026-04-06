@@ -1,0 +1,70 @@
+{
+  "name": "Air Fryer Spanakopita",
+  "instructions": "1. For filling, stir together the spinach, feta, mozzarella, Parmesan, and garlic in a bowl.\n\n2. Line a baking sheet with parchment paper. Arrange 1 sheet of phyllo on a clean work surface and brush lightly with some of the melted butter. Top with 2 more phyllo sheets and more butter. Cover remaining phyllo with a damp towel while you work.\n\n3. Cut phyllo stack lengthwise into 3 equal strips. Divide the filling evenly among the strips, spooning it at the bottom of each strip. Take the bottom right corner and fold the dough over the filling to make a triangle. Fold the bottom left corner up to make another triangle. Continue folding until all the dough is folded. Arrange spanakopita, seam side down, on the prepared baking sheet. Lightly brush with butter. Repeat with remaining phyllo, filling, and butter.\n\n4. Preheat air fryer to 375 degrees F (190 degrees C). Arrange spanakopita in an even layer in the air fryer basket, working in batches as needed. Cook, turning once halfway through, until spanakopita is golden brown, 12 to 15 minutes.\n\n5. Cool slightly. Serve with tzatziki sauce and dill.",
+  "simpleInstructions": "1. Mix filling ingredients: spinach, cheeses, garlic.\n\n2. Prepare phyllo sheets with butter, fill with mixture, fold into triangles.\n\n3. Preheat air fryer, cook spanakopita until golden brown.\n\n4. Serve with tzatziki sauce and dill.",
+  "prepTimeMinutes": 40,
+  "cookTimeMinutes": 15,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "VEGETARIAN",
+  "ingredients": [
+    {
+      "name": "Spinach",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Feta Cheese",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mozzarella",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Parmesan",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Greek Yogurt",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Dill",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/air-fryer-spanakopita-recipe-7510155",
+  "cuisine": "Mediterranean",
+  "id": "air_fryer_spanakopita",
+  "imageUrl": "recipes/images/mediterranean/air_fryer_spanakopita.jpg"
+}

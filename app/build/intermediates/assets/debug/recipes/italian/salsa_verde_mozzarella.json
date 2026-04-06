@@ -1,0 +1,93 @@
+{
+    "id": "salsa_verde_mozzarella",
+    "name": "Salsa Verde Mozzarella",
+    "instructions": "1. Add the capers, anchovies, garlic cloves, scallion, fresh parsley leaves, and fresh mint leaves to a food processor. Pulse in short bursts until all ingredients are very finely chopped and well combined, scraping down the sides as needed. The mixture should have a coarse, textured consistency rather than a smooth puree.\n\n2. Transfer the herb mixture to a medium serving bowl.\n\n3. Using a microplane or fine grater, zest the lemon directly over the bowl to capture the aromatic oils. Cut the lemon in half and squeeze the juice into the mixture, removing any seeds. Stir in the olive oil, red pepper flakes, torn mozzarella pieces, and halved cherry tomatoes. Mix gently to combine all ingredients.\n\n4. Taste and season with salt and black pepper as needed. The capers and anchovies add saltiness, so adjust carefully.\n\n5. Cover the bowl with plastic wrap and refrigerate for at least 2 hours to allow the flavors to meld and develop. The longer it marinates, the more flavorful it becomes. Serve chilled or at room temperature with crusty bread.",
+    "simpleInstructions": "1. Pulse herbs, capers, and anchovies in food processor until finely chopped.\n\n2. Transfer to bowl and add lemon zest, juice, oil, pepper flakes, mozzarella, and tomatoes.\n\n3. Season with salt and pepper, then marinate for at least 2 hours before serving.",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 0,
+    "servings": 2,
+    "cuisine": "Italian",
+    "mealType": "LUNCH",
+    "dishCategory": "APPETIZER",
+    "imageUrl": "recipes/images/italian/salsa_verde_mozzarella.webp",
+    "ingredients": [
+        {
+            "name": "Capers",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Anchovies",
+            "quantity": 4,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Scallion",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Fresh Parsley",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Fresh Mint",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 60,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Lemon",
+            "quantity": 50,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Red Pepper Flakes",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 90,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Cherry Tomatoes",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salt",
+            "quantity": 0.3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 0.3,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ]
+}

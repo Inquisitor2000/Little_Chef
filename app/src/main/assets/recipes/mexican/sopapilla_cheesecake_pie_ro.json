@@ -1,0 +1,58 @@
+{
+    "name": "Plăcintă cheesecake sopapilla",
+    "instructions": "1. Preîncălziți cuptorul la 175 grade Celsius. Ungeți generos o formă de copt de 23x23 cm cu spray de gătit sau unt.\n\n2. Într-un bol de amestecare, bateți brânza cremă, o parte din zahărul alb și extractul de vanilie împreună cu un mixer electric la viteză medie până când amestecul este complet neted și cremos fără cocoloașe.\n\n3. Desfaceți jumătate din aluatul de pizza refrigerat pe o suprafață de lucru curată. Folosiți un sucitor pentru a-l rula ușor și a-i da forma unui pătrat de 23x23 cm. Apăsați cu grijă acest aluat pe fundul formei de copt pregătite, asigurându-vă că ajunge în toate colțurile și marginile.\n\n4. Întindeți uniform amestecul de brânză cremă peste stratul de aluat, netezind cu o spatulă pentru a crea o umplutură uniformă.\n\n5. Rulați aluatul de pizza rămas într-un alt pătrat de 23x23 cm și puneți-l cu grijă peste stratul de brânză cremă, apăsând marginile pentru a sigila.\n\n6. Într-un bol mic, folosiți o furculiță pentru a zdrobi împreună zahărul alb rămas, untul moale și scorțișoara până când amestecul devine sfărâmicios și bine combinat. Puneți acest amestec de unt cu scorțișoară uniform în puncte peste stratul superior de aluat.\n\n7. Coaceți în cuptorul preîncălzit până când aluatul de pizza s-a umflat frumos și a devenit auriu, aproximativ 30 de minute. Partea de sus ar trebui să fie crocantă și aromată.\n\n8. Scoateți din cuptor și stropiți imediat mierea generos peste desertul fierbinte. Lăsați cheesecake-ul să se răcească complet în tavă aproximativ 2 ore pentru a se fixa corespunzător înainte de a-l tăia în pătrate și a-l servi.",
+    "simpleInstructions": "1. Preîncălziți cuptorul și ungeți o formă de copt de 23x23 cm.\n\n2. Bateți brânza cremă, o parte din zahărul alb și extractul de vanilie până devine neted și cremos.\n\n3. Apăsați jumătate din aluatul de pizza refrigerat pe fundul formei.\n\n4. Întindeți uniform amestecul de brânză cremă peste aluat.\n\n5. Acoperiți cu stratul rămas de aluat de pizza.\n\n6. Deasupra puneți un amestec sfărâmicios din zahărul alb rămas, unt și scorțișoară.\n\n7. Coaceți până se umflă și devine auriu, apoi stropiți cu miere.\n\n8. Răciți complet înainte de a tăia în pătrate.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 30,
+    "servings": 2,
+    "mealType": "DESSERT",
+    "dishCategory": "DESSERT",
+    "ingredients": [
+        {
+            "name": "Cream Cheese",
+            "quantity": 150,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "White Sugar",
+            "quantity": 130,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Vanilla Extract",
+            "quantity": 2.5,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Refrigerated Pizza Dough",
+            "quantity": 200,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Butter",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cinnamon",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Honey",
+            "quantity": 30,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/169305/sopapilla-cheesecake-pie/",
+    "cuisine": "Mexican",
+    "id": "sopapilla_cheesecake_pie",
+    "imageUrl": "recipes/images/mexican/sopapilla_cheesecake_pie.webp"
+}

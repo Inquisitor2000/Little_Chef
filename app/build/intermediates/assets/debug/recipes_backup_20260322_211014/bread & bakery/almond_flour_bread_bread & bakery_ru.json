@@ -1,0 +1,58 @@
+{
+  "name": "Хлеб из Миндальной Муки",
+  "instructions": "1. Разогрейте духовку до 175 градусов Цельсия. Слегка смажьте форму для хлеба размером 8x4 дюйма или застелите пергаментной бумагой.  \n\n2. Смешайте миндальную муку, льняную муку, яйца, миндальное молоко, оливковое масло, разрыхлитель и соль в миске до образования мягкого теста.  \n\n3. Переложите тесто в подготовленную форму для хлеба.  \n\n4. Выпекайте в разогретой духовке до золотистого цвета сверху, около 40 минут.  \n\n5. Охладите в форме в течение 10 минут, затем переложите на решетку для полного охлаждения.",
+  "simpleInstructions": "1. Разогрейте духовку до 175 градусов Цельсия и подготовьте форму для хлеба.  \n\n2. Смешайте все ингредиенты в мягкое тесто.  \n\n3. Вылейте тесто в форму для хлеба.  \n\n4. Выпекайте 40 минут до золотистого цвета.  \n\n5. Охладите в форме 10 минут, затем переложите на решетку.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 40,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BREAD",
+  "ingredients": [
+    {
+      "name": "Almond Flour",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Flaxseed Meal",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Almond Milk",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/246002/almond-flour-bread/",
+  "cuisine": "Bread & Bakery",
+  "id": "almond_flour_bread",
+  "imageUrl": "recipes/images/bread & bakery/almond_flour_bread.jpg"
+}

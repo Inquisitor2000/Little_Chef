@@ -1,0 +1,88 @@
+{
+  "name": "Baklava cu Dovleac",
+  "instructions": "1. Mai întâi preparați siropul: Adăugați zahărul alb, apa, bețișorul de scorțișoară și coaja de citrice într-o cratiță medie. Puneți pe foc mediu și aduceți la fierbere. Odată ce fierbe, fierbeți 2 minute și scoateți de pe foc. Lăsați să se răcească complet.\n\n2. Preîncălziți cuptorul la 180 grade C. Ungeți o tavă de 23x33 cm cu puțin din untul topit. Puneți jumătățile de nuci într-un robot de bucătărie și pulsați de mai multe ori până seamănă cu firimituri fine. Combinați nucile cu dovleacul ras, pesmetul, uleiul de măsline, zahărul, scorțișoara și cuișoarele măcinate. Amestecați până se combină bine.\n\n3. Desfaceți foietajul și scoateți o foaie din stivă. Acoperiți foietajul rămas cu un prosop de bucătărie umed pentru a nu se usca în timp ce lucrați. Ungeți foaia de aluat cu unt topit și așezați în tava pregătită; apăsați ușor astfel încât foaia să acopere fundul tavei și să urce pe laturi. Repetați până aveți 8 foi stratificate.\n\n4. Puneți amestecul de dovleac peste baza de foietaj și nivelați spre laturi. Împăturiți foietajul care iese peste marginea amestecului de dovleac. Ungeți o altă foaie de foietaj cu unt topit și așezați peste amestecul de dovleac. Repetați până ați acoperit cu 6 până la 8 foi.\n\n5. Folosind un cuțit ascuțit, tăiați în forme de romb sau pătrate prin toate straturile superioare de foietaj; nu tăiați prin straturile de jos.\n\n6. Coaceți în cuptorul preîncălzit până când foietajul devine auriu închis, 50 până la 60 de minute.\n\n7. Scoateți baklava din cuptor și turnați imediat siropul rece peste baklava fierbinte. Adăugați câte o polonică odată până când tot siropul a fost adăugat. Lăsați deoparte și lăsați să se odihnească, neacoperit, timp de 8 ore sau peste noapte înainte de a servi.",
+  "simpleInstructions": "1. Preparați siropul și lăsați să se răcească. Preîncălziți cuptorul.\n\n2. Procesați nucile și amestecați cu amestecul de dovleac.\n\n3. Stratificați foietajul cu unt, adăugați amestecul de dovleac și acoperiți cu mai mult foietaj.\n\n4. Tăiați în forme și coaceți.\n\n5. Picurați siropul, lăsați să se odihnească 8 ore înainte de a servi.",
+  "prepTimeMinutes": 45,
+  "cookTimeMinutes": 60,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "White Sugar",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 130,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon Sticks",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Walnuts",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pumpkin",
+      "quantity": 190,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Breadcrumbs",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cloves",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 160,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/pumpkin-baklava-recipe-8751495",
+  "cuisine": "Mediterranean",
+  "id": "pumpkin_baklava",
+  "imageUrl": "recipes/images/mediterranean/pumpkin_baklava.jpg"
+}

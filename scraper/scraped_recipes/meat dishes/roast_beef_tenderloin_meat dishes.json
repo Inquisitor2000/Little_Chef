@@ -1,0 +1,88 @@
+{
+  "name": "Roast Beef Tenderloin",
+  "instructions": "1. Place the dried mushrooms in a small bowl and cover with the warm water. Let soak for about 1 hour until the mushrooms are soft and rehydrated. 2. Once softened, drain the mushrooms through a fine-mesh sieve set over a bowl, reserving all the flavorful soaking liquid. Finely dice the rehydrated mushrooms and set both the mushrooms and liquid aside. 3. Preheat your oven to 325°F (165°C) and position the rack in the center. 4. Pat the beef tenderloin dry with paper towels and season it generously on all sides with salt and black pepper, pressing the seasonings into the meat. 5. Heat the vegetable oil in a large oven-safe skillet (cast iron works great) over high heat until it's very hot and shimmering. 6. Carefully place the seasoned beef in the hot skillet and sear for 2-3 minutes per side, turning to brown all sides evenly. You want a deep golden-brown crust. The meat should be rare inside at this point. Transfer the seared beef to a plate and set aside. 7. Reduce the heat under the skillet to medium. Add about half of the butter (7.5g) and the sliced shallots with a pinch of salt. Cook, stirring frequently, for 5-7 minutes until the shallots are soft, golden, and caramelized. 8. Pour in the red wine vinegar (note: use red wine vinegar as tarragon vinegar substitute), increase the heat to medium-high, and bring to a boil. Use a wooden spoon to scrape up all the browned bits stuck to the bottom of the skillet - these add incredible flavor. 9. Let the vinegar cook and bubble for 2-4 minutes until it's reduced by about half and has a syrupy consistency. 10. Add the beef broth (note: use beef broth as veal stock substitute), heavy cream, reserved mushroom soaking liquid, diced rehydrated mushrooms, and a good pinch of salt and pepper. Stir everything together and bring to a simmer. 11. Return the seared beef tenderloin to the skillet, nestling it into the sauce. Spoon some of the sauce over the top of the meat. 12. Transfer the skillet to the preheated oven and roast for about 45 minutes, or until an instant-read thermometer inserted into the thickest part of the beef reads 130°F (54°C) for medium-rare. Baste the beef with the pan sauce once or twice during roasting. 13. Carefully remove the skillet from the oven (remember, the handle will be extremely hot!). Transfer the beef to a cutting board or serving platter and tent loosely with aluminum foil. Let it rest for 10-15 minutes. 14. While the beef rests, place the skillet with all the pan juices over high heat on the stovetop. Bring the sauce to a vigorous boil. 15. Stir in the remaining butter (7.5g) and the fresh thyme (note: use fresh thyme as tarragon substitute), swirling the pan until the butter melts and enriches the sauce. Taste and adjust the seasoning with more salt and pepper if needed. The sauce should be rich, glossy, and flavorful. 16. Slice the rested beef against the grain into thick slices (about 1/2 to 3/4 inch). Arrange the slices on a serving platter. 17. Pour any accumulated juices from the cutting board back into the sauce, then spoon the hot mushroom sauce generously over the sliced beef. Serve immediately. Note: Use beef tenderloin roast.",
+  "simpleInstructions": "1. Soak dried mushrooms in warm water for 1 hour. 2. Drain mushrooms, reserve liquid, and dice mushrooms. 3. Preheat oven to 325°F. 4. Season beef with salt and pepper. 5. Heat oil in oven-safe skillet over high heat. 6. Sear beef 2-3 minutes per side until browned; transfer to plate. 7. Reduce heat to medium, add half the butter and shallots; cook 5-7 minutes. 8. Add vinegar, boil, and scrape up browned bits. 9. Cook 2-4 minutes until reduced by half. 10. Add broth, cream, mushroom liquid, mushrooms, salt, and pepper; simmer. 11. Return beef to skillet in sauce. 12. Roast 45 minutes until internal temperature reaches 130°F. 13. Transfer beef to platter and tent with foil; rest 10-15 minutes. 14. Boil pan juices over high heat. 15. Stir in remaining butter and thyme; adjust seasoning. 16. Slice beef against the grain. 17. Pour sauce over sliced beef and serve. Note: Use beef tenderloin roast.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 65,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "BEEF",
+  "ingredients": [
+    {
+      "name": "Beef Tenderloin",
+      "quantity": 830,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Button Mushroom",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 80,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Shallot",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Wine Vinegar",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Beef Broth",
+      "quantity": 80,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Heavy Cream",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Thyme",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/221962/roast-beef-tenderloin/",
+  "cuisine": "American",
+  "id": "roast_beef_tenderloin",
+  "imageUrl": "recipes/images/meat dishes/roast_beef_tenderloin.jpg"
+}

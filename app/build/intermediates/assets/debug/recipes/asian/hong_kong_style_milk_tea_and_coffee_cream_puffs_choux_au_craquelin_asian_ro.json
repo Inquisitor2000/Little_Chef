@@ -1,0 +1,172 @@
+{
+  "name": "Gogoși cu Cremă",
+  "instructions": "1. Pentru topping-ul craquelin, pulsați untul moale, zahărul brun și sarea într-un robot de bucătărie până devine cremos și bine combinat. Adăugați făina și pulsați doar până când amestecul se unește într-un aluat, având grijă să nu amestecați excesiv. Stropiți extractul de vanilie și pulsați încă o dată. Scoateți aluatul pe o foaie de hârtie de copt, puneți altă foaie deasupra și rulați-l la aproximativ 2mm grosime. Transferați în congelator pentru cel puțin 30 minute până se întărește, apoi folosiți o formă rotundă pentru a tăia cercuri ușor mai mari decât moviliţele de choux.\n\n2. Pentru crema de patiserie cu ceai cu lapte, aduceți laptele la o fierbere ușoară într-o cratiță. Scoateți de pe foc, adăugați frunzele de ceai negru sau plicul de ceai, acoperiți și lăsați să se infuzeze 5-7 minute pentru a infuza aroma. Strecurați frunzele de ceai. Într-un bol separat, amestecați zahărul, amidonul de porumb, sarea și gălbenușurile până devine neted și palid. Turnați încet laptele cald infuzat cu ceai în amestecul de gălbenușuri în timp ce amestecați constant pentru a tempera ouăle. Returnați amestecul în cratiță și gătiți la foc mediu, amestecând continuu, până se îngroașă într-o consistență asemănătoare budincii, aproximativ 3-5 minute. Scoateți de pe foc, amestecați untul până se topește și devine lucios, apoi transferați într-un bol, apăsați folie de plastic direct pe suprafață pentru a preveni formarea unei pielițe și puneți la frigider până se răcește complet.\n\n3. Pentru crema de patiserie cu cafea, aduceți laptele la fierbere și amestecați cafeaua instant până se dizolvă complet. Într-un bol, amestecați zahărul, amidonul de porumb, sarea și gălbenușurile până devine neted. Temperați gălbenușurile adăugând încet laptele fierbinte cu cafea în timp ce amestecați constant. Returnați în cratiță și gătiți la foc mediu, amestecând continuu, până devine gros și lucios, aproximativ 3-5 minute. Scoateți de pe foc, amestecați untul, transferați într-un bol, acoperiți cu folie de plastic atingând suprafața și răciți temeinic.\n\n4. Pentru aluatul choux, preîncălziți cuptorul la 190°C și căptușiți tăvile de copt cu hârtie de copt. Într-un bol mic, amestecați oul întreg și albușul până se combină—aceasta va fi spălarea cu ou. Într-o cratiță medie, combinați laptele, apa, untul, zahărul și sarea. Aduceți la o fierbere puternică la foc mediu-mare, asigurându-vă că untul este complet topit. Scoateți de pe foc și adăugați imediat toată făina deodată, amestecând vigoroas cu o lingură de lemn până se formează un aluat neted. Returnați la foc mediu și gătiți, amestecând constant, timp de 1-2 minute pentru a usca aluatul—veți vedea un film subțire formându-se pe fundul cratiței. Transferați aluatul într-un bol și lăsați să se răcească 2-3 minute. Bateți treptat amestecul de ou, puțin câte puțin, amestecând temeinic după fiecare adăugare până când aluatul este neted, lucios și cade de pe lingură într-o panglică groasă. Transferați într-o pungă de glazurat echipată cu un vârf rotund mare și puneți moviliţe pe tăvile pregătite, spațiindu-le bine.\n\n5. Așezați o rotundă de craquelin înghețată deasupra fiecărei moviliţe de choux—craquelin-ul va crea un vârf crăpat frumos. Coaceți timp de 25-30 minute până când gogoșile sunt aurii profund și se simt ușoare și goale. Nu deschideți ușa cuptorului în timpul coacerii sau se pot prăbuși. Odată coapte, găuriți imediat un orificiu mic în fundul fiecărei gogoși cu o frigăruie pentru a elibera aburul, ceea ce previne înmuierea. Lăsați-le să se răcească complet pe un grătar.\n\n6. Pentru a stabiliza frișca, înmuiați gelatina în apă rece timp de 5 minute, apoi încălziți ușor până se dizolvă. Bateți smântâna grasă cu zahărul pudră până se formează vârfuri moi, apoi stropiți gelatina dizolvată în timp ce continuați să bateți până se formează vârfuri ferme. Încorporați ușor jumătate din frișca stabilizată în fiecare dintre cremele de patiserie răcite până devine neted și aerat.\n\n7. Umpleți o pungă de glazurat cu fiecare amestec de cremă. Tăiați fiecare gogoașă răcită pe jumătate orizontal sau puneți crema prin orificiul de jos. Umpleți jumătate din gogoși cu cremă de ceai cu lapte și jumătate cu cremă de cafea. Pudrați cu zahăr pudră dacă doriți și serviți imediat pentru cea mai bună textură, sau puneți la frigider până la 2 ore.",
+  "simpleInstructions": "1. Amestecați ingredientele craquelin, rulați subțire, congelați și tăiați cercuri.\n\n2. Infuzați ceaiul în lapte, faceți crema cu gălbenușuri și amidon, apoi răciți.\n\n3. Faceți crema de cafea la fel, apoi răciți.\n\n4. Fierbeți amestecul de lapte, amestecați făina, gătiți să se usuce, bateți ouăle și puneți moviliţe.\n\n5. Puneți craquelin deasupra, coaceți până devine auriu, găuriți și răciți.\n\n6. Bateți frișca cu gelatină, încorporați în creme și umpleți gogoșile.",
+  "prepTimeMinutes": 60,
+  "cookTimeMinutes": 45,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Unsalted Butter",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Whole Milk",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Black Tea",
+      "quantity": 7.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Tea",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg Yolks",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Instant Coffee",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Whole Milk",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg Whites",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Whole Milk",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Heavy Cream",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Gelatin",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.themissinglokness.com/2022/01/21/hong-kong-style-milk-tea-and-coffee-cream-puffs-choux-au-craquelin/",
+  "cuisine": "Asian",
+  "id": "hong_kong_style_milk_tea_and_coffee_cream_puffs_choux_au_craquelin",
+  "imageUrl": "recipes/images/asian/hong_kong_style_milk_tea_and_coffee_cream_puffs_choux_au_craquelin.jpg"
+}

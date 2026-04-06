@@ -1,0 +1,81 @@
+{
+    "id": "pork_chops_italiano",
+    "name": "Cotlete de porc în stil italian",
+    "instructions": "1. Feliați ciupercile în bucăți uniforme. Încălziți o cantitate mică de ulei de măsline într-o tigaie mare la foc mediu. Adăugați ciupercile și gătiți, amestecând ocazional, până când eliberează umezeala și devin fragede și aurii, aproximativ 5-7 minute. Transferați pe o farfurie și puneți deoparte.\n\n2. Adăugați mai mult ulei de măsline în aceeași tigaie și creșteți focul la mediu-mare. Uscați cotletele de porc cu prosoape de hârtie pentru o rumenire mai bună. Așezați cotletele în tigaia fierbinte și prăjiți fără a le mișca timp de 3-5 minute pe fiecare parte până se formează o crustă aurie. Cotletele nu trebuie să fie complet gătite în această etapă. Transferați pe o farfurie.\n\n3. Reduceți focul la mediu. Tocați ceapa și tocați mărunt usturoiul. Adăugați-le în tigaie cu orice ulei rămas, răzuind bucățile rumene de pe fundul tigăii. Gătiți, amestecând frecvent, până când ceapa se înmoaie și devine translucidă, aproximativ 5 minute.\n\n4. Adăugați roșiile zdrobite, busuiocul uscat, oregano uscat, sarea și piperul negru. Amestecați bine pentru a combina toate aromele.\n\n5. Returnați cotletele de porc în tigaie, așezându-le în sosul de roșii. Puneți puțin sos peste vârfurile cotletelor. Reduceți focul la mic, acoperiți și lăsați să fiarbă ușor până când porcul este gătit complet și atinge o temperatură internă de 63 grade Celsius, aproximativ 45 de minute. Carnea ar trebui să fie fragedă și să fie ușor străpunsă cu o furculiță.\n\n6. Feliați ardeii grași în fâșii. Aranjați fâșiile de ardei peste fiecare cotlet de porc, apoi împrăștiați ciupercile rezervate în jur și deasupra. Acoperiți și continuați să fierbeți timp de 5-10 minute până când ardeii sunt fragezi dar au încă o ușoară rezistență.\n\n7. Serviți cotletele de porc fierbinți, lingurind sosul bogat de roșii și legumele deasupra.",
+    "simpleInstructions": "1. Sotați ciupercile până devin aurii și puneți deoparte.\n\n2. Prăjiți cotletele de porc până se rumenesc și puneți deoparte.\n\n3. Gătiți ceapa și usturoiul, apoi adăugați roșii și condimente.\n\n4. Fierbeți cotletele de porc în sos până sunt complet gătite.\n\n5. Adăugați ardei și ciuperci, gătiți până devin fragezi.\n\n6. Serviți cu sos lingurat deasupra.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 60,
+    "servings": 2,
+    "cuisine": "Italian",
+    "mealType": "DINNER",
+    "dishCategory": "PORK",
+    "imageUrl": "recipes/images/italian/pork_chops_italiano.webp",
+    "ingredients": [
+        {
+            "name": "Olive Oil",
+            "quantity": 20,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Button Mushroom",
+            "quantity": 70,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Pork Chop",
+            "quantity": 300,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Yellow Onion",
+            "quantity": 70,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Crushed Tomatoes",
+            "quantity": 240,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Dried Basil",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Dried Oregano",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 0.3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Bell Pepper",
+            "quantity": 300,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+# More recipes
+Maybe we need to add by cuisine / by ease of doing elements to sort the recepies.
+Add some quick and easy recipes.
+
+# UI is not great for the my own recipe section
+Redesign the Recipe screen fully. With the addition of the scraped recipes.
+
+# For Little Helper 
+(list sharing) maybe firebase maybe something else
+We will need to link the family and the users to a firebase pool.

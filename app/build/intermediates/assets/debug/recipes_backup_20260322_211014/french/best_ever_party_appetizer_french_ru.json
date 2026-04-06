@@ -1,0 +1,58 @@
+{
+  "name": "Пикантная закуска",
+  "instructions": "1. Нарежьте козий сыр на кусочки размером в один дюйм и выложите в один слой на большом подносе.\n\n2. Посыпьте сыр оливковым маслом, вялеными помидорами, черными оливками, свежим базиликом и свежим розмарином.\n\n3. С помощью зубочисток вставьте зубчики чеснока в сыр по всему составу, чтобы добавить аромат.\n\n4. Дайте смеси мариноваться в течение 6 часов или на ночь в холодильнике, чтобы все вкусы смешались.\n\n5. Удалите зубочистки и подавайте с нарезным багетом, чтобы насладиться вкусом сыра и маринада.",
+  "simpleInstructions": "1. Нарежьте козий сыр и выложите на поднос.\n\n2. Добавьте оливковое масло, вяленые помидоры, черные оливки, свежий базилик и свежий розмарин.\n\n3. Вставьте зубчики чеснока зубочистками.\n\n4. Маринуйте 6+ часов в холодильнике.\n\n5. Подавайте с нарезным багетом.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "APPETIZER",
+  "ingredients": [
+    {
+      "name": "Goat Cheese",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sun-Dried Tomatoes",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Black Olives",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Fresh Basil",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Rosemary",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/20509/best-ever-party-appetizer/",
+  "cuisine": "French",
+  "id": "best_ever_party_appetizer",
+  "imageUrl": "recipes/images/french/best_ever_party_appetizer.jpg"
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Omletă în Pungă",
+  "instructions": "1. Sparge ouăle în punga mare de congelator cu închidere etanșă. Apasă pentru a scoate majoritatea aerului și sigilează.  \n\n2. Agită sau apasă pentru a bate ouăle.  \n\n3. Deschide punga și adaugă șunca tăiată, brânza Cheddar rasă, roșia tăiată, ciupercile albe, ceapa tocată, ardeiul gras verde și salsa, dacă dorești.  \n\n4. Apasă pentru a scoate cât mai mult aer posibil și sigilează din nou punga.  \n\n5. Fierbe o oală mare cu apă. Pune punga (până la 8 pungi deodată) în apă clocotită și gătește timp de exact 13 minute.  \n\n6. Deschide punga și lasă omleta să se rostogolească pe o farfurie. Omleta ar trebui să iasă ușor.",
+  "simpleInstructions": "1. Bate ouăle într-o pungă.  \n\n2. Adaugă șunca, brânza Cheddar, roșia, ciupercile albe, ceapa, ardeiul gras verde și salsa, apoi sigilează punga fără aer.  \n\n3. Fierbe punga în apă timp de 13 minute.  \n\n4. Desigilează și lasă omleta să alunece pe o farfurie.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 13,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Eggs",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ham",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Tomato",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Button Mushroom",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Green Bell Pepper",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salsa",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/85107/omelet-in-a-bag/",
+  "cuisine": "French",
+  "id": "omelet_in_a_bag",
+  "imageUrl": "recipes/images/french/omelet_in_a_bag.jpg"
+}

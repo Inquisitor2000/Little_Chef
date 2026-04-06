@@ -1,0 +1,40 @@
+{
+  "name": "Tofu prăjit în tigaie",
+  "instructions": "1. Așezați blocul de tofu pe o farfurie mare și acoperiți cu o altă farfurie de dimensiune similară. Puneți o greutate grea deasupra (cum ar fi o conservă mare sau o oală grea). Presați tofu timp de 20-30 de minute pentru a extrage excesul de umiditate. Scurgeți și aruncați lichidul acumulat.\n\n2. Folosind un cuțit ascuțit, tăiați tofu presat în fâșii dreptunghiulare de aproximativ 5x10 cm și cu o grosime de aproximativ 0,6 cm pentru o gătire uniformă.\n\n3. Încălziți jumătate din uleiul vegetal într-o tigaie mare la foc mediu-mic până devine strălucitor. Așezați cu grijă fâșiile de tofu în uleiul fierbinte și gătiți fără a le mișca până când fundurile devin aurii și crocante, 2-3 minute. Întoarceți și gătiți cealaltă parte până devine la fel de aurie, încă 2-3 minute.\n\n4. Stivuiți fâșiile de tofu prăjite orizontal într-o farfurie puțin adâncă cu laturi înclinate, cum ar fi o farfurioară de ceașcă de ceai sau o farfurie mică de servire, permițându-le să se suprapună ușor.\n\n5. Încălziți uleiul vegetal rămas în aceeași tigaie la foc mediu. Adăugați ceapa verde felii și gătiți, amestecând constant, până devine aromată și începe să sfârâie, aproximativ 10-20 de secunde. Scoateți imediat de pe foc.\n\n6. În timp ce ceapa verde încă sfârâie fierbinte, puneți-o împreună cu uleiul fierbinte peste tofu stivuit. Stropiți generos cu sos de soia. Lăsați preparatul să stea timp de 3-5 minute pentru a permite tofu-ului să absoarbă aromele înainte de servire.",
+  "simpleInstructions": "1. Presați tofu 20-30 minute cu o greutate, apoi scurgeți excesul de lichid.\n\n2. Tăiați tofu în fâșii dreptunghiulare subțiri pentru prăjire uniformă.\n\n3. Prăjiți tofu în ulei până devine auriu și crocant, 2-3 minute pe parte.\n\n4. Stivuiți fâșiile crocante de tofu într-o farfurie de servire puțin adâncă.\n\n5. Prăjiți rapid ceapa verde în ulei fierbinte până devine aromată și sfârâie.\n\n6. Turnați ceapa sfârâitoare și uleiul peste tofu, stropiți cu sos de soia, lăsați să absoarbă aromele și savurați!",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 5,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "VEGETARIAN",
+  "ingredients": [
+    {
+      "name": "Tofu",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/246936/simple-pan-fried-tofu/",
+  "cuisine": "Asian",
+  "id": "simple_pan_fried_tofu",
+  "imageUrl": "recipes/images/asian/simple_pan_fried_tofu.jpg"
+}

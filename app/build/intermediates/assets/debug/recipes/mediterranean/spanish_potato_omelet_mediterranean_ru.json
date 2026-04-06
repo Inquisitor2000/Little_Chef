@@ -1,0 +1,64 @@
+{
+    "name": "Испанский Картофельный Омлет",
+    "instructions": "1. Разогрейте оливковое масло на среднем-сильном огне в большой сковороде. Добавьте тонко нарезанный картофель и слегка приправьте солью и перцем; готовьте, периодически помешивая, пока не станет золотистым и хрустящим, около 10-14 минут.\n\n2. Добавьте тонко нарезанный лук; готовьте и помешивайте, пока не станет мягким и не начнет подрумяниваться, около 6-8 минут.\n\n3. Взбейте яйца в миске; приправьте солью и перцем.\n\n4. Вылейте яйца в сковороду и аккуратно перемешайте, чтобы соединить с картофелем и луком.\n\n5. Уменьшите огонь до минимума и готовьте, пока яйца не начнут подрумяниваться снизу, около 4-5 минут.\n\n6. Отделите омлет лопаткой. Переверните большую тарелку над сковородой и осторожно переверните омлет на тарелку. Сдвиньте омлет неприготовленной стороной вниз обратно в сковороду. Готовьте, пока яйца не схватятся, около 4-5 минут.\n\n7. Подавайте теплым, украсив нарезанными помидорами и зеленым луком по желанию.",
+    "simpleInstructions": "1. Разогрейте оливковое масло, готовьте картофель до золотистого цвета.\n\n2. Добавьте и готовьте лук до мягкости.\n\n3. Взбейте яйца, приправьте и добавьте в сковороду.\n\n4. Готовьте на слабом огне до подрумянивания дна.\n\n5. Переверните омлет с помощью тарелки, приготовьте другую сторону.\n\n6. Подавайте с дополнительными украшениями.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 20,
+    "servings": 2,
+    "mealType": "BREAKFAST",
+    "dishCategory": "MAIN_COURSE",
+    "ingredients": [
+        {
+            "name": "Olive Oil",
+            "quantity": 120,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Potato",
+            "quantity": 230,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Onion",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Eggs",
+            "quantity": 2,
+            "unit": "pcs",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tomato",
+            "quantity": 150,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Scallion",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/20198/spanish-potato-omelet/",
+    "cuisine": "Mediterranean",
+    "id": "spanish_potato_omelet",
+    "imageUrl": "recipes/images/mediterranean/spanish_potato_omelet.jpg"
+}

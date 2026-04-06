@@ -1,0 +1,64 @@
+{
+  "name": "Desert Ușor de Dovleac",
+  "instructions": "1. Preîncălziți cuptorul la 175°C și poziționați grătarul în centru. Ungeți ușor o formă mică de copt de 20x20 cm sau 23x23 cm cu unt sau spray de gătit. 2. Într-un bol mediu, amestecați piureul de dovleac, laptele evaporat, zahărul, oul și scorțișoara (notă: folosiți scorțișoara ca substitut pentru condimentul de plăcintă de dovleac) până devine neted și bine combinat. 3. Turnați amestecul de dovleac în forma de copt pregătită, răspândindu-l uniform pentru a acoperi fundul. 4. Presărați făina universală (notă: folosiți ca substitut pentru amestecul de prăjitură) uniform peste stratul de dovleac. Încercați să acoperiți toată suprafața - nu amestecați sau incorporați, doar presărați deasupra. 5. Stropiți untul topit uniform peste stratul de făină într-un model înainte și înapoi pentru a acoperi cât mai multă suprafață posibil. 6. Presărați nucile tocate uniform deasupra ca ultimul strat. 7. Coaceți în cuptorul preîncălzit aproximativ 60 de minute, sau până când o scobitoare introdusă în centru iese curată și partea de sus este aurie. Marginile ar trebui să fie fixate și să se îndepărteze ușor de laturile formei. 8. Scoateți din cuptor și lăsați să se răcească la temperatura camerei cel puțin 30 de minute înainte de a tăia. Desertul poate fi servit cald sau complet răcit. Pentru cea mai bună textură, lăsați să se răcească complet, aproximativ 2 ore, înainte de a tăia în pătrate. 9. Tăiați în porții și serviți ca atare, sau adăugați frișcă sau înghețată de vanilie dacă doriți. Păstrați resturile acoperite în frigider până la 3 zile.",
+  "simpleInstructions": "1. Preîncălziți cuptorul la 175°C și ungeți o formă mică de copt. 2. Amestecați dovleacul, laptele evaporat, zahărul, oul și scorțișoara până devine neted. 3. Turnați în forma pregătită. 4. Presărați făina uniform peste stratul de dovleac. 5. Stropiți untul topit peste făină. 6. Presărați nucile deasupra. 7. Coaceți 60 minute până scobitoarea iese curată. 8. Răciți cel puțin 30 minute înainte de a tăia. 9. Serviți cald sau rece, opțional cu frișcă.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 60,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "BAKED_DISH",
+  "ingredients": [
+    {
+      "name": "Canned Pumpkin",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Evaporated Milk",
+      "quantity": 100,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 125,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Walnuts",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/8404/great-pumpkin-dessert/",
+  "cuisine": "American",
+  "id": "great_pumpkin_dessert",
+  "imageUrl": "recipes/images/desserts & sweets/great_pumpkin_dessert.jpg"
+}

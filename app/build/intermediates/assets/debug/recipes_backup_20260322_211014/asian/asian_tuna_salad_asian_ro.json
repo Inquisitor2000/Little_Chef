@@ -1,0 +1,100 @@
+{
+  "name": "Salată Asiatică cu Ton",
+  "instructions": "1. Într-un bol mare de amestecare, combinați tonul scurs, merișoarele uscate, morcovul ras sau tăiat cubulețe fin, ceapa verde tăiată subțire, coriandrul proaspăt tocat, semințele de susan, pudra de ghimbir, ardeiul chili măcinat și sarea kosher. Amestecați delicat pentru a distribui uniform toate ingredientele în amestec.\n\n2. Într-un bol mic separat, amestecați bine maioneză, pasta de chili, uleiul de susan, sosul de soia și mierea până devin netede și bine combinate. Turnați dressingul peste amestecul de ton și amestecați complet pentru a acoperi toate ingredientele. Serviți imediat sau refrigerați până sunteți gata să savurați.",
+  "simpleInstructions": "1. Amestecați tonul cu merișoare, morcov, ceapă verde, coriandru, susan, ghimbir, chili și sare.\n\n2. Bateți maioneză, pastă de chili, ulei de susan, soia și miere, apoi încorporați în amestecul de ton și savurați!",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "SALAD",
+  "ingredients": [
+    {
+      "name": "Canned Tuna",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Dried Cranberries",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrot",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Cilantro",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger Powder",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Kosher Salt",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Sriracha",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Honey",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/237687/asian-tuna-salad/",
+  "cuisine": "Asian",
+  "id": "asian_tuna_salad",
+  "imageUrl": "recipes/images/asian/asian_tuna_salad.jpg"
+}

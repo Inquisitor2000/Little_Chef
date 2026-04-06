@@ -1,0 +1,52 @@
+{
+  "name": "Sorbet de Ciocolată cu Banană și Scorțișoară",
+  "instructions": "1. Curățați bananele foarte coapte și tăiați-le în felii de 2-3 cm. Aranjați feliile de banană într-un singur strat pe o tavă căptușită cu hârtie de copt, asigurându-vă că nu se ating între ele. 2. Congelați feliile de banană cel puțin 4 ore sau peste noapte până sunt complet solide. Acest pas este crucial pentru obținerea texturii corecte a sorbetului. 3. Odată congelate solid, scoateți feliile de banană din congelator și lăsați-le la temperatura camerei 2-3 minute pentru a se înmuia ușor - acest lucru face mixarea mult mai ușoară și previne solicitarea excesivă a blenderului. 4. Adăugați feliile de banană congelate, laptele de migdale, cacaoa, extractul de vanilie, scorțișoara și sarea într-un blender de mare viteză sau robot de bucătărie. 5. Mixați la viteză mare, oprindu-vă frecvent pentru a curăța laturile și a desface orice bucăți cu o spatulă. Continuați să mixați 2-3 minute până când amestecul devine complet neted și are o consistență de înghețată soft. Este posibil să fie nevoie să folosiți instrumentul tamper dacă folosiți un blender de mare viteză, sau să adăugați puțin mai mult lapte de migdale dacă amestecul este prea gros. 6. În acest moment, puteți servi imediat pentru o textură de înghețată soft, sau transferați într-un recipient rezistent la congelator, acoperiți și congelați 1-2 ore pentru o consistență mai fermă de sorbet. 7. Dacă este congelat solid, lăsați sorbetul la temperatura camerei 5-10 minute înainte de a-l servi pentru a se înmuia ușor. Serviți în boluri răcite și savurați această delicioasă prăjitură congelată, sănătoasă și fără lactate.",
+  "simpleInstructions": "1. Tăiați bananele în felii și congelați cel puțin 4 ore până sunt solide. 2. Lăsați bananele congelate să se înmoaie 2-3 minute la temperatura camerei. 3. Mixați bananele congelate cu lapte de migdale, cacao, vanilie, scorțișoară și sare până devine neted. 4. Serviți imediat pentru textură soft, sau congelați 1-2 ore pentru sorbet mai ferm. 5. Dacă este congelat solid, lăsați 5-10 minute înainte de servire.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Banana",
+      "quantity": 360,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Almond Milk",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cocoa Powder",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 3.75,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/274174/banana-cinnamon-chocolate-sorbet/",
+  "cuisine": "American",
+  "id": "banana_cinnamon_chocolate_sorbet",
+  "imageUrl": "recipes/images/desserts & sweets/banana_cinnamon_chocolate_sorbet.jpg"
+}

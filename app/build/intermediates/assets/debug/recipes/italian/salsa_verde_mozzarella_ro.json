@@ -1,0 +1,93 @@
+{
+    "id": "salsa_verde_mozzarella",
+    "name": "Mozzarella cu sos verde",
+    "instructions": "1. Adăugați caperele, anșoile, căței de usturoi, ceapa verde, frunzele de pătrunjel proaspăt și frunzele de mentă proaspătă într-un robot de bucătărie. Mixați în impulsuri scurte până când toate ingredientele sunt tocate foarte fin și bine combinate, răzuind părțile după necesitate. Amestecul ar trebui să aibă o consistență grosieră și texturată mai degrabă decât un piure neted.\n\n2. Transferați amestecul de ierburi într-un bol mediu de servire.\n\n3. Folosind un răzător fin sau microplane, radeți coaja de lămâie direct peste bol pentru a captura uleiurile aromatice. Tăiați lămâia în jumătate și stoarceți sucul în amestec, îndepărtând semințele. Adăugați uleiul de măsline, fulgi de ardei roșu, bucăți de mozzarella rupte și roșii cherry tăiate în jumătate. Amestecați ușor pentru a combina toate ingredientele.\n\n4. Gustați și condimentați cu sare și piper negru după necesitate. Caperele și anșoile adaugă salinitate, așa că ajustați cu grijă.\n\n5. Acoperiți bolul cu folie de plastic și răciți în frigider cel puțin 2 ore pentru a permite aromelor să se îmbine și să se dezvolte. Cu cât marinează mai mult, cu atât devine mai aromat. Serviți rece sau la temperatura camerei cu pâine crocantă.",
+    "simpleInstructions": "1. Mixați ierburile, caperele și anșoile în robotul de bucătărie până sunt tocate fin.\n\n2. Transferați în bol și adăugați coaja de lămâie, sucul, uleiul, fulgi de ardei, mozzarella și roșii.\n\n3. Condimentați cu sare și piper, apoi marinați cel puțin 2 ore înainte de servire.",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 0,
+    "servings": 2,
+    "cuisine": "Italian",
+    "mealType": "LUNCH",
+    "dishCategory": "APPETIZER",
+    "imageUrl": "recipes/images/italian/salsa_verde_mozzarella.webp",
+    "ingredients": [
+        {
+            "name": "Capers",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Anchovies",
+            "quantity": 4,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Scallion",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Fresh Parsley",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Fresh Mint",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 60,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Lemon",
+            "quantity": 50,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Red Pepper Flakes",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 90,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Cherry Tomatoes",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salt",
+            "quantity": 0.3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 0.3,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ]
+}

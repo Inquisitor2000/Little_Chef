@@ -1,0 +1,76 @@
+{
+  "name": "Gogoși Mochi Ușoare",
+  "instructions": "1. În un bol mare de amestecare, combinați toate ingredientele uscate: făina universală, amidonul de tapioca (care dă textura caracteristică elastică, asemănătoare mochi), zahărul, sarea și praful de copt. Amestecați bine cu un tel pentru a distribui uniform și a îndepărta orice cocoloașe.\n\n2. Faceți o groapă în centrul amestecului uscat și adăugați oul bătut. Începeți să amestecați cu o furculiță sau spatulă, apoi adăugați treptat apa, câte puțin odată, amestecând după fiecare adăugare. Continuați să adăugați apă până când amestecul se unește într-un aluat moale, ușor lipicios care se ține împreună dar nu este prea umed—ar trebui să fie asemănător cu un aluat gros de biscuiți. Poate aveți nevoie de puțin mai mult sau mai puțin apă în funcție de umiditate.\n\n3. Împărțiți aluatul în 16 porții egale. Rulați fiecare porție între palmele dvs. într-o bilă netedă. Pentru a forma inelele de gogoși, aranjați 8 bile într-un cerc pe o foaie de hârtie de copt, asigurându-vă că se ating ușor una de alta—aceasta creează forma caracteristică de gogoși mochi cu 8 bule. Repetați pentru a face al doilea inel de gogoși. Lăsați-le să se odihnească timp de 5 minute.\n\n4. Într-o oală adâncă sau friteuză, încălziți uleiul vegetal la 170-175°C—testați lăsând cădea o bucățică mică de aluat; ar trebui să sfârâie și să plutească la suprafață. Folosind o spatulă largă sau o paletă, transferați cu grijă un inel de gogoși în uleiul fierbinte. Prăjiți la foc mediu timp de 2-3 minute pe fiecare parte, întoarcând o dată, până când gogoșile sunt aurii uniform și plutesc ușor. Scoateți pe prosoape de hârtie pentru a scurge excesul de ulei. Repetați cu al doilea inel.\n\n5. Pentru glazură, topiți ciocolata albă într-un bol rezistent la căldură peste o oală cu apă care fierbe ușor, amestecând până devine netedă. Scoateți de pe foc și amestecați smântâna până se combină bine și devine lucios. Pentru aromă, amestecați fie pudră de matcha pentru un gust pământos, verde, fie piure de căpșuni pentru dulceață fructată. În timp ce gogoșile sunt încă ușor calde, scufundați vârful fiecărei gogoși în glazură, lăsând excesul să se scurgă. Așezați pe un grătar pentru a se întări, aproximativ 10-15 minute. Serviți proaspete pentru cea mai bună textură elastică.",
+  "simpleInstructions": "1. Amestecați făina, amidonul de tapioca, zahărul, sarea și praful de copt.\n\n2. Adăugați oul bătut și apa treptat până formează un aluat moale.\n\n3. Rulați aluatul în 16 bile, aranjați 8 bile în cerc pentru fiecare gogoașă.\n\n4. Prăjiți în ulei fierbinte la 170°C până devin aurii pe ambele părți.\n\n5. Topiți ciocolata albă cu smântână, adăugați aromă, scufundați gogoșile și lăsați să se întărească.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 15,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Chocolate",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cream",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.spatuladesserts.com/mochi-donuts/",
+  "cuisine": "Asian",
+  "id": "mochi_donuts",
+  "imageUrl": "recipes/images/asian/mochi_donuts.jpg"
+}

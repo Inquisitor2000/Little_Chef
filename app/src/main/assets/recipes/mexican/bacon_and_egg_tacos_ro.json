@@ -1,0 +1,64 @@
+{
+    "name": "Taco cu bacon și ouă",
+    "instructions": "1. Așezați fâșiile de bacon într-o tigaie rece și puneți la foc mediu. Gătiți baconul, întoarcându-l ocazional, până devine crocant și auriu, aproximativ 5 minute în total. Baconul își va elibera grăsimea pe măsură ce se gătește. Transferați baconul gătit pe o farfurie căptușită cu prosoape de hârtie pentru a scurge excesul de grăsime. Odată răcit ușor, sfărâmați baconul în bucăți de mărimea unei mușcături și puneți deoparte. Într-un bol mediu, spargeți ouăle și bateți-le împreună până când gălbenușurile și albușurile sunt complet combinate. Amestecați baconul sfărâmat în ouăle bătute.\n\n2. Topiți untul într-o tigaie curată la foc mediu, rotind pentru a acoperi fundul uniform. Turnați amestecul de ouă și bacon. Lăsați să stea nemișcat aproximativ 30 de secunde pentru a începe să se întărească, apoi amestecați ușor cu o spatulă, împingând ouăle de la margini spre centru. Gătiți până când ouăle sunt tocmai întărite dar încă ușor cremoase, aproximativ 2-3 minute în total. Nu supragătiți sau ouăle vor deveni cauciucoase. Scoateți de pe foc și adăugați imediat brânza americană, permițându-i să se topească în ouăle fierbinți. Condimentați cu sare și piper negru proaspăt măcinat după gust.\n\n3. Înfășurați tortilla în prosoape de hârtie umede pentru a le împiedica să se usuce. Încălziți la microunde la putere mare timp de 30 de secunde până la 1 minut până sunt calde și maleabile. Acest lucru le face mai ușor de pliat fără a se crăpa.\n\n4. Puneți aproximativ un sfert de cană din amestecul de ouă în centrul fiecărei tortilla încălzite. Împăturiți marginea de jos peste umplutură, apoi împăturiți laturile pentru a crea o formă de taco. Serviți imediat cât sunt fierbinți, însoțite de salsa preferată pentru topping sau pentru înmuiat.",
+    "simpleInstructions": "1. Gătiți baconul până devine crocant, scurgeți, sfărâmați și amestecați cu ouăle bătute.\n\n2. Amestecați amestecul de ouă în unt topit, apoi adăugați brânza și condimentați.\n\n3. Înfășurați tortilla în prosoape de hârtie umede și încălziți la microunde.\n\n4. Umpleți fiecare tortilla cu amestecul de ouă, împăturiți și serviți cu salsa.",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 3,
+    "servings": 2,
+    "mealType": "BREAKFAST",
+    "dishCategory": "MAIN_COURSE",
+    "ingredients": [
+        {
+            "name": "Eggs",
+            "quantity": 2,
+            "unit": "pcs",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Bacon",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Butter",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "American Cheese",
+            "quantity": 30,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tortillas",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salsa",
+            "quantity": 50,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/245713/bacon-and-egg-tacos/",
+    "cuisine": "Mexican",
+    "id": "bacon_and_egg_tacos",
+    "imageUrl": "recipes/images/mexican/bacon_and_egg_tacos.webp"
+}

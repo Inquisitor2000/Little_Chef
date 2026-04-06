@@ -1,0 +1,46 @@
+{
+    "name":  "Supă Miso",
+    "instructions":  "1. Combinați apa și granulele dashi într-o cratiță medie la foc mediu-puternic; aduceți la fierbere.  \n\n2. Reduceți focul la mediu și amestecați cu telul pasta miso.  \n\n3. Amestecați tofu-ul tăiat cubulețe.  \n\n4. Separați straturile cepei verzi, tăiate în diagonală în bucăți de 1,25 cm, și adăugați în supă.  \n\n5. Lăsați să fiarbă ușor timp de 2-3 minute înainte de a servi.",
+    "simpleInstructions":  "1. Fierbeți apa și dashi.  \n\n2. Amestecați cu telul pasta miso.  \n\n3. Adăugați tofu tăiat cubulețe.  \n\n4. Adăugați ceapa verde și lăsați la foc mic.",
+    "prepTimeMinutes":  5,
+    "cookTimeMinutes":  10,
+    "servings":  2,
+    "mealType":  "DINNER",
+    "dishCategory":  "SOUP",
+    "ingredients":  [
+                        {
+                            "name":  "Water",
+                            "quantity":  480,
+                            "unit":  "ml",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Dashi Granules",
+                            "quantity":  3,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Miso Paste",
+                            "quantity":  11.25,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Silken Tofu",
+                            "quantity":  110,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Scallion",
+                            "quantity":  10,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/13107/miso-soup/",
+    "cuisine":  "Soups \u0026 Stews",
+    "id":  "miso_soup",
+    "imageUrl":  "recipes/images/soups \u0026 stews/miso_soup.jpg"
+}

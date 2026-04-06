@@ -1,0 +1,52 @@
+{
+    "name": "Камаронес а ла Диабла",
+    "instructions": "1. Растопите масло на большой сковороде на среднем огне, пока оно не начнет пениться.\n\n2. Добавьте очищенные креветки без жилок в растопленное масло. Готовьте, периодически помешивая, пока они не начнут розоветь и слегка сворачиваться, около 2-3 минут. Приправьте солью и черным перцем по вкусу.\n\n3. Влейте кетчуп и острый соус, помешивая, чтобы равномерно покрыть креветки соусом. Отрегулируйте количество острого соуса в зависимости от предпочитаемого уровня остроты.\n\n4. Продолжайте готовить, часто помешивая, пока креветки не станут ярко-розовыми, непрозрачными внутри и полностью приготовленными, а соус не начнет пузыриться и слегка загустеет, 7-10 минут. Будьте осторожны, не переварите креветки, иначе они станут резиновыми. Подавайте немедленно с рисом или тортильями.",
+    "simpleInstructions": "1. Растопите масло на сковороде на среднем огне.\n\n2. Готовьте креветки, пока они не начнут розоветь, затем приправьте солью и черным перцем.\n\n3. Добавьте кетчуп и острый соус, перемешивая.\n\n4. Готовьте, пока креветки не станут ярко-розовыми, а соус не начнет пузыриться.",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 10,
+    "servings": 2,
+    "mealType": "DINNER",
+    "dishCategory": "SEAFOOD",
+    "ingredients": [
+        {
+            "name": "Butter",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Shrimp",
+            "quantity": 230,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Salt",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Ketchup",
+            "quantity": 120,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Hot Sauce",
+            "quantity": 120,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/232869/camarones-a-la-diabla/",
+    "cuisine": "Mexican",
+    "id": "camarones_a_la_diabla",
+    "imageUrl": "recipes/images/mexican/camarones_a_la_diabla.webp"
+}

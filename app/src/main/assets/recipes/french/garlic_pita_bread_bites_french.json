@@ -1,0 +1,46 @@
+{
+  "name": "Garlic Pita Bread Bites",
+  "instructions": "1. Preheat the oven to 350 degrees F (175 degrees C). 2. Open the pita bread halves and roughly cut them into small pieces. Arrange the pita pieces on a medium baking sheet. 3. In a small saucepan over medium heat, melt the butter and mix in the garlic and the Italian seasoning. 4. Pour the garlic butter mixture over the pita bread pieces. 5. Sprinkle the bread with the Parmesan cheese, adjusting the amount as desired. 6. Bake in the preheated oven for 10 minutes, or until lightly browned.",
+  "simpleInstructions": "1. Preheat the oven to 350 degrees Fahrenheit. 2. Cut and arrange the pita pieces on a baking sheet. 3. Melt the butter and mix it with the garlic and Italian seasoning. 4. Pour the garlic butter over the pita pieces. 5. Sprinkle with Parmesan cheese. 6. Bake for 10 minutes until browned.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 10,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "APPETIZER",
+  "ingredients": [
+    {
+      "name": "Pita Bread",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Italian Seasoning",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Parmesan",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/21079/garlic-pita-bread-bites/",
+  "cuisine": "French",
+  "id": "garlic_pita_bread_bites",
+  "imageUrl": "recipes/images/french/garlic_pita_bread_bites.jpg"
+}

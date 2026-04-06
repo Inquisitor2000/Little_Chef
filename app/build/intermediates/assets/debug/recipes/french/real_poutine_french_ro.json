@@ -1,0 +1,40 @@
+{
+  "name": "Poutine Autentică",
+  "instructions": "1. Încălziți uleiul vegetal într-un fryer adânc sau într-o tigaie grea, astfel încât să ajungă la 185 de grade Celsius.  \n\n2. În timp ce uleiul se încălzește, începeți să încălziți bulionul de vită. Încercați cartofii în uleiul fierbinte și gătiți-i până devin aurii deschiși, aproximativ 8 până la 10 minute. Gătiți cartofii în loturi dacă este necesar.  \n\n3. Scoateți cartofii prăjiți pe o farfurie tapetată cu prosoape de hârtie pentru a se scurge.  \n\n4. Așezați cartofii prăjiți pe un platou și presărați mozzarella peste ei.  \n\n5. Turnați bulionul de vită cald peste cartofii prăjiți și mozzarella și serviți imediat.",
+  "simpleInstructions": "1. Încălziți uleiul vegetal și bulionul de vită.  \n\n2. Prăjiți cartofii până devin aurii deschiși, apoi scurgeți-i.  \n\n3. Așezați cartofii pe un platou, adăugați mozzarella și turnați bulionul de vită deasupra. Serviți imediat.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "SIDE_DISH",
+  "ingredients": [
+    {
+      "name": "Vegetable Oil",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Beef Broth",
+      "quantity": 150,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Potato",
+      "quantity": 250,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mozzarella",
+      "quantity": 240,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/79300/real-poutine/",
+  "cuisine": "French",
+  "id": "real_poutine",
+  "imageUrl": "recipes/images/french/real_poutine.jpg"
+}

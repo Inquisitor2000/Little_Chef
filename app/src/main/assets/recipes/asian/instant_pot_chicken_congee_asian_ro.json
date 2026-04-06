@@ -1,0 +1,82 @@
+{
+  "name": "Congee cu Pui",
+  "instructions": "1. Puneți orezul într-o sită cu ochiuri fine și clătiți sub apă rece curgătoare, amestecându-l cu mâna, până când apa devine complet limpede—aceasta îndepărtează amidonul în exces și previne ca congee-ul să devină prea lipicios. Scurgeți bine și lăsați deoparte.\n\n2. Porniți oala sub presiune multifuncțională (cum ar fi Instant Pot) și selectați funcția Saute, ajustând la căldură mediu-mare. Odată ce afișajul arată \"Hot\", adăugați uleiul de măsline și rotiți pentru a acoperi fundul. Uscați pieptul de pui cu prosoape de hârtie, apoi așezați-l cu grijă în uleiul fierbinte. Rumeniți puiul temeinic pe toate părțile timp de aproximativ 8 minute în total, asigurându-vă că fiecare parte dezvoltă o crustă aurie înainte de a întoarce—aceasta adaugă aromă profundă congee-ului. Puiul nu trebuie să fie gătit complet, doar rumenit.\n\n3. Adăugați câteva linguri din supa de pui în Instant Pot și folosiți o spatulă de lemn pentru a răzui toate bucățile rumene aromate (fond) lipite de fund—aceasta previne avertismentul de ardere și adaugă bogăție. Opriți funcția Saute apăsând Cancel.\n\n4. Adăugați orezul scurs, ghimbirul proaspăt ras și restul supei de pui în oală, amestecând ușor pentru a distribui totul uniform.\n\n5. Folosind un cuțit ascuțit, tăiați cu grijă boabele de porumb de pe știulete în lovituri lungi în jos. Spargeți știuletele goale în 3 bucăți—știuletele vor infuza congee-ul cu aromă dulce de porumb. Adăugați atât boabele cât și bucățile de știulete în oală.\n\n6. Închideți capacul și rotiți valva la poziția Sealing. Selectați funcția Porridge (sau Manual/Pressure Cook pe high timp de 30 minute dacă modelul dvs. nu are Porridge). Oala va dura 10-15 minute pentru a ajunge la presiune înainte ca timpul de gătit să înceapă—veți vedea valva plutitoare ridicându-se când este presurizată.\n\n7. Când ciclul de gătit se termină, permiteți presiunii să se elibereze natural timp de aproximativ 15 minute—afișajul va număra în sus de la 0. După 15 minute, rotiți cu grijă valva la Venting pentru a elibera orice presiune rămasă. Odată ce valva plutitoare coboară, este sigur să deschideți. Scoateți și aruncați bucățile de știulete de porumb.\n\n8. Scoateți cu grijă pieptul de pui din oală folosind cleștele—va fi foarte fraged. Așezați-l pe o planșă de tăiat și folosiți două furculițe pentru a-l fărâmița în bucăți de mărimea unei mușcături, trăgând furculițele în direcții opuse. Returnați puiul fărâmițat în congee și amestecați pentru a încorpora. Gustați și condimentați cu sare și piper negru proaspăt măcinat, ajustând după preferință. Congee-ul ar trebui să fie cremos și asemănător terciurilor.\n\n9. Turnați congee-ul fierbinte în boluri de servire. Decorați fiecare bol generos cu ceapă verde feliată subțire pentru prospețime, o presărare de semințe de susan prăjite pentru gust de nucă și o stropire de sos picant de chili crocant pentru căldură și crocant. Serviți imediat cât este fierbinte.",
+  "simpleInstructions": "1. Clătiți orezul până apa devine limpede, apoi scurgeți.\n\n2. Rumeniți puiul pe toate părțile în Instant Pot folosind modul Saute.\n\n3. Deglazați cu supă, răzuind bucățile rumene.\n\n4. Adăugați orez, ghimbir, restul supei, boabe de porumb și bucăți de știulete.\n\n5. Sigilați capacul, gătiți pe setarea Porridge, apoi eliberați presiunea natural.\n\n6. Fărâmițați puiul, returnați în oală și condimentați cu sare și piper.\n\n7. Serviți fierbinte, decorat cu ceapă verde, semințe de susan și chili crocant.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 50,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "White Rice",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Breast",
+      "quantity": 140,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ginger",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Corn",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sriracha",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/275273/instant-pot-chicken-congee/",
+  "cuisine": "Asian",
+  "id": "instant_pot_chicken_congee",
+  "imageUrl": "recipes/images/asian/instant_pot_chicken_congee.jpg"
+}

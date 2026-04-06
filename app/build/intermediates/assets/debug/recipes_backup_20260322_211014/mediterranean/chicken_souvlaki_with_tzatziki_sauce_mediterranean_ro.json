@@ -1,0 +1,70 @@
+{
+  "name": "Souvlaki de Pui cu Sos Tzatziki",
+  "instructions": "1. Preparați frigăruile combinând uleiul de măsline, usturoiul, sucul de lămâie, oregano și sarea într-o pungă resigilabilă. Adăugați puiul, acoperiți cu marinada, scoateți aerul și sigilați. Marinați în frigider timp de 2 ore.\n\n2. Pentru sos, amestecați iaurtul, castravetele, uleiul de măsline, oțetul, usturoiul și sarea într-un bol. Refrigerați timp de 1-2 ore.\n\n3. Înmuiați frigăruile în apă rece timp de 15 minute. Preîncălziți grătarul la foc mediu-mare și ungeți ușor grătarul.\n\n4. Înșirați puiul pe frigăruile înmuiate și aruncați marinada.\n\n5. Grătați frigăruile, întorcându-le frecvent, timp de 7-8 minute pe fiecare parte până când puiul este gătit.\n\n6. Serviți cu sos tzatziki.",
+  "simpleInstructions": "1. Marinați puiul în ulei de măsline, usturoi, suc de lămâie, oregano și sare.\n\n2. Amestecați iaurtul, castravetele, uleiul de măsline, oțetul, usturoiul și sarea. Refrigerați.\n\n3. Înmuiați frigăruile. Preîncălziți grătarul.\n\n4. Înșirați puiul pe frigărui. Grătați până este gătit.\n\n5. Serviți cu sos.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 15,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "CHICKEN",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 4,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Breast",
+      "quantity": 240,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Greek Yogurt",
+      "quantity": 90,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cucumber",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Vinegar",
+      "quantity": 2,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/231644/chicken-souvlaki-with-tzatziki-sauce/",
+  "cuisine": "Mediterranean",
+  "id": "chicken_souvlaki_with_tzatziki_sauce",
+  "imageUrl": "recipes/images/mediterranean/chicken_souvlaki_with_tzatziki_sauce.jpg"
+}

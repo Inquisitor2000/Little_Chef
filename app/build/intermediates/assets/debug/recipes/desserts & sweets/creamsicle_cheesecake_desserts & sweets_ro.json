@@ -1,0 +1,70 @@
+{
+  "name": "Cheesecake Creamsicle",
+  "instructions": "1. Preîncălziți cuptorul la 175°C și poziționați grătarul în centru. Pregătiți o crustă de pesmet graham într-o formă detașabilă de 23 cm sau o formă de plăcintă și puneți deoparte. \n\n2. Într-un bol mare de amestecat, bateți brânza cremă și zahărul împreună folosind un mixer electric la viteză medie timp de 3-4 minute, până când amestecul devine ușor, pufos și complet neted, fără cocoloașe. Curățați laturile bolului după cum este necesar. \n\n3. Adăugați ouăle câte unul, batând bine după fiecare adăugare timp de aproximativ 30 de secunde până sunt complet încorporate înainte de a adăuga următorul ou. Curățați bolul între adăugări. \n\n4. Bateți smântâna și extractul de vanilie până când aluatul este complet neted și bine combinat. \n\n5. Transferați aproximativ o treime din amestecul de brânză cremă într-un bol mic. Amestecați extractul de portocale (notă: folosiți extract de vanilie ca substitut), colorantul alimentar galben și colorantul alimentar roșu, amestecând până când aluatul este neted și are o culoare portocalie vibrantă. Ajustați colorantul alimentar după cum este necesar pentru a obține nuanța dorită. \n\n6. Turnați aluatul necolorat (alb) în crusta de pesmet graham pregătită, răspândindu-l uniform până la margini. \n\n7. Puneți linguri din aluatul portocaliu aleatoriu peste aluatul alb. Folosind un cuțit de unt sau o scobitoare, faceți vârtejuri delicate prin ambele aluaturi într-o mișcare în formă de 8 sau circulară pentru a crea un efect marmurat frumos. Nu faceți prea multe vârtejuri sau culorile se vor amesteca. \n\n8. Coaceți în cuptorul preîncălzit timp de 30-35 de minute, până când marginile sunt fixate și ferme, dar centrul încă are o ușoară mișcare când este scuturat delicat. Cheesecake-ul va continua să se fixeze pe măsură ce se răcește. \n\n9. Scoateți din cuptor și lăsați să se răcească la temperatura camerei timp de 1 oră. Apoi acoperiți cheesecake-ul cu folie de plastic și refrigerați cel puțin 8 ore sau peste noapte până este complet răcit și fixat. \n\n10. Înainte de servire, treceți un cuțit pe margine dacă folosiți o formă detașabilă, apoi eliberați și îndepărtați laturile. Tăiați și serviți rece.",
+  "simpleInstructions": "1. Preîncălziți cuptorul la 175°C și pregătiți crusta de pesmet graham. \n\n2. Bateți brânza cremă și zahărul până devine pufos. \n\n3. Adăugați ouăle câte unul, batând bine. \n\n4. Amestecați smântâna și vanilia. \n\n5. Transferați 1 ceașcă de amestec într-un bol mic și colorați portocaliu cu extracte și colorant alimentar. \n\n6. Turnați aluatul alb în crustă. \n\n7. Puneți aluat portocaliu deasupra și faceți vârtejuri cu cuțitul pentru marmurare. \n\n8. Coaceți 30-35 minute până marginile se fixează. \n\n9. Răciți 1 oră, apoi refrigerați 8 ore sau peste noapte. \n\n10. Tăiați și serviți rece.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 30,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Cream Cheese",
+      "quantity": 160,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Food Coloring",
+      "quantity": 1,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Food Coloring",
+      "quantity": 0.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Breadcrumbs",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/237147/creamsicle-cheesecake/",
+  "cuisine": "American",
+  "id": "creamsicle_cheesecake",
+  "imageUrl": "recipes/images/desserts & sweets/creamsicle_cheesecake.jpg"
+}

@@ -1,0 +1,130 @@
+{
+    "name": "Cel Mai Bun Chili Vegetarian din Lume",
+    "instructions": "1. Încălziți uleiul de măsline într-o oală mare cu fund gros sau oală olandeză la foc mediu până devine strălucitor. \n\n2. Adăugați ceapa tăiată cuburi și condimentați imediat cu oregano uscat, sare, chimion măcinat și frunze de dafin. Amestecați bine pentru a acoperi ceapa cu condimentele. Gătiți, amestecând frecvent, timp de aproximativ 3-5 minute până când ceapa devine moale, translucidă și parfumată. Condimentele vor deveni aromate. \n\n3. Adăugați țelina tăiată cuburi, ardeii grași, jalapeños și usturoiul tocat în oală. Amestecați totul și continuați să gătiți încă 5-7 minute, amestecând ocazional, până când toate legumele sunt înmuiate și usturoiul este parfumat. Nu lăsați usturoiul să se brunească. \n\n4. Amestecați ardeii verzi și gătiți încă 2-3 minute până sunt încălziți și bine încorporați cu celelalte legume. \n\n5. Adăugați tofu (notă: folosiți tofu ca înlocuitor pentru fărimiturile de burger vegetarian), sfărâmându-l cu o lingură de lemn în fărimituri. Reduceți focul la mic, acoperiți oala cu un capac și lăsați să fiarbă ușor timp de aproximativ 5 minute pentru a permite tofu să absoarbă aromele. \n\n6. Amestecați roșiile conservate zdrobite, pudra de chili și piperul negru. Amestecați totul temeinic, asigurându-vă că pudra de chili este distribuită uniform în toată amestecul. \n\n7. Adăugați toate cele trei tipuri de fasole: fasole roșie, năut (fasole garbanzo) și fasole neagră. Amestecați bine pentru a combina totul. Chili ar trebui să fie gros și consistent. \n\n8. Aduceți amestecul la fierbere la foc mediu-mare, apoi reduceți imediat focul la mic. Acoperiți și lăsați chili să fiarbă ușor timp de aproximativ 45 de minute, amestecând ocazional. Acest lucru permite tuturor aromelor să se îmbine frumos. Dacă chili devine prea gros, adăugați o stropire de apă sau bulion de legume. \n\n9. După 45 de minute, amestecați porumbul conservat și gătiți încă 5 minute până când porumbul este încălzit. Gustați și ajustați condimentarea cu mai multă sare, piper sau pudră de chili dacă este necesar. Îndepărtați frunzele de dafin înainte de servire. \n\n10. Serviți chili fierbinte în boluri și serviți cu garniturile preferate precum brânză rasă, jalapeños feliate, avocado tăiat cuburi, smântână, coriandru tocat sau chipsuri de tortilla. Acest chili gustă și mai bine a doua zi pe măsură ce aromele continuă să se dezvolte!",
+    "simpleInstructions": "1. Încălziți uleiul de măsline în oală mare la foc mediu. \n\n2. Adăugați ceapa cu oregano, sare, chimion și frunze de dafin; gătiți 3-5 minute până devine moale. \n\n3. Adăugați țelina, ardeii grași, jalapeños și usturoiul; gătiți 5-7 minute. \n\n4. Amestecați ardeii verzi și gătiți 2-3 minute. \n\n5. Adăugați tofu, reduceți focul, acoperiți și lăsați să fiarbă 5 minute. \n\n6. Amestecați roșiile zdrobite, pudra de chili și piperul negru. \n\n7. Adăugați fasolea roșie, năutul și fasolea neagră; amestecați bine. \n\n8. Aduceți la fierbere, reduceți focul, acoperiți și lăsați să fiarbă 45 minute. \n\n9. Amestecați porumbul și gătiți încă 5 minute. Îndepărtați frunzele de dafin. \n\n10. Serviți fierbinte cu garnituri precum brânză, jalapeños, avocado sau smântână.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 20,
+    "servings": 2,
+    "mealType": "DINNER",
+    "dishCategory": "VEGETARIAN",
+    "ingredients": [
+        {
+            "name": "Olive Oil",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Onion",
+            "quantity": 30,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Dried Oregano",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 2.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cumin",
+            "quantity": 2.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Bay Leaves",
+            "quantity": 0.25,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Celery",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Bell Pepper",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Jalapeño",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 7.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Green Chile Peppers",
+            "quantity": 110,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tofu",
+            "quantity": 170,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Canned Tomatoes",
+            "quantity": 210,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Chili Powder",
+            "quantity": 30,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 7.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Kidney Beans",
+            "quantity": 110,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Canned Chickpeas",
+            "quantity": 110,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Beans",
+            "quantity": 110,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Canned Corn",
+            "quantity": 110,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/72508/the-best-vegetarian-chili-in-the-world/",
+    "cuisine": "American",
+    "id": "the_best_vegetarian_chili_in_the_world",
+    "imageUrl": "recipes/images/vegetarian & vegan/the_best_vegetarian_chili_in_the_world.jpg"
+}

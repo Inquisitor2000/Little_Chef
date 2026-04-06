@@ -1,0 +1,52 @@
+{
+  "name": "Churros",
+  "instructions": "1. Combine the Water, a portion of the White Sugar (reserve the rest for coating), Salt, and a portion of the Vegetable Oil (reserve the rest for frying) in a small saucepan and place over medium heat. Bring to a rolling boil, then immediately remove from the heat.\n\n2. Add the All-Purpose Flour all at once and stir vigorously with a wooden spoon until the mixture comes together and forms a smooth ball of dough that pulls away from the sides of the pan.\n\n3. Heat the remaining Vegetable Oil for frying in a deep fryer or deep pot to 375 degrees F (190 degrees C). Use a thermometer to ensure the correct temperature for crispy churros.\n\n4. Transfer the warm dough to a sturdy pastry bag fitted with a medium star tip. Work quickly while the dough is still pliable.\n\n5. Carefully pipe 5 to 6 inch strips of dough directly into the hot oil, using scissors to cut the dough. Work in small batches to avoid overcrowding and maintain oil temperature.\n\n6. Fry until golden brown and crispy on all sides, turning once, about 2 minutes per side. Transfer the churros to paper towels to drain excess oil.\n\n7. In a shallow dish, combine the remaining White Sugar with the Cinnamon. While the churros are still warm, roll them in the cinnamon sugar mixture until fully coated. Serve immediately while warm and crispy.",
+  "simpleInstructions": "1. Boil the Water with some White Sugar, Salt, and some Vegetable Oil, then stir in the All-Purpose Flour to form dough.\n\n2. Heat the remaining Vegetable Oil to 375 degrees F and pipe the dough into strips.\n\n3. Fry until golden and crispy, drain, then roll in the remaining White Sugar and Cinnamon mixture.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 10,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Water",
+      "quantity": 240,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 515,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/24700/churros/",
+  "cuisine": "Mexican",
+  "id": "churros",
+  "imageUrl": "recipes/images/mexican/churros.webp"
+}

@@ -1,0 +1,70 @@
+{
+  "name": "Jian Bing (Chinese Crêpes)",
+  "instructions": "1. In a medium mixing bowl, whisk together the millet flour, soy milk, and vegetable oil until completely smooth and lump-free. The batter should have the consistency of heavy cream—it should coat the back of a spoon but still flow easily. If it's too thick, add water a teaspoon at a time, whisking after each addition, until you reach the right pourable consistency.\n\n2. Prepare your sauces ahead of time so they're ready when needed. In a small bowl, mix the black bean sauce with a teaspoon of water to thin it slightly for easier spreading. In another small bowl, mix the chili sauce with a teaspoon of water to achieve a similar spreadable consistency. Set both bowls aside within easy reach.\n\n3. Spray a large non-stick skillet or griddle generously with cooking spray and heat over medium-low heat for about 2 minutes until evenly hot. Pour the batter onto the center of the skillet, then immediately use the back of a ladle or spoon to spread it in a circular motion, working from the center outward to create a thin, even crêpe about 8-10 inches in diameter. Cook undisturbed for 1-2 minutes until the edges begin to lift and the surface looks set and no longer wet.\n\n4. Crack the egg directly onto the crêpe and use a spatula or fork to quickly break the yolk and spread the egg evenly across the entire surface of the crêpe, creating a thin egg layer. Cook for an additional 1-2 minutes until the egg is completely set and no longer runny.\n\n5. While the egg is still slightly tacky, sprinkle the sliced green onions and fresh cilantro leaves evenly over the surface, then gently press them into the egg with your spatula so they adhere well and won't fall off when folded.\n\n6. Using a wide spatula, carefully flip the entire crêpe so the egg side is now face down. Working quickly while it's hot, spread a thin layer of the black bean sauce over the exposed crêpe surface, then drizzle or spread the chili sauce on top for a spicy kick. Adjust the amount based on your heat preference.\n\n7. Place the crackers in a line down the center of the crêpe, spacing them slightly apart so they don't overlap. Fold the top third of the crêpe down over the crackers, then fold the bottom third up to meet it, creating a rectangular shape with the crackers enclosed in the middle.\n\n8. Finally, fold the entire crêpe in half lengthwise so the crackers are stacked together in layers, creating a compact, easy-to-hold package. Transfer to a plate and serve immediately while hot and crispy for the best texture and flavor.",
+  "simpleInstructions": "1. Whisk flour, soy milk, and oil until smooth like heavy cream.\n\n2. Thin both sauces with water for easy spreading.\n\n3. Spread batter thin on hot skillet, cook until set.\n\n4. Pour egg over crêpe, spread evenly, and cook until firm.\n\n5. Sprinkle green onions and cilantro, press into egg.\n\n6. Flip, spread both sauces on the cooked side.\n\n7. Add crackers in center, fold top and bottom thirds over.\n\n8. Fold in half lengthwise and serve hot.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 10,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Milk",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Sriracha",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Scallion",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Cilantro",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Crackers",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/186731/jian-bing-chinese-crepes/",
+  "cuisine": "Asian",
+  "id": "jian_bing_chinese_crepes",
+  "imageUrl": "recipes/images/asian/jian_bing_chinese_crepes.jpg"
+}

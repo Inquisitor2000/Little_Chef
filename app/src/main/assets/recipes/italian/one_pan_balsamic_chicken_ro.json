@@ -1,0 +1,99 @@
+{
+    "id": "one_pan_balsamic_chicken",
+    "name": "Pui balsamic într-o tigaie",
+    "instructions": "1. Preîncălziți cuptorul la 220 grade Celsius.\n\n2. Așezați piepturile de pui pe o placă de tăiat. Folosind un cuțit ascuțit, tăiați fiecare piept pe orizontală în jumătate pentru a crea bucăți subțiri și uniforme care se vor găti mai rapid și mai uniform.\n\n3. Într-un bol mic, combinați condimentul italian, pudra de usturoi, pudra de ceapă, sarea și piperul negru. Frecați amestecul de condimente pe toate părțile bucăților de pui, asigurându-vă o acoperire uniformă.\n\n4. Încălziți uleiul de măsline într-o tigaie mare rezistentă la cuptor la foc mediu-mare până când strălucește.\n\n5. Adăugați bucățile de pui condimentate în tigaia fierbinte. Rumenți până când suprafața devine aurie și se formează o crustă frumoasă, aproximativ 3-4 minute pe fiecare parte. Puiul nu trebuie să fie complet gătit în acest moment. Transferați puiul rumenit pe o farfurie și păstrați deoparte.\n\n6. În aceeași tigaie, adăugați pasta orzo, bulionul de pui și oțetul balsamic. Amestecați pentru a combina și a desprinde bucățile rumene de pe fundul tigăii. Returnați puiul în tigaie împreună cu sucurile acumulate, așezându-l deasupra amestecului de orzo.\n\n7. Împrăștiați roșiile cherry în jurul puiului în tigaie. Așezați feliile de mozzarella deasupra fiecărei bucăți de pui.\n\n8. Transferați tigaia în cuptorul preîncălzit. Coaceți până când puiul atinge o temperatură internă de 74 grade Celsius și orzo este fraged și a absorbit lichidul, aproximativ 20 de minute.\n\n9. Dacă doriți brânză mai aurie și balonată, activați grătarul cuptorului și grătarați timp de 2 minute, urmărind atent pentru a preveni arderea.\n\n10. Scoateți din cuptor și lăsați să se odihnească câteva minute. Presărați cu busuioc proaspăt tocat și stropiți cu glazură balsamică înainte de servire.",
+    "simpleInstructions": "1. Preîncălziți cuptorul la 220 grade Celsius.\n\n2. Tăiați și condimentați piepturile de pui.\n\n3. Rumenți puiul în tigaie rezistentă la cuptor.\n\n4. Adăugați orzo, bulion și oțet, apoi returnați puiul.\n\n5. Adăugați roșii și mozzarella deasupra.\n\n6. Coaceți până este gata, opțional grătarați pentru rumenire.\n\n7. Decorați cu busuioc și glazură balsamică.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 30,
+    "servings": 2,
+    "cuisine": "Italian",
+    "mealType": "DINNER",
+    "dishCategory": "CHICKEN",
+    "imageUrl": "recipes/images/italian/one_pan_balsamic_chicken.webp",
+    "ingredients": [
+        {
+            "name": "Chicken Breast",
+            "quantity": 200,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Italian Seasoning",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic Powder",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Onion Powder",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 0.3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 23,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cherry Tomatoes",
+            "quantity": 240,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 110,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Orzo Pasta",
+            "quantity": 110,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Chicken Broth",
+            "quantity": 180,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Balsamic Vinegar",
+            "quantity": 30,
+            "unit": "ml",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Fresh Basil",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Balsamic Glaze",
+            "quantity": 7.5,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ]
+}

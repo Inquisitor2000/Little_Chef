@@ -1,0 +1,52 @@
+{
+  "name": "Honey-Glazed Pork Tenderloin",
+  "instructions": "1. Preheat your oven to 450°F (230°C) and position the rack in the center. Allow the oven to fully preheat - this high initial temperature will help sear the outside of the pork. 2. Pat the pork tenderloin dry with paper towels and place it in a roasting pan or oven-safe skillet. Set aside. 3. In a small bowl, stir together the honey, soy sauce, sesame oil, balsamic vinegar, and brown sugar until the sugar dissolves and the mixture is well combined. This is your honey glaze. Set aside about half of the glaze in a separate small bowl for basting. 4. Brush the pork tenderloin all over with some of the honey glaze, coating it generously. 5. Place the roasting pan in the preheated 450°F oven and roast for 15 minutes. This initial high heat will create a nice caramelized crust on the outside. 6. After 15 minutes, reduce the oven temperature to 350°F (175°C). Carefully remove the pan from the oven and baste the pork generously with more of the honey glaze, brushing it all over the top and sides. 7. Return the pan to the oven and continue roasting. Baste the pork with the remaining glaze every 5-7 minutes to build up a beautiful, sticky, caramelized coating. 8. Continue roasting for about 45 more minutes total (60 minutes total cooking time), until the pork is slightly pink in the center and an instant-read thermometer inserted into the thickest part reads at least 145°F (63°C). The outside should be deeply caramelized and glossy. 9. Remove from the oven and transfer the pork to a cutting board. Tent loosely with aluminum foil and let rest for 10 minutes before slicing. This allows the juices to redistribute. 10. Slice the pork crosswise into 1/2-inch thick medallions. Drizzle any pan juices over the sliced pork and serve immediately. This pairs wonderfully with rice, roasted vegetables, or a fresh salad.",
+  "simpleInstructions": "1. Preheat oven to 450°F. 2. Pat pork dry and place in roasting pan. 3. Mix honey, soy sauce, sesame oil, balsamic vinegar, and brown sugar; reserve half for basting. 4. Brush pork with glaze. 5. Roast 15 minutes at 450°F. 6. Reduce oven to 350°F and baste pork with more glaze. 7. Continue roasting, basting every 5-7 minutes. 8. Roast 45 more minutes until internal temperature reaches 145°F. 9. Rest 10 minutes tented with foil. 10. Slice and serve with pan juices.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 60,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "PORK",
+  "ingredients": [
+    {
+      "name": "Pork Tenderloin",
+      "quantity": 230,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Honey",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Balsamic Vinegar",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/62825/honey-glazed-pork-tenderloin/",
+  "cuisine": "American",
+  "id": "honey_glazed_pork_tenderloin",
+  "imageUrl": "recipes/images/meat dishes/honey_glazed_pork_tenderloin.jpg"
+}

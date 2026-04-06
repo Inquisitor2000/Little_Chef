@@ -1,0 +1,58 @@
+{
+  "name": "Almond Flour Bread",
+  "instructions": "1. Preheat the oven to 175 degrees Celsius. Lightly grease an 8x4-inch loaf pan, or line with parchment paper.\n\n2. Mix the almond flour, flaxseed meal, eggs, almond milk, olive oil, baking powder, and salt together in a bowl until a soft dough forms.\n\n3. Transfer the dough to the prepared loaf pan.\n\n4. Bake in the preheated oven until golden brown on top, about 40 minutes.\n\n5. Cool in the loaf pan for 10 minutes before transferring to a wire rack to cool completely.",
+  "simpleInstructions": "1. Preheat oven to 175°C and prep loaf pan.\n\n2. Mix all ingredients into a soft dough.\n\n3. Pour dough into loaf pan.\n\n4. Bake for 40 minutes until golden brown.\n\n5. Cool in pan for 10 minutes, then transfer to a rack.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 40,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BREAD",
+  "ingredients": [
+    {
+      "name": "Almond Flour",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Flaxseed Meal",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Almond Milk",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/246002/almond-flour-bread/",
+  "cuisine": "Bread & Bakery",
+  "id": "almond_flour_bread",
+  "imageUrl": "recipes/images/bread & bakery/almond_flour_bread.jpg"
+}

@@ -1,0 +1,154 @@
+{
+  "name": "Бёрек с Бараниной",
+  "instructions": "1. Разогрейте оливковое масло в кастрюле на средне-сильном огне. Добавьте лук, соль и баранину. Разбейте баранину на мелкие крошки и готовьте, пока большая часть жидкости не испарится, около 8 минут.\n\n2. Добавьте чеснок, смородину, кедровые орехи, кумин, кориандр, корицу, паприку, черный перец, кайенский перец и душистый перец. Готовьте 1 минуту.\n\n3. Добавьте томатный соус и воду, перемешайте и уменьшите огонь до среднего. Готовьте, пока смесь не высохнет, 20-30 минут. Полностью остудите.\n\n4. Смешайте яйцо, йогурт, воду и масло в миске и тщательно взбейте.\n\n5. Разогрейте духовку до 200 градусов C. Смажьте форму для выпечки маслом.\n\n6. Положите 2 листа слоеного теста на рабочую поверхность, смазывая каждый яичной смесью. Повторите наслоение еще два раза.\n\n7. Выложите половину начинки из баранины вдоль одного края теста, сверните и поместите в форму для выпечки. Повторите с оставшейся начинкой и тестом.\n\n8. Смажьте верх яичной смесью, посыпьте семенами кунжута и выпекайте до подрумянивания, 35-40 минут. Дайте остыть 15 минут.\n\n9. Смешайте йогурт, мяту, лимонный сок и чеснок для соуса. Отрегулируйте консистенцию водой и приправьте солью и кайенским перцем.\n\n10. Нарежьте бёрек дольками и подавайте с йогуртовым соусом.",
+  "simpleInstructions": "1. Приготовьте лук и баранину, затем добавьте специи и томатный соус. Готовьте до высыхания.\n\n2. Приготовьте яичную смесь и разогрейте духовку.\n\n3. Выложите слои теста с яичной смесью и наполните бараньей смесью.\n\n4. Сверните, смажьте яичной смесью, посыпьте семенами кунжута, выпекайте и остудите.\n\n5. Смешайте йогуртовый соус и подавайте.",
+  "prepTimeMinutes": 45,
+  "cookTimeMinutes": 65,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ground Lamb",
+      "quantity": 230,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Garlic",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Raisins",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Pine Nuts",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cumin",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Coriander",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Paprika",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Allspice",
+      "quantity": 0.2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato Sauce",
+      "quantity": 180,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Greek Yogurt",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Mint",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 2,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/272905/lamb-borek/",
+  "cuisine": "Mediterranean",
+  "id": "lamb_borek",
+  "imageUrl": "recipes/images/mediterranean/lamb_borek.jpg"
+}

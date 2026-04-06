@@ -1,0 +1,58 @@
+{
+  "name": "Light Oat Bread",
+  "instructions": "1. Place water, margarine, salt, flour, oats, brown sugar, and yeast into a bread machine in the order listed, or follow the order recommended by your manufacturer if different.\n\n2. Select Regular Light setting on the bread machine.\n\n3. Remove loaf from the machine after the cycle is done.",
+  "simpleInstructions": "1. Add all ingredients to bread machine in order.\n\n2. Select bread machine's Light setting.\n\n3. Remove finished loaf.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 55,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BREAD",
+  "ingredients": [
+    {
+      "name": "Water",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 140,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Oats",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Active Dry Yeast",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/7025/light-oat-bread/",
+  "cuisine": "Bread & Bakery",
+  "id": "light_oat_bread",
+  "imageUrl": "recipes/images/bread & bakery/light_oat_bread.jpg"
+}

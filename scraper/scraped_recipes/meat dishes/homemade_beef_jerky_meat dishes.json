@@ -1,0 +1,70 @@
+{
+  "name": "Homemade Beef Jerky",
+  "instructions": "1. In a large bowl, whisk together the Worcestershire sauce, soy sauce, smoked paprika, honey, black pepper, red pepper flakes, garlic powder, and onion powder until well combined. This is your marinade. 2. Slice the beef top round against the grain into very thin strips, about 1/8 to 1/4 inch thick. For easier slicing, you can partially freeze the beef for 1-2 hours first. Add the beef strips to the marinade and toss with your hands or a spoon until every piece is completely coated. 3. Cover the bowl tightly with plastic wrap and refrigerate for at least 3 hours, or preferably overnight (up to 24 hours) for maximum flavor. Stir the beef occasionally if possible to ensure even marinating. 4. When ready to make the jerky, preheat your oven to 175°F (80°C). If your oven doesn't go that low, use the lowest setting (usually 200°F/95°C) and prop the door open slightly with a wooden spoon. Position the oven rack in the center. 5. Line a large baking sheet with aluminum foil for easy cleanup. Place a wire cooling rack on top of the foil-lined baking sheet. This allows air to circulate around the meat for even drying. 6. Remove the beef strips from the marinade and transfer them to a plate lined with several layers of paper towels. Pat the beef dry to remove excess marinade - this helps the jerky dry properly. Discard the used marinade. 7. Arrange the beef strips in a single layer on the wire rack, making sure the pieces don't overlap or touch each other. Leave a small space between each strip for air circulation. 8. Place the baking sheet in the preheated oven and bake for 3-4 hours, until the jerky is dry and leathery but still slightly pliable. It should bend without breaking but not be moist. Check after 3 hours and continue baking in 15-minute increments if needed. The exact time depends on the thickness of your slices and your oven temperature. 9. Remove from the oven and let the jerky cool completely on the rack, about 30 minutes. It will firm up more as it cools. 10. Once cooled, use clean kitchen scissors to cut the jerky into bite-sized pieces if desired. Store in an airtight container or resealable plastic bags at room temperature for up to 2 weeks, or refrigerate for up to 1 month for best quality.",
+  "simpleInstructions": "1. Whisk together Worcestershire sauce, soy sauce, smoked paprika, honey, black pepper, red pepper flakes, garlic powder, and onion powder. 2. Slice beef thinly against the grain and add to marinade; toss to coat. 3. Cover and refrigerate 3 hours to overnight. 4. Preheat oven to 175°F (or lowest setting). 5. Line baking sheet with foil and place wire rack on top. 6. Pat beef dry with paper towels and discard marinade. 7. Arrange beef strips in single layer on rack without overlapping. 8. Bake 3-4 hours until dry and leathery but still pliable. 9. Cool completely on rack, about 30 minutes. 10. Cut into bite-sized pieces with scissors and store in airtight container.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 180,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BEEF",
+  "ingredients": [
+    {
+      "name": "Worcestershire Sauce",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Smoked Paprika",
+      "quantity": 7.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Honey",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Pepper Flakes",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic Powder",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion Powder",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Beef Top Round",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/241555/homemade-beef-jerky/",
+  "cuisine": "American",
+  "id": "homemade_beef_jerky",
+  "imageUrl": "recipes/images/meat dishes/homemade_beef_jerky.jpg"
+}

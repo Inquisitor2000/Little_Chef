@@ -1,0 +1,100 @@
+{
+  "name": "Avgolemono Soup",
+  "instructions": "1. Place chicken, 1 chopped onion, celery, carrot, bay leaves, salt, and oregano in a large pot. Pour water over the top; bring to a boil, reduce heat to medium-low, and simmer until chicken is falling off the bone, about 60 to 90 minutes.\n\n2. Transfer chicken to a large bowl to cool. Strain vegetables from broth and return broth to the pot.\n\n3. Chop chicken meat into bite-sized pieces.\n\n4. Combine diced onion, olive oil, and a pinch of salt in a skillet over medium heat. Cook until the onion is soft and golden, 7 to 10 minutes.\n\n5. Stir the onion mixture into the broth, add Arborio rice and a pinch of salt. Cook until rice is very tender, about 45 minutes.\n\n6. Whisk eggs, black pepper, and cayenne pepper in a bowl; whisk in lemon juice until combined.\n\n7. Slowly whisk broth into egg mixture, then pour back into the pot.\n\n8. Add chopped chicken and cook until heated through.\n\n9. Serve hot and garnish with parsley and lemon zest if desired.",
+  "simpleInstructions": "1. Boil chicken with vegetables for 60-90 minutes.\n\n2. Cool and chop chicken; strain broth.\n\n3. Cook onions in olive oil until golden.\n\n4. Add onions and rice to broth and simmer.\n\n5. Whisk eggs and lemon juice; temper with broth.\n\n6. Combine egg mixture with broth; add chicken.\n\n7. Heat through and serve.",
+  "prepTimeMinutes": 25,
+  "cookTimeMinutes": 130,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Whole Chicken",
+      "quantity": 450,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Onion",
+      "quantity": 210,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Celery",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrot",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bay Leaves",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 6,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 1,
+      "unit": "L",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Arborio Rice",
+      "quantity": 45,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Egg",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/241873/avgolemono-soup/",
+  "cuisine": "Mediterranean",
+  "id": "avgolemono_soup",
+  "imageUrl": "recipes/images/mediterranean/avgolemono_soup.jpg"
+}

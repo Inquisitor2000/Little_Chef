@@ -1,0 +1,94 @@
+{
+    "name":  "Суп из Индейки с Диким Рисом",
+    "instructions":  "1. Растопите масло в кастрюле для супа на среднем огне. Добавьте лук и сельдерей; готовьте и помешивайте до прозрачности, около 5 минут.  \n\n2. Добавьте муку и готовьте, пока она не приобретет бледный желтовато-коричневый цвет, 3-5 минут.  \n\n3. Постепенно взбейте бульон из индейки до гладкости и отсутствия комков муки.  \n\n4. Добавьте морковь и доведите смесь до кипения. Готовьте, постоянно взбивая, пока бульон не станет густым и гладким, а морковь не станет мягкой, около 2 минут.  \n\n5. Добавьте индейку, дикий рис, миндаль, соль и перец; варите на медленном огне до полного прогрева, около 5 минут.  \n\n6. Добавьте лимонный сок и сливки; нагрейте почти до кипения. Подавайте немедленно.",
+    "simpleInstructions":  "1. Приготовьте лук и сельдерей в масле.  \n\n2. Добавьте муку и готовьте до коричневого цвета.  \n\n3. Взбейте бульон.  \n\n4. Добавьте морковь и варите на медленном огне.  \n\n5. Добавьте индейку, рис, миндаль, соль и перец; варите на медленном огне.  \n\n6. Добавьте лимонный сок и сливки; нагрейте.",
+    "prepTimeMinutes":  10,
+    "cookTimeMinutes":  20,
+    "servings":  2,
+    "mealType":  "DINNER",
+    "dishCategory":  "SOUP",
+    "ingredients":  [
+                        {
+                            "name":  "Butter",
+                            "quantity":  20,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Onion",
+                            "quantity":  20,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Celery",
+                            "quantity":  20,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "All-Purpose Flour",
+                            "quantity":  20,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Turkey Broth",
+                            "quantity":  240,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Carrot",
+                            "quantity":  30,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Turkey Breast",
+                            "quantity":  100,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Wild Rice",
+                            "quantity":  100,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Almonds",
+                            "quantity":  10,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Kosher Salt",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Black Pepper",
+                            "quantity":  1.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Lemon Juice",
+                            "quantity":  2.5,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Half and Half",
+                            "quantity":  90,
+                            "unit":  "ml",
+                            "isStarIngredient":  true
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/212664/turkey-wild-rice-soup-ii/",
+    "cuisine":  "Soups \u0026 Stews",
+    "id":  "turkey_wild_rice_soup_ii",
+    "imageUrl":  "recipes/images/soups \u0026 stews/turkey_wild_rice_soup_ii.jpg"
+}

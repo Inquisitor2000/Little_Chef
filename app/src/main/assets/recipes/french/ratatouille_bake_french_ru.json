@@ -1,0 +1,94 @@
+{
+  "name": "Запеканка Рататуй",
+  "instructions": "1. Разогрейте духовку до 350 градусов F (175 градусов C). Обрызгайте форму для запекания объемом 2 ½ кварты кулинарным спреем.\n\n2. Нагрейте оливковое масло в большой сковороде на среднем огне. Добавьте баклажан, лук и чеснок; готовьте и помешивайте, пока овощи не начнут размягчаться, около 8 минут.\n\n3. Добавьте цукини, консервированные помидоры, зеленый болгарский перец, сушеный базилик, сушеную петрушку, соль и черный перец; доведите до кипения, часто помешивая. Уменьшите огонь до среднего-слабого; тушите, пока овощи не станут мягкими, около 20 минут.\n\n4. Тем временем наполните кастрюлю подсоленной водой и доведите до кипения. Добавьте яичную лапшу, готовьте без крышки, пока лапша не всплывет и начинка не прогреется, 3-5 минут. Слейте воду.\n\n5. Переложите яичную лапшу на дно подготовленной формы для запекания; выложите горячую овощную смесь сверху. Посыпьте моцареллой.\n\n6. Запекайте, пока не появятся пузырьки и сыр не расплавится, около 20 минут.",
+  "simpleInstructions": "1. Разогрейте духовку и подготовьте форму.\n\n2. Обжарьте баклажан, лук и чеснок на сковороде.\n\n3. Добавьте остальные овощи и специи, тушите.\n\n4. Отварите и слейте яичную лапшу.\n\n5. Соберите блюдо и добавьте моцареллу.\n\n6. Запекайте, пока сыр не расплавится.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "BAKED_DISH",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggplant",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Onion",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 12.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Zucchini",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Tomatoes",
+      "quantity": 240,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Green Bell Pepper",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Basil",
+      "quantity": 7.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Parsley",
+      "quantity": 7.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg Noodles",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mozzarella",
+      "quantity": 55,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/200877/ratatouille-bake/",
+  "cuisine": "French",
+  "id": "ratatouille_bake",
+  "imageUrl": "recipes/images/french/ratatouille_bake.jpg"
+}

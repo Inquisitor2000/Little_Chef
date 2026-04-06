@@ -1,0 +1,130 @@
+{
+  "name": "Grilled Pork Tacos al Pastor",
+  "instructions": "1. Place the dried guajillo and pasilla chiles into a heatproof bowl and pour in enough boiling Water to cover them completely. Let the chiles stand for 30 minutes to soften and rehydrate.\n\n2. While the chiles soak, cut the Pork Tenderloin into long strips about half an inch thick and set aside.\n\n3. Drain the Water from the softened chiles and transfer them to a blender. Add the freshly squeezed Pineapple Juice, White Vinegar, Garlic, Chipotle Pepper, Cinnamon, Cayenne Pepper, Cumin, and Dried Oregano. Blend on high speed until you have a completely smooth, deep red marinade.\n\n4. Place the pork strips into a large resealable plastic bag and pour the marinade over the meat. Seal the bag and knead it gently to coat all the pork evenly. Refrigerate overnight or for at least 4 hours to allow the flavors to penetrate the meat.\n\n5. Preheat your grill to high heat and lightly oil the grate to prevent sticking. Remove the pork from the bag and discard the marinade. Pat the meat dry slightly, then drizzle with Vegetable Oil and season generously with Salt.\n\n6. Cook the pork strips on the preheated grill until cooked through and slightly charred, 7 to 8 minutes per side. The internal temperature should reach 145 degrees F. Let the meat rest for 5 minutes before slicing into bite-sized pieces.\n\n7. Drizzle a skillet with Vegetable Oil over medium heat. Place the Tortillas in the skillet and top each with slices of Monterey Jack Cheese. Heat until the cheese melts and the tortillas are warm and pliable.\n\n8. Assemble the tacos by placing sliced pork on each tortilla, then topping with shredded Cabbage, Salsa, and sliced Jalapeño. Serve immediately while hot.",
+  "simpleInstructions": "1. Soak the dried chiles in boiling Water for 30 minutes to soften.\n\n2. Cut the Pork Tenderloin into long strips.\n\n3. Blend the softened chiles with spices and juices to make a marinade, coat the pork, and refrigerate overnight.\n\n4. Grill the marinated pork until cooked through, then let rest and slice.\n\n5. Heat the Tortillas with Monterey Jack Cheese until melted.\n\n6. Assemble the tacos with pork, Cabbage, Salsa, and Jalapeño.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 25,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "PORK",
+  "ingredients": [
+    {
+      "name": "Dried Guajillo Chiles",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Pasilla Chiles",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 240,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Pork Tenderloin",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pineapple Juice",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Vinegar",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chipotle Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 0.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cumin",
+      "quantity": 0.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Oregano",
+      "quantity": 0.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tortillas",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Monterey Jack Cheese",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cabbage",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Salsa",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jalapeño",
+      "quantity": 4,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/234270/grilled-pork-tacos-al-pastor/",
+  "cuisine": "Mexican",
+  "id": "grilled_pork_tacos_al_pastor",
+  "imageUrl": "recipes/images/mexican/grilled_pork_tacos_al_pastor.webp"
+}

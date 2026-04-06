@@ -1,0 +1,58 @@
+{
+  "name": "Jeleuri cu Apă de Trandafir",
+  "instructions": "1. Ungeți o tavă mică cu ulei vegetal.\n\n2. Puneți aproximativ 40% din apă într-un bol mic și presărați gelatina deasupra. Lăsați să stea până se înmoaie, aproximativ 15 minute.\n\n3. Într-o cratiță, combinați apa rămasă, zahăr și suc de lămâie la foc mediu și aduceți la fierbere, amestecând până se dizolvă zahărul.\n\n4. Creșteți focul și fierbeți siropul, acoperit, timp de 3 minute.\n\n5. Descoperiți cratița și atașați un termometru pentru bomboane pe lateral. Continuați să gătiți până când temperatura ajunge la 114°C, aproximativ 5 minute.\n\n6. Scoateți de pe foc și amestecați amestecul de gelatină până se dizolvă complet.\n\n7. Amestecați apa de trandafir și colorantul alimentar roșu.\n\n8. Turnați siropul în tava unsă și lăsați să stea la temperatura camerei până se gelifiază, aproximativ 4 ore.\n\n9. Acoperiți cu folie de plastic și refrigerați timp de 8 ore sau peste noapte.\n\n10. Tăiați amestecul gelificat în pătrate de 2,5 cm și pudrați cu amidon de porumb.",
+  "simpleInstructions": "1. Preparați gelatina în apă și lăsați să se înmoaie.\n\n2. Fierbeți siropul de zahăr cu apă și suc de lămâie, apoi adăugați gelatina.\n\n3. Adăugați apa de trandafir și colorantul. Turnați în tavă.\n\n4. Lăsați să se întărească la temperatura camerei, apoi refrigerați.\n\n5. Tăiați și pudrați cu amidon de porumb.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 13,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Vegetable Oil",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 170,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Gelatin",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Food Coloring",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/255876/rose-water-gelees/",
+  "cuisine": "Mediterranean",
+  "id": "rose_water_gelees",
+  "imageUrl": "recipes/images/mediterranean/rose_water_gelees.jpg"
+}

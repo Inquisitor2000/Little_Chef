@@ -1,0 +1,70 @@
+{
+    "name": "Quesadilla cu pui",
+    "instructions": "1. Preîncălziți grătarul la maximum și ungeți ușor o tavă de copt cu spray de gătit sau ulei.\n\n2. Amestecați pieptul de pui tăiat cuburi cu condimentul pentru fajitas până se acoperă uniform, apoi întindeți într-un singur strat pe tava de copt pregătită. Puneți sub grătar și gătiți, urmărind cu atenție, până când puiul este gătit complet fără roz rămas în centru și ușor rumenit pe margini, aproximativ 5 minute.\n\n3. Preîncălziți cuptorul la 175 grade Celsius.\n\n4. Încălziți uleiul vegetal într-o cratiță mare la foc mediu. Adăugați ardeii grași tăiați cuburi și ceapa tăiată cuburi împreună cu puiul gătit la grătar. Gătiți și amestecați frecvent până când legumele s-au înmuiat și au devenit fragede, aproximativ 10 minute.\n\n5. Între timp, gătiți baconul într-o tigaie separată până devine crocant, apoi scurgeți pe prosoape de hârtie și sfărâmați în bucăți mici. Pe jumătate din fiecare tortilla, stratificați amestecul de pui și legume, brânza Cheddar rasă, brânza Monterey Jack rasă și baconul sfărâmat.\n\n6. Îndoiți tortilla în jumătate pentru a închide umplutura și puneți pe o tavă de copt, lăsând spațiu între fiecare.\n\n7. Coaceți quesadilla în cuptorul preîncălzit până când brânza s-a topit și tortilla sunt ușor aurii, aproximativ 10 minute.\n\n8. Scoateți din cuptor, lăsați să se răcească un minut, apoi tăiați fiecare quesadilla în felii. Serviți fierbinte cu salsa și smântână acră pe lateral.",
+    "simpleInstructions": "1. Preîncălziți grătarul și gătiți puiul tăiat cuburi condimentat până este gata.\n\n2. Sotați legumele tăiate cuburi cu puiul gătit până devin fragede.\n\n3. Gătiți și sfărâmați baconul, apoi stratificați umplutura pe jumătate din fiecare tortilla.\n\n4. Îndoiți, coaceți până se topește brânza, apoi tăiați în felii și serviți.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 20,
+    "servings": 2,
+    "mealType": "LUNCH",
+    "dishCategory": "CHICKEN",
+    "ingredients": [
+        {
+            "name": "Chicken Breast",
+            "quantity": 90,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Fajita Seasoning",
+            "quantity": 4,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Vegetable Oil",
+            "quantity": 5,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Bell Pepper",
+            "quantity": 100,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Onion",
+            "quantity": 30,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tortillas",
+            "quantity": 100,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Cheddar Cheese",
+            "quantity": 30,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Monterey Jack Cheese",
+            "quantity": 30,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Bacon",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/21659/chicken-quesadillas/",
+    "cuisine": "Mexican",
+    "id": "chicken_quesadillas",
+    "imageUrl": "recipes/images/mexican/chicken_quesadillas.webp"
+}

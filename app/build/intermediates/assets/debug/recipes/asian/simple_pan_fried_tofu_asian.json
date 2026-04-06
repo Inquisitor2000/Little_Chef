@@ -1,0 +1,40 @@
+{
+  "name": "Pan-Fried Tofu",
+  "instructions": "1. Place the tofu block onto a large plate and cover with another plate of similar size. Set a heavy weight on top (such as a large can or heavy pot). Press the tofu for 20 to 30 minutes to extract excess moisture. Drain and discard the accumulated liquid.\n\n2. Using a sharp knife, cut the pressed tofu into rectangular strips measuring approximately 2x4 inches and about 1/4-inch thick for even cooking.\n\n3. Heat half of the vegetable oil in a large skillet over medium-low heat until shimmering. Carefully place the tofu strips in the hot oil and cook without moving until the bottoms turn golden brown and crispy, 2 to 3 minutes. Flip and cook the other side until equally golden, another 2 to 3 minutes.\n\n4. Stack the fried tofu strips horizontally in a shallow dish with sloping sides, such as a teacup saucer or small serving plate, allowing them to overlap slightly.\n\n5. Heat the remaining vegetable oil in the same skillet over medium heat. Add the sliced green onions and cook, stirring constantly, until they become fragrant and start to sizzle, about 10 to 20 seconds. Remove from heat immediately.\n\n6. While the green onions are still sizzling hot, spoon them along with the hot oil over the stacked tofu. Drizzle generously with soy sauce. Let the dish sit for 3 to 5 minutes to allow the tofu to absorb the flavors before serving.",
+  "simpleInstructions": "1. Press tofu 20-30 minutes with a weight, then drain excess liquid.\n\n2. Slice tofu into thin rectangular strips for even frying.\n\n3. Pan-fry tofu in oil until golden and crispy, 2-3 minutes per side.\n\n4. Stack the crispy tofu strips in a shallow serving dish.\n\n5. Quickly fry green onions in hot oil until fragrant and sizzling.\n\n6. Pour sizzling onions and oil over tofu, drizzle with soy sauce, let sit to absorb flavors, and enjoy!",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 5,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "VEGETARIAN",
+  "ingredients": [
+    {
+      "name": "Tofu",
+      "quantity": 170,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/246936/simple-pan-fried-tofu/",
+  "cuisine": "Asian",
+  "id": "simple_pan_fried_tofu",
+  "imageUrl": "recipes/images/asian/simple_pan_fried_tofu.jpg"
+}

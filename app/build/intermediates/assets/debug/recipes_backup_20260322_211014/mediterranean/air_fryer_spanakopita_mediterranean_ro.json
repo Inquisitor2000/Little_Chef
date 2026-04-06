@@ -1,0 +1,70 @@
+{
+  "name": "Spanakopita la Friteuza cu Aer",
+  "instructions": "1. Pentru umplutură, amestecați spanacul, feta, mozzarella, parmezanul și usturoiul într-un bol.\n\n2. Căptușiți o tavă de copt cu hârtie de copt. Așezați 1 foaie de foietaj pe o suprafață de lucru curată și ungeți ușor cu puțin din untul topit. Acoperiți cu încă 2 foi de foietaj și mai mult unt. Acoperiți foietajul rămas cu un prosop umed în timp ce lucrați.\n\n3. Tăiați stiva de foietaj pe lungime în 3 benzi de 7,5 cm lățime. Puneți aproximativ 15 ml de umplutură în partea de jos a fiecărei benzi. Luați colțul din dreapta jos și împăturiți aluatul peste umplutură pentru a face un triunghi. Împăturiți colțul din stânga jos în sus pentru a face un alt triunghi. Continuați să împăturiți până când tot aluatul este împăturit. Așezați spanakopita, cu cusătura în jos, pe tava de copt pregătită. Ungeți ușor cu unt. Repetați cu foietajul, umplutura și untul rămas.\n\n4. Preîncălziți friteuza cu aer la 190 grade C. Așezați spanakopita într-un strat uniform în coșul friteuzei cu aer, lucrând în loturi după cum este necesar. Gătiți, întorcând o dată la jumătatea timpului, până când spanakopita este aurie, 12 până la 15 minute.\n\n5. Răciți ușor. Serviți cu sos tzatziki și mărar.",
+  "simpleInstructions": "1. Amestecați ingredientele pentru umplutură: spanac, brânzeturi, usturoi.\n\n2. Preparați foile de foietaj cu unt, umpleți cu amestec, împăturiți în triunghiuri.\n\n3. Preîncălziți friteuza cu aer, gătiți spanakopita până devine aurie.\n\n4. Serviți cu sos tzatziki și mărar.",
+  "prepTimeMinutes": 40,
+  "cookTimeMinutes": 15,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "VEGETARIAN",
+  "ingredients": [
+    {
+      "name": "Spinach",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Feta Cheese",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mozzarella",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Parmesan",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Greek Yogurt",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Dill",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/air-fryer-spanakopita-recipe-7510155",
+  "cuisine": "Mediterranean",
+  "id": "air_fryer_spanakopita",
+  "imageUrl": "recipes/images/mediterranean/air_fryer_spanakopita.jpg"
+}

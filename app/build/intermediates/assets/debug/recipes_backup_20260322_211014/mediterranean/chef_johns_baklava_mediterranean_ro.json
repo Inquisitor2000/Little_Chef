@@ -1,0 +1,76 @@
+{
+  "name": "Baklava Chef John",
+  "instructions": "1. Puneți nucile, fistic și scorțișoara într-un robot de bucătărie. Pulsați până când amestecul este tocat dar nu prea fin.\n\n2. Ungeți fundul unei tăvi rotunde de 23 cm cu unt topit. Puneți o foaie rotundă de foietaj în tavă; adăugați a doua foaie. Picurați aproximativ 15 ml de unt topit deasupra. Adăugați încă 2 foi și picurați cu unt. Adăugați încă 2 foi și picurați cu unt, creând 6 straturi pentru bază. Țineți foile de foietaj acoperite cu un prosop de bumbac umed, aproape uscat, în timp ce lucrați pentru a preveni uscarea.\n\n3. Presărați cu 1/3 din amestecul de nuci. Acoperiți cu o foaie de foietaj și picurați cu unt topit; repetați cu încă o foaie de foietaj. Adăugați încă 1/3 din amestecul de nuci. Puneți o altă foaie de foietaj pe nuci; picurați cu unt. Acoperiți cu o altă foaie și picurați cu unt. Adăugați restul amestecului de nuci.\n\n4. Acoperiți cu 2 foi de foietaj; picurați cu unt. Adăugați încă 2 foi; picurați cu unt. Acoperiți cu ultimele 2 foi și picurați generos cu untul rămas. Acoperiți tava cu folie de plastic și refrigerați până se răcește complet, aproximativ 1 oră.\n\n5. Preîncălziți cuptorul la 175 grade C. Tăiați baklava în aproximativ 12 bucăți în formă de romb. Coaceți în cuptorul preîncălzit până devine rumenit și crocant, aproximativ o oră.\n\n6. Puneți zahărul, mierea și cuișoarele într-o cratiță. Turnați apa. Puneți cratița pe foc mediu-mare și amestecați pentru a combina. Aduceți la fierbere; scoateți de pe foc. Amestecați vanilia.\n\n7. După ce baklava s-a odihnit 5 minute, turnați siropul deasupra. Răciți la temperatura camerei înainte de a servi.",
+  "simpleInstructions": "1. Procesați nucile cu scorțișoară.\n\n2. Stratificați foile de foietaj în tavă unsă, alternând cu amestecul de nuci.\n\n3. Răciți, tăiați și coaceți până devine crocant.\n\n4. Fierbeți siropul, adăugați aromele, apoi turnați peste baklava coaptă.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 60,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Walnuts",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pistachios",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Honey",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cloves",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/259482/chef-johns-baklava/",
+  "cuisine": "Mediterranean",
+  "id": "chef_johns_baklava",
+  "imageUrl": "recipes/images/mediterranean/chef_johns_baklava.jpg"
+}

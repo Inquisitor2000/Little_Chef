@@ -1,0 +1,118 @@
+{
+  "name": "Supă de ceapă franceză gratinată",
+  "instructions": "1. Topiți untul într-o oală mare, la foc mediu-înalt. Adăugați ceapa roșie, ceapa galbenă și sarea. Gătiți, amestecând frecvent, până când ceapa este caramelizată, aproximativ 35 de minute.\n\n2. Adăugați bulionul de pui, bulionul de vită, vinul alb și sosul Worcestershire. Legați pătrunjelul proaspăt, cimbrul proaspăt și 1 frunză de dafin cu sfoară de bucătărie; adăugați în oală. Lăsați să fiarbă, amestecând ocazional, timp de 20 de minute. Îndepărtați și aruncați legătura de ierburi.\n\n3. Reduceți căldura la mic; amestecați oțetul balsamic și condimentați cu sare și piper negru. Mențineți supa caldă în timp ce pregătiți bagheta.\n\n4. Așezați un raft din cuptor la câțiva centimetri de sursa de căldură și preîncălziți grătarul cuptorului. Prăjiți bagheta sub grătar, întorcând-o o dată, până când este bine prăjită.\n\n5. Așezați 2 boluri rezistente la cuptor pe o tavă de copt. Umpleți fiecare bol două treimi cu supă fierbinte. Acoperiți fiecare bol cu o felie de baghetă prăjită, brânza Gruyère și brânza Parmezan rasă. Presărați un vârf de boia peste fiecare.\n\n6. Prăjiți până când brânza este bule și aurie, aproximativ 5 minute. Serviți fierbinte și bucurați-vă!",
+  "simpleInstructions": "1. Caramelizați ceapa roșie și ceapa galbenă cu untul și sarea. 2. Adăugați bulionul de pui, bulionul de vită, vinul alb, Worcestershire, ierburi; lăsați să fiarbă. Îndepărtați ierburile. 3. Amestecați oțetul balsamic, condimentați cu sare și piper. 4. Prăjiți bagheta. 5. Asamblați bolurile de supă cu supă, baghetă, brânză Gruyère, brânză Parmezan, boia. 6. Prăjiți până devine aurie.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    {
+      "name": "Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Onion",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Yellow Onion",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 720,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Beef Broth",
+      "quantity": 210,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Wine",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Worcestershire Sauce",
+      "quantity": 7.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Parsley",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Thyme",
+      "quantity": 1.0,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bay Leaves",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Balsamic Vinegar",
+      "quantity": 7.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Baguette",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Gruyère",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Parmesan",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Paprika",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/91192/french-onion-soup-gratinee/",
+  "cuisine": "French",
+  "id": "french_onion_soup_gratinee",
+  "imageUrl": "recipes/images/french/french_onion_soup_gratinee.jpg"
+}

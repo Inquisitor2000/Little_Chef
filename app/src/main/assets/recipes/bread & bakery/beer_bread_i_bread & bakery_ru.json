@@ -1,0 +1,46 @@
+{
+    "name":  "Пивной Хлеб",
+    "instructions":  "1. Разогрейте духовку до 175 градусов Цельсия и смажьте небольшую форму для хлеба кулинарным спреем.  \n\n2. В большой миске смешайте муку, разрыхлитель, соль и сахар.  \n\n3. Влейте пиво в мучную смесь.  \n\n4. Перемешайте деревянной ложкой, а затем руками до однородности; обратите внимание, что тесто будет липким.  \n\n5. Вылейте тесто в подготовленную форму.  \n\n6. Выпекайте в разогретой духовке до золотистого цвета сверху, около 50-60 минут.",
+    "simpleInstructions":  "1. Разогрейте духовку и подготовьте форму для хлеба.  \n\n2. Смешайте муку, разрыхлитель, соль, сахар и пиво для формирования теста.  \n\n3. Переложите тесто в форму для хлеба.  \n\n4. Выпекайте до золотистого цвета.",
+    "prepTimeMinutes":  10,
+    "cookTimeMinutes":  50,
+    "servings":  2,
+    "mealType":  "SNACK",
+    "dishCategory":  "BREAD",
+    "ingredients":  [
+                        {
+                            "name":  "All-Purpose Flour",
+                            "quantity":  300,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Baking Powder",
+                            "quantity":  11.25,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Salt",
+                            "quantity":  3.75,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "White Sugar",
+                            "quantity":  11,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Beer",
+                            "quantity":  180,
+                            "unit":  "ml",
+                            "isStarIngredient":  true
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/6717/beer-bread-i/",
+    "cuisine":  "Bread \u0026 Bakery",
+    "id":  "beer_bread_i",
+    "imageUrl":  "recipes/images/bread \u0026 bakery/beer_bread_i.jpg"
+}

@@ -1,0 +1,76 @@
+{
+    "name": "Pastry Margherita Pizza",
+    "instructions": "1. Preheat the oven to 220 degrees Celsius. Place the sheet of puff pastry on a piece of lightly floured parchment paper. Using a rolling pin, gently roll the pastry into an even rectangle, maintaining uniform thickness throughout. Carefully lift the pastry along with the parchment paper and transfer to a baking sheet. Using a fork, pierce the entire surface of the puff pastry at regular intervals to prevent excessive puffing during baking. In a small dish, beat the egg with the water until well combined. Using a pastry brush, coat the entire surface of the pastry with the egg wash for a golden finish. Bake in the preheated oven for 10 minutes until the pastry is partially cooked and lightly puffed.\n\n2. While the pastry bakes, prepare the sauce. In a food processor, combine the diced tomatoes, half of the olive oil, minced garlic, and a pinch of salt. Pulse until the mixture forms a smooth puree with your desired consistency. Remove the partially baked pastry from the oven. Using a spatula or your hand, gently press down on the puffed pastry to deflate it and create a flatter surface for the toppings. Spread the tomato sauce evenly over the pastry, leaving about an inch border around the edges to prevent overflow. Drizzle the remaining olive oil over the sauce. Tear or slice the mozzarella and distribute it evenly across the pizza. Grate the Parmigiano-Reggiano and sprinkle it over the mozzarella. Return to the oven and bake until the cheese is fully melted, bubbly, and the crust edges are golden brown, about 5 minutes more. Remove from the oven and immediately scatter fresh basil leaves over the hot pizza. Slice into portions and serve while hot and crispy.",
+    "simpleInstructions": "1. Roll out and bake puff pastry with egg wash until partially cooked.\n\n2. Blend tomato sauce, spread on pastry, add cheeses, and bake until golden.\n\n3. Top with fresh basil and serve hot.",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 18,
+    "servings": 2,
+    "mealType": "BREAKFAST",
+    "dishCategory": "MAIN_COURSE",
+    "ingredients": [
+        {
+            "name": "Frozen Puff Pastry",
+            "quantity": 200,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Eggs",
+            "quantity": 1,
+            "unit": "pcs",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Water",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tomato",
+            "quantity": 140,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 5,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Parmigiano-Reggiano",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Fresh Basil",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/puff-pastry-margherita-pizza-recipe-7255338",
+    "cuisine": "Italian",
+    "id": "puff_pastry_margherita_pizza",
+    "imageUrl": "recipes/images/italian/puff_pastry_margherita_pizza.webp"
+}

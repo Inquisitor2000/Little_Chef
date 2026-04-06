@@ -1,0 +1,64 @@
+{
+  "name": "Jiggly Japanese Cheesecake",
+  "instructions": "1. Preheat your oven to 150°C (300°F) and prepare a water bath by placing a large roasting pan on the lower oven rack and filling it with hot water until it reaches about halfway up the sides—this creates steam for even, gentle baking. Line a 20 cm (8-inch) round cake pan with parchment paper on the bottom and sides, ensuring the paper extends slightly above the rim to help with removal later.\n\n2. Carefully separate the eggs, placing the yolks in one bowl and the whites in a large, clean mixing bowl—even a trace of yolk will prevent the whites from whipping properly. In a medium saucepan over low heat, combine the cream cheese, butter, and milk, stirring constantly with a whisk until the mixture is completely smooth, melted, and well combined with no lumps remaining. Remove from heat and let cool slightly for 2-3 minutes.\n\n3. Sift together the cornstarch, salt, and flour into a small bowl to remove any lumps and ensure even distribution. Whisk the sifted dry ingredients into the warm cream cheese mixture until completely smooth and no streaks of flour remain. Add the egg yolks one at a time, whisking thoroughly after each addition until the batter is silky and homogeneous. Set aside.\n\n4. Using an electric mixer on medium speed, begin whipping the egg whites until they become foamy. Gradually add the sugar, a tablespoon at a time, while continuing to beat. Increase speed to medium-high and whip until soft, glossy peaks form that gently fold over when you lift the beaters—don't overbeat or the meringue will become grainy. Using a large spatula, gently fold about one-third of the meringue into the cream cheese batter to lighten it, then carefully fold in the remaining meringue in two additions, using broad, sweeping motions from the bottom up to preserve as much air as possible.\n\n5. Pour the airy batter into the prepared pan, smoothing the top gently. Tap the pan lightly on the counter to release any large air bubbles. Carefully place the pan in the water bath in the preheated oven. Bake for 30 minutes with the oven door completely closed to allow the cake to rise. Then, crack the oven door open about 2-3 cm and bake for another 20 minutes to prevent over-browning while continuing to cook through. Finally, close the door again and bake for a final 20 minutes until the top is golden and the cake jiggles slightly but is mostly set when gently shaken.\n\n6. Remove the cake from the oven and water bath immediately. Let it cool in the pan for 10 minutes, then run a knife around the edges and carefully invert onto a plate. Peel off the parchment paper, then invert again onto a serving plate so the golden top is facing up. Serve warm for the signature jiggly texture, or chill for a denser, more traditional cheesecake consistency.",
+  "simpleInstructions": "1. Preheat oven with water bath, line pan with parchment.\n\n2. Separate eggs; melt and mix cream cheese, butter, and milk until smooth.\n\n3. Sift dry ingredients into cheese mixture, then whisk in yolks one by one.\n\n4. Whip egg whites with sugar to soft peaks, fold gently into batter.\n\n5. Pour into pan, bake in water bath: 30 min closed, 20 min door cracked, 20 min closed.\n\n6. Cool briefly, flip twice, serve warm for jiggly texture.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 50,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Cream Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Unsalted Butter",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Whole Milk",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.spatuladesserts.com/jiggly-japanese-cheesecake/",
+  "cuisine": "Asian",
+  "id": "jiggly_japanese_cheesecake",
+  "imageUrl": "recipes/images/asian/jiggly_japanese_cheesecake.jpg"
+}

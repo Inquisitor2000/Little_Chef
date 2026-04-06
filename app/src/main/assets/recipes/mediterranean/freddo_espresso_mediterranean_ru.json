@@ -1,0 +1,28 @@
+{
+  "name": "Фреддо Эспрессо",
+  "instructions": "1. Налейте эспрессо и сахар в шейкер для коктейлей.\n\n2. Добавьте 4 кубика льда, накройте и встряхивайте, пока кофе не станет пенистым и холодным, а лед не растает.\n\n3. Наполните стакан льдом и вылейте взбитый кофе на лед.",
+  "simpleInstructions": "1. Встряхните эспрессо и сахар со льдом.\n\n2. Вылейте на лед в стакан.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BEVERAGE",
+  "ingredients": [
+    {
+      "name": "Brewed Coffee",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/freddo-espresso-recipe-11739755",
+  "cuisine": "Mediterranean",
+  "id": "freddo_espresso",
+  "imageUrl": "recipes/images/mediterranean/freddo_espresso.jpg"
+}

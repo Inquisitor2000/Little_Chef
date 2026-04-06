@@ -1,0 +1,100 @@
+{
+    "name": "Salată mexicană cu pui și quinoa",
+    "instructions": "1. Combinați apa, quinoa și un sfert din condimentul pentru taco într-o cratiță medie. Aduceți la fierbere puternică la foc mare.\n\n2. Odată ce fierbe, reduceți focul la mic, acoperiți strâns cu un capac și lăsați să fiarbă ușor până când quinoa este fragedă și pufoasă și toată apa a fost absorbită, aproximativ 15 minute. Scoateți de pe foc și lăsați să stea acoperit 5 minute, apoi pufosiți cu o furculiță.\n\n3. În timp ce quinoa se gătește, tăiați pieptul de pui în bucăți de dimensiunea unei mușcături și puneți într-un bol. Amestecați cu condimentul rămas pentru taco până se acoperă uniform. Lăsați să stea pentru ca puiul să absoarbă aromele, aproximativ 10 minute.\n\n4. Încălziți untul într-o tigaie mare la foc mediu până se topește și face spumă. Adăugați puiul condimentat și gătiți, amestecând ocazional, până când puiul este auriu pe exterior și nu mai este roz în centru, 5-10 minute. Verificați că temperatura internă ajunge la 74 grade Celsius.\n\n5. Transferați puiul gătit și quinoa într-un bol mare și puneți în congelator pentru a se răci rapid, aproximativ 5 minute, amestecând o dată la jumătatea timpului.\n\n6. Între timp, pregătiți legumele. Într-un bol mare de servire, combinați avocado tăiat cuburi, ceapa roșie tăiată cuburi, țelina tăiată cuburi, frunzele proaspete de spanac, morcovul ras, ardeii grași tăiați cuburi, castravetele tăiat cuburi și ardeii jalapeño tăiați cuburi.\n\n7. Adăugați amestecul răcit de pui și quinoa la legume împreună cu salsa. Amestecați totul împreună ușor dar temeinic până se combină bine. Serviți imediat sau puneți la frigider până sunteți gata să serviți.",
+    "simpleInstructions": "1. Gătiți quinoa cu apa și o parte din condimentul pentru taco până devine fragedă și pufoasă.\n\n2. Condimentați puiul tăiat cuburi cu condimentul rămas pentru taco și gătiți în unt până devine auriu.\n\n3. Răciți rapid puiul și quinoa în congelator.\n\n4. Combinați toate legumele proaspete tăiate cuburi într-un bol mare.\n\n5. Amestecați totul împreună cu salsa și serviți.",
+    "prepTimeMinutes": 20,
+    "cookTimeMinutes": 20,
+    "servings": 2,
+    "mealType": "DINNER",
+    "dishCategory": "MAIN_COURSE",
+    "ingredients": [
+        {
+            "name": "Water",
+            "quantity": 120,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Quinoa",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Taco Seasoning",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Chicken Breast",
+            "quantity": 200,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Butter",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Avocado",
+            "quantity": 75,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Red Onion",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Celery",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Spinach",
+            "quantity": 50,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Carrot",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Bell Pepper",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cucumber",
+            "quantity": 50,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Jalapeño",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salsa",
+            "quantity": 60,
+            "unit": "ml",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/242062/mexican-chicken-quinoa-salad/",
+    "cuisine": "Mexican",
+    "id": "mexican_chicken_quinoa_salad",
+    "imageUrl": "recipes/images/mexican/mexican_chicken_quinoa_salad.webp"
+}

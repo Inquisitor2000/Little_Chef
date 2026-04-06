@@ -1,0 +1,52 @@
+{
+  "name": "Macarons",
+  "instructions": "1. Pune albușurile de ou într-un vas metalic și lasă-le la frigider peste noapte.  \n\n2. A doua zi, adu albușurile la temperatura camerei. Preîncălzește cuptorul la 138 de grade Celsius. Tapetează o tavă de copt cu hârtie pergament.  \n\n3. Bate zahărul pudră împreună cu făina de migdale și un praf de sare într-un bol.  \n\n4. Bate albușurile cu un praf de sare într-un bol metalic cu un mixer electric la viteză medie până devin spumoase, aproximativ 1 minut. Crește treptat viteza la maxim, adăugând zahărul alb foarte fin, câte puțin. Bate până când albușurile devin lucioase și formează vârfuri ferme, între 3 și 5 minute.  \n\n5. Îndoaie cu grijă amestecul de făină de migdale și zahăr pudră în albușuri până când este complet încorporat. Pune amestecul într-un sac de patiserie cu un vârf mic de 3.  \n\n6. Pune mici discuri pe tava pregătită, lăsând câțiva centimetri între ele. Lasă-le la temperatura camerei până când suprafețele lucioase devin mate și se formează o peliculă subțire, aproximativ 25-30 de minute.  \n\n7. Coace în cuptorul preîncălzit timp de 19-20 de minute. Lasă să se răcească pe tava de copt înainte de a le scoate.  \n\n8. Întinde jumătate din macarons cu gemul dorit, acoperă cu celelalte macarons pentru a forma sandvișuri. Refrigerază timp de cel puțin 2 ore sau peste noapte înainte de servire.",
+  "simpleInstructions": "1. Lasă albușurile la frigider peste noapte și adu-le la temperatura camerei a doua zi.  \n\n2. Preîncălzește cuptorul la 138 de grade Celsius și tapetează tava de copt.  \n\n3. Amestecă făina de migdale cu zahărul pudră și un praf de sare.  \n\n4. Bate albușurile cu zahărul alb până se formează vârfuri ferme.  \n\n5. Îndoaie amestecul de făină în albușuri, pipează pe tavă, lasă să stea, apoi coace.  \n\n6. Răcește, umple cu gem și refrigerază.",
+  "prepTimeMinutes": 40,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Egg Whites",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Almond Flour",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jam",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/223232/macarons/",
+  "cuisine": "French",
+  "id": "macarons",
+  "imageUrl": "recipes/images/french/macarons.jpg"
+}

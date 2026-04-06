@@ -1,0 +1,70 @@
+{
+    "name": "Bruschetta cu brânză",
+    "instructions": "1. Preîncălziți cuptorul la 175 de grade Celsius.\n\n2. Tăiați baghetul în felii diagonale. Aranjați feliile într-un singur strat pe o tavă de copt.\n\n3. Ungeți ambele părți ale fiecărei felii generos cu uleiul de măsline pentru a le ajuta să devină crocante și a adăuga aromă.\n\n4. Tăiați roșiile subțire și aranjați feliile deasupra pâinii. Rupeți sau tocați busuiocul proaspăt și presărați peste roșii împreună cu oregano uscat.\n\n5. Condimentați cu pudra de usturoi și piperul alb, distribuind uniform peste toate feliile.\n\n6. Acoperiți feliile de roșii cu mozzarella și provolone rase, asigurându-vă că fiecare felie este bine acoperită cu brânză.\n\n7. Așezați frunze suplimentare de busuioc proaspăt, încă un praf de oregano uscat și felii extra de roșii deasupra brânzei pentru aromă și prezentare suplimentară.\n\n8. Coaceți în cuptorul preîncălzit până când brânza se topește, face bule și devine ușor aurie, aproximativ 7-10 minute. Serviți caldă.",
+    "simpleInstructions": "1. Preîncălziți cuptorul și aranjați feliile de baghetă pe o tavă de copt.\n\n2. Ungeți feliile cu ulei de măsline pe ambele părți.\n\n3. Acoperiți cu roșii feliate, busuioc proaspăt, oregano uscat, pudră de usturoi și piper alb.\n\n4. Acoperiți cu mozzarella și provolone, adăugați mai multe ierburi și roșii, apoi coaceți până face bule.",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 10,
+    "servings": 2,
+    "mealType": "BREAKFAST",
+    "dishCategory": "APPETIZER",
+    "ingredients": [
+        {
+            "name": "Baguette",
+            "quantity": 100,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Olive oil",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tomato",
+            "quantity": 70,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Fresh Basil",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Dried Oregano",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic powder",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "White pepper",
+            "quantity": 0.25,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Provolone",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/20545/bruschetta-iii/",
+    "cuisine": "Italian",
+    "id": "bruschetta_iii",
+    "imageUrl": "recipes/images/italian/bruschetta_iii.webp"
+}

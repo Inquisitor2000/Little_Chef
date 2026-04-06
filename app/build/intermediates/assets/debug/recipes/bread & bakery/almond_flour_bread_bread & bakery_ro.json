@@ -1,0 +1,58 @@
+{
+  "name": "Pâine din Făină de Migdale",
+  "instructions": "1. Preîncălziți cuptorul la 175 de grade Celsius. Ungeți ușor o tavă de pâine de 8x4 inch sau căptușiți cu hârtie de copt.  \n\n2. Amestecați făina de migdale, făina de in, ouăle, laptele de migdale, uleiul de măsline, praful de copt și sarea într-un bol până se formează un aluat moale.  \n\n3. Transferați aluatul în tava de pâine pregătită.  \n\n4. Coaceți în cuptorul preîncălzit până devine auriu pe deasupra, aproximativ 40 de minute.  \n\n5. Răciți în tavă timp de 10 minute înainte de a transfera pe un grătar pentru a se răci complet.",
+  "simpleInstructions": "1. Preîncălziți cuptorul la 175 de grade Celsius și pregătiți tava de pâine.  \n\n2. Amestecați toate ingredientele într-un aluat moale.  \n\n3. Turnați aluatul în tava de pâine.  \n\n4. Coaceți timp de 40 de minute până devine auriu.  \n\n5. Răciți în tavă 10 minute, apoi transferați pe grătar.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 40,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "BREAD",
+  "ingredients": [
+    {
+      "name": "Almond Flour",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Flaxseed Meal",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Almond Milk",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/246002/almond-flour-bread/",
+  "cuisine": "Bread & Bakery",
+  "id": "almond_flour_bread",
+  "imageUrl": "recipes/images/bread & bakery/almond_flour_bread.jpg"
+}

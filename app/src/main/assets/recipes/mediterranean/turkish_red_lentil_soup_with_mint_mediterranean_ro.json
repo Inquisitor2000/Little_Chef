@@ -1,0 +1,100 @@
+{
+  "name": "Supă Turcească de Linte Roșie cu Mentă",
+  "instructions": "1. Încălziți uleiul de măsline într-o oală mare la foc mediu. Adăugați ceapa și sotați până începe să se înmoaie, aproximativ 2 minute. Amestecați usturoiul și gătiți încă 2 minute.\n\n2. Adăugați roșiile cubulețe și gătiți timp de 10 minute. Amestecați bulionul de pui, lintea, bulgur, orezul, pasta de tomate, menta, boia, piperul cayenne, sarea și piperul negru; aduceți la fierbere. Reduceți focul la mediu-scăzut și lăsați să fiarbă până când lintea și orezul sunt fragede, aproximativ 30 de minute.\n\n3. Pasați supa cu un blender de mână până devine netedă. Serviți cu mentă suplimentară și felii de lămâie dacă doriți.",
+  "simpleInstructions": "1. Sotați ceapa și usturoiul în ulei de măsline.\n\n2. Adăugați roșiile și gătiți, apoi adăugați ingredientele rămase și lăsați să fiarbă.\n\n3. Pasați până devine netedă și serviți.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 50,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Tomatoes",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 420,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Red Lentils",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Bulgur",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rice",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato Paste",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Mint",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Paprika",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/219817/turkish-red-lentil-soup-with-mint/",
+  "cuisine": "Mediterranean",
+  "id": "turkish_red_lentil_soup_with_mint",
+  "imageUrl": "recipes/images/mediterranean/turkish_red_lentil_soup_with_mint.jpg"
+}

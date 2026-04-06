@@ -1,0 +1,142 @@
+{
+  "name": "Французский миндальный торт с ромом",
+  "instructions": "1. Разогрейте духовку до 350 градусов Ф (175 градусов Ц). Смажьте небольшую круглую форму для торта несоленым сливочным маслом и выложите дно пергаментом; смажьте пергамент маслом.  \n\n2. Для торта взбейте несоленое сливочное масло, коричневый сахар, белый сахар, соль и мускатный орех в большой миске до легкой и пушистой консистенции, около 3 минут. Добавьте миндальную муку и взбивайте в течение 1 минуты.  \n\n3. По одному добавляйте яйца, хорошо взбивая после каждого добавления. После того как последнее яйцо будет добавлено, взбивайте тесто на средней высокой скорости в течение 3 минут.  \n\n4. Вмешайте ром, лимонную цедру, ванильный экстракт и второй ванильный экстракт до однородности. Уменьшите скорость до низкой и добавьте универсальную муку и разрыхлитель, смешивая до легкого объединения.  \n\n5. Вылейте тесто в приготовленную форму и разровняйте его на ровный слой. Выпекайте до золотистого цвета, пока зубочистка не выйдет чистой, 45-50 минут. Дайте остыть в форме в течение 10 минут, затем переверните на решетку.  \n\n6. Для сиропа поместите воду и белый сахар в кастрюлю на среднем огне, готовя до растворения сахара и кипения, 2-3 минуты. Снимите с огня, добавьте ром и готовьте еще 2 минуты. Уберите с огня.  \n\n7. Нанесите теплый сироп на теплый торт до полного впитывания. Охладите полностью в течение 30 минут.  \n\n8. Для глазури взбейте лимонный сок, сахарную пудру, соль и жирные сливки до однородной консистенции. При необходимости измените густоту.  \n\n9. Поместите торт на подставку. Полейте глазурью, равняйте верх. Посыпьте жареными миндалем и дайте застыть перед подачей.",
+  "simpleInstructions": "1. Разогрейте духовку и подготовьте форму.  \n2. Взбейте масло и сахара, затем добавьте миндальную муку.  \n3. Введите яйца, затем взбейте тесто.  \n4. Вмешайте влажные ингредиенты, затем добавьте муку и разрыхлитель.  \n5. Выпекайте и дайте торту остыть.  \n6. Приготовьте и нанесите сироп.  \n7. Приготовьте и нанесите глазурь.  \n8. Украсить миндалем.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 55,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Unsalted Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Nutmeg",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Almond Flour",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Rum",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 1.2,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rum",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.2,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Heavy Cream",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Almonds",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/french-almond-rum-cake-recipe-8733619",
+  "cuisine": "French",
+  "id": "french_almond_rum_cake",
+  "imageUrl": "recipes/images/french/french_almond_rum_cake.jpg"
+}

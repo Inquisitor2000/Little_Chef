@@ -1,0 +1,82 @@
+{
+  "name": "Carne în Stil Mexican la Slow Cooker a lui Charley",
+  "instructions": "1. Pregătiți friptura de chuck tăind orice bucăți mari de grăsime în exces de pe suprafață, lăsând un strat subțire pentru aromă. Uscați carnea cu prosoape de hârtie și condimentați generos pe toate laturile cu sare și piper negru. 2. Încălziți uleiul de măsline într-o tigaie mare la foc mediu-mare până devine strălucitor. Tigaia ar trebui să fie foarte fierbinte pentru o prăjire corespunzătoare. 3. Așezați cu grijă friptura condimentată în tigaia fierbinte și prăjiți 3-4 minute pe fiecare parte, întorcând pentru a rumeni toate laturile uniform. Doriți o crustă aurie închisă. Carnea nu trebuie să fie gătită complet, doar frumos rumenită pe exterior. Transferați friptura rumenită în slow cooker-ul dvs. 4. În aceeași tigaie (nu o curățați - acele bucăți rumeni adaugă aromă), adăugați ceapa tăiată cubulețe. Gătiți la foc mediu, amestecând frecvent, timp de 3-4 minute până când ceapa se înmoaie și devine translucidă. Adăugați ceapa în slow cooker, împrăștiind-o peste și în jurul fripturii. 5. Adăugați ardeii verzi chile, pudra de chili, piperul cayenne, sosul iute și pudra de usturoi direct în slow cooker, distribuind condimentele uniform peste carne. 6. Turnați suficientă apă pentru a ajunge la aproximativ 1/3 din înălțimea fripturii (aproximativ 100ml, dar ajustați după cum este necesar). Nu scufundați carnea - doriți să se gătească la abur, nu să fiarbă. 7. Acoperiți slow cooker-ul cu capacul și setați-l pe HIGH. Gătiți timp de 6 ore, verificând ocazional pentru a vă asigura că mai este puțin lichid în fund. Dacă arată uscat, adăugați puțină mai multă apă. Carnea ar trebui să devină foarte fragedă. 8. După 6 ore, reduceți setarea de căldură la LOW și continuați să gătiți încă 2-4 ore, până când carnea este fragedă și se desface ușor cu o furculiță. Timpul total de gătit va fi de 8-10 ore. Veți ști că este gata când puteți trage ușor carnea în bucăți. 9. Transferați cu grijă friptura într-un bol mare sau pe o placă de tăiat. Folosind două furculițe, fărâmițați carnea trăgând-o în bucăți de mărimea unei mușcături. Aruncați orice bucăți mari de grăsime pe care le întâlniți. 10. Dacă doriți, rezervați aproximativ 2 căni (480ml) din lichidul de gătit din slow cooker. Puteți îndepărta grăsimea în exces de pe suprafață dacă doriți. Acest lichid aromat poate fi folosit pentru a umezi carnea fărâmițată sau ca sos. 11. Returnați carnea fărâmițată în slow cooker cu o parte din lichidul rezervat pentru a o păstra umedă, sau transferați într-un bol de servire. 12. Serviți carnea fragedă și aromată în stil mexican în tortillas calde pentru tacos, în tortillas mari de făină pentru burrito, peste orez în boluri de burrito sau cum preferați. Adăugați deasupra ingredientele preferate precum brânză, smântână, salsa, guacamole, salată și roșii.",
+  "simpleInstructions": "1. Tăiați grăsimea în exces de pe friptură și condimentați cu sare și piper. 2. Încălziți uleiul de măsline în tigaie la foc mediu-mare. 3. Prăjiți friptura 3-4 minute pe fiecare parte până se rumenește; transferați în slow cooker. 4. Gătiți ceapa în aceeași tigaie 3-4 minute; adăugați în slow cooker. 5. Adăugați ardeii verzi, pudra de chili, cayenne, sosul iute și pudra de usturoi în slow cooker. 6. Adăugați apă pentru a acoperi 1/3 din friptură. 7. Acoperiți și gătiți pe HIGH timp de 6 ore. 8. Reduceți la LOW și gătiți încă 2-4 ore până carnea se desface ușor. 9. Transferați carnea în bol și fărâmițați cu două furculițe. 10. Rezervați 2 căni de lichid de gătit dacă doriți. 11. Returnați carnea fărâmițată în slow cooker cu puțin lichid. 12. Serviți în tacos, burrito sau peste orez cu ingrediente deasupra.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 480,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "BEEF",
+  "ingredients": [
+    {
+      "name": "Chuck Roast",
+      "quantity": 310,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Green Chile Peppers",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chili Powder",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Hot Sauce",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic Powder",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 100,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/16995/charleys-slow-cooker-mexican-style-meat/",
+  "cuisine": "American",
+  "id": "charleys_slow_cooker_mexican_style_meat",
+  "imageUrl": "recipes/images/meat dishes/charleys_slow_cooker_mexican_style_meat.jpg"
+}

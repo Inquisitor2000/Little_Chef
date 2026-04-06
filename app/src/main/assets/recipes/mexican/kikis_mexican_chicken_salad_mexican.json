@@ -1,0 +1,118 @@
+{
+  "name": "Mexican Chicken Salad",
+  "instructions": "1. Preparation note: Ensure the Chicken Breast is fully cooked and cooled before starting. You can grill, bake, or poach it, then dice into bite-sized pieces. In a large bowl, gently combine the diced cooked chicken, shredded Carrot, diced Bell Pepper, diced Jicama, diced Red Onion, Corn kernels, halved Cherry Tomatoes, diced Avocado, and chopped Fresh Cilantro. Toss gently to distribute evenly.\n\n2. In a separate small bowl, whisk together the Sour Cream, Mayonnaise, freshly squeezed Lemon Juice, Cumin, Salt, Black Pepper, Taco Seasoning, and Hot Sauce until smooth and well blended. Taste and adjust seasoning if needed.\n\n3. Pour the creamy dressing over the salad mixture and toss gently but thoroughly to coat all ingredients evenly without mashing the avocado.\n\n4. Cover the bowl tightly with plastic wrap and refrigerate for at least 1 hour to allow the flavors to meld together. Serve chilled as a main dish or in tortillas as wraps.",
+  "simpleInstructions": "1. Combine all diced salad ingredients including cooked chicken in a large bowl.\n\n2. Whisk together the dressing ingredients in a separate bowl.\n\n3. Pour the dressing over the salad and toss gently to coat.\n\n4. Refrigerate for at least 1 hour before serving chilled.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "CHICKEN",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 210,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Carrot",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jicama",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Onion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Corn",
+      "quantity": 180,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cherry Tomatoes",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Avocado",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Fresh Cilantro",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": 45,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cumin",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Taco Seasoning",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Hot Sauce",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/86916/kikis-mexican-chicken-salad/",
+  "cuisine": "Mexican",
+  "id": "kikis_mexican_chicken_salad",
+  "imageUrl": "recipes/images/mexican/kikis_mexican_chicken_salad.webp"
+}

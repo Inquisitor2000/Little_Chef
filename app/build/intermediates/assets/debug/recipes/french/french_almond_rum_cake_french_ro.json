@@ -1,0 +1,142 @@
+{
+  "name": "Tort cu migdale și rom în stil franțuzesc",
+  "instructions": "1. Preîncălziți cuptorul la 175 de grade Celsius. Ungeți o tavă mică de tort cu untul nesărat și tapetați fundul cu hârtie de copt; ungeți hârtia cu unt.  \n\n2. Pentru tort, bateți untul nesărat, zahărul brun, zahărul alb, sarea și nucșoara împreună într-un bol mare până devine ușor și pufoasă, aproximativ 3 minute. Adăugați făina de migdale și bateți timp de 1 minut.  \n\n3. Adăugați oul câte unul, bătând bine după fiecare adăugare. După ce ultimul ou este încorporat, bateți aluatul la viteză medie-înaltă timp de 3 minute.  \n\n4. Amestecați romul, coaja de lămâie, extractul de vanilie și extractul de vanilie până se combină. Reduceți viteza la mică și adăugați făina universală și praful de copt, amestecând până se înglobează.  \n\n5. Turnați aluatul în tava pregătită și nivelați-l uniform. Coaceți până devine maroniu și o scobitoare iese curată, 45 - 50 de minute. Lăsați să se răcească în tavă timp de 10 minute, apoi răsturnați pe un grătar.  \n\n6. Pentru sirop, puneți apa și zahărul alb într-o cratiță pe foc mediu-mic, gătind până zahărul se dizolvă și fierbe, 2 - 3 minute. Îndepărtați de pe foc, amestecați romul și mai gătiți timp de 2 minute. Îndepărtați de pe foc.  \n\n7. Ungeți siropul cald peste tortul cald până se absoarbe. Lăsați să se răcească complet timp de 30 de minute.  \n\n8. Pentru glazură, bateți sucul de lămâie, zahărul pudră, sarea și smântâna grasă până devin netede. Ajustați grosimea după cum este necesar.  \n\n9. Așezați tortul pe un platou. Turnați glazura peste tort, netezind suprafața. Presărați cu migdalele și lăsați să se întărească înainte de a servi.",
+  "simpleInstructions": "1. Preîncălziți cuptorul și pregătiți tava.  \n2. Bateți untul și zaharurile, apoi adăugați făina de migdale.  \n3. Încorporați oul, apoi bateți aluatul.  \n4. Amestecați ingredientele umede, apoi adăugați amestecul de făină.  \n5. Coaceți și răciți tortul.  \n6. Pregătiți și aplicați siropul.  \n7. Faceți și aplicați glazura.  \n8. Garnisiți cu migdale.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 55,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Unsalted Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Nutmeg",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Almond Flour",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Rum",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 1.2,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rum",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.2,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Heavy Cream",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Almonds",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/french-almond-rum-cake-recipe-8733619",
+  "cuisine": "French",
+  "id": "french_almond_rum_cake",
+  "imageUrl": "recipes/images/french/french_almond_rum_cake.jpg"
+}

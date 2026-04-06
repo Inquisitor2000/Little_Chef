@@ -1,0 +1,100 @@
+{
+    "name":  "Lasagna cu Fasole Neagră",
+    "instructions":  "1. Preîncălziți cuptorul la 200°C și poziționați grătarul în centru. Ungeți ușor o tavă de copt de 23x33 cm cu spray de gătit sau un strat subțire de ulei pentru a preveni lipirea. \n\n2. Încălziți uleiul vegetal într-o tigaie mare la foc mediu până devine strălucitor. Adăugați ceapa tăiată cuburi și ardeii grași, gătind timp de 3-4 minute până încep să se înmoaie. \n\n3. Adăugați usturoiul tocat în tigaie și gătiți încă un minut, amestecând constant pentru a preveni arderea, până devine parfumat. \n\n4. Amestecați fasolea neagră (scursă și clătită), roșiile tăiate cuburi cu sucul lor și salsa. Condimentați cu sare și piper negru după gust. \n\n5. Aduceți amestecul la o fierbere ușoară, apoi reduceți focul la mediu-mic. Gătiți timp de 8-10 minute, amestecând ocazional, până când sosul s-a îngroșat și legumele sunt fragede. Amestecul ar trebui să fie suficient de gros pentru a-și păstra forma când este stratificat. \n\n6. În timp ce amestecul de fasole fierbe, pregătiți stratul de avocado: Într-un bol mediu, pisați avocado cu usturoiul rămas și sucul de lămâie până devine neted și cremos. Condimentați cu o presărare de sare dacă doriți. \n\n7. Pentru a asambla lasagna, începeți prin a pune un strat de tortillas de porumb pe fundul tăvii de copt pregătite, suprapunându-se ușor pentru a acoperi întreaga suprafață. Poate fi necesar să rupeți unele tortillas pentru a se potrivi. \n\n8. Întindeți o treime din amestecul de fasole uniform peste tortillas, asigurându-vă că ajunge la toate marginile. \n\n9. Întindeți jumătate din amestecul de avocado peste stratul de fasole, apoi presărați cu o treime din brânza cheddar rasă. \n\n10. Adăugați un alt strat de tortillas, apăsând ușor pentru a compacta straturile. \n\n11. Întindeți jumătate din amestecul de fasole rămas peste tortillas, urmat de amestecul de avocado rămas. Presărați cu jumătate din brânza rămasă. \n\n12. Adăugați un strat final de tortillas, apoi acoperiți cu amestecul de fasole rămas. Întindeți uniform și presărați cu brânza rămasă, acoperind întreaga suprafață. \n\n13. Acoperiți tava de copt cu folie de aluminiu (pulverizați partea de jos cu spray de gătit pentru a preveni lipirea brânzei) și coaceți timp de 25 de minute. \n\n14. Îndepărtați folia și coaceți încă 10 minute, sau până când brânza este topită și face bule și marginile sunt ușor aurii. \n\n15. Lăsați lasagna să se odihnească timp de 5-10 minute înainte de a tăia pentru a permite straturilor să se stabilizeze. Acest lucru face mai ușoară servirea porțiilor îngrijite. Decorați cu coriandru proaspăt, smântână sau salsa suplimentară dacă doriți.",
+    "simpleInstructions":  "1. Preîncălziți cuptorul la 200°C și ungeți o tavă de copt. \n\n2. Încălziți uleiul într-o tigaie la foc mediu. Adăugați ceapa, ardeii grași și usturoiul; gătiți până se înmoaie. \n\n3. Amestecați fasolea neagră, roșiile și salsa. Condimentați cu sare și piper. Lăsați să fiarbă timp de 8-10 minute până se îngroașă. \n\n4. Pisați avocado cu usturoiul rămas și sucul de lămâie într-un bol. \n\n5. Stratificați tortillas în tava de copt, apoi 1/3 din amestecul de fasole, 1/2 din amestecul de avocado și 1/3 din brânză. \n\n6. Repetați cu un alt strat de tortillas, 1/2 din amestecul de fasole rămas, amestecul de avocado rămas și 1/2 din brânza rămasă. \n\n7. Adăugați stratul final de tortillas, amestecul de fasole rămas și brânza rămasă. \n\n8. Acoperiți cu folie și coaceți timp de 25 de minute. Îndepărtați folia și coaceți încă 10 minute. \n\n9. Lăsați să se odihnească 5-10 minute înainte de servire.",
+    "prepTimeMinutes":  30,
+    "cookTimeMinutes":  35,
+    "servings":  2,
+    "mealType":  "DINNER",
+    "dishCategory":  "VEGETARIAN",
+    "ingredients":  [
+                        {
+                            "name":  "Vegetable Oil",
+                            "quantity":  5,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Onion",
+                            "quantity":  100,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Garlic",
+                            "quantity":  10,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Bell Pepper",
+                            "quantity":  50,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Bell Pepper",
+                            "quantity":  50,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Black Beans",
+                            "quantity":  430,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Canned Tomatoes",
+                            "quantity":  180,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Salsa",
+                            "quantity":  120,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Avocado",
+                            "quantity":  60,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Lemon Juice",
+                            "quantity":  7.5,
+                            "unit":  "ml",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Tortillas",
+                            "quantity":  90,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Cheddar Cheese",
+                            "quantity":  100,
+                            "unit":  "g",
+                            "isStarIngredient":  true
+                        },
+                        {
+                            "name":  "Salt",
+                            "quantity":  2.5,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        },
+                        {
+                            "name":  "Black Pepper",
+                            "quantity":  2.5,
+                            "unit":  "g",
+                            "isStarIngredient":  false
+                        }
+                    ],
+    "sourceUrl":  "https://www.allrecipes.com/recipe/87173/black-bean-lasagna/",
+    "cuisine":  "American",
+    "id":  "black_bean_lasagna",
+    "imageUrl":  "recipes/images/vegetarian \u0026 vegan/black_bean_lasagna.jpg"
+}

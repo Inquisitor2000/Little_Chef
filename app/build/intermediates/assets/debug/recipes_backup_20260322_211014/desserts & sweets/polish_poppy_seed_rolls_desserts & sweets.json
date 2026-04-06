@@ -1,0 +1,112 @@
+{
+  "name": "Polish Poppy Seed Rolls",
+  "instructions": "1. In a medium bowl, combine the warm milk (heated to about 110°F/43°C), active dry yeast, and half of the flour (45g). Whisk together until smooth. This mixture is called a 'sponge'. Cover the bowl with a clean kitchen towel and let it sit in a warm place for 30 minutes until it becomes bubbly and foamy. \n\n2. After 30 minutes, add the egg yolks, sugar, melted butter (cooled slightly), salt, and vanilla extract to the sponge. Whisk until well combined and smooth. \n\n3. Add the remaining flour (45g) and stir with a wooden spoon until a shaggy dough forms. Turn the dough out onto a lightly floured surface. \n\n4. Knead the dough by hand for about 5-7 minutes, until it becomes smooth, elastic, and slightly tacky but not sticky. Add a tiny bit more flour if needed, but keep the dough soft. \n\n5. Place the dough in a greased bowl, turning once to coat all sides with oil. Cover with a clean towel and let rise in a warm, draft-free place for about 2 hours, until doubled in size. \n\n6. Meanwhile, make the poppy seed filling: In a small saucepan, combine the butter, milk, honey, sugar, and water. Heat over medium heat, stirring occasionally, until the butter melts and the mixture comes to a gentle simmer. \n\n7. Add the poppy seeds and stir well. Reduce heat to low and cook, stirring frequently, for about 5-7 minutes until the mixture thickens to a paste-like consistency. It should be spreadable but not runny. \n\n8. Remove from heat and let the filling cool completely to room temperature before using, about 30-45 minutes. You can speed this up by placing the pan in an ice bath and stirring occasionally. \n\n9. Preheat your oven to 375°F (190°C). Line a baking sheet with parchment paper. \n\n10. Once the dough has doubled, punch it down gently to release the air. On a lightly floured surface, roll the dough into a 10x18-inch rectangle, with the long side facing you. \n\n11. Spread the cooled poppy seed filling evenly over the dough, leaving a 1/2-inch border on all sides. Starting from the long side closest to you, tightly roll the dough up into a log, pinching the seam to seal. \n\n12. Using a sharp knife or dental floss, cut the log into 8 equal pieces (each about 2 inches wide). Place the rolls cut-side up on the prepared baking sheet, spacing them about 2 inches apart. \n\n13. Let the rolls sit uncovered for 5 minutes to relax slightly. This brief rest makes them easier to bake evenly. \n\n14. Bake in the preheated oven for 20-25 minutes, until the rolls are golden brown on top and cooked through. They should sound hollow when tapped on the bottom. \n\n15. Remove from the oven and let cool on the baking sheet for 10 minutes, then transfer to a wire rack. \n\n16. In a small bowl, whisk together the powdered sugar and milk until smooth. The glaze should be thick but pourable - add a few more drops of milk if needed. \n\n17. Once the rolls have cooled to warm (not hot), brush or drizzle the glaze over the tops. Let the glaze set for a few minutes before serving. These are best enjoyed the same day but can be stored in an airtight container for up to 2 days.",
+  "simpleInstructions": "1. Mix warm milk, yeast, and half the flour; let sit 30 minutes until bubbly. \n\n2. Add egg yolks, sugar, melted butter, salt, and vanilla; whisk. \n\n3. Add remaining flour and mix to form dough. \n\n4. Knead 5-7 minutes until smooth and elastic. \n\n5. Place in greased bowl, cover, and let rise 2 hours until doubled. \n\n6. For filling: Heat butter, milk, honey, sugar, and water until simmering. \n\n7. Add poppy seeds and cook 5-7 minutes until thick. \n\n8. Cool filling completely. \n\n9. Preheat oven to 375°F and line baking sheet. \n\n10. Roll dough into 10x18-inch rectangle. \n\n11. Spread filling over dough and roll up tightly. \n\n12. Cut into 8 pieces and place on baking sheet. \n\n13. Let rest 5 minutes. \n\n14. Bake 20-25 minutes until golden. \n\n15. Cool 10 minutes on sheet, then transfer to rack. \n\n16. Mix powdered sugar with milk for glaze. \n\n17. Brush glaze over warm rolls and let set.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "BAKED_DISH",
+  "ingredients": [
+    {
+      "name": "Milk",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Active Dry Yeast",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 90,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Egg Yolks",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Honey",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Poppy Seeds",
+      "quantity": 110,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/281908/polish-poppy-seed-rolls/",
+  "cuisine": "American",
+  "id": "polish_poppy_seed_rolls",
+  "imageUrl": "recipes/images/desserts & sweets/polish_poppy_seed_rolls.jpg"
+}

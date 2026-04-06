@@ -1,0 +1,76 @@
+{
+  "name": "Rulouri de Pui Cordon Bleu",
+  "instructions": "1. Preîncălziți cuptorul la 200 de grade Celsius și ungeți ușor o tavă de copt.  \n\n2. Așezați fiecare jumătate de piept de pui între folie de plastic și bateți-o până la o grosime de 1/20.3 cm.  \n\n3. Puneți o felie de brânză elvețiană pe fiecare felie de șuncă, condimentați cu cimbru uscat, sare și piper, apoi rulați-le în stil jellyroll.  \n\n4. Înfășurați fiecare piept de pui în jurul șuncii și brânzei, ascundeți capetele și fixați-le cu scobitori.  \n\n5. Scotchți fiecare rulou de pui în unt topit, acoperiți-l cu fulgi de porumb și așezați-l în tava de copt.  \n\n6. Coaceți timp de aproximativ 40 de minute până devin aurii și sucurile devin clare.  \n\n7. Pentru sos, încălziți bulionul de pui, smântâna acră și sucul de lămâie la foc mic până când se combină.  \n\n8. Serviți sosul fierbinte peste rulourile de pui.",
+  "simpleInstructions": "1. Preîncălziți și ungeți tava de copt.  \n\n2. Bateți pieptul de pui subțire, înfășurați brânza elvețiană în șuncă, rulați cu puiul.  \n\n3. Acoperiți cu unt și fulgi de porumb, coaceți.  \n\n4. Faceți sosul din bulion, smântână și suc de lămâie, serviți cu rulourile de pui.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 40,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "CHICKEN",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ham",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Swiss Cheese",
+      "quantity": 70,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dried Thyme",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornflakes",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 160,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/16602/cordon-bleu-chicken-rolls/",
+  "cuisine": "French",
+  "id": "cordon_bleu_chicken_rolls",
+  "imageUrl": "recipes/images/french/cordon_bleu_chicken_rolls.jpg"
+}

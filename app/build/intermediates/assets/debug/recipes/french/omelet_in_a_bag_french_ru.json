@@ -1,0 +1,64 @@
+{
+  "name": "Омлет в пакете",
+  "instructions": "1. Разбейте яйца в большой пакет с застёжкой. Вытяните из него большую часть воздуха и закройте.\n\n2. Потрясите или сожмите пакет, чтобы взбить яйца.\n\n3. Откройте пакет и добавьте нарезанную ветчину, натёртый сыр чеддер, нарезанный помидор, нарезанные шампиньоны, мелко нарезанный лук, нарезанный зеленый болгарский перец и сальсу. Перемешайте все ингредиенты.\n\n4. Вытяните столько воздуха, сколько сможете, и снова закройте пакет.\n\n5. Доведите большую кастрюлю с водой до кипения. Поместите пакет (до 8 пакетов за раз) в кипящую воду и готовьте ровно 13 минут.\n\n6. Откройте пакет и дайте омлету выскользнуть на тарелку. Омлет должен легко выскользнуть.",
+  "simpleInstructions": "1. Взбейте яйца в пакете.\n\n2. Добавьте ветчину, сыр чеддер, помидор, шампиньоны, лук, зеленый болгарский перец и сальсу, затем закройте пакет без воздуха.\n\n3. Варите пакет в воде 13 минут.\n\n4. Откройте и выложите омлет на тарелку.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 13,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Eggs",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ham",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Tomato",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Button Mushroom",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Green Bell Pepper",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salsa",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/85107/omelet-in-a-bag/",
+  "cuisine": "French",
+  "id": "omelet_in_a_bag",
+  "imageUrl": "recipes/images/french/omelet_in_a_bag.jpg"
+}

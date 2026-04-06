@@ -1,0 +1,106 @@
+{
+    "name": "Итальянская фриттата",
+    "instructions": "1. Разогрейте духовку до 220 градусов Цельсия. Смажьте неглубокую форму для запекания.\n\n2. Нагрейте оливковое масло на сковороде на среднем огне. Добавьте нарезанную салями и готовьте до легкой хрустящей корочки, около 2 минут. Добавьте слитые и нарезанные артишоки, разрезанные пополам помидоры черри и нарезанные грибы. Готовьте, периодически помешивая, пока овощи не станут мягкими и не выделят ароматы, около 4 минут. Переложите смесь с салями в подготовленную форму для запекания.\n\n3. В большой миске взбейте яйца с молоком до однородности. Добавьте нарезанный зеленый лук, измельченный чеснок, сушеный базилик, луковый порошок, соль и черный перец. Взбейте до равномерного распределения приправ. Вылейте яичную смесь на смесь с салями в форме, убедившись, что она равномерно покрывает все.\n\n4. Посыпьте тертой моцареллой и пармезаном по всей поверхности, равномерно распределяя для полного покрытия.\n\n5. Выпекайте в разогретой духовке до полного застывания яиц в центре и расплавления сыра с легким золотистым оттенком, около 20 минут. Фриттата готова, когда нож, вставленный в центр, выходит чистым. Дайте остыть несколько минут перед нарезкой и подачей.",
+    "simpleInstructions": "1. Разогрейте духовку и смажьте форму для запекания.\n\n2. Приготовьте салями с овощами в оливковом масле до мягкости.\n\n3. Взбейте яйца с молоком и приправами, затем вылейте на смесь с салями.\n\n4. Посыпьте сырами и запекайте до застывания.",
+    "prepTimeMinutes": 10,
+    "cookTimeMinutes": 25,
+    "servings": 2,
+    "mealType": "LUNCH",
+    "dishCategory": "MAIN_COURSE",
+    "ingredients": [
+        {
+            "name": "Olive Oil",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salami",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Canned Artichokes",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Cherry Tomatoes",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Button Mushroom",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Eggs",
+            "quantity": 2,
+            "unit": "pcs",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Milk",
+            "quantity": 30,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Scallion",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 2.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Dried Basil",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Onion Powder",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 0.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Parmesan",
+            "quantity": 20,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": true
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/228687/italian-frittata/",
+    "cuisine": "Italian",
+    "id": "italian_frittata",
+    "imageUrl": "recipes/images/italian/italian_frittata.jpg"
+}

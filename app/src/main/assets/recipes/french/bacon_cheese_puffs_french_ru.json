@@ -1,0 +1,46 @@
+{
+  "name": "Пуховые булочки с беконом и сыром",
+  "instructions": "1. Поместите бекон в большую глубокую сковороду. Готовьте на среднем огне до равномерного золотистого цвета. Слейте жир, поломайте бекон и отложите в сторону.  \n\n2. Разогрейте духовку до гриля.  \n\n3. В средней миске смешайте бекон, сыр чеддер, горчицу и майонез. Хорошо перемешайте.  \n\n4. Выложите белый хлеб на противень. Ложкой распределите начинку на каждый ломтик хлеба.  \n\n5. Грильте в течение 5 минут или до появления пузырьков.",
+  "simpleInstructions": "1. Приготовьте бекон, поломайте и отложите в сторону.  \n\n2. Разогрейте духовку до гриля.  \n\n3. Смешайте бекон, сыр чеддер, горчицу и майонез.  \n\n4. Ложкой положите начинку на белый хлеб. Грильте до появления пузырьков.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 5,
+  "servings": 2,
+  "mealType": "SNACK",
+  "dishCategory": "APPETIZER",
+  "ingredients": [
+    {
+      "name": "Bacon",
+      "quantity": 45,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mustard",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Bread",
+      "quantity": 90,
+      "unit": "g",
+      "isStarIngredient": true
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/16504/bacon-cheese-puffs/",
+  "cuisine": "French",
+  "id": "bacon_cheese_puffs",
+  "imageUrl": "recipes/images/french/bacon_cheese_puffs.jpg"
+}

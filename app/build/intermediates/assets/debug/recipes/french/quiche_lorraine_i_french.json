@@ -1,0 +1,70 @@
+{
+  "name": "Quiche Lorraine",
+  "instructions": "1. Preheat the oven to 425 degrees F (220 degrees C). 2. Cook the bacon in a large skillet over medium-high heat until evenly browned, about 10 minutes. Drain on paper towels and chop coarsely. 3. Sprinkle the bacon, Swiss cheese, and minced onion into the prepared pie crust. 4. In a medium bowl, whisk together the light cream, eggs, salt, sugar, and cayenne pepper. Pour the mixture into the pastry shell. 5. Bake in the preheated oven for 15 minutes. Reduce heat to 300 degrees F (150 degrees C) and continue baking until a knife inserted 1 inch from the edge comes out clean, about 30 minutes. 6. Allow the quiche to sit for 10 minutes before cutting into wedges and serving.",
+  "simpleInstructions": "1. Preheat oven to 425 degrees Fahrenheit (220 degrees Celsius). 2. Cook and chop bacon; sprinkle with the cheese and onion in pie crust. 3. Mix the cream, eggs, salt, sugar, cayenne; pour into crust. 4. Bake 15 mins at 425 degrees Fahrenheit; lower to 300 degrees Fahrenheit and bake 30 mins. 5. Rest 10 mins before serving.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 55,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Bacon",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Swiss Cheese",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Onion",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Heavy Cream",
+      "quantity": 160,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 0.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/17515/quiche-lorraine-i/",
+  "cuisine": "French",
+  "id": "quiche_lorraine_i",
+  "imageUrl": "recipes/images/french/quiche_lorraine_i.jpg"
+}

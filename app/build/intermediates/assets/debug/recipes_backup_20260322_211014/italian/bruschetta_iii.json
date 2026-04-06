@@ -1,0 +1,70 @@
+{
+    "name": "Bruschetta with Cheese",
+    "instructions": "1. Preheat the oven to 350 degrees F (175 degrees C).\n\n2. Slice the Baguette into diagonal slices. Arrange the slices in a single layer on a baking sheet.\n\n3. Brush both sides of each slice generously with the Olive Oil to help them crisp up and add flavor.\n\n4. Slice the Tomato thinly and arrange the slices on top of the bread. Tear or chop the Fresh Basil and sprinkle over the tomatoes along with the Dried Oregano.\n\n5. Season with the Garlic Powder and White Pepper, distributing evenly over all the slices.\n\n6. Cover the tomato slices with shredded Mozzarella and Provolone, making sure each slice is well covered with cheese.\n\n7. Place additional Fresh Basil leaves, a pinch more Dried Oregano, and extra Tomato slices on top of the cheese for added flavor and presentation.\n\n8. Bake in the preheated oven until the cheese is melted, bubbly, and lightly golden, about 7 to 10 minutes. Serve warm.",
+    "simpleInstructions": "1. Preheat oven and arrange Baguette slices on a baking sheet.\n\n2. Brush slices with Olive Oil on both sides.\n\n3. Top with sliced Tomato, Fresh Basil, Dried Oregano, Garlic Powder, and White Pepper.\n\n4. Cover with Mozzarella and Provolone, add more herbs and tomatoes, then bake until bubbly.",
+    "prepTimeMinutes": 5,
+    "cookTimeMinutes": 10,
+    "servings": 2,
+    "mealType": "BREAKFAST",
+    "dishCategory": "APPETIZER",
+    "ingredients": [
+        {
+            "name": "Baguette",
+            "quantity": 100,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tomato",
+            "quantity": 70,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Fresh Basil",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Dried Oregano",
+            "quantity": 5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic Powder",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "White Pepper",
+            "quantity": 0.25,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Mozzarella",
+            "quantity": 80,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Provolone",
+            "quantity": 60,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/20545/bruschetta-iii/",
+    "cuisine": "Italian",
+    "id": "bruschetta_iii",
+    "imageUrl": "recipes/images/italian/bruschetta_iii.webp"
+}

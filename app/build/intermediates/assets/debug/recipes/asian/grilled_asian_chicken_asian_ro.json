@@ -1,0 +1,52 @@
+{
+  "name": "Pui Asiatic la Grătar",
+  "instructions": "1. Adunați și măsurați toate ingredientele înainte de a începe pentru a asigura un proces de gătit fără probleme.\n\n2. Într-un bol mic sigur pentru microunde, combinați sosul de soia, mierea, uleiul de susan, usturoiul tocat și ghimbirul ras. Încălziți la microunde la putere medie timp de 1 minut, apoi amestecați pentru a îmbina aromele. Încălziți din nou timp de 30 de secunde, urmărind cu atenție pentru a preveni fierberea amestecului.\n\n3. Așezați piepturile de pui într-o farfurie puțin adâncă sau pungă resigilabilă. Turnați amestecul cald de sos de soia peste pui, întorcând pentru a acoperi toate părțile. Lăsați deoparte să se marineze la temperatura camerei timp de 15 minute, permițând aromelor să pătrundă în carne.\n\n4. Preîncălziți grătarul în aer liber la foc mediu-mare. Ungeți ușor grătarul folosind un prosop de hârtie înmuiat în ulei pentru a preveni lipirea puiului.\n\n5. Scoateți puiul din marinată, lăsând excesul să se scurgă. Transferați marinata rămasă într-o cratiță mică și aduceți la fierbere puternică la foc mediu-mare. Reduceți focul la mic și lăsați să fiarbă până când marinata se îngroașă ușor, aproximativ 1 minut. Lăsați deoparte pentru uns în timpul grătarului.\n\n6. Așezați puiul pe grătarul preîncălzit și gătiți, unsând frecvent cu marinata îngroșată rezervată, până când puiul dezvoltă urme frumoase aurii de grătar pe toate părțile și nu mai este roz în centru, aproximativ 6-8 minute pe fiecare parte.\n\n7. Pentru a asigura gradul de gătire, introduceți un termometru pentru carne cu citire instantanee în partea cea mai groasă a puiului—ar trebui să arate cel puțin 74°C. Scoateți de pe grătar, lăsați să se odihnească câteva minute și serviți.",
+  "simpleInstructions": "1. Amestecați sosul de soia, mierea, uleiul de susan, usturoiul și ghimbirul, apoi încălziți la microunde.\n\n2. Marinați piepturile de pui timp de 15 minute în amestec.\n\n3. Fierbeți marinata rămasă până se îngroașă pentru uns.\n\n4. Grătați puiul 6-8 minute pe parte, unsând des, până devine auriu și gătit la 74°C!",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "CHICKEN",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Honey",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/8919/grilled-asian-chicken/",
+  "cuisine": "Asian",
+  "id": "grilled_asian_chicken",
+  "imageUrl": "recipes/images/asian/grilled_asian_chicken.jpg"
+}

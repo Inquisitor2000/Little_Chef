@@ -1,0 +1,118 @@
+{
+  "name": "Bol Asiatic cu Creveți și Orez",
+  "instructions": "1. Într-un bol mic, amestecați bine sosul de soia, sosul hoisin, mierea, marmelada de portocale și pasta de chili până se combină. Adăugați creveții, amestecând pentru a-i acoperi uniform. Acoperiți bolul și refrigerați timp de 1 oră pentru a permite aromelor să pătrundă în creveți.\n\n2. Într-o cratiță medie la foc mare, aduceți apa și orezul la fierbere puternică. Odată ce fierbe, reduceți focul la mediu-mic, acoperiți cu un capac bine fixat și lăsați să fiarbă încet până când orezul devine moale și a absorbit tot lichidul, aproximativ 20-25 de minute. Scoateți de pe foc și lăsați să stea acoperit.\n\n3. Când orezul este aproape gata, încălziți uleiul într-o tigaie mare sau wok la foc mediu-mare până devine strălucitor. Adăugați mazărea sugar snap, ardeii tăiați felii și ceapa cubulețe, și sotați, amestecând frecvent, până când legumele încep să se înmoaie păstrând totuși puțin crocant, aproximativ 2-3 minute.\n\n4. Adăugați creveții marinați împreună cu marinata rămasă, usturoiul tocat, ghimbirul ras și uleiul de susan în tigaie. Continuați să gătiți, amestecând totul împreună, până când creveții devin roz și sunt gătiti complet, încă aproximativ 2-3 minute.\n\n5. Împărțiți orezul fierbinte în boluri de servire. Adăugați generos amestecul de creveți și legume deasupra, și presărați cu semințe de susan pentru o notă de nucă. Serviți imediat și bucurați-vă!",
+  "simpleInstructions": "1. Amestecați ingredientele pentru sos, adăugați creveții și răciți 1 oră.\n\n2. Fierbeți orezul în apă până devine pufos și moale.\n\n3. Sotați mazărea, ardeii și ceapa până sunt crocante și fragede.\n\n4. Adăugați creveții marinați, usturoiul, ghimbirul și uleiul de susan, gătiți până creveții devin roz.\n\n5. Serviți creveții și legumele peste orez, presărate cu susan!",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 25,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "RICE_BOWL",
+  "ingredients": [
+    {
+      "name": "Soy Sauce",
+      "quantity": 40,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Hoisin Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Honey",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Marmalade",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sriracha",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Shrimp",
+      "quantity": 110,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 360,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jasmine Rice",
+      "quantity": 180,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Snap Peas",
+      "quantity": 110,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 1,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/148232/asian-shrimp-rice-bowl/",
+  "cuisine": "Asian",
+  "id": "asian_shrimp_rice_bowl",
+  "imageUrl": "recipes/images/asian/asian_shrimp_rice_bowl.jpg"
+}

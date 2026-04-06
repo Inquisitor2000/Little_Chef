@@ -1,0 +1,76 @@
+{
+  "name": "Pui Thailandez și Picant cu Busuioc și Ou",
+  "instructions": "1. Ungeți ușor o tigaie mare cu spray de gătit și puneți la foc mediu. Spargeți ouăle în tigaie și gătiți, amestecând frecvent, până se îngroașă și se întăresc complet, aproximativ 5 minute. Împărțiți orezul gătit uniform între două boluri de servire și adăugați ouăle bătute deasupra fiecăruia.\n\n2. Folosind un mojar și pistil sau robot de bucătărie, măcinați ardeii chili thailandezi și cătăeii de usturoi împreună într-o pastă grosieră, eliberând uleiurile lor aromatice.\n\n3. Ștergeți tigaia, ungeți-o din nou cu spray de gătit și încălziți la foc mediu-mare. Adăugați pasta de chili-usturoi și gătiți, amestecând constant, până devine aromată și usturoiul se rumenește, aproximativ 1 minut. Aveți grijă să nu-l ardeți.\n\n4. Adăugați pieptul de pui tăiat cubulețe în tigaie și gătiți, amestecând frecvent, până când puiul este gătit pe jumătate și începe să devină opac, aproximativ 3 minute.\n\n5. Adăugați sosul de soia, sosul de stridii și zahărul, amestecând bine pentru a acoperi puiul. Continuați să gătiți și să amestecați până când puiul este complet gătit și nu mai este roz în centru, încă aproximativ 3 minute.\n\n6. Adăugați frunzele proaspete de busuioc și amestecați doar 10 secunde. Scoateți tigaia de pe foc și continuați să amestecați până când busuiocul se ofilește de la căldura reziduală. Puneți generos amestecul de pui peste orez și ouă, și serviți imediat.",
+  "simpleInstructions": "1. Gătiți ouăle bătute într-o tigaie unsă, apoi împărțiți orezul în boluri și adăugați ouăle deasupra.\n\n2. Măcinați chili și usturoiul în pastă, apoi sotați până se rumenește și devine aromat.\n\n3. Prăjiți puiul până e pe jumătate gătit, apoi adăugați soia, sos de stridii și zahăr.\n\n4. Adăugați busuiocul proaspăt 10 secunde, lăsați să se ofilească, apoi puneți peste orez și savurați!",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 15,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "CHICKEN",
+  "ingredients": [
+    {
+      "name": "Cooking Spray",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Rice",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 6,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Breast",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Oyster Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Basil",
+      "quantity": 7,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/242244/easy-and-spicy-thai-basil-chicken-with-egg/",
+  "cuisine": "Asian",
+  "id": "easy_and_spicy_thai_basil_chicken_with_egg",
+  "imageUrl": "recipes/images/asian/easy_and_spicy_thai_basil_chicken_with_egg.jpg"
+}

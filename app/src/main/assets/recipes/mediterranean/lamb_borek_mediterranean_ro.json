@@ -1,0 +1,154 @@
+{
+  "name": "Börek cu Miel",
+  "instructions": "1. Încălziți uleiul de măsline într-o cratiță la foc mediu-mare. Adăugați ceapa, sarea și mielul. Sfărâmați mielul în bucăți mici și gătiți până când cea mai mare parte a lichidului se evaporă, aproximativ 8 minute.\n\n2. Adăugați usturoiul, coacăzele, semințele de pin, chimenul, coriandrul, scorțișoara, boia, piperul negru, cayenne și ienibahar. Gătiți timp de 1 minut.\n\n3. Adăugați sosul de tomate și apa, amestecați și reduceți focul la mediu. Gătiți până când amestecul se usucă, 20 până la 30 de minute. Lăsați să se răcească complet.\n\n4. Combinați oul, iaurtul, apa și untul într-un bol și amestecați bine.\n\n5. Preîncălziți cuptorul la 200 grade C. Ungeți o tavă de copt.\n\n6. Puneți 2 foi de foietaj pe suprafața de lucru, ungând fiecare cu amestecul de ou. Repetați stratificarea încă de două ori.\n\n7. Așezați jumătate din umplutura de miel de-a lungul unei margini a foietajului, rulați și puneți în tava de copt. Repetați cu umplutura și foietajul rămas.\n\n8. Ungeți partea de sus cu amestecul de ou, presărați cu semințe de susan și coaceți până se rumenește, 35 până la 40 de minute. Lăsați să se răcească timp de 15 minute.\n\n9. Combinați iaurtul, menta, sucul de lămâie și usturoiul pentru sos. Ajustați consistența cu apă și condimentați cu sare și cayenne.\n\n10. Tăiați Börek în felii și serviți cu sos de iaurt.",
+  "simpleInstructions": "1. Gătiți ceapa și mielul, apoi adăugați condimentele și sosul de tomate. Gătiți până se usucă.\n\n2. Preparați amestecul de ou și preîncălziți cuptorul.\n\n3. Stratificați foile de foietaj cu amestecul de ou și umpleți cu amestecul de miel.\n\n4. Rulați, ungeți cu amestecul de ou, presărați semințe de susan, coaceți și răciți.\n\n5. Amestecați sosul de iaurt și serviți.",
+  "prepTimeMinutes": 45,
+  "cookTimeMinutes": 65,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ground Lamb",
+      "quantity": 230,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Garlic",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Raisins",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Pine Nuts",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cumin",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Coriander",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Paprika",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cayenne Pepper",
+      "quantity": 0.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Allspice",
+      "quantity": 0.2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato Sauce",
+      "quantity": 180,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Greek Yogurt",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Frozen Puff Pastry",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Mint",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 2,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/272905/lamb-borek/",
+  "cuisine": "Mediterranean",
+  "id": "lamb_borek",
+  "imageUrl": "recipes/images/mediterranean/lamb_borek.jpg"
+}

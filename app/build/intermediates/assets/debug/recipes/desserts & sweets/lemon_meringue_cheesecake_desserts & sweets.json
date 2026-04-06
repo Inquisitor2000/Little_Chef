@@ -1,0 +1,94 @@
+{
+  "name": "Lemon Meringue Cheesecake",
+  "instructions": "1. Preheat your oven to 325°F (165°C) and position the rack in the center. Prepare a 6-inch springform pan by greasing the sides and bottom. \n\n2. In a medium bowl, mix the breadcrumbs (note: use as shortbread cookie crumb substitute) with the melted butter until the mixture resembles wet sand and holds together when pressed. Press this mixture firmly and evenly into the bottom of the prepared springform pan, using the bottom of a measuring cup to pack it down. Set aside. \n\n3. In a large mixing bowl, beat the cream cheese, sour cream, and sugar together using an electric mixer on medium speed for 3-4 minutes, until the mixture is completely smooth, light, and fluffy with no lumps. Scrape down the sides of the bowl as needed. \n\n4. Add the eggs one at a time, beating on low speed for about 20-30 seconds after each addition until just incorporated. Don't overmix after adding eggs or the cheesecake may crack. \n\n5. Add the lemon juice, lemon zest, and vanilla extract, mixing on low speed just until combined and the batter is smooth. \n\n6. Pour the filling over the prepared crust, spreading it evenly and gently tapping the pan on the counter to release any air bubbles. \n\n7. Bake in the preheated oven for about 60 minutes, or until the edges are puffed and set but the center still jiggles slightly when gently shaken (about a 2-inch circle in the center). The cheesecake will continue to set as it cools. \n\n8. Turn off the oven and crack the door open slightly. Let the cheesecake cool in the oven for 1 hour - this gradual cooling helps prevent cracking. \n\n9. Remove from the oven and let cool completely at room temperature, about 1 hour more. Then cover with plastic wrap and refrigerate for at least 3-4 hours or overnight until completely chilled and set. \n\n10. Preheat your oven to 375°F (190°C). In a clean, dry mixing bowl, beat the egg whites with an electric mixer on medium speed until foamy, about 1 minute. \n\n11. Gradually add the sugar and cream of tartar while continuing to beat. Increase speed to high and beat for 3-5 minutes until stiff, glossy peaks form. The meringue should stand straight up when you lift the beaters. \n\n12. Spread the lemon juice (note: use as lemon curd substitute) evenly over the chilled cheesecake. \n\n13. Spread the meringue over the lemon layer, making sure to spread it all the way to the edges to seal and prevent shrinking. Create decorative peaks and swirls with the back of a spoon if desired. \n\n14. Bake for 8-10 minutes, just until the meringue peaks are lightly golden brown. Watch carefully as meringue can brown quickly. \n\n15. Remove from the oven and let cool uncovered at room temperature for 30 minutes, then refrigerate uncovered for at least 1 hour before serving. This allows the meringue to set. \n\n16. To serve, run a thin knife around the edge of the pan, release the springform, and slice with a sharp knife, wiping the blade clean between cuts.",
+  "simpleInstructions": "1. Preheat oven to 325°F and grease a 6-inch springform pan. \n\n2. Mix breadcrumbs with melted butter and press into pan bottom. \n\n3. Beat cream cheese, sour cream, and sugar until smooth. \n\n4. Add eggs one at a time, beating gently. \n\n5. Mix in lemon juice, zest, and vanilla. \n\n6. Pour over crust and tap to release bubbles. \n\n7. Bake 60 minutes until edges set but center jiggles slightly. \n\n8. Cool in oven with door cracked for 1 hour. \n\n9. Cool completely, then refrigerate 3-4 hours. \n\n10. Preheat oven to 375°F. Beat egg whites until foamy. \n\n11. Add sugar and cream of tartar; beat to stiff peaks. \n\n12. Spread lemon juice over chilled cheesecake. \n\n13. Spread meringue over lemon layer to edges. \n\n14. Bake 8-10 minutes until lightly golden. \n\n15. Cool 30 minutes, then refrigerate 1 hour uncovered. \n\n16. Release from pan and slice to serve.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 70,
+  "servings": 2,
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Breadcrumbs",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cream Cheese",
+      "quantity": 340,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg Whites",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cream of Tartar",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Juice",
+      "quantity": 180,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/244929/lemon-meringue-cheesecake/",
+  "cuisine": "American",
+  "id": "lemon_meringue_cheesecake",
+  "imageUrl": "recipes/images/desserts & sweets/lemon_meringue_cheesecake.jpg"
+}

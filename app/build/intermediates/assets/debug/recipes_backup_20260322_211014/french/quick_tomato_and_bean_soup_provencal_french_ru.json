@@ -1,0 +1,82 @@
+{
+  "name": "Быстрый томатный суп с фасолью провансаль",
+  "instructions": "1. Нагрейте оливковое масло в большой кастрюле на среднем огне. Добавьте лук и обжаривайте до мягкости и прозрачности, около 3-4 минут.  \n\n2. Добавьте чеснок и готовьте до появления аромата, около 30 секунд.  \n\n3. Вставьте консервированные помидоры, куриный бульон, воду и хлопья красного перца. Доведите до кипения, уменьшите огонь и варите без крышки в течение 10 минут.  \n\n4. Добавьте фасоль лима и готовьте, пока она не прогреется, около 5 минут.  \n\n5. Вмешайте молодой шпинат и нагрейте, пока он не увянет.  \n\n6. Попробуйте и приправьте по вкусу солью. Украсить пармезаном и подать горячим.",
+  "simpleInstructions": "1. Обжарьте лук в оливковом масле.  \n\n2. Добавьте чеснок, затем консервированные помидоры, куриный бульон, воду и хлопья красного перца. Варите.  \n\n3. Добавьте фасоль лима, затем молодой шпинат.  \n\n4. Попробуйте и подайте с пармезаном.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    {
+      "name": "Olive Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Garlic",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Canned Tomatoes",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Broth",
+      "quantity": 240,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Water",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Pepper Flakes",
+      "quantity": 2.5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lima Beans",
+      "quantity": 230,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Baby Spinach",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Parmesan",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/quick-tomato-and-bean-soup-provencal-recipe-8660754",
+  "cuisine": "French",
+  "id": "quick_tomato_and_bean_soup_provencal",
+  "imageUrl": "recipes/images/french/quick_tomato_and_bean_soup_provencal.jpg"
+}

@@ -1,0 +1,64 @@
+{
+  "name": "Чаша с яичными рулетами",
+  "instructions": "1. В большой сковороде на среднем огне готовьте свиную колбасу, разламывая ее деревянной ложкой или лопаткой, пока она не подрумянится и не станет полностью рассыпчатой, около 10 минут. Слейте и выбросьте излишки жира из сковороды.\n\n2. Добавьте смесь для салата коул-слоу (нашинкованную капусту и морковь), соевый соус, кунжутное масло, тертый свежий имбирь и измельченный чеснок в сковороду с колбасой. Готовьте, часто помешивая, пока капуста не станет нежной и не уменьшится в объеме, около 8 минут.\n\n3. Добавьте свежую цедру лимона и нарезанную кинзу, перемешивая для объединения. Продолжайте готовить, пока ароматы не смешаются и зелень не завянет, около 2 минут. Подавайте горячим прямо из сковороды.",
+  "simpleInstructions": "1. Обжарьте колбасу до румяной рассыпчатости, затем слейте жир.\n\n2. Добавьте капусту, соевый соус, кунжутное масло, имбирь и чеснок, готовьте до мягкости.\n\n3. Вмешайте цедру лимона и кинзу, дайте ароматам соединиться, и наслаждайтесь!",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Bulk Pork Sausage",
+      "quantity": 230,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cabbage",
+      "quantity": 230,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon Zest",
+      "quantity": 7.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Cilantro",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "sourceUrl": "https://www.allrecipes.com/recipe/257429/egg-roll-bowl/",
+  "cuisine": "Asian",
+  "id": "egg_roll_bowl",
+  "imageUrl": "recipes/images/asian/egg_roll_bowl.jpg"
+}

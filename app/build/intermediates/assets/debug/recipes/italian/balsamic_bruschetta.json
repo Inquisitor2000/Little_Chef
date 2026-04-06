@@ -1,0 +1,70 @@
+{
+    "name": "Balsamic Bruschetta",
+    "instructions": "1. Preheat the oven to 400 degrees F (200 degrees C).\n\n2. Brush the bread slices on both sides lightly with some of the Olive Oil and place them in a single layer on a large baking sheet.\n\n3. Toast the bread in the preheated oven until golden and crispy, about 5 to 10 minutes, turning halfway through for even browning. The bread should be crunchy on the outside but still slightly soft inside.\n\n4. Meanwhile, dice the Tomato into small, uniform pieces and mince the Garlic finely. Tear or chop the Fresh Basil leaves and grate the Parmesan. Toss everything together in a bowl.\n\n5. Drizzle in the Balsamic Vinegar and remaining Olive Oil, then season with Salt and Black Pepper. Mix gently until all ingredients are well combined and the tomatoes are coated. Let the mixture sit for a few minutes to allow the flavors to meld.\n\n6. Spoon the tomato mixture generously onto each toasted bread slice, making sure to get some of the flavorful juices on each piece.\n\n7. Serve immediately while the bread is still warm and crispy for the best texture and flavor.",
+    "simpleInstructions": "1. Preheat oven and brush bread slices with some of the Olive Oil.\n\n2. Toast bread until golden and crispy, turning halfway through.\n\n3. Dice Tomato, mince Garlic, and mix with Fresh Basil, Parmesan, Balsamic Vinegar, remaining Olive Oil, Salt, and Black Pepper.\n\n4. Spoon the tomato mixture onto toasted bread.\n\n5. Serve immediately while warm.",
+    "prepTimeMinutes": 15,
+    "cookTimeMinutes": 5,
+    "servings": 2,
+    "mealType": "SNACK",
+    "dishCategory": "APPETIZER",
+    "ingredients": [
+        {
+            "name": "White Bread",
+            "quantity": 40,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Olive Oil",
+            "quantity": 10,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Tomato",
+            "quantity": 300,
+            "unit": "g",
+            "isStarIngredient": true
+        },
+        {
+            "name": "Fresh Basil",
+            "quantity": 15,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Parmesan",
+            "quantity": 10,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Garlic",
+            "quantity": 1.5,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Balsamic Vinegar",
+            "quantity": 15,
+            "unit": "ml",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Salt",
+            "quantity": 3,
+            "unit": "g",
+            "isStarIngredient": false
+        },
+        {
+            "name": "Black Pepper",
+            "quantity": 1,
+            "unit": "g",
+            "isStarIngredient": false
+        }
+    ],
+    "sourceUrl": "https://www.allrecipes.com/recipe/54165/balsamic-bruschetta/",
+    "cuisine": "Italian",
+    "id": "balsamic_bruschetta",
+    "imageUrl": "recipes/images/italian/balsamic_bruschetta.webp"
+}
