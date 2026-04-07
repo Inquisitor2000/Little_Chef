@@ -54,7 +54,7 @@ class OnboardingPreferences @Inject constructor(
     }
     
     val textScale: Flow<Float> = context.dataStore.data.map { preferences ->
-        preferences[TEXT_SCALE]?.toFloatOrNull() ?: 1.0f
+        preferences[TEXT_SCALE]?.toFloatOrNull() ?: 0.95f
     }
     
     val appFont: Flow<String> = context.dataStore.data.map { preferences ->

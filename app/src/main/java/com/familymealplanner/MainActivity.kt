@@ -5,16 +5,26 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.animation.core.FastOutSlowInEasing
+import androidx.compose.animation.core.Spring
+import androidx.compose.animation.core.animateDpAsState
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.spring
+import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Menu
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -23,6 +33,8 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -31,6 +43,7 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
@@ -51,6 +64,7 @@ import com.familymealplanner.ui.onboarding.OnboardingScreen
 import com.familymealplanner.ui.theme.FamilyMealPlannerTheme
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
@@ -134,7 +148,7 @@ class MainActivity : ComponentActivity() {
             val accentColorDark by viewModel.accentColorDark.collectAsState()
             
             // Use pre-loaded values on first render, then switch to reactive values
-            val effectiveTextScale = if (textScale == 1.0f) initialTextScale else textScale
+            val effectiveTextScale = if (textScale == 0.95f) initialTextScale else textScale
             val effectiveAppFont = if (appFont == "Roboto Medium") initialAppFont else appFont
             val effectiveAccentColorLight = if (accentColorLight == 0xFFD68C45L) initialAccentColorLight else accentColorLight
             val effectiveAccentColorDark = if (accentColorDark == 0xFF5398beL) initialAccentColorDark else accentColorDark
@@ -179,7 +193,7 @@ class MainViewModel @Inject constructor(
     val textScale: StateFlow<Float> = onboardingPreferences.textScale.stateIn(
         scope = viewModelScope,
         started = SharingStarted.Eagerly,
-        initialValue = 1.0f
+        initialValue = 0.95f
     )
     
     val appFont: StateFlow<String> = onboardingPreferences.appFont.stateIn(
@@ -244,76 +258,194 @@ fun MainScreen(
 @Composable
 fun MainAppScreen() {
     val navController = rememberNavController()
+    val isDarkTheme = isSystemInDarkTheme()
     
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
+    
+    // Helper function to determine which bottom nav item should be selected
+    fun getSelectedBottomNavRoute(currentRoute: String?): String? {
+        return when {
+            currentRoute == null -> null
+            // Recipe detail screens belong to Meals
+            currentRoute.startsWith("recipe_detail/") -> NavDestination.Meals.route
+            currentRoute.startsWith("bundled_recipe/") -> NavDestination.Meals.route
+            currentRoute.startsWith("cuisine_meals/") -> NavDestination.Meals.route
+            currentRoute.startsWith("scrape_recipe") -> NavDestination.Meals.route
+            currentRoute.startsWith("manual_recipe") -> NavDestination.Meals.route
+            currentRoute.startsWith("edit_recipe/") -> NavDestination.Meals.route
+            // Meal plan detail belongs to Plan
+            currentRoute.startsWith("meal_plan_detail/") -> NavDestination.Plan.route
+            currentRoute.startsWith("suggestion") -> NavDestination.Plan.route
+            // Custom ingredient screens belong to their parent
+            currentRoute.startsWith("add_custom_ingredient_grocery") -> NavDestination.Groceries.route
+            currentRoute.startsWith("add_custom_ingredient") -> NavDestination.Pantry.route
+            // Settings screen
+            currentRoute.startsWith("settings") -> null // No selection for settings
+            // Default: check if it's a bottom nav route
+            else -> {
+                NavDestination.bottomNavItems.find { it.route == currentRoute }?.route
+            }
+        }
+    }
+    
+    // Auto-collapse navigation bar after 15 seconds of inactivity
+    var isNavBarExpanded by remember { mutableStateOf(true) }
+    var lastInteractionTime by remember { mutableStateOf(System.currentTimeMillis()) }
+    
+    val navBarWidth by animateDpAsState(
+        targetValue = if (isNavBarExpanded) 0.dp else 56.dp,
+        animationSpec = spring(
+            dampingRatio = Spring.DampingRatioMediumBouncy,
+            stiffness = Spring.StiffnessMedium
+        ),
+        label = "navBarWidth"
+    )
+    val navBarHorizontalPadding by animateDpAsState(
+        targetValue = if (isNavBarExpanded) 48.dp else 16.dp,
+        animationSpec = spring(
+            dampingRatio = Spring.DampingRatioMediumBouncy,
+            stiffness = Spring.StiffnessMedium
+        ),
+        label = "navBarHorizontalPadding"
+    )
+    val contentAlpha by animateFloatAsState(
+        targetValue = if (isNavBarExpanded) 1f else 0f,
+        animationSpec = tween(
+            durationMillis = 300,
+            delayMillis = if (isNavBarExpanded) 100 else 0,
+            easing = FastOutSlowInEasing
+        ),
+        label = "contentAlpha"
+    )
+    val menuIconAlpha by animateFloatAsState(
+        targetValue = if (isNavBarExpanded) 0f else 1f,
+        animationSpec = tween(
+            durationMillis = 300,
+            delayMillis = if (isNavBarExpanded) 0 else 100,
+            easing = FastOutSlowInEasing
+        ),
+        label = "menuIconAlpha"
+    )
+    
+    // Monitor for inactivity
+    LaunchedEffect(lastInteractionTime) {
+        isNavBarExpanded = true
+        delay(15000) // Wait 15 seconds
+        isNavBarExpanded = false // Collapse
+    }
 
     Scaffold(
         bottomBar = {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = 48.dp, vertical = 12.dp)
+                    .padding(horizontal = navBarHorizontalPadding, vertical = 12.dp)
             ) {
                 Surface(
                     modifier = Modifier
-                        .fillMaxWidth()
+                        .then(
+                            if (isNavBarExpanded) {
+                                Modifier.fillMaxWidth()
+                            } else {
+                                Modifier.width(56.dp)
+                            }
+                        )
                         .height(56.dp)
-                        .clip(RoundedCornerShape(28.dp)),
+                        .clip(RoundedCornerShape(28.dp))
+                        .clickable(
+                            interactionSource = remember { MutableInteractionSource() },
+                            indication = null
+                        ) {
+                            if (!isNavBarExpanded) {
+                                isNavBarExpanded = true
+                                lastInteractionTime = System.currentTimeMillis()
+                            }
+                        }
+                        .align(Alignment.Center),
                     color = MaterialTheme.colorScheme.primary
                 ) {
-                    NavigationBar(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .padding(horizontal = 4.dp, vertical = 4.dp),
-                        containerColor = Color.Transparent,
-                        tonalElevation = 0.dp
-                    ) {
-                NavDestination.bottomNavItems.forEach { destination ->
-                    val selected = currentDestination?.hierarchy?.any { 
-                        it.route == destination.route 
-                    } == true
-                    
-                    Box(
-                        modifier = Modifier
-                            .weight(1f)
-                            .height(48.dp)
-                            .clickable(
-                                interactionSource = remember { MutableInteractionSource() },
-                                indication = null
-                            ) {
-                                navController.navigate(destination.route) {
-                                    popUpTo(navController.graph.findStartDestination().id) {
-                                        inclusive = false
+                    if (isNavBarExpanded) {
+                        NavigationBar(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(horizontal = 4.dp, vertical = 4.dp)
+                                .alpha(contentAlpha),
+                            containerColor = Color.Transparent,
+                            tonalElevation = 0.dp
+                        ) {
+                            NavDestination.bottomNavItems.forEach { destination ->
+                                val selectedRoute = getSelectedBottomNavRoute(currentDestination?.route)
+                                val selected = selectedRoute == destination.route
+
+                                Box(
+                                    modifier = Modifier
+                                        .weight(1f)
+                                        .height(48.dp)
+                                        .clickable(
+                                            interactionSource = remember { MutableInteractionSource() },
+                                            indication = null
+                                        ) {
+                                            lastInteractionTime = System.currentTimeMillis()
+                                            navController.navigate(destination.route) {
+                                                popUpTo(navController.graph.findStartDestination().id) {
+                                                    inclusive = false
+                                                }
+                                                launchSingleTop = true
+                                                restoreState = false
+                                            }
+                                        },
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    if (selected) {
+                                        Surface(
+                                            modifier = Modifier
+                                                .height(48.dp)
+                                                .fillMaxWidth(1f),
+                                            shape = RoundedCornerShape(24.dp),
+                                            color = if (isDarkTheme) {
+                                                MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
+                                            } else {
+                                                MaterialTheme.colorScheme.background.copy(alpha = 0.5f)
+                                            }
+                                        ) {}
                                     }
-                                    launchSingleTop = true
-                                    restoreState = false
+                                    Icon(
+                                        imageVector = if (selected) destination.selectedIcon else destination.unselectedIcon,
+                                        contentDescription = androidx.compose.ui.res.stringResource(destination.titleRes),
+                                        modifier = Modifier.size(26.dp),
+                                        tint = if (isDarkTheme) {
+                                            // Dark mode: icons use screen background color
+                                            MaterialTheme.colorScheme.background
+                                        } else {
+                                            // Light mode: icons use text color
+                                            MaterialTheme.colorScheme.onSurface
+                                        }
+                                    )
                                 }
-                            },
-                        contentAlignment = Alignment.Center
-                    ) {
-                        if (selected) {
-                            Surface(
-                                modifier = Modifier
-                                    .height(48.dp)
-                                    .fillMaxWidth(1f),
-                                shape = RoundedCornerShape(24.dp),
-                                color = MaterialTheme.colorScheme.surface
-                            ) {}
+                            }
                         }
-                        Icon(
-                            imageVector = if (selected) destination.selectedIcon else destination.unselectedIcon,
-                            contentDescription = androidx.compose.ui.res.stringResource(destination.titleRes),
-                            modifier = Modifier.size(24.dp),
-                            tint = if (selected) 
-                                MaterialTheme.colorScheme.onSurface 
-                            else 
-                                MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.6f)
-                        )
+                    } else {
+                        // Collapsed state - show menu icon
+                        Box(
+                            modifier = Modifier
+                                .fillMaxSize()
+                                .alpha(menuIconAlpha),
+                            contentAlignment = Alignment.Center
+                        ) {
+                            Icon(
+                                imageVector = Icons.Default.Menu,
+                                contentDescription = "Expand navigation",
+                                modifier = Modifier.size(26.dp),
+                                tint = if (isDarkTheme) {
+                                    MaterialTheme.colorScheme.background
+                                } else {
+                                    MaterialTheme.colorScheme.onSurface
+                                }
+                            )
+                        }
                     }
                 }
-                }
-            }
             }
         }
     ) { innerPadding ->

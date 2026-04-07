@@ -30,7 +30,7 @@ class SettingsViewModel @Inject constructor(
     val textScale: StateFlow<Float> = preferences.textScale.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5000),
-        initialValue = 1.0f
+        initialValue = 0.95f
     )
 
     val appFont: StateFlow<String> = preferences.appFont.stateIn(

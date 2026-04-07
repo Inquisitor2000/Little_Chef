@@ -142,6 +142,6 @@ sealed class NavDestination(
     )
 
     companion object {
-        val bottomNavItems = listOf(Plan, Meals, Groceries, Pantry, Settings)
+        val bottomNavItems = listOf(Plan, Meals, Groceries, Pantry)
     }
 }

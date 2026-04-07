@@ -138,7 +138,7 @@ fun PantryScreen(
                             Icon(
                                 Icons.Filled.Settings,
                                 contentDescription = stringResource(R.string.nav_settings),
-                                modifier = Modifier.size(18.dp)
+                                modifier = Modifier.size(26.dp)
                             )
                         }
                     }

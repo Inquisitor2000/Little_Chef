@@ -423,7 +423,7 @@ fun BundledRecipeDetailScreen(
                         }
                     }
 
-                    Spacer(modifier = Modifier.height(8.dp))
+                    Spacer(modifier = Modifier.height(60.dp))
                 }
             }
         } ?: Box(

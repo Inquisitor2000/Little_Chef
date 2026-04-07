@@ -294,6 +294,9 @@ fun AppNavHost(
                         // Initial name for creating new ingredient
                         navController.navigate(NavDestination.AddCustomIngredient.createRoute(ingredientIdOrName))
                     }
+                },
+                onNavigateToSettings = {
+                    navController.navigate(NavDestination.Settings.route)
                 }
             )
         }

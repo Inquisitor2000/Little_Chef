@@ -21,6 +21,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.core.view.WindowCompat
 
 private val LightColorScheme = lightColorScheme(
@@ -143,6 +144,7 @@ fun FamilyMealPlannerTheme(
     }
 
     // Scale typography based on user preference and apply custom font
+    // Also override base sizes for labelSmall, bodySmall, and titleSmall
     val scaledTypography = MaterialTheme.typography.let { typography ->
         typography.copy(
             displayLarge = typography.displayLarge.copy(fontSize = typography.displayLarge.fontSize * textScale, fontFamily = fontFamily),
@@ -153,13 +155,13 @@ fun FamilyMealPlannerTheme(
             headlineSmall = typography.headlineSmall.copy(fontSize = typography.headlineSmall.fontSize * textScale, fontFamily = fontFamily),
             titleLarge = typography.titleLarge.copy(fontSize = typography.titleLarge.fontSize * textScale, fontFamily = fontFamily),
             titleMedium = typography.titleMedium.copy(fontSize = typography.titleMedium.fontSize * textScale, fontFamily = fontFamily),
-            titleSmall = typography.titleSmall.copy(fontSize = typography.titleSmall.fontSize * textScale, fontFamily = fontFamily),
+            titleSmall = typography.titleSmall.copy(fontSize = 16.sp * textScale, fontFamily = fontFamily), // Changed from 14sp to 16sp
             bodyLarge = typography.bodyLarge.copy(fontSize = typography.bodyLarge.fontSize * textScale, fontFamily = fontFamily),
             bodyMedium = typography.bodyMedium.copy(fontSize = typography.bodyMedium.fontSize * textScale, fontFamily = fontFamily),
-            bodySmall = typography.bodySmall.copy(fontSize = typography.bodySmall.fontSize * textScale, fontFamily = fontFamily),
-            labelLarge = typography.labelLarge.copy(fontSize = typography.labelLarge.fontSize * textScale, fontFamily = fontFamily),
+            bodySmall = typography.bodySmall.copy(fontSize = 14.sp * textScale, fontFamily = fontFamily), // Changed from 12sp to 14sp
+            labelLarge = typography.labelLarge.copy(fontSize = 16.sp * textScale, fontFamily = fontFamily), // Changed from 14sp to 16sp
             labelMedium = typography.labelMedium.copy(fontSize = typography.labelMedium.fontSize * textScale, fontFamily = fontFamily),
-            labelSmall = typography.labelSmall.copy(fontSize = typography.labelSmall.fontSize * textScale, fontFamily = fontFamily)
+            labelSmall = typography.labelSmall.copy(fontSize = 12.sp * textScale, fontFamily = fontFamily) // Changed from 11sp to 12sp
         )
     }
 
