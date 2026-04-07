@@ -20,6 +20,7 @@ import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Edit
 import androidx.compose.material.icons.filled.KeyboardArrowRight
+import androidx.compose.material.icons.filled.Settings
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -77,7 +78,8 @@ private fun translateFormattedUnit(formattedString: String): String {
 @Composable
 fun PantryScreen(
     viewModel: PantryViewModel = hiltViewModel(),
-    onNavigateToAddCustomIngredient: ((String) -> Unit)? = null
+    onNavigateToAddCustomIngredient: ((String) -> Unit)? = null,
+    onNavigateToSettings: (() -> Unit)? = null
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val currentLanguage = viewModel.getCurrentLanguage()
@@ -126,6 +128,18 @@ fun PantryScreen(
                             )
                             Spacer(modifier = Modifier.width(4.dp))
                             Text(stringResource(R.string.pantry_add_ingredient_button))
+                        }
+                        Button(
+                            onClick = { onNavigateToSettings?.invoke() },
+                            shape = RoundedCornerShape(50),
+                            contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
+                            modifier = Modifier.padding(end = 8.dp)
+                        ) {
+                            Icon(
+                                Icons.Filled.Settings,
+                                contentDescription = stringResource(R.string.nav_settings),
+                                modifier = Modifier.size(18.dp)
+                            )
                         }
                     }
                 )
@@ -182,7 +196,7 @@ fun PantryScreen(
                     } else {
                         LazyColumn(
                             modifier = Modifier.fillMaxSize(),
-                            contentPadding = PaddingValues(12.dp),
+                            contentPadding = PaddingValues(start = 12.dp, end = 12.dp, top = 12.dp, bottom = 80.dp),
                             verticalArrangement = Arrangement.spacedBy(0.dp)
                         ) {
                             // Group by category

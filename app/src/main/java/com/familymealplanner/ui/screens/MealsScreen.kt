@@ -101,7 +101,7 @@ fun MealsScreen(
                 .fillMaxSize()
                 .padding(padding)
                 .padding(horizontal = 16.dp),
-            contentPadding = PaddingValues(vertical = 16.dp)
+            contentPadding = PaddingValues(top = 16.dp, bottom = 80.dp)
         ) {
             // My Recipes section - show placeholder while loading or if there are recipes
             if (isLoading || scrapedMeals.isNotEmpty()) {

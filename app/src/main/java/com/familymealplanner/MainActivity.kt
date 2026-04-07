@@ -11,8 +11,10 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.NavigationBar
@@ -29,6 +31,8 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -246,61 +250,76 @@ fun MainAppScreen() {
 
     Scaffold(
         bottomBar = {
-            NavigationBar(
-                modifier = Modifier.fillMaxWidth(),
-                containerColor = MaterialTheme.colorScheme.surface,
-                tonalElevation = 0.dp
+            Box(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(horizontal = 48.dp, vertical = 12.dp)
             ) {
+                Surface(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(56.dp)
+                        .clip(RoundedCornerShape(28.dp)),
+                    color = MaterialTheme.colorScheme.primary
+                ) {
+                    NavigationBar(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 4.dp, vertical = 4.dp),
+                        containerColor = Color.Transparent,
+                        tonalElevation = 0.dp
+                    ) {
                 NavDestination.bottomNavItems.forEach { destination ->
                     val selected = currentDestination?.hierarchy?.any { 
                         it.route == destination.route 
                     } == true
                     
-                    NavigationBarItem(
-                        modifier = Modifier.weight(1f),
-                        icon = {
-                            Box(
-                                modifier = Modifier.size(24.dp),
-                                contentAlignment = Alignment.Center
+                    Box(
+                        modifier = Modifier
+                            .weight(1f)
+                            .height(48.dp)
+                            .clickable(
+                                interactionSource = remember { MutableInteractionSource() },
+                                indication = null
                             ) {
-                                Icon(
-                                    imageVector = if (selected) destination.selectedIcon else destination.unselectedIcon,
-                                    contentDescription = androidx.compose.ui.res.stringResource(destination.titleRes),
-                                    modifier = Modifier.size(24.dp)
-                                )
-                            }
-                        },
-                        label = { 
-                            Text(
-                                text = androidx.compose.ui.res.stringResource(
-                                    destination.shortTitleRes ?: destination.titleRes
-                                ),
-                                style = MaterialTheme.typography.bodyMedium,
-                                modifier = Modifier.padding(top = 4.dp)
-                            )
-                        },
-                        selected = selected,
-                        alwaysShowLabel = true,
-                        onClick = {
-                            navController.navigate(destination.route) {
-                                // Pop up to the start destination and clear the back stack
-                                popUpTo(navController.graph.findStartDestination().id) {
-                                    inclusive = false
+                                navController.navigate(destination.route) {
+                                    popUpTo(navController.graph.findStartDestination().id) {
+                                        inclusive = false
+                                    }
+                                    launchSingleTop = true
+                                    restoreState = false
                                 }
-                                // Avoid multiple copies of the same destination
-                                launchSingleTop = true
-                                // Don't restore state - always start fresh
-                                restoreState = false
-                            }
+                            },
+                        contentAlignment = Alignment.Center
+                    ) {
+                        if (selected) {
+                            Surface(
+                                modifier = Modifier
+                                    .height(48.dp)
+                                    .fillMaxWidth(1f),
+                                shape = RoundedCornerShape(24.dp),
+                                color = MaterialTheme.colorScheme.surface
+                            ) {}
                         }
-                    )
+                        Icon(
+                            imageVector = if (selected) destination.selectedIcon else destination.unselectedIcon,
+                            contentDescription = androidx.compose.ui.res.stringResource(destination.titleRes),
+                            modifier = Modifier.size(24.dp),
+                            tint = if (selected) 
+                                MaterialTheme.colorScheme.onSurface 
+                            else 
+                                MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.6f)
+                        )
+                    }
                 }
+                }
+            }
             }
         }
     ) { innerPadding ->
         AppNavHost(
             navController = navController,
-            modifier = Modifier.padding(innerPadding)
+            modifier = Modifier.fillMaxSize()
         )
     }
 }
