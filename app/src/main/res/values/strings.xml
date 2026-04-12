@@ -404,6 +404,7 @@
     <string name="recipe_delete">Delete</string>
     <string name="recipe_ok">OK</string>
     <string name="recipe_ingredients_added">Missing ingredients were added to the groceries list.</string>
+    <string name="recipe_meal_planned">The meal was added to the meal plan.</string>
     <string name="recipe_ingredients_added_count">%1$d of %2$d ingredients added</string>
     <string name="recipe_ingredients_added_with_failures">%1$d of %2$d ingredients added (%3$d failed)</string>
     <string name="recipe_started_cooking">Started cooking! Check the Plan screen.</string>

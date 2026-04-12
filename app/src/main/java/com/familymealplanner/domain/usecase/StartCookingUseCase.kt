@@ -55,6 +55,12 @@ class StartCookingUseCase @Inject constructor(
             NonDeductibleIngredients.shouldDeduct(it.ingredient.name, it.ingredient.unit)
         }
 
+        // Calculate servings multiplier based on planned servings
+        val servingsMultiplier = mealPlan.meal.servings?.let { originalServings ->
+            val plannedServings = mealPlan.plannedServings ?: originalServings
+            plannedServings.toDouble() / originalServings.toDouble()
+        } ?: 1.0
+
         // Check ingredient availability (excluding other reservations) - only for deductible ingredients
         // Use substituted ingredients if they've been applied
         val shortages = mutableListOf<InsufficientIngredient>()
@@ -65,13 +71,16 @@ class StartCookingUseCase @Inject constructor(
                 mealIngredient.ingredient.substitutes.find { it.substituteIngredient.id == substituteId }?.substituteIngredient
             } ?: mealIngredient.ingredient
             
+            // Adjust quantity based on servings
+            val requiredQuantity = mealIngredient.quantity * servingsMultiplier
+            
             val available = inventoryRepository.getAvailableQuantity(ingredientToCheck.id)
-            if (available < mealIngredient.quantity) {
+            if (available < requiredQuantity) {
                 // Check if there's a substitute available (only if not already using one)
                 val substitute = if (ingredientToCheck.id == mealIngredient.ingredient.id) {
                     mealIngredient.ingredient.substitutes.firstOrNull { sub ->
                         val subAvailable = inventoryRepository.getAvailableQuantity(sub.substituteIngredient.id)
-                        subAvailable >= mealIngredient.quantity
+                        subAvailable >= requiredQuantity
                     }?.substituteIngredient
                 } else {
                     null // Already using a substitute
@@ -80,7 +89,7 @@ class StartCookingUseCase @Inject constructor(
                 shortages.add(
                     InsufficientIngredient(
                         ingredientName = mealIngredient.ingredient.name,
-                        required = mealIngredient.quantity,
+                        required = requiredQuantity,
                         available = available,
                         unit = mealIngredient.ingredient.unit,
                         substitute = substitute
@@ -103,10 +112,13 @@ class StartCookingUseCase @Inject constructor(
                 mealIngredient.ingredient.substitutes.find { it.substituteIngredient.id == substituteId }?.substituteIngredient
             } ?: mealIngredient.ingredient
             
+            // Adjust quantity based on servings
+            val adjustedQuantity = mealIngredient.quantity * servingsMultiplier
+            
             InventoryTransaction(
                 id = UUID.randomUUID().toString(),
                 ingredientId = ingredientToDeduct.id,
-                quantityChange = -mealIngredient.quantity,
+                quantityChange = -adjustedQuantity,
                 status = TransactionStatus.RESERVED,
                 reason = "Cooking: ${mealPlan.meal.name}",
                 mealPlanId = mealPlanId,

@@ -55,6 +55,9 @@ class PlanViewModel @Inject constructor(
     
     private val _useDetailedInstructions = MutableStateFlow(true)
     val useDetailedInstructions: StateFlow<Boolean> = _useDetailedInstructions.asStateFlow()
+    
+    // Job for observing ingredient availability - can be cancelled and restarted
+    private var availabilityObserverJob: kotlinx.coroutines.Job? = null
 
     fun loadMealPlans() {
         viewModelScope.launch {
@@ -340,39 +343,73 @@ class PlanViewModel @Inject constructor(
      * This will automatically update when ingredients are added/removed from the pantry.
      * Takes into account any applied substitutions.
      */
-    fun observeIngredientAvailability(mealPlanId: String) {
-        viewModelScope.launch {
-            // Observe the meal plan itself for changes (including substitution updates)
-            mealPlanRepository.observeById(mealPlanId).collect { mealPlan ->
-                if (mealPlan == null) {
-                    _insufficientIngredients.value = null
-                    return@collect
-                }
-                
-                // Check ingredient availability with current substitutions
-                val shortages = checkIngredientAvailabilityWithSubstitutions(mealPlan)
-                _insufficientIngredients.value = if (shortages.isNotEmpty()) shortages else null
-            }
-        }
+    /**
+     * Observe ingredient availability with servings support.
+     * Cancels any previous observation and starts a new one with the updated servings.
+     */
+    fun observeIngredientAvailabilityWithServings(mealPlanId: String, servings: Int) {
+        // Cancel previous observation job
+        availabilityObserverJob?.cancel()
         
-        // Also observe pantry changes
-        viewModelScope.launch {
-            inventoryRepository.observePantryItems().collect { _ ->
-                // Trigger a re-check by getting the latest meal plan
-                val mealPlan = mealPlanRepository.getById(mealPlanId) ?: return@collect
-                val shortages = checkIngredientAvailabilityWithSubstitutions(mealPlan)
-                _insufficientIngredients.value = if (shortages.isNotEmpty()) shortages else null
+        // Start new observation
+        availabilityObserverJob = viewModelScope.launch {
+            // Observe the meal plan itself for changes (including substitution updates)
+            launch {
+                mealPlanRepository.observeById(mealPlanId).collect { mealPlan ->
+                    if (mealPlan == null) {
+                        _insufficientIngredients.value = null
+                        return@collect
+                    }
+                    
+                    // Check ingredient availability with current substitutions and servings
+                    val shortages = checkIngredientAvailabilityWithSubstitutions(mealPlan, servings)
+                    _insufficientIngredients.value = if (shortages.isNotEmpty()) shortages else null
+                }
+            }
+            
+            // Also observe pantry changes
+            launch {
+                inventoryRepository.observePantryItems().collect { _ ->
+                    // Trigger a re-check by getting the latest meal plan
+                    val mealPlan = mealPlanRepository.getById(mealPlanId) ?: return@collect
+                    val shortages = checkIngredientAvailabilityWithSubstitutions(mealPlan, servings)
+                    _insufficientIngredients.value = if (shortages.isNotEmpty()) shortages else null
+                }
             }
         }
     }
     
+    fun observeIngredientAvailability(mealPlanId: String, servings: Int) {
+        observeIngredientAvailabilityWithServings(mealPlanId, servings)
+    }
+    
     /**
-     * Check ingredient availability, taking into account applied substitutions.
+     * Check ingredient availability for a specific serving size without setting up observers.
+     * Used when servings are changed in the UI.
+     */
+    fun checkIngredientAvailabilityForServings(mealPlanId: String, servings: Int) {
+        viewModelScope.launch {
+            val mealPlan = mealPlanRepository.getById(mealPlanId) ?: return@launch
+            val shortages = checkIngredientAvailabilityWithSubstitutions(mealPlan, servings)
+            _insufficientIngredients.value = if (shortages.isNotEmpty()) shortages else null
+        }
+    }
+    
+    /**
+     * Check ingredient availability, taking into account applied substitutions and serving size.
      * If a substitute has been applied, check the substitute ingredient instead of the original.
      */
-    private suspend fun checkIngredientAvailabilityWithSubstitutions(mealPlan: MealPlan): List<StartCookingUseCase.InsufficientIngredient> {
+    private suspend fun checkIngredientAvailabilityWithSubstitutions(
+        mealPlan: MealPlan, 
+        servings: Int
+    ): List<StartCookingUseCase.InsufficientIngredient> {
         // Trigger substitute initialization to ensure we have up-to-date substitutes
         substituteInitializer.initialize(forceCheck = true)
+        
+        // Calculate servings multiplier
+        val servingsMultiplier = mealPlan.meal.servings?.let { originalServings ->
+            servings.toDouble() / originalServings.toDouble()
+        } ?: 1.0
         
         // Filter out non-deductible ingredients
         val deductibleIngredients = mealPlan.meal.ingredients.filter { 
@@ -388,13 +425,16 @@ class PlanViewModel @Inject constructor(
                 mealIngredient.ingredient.substitutes.find { it.substituteIngredient.id == substituteId }?.substituteIngredient
             } ?: mealIngredient.ingredient
             
+            // Adjust quantity based on servings
+            val requiredQuantity = mealIngredient.quantity * servingsMultiplier
+            
             val available = inventoryRepository.getAvailableQuantity(ingredientToCheck.id)
-            if (available < mealIngredient.quantity) {
+            if (available < requiredQuantity) {
                 // Only show substitutes if we're not already using one
                 val substitute = if (ingredientToCheck.id == mealIngredient.ingredient.id) {
                     mealIngredient.ingredient.substitutes.firstOrNull { sub ->
                         val subAvailable = inventoryRepository.getAvailableQuantity(sub.substituteIngredient.id)
-                        subAvailable >= mealIngredient.quantity
+                        subAvailable >= requiredQuantity
                     }?.substituteIngredient
                 } else {
                     null // Already using a substitute
@@ -403,7 +443,7 @@ class PlanViewModel @Inject constructor(
                 shortages.add(
                     StartCookingUseCase.InsufficientIngredient(
                         ingredientName = ingredientToCheck.name, // Use substitute name if applied
-                        required = mealIngredient.quantity,
+                        required = requiredQuantity,
                         available = available,
                         unit = ingredientToCheck.unit,
                         substitute = substitute
@@ -416,9 +456,25 @@ class PlanViewModel @Inject constructor(
     }
     
     /**
+     * Update the planned servings for a meal plan
+     */
+    fun updatePlannedServings(mealPlanId: String, servings: Int) {
+        viewModelScope.launch {
+            val mealPlan = mealPlanRepository.getById(mealPlanId) ?: return@launch
+            val updatedMealPlan = mealPlan.copy(
+                plannedServings = servings,
+                updatedAt = System.currentTimeMillis()
+            )
+            mealPlanRepository.update(updatedMealPlan)
+        }
+    }
+    
+    /**
      * Stop observing ingredient availability (clear the state)
      */
     fun clearIngredientAvailability() {
+        availabilityObserverJob?.cancel()
+        availabilityObserverJob = null
         _insufficientIngredients.value = null
     }
     

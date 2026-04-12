@@ -314,6 +314,7 @@
     <string name="recipe_instructions">Instrucțiuni</string>
     <string name="recipe_lets_cook">Să gătim</string>
     <string name="recipe_meal_marked_made">Masa a fost marcată ca preparată! Nu a fost nevoie să se deducă ingrediente.</string>
+    <string name="recipe_meal_planned">Preparatul a fost adăugat în planul de mese.</string>
     <string name="recipe_min">min</string>
     <string name="recipe_missing_ingredients">Ingrediente lipsă</string>
     <string name="recipe_missing_ingredients_list">Ingrediente lipsă: %1$s</string>
@@ -349,9 +350,9 @@
     <string name="settings_api_key_saved">✓ Cheie API salvată</string>
     <string name="settings_appearance">Aspect și accesibilitate</string>
     <string name="settings_back">Înapoi</string>
-    <string name="settings_custom_header_description">Personalizează textul antetului când distribui lista de cumpărături. Lasă gol pentru a folosi antetul implicit.</string>
+    <string name="settings_custom_header_description">Personalizează textul antetului când distribui lista de cumpărături. Lasă gol pentru antetul implicit.</string>
     <string name="settings_custom_header_label">Antet personalizat (Opțional)</string>
-    <string name="settings_custom_header_placeholder">Lista de cumpărături a familiei mele</string>
+    <string name="settings_custom_header_placeholder">Lista de cumpărături</string>
     <string name="settings_custom_header_saved">✓ Antet personalizat salvat</string>
     <string name="settings_font_family">Familie de fonturi</string>
     <string name="settings_grocery_export">Export listă de cumpărături</string>

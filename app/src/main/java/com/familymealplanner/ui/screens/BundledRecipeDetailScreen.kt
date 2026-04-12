@@ -450,11 +450,17 @@ fun BundledRecipeDetailScreen(
 
     // Show plan result dialog
     planResult?.let { message ->
-        if (message == "ingredients_added_success" || message == "ingredients_added_planned") {
-            val titleRes = if (message == "ingredients_added_planned") {
+        if (message == "ingredients_added_success" || message == "ingredients_added_planned" || message == "meal_planned_no_ingredients") {
+            val titleRes = if (message == "ingredients_added_planned" || message == "meal_planned_no_ingredients") {
                 R.string.recipe_success_planned
             } else {
                 R.string.recipe_success
+            }
+            
+            val bodyTextRes = if (message == "meal_planned_no_ingredients") {
+                R.string.recipe_meal_planned
+            } else {
+                R.string.recipe_ingredients_added
             }
             
             AlertDialog(
@@ -470,7 +476,7 @@ fun BundledRecipeDetailScreen(
                 },
                 text = {
                     Text(
-                        text = stringResource(R.string.recipe_ingredients_added),
+                        text = stringResource(bodyTextRes),
                         style = MaterialTheme.typography.bodyMedium,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
@@ -486,7 +492,7 @@ fun BundledRecipeDetailScreen(
             LaunchedEffect(message) {
                 // Navigate to appropriate screen in background
                 kotlinx.coroutines.delay(1000)
-                if (message == "ingredients_added_planned") {
+                if (message == "ingredients_added_planned" || message == "meal_planned_no_ingredients") {
                     onNavigateToPlan()
                 } else {
                     onNavigateToGroceries()

@@ -235,6 +235,7 @@
     <string name="recipe_delete">Șterge</string>
     <string name="recipe_ok">OK</string>
     <string name="recipe_ingredients_added">Ingredientele lipsă au fost adăugate la lista de cumpărături.</string>
+    <string name="recipe_meal_planned">Preparatul a fost adăugat în planul de mese.</string>
     <string name="recipe_ingredients_added_count">%1$d din %2$d ingrediente adăugate</string>
     <string name="recipe_ingredients_added_with_failures">%1$d din %2$d ingrediente adăugate (%3$d eșuate)</string>
     <string name="recipe_started_cooking">Gătitul a început! Verifică ecranul Plan.</string>

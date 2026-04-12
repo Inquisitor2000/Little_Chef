@@ -464,11 +464,11 @@ class BundledRecipeDetailViewModel @Inject constructor(
                         
                         when (planResult) {
                             is CreateMealPlanUseCase.Result.Success -> {
-                                _planResult.value = "ingredients_added_planned" // Show success message
+                                _planResult.value = "meal_planned_no_ingredients" // No missing ingredients
                                 _showPlanDialog.value = false
                             }
                             is CreateMealPlanUseCase.Result.InsufficientIngredients -> {
-                                _planResult.value = "ingredients_added_planned" // Show success message
+                                _planResult.value = "ingredients_added_planned" // Show success message with ingredients
                                 _showPlanDialog.value = false
                             }
                             is CreateMealPlanUseCase.Result.Error -> {

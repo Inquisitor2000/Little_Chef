@@ -284,7 +284,8 @@ fun AddIngredientDrawer(
             
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
-                state = searchListState
+                state = searchListState,
+                contentPadding = PaddingValues(bottom = 76.dp)
             ) {
                 // Show unified list of all ingredients
                 items(unifiedResults) { unifiedIngredient ->
@@ -352,7 +353,8 @@ fun AddIngredientDrawer(
         } else if (showCategories) {
             LazyColumn(
                 modifier = Modifier.fillMaxSize(),
-                state = listState
+                state = listState,
+                contentPadding = PaddingValues(bottom = 76.dp)
             ) {
                 IngredientCategory.entries.forEachIndexed { index, category ->
                     val isCategoryExpanded = expandedCategory == category

@@ -397,6 +397,7 @@
     <string name="recipe_instructions">Инструкции</string>
     <string name="recipe_lets_cook">Готовим</string>
     <string name="recipe_meal_marked_made">Блюдо отмечено как приготовленное! Не нужно было вычитать ингредиенты.</string>
+    <string name="recipe_meal_planned">Блюдо добавлено в план питания.</string>
     <string name="recipe_min">мин</string>
     <string name="recipe_missing_ingredients">Недостающие ингредиенты</string>
     <string name="recipe_missing_ingredients_list">Недостающие ингредиенты: %1$s</string>
@@ -434,9 +435,9 @@
     <string name="settings_api_key_saved">✓ API-ключ сохранен</string>
     <string name="settings_appearance">Внешний вид и доступность</string>
     <string name="settings_back">Назад</string>
-    <string name="settings_custom_header_description">Настройте текст заголовка при отправке списка покупок. Оставьте пустым для использования заголовка по умолчанию.</string>
-    <string name="settings_custom_header_label">Пользовательский заголовок (Необязательно)</string>
-    <string name="settings_custom_header_placeholder">Список покупок нашей семьи</string>
+    <string name="settings_custom_header_description">Текст заголовка при отправке списка покупок. Оставьте пустым для стандартного.</string>
+    <string name="settings_custom_header_label">Заголовок (необязательно)</string>
+    <string name="settings_custom_header_placeholder">Список покупок</string>
     <string name="settings_custom_header_saved">✓ Пользовательский заголовок сохранен</string>
     <string name="settings_font_family">Семейство шрифтов</string>
     <string name="settings_grocery_export">Экспорт списка покупок</string>

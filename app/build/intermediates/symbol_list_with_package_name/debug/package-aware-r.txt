@@ -902,6 +902,7 @@ string recipe_ingredients_deducted
 string recipe_instructions
 string recipe_lets_cook
 string recipe_meal_marked_made
+string recipe_meal_planned
 string recipe_min
 string recipe_missing_ingredients
 string recipe_missing_ingredients_list

@@ -259,6 +259,7 @@ fun MainScreen(
 fun MainAppScreen() {
     val navController = rememberNavController()
     val isDarkTheme = isSystemInDarkTheme()
+    val haptic = com.familymealplanner.ui.util.rememberHapticFeedback()
     
     val navBackStackEntry by navController.currentBackStackEntryAsState()
     val currentDestination = navBackStackEntry?.destination
@@ -348,16 +349,17 @@ fun MainAppScreen() {
                             if (isNavBarExpanded) {
                                 Modifier.fillMaxWidth()
                             } else {
-                                Modifier.width(56.dp)
+                                Modifier.width(50.dp)
                             }
                         )
-                        .height(56.dp)
-                        .clip(RoundedCornerShape(28.dp))
+                        .height(50.dp)
+                        .clip(RoundedCornerShape(25.dp))
                         .clickable(
                             interactionSource = remember { MutableInteractionSource() },
                             indication = null
                         ) {
                             if (!isNavBarExpanded) {
+                                haptic.performLight()
                                 isNavBarExpanded = true
                                 lastInteractionTime = System.currentTimeMillis()
                             }
@@ -381,11 +383,12 @@ fun MainAppScreen() {
                                 Box(
                                     modifier = Modifier
                                         .weight(1f)
-                                        .height(48.dp)
+                                        .height(42.dp)
                                         .clickable(
                                             interactionSource = remember { MutableInteractionSource() },
                                             indication = null
                                         ) {
+                                            haptic.performLight()
                                             lastInteractionTime = System.currentTimeMillis()
                                             navController.navigate(destination.route) {
                                                 popUpTo(navController.graph.findStartDestination().id) {
@@ -400,9 +403,9 @@ fun MainAppScreen() {
                                     if (selected) {
                                         Surface(
                                             modifier = Modifier
-                                                .height(48.dp)
+                                                .height(42.dp)
                                                 .fillMaxWidth(1f),
-                                            shape = RoundedCornerShape(24.dp),
+                                            shape = RoundedCornerShape(21.dp),
                                             color = if (isDarkTheme) {
                                                 MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
                                             } else {

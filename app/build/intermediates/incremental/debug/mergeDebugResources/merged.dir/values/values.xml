@@ -713,6 +713,7 @@
     <string name="recipe_instructions">Instructions</string>
     <string name="recipe_lets_cook">Let\'s cook</string>
     <string name="recipe_meal_marked_made">Meal marked as made! No ingredients needed to be deducted.</string>
+    <string name="recipe_meal_planned">The meal was added to the meal plan.</string>
     <string name="recipe_min">min</string>
     <string name="recipe_missing_ingredients">Missing Ingredients</string>
     <string name="recipe_missing_ingredients_list">Missing ingredients: %1$s</string>
@@ -750,9 +751,9 @@
     <string name="settings_api_key_saved">✓ API key saved</string>
     <string name="settings_appearance">Appearance &amp; Accessibility</string>
     <string name="settings_back">Back</string>
-    <string name="settings_custom_header_description">Customize the header text when sharing your grocery list. Leave empty to use the default header.</string>
+    <string name="settings_custom_header_description">Customize the header text when sharing your grocery list. Leave empty for default.</string>
     <string name="settings_custom_header_label">Custom Header (Optional)</string>
-    <string name="settings_custom_header_placeholder">My Family\'s Shopping List</string>
+    <string name="settings_custom_header_placeholder">Shopping List</string>
     <string name="settings_custom_header_saved">✓ Custom header saved</string>
     <string name="settings_font_family">Font Family</string>
     <string name="settings_grocery_export">Grocery List Export</string>
@@ -949,14 +950,23 @@
         <attr format="reference" name="fontProviderCerts"/>
         
         <attr name="fontProviderFetchStrategy">
-            
+            <!-- The blocking font fetch works as follows.
+              First, check the local cache, then if the requested font is not cached, request the
+              font from the provider and wait until it is finished.  You can change the length of
+              the timeout by modifying fontProviderFetchTimeout.  If the timeout happens, the
+              default typeface will be used instead. -->
             <enum name="blocking" value="0"/>
-            
+            <!-- The async font fetch works as follows.
+              First, check the local cache, then if the requeted font is not cached, trigger a
+              request the font and continue with layout inflation. Once the font fetch succeeds, the
+              target text view will be refreshed with the downloaded font data. The
+              fontProviderFetchTimeout will be ignored if async loading is specified. -->
             <enum name="async" value="1"/>
         </attr>
         
         <attr format="integer" name="fontProviderFetchTimeout">
-            
+            <!-- A special value for the timeout. In this case, the blocking font fetching will not
+              timeout and wait until a reply is received from the font provider. -->
             <enum name="forever" value="-1"/>
         </attr>
         

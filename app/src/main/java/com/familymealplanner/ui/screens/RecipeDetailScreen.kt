@@ -399,7 +399,7 @@ class RecipeDetailViewModel @Inject constructor(
                 
                 when (result) {
                     is CreateMealPlanUseCase.Result.Success -> {
-                        _planResult.value = "ingredients_added_planned"
+                        _planResult.value = "meal_planned_no_ingredients"
                         _showPlanDialog.value = false
                     }
                     is CreateMealPlanUseCase.Result.InsufficientIngredients -> {
@@ -1255,11 +1255,17 @@ fun RecipeDetailScreen(
 
     // Show plan result dialog
     planResult?.let { message ->
-        if (message == "ingredients_added_success" || message == "ingredients_added_planned") {
-            val titleRes = if (message == "ingredients_added_planned") {
+        if (message == "ingredients_added_success" || message == "ingredients_added_planned" || message == "meal_planned_no_ingredients") {
+            val titleRes = if (message == "ingredients_added_planned" || message == "meal_planned_no_ingredients") {
                 R.string.recipe_success_planned
             } else {
                 R.string.recipe_success
+            }
+            
+            val bodyTextRes = if (message == "meal_planned_no_ingredients") {
+                R.string.recipe_meal_planned
+            } else {
+                R.string.recipe_ingredients_added
             }
             
             AlertDialog(
@@ -1275,7 +1281,7 @@ fun RecipeDetailScreen(
                 },
                 text = {
                     Text(
-                        text = stringResource(R.string.recipe_ingredients_added),
+                        text = stringResource(bodyTextRes),
                         style = MaterialTheme.typography.bodyMedium,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
@@ -1291,7 +1297,7 @@ fun RecipeDetailScreen(
             LaunchedEffect(message) {
                 // Navigate to appropriate screen in background
                 kotlinx.coroutines.delay(1000)
-                if (message == "ingredients_added_planned") {
+                if (message == "ingredients_added_planned" || message == "meal_planned_no_ingredients") {
                     onNavigateToPlan()
                 } else {
                     onNavigateToGroceries()

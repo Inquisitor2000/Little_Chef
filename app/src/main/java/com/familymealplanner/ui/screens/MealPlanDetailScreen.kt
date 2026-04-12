@@ -73,15 +73,17 @@ fun MealPlanDetailScreen(
         else -> null
     }
     
-    // Initialize servings from meal and start observing ingredient availability
+    // Initialize servings from meal plan (use plannedServings if set, otherwise meal's default servings)
     LaunchedEffect(mealPlan) {
-        mealPlan?.meal?.servings?.let { servings ->
-            selectedServings = servings
+        mealPlan?.let { plan ->
+            selectedServings = plan.plannedServings ?: plan.meal.servings ?: 2
         }
-        
-        // Start observing ingredient availability for PLANNED meals
+    }
+    
+    // Observe ingredient availability for PLANNED meals, reacting to servings changes
+    LaunchedEffect(mealPlan?.status, selectedServings) {
         if (mealPlan != null && mealPlan.status == MealPlanStatus.PLANNED) {
-            viewModel.observeIngredientAvailability(mealPlanId)
+            viewModel.observeIngredientAvailabilityWithServings(mealPlanId, selectedServings)
         } else {
             // Clear insufficient ingredients if not in PLANNED status
             viewModel.clearIngredientAvailability()
@@ -262,27 +264,36 @@ fun MealPlanDetailScreen(
                                 // Servings selector
                                 mealPlan.meal.servings?.let {
                                     items.add {
+                                        val canChangeServings = mealPlan.status == MealPlanStatus.PLANNED
                                         Column(
                                             horizontalAlignment = Alignment.CenterHorizontally,
-                                            modifier = Modifier.clickable {
-                                                selectedServings = when (selectedServings) {
+                                            modifier = Modifier.clickable(enabled = canChangeServings) {
+                                                val newServings = when (selectedServings) {
                                                     1 -> 2
                                                     2 -> 4
                                                     4 -> 6
                                                     else -> 1
                                                 }
+                                                selectedServings = newServings
+                                                // Save the servings change to the meal plan
+                                                viewModel.updatePlannedServings(mealPlanId, newServings)
                                             }
                                         ) {
                                             Text(
                                                 text = "$selectedServings",
                                                 style = MaterialTheme.typography.bodyMedium,
                                                 fontWeight = FontWeight.Bold,
-                                                color = MaterialTheme.colorScheme.primary
+                                                color = if (canChangeServings) 
+                                                    MaterialTheme.colorScheme.primary 
+                                                else 
+                                                    MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.6f)
                                             )
                                             Text(
                                                 text = stringResource(R.string.meal_plan_servings),
                                                 style = MaterialTheme.typography.bodySmall,
-                                                color = MaterialTheme.colorScheme.onSurfaceVariant
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(
+                                                    alpha = if (canChangeServings) 1f else 0.6f
+                                                )
                                             )
                                         }
                                     }
@@ -929,7 +940,7 @@ fun MealPlanDetailScreen(
 
                 // Bottom spacing
                 item {
-                    Spacer(modifier = Modifier.height(16.dp))
+                    Spacer(modifier = Modifier.height(76.dp))
                 }
             }
         }

@@ -901,6 +901,7 @@ int string recipe_ingredients_deducted 0x7f0e0241
 int string recipe_instructions 0x7f0e0242
 int string recipe_lets_cook 0x7f0e0243
 int string recipe_meal_marked_made 0x7f0e0244
+int string recipe_meal_planned 0x7f0e02d8
 int string recipe_min 0x7f0e0245
 int string recipe_missing_ingredients 0x7f0e0246
 int string recipe_missing_ingredients_list 0x7f0e0247

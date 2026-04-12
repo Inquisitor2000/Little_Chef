@@ -548,6 +548,7 @@
     <string name="recipe_instructions">Instructions</string>
     <string name="recipe_lets_cook">Let\'s cook</string>
     <string name="recipe_meal_marked_made">Meal marked as made! No ingredients needed to be deducted.</string>
+    <string name="recipe_meal_planned">The meal was added to the meal plan.</string>
     <string name="recipe_min">min</string>
     <string name="recipe_missing_ingredients">Missing Ingredients</string>
     <string name="recipe_missing_ingredients_list">Missing ingredients: %1$s</string>
@@ -583,9 +584,9 @@
     <string name="settings_api_key_saved">✓ API key saved</string>
     <string name="settings_appearance">Appearance &amp; Accessibility</string>
     <string name="settings_back">Back</string>
-    <string name="settings_custom_header_description">Customize the header text when sharing your grocery list. Leave empty to use the default header.</string>
+    <string name="settings_custom_header_description">Customize the header text when sharing your grocery list. Leave empty for default.</string>
     <string name="settings_custom_header_label">Custom Header (Optional)</string>
-    <string name="settings_custom_header_placeholder">My Family\'s Shopping List</string>
+    <string name="settings_custom_header_placeholder">Shopping List</string>
     <string name="settings_custom_header_saved">✓ Custom header saved</string>
     <string name="settings_font_family">Font Family</string>
     <string name="settings_grocery_export">Grocery List Export</string>

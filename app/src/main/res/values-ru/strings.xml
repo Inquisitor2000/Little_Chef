@@ -270,6 +270,7 @@
     <string name="recipe_delete">Удалить</string>
     <string name="recipe_ok">ОК</string>
     <string name="recipe_ingredients_added">Недостающие ингредиенты добавлены в список покупок.</string>
+    <string name="recipe_meal_planned">Блюдо добавлено в план питания.</string>
     <string name="recipe_ingredients_added_count">%1$d из %2$d ингредиентов добавлено</string>
     <string name="recipe_ingredients_added_with_failures">%1$d из %2$d ингредиентов добавлено (%3$d не удалось)</string>
     <string name="recipe_started_cooking">Начали готовить! Проверьте экран План.</string>

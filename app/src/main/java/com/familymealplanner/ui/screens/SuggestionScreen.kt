@@ -184,7 +184,7 @@ private fun SuccessContent(
 ) {
     LazyColumn(
         modifier = modifier.fillMaxSize(),
-        contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 16.dp),
+        contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 56.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         // If no pantry-based meals, show message
@@ -490,54 +490,12 @@ private fun AnimatedMealCard(
     onClick: () -> Unit,
     modifier: Modifier = Modifier
 ) {
-    var isVisible by remember { mutableStateOf(false) }
-    
-    // Trigger animation with staggered delay based on index
-    LaunchedEffect(suggestion) {
-        // Fade out first if already visible
-        if (isVisible) {
-            isVisible = false
-            kotlinx.coroutines.delay(150L)
-        }
-        
-        // Then fade in with delay
-        kotlinx.coroutines.delay((index * 100L).coerceAtMost(500L)) // Max 500ms delay, 100ms between cards
-        isVisible = true
-    }
-    
-    androidx.compose.animation.AnimatedVisibility(
-        visible = isVisible,
-        enter = androidx.compose.animation.fadeIn(
-            animationSpec = androidx.compose.animation.core.tween(
-                durationMillis = 300,
-                easing = androidx.compose.animation.core.FastOutSlowInEasing
-            )
-        ) + androidx.compose.animation.slideInVertically(
-            initialOffsetY = { it / 4 },
-            animationSpec = androidx.compose.animation.core.tween(
-                durationMillis = 300,
-                easing = androidx.compose.animation.core.FastOutSlowInEasing
-            )
-        ),
-        exit = androidx.compose.animation.fadeOut(
-            animationSpec = androidx.compose.animation.core.tween(
-                durationMillis = 200,
-                easing = androidx.compose.animation.core.FastOutSlowInEasing
-            )
-        ) + androidx.compose.animation.slideOutVertically(
-            targetOffsetY = { -it / 4 },
-            animationSpec = androidx.compose.animation.core.tween(
-                durationMillis = 200,
-                easing = androidx.compose.animation.core.FastOutSlowInEasing
-            )
-        )
-    ) {
-        MealSuggestionCard(
-            suggestion = suggestion,
-            onClick = onClick,
-            modifier = modifier
-        )
-    }
+    // Simply render the card without animation to prevent jumping during scroll
+    MealSuggestionCard(
+        suggestion = suggestion,
+        onClick = onClick,
+        modifier = modifier
+    )
 }
 
 @Composable

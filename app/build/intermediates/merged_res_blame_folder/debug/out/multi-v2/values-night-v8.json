@@ -4,7 +4,24 @@
             "outputFile": "com.familymealplanner.app-mergeDebugResources-64:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/base/Desktop/Little_Chef/app/src/main/res/values-night/themes.xml",
+                    "source": "/Users/base/Little_Chef/app/src/main/res/values-night/colors.xml",
+                    "from": {
+                        "startLines": "3",
+                        "startColumns": "4",
+                        "startOffsets": "101",
+                        "endColumns": "56",
+                        "endOffsets": "153"
+                    },
+                    "to": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "56",
+                        "endOffsets": "107"
+                    }
+                },
+                {
+                    "source": "/Users/base/Little_Chef/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "3",
                         "startColumns": "4",
@@ -20,23 +37,6 @@
                         "endLines": "9",
                         "endColumns": "12",
                         "endOffsets": "586"
-                    }
-                },
-                {
-                    "source": "/Users/base/Desktop/Little_Chef/app/src/main/res/values-night/colors.xml",
-                    "from": {
-                        "startLines": "3",
-                        "startColumns": "4",
-                        "startOffsets": "101",
-                        "endColumns": "56",
-                        "endOffsets": "153"
-                    },
-                    "to": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "56",
-                        "endOffsets": "107"
                     }
                 }
             ]
