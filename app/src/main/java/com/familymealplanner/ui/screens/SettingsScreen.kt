@@ -62,13 +62,29 @@ fun SettingsScreen(
     var apiKeyInput by remember(apiKey) { mutableStateOf(apiKey ?: "") }
     var showSaveConfirmation by remember { mutableStateOf(false) }
     var isFocused by remember { mutableStateOf(false) }
-    var currentTextScale by remember(textScale) { mutableStateOf(textScale) }
-
-    // Round to nearest 5%
-    fun roundToNearest5Percent(value: Float): Float {
-        val percentage = (value * 100).toInt()
-        val rounded = ((percentage + 2.5f) / 5).toInt() * 5
-        return rounded / 100f
+    
+    // Map slider value to discrete options: 85%, 94%, 100%, 105%
+    val scaleOptions = listOf(0.85f, 0.94f, 1.0f, 1.05f)
+    
+    fun getClosestScaleOption(value: Float): Float {
+        return scaleOptions.minByOrNull { kotlin.math.abs(it - value) } ?: 1.0f
+    }
+    
+    fun getSliderPosition(scale: Float): Float {
+        val index = scaleOptions.indexOf(scale).takeIf { it >= 0 } ?: 2 // default to 100%
+        return index.toFloat()
+    }
+    
+    // Initialize with loaded value, snapping to closest valid option
+    var currentTextScale by remember(textScale) { 
+        val snappedValue = getClosestScaleOption(textScale)
+        mutableStateOf(snappedValue)
+    }
+    
+    // Update when textScale changes from ViewModel
+    LaunchedEffect(textScale) {
+        val snappedValue = getClosestScaleOption(textScale)
+        currentTextScale = snappedValue
     }
 
     Scaffold(
@@ -399,26 +415,51 @@ fun SettingsScreen(
                                 fontWeight = FontWeight.SemiBold
                             )
                             Text(
-                                text = "${(roundToNearest5Percent(currentTextScale) * 100).toInt()}%",
+                                text = "${(currentTextScale * 100).toInt()}%",
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.primary
                             )
                         }
                         
-                        Slider(
-                            value = currentTextScale,
-                            onValueChange = { 
-                                val rounded = roundToNearest5Percent(it)
-                                currentTextScale = rounded
-                                coroutineScope.launch {
-                                    viewModel.saveTextScale(rounded)
-                                }
-                            },
-                            valueRange = 0.85f..1.15f,
-                            steps = 5,
+                        Box(
                             modifier = Modifier.fillMaxWidth()
-                        )
+                        ) {
+                            Slider(
+                                value = getSliderPosition(currentTextScale),
+                                onValueChange = { sliderValue ->
+                                    val index = sliderValue.toInt().coerceIn(0, scaleOptions.size - 1)
+                                    val newScale = scaleOptions[index]
+                                    currentTextScale = newScale
+                                    coroutineScope.launch {
+                                        viewModel.saveTextScale(newScale)
+                                    }
+                                },
+                                valueRange = 0f..3f,
+                                steps = 2,
+                                modifier = Modifier.fillMaxWidth()
+                            )
+                            
+                            // Custom tick marks on top - 4 dots for 80%, 94%, 100%, 105%
+                            Row(
+                                modifier = Modifier
+                                    .fillMaxWidth()
+                                    .padding(horizontal = 12.dp)
+                                    .align(Alignment.Center),
+                                horizontalArrangement = Arrangement.SpaceBetween
+                            ) {
+                                repeat(4) { index ->
+                                    Box(
+                                        modifier = Modifier
+                                            .size(10.dp)
+                                            .background(
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
+                                                shape = CircleShape
+                                            )
+                                    )
+                                }
+                            }
+                        }
                     }
                 }
             }
