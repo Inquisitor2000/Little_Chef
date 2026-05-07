@@ -1,0 +1,51 @@
+{
+  "id": "carbonara_authentic_italian_premium",
+  "name": "Authentic Roman Carbonara",
+  "instructions": "1. Bring a large pot of salted water to boil for the pasta.\n\n2. Cut the guanciale into small strips or cubes. In a large skillet over medium heat, cook the guanciale until the fat renders and it becomes crispy, about 8-10 minutes. Remove from heat but keep warm.\n\n3. In a bowl, whisk together the egg yolks and whole egg. Add the grated Pecorino Romano and a generous amount of freshly ground black pepper. Mix until well combined.\n\n4. Cook the spaghetti according to package directions until al dente. Reserve 1 cup of pasta cooking water before draining.\n\n5. Add the hot drained pasta directly to the skillet with the guanciale (off heat). Toss to coat with the rendered fat.\n\n6. Working quickly, add the egg and cheese mixture to the pasta, tossing constantly. Add reserved pasta water a little at a time to create a creamy sauce. The residual heat will cook the eggs without scrambling them.\n\n7. Serve immediately with extra Pecorino Romano and black pepper on top.",
+  "simpleInstructions": "1. Boil pasta water.\n\n2. Cook guanciale until crispy.\n\n3. Mix eggs, Pecorino, and pepper.\n\n4. Cook pasta, reserve water.\n\n5. Toss pasta with guanciale.\n\n6. Add egg mixture off heat, toss with pasta water.\n\n7. Serve with extra cheese and pepper.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 15,
+  "servings": 4,
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "cuisine": "Italian Premium",
+  "imageUrl": "recipes/images/italian_premium/carbonara_authentic.jpg",
+  "ingredients": [
+    {
+      "name": "Guanciale",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Spaghetti",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg Yolks",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Pecorino Romano",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

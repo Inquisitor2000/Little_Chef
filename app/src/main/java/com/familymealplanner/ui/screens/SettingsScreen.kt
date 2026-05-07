@@ -6,6 +6,7 @@ import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.rememberScrollState
@@ -377,7 +378,7 @@ fun SettingsScreen(
                                         .then(
                                             if (selectedAccentColor == color) {
                                                 Modifier.border(
-                                                    width = 3.dp,
+                                                    width = 1.5.dp,
                                                     color = MaterialTheme.colorScheme.onSurface,
                                                     shape = CircleShape
                                                 )
@@ -400,7 +401,7 @@ fun SettingsScreen(
                     
                     Divider(color = MaterialTheme.colorScheme.outlineVariant)
                     
-                    // Text Size Slider
+                    // Text Size Selector
                     Column(
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
@@ -414,49 +415,64 @@ fun SettingsScreen(
                                 style = MaterialTheme.typography.bodyMedium,
                                 fontWeight = FontWeight.SemiBold
                             )
-                            Text(
-                                text = "${(currentTextScale * 100).toInt()}%",
-                                style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.Bold,
-                                color = MaterialTheme.colorScheme.primary
-                            )
                         }
                         
-                        Box(
-                            modifier = Modifier.fillMaxWidth()
+                        // Navigation bar style selector
+                        Surface(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(44.dp),
+                            shape = androidx.compose.foundation.shape.RoundedCornerShape(22.dp),
+                            color = androidx.compose.ui.graphics.Color(selectedAccentColor)
                         ) {
-                            Slider(
-                                value = getSliderPosition(currentTextScale),
-                                onValueChange = { sliderValue ->
-                                    val index = sliderValue.toInt().coerceIn(0, scaleOptions.size - 1)
-                                    val newScale = scaleOptions[index]
-                                    currentTextScale = newScale
-                                    coroutineScope.launch {
-                                        viewModel.saveTextScale(newScale)
-                                    }
-                                },
-                                valueRange = 0f..3f,
-                                steps = 2,
-                                modifier = Modifier.fillMaxWidth()
-                            )
-                            
-                            // Custom tick marks on top - 4 dots for 80%, 94%, 100%, 105%
                             Row(
                                 modifier = Modifier
-                                    .fillMaxWidth()
-                                    .padding(horizontal = 12.dp)
-                                    .align(Alignment.Center),
-                                horizontalArrangement = Arrangement.SpaceBetween
+                                    .fillMaxSize()
+                                    .padding(horizontal = 4.dp, vertical = 4.dp),
+                                horizontalArrangement = Arrangement.spacedBy(4.dp)
                             ) {
-                                repeat(4) { index ->
+                                scaleOptions.forEachIndexed { index, scale ->
+                                    val isSelected = currentTextScale == scale
+                                    val percentage = "${(scale * 100).toInt()}%"
+                                    
                                     Box(
                                         modifier = Modifier
-                                            .size(10.dp)
-                                            .background(
-                                                color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                                shape = CircleShape
-                                            )
-                                    )
+                                            .weight(1f)
+                                            .fillMaxHeight()
+                                            .clickable(
+                                                interactionSource = remember { MutableInteractionSource() },
+                                                indication = null
+                                            ) {
+                                                currentTextScale = scale
+                                                coroutineScope.launch {
+                                                    viewModel.saveTextScale(scale)
+                                                }
+                                            },
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        if (isSelected) {
+                                            Surface(
+                                                modifier = Modifier
+                                                    .fillMaxSize(),
+                                                shape = androidx.compose.foundation.shape.RoundedCornerShape(18.dp),
+                                                color = if (isDarkTheme) {
+                                                    MaterialTheme.colorScheme.onSurface.copy(alpha = 0.5f)
+                                                } else {
+                                                    MaterialTheme.colorScheme.background.copy(alpha = 0.5f)
+                                                }
+                                            ) {}
+                                        }
+                                        Text(
+                                            text = percentage,
+                                            style = MaterialTheme.typography.labelLarge,
+                                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                                            color = if (isDarkTheme) {
+                                                MaterialTheme.colorScheme.background
+                                            } else {
+                                                MaterialTheme.colorScheme.onSurface
+                                            }
+                                        )
+                                    }
                                 }
                             }
                         }

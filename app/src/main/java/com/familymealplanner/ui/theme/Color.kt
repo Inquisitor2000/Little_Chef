@@ -4,7 +4,7 @@ import androidx.compose.ui.graphics.Color
 
 // Light Mode Colors
 val md_theme_light_background = Color(0xFFFAF9F9)
-val md_theme_light_surface = Color(0xFFE0E0E0)
+val md_theme_light_surface = Color(0xFFE8E8E8)
 val md_theme_light_onBackground = Color(0xFF141414)
 val md_theme_light_onBackgroundVariant = Color(0xFF1F1F1F)
 

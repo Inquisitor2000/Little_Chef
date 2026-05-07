@@ -1024,7 +1024,7 @@ fun RecipeDetailScreen(
                                 val originalServings = recipe.servings ?: 2
                                 val servingsMultiplier = currentSelectedServings.toDouble() / originalServings.toDouble()
                                 
-                                recipe.ingredients.forEach { ingredient ->
+                                recipe.ingredients.sortedByDescending { it.isStarIngredient }.forEach { ingredient ->
                                     val adjustedQuantity = ingredient.quantity * servingsMultiplier
                                     Surface(
                                         modifier = Modifier
@@ -1049,7 +1049,7 @@ fun RecipeDetailScreen(
                                                     Icon(
                                                         imageVector = androidx.compose.material.icons.Icons.Filled.Star,
                                                         contentDescription = "Essential ingredient",
-                                                        tint = Color(0xFFFFD700),
+                                                        tint = MaterialTheme.colorScheme.primary,
                                                         modifier = Modifier.size(16.dp)
                                                     )
                                                 }

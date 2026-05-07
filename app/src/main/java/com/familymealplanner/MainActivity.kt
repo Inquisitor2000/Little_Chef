@@ -148,7 +148,7 @@ class MainActivity : ComponentActivity() {
             val accentColorDark by viewModel.accentColorDark.collectAsState()
             
             // Use pre-loaded values on first render, then switch to reactive values
-            val effectiveTextScale = if (textScale == 1.0f) initialTextScale else textScale
+            val effectiveTextScale = if (textScale == 0.94f) initialTextScale else textScale
             val effectiveAppFont = if (appFont == "Roboto Medium") initialAppFont else appFont
             val effectiveAccentColorLight = if (accentColorLight == 0xFFD68C45L) initialAccentColorLight else accentColorLight
             val effectiveAccentColorDark = if (accentColorDark == 0xFF5398beL) initialAccentColorDark else accentColorDark

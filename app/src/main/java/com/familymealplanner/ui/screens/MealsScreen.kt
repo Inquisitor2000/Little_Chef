@@ -1,5 +1,6 @@
 package com.familymealplanner.ui.screens
 
+import android.app.Activity
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.Image
@@ -16,25 +17,29 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Lock
+import androidx.compose.material.icons.filled.LockOpen
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.graphicsLayer
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.draw.clip
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.familymealplanner.R
 import com.familymealplanner.domain.model.Cuisine
 import com.familymealplanner.domain.model.Meal
+import com.familymealplanner.ui.components.PremiumPackPreview
+import com.familymealplanner.ui.components.PremiumPreviewDrawer
 import com.familymealplanner.ui.util.RecipeImage
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -47,6 +52,46 @@ fun MealsScreen(
     cuisineViewModel: CuisineMealsViewModel = hiltViewModel()
 ) {
     val uiState by viewModel.uiState.collectAsState()
+    val context = LocalContext.current
+    val activity = context as? Activity
+    
+    // Observe purchase state
+    val purchaseState by viewModel.purchaseState.collectAsState()
+    
+    // State for premium preview drawer
+    var showPremiumPreview by remember { mutableStateOf<PremiumPackPreview?>(null) }
+    
+    // Handle purchase state changes
+    LaunchedEffect(purchaseState) {
+        when (val state = purchaseState) {
+            is com.familymealplanner.billing.PurchaseState.Success -> {
+                // Purchase successful, close drawer and navigate
+                android.widget.Toast.makeText(context, "Purchase successful! Recipes unlocked.", android.widget.Toast.LENGTH_SHORT).show()
+                showPremiumPreview?.let { preview ->
+                    showPremiumPreview = null
+                    onNavigateToCuisine(preview.cuisine)
+                }
+                viewModel.resetPurchaseState()
+            }
+            is com.familymealplanner.billing.PurchaseState.Cancelled -> {
+                // User cancelled, just reset state
+                android.widget.Toast.makeText(context, "Purchase cancelled", android.widget.Toast.LENGTH_SHORT).show()
+                viewModel.resetPurchaseState()
+            }
+            is com.familymealplanner.billing.PurchaseState.Error -> {
+                // Show error
+                android.widget.Toast.makeText(context, "Error: ${state.message}", android.widget.Toast.LENGTH_LONG).show()
+                viewModel.resetPurchaseState()
+            }
+            is com.familymealplanner.billing.PurchaseState.Loading -> {
+                android.widget.Toast.makeText(context, "Opening Google Play...", android.widget.Toast.LENGTH_SHORT).show()
+            }
+            is com.familymealplanner.billing.PurchaseState.Downloading -> {
+                android.widget.Toast.makeText(context, "Downloading recipes... ${state.progress}%", android.widget.Toast.LENGTH_SHORT).show()
+            }
+            else -> { /* Idle */ }
+        }
+    }
     
     // Track initial composition
     LaunchedEffect(Unit) {
@@ -56,6 +101,17 @@ fun MealsScreen(
     // Preload Italian cuisine (most popular) when screen is first displayed
     LaunchedEffect(Unit) {
         cuisineViewModel.preloadRecipes(Cuisine.ITALIAN)
+    }
+    
+    // Handle cuisine click with DLC check
+    val handleCuisineClick: (Cuisine) -> Unit = { cuisine ->
+        if (cuisine.isDLC) {
+            // Show premium preview for DLC cuisines
+            showPremiumPreview = getPremiumPackPreview(cuisine)
+        } else {
+            // Navigate directly for regular cuisines
+            onNavigateToCuisine(cuisine)
+        }
     }
     
     Scaffold(
@@ -124,10 +180,34 @@ fun MealsScreen(
             // Cuisines section
             item(span = { GridItemSpan(2) }) {
                 CuisinesSection(
-                    onCuisineClick = onNavigateToCuisine
+                    onCuisineClick = handleCuisineClick
                 )
             }
         }
+    }
+    
+    // Show premium preview drawer if needed
+    showPremiumPreview?.let { preview ->
+        PremiumPreviewDrawer(
+            packPreview = preview,
+            onDismiss = { showPremiumPreview = null },
+            onPurchase = {
+                // Launch billing flow
+                val act = activity
+                val productId = preview.cuisine.assetPackName ?: ""
+                
+                android.util.Log.d("MealsScreen", "Purchase button clicked")
+                android.util.Log.d("MealsScreen", "Activity: $act")
+                android.util.Log.d("MealsScreen", "Product ID: $productId")
+                
+                if (act != null && productId.isNotEmpty()) {
+                    android.util.Log.d("MealsScreen", "Launching billing flow for: $productId")
+                    viewModel.purchaseDLC(act, productId)
+                } else {
+                    android.util.Log.e("MealsScreen", "Cannot launch billing - Activity: $act, ProductId: $productId")
+                }
+            }
+        )
     }
 }
 
@@ -135,11 +215,48 @@ fun MealsScreen(
 private fun CuisinesSection(
     onCuisineClick: (Cuisine) -> Unit
 ) {
-    val cuisines = Cuisine.entries
+    val allCuisines = Cuisine.entries
+    
+    // Separate DLC and regular cuisines
+    val premiumCuisines = allCuisines.filter { it.isDLC }
+    val regularCuisines = allCuisines.filter { !it.isDLC }
+    
+    // Split regular cuisines into country-based (first 5) and type-based (rest)
+    val countryBasedCuisines = regularCuisines.take(5) // Italian, Mexican, Asian, Mediterranean, French
+    val typeBasedCuisines = regularCuisines.drop(5)    // Bread & Bakery, Soups & Stews, etc.
     
     Column(
         modifier = Modifier.fillMaxWidth()
     ) {
+        // Premium Section (if any DLC cuisines exist)
+        if (premiumCuisines.isNotEmpty()) {
+            Text(
+                text = stringResource(R.string.meals_premium_headline),
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(bottom = 12.dp)
+            )
+            
+            Column(
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                premiumCuisines.forEach { cuisine ->
+                    CuisineCard(
+                        cuisine = cuisine,
+                        onClick = { onCuisineClick(cuisine) }
+                    )
+                }
+            }
+            
+            // Divider after Premium section
+            Divider(
+                modifier = Modifier.padding(vertical = 16.dp),
+                thickness = 1.dp,
+                color = MaterialTheme.colorScheme.outlineVariant
+            )
+        }
+        
+        // Cuisines by Country Section
         Text(
             text = stringResource(R.string.meals_cuisines_headline),
             style = MaterialTheme.typography.titleLarge,
@@ -150,25 +267,37 @@ private fun CuisinesSection(
         Column(
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            cuisines.forEachIndexed { index, cuisine ->
+            countryBasedCuisines.forEach { cuisine ->
                 CuisineCard(
                     cuisine = cuisine,
                     onClick = { onCuisineClick(cuisine) }
                 )
-                
-                // Add divider and "Meal Types" headline after French cuisine (index 4)
-                if (index == 4) {
-                    Divider(
-                        modifier = Modifier.padding(vertical = 16.dp),
-                        thickness = 1.dp,
-                        color = MaterialTheme.colorScheme.outlineVariant
-                    )
-                    
-                    Text(
-                        text = stringResource(R.string.meals_meal_types_headline),
-                        style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Bold,
-                        modifier = Modifier.padding(bottom = 12.dp)
+            }
+        }
+        
+        // Divider before Meal Types section
+        if (typeBasedCuisines.isNotEmpty()) {
+            Divider(
+                modifier = Modifier.padding(vertical = 16.dp),
+                thickness = 1.dp,
+                color = MaterialTheme.colorScheme.outlineVariant
+            )
+            
+            // Meal Types Section
+            Text(
+                text = stringResource(R.string.meals_meal_types_headline),
+                style = MaterialTheme.typography.titleLarge,
+                fontWeight = FontWeight.Bold,
+                modifier = Modifier.padding(bottom = 12.dp)
+            )
+            
+            Column(
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                typeBasedCuisines.forEach { cuisine ->
+                    CuisineCard(
+                        cuisine = cuisine,
+                        onClick = { onCuisineClick(cuisine) }
                     )
                 }
             }
@@ -260,26 +389,32 @@ private fun MyRecipesSection(
     recipes: List<Meal>,
     onRecipeClick: (Meal) -> Unit
 ) {
-    var isExpanded by remember { mutableStateOf(recipes.size <= 2) }
+    var isExpanded by remember { mutableStateOf(false) } // Always start collapsed
     val rotationAngle by animateFloatAsState(
         targetValue = if (isExpanded) 180f else 0f,
         animationSpec = tween(durationMillis = 300, easing = FastOutSlowInEasing),
         label = "arrow rotation"
     )
     
-    Card(
+    Column(
         modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
-        )
+        verticalArrangement = Arrangement.spacedBy(12.dp)
     ) {
-        Column(
-            modifier = Modifier.padding(16.dp)
+        // Header card - matches cuisine card style
+        Card(
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(70.dp)
+                .clickable { isExpanded = !isExpanded },
+            shape = RoundedCornerShape(12.dp),
+            colors = CardDefaults.cardColors(
+                containerColor = MaterialTheme.colorScheme.surfaceVariant
+            )
         ) {
             Row(
                 modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable(enabled = recipes.size > 2) { isExpanded = !isExpanded },
+                    .fillMaxSize()
+                    .padding(horizontal = 16.dp),
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
@@ -297,59 +432,55 @@ private fun MyRecipesSection(
                         style = MaterialTheme.typography.bodySmall,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
-                    if (recipes.size > 2) {
-                        Surface(
-                            shape = CircleShape,
-                            color = MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
-                            modifier = Modifier.size(28.dp)
+                    // Always show expand/collapse arrow
+                    Surface(
+                        shape = CircleShape,
+                        color = MaterialTheme.colorScheme.primary.copy(alpha = 0.15f),
+                        modifier = Modifier.size(28.dp)
+                    ) {
+                        Box(
+                            contentAlignment = Alignment.Center,
+                            modifier = Modifier.fillMaxSize()
                         ) {
-                            Box(
-                                contentAlignment = Alignment.Center,
-                                modifier = Modifier.fillMaxSize()
-                            ) {
-                                Icon(
-                                    imageVector = Icons.Default.ArrowDropDown,
-                                    contentDescription = if (isExpanded) "Collapse" else "Expand",
-                                    tint = MaterialTheme.colorScheme.primary,
-                                    modifier = Modifier
-                                        .size(20.dp)
-                                        .graphicsLayer {
-                                            rotationZ = rotationAngle
-                                        }
-                                )
-                            }
+                            Icon(
+                                imageVector = Icons.Default.ArrowDropDown,
+                                contentDescription = if (isExpanded) "Collapse" else "Expand",
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier
+                                    .size(20.dp)
+                                    .graphicsLayer {
+                                        rotationZ = rotationAngle
+                                    }
+                            )
                         }
                     }
                 }
             }
-            
-            AnimatedVisibility(
-                visible = isExpanded,
-                enter = expandVertically(
-                    animationSpec = tween(durationMillis = 300, easing = FastOutSlowInEasing)
-                ) + fadeIn(
-                    animationSpec = tween(durationMillis = 300)
-                ),
-                exit = shrinkVertically(
-                    animationSpec = tween(durationMillis = 300, easing = FastOutSlowInEasing)
-                ) + fadeOut(
-                    animationSpec = tween(durationMillis = 300)
-                )
+        }
+        
+        // Expanded content
+        AnimatedVisibility(
+            visible = isExpanded,
+            enter = expandVertically(
+                animationSpec = tween(durationMillis = 300, easing = FastOutSlowInEasing)
+            ) + fadeIn(
+                animationSpec = tween(durationMillis = 300)
+            ),
+            exit = shrinkVertically(
+                animationSpec = tween(durationMillis = 300, easing = FastOutSlowInEasing)
+            ) + fadeOut(
+                animationSpec = tween(durationMillis = 300)
+            )
+        ) {
+            // Display recipes in a vertical list
+            Column(
+                verticalArrangement = Arrangement.spacedBy(12.dp)
             ) {
-                Column {
-                    Spacer(modifier = Modifier.height(12.dp))
-                    
-                    // Display recipes in a vertical list
-                    Column(
-                        verticalArrangement = Arrangement.spacedBy(12.dp)
-                    ) {
-                        recipes.forEach { recipe ->
-                            RecipeChip(
-                                recipe = recipe,
-                                onClick = { onRecipeClick(recipe) }
-                            )
-                        }
-                    }
+                recipes.forEach { recipe ->
+                    RecipeChip(
+                        recipe = recipe,
+                        onClick = { onRecipeClick(recipe) }
+                    )
                 }
             }
         }
@@ -460,13 +591,15 @@ private fun CuisineCard(
 ) {
     val context = LocalContext.current
     
+    // Check if DLC is purchased
+    val isPurchased by viewModel.isDLCPurchased(cuisine.assetPackName ?: "")
+        .collectAsState(initial = false)
+    
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .height(70.dp)
-            .clickable {
-                onClick()
-            },
+            .clickable { onClick() },
         shape = RoundedCornerShape(12.dp),
         colors = CardDefaults.cardColors(
             containerColor = MaterialTheme.colorScheme.surfaceVariant
@@ -486,7 +619,7 @@ private fun CuisineCard(
             Column(
                 modifier = Modifier
                     .weight(1f)
-                    .padding(end = 16.dp),
+                    .padding(end = 12.dp),
                 verticalArrangement = Arrangement.Center
             ) {
                 Text(
@@ -505,6 +638,29 @@ private fun CuisineCard(
                     overflow = TextOverflow.Ellipsis
                 )
             }
+            
+            // Show lock/unlock icon for DLC cuisines in a circular badge
+            if (cuisine.isDLC) {
+                Surface(
+                    modifier = Modifier
+                        .padding(end = 16.dp)
+                        .size(36.dp),
+                    shape = CircleShape,
+                    color = MaterialTheme.colorScheme.primary
+                ) {
+                    Box(
+                        contentAlignment = Alignment.Center,
+                        modifier = Modifier.fillMaxSize()
+                    ) {
+                        Icon(
+                            imageVector = if (isPurchased) Icons.Default.LockOpen else Icons.Default.Lock,
+                            contentDescription = if (isPurchased) "Unlocked" else "Locked",
+                            modifier = Modifier.size(20.dp),
+                            tint = MaterialTheme.colorScheme.onPrimary
+                        )
+                    }
+                }
+            }
         }
     }
 }
@@ -522,5 +678,50 @@ private fun getCuisineDescription(cuisine: Cuisine): String {
         Cuisine.VEGETARIAN_VEGAN -> stringResource(R.string.cuisine_vegetarian_vegan_desc)
         Cuisine.MEAT_DISHES -> stringResource(R.string.cuisine_meat_dishes_desc)
         Cuisine.DESSERTS_SWEETS -> stringResource(R.string.cuisine_desserts_sweets_desc)
+        Cuisine.ITALIAN_PREMIUM -> cuisine.description // DLC cuisines use their description
+    }
+}
+
+/**
+ * Creates a premium pack preview for a given DLC cuisine
+ */
+private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
+    return when (cuisine) {
+        Cuisine.ITALIAN_PREMIUM -> PremiumPackPreview(
+            cuisine = cuisine,
+            recipeNames = listOf(
+                "Osso Buco alla Milanese",
+                "Risotto ai Funghi Porcini",
+                "Saltimbocca alla Romana",
+                "Pappardelle al Cinghiale",
+                "Cacio e Pepe",
+                "Vitello Tonnato",
+                "Arancini Siciliani",
+                "Bistecca alla Fiorentina",
+                "Carbonara Romana",
+                "Panna Cotta",
+                "Tiramisu Classico",
+                "Cannoli Siciliani"
+            ),
+            price = "$1.99"
+        )
+        else -> PremiumPackPreview(
+            cuisine = cuisine,
+            recipeNames = listOf(
+                "Recipe 1",
+                "Recipe 2",
+                "Recipe 3",
+                "Recipe 4",
+                "Recipe 5",
+                "Recipe 6",
+                "Recipe 7",
+                "Recipe 8",
+                "Recipe 9",
+                "Recipe 10",
+                "Recipe 11",
+                "Recipe 12"
+            ),
+            price = "$1.99"
+        )
     }
 }

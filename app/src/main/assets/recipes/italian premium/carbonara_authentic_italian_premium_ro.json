@@ -1,0 +1,51 @@
+{
+  "id": "carbonara_authentic_italian_premium",
+  "name": "Carbonara Romană Autentică",
+  "instructions": "1. Aduceți la fierbere o oală mare cu apă sărată pentru paste.\n\n2. Tăiați guanciale în fâșii mici sau cuburi. Într-o tigaie mare la foc mediu, gătiți guanciale până când grăsimea se topește și devine crocantă, aproximativ 8-10 minute. Scoateți de pe foc dar păstrați cald.\n\n3. Într-un bol, bateți gălbenușurile și oul întreg. Adăugați Pecorino Romano ras și o cantitate generoasă de piper negru proaspăt măcinat. Amestecați până se combină bine.\n\n4. Gătiți spaghetti conform instrucțiunilor de pe pachet până sunt al dente. Rezervați 1 ceașcă de apă de la fierberea pastelor înainte de scurgere.\n\n5. Adăugați pastele fierbinți scurse direct în tigaia cu guanciale (în afara focului). Amestecați pentru a acoperi cu grăsimea topită.\n\n6. Lucrând rapid, adăugați amestecul de ouă și brânză la paste, amestecând constant. Adăugați apa rezervată de la paste puțin câte puțin pentru a crea un sos cremos. Căldura reziduală va găti ouăle fără a le face omletă.\n\n7. Serviți imediat cu Pecorino Romano și piper negru suplimentar deasupra.",
+  "simpleInstructions": "1. Fierbeți apa pentru paste.\n\n2. Gătiți guanciale până devine crocant.\n\n3. Amestecați ouă, Pecorino și piper.\n\n4. Gătiți pastele, rezervați apă.\n\n5. Amestecați pastele cu guanciale.\n\n6. Adăugați amestecul de ouă în afara focului, amestecați cu apa de la paste.\n\n7. Serviți cu brânză și piper suplimentar.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 15,
+  "servings": 4,
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "cuisine": "Italian Premium",
+  "imageUrl": "recipes/images/italian_premium/carbonara_authentic.jpg",
+  "ingredients": [
+    {
+      "name": "Guanciale",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Spaghetti",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Egg Yolks",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Pecorino Romano",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

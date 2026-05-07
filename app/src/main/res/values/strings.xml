@@ -431,9 +431,11 @@
     <string name="groceries_servings">%1$s servings</string>
     <string name="groceries_empty_hint">Add items from recipes using the \"Plan it\" button</string>
     <string name="meals_add_recipe">Add Recipe</string>
+    <string name="meals_premium_headline">Chef\'s Choice</string>
     <string name="meals_cuisines_headline">Cuisines</string>
     <string name="meals_meal_types_headline">Meal Types</string>
     <string name="meals_choose_cuisine">Choose a cuisine</string>
+    <string name="unlock_premium">Unlock</string>
     <string name="cuisine_italian">Italian</string>
     <string name="cuisine_mexican">Mexican</string>
     <string name="cuisine_asian">Asian</string>
@@ -738,5 +740,11 @@
     <string name="dish_category_dessert">Dessert</string>
     <string name="dish_category_beverage">Beverage</string>
     <string name="dish_category_baked_dish">Baked Dish</string>
+
+    <!-- Premium Preview Drawer -->
+    <string name="premium_unlock_button">Unlock for %1$s</string>
+    <string name="premium_more_recipes">+%1$d more recipes</string>
+    <string name="premium_recipe_count_simple">%1$d recipes</string>
+    <string name="close">Close</string>
 
 </resources>

@@ -266,7 +266,7 @@ fun BundledRecipeDetailScreen(
                         Column(
                             modifier = Modifier.padding(16.dp)
                         ) {
-                            r.ingredients.forEach { ingredient ->
+                            r.ingredients.sortedByDescending { it.isStarIngredient }.forEach { ingredient ->
                                 val adjustedQuantity = ingredient.quantity * servingsMultiplier
                                 val substituteIngredient = ingredientSubstitutions[ingredient.name]
                                 
@@ -289,7 +289,7 @@ fun BundledRecipeDetailScreen(
                                                 Icon(
                                                     imageVector = androidx.compose.material.icons.Icons.Filled.Star,
                                                     contentDescription = "Essential ingredient",
-                                                    tint = Color(0xFFFFD700),
+                                                    tint = MaterialTheme.colorScheme.primary,
                                                     modifier = Modifier.size(16.dp)
                                                 )
                                             }

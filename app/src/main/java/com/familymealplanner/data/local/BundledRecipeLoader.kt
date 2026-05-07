@@ -34,42 +34,89 @@ data class BundledIngredient(
 
 @Singleton
 class BundledRecipeLoader @Inject constructor(
-    @ApplicationContext private val context: Context
+    @ApplicationContext private val context: Context,
+    private val assetPackManager: AssetPackManager
 ) {
     private val json = Json { ignoreUnknownKeys = true }
     
     fun loadRecipesForCuisine(cuisine: Cuisine, languageCode: String = "en"): List<BundledRecipe> {
         val folderName = "recipes/${cuisine.displayName.lowercase()}"
+        
         return try {
-            val files = context.assets.list(folderName) ?: emptyArray()
-            
-            // Filter files based on language
-            val relevantFiles = if (languageCode == "en") {
-                // For English, load files without language suffix
-                files.filter { it.endsWith(".json") && !it.contains("_ru.json") && !it.contains("_ro.json") }
-            } else {
-                // For other languages, try to load language-specific files first
-                val translatedFiles = files.filter { it.endsWith("_$languageCode.json") }
-                if (translatedFiles.isNotEmpty()) {
-                    translatedFiles
+            // Check if this is a DLC cuisine
+            if (cuisine.isDLC && cuisine.assetPackName != null) {
+                // Try to load from asset pack first
+                val recipesFromPack = loadFromAssetPack(cuisine.assetPackName, folderName, languageCode)
+                
+                // If asset pack is not available (e.g., in debug builds), fallback to main assets
+                if (recipesFromPack.isEmpty()) {
+                    loadFromAssets(folderName, languageCode)
                 } else {
-                    // Fallback to English if no translations available
-                    files.filter { it.endsWith(".json") && !it.contains("_ru.json") && !it.contains("_ro.json") }
+                    recipesFromPack
                 }
-            }
-            
-            relevantFiles.mapNotNull { fileName ->
-                try {
-                    val content = context.assets.open("$folderName/$fileName")
-                        .bufferedReader()
-                        .use { it.readText() }
-                    json.decodeFromString<BundledRecipe>(content)
-                } catch (e: Exception) {
-                    null
-                }
+            } else {
+                loadFromAssets(folderName, languageCode)
             }
         } catch (e: Exception) {
             emptyList()
+        }
+    }
+    
+    private fun loadFromAssets(folderName: String, languageCode: String): List<BundledRecipe> {
+        val files = context.assets.list(folderName) ?: emptyArray()
+        return parseRecipeFiles(files, languageCode) { fileName ->
+            context.assets.open("$folderName/$fileName")
+                .bufferedReader()
+                .use { it.readText() }
+        }
+    }
+    
+    private fun loadFromAssetPack(
+        packName: String,
+        folderName: String,
+        languageCode: String
+    ): List<BundledRecipe> {
+        val packLocation = assetPackManager.getPackLocation(packName) ?: return emptyList()
+        
+        // Asset packs are stored as APK assets
+        val assetsPath = packLocation.assetsPath()
+        val folder = java.io.File(assetsPath, folderName)
+        
+        if (!folder.exists()) return emptyList()
+        
+        val files = folder.listFiles()?.map { it.name }?.toTypedArray() ?: emptyArray()
+        return parseRecipeFiles(files, languageCode) { fileName ->
+            java.io.File(folder, fileName).readText()
+        }
+    }
+    
+    private fun parseRecipeFiles(
+        files: Array<String>,
+        languageCode: String,
+        readFile: (String) -> String
+    ): List<BundledRecipe> {
+        // Filter files based on language
+        val relevantFiles = if (languageCode == "en") {
+            // For English, load files without language suffix
+            files.filter { it.endsWith(".json") && !it.contains("_ru.json") && !it.contains("_ro.json") }
+        } else {
+            // For other languages, try to load language-specific files first
+            val translatedFiles = files.filter { it.endsWith("_$languageCode.json") }
+            if (translatedFiles.isNotEmpty()) {
+                translatedFiles
+            } else {
+                // Fallback to English if no translations available
+                files.filter { it.endsWith(".json") && !it.contains("_ru.json") && !it.contains("_ro.json") }
+            }
+        }
+        
+        return relevantFiles.mapNotNull { fileName ->
+            try {
+                val content = readFile(fileName)
+                json.decodeFromString<BundledRecipe>(content)
+            } catch (e: Exception) {
+                null
+            }
         }
     }
     

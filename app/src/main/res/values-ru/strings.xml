@@ -247,7 +247,7 @@
     <string name="recipe_servings">Порции</string>
     <string name="recipe_min">мин</string>
     <string name="recipe_plan_it">Запланировать</string>
-    <string name="recipe_buy_ingredients">Купить ингредиенты</string>
+    <string name="recipe_buy_ingredients">Купить ингр.</string>
     <string name="recipe_ingredients">Ингредиенты</string>
     <string name="recipe_instructions">Инструкции</string>
     <string name="recipe_detailed">Подробные</string>
@@ -298,9 +298,11 @@
     <string name="groceries_servings">%1$s порций</string>
     <string name="groceries_empty_hint">Добавляйте товары из рецептов с помощью кнопки \"Запланировать\"</string>
     <string name="meals_add_recipe">Добавить рецепт</string>
+    <string name="meals_premium_headline">Выбор шефа</string>
     <string name="meals_cuisines_headline">Кухни</string>
     <string name="meals_meal_types_headline">Типы блюд</string>
     <string name="meals_choose_cuisine">Выберите кухню</string>
+    <string name="unlock_premium">Разблокировать</string>
     <string name="cuisine_italian">Итальянская</string>
     <string name="cuisine_mexican">Мексиканская</string>
     <string name="cuisine_asian">Азиатская</string>

@@ -1,7 +1,9 @@
 package com.familymealplanner.ui.screens
 
+import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.familymealplanner.billing.BillingManager
 import com.familymealplanner.domain.model.Meal
 import com.familymealplanner.domain.repository.MealRepository
 import com.familymealplanner.domain.usecase.CreateMealUseCase
@@ -21,7 +23,8 @@ class MealsViewModel @Inject constructor(
     private val translationSystem: com.familymealplanner.data.local.TranslationSystem,
     private val createMealUseCase: CreateMealUseCase,
     private val updateMealUseCase: UpdateMealUseCase,
-    private val deleteMealUseCase: DeleteMealUseCase
+    private val deleteMealUseCase: DeleteMealUseCase,
+    private val billingManager: BillingManager
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<MealsUiState>(MealsUiState.Loading)
@@ -29,6 +32,8 @@ class MealsViewModel @Inject constructor(
 
     private val _searchQuery = MutableStateFlow("")
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
+    
+    val purchaseState = billingManager.purchaseState
 
     init {
         loadMeals()
@@ -130,6 +135,34 @@ class MealsViewModel @Inject constructor(
      */
     fun translateCategoryName(categoryName: String): String {
         return translationSystem.translateCategory(categoryName)
+    }
+    
+    /**
+     * Launch DLC purchase flow
+     */
+    fun purchaseDLC(activity: Activity, productId: String) {
+        billingManager.launchPurchaseFlow(activity, productId)
+    }
+    
+    /**
+     * Reset purchase state
+     */
+    fun resetPurchaseState() {
+        billingManager.resetPurchaseState()
+    }
+    
+    /**
+     * Check if a DLC pack is purchased
+     */
+    fun isDLCPurchased(packName: String): kotlinx.coroutines.flow.Flow<Boolean> {
+        return if (packName.isEmpty()) {
+            kotlinx.coroutines.flow.flowOf(false)
+        } else {
+            kotlinx.coroutines.flow.flow {
+                val isPurchased = billingManager.isPurchased(packName)
+                emit(isPurchased)
+            }
+        }
     }
 }
 

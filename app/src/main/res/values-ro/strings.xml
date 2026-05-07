@@ -263,9 +263,11 @@
     <string name="groceries_servings">%1$s porții</string>
     <string name="groceries_empty_hint">Adaugă articole din rețete folosind butonul \"Planifică\"</string>
     <string name="meals_add_recipe">Adaugă rețetă</string>
+    <string name="meals_premium_headline">Alegerea Șefului</string>
     <string name="meals_cuisines_headline">Bucătării</string>
     <string name="meals_meal_types_headline">Tipuri de preparate</string>
     <string name="meals_choose_cuisine">Alege o bucătărie</string>
+    <string name="unlock_premium">Deblochează</string>
     <string name="cuisine_italian">Italiană</string>
     <string name="cuisine_mexican">Mexicană</string>
     <string name="cuisine_asian">Asiatică</string>

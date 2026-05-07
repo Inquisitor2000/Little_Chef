@@ -5,11 +5,19 @@ import com.familymealplanner.R
 
 /**
  * Represents different cuisine types for meal categorization.
+ * 
+ * @param displayName The display name of the cuisine
+ * @param iconRes The drawable resource for the cuisine icon
+ * @param description A brief description of the cuisine
+ * @param isDLC Whether this cuisine is part of a DLC pack
+ * @param assetPackName The name of the asset pack module (for DLC cuisines)
  */
 enum class Cuisine(
     val displayName: String,
     @DrawableRes val iconRes: Int,
-    val description: String
+    val description: String,
+    val isDLC: Boolean = false,
+    val assetPackName: String? = null
 ) {
     ITALIAN(
         displayName = "Italian",
@@ -60,6 +68,15 @@ enum class Cuisine(
         displayName = "Desserts & Sweets",
         iconRes = R.drawable.ic_sub_chocolate_candy,
         description = "Cakes, cookies & sweet treats"
+    ),
+    
+    // DLC Cuisines
+    ITALIAN_PREMIUM(
+        displayName = "Italian Premium",
+        iconRes = R.drawable.ic_sub_pasta,
+        description = "Authentic Italian recipes",
+        isDLC = true,
+        assetPackName = "italian_premium_pack"
     );
 
     fun getLocalizedName(context: android.content.Context): String {
@@ -74,6 +91,7 @@ enum class Cuisine(
             VEGETARIAN_VEGAN -> context.getString(com.familymealplanner.R.string.cuisine_vegetarian_vegan)
             MEAT_DISHES -> context.getString(com.familymealplanner.R.string.cuisine_meat_dishes)
             DESSERTS_SWEETS -> context.getString(com.familymealplanner.R.string.cuisine_desserts_sweets)
+            ITALIAN_PREMIUM -> displayName // DLC cuisines use displayName for now
         }
     }
 
@@ -89,6 +107,7 @@ enum class Cuisine(
             VEGETARIAN_VEGAN -> context.getString(com.familymealplanner.R.string.cuisine_vegetarian_vegan_desc)
             MEAT_DISHES -> context.getString(com.familymealplanner.R.string.cuisine_meat_dishes_desc)
             DESSERTS_SWEETS -> context.getString(com.familymealplanner.R.string.cuisine_desserts_sweets_desc)
+            ITALIAN_PREMIUM -> description // DLC cuisines use description for now
         }
     }
 

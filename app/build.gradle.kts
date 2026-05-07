@@ -62,6 +62,9 @@ android {
             }
         }
     }
+    
+    // Link asset packs for DLC recipe packs
+    assetPacks += listOf(":italian_premium_pack")
 }
 
 dependencies {
@@ -112,6 +115,14 @@ dependencies {
     implementation("io.ktor:ktor-client-okhttp:2.3.7")
     implementation("io.ktor:ktor-client-content-negotiation:2.3.7")
     implementation("io.ktor:ktor-serialization-kotlinx-json:2.3.7")
+
+    // Google Play Asset Delivery (for DLC recipe packs)
+    implementation("com.google.android.play:asset-delivery:2.2.2")
+    implementation("com.google.android.play:asset-delivery-ktx:2.2.2")
+    
+    // Google Play Billing (for in-app purchases)
+    implementation("com.android.billingclient:billing:6.1.0")
+    implementation("com.android.billingclient:billing-ktx:6.1.0")
 
     // Testing
     testImplementation("junit:junit:4.13.2")
