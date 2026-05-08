@@ -446,6 +446,7 @@
     <string name="cuisine_vegetarian_vegan">Vegetarian &amp; Vegan</string>
     <string name="cuisine_meat_dishes">Meat Dishes</string>
     <string name="cuisine_desserts_sweets">Desserts &amp; Sweets</string>
+    <string name="cuisine_italian_premium">Authentic Italiano</string>
     <string name="cuisine_italian_desc">Pasta, pizza, risotto &amp; more</string>
     <string name="cuisine_mexican_desc">Tacos, burritos, enchiladas</string>
     <string name="cuisine_asian_desc">Chinese, Japanese, Thai &amp; more</string>
@@ -458,6 +459,11 @@
     <string name="cuisine_vegetarian_vegan_desc">Plant-based dishes</string>
     <string name="cuisine_meat_dishes_desc">Beef, pork, lamb &amp; more</string>
     <string name="cuisine_desserts_sweets_desc">Cakes, cookies &amp; sweet treats</string>
+    <string name="cuisine_italian_premium_desc">Authentic Italian dishes</string>
+    <string name="cuisine_eastern_traditional">Eastern Traditional</string>
+    <string name="cuisine_eastern_traditional_desc">Traditional Eastern European dishes</string>
+    <string name="cuisine_exotic_tropics">Exotic Tropics</string>
+    <string name="cuisine_exotic_tropics_desc">Vibrant tropical flavors</string>
     <string name="cuisine_other_desc">Miscellaneous recipes</string>
     
     <string name="meal_plan_meal_type">Meal Type</string>
@@ -746,5 +752,47 @@
     <string name="premium_more_recipes">+%1$d more recipes</string>
     <string name="premium_recipe_count_simple">%1$d recipes</string>
     <string name="close">Close</string>
+
+    <!-- Authentic Italiano Premium Recipe Names -->
+    <string name="premium_recipe_osso_buco">Osso Buco alla Milanese</string>
+    <string name="premium_recipe_risotto_porcini">Risotto ai Funghi Porcini</string>
+    <string name="premium_recipe_saltimbocca">Saltimbocca alla Romana</string>
+    <string name="premium_recipe_pappardelle">Pappardelle al Cinghiale</string>
+    <string name="premium_recipe_cacio_e_pepe">Cacio e Pepe</string>
+    <string name="premium_recipe_vitello_tonnato">Vitello Tonnato</string>
+    <string name="premium_recipe_arancini">Arancini Siciliani</string>
+    <string name="premium_recipe_bistecca">Bistecca alla Fiorentina</string>
+    <string name="premium_recipe_carbonara">Carbonara Romana</string>
+    <string name="premium_recipe_panna_cotta">Panna Cotta</string>
+    <string name="premium_recipe_tiramisu">Tiramisu Classico</string>
+    <string name="premium_recipe_cannoli">Cannoli Siciliani</string>
+
+    <!-- Eastern Traditional Premium Recipe Names -->
+    <string name="premium_recipe_borscht">Borscht</string>
+    <string name="premium_recipe_pierogi">Pierogi</string>
+    <string name="premium_recipe_golubtsy">Golubtsy</string>
+    <string name="premium_recipe_stroganoff">Beef Stroganoff</string>
+    <string name="premium_recipe_pelmeni">Pelmeni</string>
+    <string name="premium_recipe_kasha">Kasha</string>
+    <string name="premium_recipe_shchi">Shchi</string>
+    <string name="premium_recipe_kotleti">Kotleti</string>
+    <string name="premium_recipe_vareniki">Vareniki</string>
+    <string name="premium_recipe_olivier">Olivier Salad</string>
+    <string name="premium_recipe_blini">Blini</string>
+    <string name="premium_recipe_solyanka">Solyanka</string>
+
+    <!-- Exotic Tropics Premium Recipe Names -->
+    <string name="premium_recipe_coconut_curry">Coconut Curry</string>
+    <string name="premium_recipe_mango_sticky_rice">Mango Sticky Rice</string>
+    <string name="premium_recipe_pineapple_fried_rice">Pineapple Fried Rice</string>
+    <string name="premium_recipe_plantains">Grilled Plantains</string>
+    <string name="premium_recipe_papaya_salad">Papaya Salad</string>
+    <string name="premium_recipe_coconut_rice">Coconut Rice</string>
+    <string name="premium_recipe_tuna_poke">Tuna Poke Bowl</string>
+    <string name="premium_recipe_mango_lassi">Mango Lassi</string>
+    <string name="premium_recipe_tropical_fruit_salad">Tropical Fruit Salad</string>
+    <string name="premium_recipe_coconut_shrimp">Coconut Shrimp</string>
+    <string name="premium_recipe_pineapple_salsa">Pineapple Salsa</string>
+    <string name="premium_recipe_banana_fritters">Banana Fritters</string>
 
 </resources>

@@ -59,7 +59,8 @@ fun MealsScreen(
     val purchaseState by viewModel.purchaseState.collectAsState()
     
     // State for premium preview drawer
-    var showPremiumPreview by remember { mutableStateOf<PremiumPackPreview?>(null) }
+    var showPremiumCuisine by remember { mutableStateOf<Cuisine?>(null) }
+    val showPremiumPreview = showPremiumCuisine?.let { getPremiumPackPreview(it) }
     
     // Handle purchase state changes
     LaunchedEffect(purchaseState) {
@@ -68,7 +69,7 @@ fun MealsScreen(
                 // Purchase successful, close drawer and navigate
                 android.widget.Toast.makeText(context, "Purchase successful! Recipes unlocked.", android.widget.Toast.LENGTH_SHORT).show()
                 showPremiumPreview?.let { preview ->
-                    showPremiumPreview = null
+                    showPremiumCuisine = null
                     onNavigateToCuisine(preview.cuisine)
                 }
                 viewModel.resetPurchaseState()
@@ -106,10 +107,8 @@ fun MealsScreen(
     // Handle cuisine click with DLC check
     val handleCuisineClick: (Cuisine) -> Unit = { cuisine ->
         if (cuisine.isDLC) {
-            // Show premium preview for DLC cuisines
-            showPremiumPreview = getPremiumPackPreview(cuisine)
+            showPremiumCuisine = cuisine
         } else {
-            // Navigate directly for regular cuisines
             onNavigateToCuisine(cuisine)
         }
     }
@@ -190,7 +189,7 @@ fun MealsScreen(
     showPremiumPreview?.let { preview ->
         PremiumPreviewDrawer(
             packPreview = preview,
-            onDismiss = { showPremiumPreview = null },
+            onDismiss = { showPremiumCuisine = null },
             onPurchase = {
                 // Launch billing flow
                 val act = activity
@@ -679,47 +678,77 @@ private fun getCuisineDescription(cuisine: Cuisine): String {
         Cuisine.MEAT_DISHES -> stringResource(R.string.cuisine_meat_dishes_desc)
         Cuisine.DESSERTS_SWEETS -> stringResource(R.string.cuisine_desserts_sweets_desc)
         Cuisine.ITALIAN_PREMIUM -> cuisine.description // DLC cuisines use their description
+        else -> cuisine.description
     }
 }
 
 /**
  * Creates a premium pack preview for a given DLC cuisine
  */
+@Composable
 private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
     return when (cuisine) {
         Cuisine.ITALIAN_PREMIUM -> PremiumPackPreview(
             cuisine = cuisine,
             recipeNames = listOf(
-                "Osso Buco alla Milanese",
-                "Risotto ai Funghi Porcini",
-                "Saltimbocca alla Romana",
-                "Pappardelle al Cinghiale",
-                "Cacio e Pepe",
-                "Vitello Tonnato",
-                "Arancini Siciliani",
-                "Bistecca alla Fiorentina",
-                "Carbonara Romana",
-                "Panna Cotta",
-                "Tiramisu Classico",
-                "Cannoli Siciliani"
+                stringResource(R.string.premium_recipe_osso_buco),
+                stringResource(R.string.premium_recipe_risotto_porcini),
+                stringResource(R.string.premium_recipe_saltimbocca),
+                stringResource(R.string.premium_recipe_pappardelle),
+                stringResource(R.string.premium_recipe_cacio_e_pepe),
+                stringResource(R.string.premium_recipe_vitello_tonnato),
+                stringResource(R.string.premium_recipe_arancini),
+                stringResource(R.string.premium_recipe_bistecca),
+                stringResource(R.string.premium_recipe_carbonara),
+                stringResource(R.string.premium_recipe_panna_cotta),
+                stringResource(R.string.premium_recipe_tiramisu),
+                stringResource(R.string.premium_recipe_cannoli)
+            ),
+            price = "$1.99"
+        )
+        Cuisine.EASTERN_TRADITIONAL -> PremiumPackPreview(
+            cuisine = cuisine,
+            recipeNames = listOf(
+                stringResource(R.string.premium_recipe_borscht),
+                stringResource(R.string.premium_recipe_pierogi),
+                stringResource(R.string.premium_recipe_golubtsy),
+                stringResource(R.string.premium_recipe_stroganoff),
+                stringResource(R.string.premium_recipe_pelmeni),
+                stringResource(R.string.premium_recipe_kasha),
+                stringResource(R.string.premium_recipe_shchi),
+                stringResource(R.string.premium_recipe_kotleti),
+                stringResource(R.string.premium_recipe_vareniki),
+                stringResource(R.string.premium_recipe_olivier),
+                stringResource(R.string.premium_recipe_blini),
+                stringResource(R.string.premium_recipe_solyanka)
+            ),
+            price = "$1.99"
+        )
+        Cuisine.EXOTIC_TROPICS -> PremiumPackPreview(
+            cuisine = cuisine,
+            recipeNames = listOf(
+                stringResource(R.string.premium_recipe_coconut_curry),
+                stringResource(R.string.premium_recipe_mango_sticky_rice),
+                stringResource(R.string.premium_recipe_pineapple_fried_rice),
+                stringResource(R.string.premium_recipe_plantains),
+                stringResource(R.string.premium_recipe_papaya_salad),
+                stringResource(R.string.premium_recipe_coconut_rice),
+                stringResource(R.string.premium_recipe_tuna_poke),
+                stringResource(R.string.premium_recipe_mango_lassi),
+                stringResource(R.string.premium_recipe_tropical_fruit_salad),
+                stringResource(R.string.premium_recipe_coconut_shrimp),
+                stringResource(R.string.premium_recipe_pineapple_salsa),
+                stringResource(R.string.premium_recipe_banana_fritters)
             ),
             price = "$1.99"
         )
         else -> PremiumPackPreview(
             cuisine = cuisine,
             recipeNames = listOf(
-                "Recipe 1",
-                "Recipe 2",
-                "Recipe 3",
-                "Recipe 4",
-                "Recipe 5",
-                "Recipe 6",
-                "Recipe 7",
-                "Recipe 8",
-                "Recipe 9",
-                "Recipe 10",
-                "Recipe 11",
-                "Recipe 12"
+                "Recipe 1", "Recipe 2", "Recipe 3",
+                "Recipe 4", "Recipe 5", "Recipe 6",
+                "Recipe 7", "Recipe 8", "Recipe 9",
+                "Recipe 10", "Recipe 11", "Recipe 12"
             ),
             price = "$1.99"
         )

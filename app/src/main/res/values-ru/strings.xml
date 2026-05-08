@@ -303,6 +303,7 @@
     <string name="meals_meal_types_headline">Типы блюд</string>
     <string name="meals_choose_cuisine">Выберите кухню</string>
     <string name="unlock_premium">Разблокировать</string>
+    <string name="premium_recipe_count_simple">%1$d рецептов</string>
     <string name="cuisine_italian">Итальянская</string>
     <string name="cuisine_mexican">Мексиканская</string>
     <string name="cuisine_asian">Азиатская</string>
@@ -313,6 +314,9 @@
     <string name="cuisine_vegetarian_vegan">Вегетарианские и веганские</string>
     <string name="cuisine_meat_dishes">Мясные блюда</string>
     <string name="cuisine_desserts_sweets">Десерты и сладости</string>
+    <string name="cuisine_italian_premium">Аутентично Итальянское</string>
+    <string name="cuisine_eastern_traditional">Восточная Традиционная</string>
+    <string name="cuisine_exotic_tropics">Экзотические Тропики</string>
     <string name="cuisine_italian_desc">Паста, пицца, ризотто и другое</string>
     <string name="cuisine_mexican_desc">Тако, буррито, энчилада</string>
     <string name="cuisine_asian_desc">Китайская, японская, тайская и другие</string>
@@ -325,6 +329,9 @@
     <string name="cuisine_vegetarian_vegan_desc">Блюда на растительной основе</string>
     <string name="cuisine_meat_dishes_desc">Говядина, свинина, баранина и другое</string>
     <string name="cuisine_desserts_sweets_desc">Торты, печенье и сладкие угощения</string>
+    <string name="cuisine_italian_premium_desc">Аутентичные итальянские блюда</string>
+    <string name="cuisine_eastern_traditional_desc">Традиционные восточноевропейские блюда</string>
+    <string name="cuisine_exotic_tropics_desc">Яркие тропические вкусы</string>
     <string name="cuisine_other_desc">Разные рецепты</string>
     
     <!-- Meal Type Labels for Planning Dialog -->
@@ -514,5 +521,47 @@
     <string name="onboarding_serving_size_question">На сколько человек вы обычно готовите?</string>
     <string name="onboarding_serving_size_helper">Это поможет нам предложить правильные размеры порций</string>
     <string name="onboarding_serving_size_me">Я</string>
+
+    <!-- Authentic Italiano Premium Recipe Names -->
+    <string name="premium_recipe_osso_buco">Оссобуко по-милански</string>
+    <string name="premium_recipe_risotto_porcini">Ризотто с белыми грибами</string>
+    <string name="premium_recipe_saltimbocca">Сальтимбокка по-римски</string>
+    <string name="premium_recipe_pappardelle">Паппарделле с кабанятиной</string>
+    <string name="premium_recipe_cacio_e_pepe">Качо э Пепе</string>
+    <string name="premium_recipe_vitello_tonnato">Вителло тоннато</string>
+    <string name="premium_recipe_arancini">Аранчини сицилианские</string>
+    <string name="premium_recipe_bistecca">Бистекка алла Фьорентина</string>
+    <string name="premium_recipe_carbonara">Карбонара по-римски</string>
+    <string name="premium_recipe_panna_cotta">Панна Котта</string>
+    <string name="premium_recipe_tiramisu">Тирамису классический</string>
+    <string name="premium_recipe_cannoli">Канноли сицилианские</string>
+
+    <!-- Eastern Traditional Premium Recipe Names -->
+    <string name="premium_recipe_borscht">Борщ</string>
+    <string name="premium_recipe_pierogi">Пироги</string>
+    <string name="premium_recipe_golubtsy">Голубцы</string>
+    <string name="premium_recipe_stroganoff">Бефстроганов</string>
+    <string name="premium_recipe_pelmeni">Пельмени</string>
+    <string name="premium_recipe_kasha">Каша</string>
+    <string name="premium_recipe_shchi">Щи</string>
+    <string name="premium_recipe_kotleti">Котлеты</string>
+    <string name="premium_recipe_vareniki">Вареники</string>
+    <string name="premium_recipe_olivier">Оливье</string>
+    <string name="premium_recipe_blini">Блины</string>
+    <string name="premium_recipe_solyanka">Солянка</string>
+
+    <!-- Exotic Tropics Premium Recipe Names -->
+    <string name="premium_recipe_coconut_curry">Карри с кокосом</string>
+    <string name="premium_recipe_mango_sticky_rice">Липкий рис с манго</string>
+    <string name="premium_recipe_pineapple_fried_rice">Жареный рис с ананасом</string>
+    <string name="premium_recipe_plantains">Жареные плантаны</string>
+    <string name="premium_recipe_papaya_salad">Салат из папайи</string>
+    <string name="premium_recipe_coconut_rice">Рис с кокосом</string>
+    <string name="premium_recipe_tuna_poke">Поке с тунцом</string>
+    <string name="premium_recipe_mango_lassi">Ласси с манго</string>
+    <string name="premium_recipe_tropical_fruit_salad">Салат из тропических фруктов</string>
+    <string name="premium_recipe_coconut_shrimp">Креветки в кокосе</string>
+    <string name="premium_recipe_pineapple_salsa">Сальса с ананасом</string>
+    <string name="premium_recipe_banana_fritters">Банановые оладьи</string>
 
 </resources>

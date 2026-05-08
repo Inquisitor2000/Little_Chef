@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add_ingredient_add_button">Adaugă</string>
     <string name="add_ingredient_all_categories">Toate categoriile</string>
@@ -268,6 +268,7 @@
     <string name="meals_meal_types_headline">Tipuri de preparate</string>
     <string name="meals_choose_cuisine">Alege o bucătărie</string>
     <string name="unlock_premium">Deblochează</string>
+    <string name="premium_recipe_count_simple">%1$d rețete</string>
     <string name="cuisine_italian">Italiană</string>
     <string name="cuisine_mexican">Mexicană</string>
     <string name="cuisine_asian">Asiatică</string>
@@ -278,6 +279,9 @@
     <string name="cuisine_vegetarian_vegan">Vegetarian și vegan</string>
     <string name="cuisine_meat_dishes">Preparate din carne</string>
     <string name="cuisine_desserts_sweets">Deserturi și dulciuri</string>
+    <string name="cuisine_italian_premium">Autentic Italian</string>
+    <string name="cuisine_eastern_traditional">Traditional Estic</string>
+    <string name="cuisine_exotic_tropics">Tropice Exotice</string>
     <string name="cuisine_italian_desc">Paste, pizza, risotto &amp; altele</string>
     <string name="cuisine_mexican_desc">Tacos, burrito, enchiladas</string>
     <string name="cuisine_asian_desc">Chineză, japoneză, thailandeză &amp; altele</string>
@@ -290,6 +294,9 @@
     <string name="cuisine_vegetarian_vegan_desc">Preparate pe bază de plante</string>
     <string name="cuisine_meat_dishes_desc">Vită, porc, miel &amp; altele</string>
     <string name="cuisine_desserts_sweets_desc">Prăjituri, biscuiți și dulciuri</string>
+    <string name="cuisine_italian_premium_desc">Preparate italiene autentice</string>
+    <string name="cuisine_eastern_traditional_desc">Preparate tradiționale est-europene</string>
+    <string name="cuisine_exotic_tropics_desc">Arome tropicale vibrante</string>
     <string name="cuisine_other_desc">Rețete diverse</string>
     
     <!-- Meal Type Labels for Planning Dialog -->
@@ -484,5 +491,47 @@
     <string name="meals_title">Rețete</string>
     <string name="my_recipes">Rețetele mele</string>
     <string name="recipes_count">%1$d rețete</string>
+
+    <!-- Authentic Italiano Premium Recipe Names -->
+    <string name="premium_recipe_osso_buco">Osso Buco alla Milanese</string>
+    <string name="premium_recipe_risotto_porcini">Risotto cu Ciuperci Porcini</string>
+    <string name="premium_recipe_saltimbocca">Saltimbocca alla Romana</string>
+    <string name="premium_recipe_pappardelle">Pappardelle cu Mistreț</string>
+    <string name="premium_recipe_cacio_e_pepe">Cacio e Pepe</string>
+    <string name="premium_recipe_vitello_tonnato">Vitello Tonnato</string>
+    <string name="premium_recipe_arancini">Arancini Siciliani</string>
+    <string name="premium_recipe_bistecca">Bistecca alla Fiorentina</string>
+    <string name="premium_recipe_carbonara">Carbonara Romană</string>
+    <string name="premium_recipe_panna_cotta">Panna Cotta</string>
+    <string name="premium_recipe_tiramisu">Tiramisu Clasic</string>
+    <string name="premium_recipe_cannoli">Cannoli Siciliani</string>
+
+    <!-- Eastern Traditional Premium Recipe Names -->
+    <string name="premium_recipe_borscht">Borș</string>
+    <string name="premium_recipe_pierogi">Pierogi</string>
+    <string name="premium_recipe_golubtsy">Sarmale</string>
+    <string name="premium_recipe_stroganoff">Stroganoff</string>
+    <string name="premium_recipe_pelmeni">Pelmeni</string>
+    <string name="premium_recipe_kasha">Crișă</string>
+    <string name="premium_recipe_shchi">Shchi</string>
+    <string name="premium_recipe_kotleti">Parjoale</string>
+    <string name="premium_recipe_vareniki">Vareniki</string>
+    <string name="premium_recipe_olivier">Salata Olivier</string>
+    <string name="premium_recipe_blini">Clătite</string>
+    <string name="premium_recipe_solyanka">Soleanca</string>
+
+    <!-- Exotic Tropics Premium Recipe Names -->
+    <string name="premium_recipe_coconut_curry">Curry cu Nucă de Coco</string>
+    <string name="premium_recipe_mango_sticky_rice">Orez Lipicios cu Mango</string>
+    <string name="premium_recipe_pineapple_fried_rice">Orez Prăjit cu Ananas</string>
+    <string name="premium_recipe_plantains">Pătlagini la Grătar</string>
+    <string name="premium_recipe_papaya_salad">Salată de Papaya</string>
+    <string name="premium_recipe_coconut_rice">Orez cu Nucă de Coco</string>
+    <string name="premium_recipe_tuna_poke">Bol Poke cu Ton</string>
+    <string name="premium_recipe_mango_lassi">Lassi cu Mango</string>
+    <string name="premium_recipe_tropical_fruit_salad">Salată de Fructe Tropicale</string>
+    <string name="premium_recipe_coconut_shrimp">Creveți cu Nucă de Coco</string>
+    <string name="premium_recipe_pineapple_salsa">Salsa cu Ananas</string>
+    <string name="premium_recipe_banana_fritters">Gogoși cu Banane</string>
 
 </resources>

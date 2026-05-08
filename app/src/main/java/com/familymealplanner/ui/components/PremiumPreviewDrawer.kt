@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -37,6 +38,7 @@ fun PremiumPreviewDrawer(
     onPurchase: () -> Unit,
     modifier: Modifier = Modifier
 ) {
+    val context = LocalContext.current
     ModalBottomSheet(
         onDismissRequest = onDismiss,
         modifier = modifier,
@@ -68,8 +70,8 @@ fun PremiumPreviewDrawer(
                     )
                     Column {
                         Text(
-                            text = packPreview.cuisine.displayName,
-                            style = MaterialTheme.typography.titleLarge,
+                            text = packPreview.cuisine.getLocalizedName(context),
+                            style = MaterialTheme.typography.titleMedium,
                             fontWeight = FontWeight.Bold,
                             maxLines = 1,
                             overflow = TextOverflow.Ellipsis

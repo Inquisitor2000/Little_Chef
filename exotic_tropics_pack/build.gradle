@@ -1,0 +1,10 @@
+plugins {
+    id 'com.android.asset-pack'
+}
+
+assetPack {
+    packName = "exotic_tropics_pack"
+    dynamicDelivery {
+        deliveryType = "on-demand"
+    }
+}

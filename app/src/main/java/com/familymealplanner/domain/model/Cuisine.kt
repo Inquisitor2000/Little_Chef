@@ -72,11 +72,25 @@ enum class Cuisine(
     
     // DLC Cuisines
     ITALIAN_PREMIUM(
-        displayName = "Italian Premium",
+        displayName = "Authentic Italiano",
         iconRes = R.drawable.ic_sub_pasta,
-        description = "Authentic Italian recipes",
+        description = "Authentic Italian dishes",
         isDLC = true,
         assetPackName = "italian_premium_pack"
+    ),
+    EASTERN_TRADITIONAL(
+        displayName = "Eastern Traditional",
+        iconRes = R.drawable.ic_sub_mushrooms,
+        description = "Traditional Eastern European dishes",
+        isDLC = true,
+        assetPackName = "eastern_traditional_pack"
+    ),
+    EXOTIC_TROPICS(
+        displayName = "Exotic Tropics",
+        iconRes = R.drawable.ic_sub_tropical,
+        description = "Vibrant tropical flavors",
+        isDLC = true,
+        assetPackName = "exotic_tropics_pack"
     );
 
     fun getLocalizedName(context: android.content.Context): String {
@@ -91,7 +105,9 @@ enum class Cuisine(
             VEGETARIAN_VEGAN -> context.getString(com.familymealplanner.R.string.cuisine_vegetarian_vegan)
             MEAT_DISHES -> context.getString(com.familymealplanner.R.string.cuisine_meat_dishes)
             DESSERTS_SWEETS -> context.getString(com.familymealplanner.R.string.cuisine_desserts_sweets)
-            ITALIAN_PREMIUM -> displayName // DLC cuisines use displayName for now
+            ITALIAN_PREMIUM -> context.getString(com.familymealplanner.R.string.cuisine_italian_premium)
+            EASTERN_TRADITIONAL -> context.getString(com.familymealplanner.R.string.cuisine_eastern_traditional)
+            EXOTIC_TROPICS -> context.getString(com.familymealplanner.R.string.cuisine_exotic_tropics)
         }
     }
 
@@ -107,7 +123,9 @@ enum class Cuisine(
             VEGETARIAN_VEGAN -> context.getString(com.familymealplanner.R.string.cuisine_vegetarian_vegan_desc)
             MEAT_DISHES -> context.getString(com.familymealplanner.R.string.cuisine_meat_dishes_desc)
             DESSERTS_SWEETS -> context.getString(com.familymealplanner.R.string.cuisine_desserts_sweets_desc)
-            ITALIAN_PREMIUM -> description // DLC cuisines use description for now
+            ITALIAN_PREMIUM -> context.getString(com.familymealplanner.R.string.cuisine_italian_premium_desc)
+            EASTERN_TRADITIONAL -> context.getString(com.familymealplanner.R.string.cuisine_eastern_traditional_desc)
+            EXOTIC_TROPICS -> context.getString(com.familymealplanner.R.string.cuisine_exotic_tropics_desc)
         }
     }
 
