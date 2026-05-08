@@ -446,7 +446,7 @@
     <string name="cuisine_vegetarian_vegan">Vegetarian &amp; Vegan</string>
     <string name="cuisine_meat_dishes">Meat Dishes</string>
     <string name="cuisine_desserts_sweets">Desserts &amp; Sweets</string>
-    <string name="cuisine_italian_premium">Authentic Italiano</string>
+    <string name="cuisine_italian_premium">2 Fast 2 Hungry</string>
     <string name="cuisine_italian_desc">Pasta, pizza, risotto &amp; more</string>
     <string name="cuisine_mexican_desc">Tacos, burritos, enchiladas</string>
     <string name="cuisine_asian_desc">Chinese, Japanese, Thai &amp; more</string>
@@ -459,7 +459,7 @@
     <string name="cuisine_vegetarian_vegan_desc">Plant-based dishes</string>
     <string name="cuisine_meat_dishes_desc">Beef, pork, lamb &amp; more</string>
     <string name="cuisine_desserts_sweets_desc">Cakes, cookies &amp; sweet treats</string>
-    <string name="cuisine_italian_premium_desc">Authentic Italian dishes</string>
+    <string name="cuisine_italian_premium_desc">Quick meals when you are in a rush</string>
     <string name="cuisine_eastern_traditional">Eastern Traditional</string>
     <string name="cuisine_eastern_traditional_desc">Traditional Eastern European dishes</string>
     <string name="cuisine_exotic_tropics">Exotic Tropics</string>
@@ -617,6 +617,8 @@
     <string name="pantry_delete_message">This will remove the item from your pantry.</string>
     <string name="pantry_delete_button">Delete</string>
     <string name="pantry_cancel_button">Cancel</string>
+    <string name="drawer_delete_custom_title">Delete %1$s?</string>
+    <string name="drawer_delete_custom_message">This will permanently delete the ingredient from your database.</string>
     <string name="voice_input">Voice input</string>
     <string name="voice_listening">Listening...</string>
     <string name="voice_start_speaking">Start speaking...</string>
@@ -753,19 +755,19 @@
     <string name="premium_recipe_count_simple">%1$d recipes</string>
     <string name="close">Close</string>
 
-    <!-- Authentic Italiano Premium Recipe Names -->
-    <string name="premium_recipe_osso_buco">Osso Buco alla Milanese</string>
-    <string name="premium_recipe_risotto_porcini">Risotto ai Funghi Porcini</string>
-    <string name="premium_recipe_saltimbocca">Saltimbocca alla Romana</string>
-    <string name="premium_recipe_pappardelle">Pappardelle al Cinghiale</string>
-    <string name="premium_recipe_cacio_e_pepe">Cacio e Pepe</string>
-    <string name="premium_recipe_vitello_tonnato">Vitello Tonnato</string>
-    <string name="premium_recipe_arancini">Arancini Siciliani</string>
-    <string name="premium_recipe_bistecca">Bistecca alla Fiorentina</string>
-    <string name="premium_recipe_carbonara">Carbonara Romana</string>
-    <string name="premium_recipe_panna_cotta">Panna Cotta</string>
-    <string name="premium_recipe_tiramisu">Tiramisu Classico</string>
-    <string name="premium_recipe_cannoli">Cannoli Siciliani</string>
+    <!-- 2 Fast 2 Hungry Premium Recipe Names -->
+    <string name="premium_recipe_osso_buco">5-Minute Omelette</string>
+    <string name="premium_recipe_risotto_porcini">Speedy Stir Fry</string>
+    <string name="premium_recipe_saltimbocca">Quick Pasta Aglio e Olio</string>
+    <string name="premium_recipe_pappardelle">10-Minute Tacos</string>
+    <string name="premium_recipe_cacio_e_pepe">Fast Fried Rice</string>
+    <string name="premium_recipe_vitello_tonnato">Express Quesadilla</string>
+    <string name="premium_recipe_arancini">Rapid Ramen Bowl</string>
+    <string name="premium_recipe_bistecca">Quick Grilled Cheese</string>
+    <string name="premium_recipe_carbonara">Speedy Chicken Wrap</string>
+    <string name="premium_recipe_panna_cotta">15-Minute Curry</string>
+    <string name="premium_recipe_tiramisu">Fast Noodle Bowl</string>
+    <string name="premium_recipe_cannoli">Quick Toast Skillet</string>
 
     <!-- Eastern Traditional Premium Recipe Names -->
     <string name="premium_recipe_borscht">Borscht</string>

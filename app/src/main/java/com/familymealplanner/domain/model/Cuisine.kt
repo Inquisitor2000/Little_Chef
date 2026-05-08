@@ -72,15 +72,15 @@ enum class Cuisine(
     
     // DLC Cuisines
     ITALIAN_PREMIUM(
-        displayName = "Authentic Italiano",
-        iconRes = R.drawable.ic_sub_pasta,
-        description = "Authentic Italian dishes",
+        displayName = "2 Fast 2 Hungry",
+        iconRes = R.drawable.ic_sub_cereals,
+        description = "Quick meals when you are in a rush",
         isDLC = true,
-        assetPackName = "italian_premium_pack"
+        assetPackName = "2fast_2hungry"
     ),
     EASTERN_TRADITIONAL(
         displayName = "Eastern Traditional",
-        iconRes = R.drawable.ic_sub_mushrooms,
+        iconRes = R.drawable.ic_sub_squash,
         description = "Traditional Eastern European dishes",
         isDLC = true,
         assetPackName = "eastern_traditional_pack"

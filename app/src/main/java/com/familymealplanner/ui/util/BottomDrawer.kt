@@ -4,6 +4,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ColumnScope
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
@@ -29,7 +30,7 @@ fun BottomDrawer(
         val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
         ModalBottomSheet(
             onDismissRequest = onDismiss,
-            modifier = modifier,
+            modifier = modifier.statusBarsPadding(),
             sheetState = sheetState,
             containerColor = MaterialTheme.colorScheme.background,
             dragHandle = { BottomSheetDefaults.DragHandle() }

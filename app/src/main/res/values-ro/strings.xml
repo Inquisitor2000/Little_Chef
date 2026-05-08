@@ -279,7 +279,7 @@
     <string name="cuisine_vegetarian_vegan">Vegetarian și vegan</string>
     <string name="cuisine_meat_dishes">Preparate din carne</string>
     <string name="cuisine_desserts_sweets">Deserturi și dulciuri</string>
-    <string name="cuisine_italian_premium">Autentic Italian</string>
+    <string name="cuisine_italian_premium">2 Fast 2 Hungry</string>
     <string name="cuisine_eastern_traditional">Traditional Estic</string>
     <string name="cuisine_exotic_tropics">Tropice Exotice</string>
     <string name="cuisine_italian_desc">Paste, pizza, risotto &amp; altele</string>
@@ -294,7 +294,7 @@
     <string name="cuisine_vegetarian_vegan_desc">Preparate pe bază de plante</string>
     <string name="cuisine_meat_dishes_desc">Vită, porc, miel &amp; altele</string>
     <string name="cuisine_desserts_sweets_desc">Prăjituri, biscuiți și dulciuri</string>
-    <string name="cuisine_italian_premium_desc">Preparate italiene autentice</string>
+    <string name="cuisine_italian_premium_desc">Mese rapide când ești grăbit</string>
     <string name="cuisine_eastern_traditional_desc">Preparate tradiționale est-europene</string>
     <string name="cuisine_exotic_tropics_desc">Arome tropicale vibrante</string>
     <string name="cuisine_other_desc">Rețete diverse</string>
@@ -345,6 +345,8 @@
     <string name="pantry_delete_message">Aceasta va elimina articolul din cămară.</string>
     <string name="pantry_delete_button">Șterge</string>
     <string name="pantry_cancel_button">Anulează</string>
+    <string name="drawer_delete_custom_title">Șterge %1$s?</string>
+    <string name="drawer_delete_custom_message">Aceasta va șterge permanent ingredientul din baza de date.</string>
     <string name="voice_input">Intrare vocală</string>
     <string name="voice_listening">Ascult...</string>
     <string name="voice_start_speaking">Începe să vorbești...</string>
@@ -492,19 +494,19 @@
     <string name="my_recipes">Rețetele mele</string>
     <string name="recipes_count">%1$d rețete</string>
 
-    <!-- Authentic Italiano Premium Recipe Names -->
-    <string name="premium_recipe_osso_buco">Osso Buco alla Milanese</string>
-    <string name="premium_recipe_risotto_porcini">Risotto cu Ciuperci Porcini</string>
-    <string name="premium_recipe_saltimbocca">Saltimbocca alla Romana</string>
-    <string name="premium_recipe_pappardelle">Pappardelle cu Mistreț</string>
-    <string name="premium_recipe_cacio_e_pepe">Cacio e Pepe</string>
-    <string name="premium_recipe_vitello_tonnato">Vitello Tonnato</string>
-    <string name="premium_recipe_arancini">Arancini Siciliani</string>
-    <string name="premium_recipe_bistecca">Bistecca alla Fiorentina</string>
-    <string name="premium_recipe_carbonara">Carbonara Romană</string>
-    <string name="premium_recipe_panna_cotta">Panna Cotta</string>
-    <string name="premium_recipe_tiramisu">Tiramisu Clasic</string>
-    <string name="premium_recipe_cannoli">Cannoli Siciliani</string>
+    <!-- 2 Fast 2 Hungry Premium Recipe Names -->
+    <string name="premium_recipe_osso_buco">Omletă în 5 Minute</string>
+    <string name="premium_recipe_risotto_porcini">Stir Fry Rapid</string>
+    <string name="premium_recipe_saltimbocca">Paste Rapide Aglio e Olio</string>
+    <string name="premium_recipe_pappardelle">Tacos în 10 Minute</string>
+    <string name="premium_recipe_cacio_e_pepe">Orez Prăjit Rapid</string>
+    <string name="premium_recipe_vitello_tonnato">Quesadilla Express</string>
+    <string name="premium_recipe_arancini">Bol de Ramen Rapid</string>
+    <string name="premium_recipe_bistecca">Grilled Cheese Rapid</string>
+    <string name="premium_recipe_carbonara">Wrap Rapid cu Pui</string>
+    <string name="premium_recipe_panna_cotta">Curry în 15 Minute</string>
+    <string name="premium_recipe_tiramisu">Bol Rapid cu Tăiței</string>
+    <string name="premium_recipe_cannoli">Tigaie Rapidă cu Pâine</string>
 
     <!-- Eastern Traditional Premium Recipe Names -->
     <string name="premium_recipe_borscht">Borș</string>

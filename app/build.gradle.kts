@@ -64,7 +64,7 @@ android {
     }
     
     // Link asset packs for DLC recipe packs
-    assetPacks += listOf(":italian_premium_pack", ":eastern_traditional_pack", ":exotic_tropics_pack")
+    assetPacks += listOf(":2fast_2hungry", ":eastern_traditional_pack", ":exotic_tropics_pack")
 }
 
 dependencies {

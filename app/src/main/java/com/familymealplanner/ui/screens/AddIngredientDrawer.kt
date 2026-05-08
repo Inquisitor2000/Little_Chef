@@ -24,6 +24,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
+import androidx.compose.material.icons.filled.Delete
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.KeyboardArrowDown
 import androidx.compose.material.icons.filled.KeyboardArrowRight
@@ -124,6 +125,20 @@ fun AddIngredientDrawer(
     
     val focusManager = LocalFocusManager.current
     val keyboardController = LocalSoftwareKeyboardController.current
+    
+    // Delete handler for custom ingredients
+    var refreshTrigger by remember { mutableStateOf(0) }
+    val onDeleteCustomIngredient: (com.familymealplanner.domain.model.Ingredient) -> Unit = { ingredient ->
+        coroutineScope.launch {
+            ingredientRepository.deleteIngredient(ingredient)
+            refreshTrigger++
+        }
+    }
+    LaunchedEffect(visible, refreshTrigger) {
+        if (visible) {
+            allCustomIngredients = ingredientRepository.getAllIngredients()
+        }
+    }
     
     // Reset state when drawer closes
     LaunchedEffect(visible) {
@@ -293,8 +308,6 @@ fun AddIngredientDrawer(
                         DrawerCustomIngredientItem(
                             ingredient = unifiedIngredient.dbIngredient!!,
                             onClick = {
-                                // If callback is provided, navigate to edit screen
-                                // Otherwise show quantity dialog to add more
                                 if (onEditExistingIngredient != null) {
                                     onEditExistingIngredient(unifiedIngredient.dbIngredient.id)
                                     onDismiss()
@@ -303,6 +316,7 @@ fun AddIngredientDrawer(
                                     showQuantityDialog = true
                                 }
                             },
+                            onDelete = { onDeleteCustomIngredient(unifiedIngredient.dbIngredient) },
                             translateIngredient = translateIngredient
                         )
                     } else {
@@ -458,6 +472,7 @@ fun AddIngredientDrawer(
                                                             showQuantityDialog = true
                                                         }
                                                     },
+                                                    onDelete = { onDeleteCustomIngredient(ingredient) },
                                                     translateIngredient = translateIngredient
                                                 )
                                             }
@@ -748,8 +763,11 @@ private fun DrawerIngredientItem(
 private fun DrawerCustomIngredientItem(
     ingredient: com.familymealplanner.domain.model.Ingredient,
     onClick: () -> Unit,
+    onDelete: () -> Unit,
     translateIngredient: (String) -> String = { it }
 ) {
+    var showDeleteConfirm by remember { mutableStateOf(false) }
+
     Surface(
         modifier = Modifier
             .fillMaxWidth()
@@ -771,13 +789,92 @@ private fun DrawerCustomIngredientItem(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            // No icon for individual ingredients - only categories/subcategories have icons
             Text(
                 text = translateIngredient(ingredient.name),
                 style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.Medium
+                fontWeight = FontWeight.Medium,
+                modifier = Modifier.weight(1f)
             )
+            Surface(
+                onClick = { showDeleteConfirm = true },
+                shape = CircleShape,
+                color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.5f),
+                modifier = Modifier.size(32.dp)
+            ) {
+                Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
+                    Icon(
+                        imageVector = Icons.Default.Delete,
+                        contentDescription = "Delete ingredient",
+                        tint = MaterialTheme.colorScheme.error,
+                        modifier = Modifier.size(16.dp)
+                    )
+                }
+            }
         }
+    }
+
+    if (showDeleteConfirm) {
+        AlertDialog(
+            onDismissRequest = { showDeleteConfirm = false },
+            containerColor = MaterialTheme.colorScheme.background,
+            shape = RoundedCornerShape(20.dp),
+            tonalElevation = 6.dp,
+            title = {
+                Text(
+                    text = stringResource(
+                        R.string.drawer_delete_custom_title,
+                        translateIngredient(ingredient.name).replaceFirstChar {
+                            if (it.isLowerCase()) it.titlecase() else it.toString()
+                        }
+                    ),
+                    style = MaterialTheme.typography.titleMedium,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            },
+            text = {
+                Text(
+                    text = stringResource(R.string.drawer_delete_custom_message),
+                    style = MaterialTheme.typography.bodyMedium,
+                    textAlign = TextAlign.Center,
+                    modifier = Modifier.fillMaxWidth()
+                )
+            },
+            confirmButton = {
+                Column(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    Button(
+                        onClick = {
+                            showDeleteConfirm = false
+                            onDelete()
+                        },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.primary,
+                            contentColor = MaterialTheme.colorScheme.onPrimary
+                        )
+                    ) {
+                        Text(stringResource(R.string.pantry_delete_button))
+                    }
+                    Button(
+                        onClick = { showDeleteConfirm = false },
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .padding(horizontal = 16.dp),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                            contentColor = MaterialTheme.colorScheme.onSecondaryContainer
+                        )
+                    ) {
+                        Text(stringResource(R.string.pantry_cancel_button))
+                    }
+                }
+            }
+        )
     }
 }
 
@@ -985,7 +1082,12 @@ private fun DrawerCustomQuantityDialog(
     val allowedUnits = remember(defaultUnit) {
         UnitOptions.getAllowedUnitsForIngredient(defaultUnit)
     }
-    var selectedUnit by remember { mutableStateOf(defaultUnit) }
+    val preferredUnit = when (defaultUnit) {
+        "g" -> if (allowedUnits.contains("kg")) "kg" else "g"
+        "ml" -> if (allowedUnits.contains("L")) "L" else "ml"
+        else -> defaultUnit
+    }
+    var selectedUnit by remember { mutableStateOf(preferredUnit) }
     val showUnitSelector = allowedUnits.size > 1
     val haptic = rememberHapticFeedback()
 
@@ -1007,86 +1109,151 @@ private fun DrawerCustomQuantityDialog(
             }
         },
         text = {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalAlignment = Alignment.CenterVertically
+            Column(
+                verticalArrangement = Arrangement.spacedBy(22.dp)
             ) {
-                OutlinedTextField(
-                    value = quantity,
-                    onValueChange = { newValue ->
-                        quantity = newValue.filter { it.isDigit() || it == '.' }
-                    },
-                    modifier = Modifier.weight(1f),
-                    keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
-                    singleLine = true,
-                    textStyle = LocalTextStyle.current.copy(textAlign = TextAlign.Center)
-                )
-                
-                if (showUnitSelector) {
-                    var expanded by remember { mutableStateOf(false) }
-                    ExposedDropdownMenuBox(
-                        expanded = expanded,
-                        onExpandedChange = { expanded = !expanded },
-                        modifier = Modifier.width(100.dp)
-                    ) {
-                        OutlinedTextField(
-                            value = translateUnit(selectedUnit),
-                            onValueChange = {},
-                            readOnly = true,
-                            trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded = expanded) },
-                            modifier = Modifier.menuAnchor(),
-                            singleLine = true
-                        )
-                        ExposedDropdownMenu(
-                            expanded = expanded,
-                            onDismissRequest = { expanded = false }
-                        ) {
-                            allowedUnits.forEach { unit ->
-                                DropdownMenuItem(
-                                    text = { Text(translateUnit(unit)) },
-                                    onClick = {
-                                        selectedUnit = unit
-                                        expanded = false
-                                        haptic.performLight()
-                                    }
-                                )
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    verticalAlignment = Alignment.CenterVertically,
+                    horizontalArrangement = Arrangement.spacedBy(12.dp)
+                ) {
+                    Surface(
+                        shape = CircleShape,
+                        color = MaterialTheme.colorScheme.secondaryContainer,
+                        modifier = Modifier
+                            .size(48.dp)
+                            .clip(CircleShape)
+                            .clickable {
+                                val current = quantity.toDoubleOrNull() ?: 0.0
+                                if (current > 0) {
+                                    quantity = (current - 1).coerceAtLeast(0.0).toString()
+                                    haptic.performLight()
+                                }
                             }
+                    ) {
+                        Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
+                            Text(
+                                text = "−",
+                                style = MaterialTheme.typography.titleLarge,
+                                color = MaterialTheme.colorScheme.onSecondaryContainer
+                            )
                         }
                     }
-                } else {
-                    Text(
-                        text = translateUnit(selectedUnit),
-                        style = MaterialTheme.typography.bodyLarge,
-                        modifier = Modifier.padding(horizontal = 8.dp)
+                    
+                    OutlinedTextField(
+                        value = quantity,
+                        onValueChange = { newValue ->
+                            quantity = newValue.filter { it.isDigit() || it == '.' }
+                        },
+                        modifier = Modifier.weight(1f),
+                        keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
+                        singleLine = true,
+                        textStyle = LocalTextStyle.current.copy(textAlign = TextAlign.Center)
                     )
+                    
+                    Surface(
+                        shape = CircleShape,
+                        color = MaterialTheme.colorScheme.secondaryContainer,
+                        modifier = Modifier
+                            .size(48.dp)
+                            .clip(CircleShape)
+                            .clickable {
+                                val current = quantity.toDoubleOrNull() ?: 0.0
+                                quantity = (current + 1).toString()
+                                haptic.performLight()
+                            }
+                    ) {
+                        Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
+                            Icon(
+                                Icons.Default.Add,
+                                contentDescription = "Increase",
+                                tint = MaterialTheme.colorScheme.onSecondaryContainer,
+                                modifier = Modifier.size(28.dp)
+                            )
+                        }
+                    }
+                    
+                    if (showUnitSelector && allowedUnits.size == 2) {
+                        val isFirstUnit = selectedUnit == allowedUnits[0]
+                        
+                        Surface(
+                            shape = RoundedCornerShape(20.dp),
+                            color = MaterialTheme.colorScheme.secondaryContainer,
+                            modifier = Modifier
+                                .width(44.dp)
+                                .height(80.dp)
+                                .clickable {
+                                    val currentIndex = allowedUnits.indexOf(selectedUnit)
+                                    val nextIndex = (currentIndex + 1) % allowedUnits.size
+                                    selectedUnit = allowedUnits[nextIndex]
+                                    haptic.performLight()
+                                }
+                        ) {
+                            Box(
+                                modifier = Modifier
+                                    .fillMaxSize()
+                                    .padding(3.dp)
+                            ) {
+                                Surface(
+                                    shape = CircleShape,
+                                    color = MaterialTheme.colorScheme.primary,
+                                    shadowElevation = 2.dp,
+                                    modifier = Modifier
+                                        .size(38.dp)
+                                        .align(if (isFirstUnit) Alignment.TopCenter else Alignment.BottomCenter)
+                                ) {
+                                    Box(
+                                        contentAlignment = Alignment.Center,
+                                        modifier = Modifier.fillMaxSize()
+                                    ) {
+                                        Text(
+                                            text = translateUnit(selectedUnit),
+                                            style = MaterialTheme.typography.bodyMedium,
+                                            fontWeight = FontWeight.SemiBold,
+                                            color = MaterialTheme.colorScheme.onPrimary
+                                        )
+                                    }
+                                }
+                            }
+                        }
+                    } else if (!showUnitSelector) {
+                        Text(
+                            text = translateUnit(selectedUnit),
+                            style = MaterialTheme.typography.titleMedium,
+                            modifier = Modifier.padding(horizontal = 8.dp)
+                        )
+                    }
+                }
+                
+                Row(
+                    modifier = Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                ) {
+                    val qty = quantity.toDoubleOrNull()
+                    
+                    Button(
+                        onClick = onDismiss,
+                        modifier = Modifier.weight(1f),
+                        colors = ButtonDefaults.buttonColors(
+                            containerColor = MaterialTheme.colorScheme.secondaryContainer,
+                            contentColor = MaterialTheme.colorScheme.onSecondaryContainer
+                        )
+                    ) {
+                        Text(stringResource(R.string.button_cancel))
+                    }
+                    
+                    Button(
+                        onClick = { onConfirm(qty!!, selectedUnit) },
+                        enabled = qty != null && qty > 0,
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        Text(stringResource(R.string.button_add))
+                    }
                 }
             }
         },
-        confirmButton = {
-            TextButton(
-                onClick = {
-                    val qty = quantity.toDoubleOrNull()
-                    if (qty != null && qty > 0) {
-                        onConfirm(qty, selectedUnit)
-                    }
-                },
-                enabled = quantity.toDoubleOrNull()?.let { it > 0 } == true
-            ) {
-                Text(stringResource(R.string.button_add))
-            }
-        },
-        dismissButton = {
-            Button(
-                onClick = onDismiss,
-                colors = ButtonDefaults.buttonColors(
-                    containerColor = MaterialTheme.colorScheme.secondaryContainer,
-                    contentColor = MaterialTheme.colorScheme.onSecondaryContainer
-                )
-            ) {
-                Text(stringResource(R.string.button_cancel))
-            }
-        }
+        confirmButton = {},
+        dismissButton = {}
     )
 }
 

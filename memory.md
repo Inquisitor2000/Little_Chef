@@ -4,474 +4,70 @@
 Little Chef is a comprehensive Android meal planning application built with Kotlin and Jetpack Compose. It helps families organize recipes, manage pantry inventory, create grocery lists, and plan meals with smart ingredient matching and AI-powered recipe scraping.
 
 **Package**: `com.familymealplanner`
-**Min SDK**: 26 (Android 8.0)
-**Target SDK**: 34 (Android 14)
-**Build System**: Gradle with Kotlin DSL
+**Min SDK**: 26 (Android 8.0), **Target SDK**: 34 (Android 14)
+**App Name**: "Little Chef"
+**Build System**: Gradle with Kotlin DSL, Kotlin 1.9.21, Compose BOM 2023.10.01, compileSdk 34
 
 ---
 
 ## Architecture
 
-### Clean Architecture Pattern (MVVM)
+### Clean Architecture + MVVM
 ```
 app/src/main/java/com/familymealplanner/
-├── data/              # Data layer
-│   ├── local/         # Room database, DAOs, entities, loaders
-│   ├── remote/        # API services (OpenAI)
-│   ├── repository/    # Repository implementations
-│   └── preferences/   # DataStore preferences
-├── domain/            # Business logic
-│   ├── model/         # Domain models
-│   ├── repository/    # Repository interfaces
-│   ├── usecase/       # Use cases
-│   └── util/          # Domain utilities
-├── ui/                # Presentation layer
-│   ├── screens/       # Composable screens + ViewModels
-│   ├── navigation/    # Navigation setup
-│   ├── theme/         # App theming
-│   ├── onboarding/    # Onboarding flow
-│   ├── util/          # UI utilities
-│   └── export/        # Export functionality
-├── di/                # Dependency injection (Hilt)
+├── data/              # Data layer (Room, DataStore, repositories)
+├── domain/            # Business logic (models, interfaces, use cases)
+├── ui/                # Presentation (screens, viewmodels, navigation, theme)
+├── di/                # Hilt dependency injection modules
 └── utils/             # App-level utilities
 ```
 
----
-
-## Core Technologies
-
-### Dependencies
-- **UI**: Jetpack Compose (Material 3)
-- **DI**: Hilt (Dagger)
-- **Database**: Room (SQLite)
-- **Navigation**: Navigation Compose
-- **Image Loading**: Coil
-- **HTTP Client**: Ktor
-- **Serialization**: Kotlinx Serialization
-- **Preferences**: DataStore
-- **Testing**: JUnit, Kotest, MockK, Robolectric
+### Key Libraries
+- **UI**: Jetpack Compose Material3 (BOM 2023.10.01)
+- **DI**: Dagger Hilt 2.48.1
+- **Database**: Room 2.6.1 (with KSP)
+- **Navigation**: Navigation Compose 2.7.6
+- **Image Loading**: Coil Compose 2.5.0
+- **HTTP Client**: Ktor 2.3.7 (OkHttp engine)
+- **Serialization**: Kotlinx Serialization 1.6.2
+- **Preferences**: DataStore Preferences 1.0.0
+- **Billing**: Google Play Billing 6.1.0
+- **Asset Delivery**: Play Asset Delivery 2.2.2
 
 ---
 
-## Database Schema (Room)
+## Navigation System
 
-### Entities
-1. **MealEntity** - User recipes and scraped recipes
-2. **MealIngredientEntity** - Recipe ingredients (junction table)
-3. **IngredientEntity** - Pantry inventory items
-4. **IngredientAllergenEntity** - Ingredient allergens (junction table)
-5. **IngredientSubstituteEntity** - Ingredient substitutions
-6. **AllergenEntity** - Allergen definitions
-7. **MealPlanEntity** - Scheduled meals
-8. **InventoryTransactionEntity** - Ingredient usage history
-9. **GroceryItemEntity** - Shopping list items
+### NavHost Setup (`ui/navigation/AppNavHost.kt`)
+- Uses `NavHost` with `NavController`
+- Onboarding-aware start destination
+- Routes defined in `NavDestination` sealed class (`ui/navigation/NavDestination.kt`)
 
-### Key DAOs
-- AllergenDao, IngredientDao, MealDao, MealPlanDao, GroceryItemDao, etc.
+### Bottom Navigation (4 tabs)
+1. **Plan** (`route = "plan"`) - Weekly meal planning calendar
+2. **Meals** (`route = "meals"`) - Recipe browsing (cuisines + user recipes)
+3. **Groceries** (`route = "groceries"`) - Shopping list
+4. **Pantry** (`route = "pantry"`) - Ingredient inventory
 
----
-
-## Domain Models
-
-### Core Models
-- **Meal**: Recipe with ingredients, instructions, times, metadata
-  - `id`, `name`, `instructions`, `simpleInstructions`
-  - `prepTimeMinutes`, `cookTimeMinutes`, `servings`
-  - `isScraped`, `isBundled`, `imagePath`
-  - `mealType` (BREAKFAST, LUNCH, DINNER, SNACK, DESSERT)
-  - `dishCategory`, `createdInLanguage`, `ingredients`
-
-- **Ingredient**: Pantry item with categorization
-  - `id`, `name`, `unit`, `category`, `subcategory`
-  - `preferredDisplayUnit`, `createdInLanguage`
-  - `allergens`, `substitutes`
-
-- **MealPlan**: Scheduled meal with status tracking
-  - `id`, `meal`, `plannedDate`, `mealType`, `status`
-  - `startedAt`, `completedAt`, `ingredientSubstitutions`
-  - `plannedServings`, adjusted times
-  - Status: PLANNED, COOKING, COMPLETED, ABORTED
-
-- **GroceryItem**: Shopping list item
-  - `id`, `ingredientName`, `ingredientId`, `category`
-  - `quantity`, `unit`, `mealName`, `mealType`
-  - `plannedDate`, `isChecked`, `checkedAt`
-
-### Enums
-- **MealType**: BREAKFAST, LUNCH, DINNER, SNACK, DESSERT
-- **DishCategory**: MAIN_COURSE, SIDE_DISH, APPETIZER, SOUP, SALAD, etc.
-- **Cuisine**: ITALIAN, MEXICAN, ASIAN, MEDITERRANEAN, FRENCH, BREAD_BAKERY, SOUPS_STEWS, VEGETARIAN_VEGAN, MEAT_DISHES, DESSERTS_SWEETS
-- **MealPlanStatus**: PLANNED, COOKING, COMPLETED, ABORTED
-
----
-
-## Navigation Structure
-
-### Bottom Navigation (5 tabs)
-1. **Plan** - Weekly meal planning calendar
-2. **Meals** - Recipe browsing (cuisines + user recipes)
-3. **Groceries** - Shopping list
-4. **Pantry** - Ingredient inventory
-5. **Settings** - App configuration
-
-### Routes
-- `plan` - Meal planning screen
-- `meals` - Recipe browsing
-- `groceries` - Shopping list
-- `pantry` - Pantry inventory
-- `settings` - Settings
-- `scrape_recipe` - AI recipe scraping
-- `manual_recipe` - Manual recipe entry
-- `recipe_detail/{mealId}` - User recipe details
-- `cuisine_meals/{cuisineName}` - Cuisine recipe list
-- `bundled_recipe/{cuisineName}/{recipeId}` - Bundled recipe details
-- `suggestion` - Meal suggestions (ingredient-based + vibe-based)
-- `add_custom_ingredient` - Custom ingredient form
-- `meal_plan_detail/{mealPlanId}` - Cooking mode
-
----
-
-## Key Features
-
-### 1. Recipe Management
-- **50+ Bundled Recipes** across 10 cuisines (Italian, Mexican, Asian, etc.)
-- **AI Recipe Scraping** via OpenAI API (URL → structured recipe)
-- **Manual Recipe Entry** with ingredient matching
-- **Recipe Translation** (English, Russian, Romanian)
-- Recipes sorted by complexity (fewest ingredients first)
-- Detailed + simplified instructions
-- Prep/cook times, servings, allergen tracking
-
-### 2. Smart Meal Suggestions
-**Three-Tier Ingredient Matching**:
-- Perfect Matches (100% ingredients available)
-- Good Matches (80-99% available)
-- Partial Matches (50-79% available)
-
-**Chef's Pick - Vibe-Based Recommendations**:
-- Mood: Quick, Comfort, Healthy, Fancy
-- Effort: Easy, Moderate, Challenging
-- Serving Size: Solo, Couple, Family, Party
-- Works independently from pantry inventory
-
-### 3. Pantry Management
-- **Voice Input** for quick ingredient entry
-- Automatic ingredient matching with 500+ catalog
-- Real-time inventory tracking
-- Reserved quantities for planned meals
-- Category-based organization (15 categories, 60+ subcategories)
-- Unit conversion (metric/imperial)
-- Allergen tracking per ingredient
-
-### 4. Grocery List
-- Auto-generation from planned meals
-- Manual item addition
-- Category grouping
-- Check-off functionality
-- Plain text export for easy sharing via messaging apps
-
-### 5. Meal Planning
-- Weekly calendar view
-- Time-based suggestions (breakfast in morning, etc.)
-- Serving size adjustment (1, 2, 4, 6 people)
-- Cooking mode with step-by-step instructions
-- Automatic ingredient deduction when cooking
-- Meal status tracking (PLANNED → COOKING → COMPLETED)
-
-### 6. Allergen Management
-- 7 common allergens: Dairy, Eggs, Fish, Gluten, Nuts, Shellfish, Soy
-- Visual allergen tags on recipes
-- Ingredient-level allergen info
-- Custom allergen profiles
-
-### 7. Localization
-- **Full support**: English, Russian, Romanian
-- Language selection in onboarding
-- Dynamic translation system
-- Ingredient/category translation
-- Recipe instruction translation
-
-### 8. Customization
-- Multiple accent color themes (light/dark)
-- Dark/Light mode support
-- Font selection (Roboto, Poppins, Lato, etc.)
-- Text scale adjustment
-- Family size configuration
-
----
-
-## Screens & ViewModels
-
-### Main Screens
-1. **PlanScreen** (PlanViewModel)
-   - Weekly meal plan display
-   - Grouped by date and meal type
-   - Cooking timer for active meals
-   - Clear completed meals
-   - Navigate to meal plan detail
-
-2. **MealsScreen** (MealsViewModel)
-   - Cuisine browsing (10 cuisines)
-   - User recipes section (expandable)
-   - Add recipe button
-   - Recipe preloading for performance
-
-3. **PantryScreen** (PantryViewModel)
-   - Hierarchical ingredient display (category → subcategory)
-   - Expandable/collapsible sections
-   - Voice input integration
-   - Edit/delete ingredients
-   - Reserved quantity tracking
-
-4. **GroceriesScreen** (GroceriesViewModel)
-   - Shopping list with check-off
-   - Category grouping
-   - Add custom items
-   - Move to pantry when checked
-   - Export functionality
-
-5. **SuggestionScreen** (SuggestionViewModel)
-   - Ingredient-based matching (3 tiers)
-   - Vibe-based recommendations
-   - Filter by meal type and dish category
-   - Missing ingredients display
-
-6. **CuisineMealsScreen** (CuisineMealsViewModel)
-   - Bundled recipe list for cuisine
-   - Filter by meal type
-   - Sort by complexity
-   - Allergen preloading
-
-7. **BundledRecipeDetailScreen** (BundledRecipeDetailViewModel)
-   - Recipe details with images
-   - Ingredient list with allergens
-   - Add to meal plan
-   - Add to grocery list
-   - Serving size adjustment
-
-8. **RecipeDetailScreen** (MealDetailViewModel)
-   - User recipe details
-   - Edit/delete functionality
-   - Similar to bundled recipe detail
-
-9. **MealPlanDetailScreen** (MealPlanDetailViewModel)
-   - Cooking mode with step-by-step instructions
-   - Ingredient checklist
-   - Start/complete/abort cooking
-   - Timer display
-   - Ingredient substitution
-
-10. **ScrapeRecipeScreen** (ScrapeRecipeViewModel)
-    - URL input for recipe scraping
-    - OpenAI API integration
-    - Ingredient extraction and matching
-    - Save to database
-
-11. **ManualRecipeScreen** (ManualRecipeViewModel)
-    - Manual recipe entry form
-    - Dynamic ingredient list
-    - Ingredient matching
-    - Custom ingredient creation
-
-12. **SettingsScreen** (SettingsViewModel)
-    - Language selection
-    - OpenAI API key management
-    - Custom grocery list header (max 100 chars, supports emojis)
-    - Accent color picker
-    - Font selection
-    - Text scale
-    - Allergen management
-
-### Onboarding Screens
-- **WelcomeScreen** - App introduction
-- **LanguageSelectionScreen** - Language picker
-- **ServingSizeScreen** - Family size configuration
-- **OnboardingScreen** - Coordinator
-
----
-
-## Data Layer
-
-### Local Data
-- **BundledRecipeLoader**: Loads recipes from JSON assets
-- **ImagePreloader**: Preloads recipe images for performance
-- **TranslationSystem**: Manages multi-language support
-- **IngredientTranslator**: Translates ingredient names
-- **RecipeTranslator**: Translates recipe content
-- **CategoryTranslator**: Translates categories
-- **SubstituteInitializer**: Initializes ingredient substitutes
-
-### Remote Data
-- **OpenAiService**: Recipe scraping via OpenAI API
-
-### Preferences (DataStore)
-- **OnboardingPreferences**: Onboarding state, theme, language, custom grocery header
-- **LocaleManager**: Language management
-- **FavoriteRecipesPreferences**: Favorite recipes (future)
-
----
-
-## Domain Layer
-
-### Use Cases
-- **CreateMealUseCase**: Create user recipe
-- **CreateScrapedMealUseCase**: Save scraped recipe
-- **UpdateMealUseCase**: Update recipe
-- **DeleteMealUseCase**: Delete recipe
-- **CreateMealPlanUseCase**: Schedule meal
-- **StartCookingUseCase**: Begin cooking
-- **CompleteCookingUseCase**: Finish cooking
-- **AbortCookingUseCase**: Cancel cooking
-- **CheckRecipeIngredientsUseCase**: Check ingredient availability
-- **CreateIngredientUseCase**: Add pantry item
-- **UpdateIngredientUseCase**: Update pantry item
-- **DeleteIngredientUseCase**: Remove pantry item
-- **AdjustInventoryUseCase**: Adjust quantities
-- **RestockIngredientUseCase**: Restock item
-- **AddGroceryItemToPantryUseCase**: Move grocery to pantry
-- **CreateAllergenUseCase**: Add allergen
-- **DeleteAllergenUseCase**: Remove allergen
-- **PreloadCuisineAllergensUseCase**: Cache allergens
-- **FixIngredientCategoriesUseCase**: Fix missing categories
-- **AddIngredientSubstituteUseCase**: Add substitute
-
-### Utilities
-- **IngredientMatcher**: Fuzzy ingredient matching
-- **VoiceInputParser**: Parse voice input to ingredients
-- **VoiceRecognitionManager**: Speech recognition
-- **CategoryInferencer**: Infer ingredient categories
-- **InstructionTranslator**: Translate instructions
-- **PermissionChecker**: Check app permissions
-
-### Catalogs
-- **IngredientCatalog**: 500+ common ingredients with metadata
-- **CategoryIcons**: Icons for categories
-- **UnitConversion**: Unit conversion logic
-- **UnitOptions**: Allowed units per ingredient type
-- **NonDeductibleIngredients**: Ingredients not deducted when cooking
-
----
-
-## UI Components
-
-### Reusable Components
-- **RecipeImage**: Optimized recipe image loading
-- **QuantityStepper**: Increment/decrement quantity
-- **SwipeToDelete**: Swipe-to-delete gesture
-- **BottomDrawer**: Bottom sheet drawer
-- **AddIngredientDrawer**: Ingredient addition UI
-- **VoiceInputBottomSheet**: Voice input UI
-- **HapticFeedback**: Haptic feedback utility
-- **PerformanceLogger**: Performance monitoring
-
-### Export
-- **GroceriesTextExport**: Plain text grocery list export
-  - `generatePlainText()`: Full formatted list with emojis, dates, categories
-  - `generateCompactText()`: Minimal consolidated list
-  - Supports localization and unit translation
-  - Smart formatting with meal grouping
-- **Color**: Material 3 color scheme
-- **AppFonts**: Font family management
-- **Theme**: Dynamic theming with accent colors
-
----
-
-## Bundled Recipes
-
-### Recipe Structure (JSON)
-```json
-{
-  "name": "Recipe Name",
-  "instructions": "Detailed step-by-step...",
-  "simpleInstructions": "Simplified version...",
-  "prepTimeMinutes": 20,
-  "cookTimeMinutes": 35,
-  "servings": 2,
-  "mealType": "BREAKFAST",
-  "dishCategory": "MAIN_COURSE",
-  "ingredients": [
-    {
-      "name": "Ingredient Name",
-      "quantity": 100,
-      "unit": "g",
-      "isStarIngredient": true
-    }
-  ],
-  "sourceUrl": "https://...",
-  "cuisine": "Asian",
-  "id": "recipe_id",
-  "imageUrl": "recipes/images/asian/recipe.jpg"
-}
-```
-
-### Recipe Storage
-- **Location**: `app/src/main/assets/recipes/{cuisine}/`
-- **Languages**: Each recipe has 3 versions (en, ro, ru)
-- **Images**: `app/src/main/assets/recipes/images/{cuisine}/`
-- **Total**: 50+ recipes across 10 cuisines
-
----
-
-## Performance Optimizations
-
-1. **Image Preloading**: Background preload of recipe images
-2. **Allergen Caching**: Preload allergens for cuisines
-3. **O(1) Ingredient Lookups**: Pre-built catalog maps
-4. **Lazy Loading**: LazyColumn/LazyVerticalGrid for lists
-5. **Recipe Preloading**: Preload popular cuisines
-6. **Efficient Queries**: Room queries with proper indexing
-7. **Coroutine Scoping**: Proper lifecycle-aware coroutines
-
----
-
-## Key Algorithms
-
-### Ingredient Matching (3-Tier System)
+### Routes with Arguments
 ```kotlin
-// Perfect Match: 100% ingredients available
-// Good Match: 80-99% available
-// Partial Match: 50-79% available
-val matchPercentage = (availableIngredients / totalIngredients) * 100
+NavDestination.RecipeDetail.createRoute(mealId)  // -> "recipe_detail/{mealId}"
+NavDestination.CuisineMeals.createRoute(cuisineName)
+NavDestination.BundledRecipeDetail.createRoute(cuisineName, recipeId)
+NavDestination.MealPlanDetail.createRoute(mealPlanId)
+NavDestination.AddCustomIngredient.createRoute(initialName, ingredientId)
+NavDestination.AddCustomIngredientForGrocery.createRoute(initialName)
+NavDestination.AddCustomIngredientForRecipe.createRoute(initialName)
 ```
 
-### Vibe-Based Recommendations
-```kotlin
-// Filters recipes by:
-// - Mood (cooking time, complexity)
-// - Effort (ingredient count, steps)
-// - Serving size (recipe servings)
-// Random selection from matching recipes
-```
-
-### Serving Size Adjustment
-```kotlin
-// Adjusts prep/cook times based on servings and ingredient count
-val prepAdjustment = when (servings) {
-    4 -> if (ingredientCount < 10) 5 else 10
-    6 -> if (ingredientCount < 10) 15 else 20
-    else -> 0
-}
-```
-
-### Unit Conversion
-```kotlin
-// Weight: g ↔ kg ↔ oz ↔ lb
-// Volume: ml ↔ L ↔ cup ↔ tbsp ↔ tsp
-// Piece: pcs (no conversion)
-```
+### Special Navigation Patterns
+- SavedStateHandle for passing data back between screens (e.g., ManualRecipeScreen receives custom ingredient data)
+- `navController.popBackStack()` with inclusive flag for removing intermediate screens
+- Scraped/manual recipe flow navigates to the new recipe detail after creation
 
 ---
 
 ## State Management
-
-### UI State Pattern
-```kotlin
-sealed class ScreenUiState {
-    object Loading : ScreenUiState()
-    data class Success(val data: List<Item>) : ScreenUiState()
-    data class Error(val message: String) : ScreenUiState()
-}
-```
 
 ### ViewModel Pattern
 ```kotlin
@@ -479,101 +75,79 @@ sealed class ScreenUiState {
 class ScreenViewModel @Inject constructor(
     private val repository: Repository
 ) : ViewModel() {
-    private val _uiState = MutableStateFlow<ScreenUiState>(Loading)
-    val uiState: StateFlow<ScreenUiState> = _uiState.asStateFlow()
-    
-    fun loadData() {
-        viewModelScope.launch {
-            // Load data
-        }
-    }
+    private val _uiState = MutableStateFlow<UiState>(UiState.Loading)
+    val uiState: StateFlow<UiState> = _uiState.asStateFlow()
 }
 ```
 
----
+### UI State Pattern (Sealed Interface)
+```kotlin
+sealed interface ScreenUiState {
+    object Loading : ScreenUiState
+    data class Success(val data: List<Item>) : ScreenUiState
+    data class Error(val message: String) : ScreenUiState
+}
+```
 
-## Testing Strategy
-
-### Unit Tests
-- Use cases
-- ViewModels
-- Utilities (IngredientMatcher, VoiceInputParser, etc.)
-
-### Integration Tests
-- Repository implementations
-- Database operations
-
-### UI Tests
-- Composable screens
-- Navigation flows
-
-### Test Tools
-- JUnit 4
-- Kotest (assertions, property testing)
-- MockK (mocking)
-- Robolectric (Android framework)
-- Coroutines Test
+### State Collection
+- Use `collectAsStateWithLifecycle()` for lifecycle-aware collection (preferred)
+- Use `by` delegate pattern: `val uiState by viewModel.uiState.collectAsState()`
 
 ---
 
-## Future Enhancements
+## Database (Room)
 
-1. **Firebase Integration**: Family sharing, cloud sync
-2. **API Usage Tracking**: OpenAI tier management
-3. **Enhanced Voice Recognition**: Longer input duration
-4. **Nutritional Information**: Calorie tracking
-5. **Shopping List Optimization**: Store layout
-6. **Recipe Rating**: Favorites system
-7. **More Cuisines**: Expand recipe library
-8. **Meal History**: Track cooking history
-9. **Recipe Recommendations**: ML-based suggestions
-10. **Barcode Scanning**: Quick pantry additions
+### Database Name: `family_meal_planner_db`
+### Version: 1 (destructive migrations during development)
+
+### 9 Entities
+| Entity | Table | Key Fields |
+|--------|-------|------------|
+| `MealEntity` | meals | id, name, instructions, simpleInstructions, prepTimeMinutes, cookTimeMinutes, servings, mealType, dishCategory, imagePath, isScraped, isBundled, createdInLanguage |
+| `MealIngredientEntity` | meal_ingredients | mealId, ingredientName, quantity, unit, isStarIngredient |
+| `IngredientEntity` | ingredients | id, name, unit, category, subcategory, preferredDisplayUnit, createdInLanguage |
+| `AllergenEntity` | allergens | id, name, displayName |
+| `IngredientAllergenEntity` | ingredient_allergens | ingredientId, allergenId (junction) |
+| `IngredientSubstituteEntity` | ingredient_substitutes | ingredientId, substituteName, notes |
+| `MealPlanEntity` | meal_plans | id, mealId, plannedDate, mealType, status (PLANNED/COOKING/COMPLETED/ABORTED), plannedServings, startedAt, completedAt |
+| `InventoryTransactionEntity` | inventory_transactions | id, ingredientId, quantityChange, reason, createdAt |
+| `GroceryItemEntity` | grocery_items | id, ingredientName, ingredientId, quantity, unit, category, mealName, mealType, plannedDate, isChecked |
+
+### Foreign Keys
+- CASCADE delete: MealPlan → Meal, MealIngredient → Meal
+- Allergens table prepopulated with 9 common allergens via DatabaseModule callback
 
 ---
 
-## Important Notes
+## Domain Models (Key)
 
-### Ingredient Deduction
-- Some ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc.)
-- See `NonDeductibleIngredients` for full list
+### Meal
+```kotlin
+data class Meal(
+    val id: String, name: String, instructions: String?, simpleInstructions: String?,
+    prepTimeMinutes: Int, cookTimeMinutes: Int, servings: Int,
+    mealType: MealType, dishCategory: DishCategory?,
+    imagePath: String?, isScraped: Boolean, isBundled: Boolean,
+    createdInLanguage: String, ingredients: List<MealIngredient>,
+    sourceUrl: String?, cuisine: String?,
+    createdAt: Long, updatedAt: Long
+)
+```
 
-### Language Handling
-- Ingredients created in one language are tagged with `createdInLanguage`
-- Translation system handles display in current language
-- Fallback to original name if translation unavailable
+### Ingredient
+```kotlin
+data class Ingredient(
+    val id: String, name: String, unit: String,
+    category: String?, subcategory: String?,
+    preferredDisplayUnit: String?,
+    createdInLanguage: String = "en",
+    createdAt: Long, updatedAt: Long,
+    allergens: List<Allergen> = emptyList(),
+    substitutes: List<IngredientSubstitute> = emptyList()
+)
+```
 
-### Allergen System
-- 7 common allergens tracked
-- Catalog ingredients have pre-defined allergens
-- Custom ingredients can have user-defined allergens
-- Allergen count displayed on recipe cards
-
-### Export Functionality
-- **Plain Text Export**: Beautiful, formatted grocery lists for sharing
-- **Fully Localized**: Exports in the user's selected language (English/Romanian/Russian)
-  - Ingredient names translated via TranslationSystem
-  - Category names translated via TranslationSystem
-  - Unit names from Android string resources
-  - App name from Android string resources
-  - Header text from Android string resources
-  - Servings text from Android string resources
-  - Footer text from Android string resources
-  - Date formatting respects device locale
-- **Custom Header Support**: Users can set a custom header (max 100 characters) in Settings
-  - Supports emojis, numbers, and text
-  - Falls back to default localized header if empty
-  - Stored in OnboardingPreferences
-- **Two formats available**:
-  - Full format: Organized by meals/categories with emojis and dates
-  - Compact format: Simple consolidated list
-- **Easy sharing**: Via WhatsApp, SMS, email, or any messaging app
-- **Smart formatting**: Removes checked items, groups by category
-- Tracks cooking time with countdown
-- Deducts ingredients from pantry on completion
-- Supports ingredient substitution
-- Can abort cooking (no deduction)
-
-### Meal Plan Status Flow
+### MealPlan Status Flow
 ```
 PLANNED → (Start Cooking) → COOKING → (Complete) → COMPLETED
                                     ↓ (Abort)
@@ -582,73 +156,301 @@ PLANNED → (Start Cooking) → COOKING → (Complete) → COMPLETED
 
 ---
 
-## Common Patterns
+## Theme
 
-### Navigation
+### File: `ui/theme/Theme.kt`
+
+### Color Schemes
+- Custom light/dark schemes (dynamic colors disabled)
+- **Light default**: Toasted Almond (#FFD68C45)
+- **Dark default**: Blue Bell (#FF5398be)
+- User-customizable accent colors stored in DataStore
+- Status bar color matches background
+
+### Font System
+6 font options via Google Fonts (Roboto + Rubik families):
+1. Roboto Light, Regular (default), Medium
+2. Rubik Light, Regular, Medium
+
+### Text Scale
+- User-adjustable, applies multiplier to ALL typography levels
+- Base sizes customized: titleSmall 16sp, bodySmall 14sp, labelLarge 16sp, labelSmall 12sp
+
+### Shapes (AppShapes)
+| Shape | Radius |
+|-------|--------|
+| extraSmall | 8.dp |
+| small | 12.dp |
+| medium | 16.dp |
+| large | 20.dp |
+| extraLarge | 28.dp |
+
+### Overscroll
+**CRITICAL**: Overscroll/bounce effects are disabled globally at the theme level:
 ```kotlin
-navController.navigate(NavDestination.Screen.createRoute(param))
-navController.popBackStack()
+CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
+    MaterialTheme(..., content = content)
+}
+```
+This is done in `Theme.kt:169` and applies to the entire app.
+
+---
+
+## UI Components & Patterns
+
+### BottomDrawer (`ui/util/BottomDrawer.kt`)
+- Reusable `ModalBottomSheet` wrapper used for ingredient addition, settings, etc.
+- Uses `skipPartiallyExpanded = true` (opens fully expanded)
+- **IMPORTANT QUIRK**: Must use `modifier.statusBarsPadding()` to prevent the drag handle from overlapping the status bar
+- Content receives `ColumnScope` for composable content
+
+### Delete Confirmation Dialog Pattern
+**Two styles used in the codebase:**
+
+#### 1. Pantry Item Delete (SwipeToDeleteContainer + Dialog in SwipeToDelete.kt)
+- `SwipeToDeleteContainer` wraps list items
+- Shows swipe action, triggers `Dialog` with `RoundedCornerShape(28.dp)` surface
+- Buttons stacked vertically: Delete (primary) + Cancel (secondaryContainer)
+- Title + message in centered Text
+
+#### 2. Custom Ingredient Delete (AlertDialog in AddIngredientDrawer.kt)
+**This is the pattern we use for custom ingredient deletion.** The `DrawerCustomIngredientItem` has a delete bin button directly visible (not swipe). Clicking it shows an `AlertDialog` with:
+- `containerColor = MaterialTheme.colorScheme.background`
+- `shape = RoundedCornerShape(20.dp)`
+- `tonalElevation = 6.dp`
+- Title: "Delete {Name}?" (uses `drawer_delete_custom_title` string resource with ingredient name as `%1$s`, title-cased)
+- Text: "This will permanently delete the ingredient from your database." (uses `drawer_delete_custom_message`)
+- Two buttons stacked vertically:
+  - Delete: `primary` color, full width, horizontal padding 16.dp, text from `pantry_delete_button`
+  - Cancel: `secondaryContainer` color, full width, horizontal padding 16.dp, text from `pantry_cancel_button`
+
+#### 3. EditPantryItemDialog delete (PantryScreen.kt, lines 659-725)
+- AlertDialog triggered from the edit dialog's delete icon button
+- Same style as #2 (background, shape 20dp, tonalElevation 6dp, same button layout)
+- Title: "Delete {Name}?" with ingredient name
+- Message: "This will remove the item from your pantry." (`pantry_delete_message`)
+
+### AddIngredientDrawer (`ui/screens/AddIngredientDrawer.kt`)
+- Large composable (~1260 lines) used from both GroceriesScreen and PantryScreen
+- Modes: search mode (`isSearchActive`) or category browse mode (`showCategories`)
+- Custom ingredients have a delete bin button (trash icon) directly visible on each item (not swipe-to-delete)
+- Deleting a custom ingredient shows confirmation dialog (see pattern #2 above)
+- After deletion: `refreshTrigger` increments → `LaunchedEffect` reloads all custom ingredients
+- `onDeleteCustomIngredient` calls `ingredientRepository.deleteIngredient(ingredient)` directly
+- Selection flows: if `onEditExistingIngredient` is provided → navigates to edit screen, else → shows in-drawer quantity dialog
+
+### SwipeToDeleteContainer (`ui/util/SwipeToDelete.kt`)
+- Used for the pantry edit dialog (trash icon button, not swipe)
+- And for meal/recipe lists
+- Shows a delete icon with scaling animation (0.8f → 1.2f) with spring physics
+- Confirmation dialog uses `Dialog` composable (not AlertDialog) with `RoundedCornerShape(28.dp)`
+
+---
+
+## String Resources
+
+### Naming Conventions
+- `screen_*` - Screen titles
+- `nav_*` - Navigation labels
+- `pantry_*` - Pantry screen
+- `groceries_*` - Groceries screen
+- `recipe_*` - Recipe related
+- `meal_plan_*` - Meal plan related
+- `add_ingredient_*` - Ingredient addition drawer
+- `drawer_*` - Drawer-specific strings
+- `button_*` - Common button labels
+
+### Languages
+- English: `res/values/strings.xml` (798 lines)
+- Romanian: `res/values-ro/strings.xml`
+- Russian: `res/values-ru/strings.xml`
+- ALL user-facing strings MUST be added in all 3 languages
+
+---
+
+## Dependency Injection (Hilt)
+
+### 5 Modules (all `SingletonComponent`)
+| Module | Provides |
+|--------|----------|
+| `AppModule` | Coroutine dispatchers, PermissionChecker, VoiceRecognitionManager |
+| `DatabaseModule` | AppDatabase, all 9 DAOs |
+| `RepositoryModule` | `@Binds` all 6 repository interfaces → implementations |
+| `NetworkModule` | Ktor HttpClient, Json serializer |
+| `ImageModule` | Coil ImageLoader |
+
+### Hilt Annotations
+- `@HiltAndroidApp` - Application (`MealPlannerApp`)
+- `@AndroidEntryPoint` - MainActivity
+- `@HiltViewModel` - All ViewModels
+- `@Inject constructor` - Constructor injection
+
+---
+
+## Key Screens & ViewModels
+
+| Screen | ViewModel | Description |
+|--------|-----------|-------------|
+| PlanScreen | PlanViewModel | Weekly meal plan calendar, grouped by date/meal type |
+| MealsScreen | MealsViewModel | Cuisine browsing + user recipes |
+| GroceriesScreen | GroceriesViewModel | Shopping list with check-off, export |
+| PantryScreen | PantryViewModel | Hierarchical pantry (category → subcategory), edit dialog |
+| SuggestionScreen | SuggestionViewModel | Ingredient-based + vibe-based meal suggestions |
+| ScrapeRecipeScreen | ScrapeRecipeViewModel | OpenAI URL recipe scraping |
+| ManualRecipeScreen | ManualRecipeViewModel | Manual recipe creation with ingredient matching |
+| SettingsScreen | SettingsViewModel | Language, API key, accent color, font, text scale |
+| MealPlanDetailScreen | MealPlanDetailViewModel | Cooking mode with step-by-step, substitutions |
+| CuisineMealsScreen | CuisineMealsViewModel | Bundled recipe list per cuisine |
+| BundledRecipeDetailScreen | BundledRecipeDetailViewModel | Bundled recipe details |
+| RecipeDetailScreen | MealDetailViewModel | User recipe details |
+
+### Pantry Screen Specifics
+- AddIngredientDrawer is opened via `showAddIngredientDrawer` state
+- Edit/delete via EditPantryItemDialog (trash icon in title bar → confirmation dialog → adjust inventory to 0)
+- Swipe-to-delete is NOT used in pantry screen (despite SwipeToDeleteContainer existing)
+
+### Groceries Screen Specifics
+- SwipeToDeleteGroceryItem: swipe left reveals delete bin (confirms via AlertDialog), swipe right checks item
+- Delete confirmation dialog: primary/cancel buttons, colored background, specific shape
+- AddIngredientDrawer opens for adding custom items
+
+---
+
+## Ingredient Catalog
+
+- `IngredientCatalog` (domain/model/IngredientCatalog.kt) contains 500+ common ingredients
+- Organized into 15 categories with 60+ subcategories
+- Each catalog ingredient has: nameKey, category, subcategory, unit, allergens
+- Custom ingredients created by user are stored in Room (IngredientEntity)
+- AddIngredientDrawer combines catalog + custom ingredients
+
+### Category Structure
+- 15 categories: Meat & Poultry, Seafood, Dairy & Eggs, Vegetables, Fruits, Grains & Bread, Legumes & Beans, Nuts & Seeds, Oils & Fats, Spices & Herbs, Condiments & Sauces, Sweeteners & Baking, Canned & Preserved, Beverages, Snacks & Misc
+
+---
+
+## Translation System (`data/local/TranslationSystem.kt`)
+- Supports 3 languages: English (en), Russian (ru), Romanian (ro)
+- Dynamic translation via JSON-based translation maps
+- Ingredients tagged with `createdInLanguage`
+- Falls back to original name if translation unavailable
+
+---
+
+## Utility Components
+
+### HapticFeedbackHelper (`ui/util/HapticFeedback.kt`)
+```kotlin
+fun performSuccess()     // CONFIRM
+fun performDestructive() // LONG_PRESS
+fun performError()       // REJECT
+fun performLight()       // CLOCK_TICK
 ```
 
-### Data Passing Between Screens
-```kotlin
-// Via SavedStateHandle
-backStackEntry.savedStateHandle.set("key", value)
-backStackEntry.savedStateHandle.get<Type>("key")
-```
+### GroceriesTextExport (`ui/export/`)
+- Two formats: full (organized by meals/categories with emojis) and compact (simple list)
+- Fully localized in all 3 languages
+- Custom header support (max 100 chars, stored in OnboardingPreferences)
 
-### Localization
-```kotlin
-stringResource(R.string.key)
-context.getString(R.string.key)
-mealType.getLocalizedName(context)
-```
+---
 
-### Image Loading
+## Onboarding Flow
+Screens (in order): Welcome → Language Selection → Serving Size → (accent color theme applied)
+- Entry points: `MealsScreen` if first launch after onboarding, else `PlanScreen`
+- State tracked via `OnboardingPreferences` (DataStore)
+
+---
+
+## Meal Suggestions System
+Three-tier ingredient matching:
+1. Perfect Matches: 100% ingredients available
+2. Good Matches: 80-99% available
+3. Partial Matches: 50-79% available
+
+Chef's Pick (vibe-based, independent of pantry):
+- Mood: Quick, Comfort, Healthy, Fancy
+- Effort: Easy, Moderate, Challenging
+- Serving Size: Solo, Couple, Family, Party
+
+---
+
+## Asset Packs (DLC)
+- `:2fast_2hungry` - Quick meals pack
+- `:eastern_traditional_pack` - Eastern European cuisine
+- `:exotic_tropics_pack` - Tropical flavors
+- Uses Play Asset Delivery + Google Play Billing
+
+---
+
+## Important Implementation Details & Quirks
+
+### ModalBottomSheet (BottomDrawer)
+- CRITICAL: Always use `Modifier.statusBarsPadding()` on the `ModalBottomSheet`'s `modifier` parameter to prevent the drag handle from going behind the status bar.
+- Uses `skipPartiallyExpanded = true` for full-screen appearance.
+- The `title` parameter in `BottomDrawer` is unused (legacy).
+
+### Custom Ingredient Delete Flow
+- Delete button is directly visible (not swipe-to-delete): a circular red Surface with delete icon
+- Shows confirmation AlertDialog (see pattern #2 above)
+- After deletion: `refreshTrigger` is incremented, which triggers `LaunchedEffect(visible, refreshTrigger)` to reload ingredients
+
+### Confirmation Dialog Style Reference
+Always use this style for delete confirmations:
 ```kotlin
-RecipeImage(
-    imagePath = meal.imagePath,
-    contentDescription = meal.name,
-    modifier = Modifier.size(100.dp)
+AlertDialog(
+    onDismissRequest = { /* dismiss */ },
+    containerColor = MaterialTheme.colorScheme.background,
+    shape = RoundedCornerShape(20.dp),
+    tonalElevation = 6.dp,
+    title = { /* centered title */ },
+    text = { /* centered message */ },
+    confirmButton = {
+        Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
+            Button(/* primary color, full width, hPadding 16 */)
+            Button(/* secondaryContainer color, full width, hPadding 16 */)
+        }
+    }
 )
 ```
+
+### Overscroll
+- Disabled globally in `Theme.kt:169` via `CompositionLocalProvider(LocalOverscrollConfiguration provides null)`
+- Do NOT add additional overscroll disabling at the screen level
+
+### LazyColumn / LazyVerticalGrid
+- Used throughout for lists (recipes, ingredients, meal plans)
+- `contentPadding` with `bottom = 76.dp` to account for nav bar
+- Overscroll is already disabled globally, no need for extra modifiers
+
+### Navigation Arguments
+- Arguments passed via route strings, not NavArguments objects
+- Use `backStackEntry.arguments?.getString("key")` or SavedStateHandle
+
+### Allergen Colors
+- 9 allergens with specific display colors (imported as vector icons)
+
+### Unit Conversion (`domain/model/UnitConversion.kt`)
+- Weight: g ↔ kg ↔ oz ↔ lb
+- Volume: ml ↔ L ↔ cup ↔ tbsp ↔ tsp
+- Piece: pcs (no conversion)
+- Non-deductible ingredients: water, salt, pepper, oil, spices, etc.
+
+### NonDeductibleIngredients
+Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc.). Located in `domain/model/NonDeductibleIngredients.kt`.
 
 ---
 
 ## Development Guidelines
 
 1. **Always use Hilt for DI** - No manual instantiation
-2. **Follow Clean Architecture** - Respect layer boundaries
-3. **Use StateFlow for UI state** - Reactive UI updates
-4. **Localize all strings** - Support 3 languages
-5. **Handle loading/error states** - User feedback
-6. **Use coroutines properly** - viewModelScope, lifecycleScope
-7. **Optimize images** - Use Coil with proper sizing
-8. **Test use cases** - Business logic coverage
-9. **Follow Material 3 guidelines** - Consistent UI
-10. **Document complex logic** - KDoc comments
+2. **Respect layer boundaries** - UI doesn't import data layer directly (except ViewModels)
+3. **Use StateFlow for UI state** - MutableStateFlow → asStateFlow → collect
+4. **Localize all strings** - Must add in English, Romanian, AND Russian
+5. **Handle loading/error states** - Every screen should handle Loading/Success/Error
+6. **Use coroutines properly** - viewModelScope for ViewModels, lifecycleScope for composables
+7. **Follow Material 3** - Use MaterialTheme colors, shapes, typography
+8. **String resources naming**: `screen_*`, `nav_*`, `pantry_*`, `groceries_*`, `recipe_*`, `drawer_*`
+9. **Delete confirmation dialogs** always follow the same style: AlertDialog with background color, 20dp shape, 6dp elevation, stacked buttons
+10. **Ingredient names** in delete dialogs should be title-cased via `.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }`
 
----
-
-## Quick Reference
-
-### Main Entry Points
-- **Application**: `MealPlannerApp.kt`
-- **MainActivity**: `MainActivity.kt`
-- **Navigation**: `AppNavHost.kt`
-- **Database**: `AppDatabase.kt`
-- **DI Modules**: `di/` folder
-
-### Key Files to Check
-- Recipe loading: `BundledRecipeLoader.kt`
-- Translation: `TranslationSystem.kt`
-- Ingredient matching: `IngredientMatcher.kt`
-- Voice input: `VoiceInputParser.kt`, `VoiceRecognitionManager.kt`
-- Unit conversion: `UnitConversion.kt`
-- Allergen logic: `PreloadCuisineAllergensUseCase.kt`
-
----
-
-**Last Updated**: Initial creation
-**Version**: 1.0
-**Maintainer**: Development Team
+**Last Updated**: May 2026

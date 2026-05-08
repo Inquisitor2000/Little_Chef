@@ -3,7 +3,7 @@ plugins {
 }
 
 assetPack {
-    packName = "italian_premium_pack"
+    packName = "2fast_2hungry"
     dynamicDelivery {
         deliveryType = "on-demand"  // Download only after user purchases
     }

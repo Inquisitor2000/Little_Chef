@@ -314,7 +314,7 @@
     <string name="cuisine_vegetarian_vegan">Вегетарианские и веганские</string>
     <string name="cuisine_meat_dishes">Мясные блюда</string>
     <string name="cuisine_desserts_sweets">Десерты и сладости</string>
-    <string name="cuisine_italian_premium">Аутентично Итальянское</string>
+    <string name="cuisine_italian_premium">2 Fast 2 Hungry</string>
     <string name="cuisine_eastern_traditional">Восточная Традиционная</string>
     <string name="cuisine_exotic_tropics">Экзотические Тропики</string>
     <string name="cuisine_italian_desc">Паста, пицца, ризотто и другое</string>
@@ -329,7 +329,7 @@
     <string name="cuisine_vegetarian_vegan_desc">Блюда на растительной основе</string>
     <string name="cuisine_meat_dishes_desc">Говядина, свинина, баранина и другое</string>
     <string name="cuisine_desserts_sweets_desc">Торты, печенье и сладкие угощения</string>
-    <string name="cuisine_italian_premium_desc">Аутентичные итальянские блюда</string>
+    <string name="cuisine_italian_premium_desc">Быстрые блюда когда вы торопитесь</string>
     <string name="cuisine_eastern_traditional_desc">Традиционные восточноевропейские блюда</string>
     <string name="cuisine_exotic_tropics_desc">Яркие тропические вкусы</string>
     <string name="cuisine_other_desc">Разные рецепты</string>
@@ -380,6 +380,8 @@
     <string name="pantry_delete_message">Это удалит элемент из вашей кладовой.</string>
     <string name="pantry_delete_button">Удалить</string>
     <string name="pantry_cancel_button">Отмена</string>
+    <string name="drawer_delete_custom_title">Удалить %1$s?</string>
+    <string name="drawer_delete_custom_message">Это навсегда удалит ингредиент из вашей базы данных.</string>
     <string name="voice_input">Голосовой ввод</string>
     <string name="voice_listening">Слушаю...</string>
     <string name="voice_start_speaking">Начните говорить...</string>
@@ -522,19 +524,19 @@
     <string name="onboarding_serving_size_helper">Это поможет нам предложить правильные размеры порций</string>
     <string name="onboarding_serving_size_me">Я</string>
 
-    <!-- Authentic Italiano Premium Recipe Names -->
-    <string name="premium_recipe_osso_buco">Оссобуко по-милански</string>
-    <string name="premium_recipe_risotto_porcini">Ризотто с белыми грибами</string>
-    <string name="premium_recipe_saltimbocca">Сальтимбокка по-римски</string>
-    <string name="premium_recipe_pappardelle">Паппарделле с кабанятиной</string>
-    <string name="premium_recipe_cacio_e_pepe">Качо э Пепе</string>
-    <string name="premium_recipe_vitello_tonnato">Вителло тоннато</string>
-    <string name="premium_recipe_arancini">Аранчини сицилианские</string>
-    <string name="premium_recipe_bistecca">Бистекка алла Фьорентина</string>
-    <string name="premium_recipe_carbonara">Карбонара по-римски</string>
-    <string name="premium_recipe_panna_cotta">Панна Котта</string>
-    <string name="premium_recipe_tiramisu">Тирамису классический</string>
-    <string name="premium_recipe_cannoli">Канноли сицилианские</string>
+    <!-- 2 Fast 2 Hungry Premium Recipe Names -->
+    <string name="premium_recipe_osso_buco">Омлет за 5 минут</string>
+    <string name="premium_recipe_risotto_porcini">Быстрая жарка</string>
+    <string name="premium_recipe_saltimbocca">Быстрая паста Алио и Олио</string>
+    <string name="premium_recipe_pappardelle">Тако за 10 минут</string>
+    <string name="premium_recipe_cacio_e_pepe">Быстрый жареный рис</string>
+    <string name="premium_recipe_vitello_tonnato">Кесадилья экспресс</string>
+    <string name="premium_recipe_arancini">Быстрый рамэн</string>
+    <string name="premium_recipe_bistecca">Быстрый гриль-сыр</string>
+    <string name="premium_recipe_carbonara">Быстрый куриный рулет</string>
+    <string name="premium_recipe_panna_cotta">Карри за 15 минут</string>
+    <string name="premium_recipe_tiramisu">Быстрая лапша</string>
+    <string name="premium_recipe_cannoli">Быстрая сковорода с тостами</string>
 
     <!-- Eastern Traditional Premium Recipe Names -->
     <string name="premium_recipe_borscht">Борщ</string>
