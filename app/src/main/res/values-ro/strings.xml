@@ -58,7 +58,7 @@
     <string name="suggestions_empty_title">Nicio masă disponibilă încă</string>
     <string name="suggestions_empty_subtitle">Umple cămara sau adaugă rețete pentru a primi sugestii personalizate de mese!</string>
     <string name="suggestions_empty_pantry_title">Încă nu există sugestii bazate pe cămară</string>
-    <string name="suggestions_empty_pantry_subtitle">Adaugă ingrediente în cămară pentru a vedea ce poți pregăti, sau folosește Alegerea Chefului de mai sus pentru inspirație!</string>
+    <string name="suggestions_empty_pantry_subtitle">Adaugă ingrediente în cămară pentru a vedea ce poți pregăti !</string>
     <string name="suggestions_filter_selection">Selecție filtre</string>
     <string name="suggestions_clear_filters">Șterge</string>
     <string name="suggestions_any_time">Orice moment</string>

@@ -87,7 +87,7 @@
     <string name="suggestions_empty_title">Блюда пока недоступны</string>
     <string name="suggestions_empty_subtitle">Пополните кладовую или добавьте рецепты, чтобы получить персонализированные предложения блюд!</string>
     <string name="suggestions_empty_pantry_title">Пока нет предложений на основе кладовой</string>
-    <string name="suggestions_empty_pantry_subtitle">Добавьте ингредиенты в кладовую, чтобы увидеть, что можно приготовить, или используйте Выбор шефа выше для вдохновения!</string>
+    <string name="suggestions_empty_pantry_subtitle">Добавьте ингредиенты в кладовую, чтобы увидеть, что можно приготовить !</string>
     <string name="suggestions_filter_selection">Выбор фильтра</string>
     <string name="suggestions_clear_filters">Очистить</string>
     <string name="suggestions_any_time">Любое время</string>

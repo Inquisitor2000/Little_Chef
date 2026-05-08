@@ -60,7 +60,7 @@
     <string name="suggestions_empty_title">No meals available yet</string>
     <string name="suggestions_empty_subtitle">Stock up your pantry or add some recipes to get personalized meal suggestions!</string>
     <string name="suggestions_empty_pantry_title">No pantry-based suggestions yet</string>
-    <string name="suggestions_empty_pantry_subtitle">Add ingredients to your pantry to see what you can make, or use Chef\'s Pick above for inspiration!</string>
+    <string name="suggestions_empty_pantry_subtitle">Add ingredients to your pantry to see what you can make !</string>
     <string name="suggestions_filter_selection">Filter selection</string>
     <string name="suggestions_clear_filters">Clear</string>
     <string name="suggestions_any_time">Any Time</string>
