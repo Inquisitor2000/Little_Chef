@@ -446,7 +446,7 @@
     <string name="cuisine_vegetarian_vegan">Vegetarian &amp; Vegan</string>
     <string name="cuisine_meat_dishes">Meat Dishes</string>
     <string name="cuisine_desserts_sweets">Desserts &amp; Sweets</string>
-    <string name="cuisine_italian_premium">2 Fast 2 Hungry</string>
+    <string name="cuisine_2fast_2hungry">2 Fast 2 Hungry</string>
     <string name="cuisine_italian_desc">Pasta, pizza, risotto &amp; more</string>
     <string name="cuisine_mexican_desc">Tacos, burritos, enchiladas</string>
     <string name="cuisine_asian_desc">Chinese, Japanese, Thai &amp; more</string>
@@ -459,7 +459,7 @@
     <string name="cuisine_vegetarian_vegan_desc">Plant-based dishes</string>
     <string name="cuisine_meat_dishes_desc">Beef, pork, lamb &amp; more</string>
     <string name="cuisine_desserts_sweets_desc">Cakes, cookies &amp; sweet treats</string>
-    <string name="cuisine_italian_premium_desc">Quick meals when you are in a rush</string>
+    <string name="cuisine_2fast_2hungry_desc">Quick meals when you are in a rush</string>
     <string name="cuisine_eastern_traditional">Eastern Traditional</string>
     <string name="cuisine_eastern_traditional_desc">Traditional Eastern European dishes</string>
     <string name="cuisine_exotic_tropics">Exotic Tropics</string>

@@ -279,7 +279,7 @@
     <string name="cuisine_vegetarian_vegan">Vegetarian și vegan</string>
     <string name="cuisine_meat_dishes">Preparate din carne</string>
     <string name="cuisine_desserts_sweets">Deserturi și dulciuri</string>
-    <string name="cuisine_italian_premium">2 Fast 2 Hungry</string>
+    <string name="cuisine_2fast_2hungry">2 Fast 2 Hungry</string>
     <string name="cuisine_eastern_traditional">Traditional Estic</string>
     <string name="cuisine_exotic_tropics">Tropice Exotice</string>
     <string name="cuisine_italian_desc">Paste, pizza, risotto &amp; altele</string>
@@ -294,7 +294,7 @@
     <string name="cuisine_vegetarian_vegan_desc">Preparate pe bază de plante</string>
     <string name="cuisine_meat_dishes_desc">Vită, porc, miel &amp; altele</string>
     <string name="cuisine_desserts_sweets_desc">Prăjituri, biscuiți și dulciuri</string>
-    <string name="cuisine_italian_premium_desc">Mese rapide când ești grăbit</string>
+    <string name="cuisine_2fast_2hungry_desc">Mese rapide când ești grăbit</string>
     <string name="cuisine_eastern_traditional_desc">Preparate tradiționale est-europene</string>
     <string name="cuisine_exotic_tropics_desc">Arome tropicale vibrante</string>
     <string name="cuisine_other_desc">Rețete diverse</string>

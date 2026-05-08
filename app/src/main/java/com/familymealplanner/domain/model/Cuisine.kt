@@ -105,7 +105,7 @@ enum class Cuisine(
             VEGETARIAN_VEGAN -> context.getString(com.familymealplanner.R.string.cuisine_vegetarian_vegan)
             MEAT_DISHES -> context.getString(com.familymealplanner.R.string.cuisine_meat_dishes)
             DESSERTS_SWEETS -> context.getString(com.familymealplanner.R.string.cuisine_desserts_sweets)
-            ITALIAN_PREMIUM -> context.getString(com.familymealplanner.R.string.cuisine_italian_premium)
+            ITALIAN_PREMIUM -> context.getString(com.familymealplanner.R.string.cuisine_2fast_2hungry)
             EASTERN_TRADITIONAL -> context.getString(com.familymealplanner.R.string.cuisine_eastern_traditional)
             EXOTIC_TROPICS -> context.getString(com.familymealplanner.R.string.cuisine_exotic_tropics)
         }
@@ -123,7 +123,7 @@ enum class Cuisine(
             VEGETARIAN_VEGAN -> context.getString(com.familymealplanner.R.string.cuisine_vegetarian_vegan_desc)
             MEAT_DISHES -> context.getString(com.familymealplanner.R.string.cuisine_meat_dishes_desc)
             DESSERTS_SWEETS -> context.getString(com.familymealplanner.R.string.cuisine_desserts_sweets_desc)
-            ITALIAN_PREMIUM -> context.getString(com.familymealplanner.R.string.cuisine_italian_premium_desc)
+            ITALIAN_PREMIUM -> context.getString(com.familymealplanner.R.string.cuisine_2fast_2hungry_desc)
             EASTERN_TRADITIONAL -> context.getString(com.familymealplanner.R.string.cuisine_eastern_traditional_desc)
             EXOTIC_TROPICS -> context.getString(com.familymealplanner.R.string.cuisine_exotic_tropics_desc)
         }
