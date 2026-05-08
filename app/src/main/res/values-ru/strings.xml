@@ -68,8 +68,8 @@
     <string name="groceries_export_task_from">Задание от Маленького Шефа</string>
     
     <!-- Plan Screen -->
-    <string name="plan_title">План питания</string>
-    <string name="plan_suggest_button">Предложить</string>
+    <string name="plan_title">План готовки</string>
+    <string name="plan_suggest_button">Рекомендации</string>
     <string name="plan_clear_completed">Очистить завершённые</string>
     <string name="plan_clear_completed_title">Очистить завершённые блюда?</string>
     <string name="plan_clear_completed_message">Это удалит все завершённые и отменённые блюда из плана.</string>
@@ -82,7 +82,7 @@
     <string name="plan_time_remaining">Осталось времени</string>
     
     <!-- Suggestion Screen -->
-    <string name="suggestions_title">Предложения</string>
+    <string name="suggestions_title">На выбор</string>
     <string name="suggestions_loading">Ищем блюда, которые вы можете приготовить…</string>
     <string name="suggestions_empty_title">Блюда пока недоступны</string>
     <string name="suggestions_empty_subtitle">Пополните кладовую или добавьте рецепты, чтобы получить персонализированные предложения блюд!</string>

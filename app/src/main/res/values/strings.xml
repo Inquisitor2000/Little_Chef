@@ -42,7 +42,7 @@
     
     <!-- Plan Screen -->
     <string name="plan_title">Meal Plan</string>
-    <string name="plan_suggest_button">Suggest</string>
+    <string name="plan_suggest_button">Suggestion</string>
     <string name="plan_clear_completed">Clear Completed</string>
     <string name="plan_clear_completed_title">Clear Completed Meals?</string>
     <string name="plan_clear_completed_message">This will remove all completed and canceled meals from your plan.</string>

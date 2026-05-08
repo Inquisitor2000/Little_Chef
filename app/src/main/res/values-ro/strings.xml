@@ -39,7 +39,7 @@
     <string name="groceries_export_task_from">Sarcină de la Micul Bucătar</string>
     
     <!-- Plan Screen -->
-    <string name="plan_title">Plan de mese</string>
+    <string name="plan_title">Plan de acțiune</string>
     <string name="plan_suggest_button">Sugerează</string>
     <string name="plan_clear_completed">Șterge finalizate</string>
     <string name="plan_clear_completed_title">Șterge mesele finalizate?</string>
