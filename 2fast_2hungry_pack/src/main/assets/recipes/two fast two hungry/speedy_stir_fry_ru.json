@@ -1,0 +1,75 @@
+{
+  "id": "speedy_stir_fry",
+  "name": "Курица с овощами",
+  "instructions": "1. Нарежьте куриную грудку тонкими полосками. Нарежьте болгарский перец и морковь соломкой. Тонко нашинкуйте капусту. Измельчите чеснок и натрите имбирь.\n\n2. Разогрейте растительное масло в воке или большой сковороде на сильном огне.\n\n3. Добавьте чеснок и имбирь, обжаривайте 30 секунд до аромата.\n\n4. Добавьте полоски курицы и готовьте 3-4 минуты до золотистого цвета.\n\n5. Добавьте болгарский перец, морковь и капусту. Обжаривайте 2-3 минуты до мягкости.\n\n6. Влейте соевый соус и посолите. Перемешайте и готовьте еще 1 минуту.\n\n7. Украсьте зеленым луком. Сразу подавайте горячими.",
+  "simpleInstructions": "1. Нарежьте курицу и подготовьте овощи: перец, морковь, капуста, чеснок, имбирь.\n\n2. Разогрейте масло. Добавьте чеснок и имбирь, готовьте 30 секунд.\n\n3. Добавьте курицу, готовьте 3-4 минуты. Добавьте овощи, готовьте 2-3 минуты.\n\n4. Приправьте соевым соусом и солью. Украсьте луком. Подавайте.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 8,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "CHICKEN",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/speedy_stir_fry.jpg",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Carrot",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cabbage",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

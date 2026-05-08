@@ -375,10 +375,67 @@ Chef's Pick (vibe-based, independent of pantry):
 ---
 
 ## Asset Packs (DLC)
-- `:2fast_2hungry` - Quick meals pack
-- `:eastern_traditional_pack` - Eastern European cuisine
-- `:exotic_tropics_pack` - Tropical flavors
+
+### Cuisine Enum (`domain/model/Cuisine.kt`)
+```kotlin
+enum class Cuisine(
+    val displayName: String,
+    val isDLC: Boolean = false,
+    val assetPackName: String? = null
+) {
+    // ... built-in cuisines ...
+    TWO_FAST_TWO_HUNGRY(
+        displayName = "Two Fast Two Hungry",
+        isDLC = true,
+        assetPackName = "2fast_2hungry_pack"
+    ),
+    EASTERN_TRADITIONAL(
+        displayName = "Eastern Traditional",
+        isDLC = true,
+        assetPackName = "eastern_traditional_pack"
+    ),
+    EXOTIC_TROPICS(
+        displayName = "Exotic Tropics",
+        isDLC = true,
+        assetPackName = "exotic_tropics_pack"
+    )
+}
+```
+
+**Important:** Recipe folder name = `cuisine.displayName.lowercase()` (see `BundledRecipeLoader.kt:43`)
+
+### Two Fast Two Hungry Pack (`:2fast_2hungry_pack`)
+- **Asset Pack Name**: `2fast_2hungry_pack`
+- **Folder**: `two fast two hungry/` (lowercase of displayName)
+- **Price**: $1.99
+- **12 Recipes** (each in EN/RO/RU):
+  1. Cheese Omelette (`5_minute_omelette.json`)
+  2. Chicken Stir Fry (`speedy_stir_fry.json`)
+  3. Pasta Aglio e Olio (`quick_pasta_aglio_e_olio.json`)
+  4. Beef Tacos (`10_minute_tacos.json`)
+  5. Egg Fried Rice (`fast_fried_rice.json`)
+  6. Cheese Quesadilla (`express_quesadilla.json`)
+  7. Egg Ramen (`rapid_ramen_bowl.json`)
+  8. Grilled Cheese (`quick_grilled_cheese.json`)
+  9. Chicken Wrap (`speedy_chicken_wrap.json`)
+  10. Coconut Chicken Curry (`15_minute_curry.json`)
+  11. Shrimp Noodles (`fast_noodle_bowl.json`)
+  12. Toast and Egg Scramble (`quick_toast_skillet.json`)
+
+**String IDs** (EN/RO/RU strings.xml): `premium_2fast_cheese_omelette`, `premium_2fast_chicken_stir_fry`, etc.
+**Preview Images**: `app/src/main/assets/recipes/images/2fast2hungry/` (main assets, accessible before purchase)
+
+### Eastern Traditional Pack (`:eastern_traditional_pack`)
+- 12 recipes: Borscht, Pierogi, Golubtsy/Sarmale, Beef Stroganoff, Pelmeni, Kasha/Crișă, Shchi, Kotleti/Parjoale, Vareniki, Olivier Salad, Blini/Clătite, Solyanka/Soleanca
+
+### Exotic Tropics Pack (`:exotic_tropics_pack`)
+- 12 recipes: Coconut Curry, Mango Sticky Rice, Pineapple Fried Rice, Grilled Plantains, Papaya Salad, Coconut Rice, Tuna Poke Bowl, Mango Lassi, Tropical Fruit Salad, Coconut Shrimp, Pineapple Salsa, Banana Fritters
+
+### Technical
 - Uses Play Asset Delivery + Google Play Billing
+- JSON schema: `BundledRecipe` + `BundledIngredient` in `BundledRecipeLoader.kt`
+- Valid `mealType`: BREAKFAST, LUNCH, DINNER, SNACK, DESSERT
+- Valid `dishCategory`: PASTA, SALAD, SOUP, MAIN_COURSE, APPETIZER, SIDE_DISH, BREAD, SEAFOOD, CHICKEN, BEEF, PORK, VEGETARIAN, RICE_BOWL, SANDWICH, PIZZA, DESSERT, BEVERAGE, BAKED_DISH
 
 ---
 

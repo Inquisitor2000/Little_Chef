@@ -71,12 +71,12 @@ enum class Cuisine(
     ),
     
     // DLC Cuisines
-    ITALIAN_PREMIUM(
-        displayName = "2 Fast 2 Hungry",
+    TWO_FAST_TWO_HUNGRY(
+        displayName = "Two Fast Two Hungry",
         iconRes = R.drawable.ic_sub_cereals,
         description = "Quick meals when you are in a rush",
         isDLC = true,
-        assetPackName = "2fast_2hungry"
+        assetPackName = "2fast_2hungry_pack"
     ),
     EASTERN_TRADITIONAL(
         displayName = "Eastern Traditional",
@@ -105,7 +105,7 @@ enum class Cuisine(
             VEGETARIAN_VEGAN -> context.getString(com.familymealplanner.R.string.cuisine_vegetarian_vegan)
             MEAT_DISHES -> context.getString(com.familymealplanner.R.string.cuisine_meat_dishes)
             DESSERTS_SWEETS -> context.getString(com.familymealplanner.R.string.cuisine_desserts_sweets)
-            ITALIAN_PREMIUM -> context.getString(com.familymealplanner.R.string.cuisine_2fast_2hungry)
+            TWO_FAST_TWO_HUNGRY -> context.getString(com.familymealplanner.R.string.cuisine_2fast_2hungry)
             EASTERN_TRADITIONAL -> context.getString(com.familymealplanner.R.string.cuisine_eastern_traditional)
             EXOTIC_TROPICS -> context.getString(com.familymealplanner.R.string.cuisine_exotic_tropics)
         }
@@ -123,7 +123,7 @@ enum class Cuisine(
             VEGETARIAN_VEGAN -> context.getString(com.familymealplanner.R.string.cuisine_vegetarian_vegan_desc)
             MEAT_DISHES -> context.getString(com.familymealplanner.R.string.cuisine_meat_dishes_desc)
             DESSERTS_SWEETS -> context.getString(com.familymealplanner.R.string.cuisine_desserts_sweets_desc)
-            ITALIAN_PREMIUM -> context.getString(com.familymealplanner.R.string.cuisine_2fast_2hungry_desc)
+            TWO_FAST_TWO_HUNGRY -> context.getString(com.familymealplanner.R.string.cuisine_2fast_2hungry_desc)
             EASTERN_TRADITIONAL -> context.getString(com.familymealplanner.R.string.cuisine_eastern_traditional_desc)
             EXOTIC_TROPICS -> context.getString(com.familymealplanner.R.string.cuisine_exotic_tropics_desc)
         }

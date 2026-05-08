@@ -1,0 +1,63 @@
+{
+  "id": "rapid_ramen_bowl",
+  "name": "Ramen cu Ouă",
+  "instructions": "1. Aduceți 400ml apă la fierbere într-un vas mic. Adăugați tăițeii cu ou și gătiți 3-4 minute până devin moi.\n\n2. În timp ce tăiței se gătesc, încălziți uleiul de susan într-o tigaie mică pe foc mediu. Adăugați usturoiul tocat și ghimbirul răsuci, gătiți 30 secunde până devin aromat.\n\n3. Într-un bol, bateți ouăle cu un vârf de sare. Împingeți tăiții gătit pe o parte a vasului. Turnați ouăle bătute în apă și amestecați ușor pentru a crea fire de ou.\n\n4. Adăugați sosul de soia în vas, amestecați pentru a combina.\n\n5. Adăugați amestecul de usturoi și ghimbir. Amestecați bine.\n\n6. Împărțiți tăiții și bulionul între 2 boluri. Garnisiți cu ceapă verde tăiată.\n\n7. Serviți imediat în timp ce sunt fierbinți.",
+  "simpleInstructions": "1. Fierbeți apa, gătiți tăițeii 3-4 minute.\n\n2. Între timp, prăjiți usturoiul și ghimbirul în ulei de susan.\n\n3. Împingeți tăiții deoparte, turnați ouăle în apă pentru a crea fire.\n\n4. Adăugați sos de soia, usturoi și ghimbir.\n\n5. Împărțiți în 2 boluri, garnisiți cu ceapă verde.\n\n6. Serviți fierbinți.",
+  "prepTimeMinutes": 3,
+  "cookTimeMinutes": 5,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/rapid_ramen_bowl.jpg",
+  "ingredients": [
+    {
+      "name": "Egg Noodles",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

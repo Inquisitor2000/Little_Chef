@@ -1,0 +1,51 @@
+{
+  "id": "quick_toast_skillet",
+  "name": "Тосты на сковороде",
+  "instructions": "1. Нарежьте белый хлеб кубиками по 2,5 см. Нарежьте помидоры мелкими кубиками. Натрите сыр чеддер.\n\n2. Разогрейте сливочное масло в большой сковороде на среднем огне до растопления.\n\n3. Добавьте кубики хлеба в сковороду. Обжаривайте 3-4 минуты, периодически помешивая, до золотистого цвета.\n\n4. Отодвиньте подсушенный хлеб на край сковороды. Разбейте яйца в освободившуюся часть.\n\n5. Посолите яйца. Аккуратно перемешайте яйца 2-3 минуты до мягкой готовности.\n\n6. Добавьте нарезанные помидоры в сковороду. Перемешайте всё вместе - хлеб, яйца и помидоры.\n\n7. Посыпьте тертым сыром чеддер сверху. Подержите 30 секунд пока сыр начнет плавиться.\n\n8. Сразу подавайте прямо из сковороды.",
+  "simpleInstructions": "1. Нарежьте хлеб кубиками, помидоры, натрите сыр.\n\n2. Растопите масло в сковороде. Добавьте хлеб и подсушите 3-4 минуты.\n\n3. Отодвиньте хлеб, разбейте яйца. Посолите и перемешайте 2-3 минуты.\n\n4. Добавьте помидоры, перемешайте всё. Посыпьте сыром, подержите 30 секунд.\n\n5. Сразу подавайте.",
+  "prepTimeMinutes": 4,
+  "cookTimeMinutes": 6,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/quick_toast_skillet.jpg",
+  "ingredients": [
+    {
+      "name": "White Bread",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

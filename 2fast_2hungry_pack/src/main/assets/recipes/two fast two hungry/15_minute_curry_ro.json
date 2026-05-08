@@ -1,0 +1,63 @@
+{
+  "id": "15_minute_curry",
+  "name": "Curry de Pui cu Lapte de Coco",
+  "instructions": "1. Tăiați pieptul de pui în bucăți mici.\n\n2. Încălziți uleiul vegetal într-o tigaie pe foc mediu-mare. Adăugați ceapa tocată și gătiți 2 minute până se înmoaie.\n\n3. Adăugați usturoiul tocat și ghimbirul răsuci, gătiți 30 secunde până devin aromat.\n\n4. Adăugați pudra de curry, amestecați pentru a acoperi ceapa și gătiți 15 secunde.\n\n5. Adăugați bucățile de pui în tigaie. Prăjiți amestecând 3-4 minute până când puiul nu mai este roz în exterior.\n\n6. Turnați laptele de cocos, amestecați bine. Aduceți la o fierbere ușoară.\n\n7. Reduceți focul la mediu-scăzut, condimentați cu sare. Gătiți 4-5 minute până când puiul este complet gătit și sosul s-a îngroșat ușor.\n\n8. Serviți fierbinte peste orez sau cu pâine.",
+  "simpleInstructions": "1. Tăiați puiul în bucăți mici.\n\n2. Prăjiți ceapa în ulei până se înmoaie, 2 minute.\n\n3. Adăugați usturoi și ghimbir, gătiți 30 secunde.\n\n4. Adăugați pudra de curry, amestecați, gătiți 15 secunde.\n\n5. Adăugați puiul, prăjiți 3-4 minute.\n\n6. Turnați laptele de cocos, aduceți la fierbere.\n\n7. Condimentați cu sare, gătiți încă 4-5 minute.\n\n8. Serviți peste orez sau cu pâine.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 10,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "CHICKEN",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/15_minute_curry.jpg",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Curry Powder",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Coconut Milk",
+      "quantity": 200,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Garlic",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 20,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

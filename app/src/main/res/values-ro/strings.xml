@@ -494,19 +494,19 @@
     <string name="my_recipes">Rețetele mele</string>
     <string name="recipes_count">%1$d rețete</string>
 
-    <!-- 2 Fast 2 Hungry Premium Recipe Names -->
-    <string name="premium_recipe_osso_buco">Omletă în 5 Minute</string>
-    <string name="premium_recipe_risotto_porcini">Stir Fry Rapid</string>
-    <string name="premium_recipe_saltimbocca">Paste Rapide Aglio e Olio</string>
-    <string name="premium_recipe_pappardelle">Tacos în 10 Minute</string>
-    <string name="premium_recipe_cacio_e_pepe">Orez Prăjit Rapid</string>
-    <string name="premium_recipe_vitello_tonnato">Quesadilla Express</string>
-    <string name="premium_recipe_arancini">Bol de Ramen Rapid</string>
-    <string name="premium_recipe_bistecca">Grilled Cheese Rapid</string>
-    <string name="premium_recipe_carbonara">Wrap Rapid cu Pui</string>
-    <string name="premium_recipe_panna_cotta">Curry în 15 Minute</string>
-    <string name="premium_recipe_tiramisu">Bol Rapid cu Tăiței</string>
-    <string name="premium_recipe_cannoli">Tigaie Rapidă cu Pâine</string>
+    <!-- Two Fast Two Hungry Premium Recipe Names -->
+    <string name="premium_2fast_cheese_omelette">Omletă cu Brânză</string>
+    <string name="premium_2fast_chicken_stir_fry">Stir Fry cu Pui</string>
+    <string name="premium_2fast_pasta_aglio_e_olio">Paste Aglio e Olio</string>
+    <string name="premium_2fast_beef_tacos">Tacos cu Vită</string>
+    <string name="premium_2fast_egg_fried_rice">Orez Prăjit cu Ouă</string>
+    <string name="premium_2fast_cheese_quesadilla">Quesadilla cu Brânză</string>
+    <string name="premium_2fast_egg_ramen">Ramen cu Ouă</string>
+    <string name="premium_2fast_grilled_cheese">Grilled Cheese</string>
+    <string name="premium_2fast_chicken_wrap">Wrap cu Pui</string>
+    <string name="premium_2fast_coconut_chicken_curry">Curry de Pui cu Lapte de Coco</string>
+    <string name="premium_2fast_shrimp_noodles">Tăiței cu Creveți</string>
+    <string name="premium_2fast_toast_egg_scramble">Scramble cu Pâine</string>
 
     <!-- Eastern Traditional Premium Recipe Names -->
     <string name="premium_recipe_borscht">Borș</string>

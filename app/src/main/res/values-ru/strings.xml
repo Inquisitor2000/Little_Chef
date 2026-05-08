@@ -524,19 +524,19 @@
     <string name="onboarding_serving_size_helper">Это поможет нам предложить правильные размеры порций</string>
     <string name="onboarding_serving_size_me">Я</string>
 
-    <!-- 2 Fast 2 Hungry Premium Recipe Names -->
-    <string name="premium_recipe_osso_buco">Омлет за 5 минут</string>
-    <string name="premium_recipe_risotto_porcini">Быстрая жарка</string>
-    <string name="premium_recipe_saltimbocca">Быстрая паста Алио и Олио</string>
-    <string name="premium_recipe_pappardelle">Тако за 10 минут</string>
-    <string name="premium_recipe_cacio_e_pepe">Быстрый жареный рис</string>
-    <string name="premium_recipe_vitello_tonnato">Кесадилья экспресс</string>
-    <string name="premium_recipe_arancini">Быстрый рамэн</string>
-    <string name="premium_recipe_bistecca">Быстрый гриль-сыр</string>
-    <string name="premium_recipe_carbonara">Быстрый куриный рулет</string>
-    <string name="premium_recipe_panna_cotta">Карри за 15 минут</string>
-    <string name="premium_recipe_tiramisu">Быстрая лапша</string>
-    <string name="premium_recipe_cannoli">Быстрая сковорода с тостами</string>
+    <!-- Two Fast Two Hungry Premium Recipe Names -->
+    <string name="premium_2fast_cheese_omelette">Омлет с сыром</string>
+    <string name="premium_2fast_chicken_stir_fry">Курица с овощами</string>
+    <string name="premium_2fast_pasta_aglio_e_olio">Паста Алио и Олио</string>
+    <string name="premium_2fast_beef_tacos">Говяжьи тако</string>
+    <string name="premium_2fast_egg_fried_rice">Яичный рис</string>
+    <string name="premium_2fast_cheese_quesadilla">Сырная кесадилья</string>
+    <string name="premium_2fast_egg_ramen">Яичный рамэн</string>
+    <string name="premium_2fast_grilled_cheese">Гренки с сыром</string>
+    <string name="premium_2fast_chicken_wrap">Куриный ролл</string>
+    <string name="premium_2fast_coconut_chicken_curry">Куриное карри с кокосом</string>
+    <string name="premium_2fast_shrimp_noodles">Лапша с креветками</string>
+    <string name="premium_2fast_toast_egg_scramble">Тосты на сковороде</string>
 
     <!-- Eastern Traditional Premium Recipe Names -->
     <string name="premium_recipe_borscht">Борщ</string>

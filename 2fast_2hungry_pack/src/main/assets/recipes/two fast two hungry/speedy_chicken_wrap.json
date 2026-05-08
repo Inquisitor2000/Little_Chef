@@ -1,0 +1,51 @@
+{
+  "id": "speedy_chicken_wrap",
+  "name": "Chicken Wrap",
+  "instructions": "1. Slice the chicken breast into thin strips. Season with salt.\n\n2. Heat olive oil in a skillet over medium-high heat. Add the chicken strips and cook for 4-5 minutes until golden and cooked through.\n\n3. While the chicken cooks, grate the cheddar cheese.\n\n4. Warm the tortillas briefly on a dry skillet or in the microwave for 20 seconds to make them pliable.\n\n5. Spread a layer of mayonnaise on each tortilla. Add sliced chicken in the center.\n\n6. Top with grated cheddar cheese.\n\n7. Fold the sides of the tortilla over the filling, then roll from bottom to top to create a tight wrap. Slice in half diagonally and serve immediately.",
+  "simpleInstructions": "1. Slice chicken breast and season with salt.\n\n2. Cook chicken in a hot skillet with olive oil for 4-5 minutes.\n\n3. Grate cheddar cheese. Warm tortillas briefly.\n\n4. Spread mayo on tortilla, add chicken and cheese.\n\n5. Fold and roll into wraps. Slice and serve.",
+  "prepTimeMinutes": 3,
+  "cookTimeMinutes": 7,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "CHICKEN",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/speedy_chicken_wrap.jpg",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Tortillas",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

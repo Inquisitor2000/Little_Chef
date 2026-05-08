@@ -755,19 +755,19 @@
     <string name="premium_recipe_count_simple">%1$d recipes</string>
     <string name="close">Close</string>
 
-    <!-- 2 Fast 2 Hungry Premium Recipe Names -->
-    <string name="premium_recipe_osso_buco">5-Minute Omelette</string>
-    <string name="premium_recipe_risotto_porcini">Speedy Stir Fry</string>
-    <string name="premium_recipe_saltimbocca">Quick Pasta Aglio e Olio</string>
-    <string name="premium_recipe_pappardelle">10-Minute Tacos</string>
-    <string name="premium_recipe_cacio_e_pepe">Fast Fried Rice</string>
-    <string name="premium_recipe_vitello_tonnato">Express Quesadilla</string>
-    <string name="premium_recipe_arancini">Rapid Ramen Bowl</string>
-    <string name="premium_recipe_bistecca">Quick Grilled Cheese</string>
-    <string name="premium_recipe_carbonara">Speedy Chicken Wrap</string>
-    <string name="premium_recipe_panna_cotta">15-Minute Curry</string>
-    <string name="premium_recipe_tiramisu">Fast Noodle Bowl</string>
-    <string name="premium_recipe_cannoli">Quick Toast Skillet</string>
+    <!-- Two Fast Two Hungry Premium Recipe Names -->
+    <string name="premium_2fast_cheese_omelette">Cheese Omelette</string>
+    <string name="premium_2fast_chicken_stir_fry">Chicken Stir Fry</string>
+    <string name="premium_2fast_pasta_aglio_e_olio">Pasta Aglio e Olio</string>
+    <string name="premium_2fast_beef_tacos">Beef Tacos</string>
+    <string name="premium_2fast_egg_fried_rice">Egg Fried Rice</string>
+    <string name="premium_2fast_cheese_quesadilla">Cheese Quesadilla</string>
+    <string name="premium_2fast_egg_ramen">Egg Ramen</string>
+    <string name="premium_2fast_grilled_cheese">Grilled Cheese</string>
+    <string name="premium_2fast_chicken_wrap">Chicken Wrap</string>
+    <string name="premium_2fast_coconut_chicken_curry">Coconut Chicken Curry</string>
+    <string name="premium_2fast_shrimp_noodles">Shrimp Noodles</string>
+    <string name="premium_2fast_toast_egg_scramble">Toast and Egg Scramble</string>
 
     <!-- Eastern Traditional Premium Recipe Names -->
     <string name="premium_recipe_borscht">Borscht</string>

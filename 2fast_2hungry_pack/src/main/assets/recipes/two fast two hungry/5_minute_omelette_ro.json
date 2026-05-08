@@ -1,0 +1,45 @@
+{
+  "id": "5_minute_omelette",
+  "name": "Omletă cu Brânză",
+  "instructions": "1. Spargeți ouăle într-un bol mediu. Adăugați sare și piper negru. Amestecați energic 30 de secunde până devin galben pal și spumoase.\n\n2. Topiți untul într-o tigaie antiaderentă pe foc mediu. Înclinați tigaia pentru a acoperi fundul pe măsură ce untul se topește.\n\n3. Când untul este spumos, turnați ouăle bătute. Lăsați să se coaguleze 10 secunde, apoi împingeți ușor marginile gătite spre centru în timp ce înclinați tigaia.\n\n4. Când ouăle sunt majoritatea coagulate dar încă ușor lichide deasupra (aproximativ 2 minute), presărați brânza cheddar uniform.\n\n5. Pliați o jumătate de omletă peste brânză. Apăsați ușor.\n\n6. Gătiți încă 30 de secunde până când brânza se topește. Glisați pe farfurie și serviți imediat.",
+  "simpleInstructions": "1. Amestecați ouăle cu sare și piper.\n\n2. Topiți untul în tigaie pe foc mediu.\n\n3. Turnați ouăle, împingeți marginile spre centru.\n\n4. Când sunt gata majoritatea, presărați cu brânză.\n\n5. Pliați omleta, gătiți până când brânza se topește.\n\n6. Serviți imediat.",
+  "prepTimeMinutes": 2,
+  "cookTimeMinutes": 3,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/5_minute_omelette.jpg",
+  "ingredients": [
+    {
+      "name": "Eggs",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

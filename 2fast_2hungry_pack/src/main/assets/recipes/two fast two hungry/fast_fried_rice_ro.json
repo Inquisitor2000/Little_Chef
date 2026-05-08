@@ -1,0 +1,57 @@
+{
+  "id": "fast_fried_rice",
+  "name": "Orez Prăjit cu Ouă",
+  "instructions": "1. Încălziți uleiul vegetal într-o tigaie pe foc mediu-mare.\n\n2. Spargeți ouăle într-un bol mic, bateți ușor cu un vârf de sare. Turnați în tigaia fierbinte și amestecați 1-2 minute până sunt gata. Transferați pe o farfurie.\n\n3. în aceeași tigaie, adăugați mai mult ulei dacă este nevoie. Adăugați usturoiul tocat și gătiți 30 secunde până devine aromat.\n\n4. Adăugați orezul rece gătit în tigaie. Întrerupeți orice grumezi cu o lingură.\n\n5. Turnați sosul de soia uniform peste orez. Prăjiți amestecând 3-4 minute până când orezul este încălzit și începe să se crocanască ușor.\n\n6. Adăugați ceapa verde tăiată și ouăle amestecate înapoi în tigaie. Amestecați totul împreună.\n\n7. Gustați și adăugați mai mult sare dacă este nevoie. Serviți imediat.",
+  "simpleInstructions": "1. Încălziți uleiul în tigaie pe foc mediu-mare.\n\n2. Bateți ouăle cu sare, amestecați în tigaia fierbinte, lăsați deoparte.\n\n3. În aceeași tigaie, gătiți usturoiul 30 secunde.\n\n4. Adăugați orezul rece, întrerupeți grumezile.\n\n5. Turnați sosul de soia, prăjiți amestecând 3-4 minute.\n\n6. Adăugați ceapa verde și ouăle, amestecați.\n\n7. Condimentați și serviți imediat.",
+  "prepTimeMinutes": 3,
+  "cookTimeMinutes": 7,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "RICE_BOWL",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/fast_fried_rice.jpg",
+  "ingredients": [
+    {
+      "name": "White Rice",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

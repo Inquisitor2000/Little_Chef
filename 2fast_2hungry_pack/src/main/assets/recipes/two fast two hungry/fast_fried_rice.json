@@ -1,0 +1,57 @@
+{
+  "id": "fast_fried_rice",
+  "name": "Egg Fried Rice",
+  "instructions": "1. Heat vegetable oil in a skillet or wok over medium-high heat.\n\n2. Crack eggs into a small bowl, beat lightly with a pinch of salt. Pour into hot pan and scramble for 1-2 minutes until just cooked. Transfer to a plate.\n\n3. In the same pan, add more oil if needed. Add minced garlic and cook for 30 seconds until fragrant.\n\n4. Add cold cooked rice to the pan. Break up any clumps with a spoon.\n\n5. Drizzle soy sauce evenly over rice. Stir-fry for 3-4 minutes until rice is heated through and starting to crisp slightly.\n\n6. Add sliced green onions and scrambled eggs back to the pan. Toss everything together.\n\n7. Taste and add more salt if needed. Serve immediately.",
+  "simpleInstructions": "1. Heat oil in skillet over medium-high heat.\n\n2. Beat eggs with salt, scramble in hot pan, set aside.\n\n3. In same pan, cook garlic 30 seconds until fragrant.\n\n4. Add cold rice, break up clumps.\n\n5. Drizzle soy sauce, stir-fry 3-4 minutes.\n\n6. Add green onions and eggs back, toss together.\n\n7. Season and serve immediately.",
+  "prepTimeMinutes": 3,
+  "cookTimeMinutes": 7,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "RICE_BOWL",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/fast_fried_rice.jpg",
+  "ingredients": [
+    {
+      "name": "White Rice",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

@@ -3,9 +3,10 @@ package com.familymealplanner.ui.components
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyRow
-import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.LockOpen
@@ -13,7 +14,9 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
@@ -21,13 +24,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import coil.compose.AsyncImage
 import com.familymealplanner.R
 import com.familymealplanner.domain.model.Cuisine
 
 data class PremiumPackPreview(
     val cuisine: Cuisine,
     val recipeNames: List<String>,
-    val price: String = "$1.99"
+    val price: String = "$1.99",
+    val recipeImageUrls: List<String?> = emptyList()
 )
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -117,11 +122,15 @@ fun PremiumPreviewDrawer(
                 horizontalArrangement = Arrangement.spacedBy(12.dp),
                 contentPadding = PaddingValues(vertical = 8.dp)
             ) {
-                items(
+                itemsIndexed(
                     items = packPreview.recipeNames,
-                    key = { it } // Use recipe name as key for stability
-                ) { recipeName ->
-                    RecipePreviewCard(recipeName = recipeName)
+                    key = { index, _ -> index }
+                ) { index, recipeName ->
+                    val imageUrl = packPreview.recipeImageUrls.getOrNull(index)
+                    RecipePreviewCard(
+                        recipeName = recipeName,
+                        imageUrl = imageUrl
+                    )
                 }
             }
         }
@@ -131,37 +140,58 @@ fun PremiumPreviewDrawer(
 @Composable
 private fun RecipePreviewCard(
     recipeName: String,
+    imageUrl: String? = null,
     modifier: Modifier = Modifier
 ) {
     Card(
         modifier = modifier
             .width(140.dp)
-            .height(180.dp),
+            .height(180.dp)
+            .border(
+                width = 1.dp,
+                color = MaterialTheme.colorScheme.primary,
+                shape = RoundedCornerShape(12.dp)
+            ),
         shape = RoundedCornerShape(12.dp),
         elevation = CardDefaults.cardElevation(defaultElevation = 2.dp)
     ) {
         Column(
             modifier = Modifier.fillMaxSize()
         ) {
-            // Placeholder image with static gradient (no shimmer)
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(120.dp)
-                    .background(
-                        Brush.verticalGradient(
-                            colors = listOf(
-                                MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f),
-                                MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.5f)
-                            )
-                        )
-                    ),
-                contentAlignment = Alignment.Center
-            ) {
-                Text(
-                    text = "🍽️",
-                    fontSize = 40.sp
+            // Recipe image or placeholder
+            if (imageUrl != null) {
+                AsyncImage(
+                    model = "file:///android_asset/$imageUrl",
+                    contentDescription = recipeName,
+                    contentScale = ContentScale.Crop,
+                    placeholder = painterResource(R.drawable.ic_recipe_placeholder),
+                    error = painterResource(R.drawable.ic_recipe_placeholder),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(120.dp)
+                        .clip(RoundedCornerShape(topStart = 12.dp, topEnd = 12.dp))
                 )
+            } else {
+                // Placeholder image with static gradient
+                Box(
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(120.dp)
+                        .background(
+                            Brush.verticalGradient(
+                                colors = listOf(
+                                    MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.5f),
+                                    MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.5f)
+                                )
+                            )
+                        ),
+                    contentAlignment = Alignment.Center
+                ) {
+                    Text(
+                        text = "🍽️",
+                        fontSize = 40.sp
+                    )
+                }
             }
             
             // Recipe name

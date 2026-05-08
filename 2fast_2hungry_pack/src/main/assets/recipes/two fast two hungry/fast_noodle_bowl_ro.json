@@ -1,0 +1,69 @@
+{
+  "id": "fast_noodle_bowl",
+  "name": "Tăiței cu Creveți",
+  "instructions": "1. Înmuiați tăiței de orez în apă caldă 5 minute, apoi scurgeți-i.\n\n2. Încălziți ulei de susan și ulei vegetal într-o tigaie pe foc mediu-mare. Adăugați usturoi tocat și gătiți 30 de secunde până devine parfumat.\n\n3. Adăugați creveții și condimentați cu un strop de sare. Gătiți 2-3 minute până devin roz și opaci. Scoateți din tigaie și lăsați deoparte.\n\n4. În aceeași tigaie, adăugați ardeiul gras tăiat. Gătiți 1-2 minute până devine crocant.\n\n5. Adăugați tăițele de orez scurse și sosul de soia în tigaie. Amestecați totul 1-2 minute până tăițele sunt încălzite.\n\n6. Adăugați creveții gătiti înapoi în tigaie. Amestecați ușor pentru a combina.\n\n7. Transferați în boluri și decorați cu ceapă verde. Serviți imediat.",
+  "simpleInstructions": "1. Înmuiați tăiței de orez în apă caldă 5 minute, scurgeți.\n\n2. Încălziți ulei, gătiți usturoiul 30 secunde. Adăugați creveți, gătiți 2-3 minute. Lăsați deoparte.\n\n3. În aceeași tigaie, gătiți ardeiul 1-2 minute. Adăugați tăițele și sos de soia, amestecați 1-2 minute.\n\n4. Adăugați creveții înapoi. Decorați cu ceapă verde. Serviți.",
+  "prepTimeMinutes": 3,
+  "cookTimeMinutes": 7,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "SEAFOOD",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/fast_noodle_bowl.jpg",
+  "ingredients": [
+    {
+      "name": "Rice Noodles",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Shrimp",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 10,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

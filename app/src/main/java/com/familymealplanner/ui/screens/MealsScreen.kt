@@ -677,7 +677,7 @@ private fun getCuisineDescription(cuisine: Cuisine): String {
         Cuisine.VEGETARIAN_VEGAN -> stringResource(R.string.cuisine_vegetarian_vegan_desc)
         Cuisine.MEAT_DISHES -> stringResource(R.string.cuisine_meat_dishes_desc)
         Cuisine.DESSERTS_SWEETS -> stringResource(R.string.cuisine_desserts_sweets_desc)
-        Cuisine.ITALIAN_PREMIUM -> cuisine.description // DLC cuisines use their description
+        Cuisine.TWO_FAST_TWO_HUNGRY -> cuisine.description // DLC cuisines use their description
         else -> cuisine.description
     }
 }
@@ -688,23 +688,37 @@ private fun getCuisineDescription(cuisine: Cuisine): String {
 @Composable
 private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
     return when (cuisine) {
-        Cuisine.ITALIAN_PREMIUM -> PremiumPackPreview(
+        Cuisine.TWO_FAST_TWO_HUNGRY -> PremiumPackPreview(
             cuisine = cuisine,
             recipeNames = listOf(
-                stringResource(R.string.premium_recipe_osso_buco),
-                stringResource(R.string.premium_recipe_risotto_porcini),
-                stringResource(R.string.premium_recipe_saltimbocca),
-                stringResource(R.string.premium_recipe_pappardelle),
-                stringResource(R.string.premium_recipe_cacio_e_pepe),
-                stringResource(R.string.premium_recipe_vitello_tonnato),
-                stringResource(R.string.premium_recipe_arancini),
-                stringResource(R.string.premium_recipe_bistecca),
-                stringResource(R.string.premium_recipe_carbonara),
-                stringResource(R.string.premium_recipe_panna_cotta),
-                stringResource(R.string.premium_recipe_tiramisu),
-                stringResource(R.string.premium_recipe_cannoli)
+                stringResource(R.string.premium_2fast_cheese_omelette),
+                stringResource(R.string.premium_2fast_chicken_stir_fry),
+                stringResource(R.string.premium_2fast_pasta_aglio_e_olio),
+                stringResource(R.string.premium_2fast_beef_tacos),
+                stringResource(R.string.premium_2fast_egg_fried_rice),
+                stringResource(R.string.premium_2fast_cheese_quesadilla),
+                stringResource(R.string.premium_2fast_egg_ramen),
+                stringResource(R.string.premium_2fast_grilled_cheese),
+                stringResource(R.string.premium_2fast_chicken_wrap),
+                stringResource(R.string.premium_2fast_coconut_chicken_curry),
+                stringResource(R.string.premium_2fast_shrimp_noodles),
+                stringResource(R.string.premium_2fast_toast_egg_scramble)
             ),
-            price = "$1.99"
+            price = "$1.99",
+            recipeImageUrls = listOf(
+                "recipes/images/2fast2hungry/5_minute_omelette.jpg",
+                "recipes/images/2fast2hungry/speedy_stir_fry.jpg",
+                "recipes/images/2fast2hungry/quick_pasta_aglio_e_olio.jpg",
+                "recipes/images/2fast2hungry/10_minute_tacos.jpg",
+                "recipes/images/2fast2hungry/fast_fried_rice.jpg",
+                "recipes/images/2fast2hungry/express_quesadilla.webp",
+                "recipes/images/2fast2hungry/rapid_ramen_bowl.jpg",
+                "recipes/images/2fast2hungry/quick_grilled_cheese.jpg",
+                "recipes/images/2fast2hungry/speedy_chicken_wrap.jpg",
+                "recipes/images/2fast2hungry/15_minute_curry.jpg",
+                "recipes/images/2fast2hungry/fast_noodle_bowl.jpg",
+                "recipes/images/2fast2hungry/quick_toast_skillet.jpg"
+            )
         )
         Cuisine.EASTERN_TRADITIONAL -> PremiumPackPreview(
             cuisine = cuisine,

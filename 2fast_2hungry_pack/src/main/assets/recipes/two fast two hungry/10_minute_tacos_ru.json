@@ -1,0 +1,57 @@
+{
+  "id": "10_minute_tacos",
+  "name": "Говяжьи тако",
+  "instructions": "1. Разогрейте сковороду на средне-сильном огне. Добавьте фарш и готовьте 4-5 минут, разбивая ложкой до зарумянивания.\n\n2. Слейте лишний жир. Добавьте приправу для тако и 60мл воды. Перемешайте и готовьте 2-3 минуты, пока соус не загустеет.\n\n3. Пока фарш готовится, разогрейте тортильи на сухой сковороде или в микроволновке 20 секунд.\n\n4. Подготовьте начинку: нашинкуйте салат, нарежьте помидоры кубиками, натрите сыр.\n\n5. Соберите: Выложите приправленный фарш на каждую разогретую тортилью.\n\n6. Сверху положите сыр, салат и помидоры. Сразу подавайте.",
+  "simpleInstructions": "1. Готовьте фарш на сковороде до зарумянивания, 4-5 минут.\n\n2. Слейте жир, добавьте приправу и воду, готовьте 2-3 минуты.\n\n3. Разогрейте тортильи.\n\n4. Подготовьте начинку: салат, помидоры, сыр.\n\n5. Выложите фарш на тортильи, добавьте сыр, салат, помидоры.\n\n6. Сразу подавайте.",
+  "prepTimeMinutes": 4,
+  "cookTimeMinutes": 6,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "BEEF",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/10_minute_tacos.jpg",
+  "ingredients": [
+    {
+      "name": "Ground Beef",
+      "quantity": 250,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Tortillas",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Taco Seasoning",
+      "quantity": 8,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lettuce",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}
