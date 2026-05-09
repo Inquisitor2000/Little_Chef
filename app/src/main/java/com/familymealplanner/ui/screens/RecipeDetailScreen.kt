@@ -38,10 +38,14 @@ import com.familymealplanner.R
 import com.familymealplanner.data.local.ImageStorage
 import com.familymealplanner.domain.model.Meal
 import com.familymealplanner.domain.model.UnitConversion
+import com.familymealplanner.domain.model.roundEggQuantity
 import com.familymealplanner.domain.repository.MealRepository
 import com.familymealplanner.domain.usecase.CheckRecipeIngredientsUseCase
 import com.familymealplanner.domain.usecase.CreateMealPlanUseCase
 import com.familymealplanner.domain.usecase.DeleteMealUseCase
+import com.familymealplanner.ui.components.formatNutritionValue
+import com.familymealplanner.domain.model.NutritionInfo
+import com.familymealplanner.ui.util.NutritionCalculator
 import com.familymealplanner.ui.util.RecipeImage
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
@@ -66,8 +70,15 @@ class RecipeDetailViewModel @Inject constructor(
     private val preferences: com.familymealplanner.data.preferences.OnboardingPreferences,
     private val mealPlanRepository: com.familymealplanner.domain.repository.MealPlanRepository,
     private val inventoryRepository: com.familymealplanner.domain.repository.InventoryRepository,
-    private val translationSystem: com.familymealplanner.data.local.TranslationSystem
+    private val translationSystem: com.familymealplanner.data.local.TranslationSystem,
+    val nutritionLoader: com.familymealplanner.data.local.NutritionLoader
 ) : ViewModel() {
+
+    init {
+        viewModelScope.launch {
+            nutritionLoader.load()
+        }
+    }
 
     private val localeContext: Context by lazy {
         localeManager.applyLocale(context)
@@ -137,8 +148,10 @@ class RecipeDetailViewModel @Inject constructor(
         
         _selectedServings.value = when (_selectedServings.value) {
             1 -> 2
-            2 -> 4
-            4 -> 6
+            2 -> 3
+            3 -> 4
+            4 -> 5
+            5 -> 6
             else -> 1
         }
         // Recheck ingredients when servings change
@@ -178,7 +191,7 @@ class RecipeDetailViewModel @Inject constructor(
                 val recipeIngredients = meal.ingredients.map { mealIngredient ->
                     CheckRecipeIngredientsUseCase.RecipeIngredient(
                         name = mealIngredient.ingredient.name,
-                        quantity = mealIngredient.quantity * multiplier,
+                        quantity = roundEggQuantity(mealIngredient.quantity * multiplier, mealIngredient.ingredient.name),
                         unit = mealIngredient.ingredient.unit
                     )
                 }
@@ -223,7 +236,7 @@ class RecipeDetailViewModel @Inject constructor(
                 val recipeIngredients = meal.ingredients.map { mealIngredient ->
                     CheckRecipeIngredientsUseCase.RecipeIngredient(
                         name = mealIngredient.ingredient.name,
-                        quantity = mealIngredient.quantity * multiplier,
+                        quantity = roundEggQuantity(mealIngredient.quantity * multiplier, mealIngredient.ingredient.name),
                         unit = mealIngredient.ingredient.unit
                     )
                 }
@@ -353,7 +366,7 @@ class RecipeDetailViewModel @Inject constructor(
                 val recipeIngredients = meal.ingredients.map { mealIngredient ->
                     CheckRecipeIngredientsUseCase.RecipeIngredient(
                         name = mealIngredient.ingredient.name,
-                        quantity = mealIngredient.quantity * multiplier,
+                        quantity = roundEggQuantity(mealIngredient.quantity * multiplier, mealIngredient.ingredient.name),
                         unit = mealIngredient.ingredient.unit
                     )
                 }
@@ -775,6 +788,9 @@ fun RecipeDetailScreen(
                     Card(
                         modifier = Modifier.fillMaxWidth()
                     ) {
+                        Column {
+                        val selectedServings by viewModel.selectedServings.collectAsState()
+
                         Row(
                             modifier = Modifier
                                 .fillMaxWidth()
@@ -783,25 +799,23 @@ fun RecipeDetailScreen(
                             verticalAlignment = Alignment.CenterVertically
                         ) {
                             val items = mutableListOf<@Composable () -> Unit>()
+
+                            // Calculate time adjustments based on servings multiplier
+                            // Prep scales ~35% per doubling; cook scales ~5% (method-dependent)
+
+                            val basePrepTime = recipe.prepTimeMinutes ?: 0
+                            val baseCookTime = recipe.cookTimeMinutes ?: 0
+                            val baseRecipeServings = recipe.servings ?: 2
                             
-                            // Calculate time adjustments based on servings and ingredient count
-                            val selectedServings by viewModel.selectedServings.collectAsState()
+                            val prepTimeAdjustment = if (basePrepTime > 0 && baseRecipeServings > 0) {
+                                val ratio = selectedServings.toDouble() / baseRecipeServings.toDouble()
+                                (basePrepTime * (ratio - 1.0) * 0.35).toInt().coerceAtLeast(0)
+                            } else 0
                             
-                            val prepTimeAdjustment = when (selectedServings) {
-                                4 -> if (recipe.ingredients.size < 10) 5 else 10
-                                6 -> if (recipe.ingredients.size < 10) 15 else 20
-                                else -> 0
-                            }
-                            
-                            val cookTimeAdjustment = if ((recipe.cookTimeMinutes ?: 0) > 0) {
-                                when (selectedServings) {
-                                    4 -> if (recipe.ingredients.size < 8) 5 else 10
-                                    6 -> if (recipe.ingredients.size < 8) 10 else 15
-                                    else -> 0
-                                }
-                            } else {
-                                0
-                            }
+                            val cookTimeAdjustment = if (baseCookTime > 0 && baseRecipeServings > 0) {
+                                val ratio = selectedServings.toDouble() / baseRecipeServings.toDouble()
+                                (baseCookTime * (ratio - 1.0) * 0.05).toInt().coerceAtLeast(0)
+                            } else 0
                             
                             recipe.prepTimeMinutes?.let { basePrepTime ->
                                 val adjustedPrepTime = basePrepTime + prepTimeAdjustment
@@ -838,10 +852,75 @@ fun RecipeDetailScreen(
                                         modifier = Modifier
                                             .width(1.dp)
                                             .height(40.dp)
-                                            .background(MaterialTheme.colorScheme.outlineVariant)
+                                            .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
                                     )
                                 }
                             }
+                        }
+
+                    // Nutrition info per serving
+                    val originalServings = recipe.servings ?: 2
+                    val nutritionInfo = remember(recipe.ingredients, selectedServings, originalServings) {
+                        val portions = recipe.ingredients.map { ingredient ->
+                            NutritionCalculator.IngredientPortion(
+                                name = ingredient.ingredient.name,
+                                quantity = ingredient.quantity,
+                                unit = ingredient.unit ?: "g"
+                            )
+                        }
+                        NutritionCalculator.calculate(portions, originalServings, viewModel.nutritionLoader)
+                    }
+                    if (nutritionInfo != NutritionInfo.EMPTY) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(1.dp)
+                                .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
+                        )
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 8.dp),
+                            horizontalArrangement = Arrangement.SpaceEvenly,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            InfoColumn(
+                                value = formatNutritionValue(nutritionInfo.calories),
+                                label = stringResource(R.string.nutrition_calories_short)
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .width(1.dp)
+                                    .height(28.dp)
+                                    .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
+                            )
+                            InfoColumn(
+                                value = formatNutritionValue(nutritionInfo.fatsG),
+                                label = stringResource(R.string.nutrition_fats_short)
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .width(1.dp)
+                                    .height(28.dp)
+                                    .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
+                            )
+                            InfoColumn(
+                                value = formatNutritionValue(nutritionInfo.carbsG),
+                                label = stringResource(R.string.nutrition_carbs_short)
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .width(1.dp)
+                                    .height(28.dp)
+                                    .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
+                            )
+                            InfoColumn(
+                                value = formatNutritionValue(nutritionInfo.proteinG),
+                                label = stringResource(R.string.nutrition_protein_short)
+                            )
+                        }
+                    }
+
                         }
                     }
 
@@ -960,6 +1039,7 @@ fun RecipeDetailScreen(
                         }
                     }
 
+
                     // Ingredients section with allergens
                     val allergens = remember(recipe.ingredients) {
                         recipe.ingredients
@@ -1004,9 +1084,7 @@ fun RecipeDetailScreen(
                         }
                     }
 
-                    // Observe selectedServings outside the Card to ensure recomposition
-                    val currentSelectedServings by viewModel.selectedServings.collectAsState()
-                    
+
                     Card(
                         modifier = Modifier.fillMaxWidth()
                     ) {
@@ -1021,11 +1099,12 @@ fun RecipeDetailScreen(
                                 )
                             } else {
                                 // Calculate multiplier based on current servings
+                                val currentSelectedServings by viewModel.selectedServings.collectAsState()
                                 val originalServings = recipe.servings ?: 2
                                 val servingsMultiplier = currentSelectedServings.toDouble() / originalServings.toDouble()
                                 
                                 recipe.ingredients.sortedByDescending { it.isStarIngredient }.forEach { ingredient ->
-                                    val adjustedQuantity = ingredient.quantity * servingsMultiplier
+                                    val adjustedQuantity = roundEggQuantity(ingredient.quantity * servingsMultiplier, ingredient.ingredient.name)
                                     Surface(
                                         modifier = Modifier
                                             .fillMaxWidth()

@@ -88,6 +88,7 @@ fun PantryScreen(
     var showAddIngredientDrawer by remember { mutableStateOf(false) }
     var expandedCategory by remember { mutableStateOf<String?>(null) }
     var expandedSubcategory by remember { mutableStateOf<String?>(null) }
+    val haptic = rememberHapticFeedback()
 
     // Reset dialog state when screen is recomposed (e.g., after navigation)
     DisposableEffect(Unit) {
@@ -116,7 +117,10 @@ fun PantryScreen(
                     ),
                     actions = {
                         Button(
-                            onClick = { showAddIngredientDrawer = true },
+                            onClick = {
+                                haptic.performLight()
+                                showAddIngredientDrawer = true
+                            },
                             shape = RoundedCornerShape(50),
                             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                             modifier = Modifier.padding(end = 8.dp)
@@ -130,7 +134,10 @@ fun PantryScreen(
                             Text(stringResource(R.string.pantry_add_ingredient_button))
                         }
                         Button(
-                            onClick = { onNavigateToSettings?.invoke() },
+                            onClick = {
+                                haptic.performLight()
+                                onNavigateToSettings?.invoke()
+                            },
                             shape = RoundedCornerShape(50),
                             contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                             modifier = Modifier.padding(end = 8.dp)

@@ -7,6 +7,7 @@ import com.familymealplanner.R
 import com.familymealplanner.data.local.BundledRecipe
 import com.familymealplanner.data.local.BundledRecipeLoader
 import com.familymealplanner.domain.model.Cuisine
+import com.familymealplanner.domain.model.roundEggQuantity
 import com.familymealplanner.domain.usecase.CheckRecipeIngredientsUseCase
 import com.familymealplanner.domain.usecase.CreateMealPlanUseCase
 import com.familymealplanner.domain.usecase.CreateMealUseCase
@@ -37,9 +38,16 @@ class BundledRecipeDetailViewModel @Inject constructor(
     private val mealPlanRepository: com.familymealplanner.domain.repository.MealPlanRepository,
     private val inventoryRepository: com.familymealplanner.domain.repository.InventoryRepository,
     private val ingredientRepository: com.familymealplanner.domain.repository.IngredientRepository,
-    private val ingredientMatcher: IngredientMatcher
+    private val ingredientMatcher: IngredientMatcher,
+    val nutritionLoader: com.familymealplanner.data.local.NutritionLoader
 ) : ViewModel() {
-    
+
+    init {
+        viewModelScope.launch {
+            nutritionLoader.load()
+        }
+    }
+
     private val localeContext: Context by lazy {
         localeManager.applyLocale(context)
     }
@@ -189,8 +197,10 @@ class BundledRecipeDetailViewModel @Inject constructor(
     fun cycleServings() {
         _selectedServings.value = when (_selectedServings.value) {
             1 -> 2
-            2 -> 4
-            4 -> 6
+            2 -> 3
+            3 -> 4
+            4 -> 5
+            5 -> 6
             else -> 1
         }
         // Recheck ingredients when servings change
@@ -258,7 +268,7 @@ class BundledRecipeDetailViewModel @Inject constructor(
                 val recipeIngredients = recipe.ingredients.map { bundledIngredient ->
                     CheckRecipeIngredientsUseCase.RecipeIngredient(
                         name = bundledIngredient.name,
-                        quantity = bundledIngredient.quantity * multiplier,
+                        quantity = roundEggQuantity(bundledIngredient.quantity * multiplier, bundledIngredient.name),
                         unit = bundledIngredient.unit
                     )
                 }
@@ -373,7 +383,7 @@ class BundledRecipeDetailViewModel @Inject constructor(
                 val recipeIngredients = recipe.ingredients.map { bundledIngredient ->
                     CheckRecipeIngredientsUseCase.RecipeIngredient(
                         name = bundledIngredient.name,
-                        quantity = bundledIngredient.quantity * multiplier,
+                        quantity = roundEggQuantity(bundledIngredient.quantity * multiplier, bundledIngredient.name),
                         unit = bundledIngredient.unit
                     )
                 }
@@ -412,7 +422,7 @@ class BundledRecipeDetailViewModel @Inject constructor(
                     ingredients = recipe.ingredients.map { 
                         com.familymealplanner.data.remote.ScrapedIngredient(
                             name = it.name,
-                            quantity = it.quantity * multiplier,
+                            quantity = roundEggQuantity(it.quantity * multiplier, it.name),
                             unit = it.unit,
                             isStarIngredient = it.isStarIngredient
                         )
@@ -506,7 +516,7 @@ class BundledRecipeDetailViewModel @Inject constructor(
                         ingredients = recipe.ingredients.map { ingredient ->
                             com.familymealplanner.data.remote.ScrapedIngredient(
                                 name = ingredient.name,
-                                quantity = ingredient.quantity * multiplier,
+                                quantity = roundEggQuantity(ingredient.quantity * multiplier, ingredient.name),
                                 unit = ingredient.unit,
                                 isStarIngredient = ingredient.isStarIngredient
                             )
@@ -649,7 +659,7 @@ class BundledRecipeDetailViewModel @Inject constructor(
 
                     for (ingredient in deductibleIngredients) {
                         // Apply servings multiplier to quantity
-                        val adjustedQuantity = ingredient.quantity * multiplier
+                        val adjustedQuantity = roundEggQuantity(ingredient.quantity * multiplier, ingredient.name)
                         
                         // Find the ingredient in the database by name
                         val ingredientEntity = findIngredientByName(ingredient.name)

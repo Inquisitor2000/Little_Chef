@@ -4,6 +4,7 @@ import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -31,7 +32,11 @@ import com.familymealplanner.R
 import com.familymealplanner.domain.model.MealPlan
 import com.familymealplanner.domain.model.MealPlanStatus
 import com.familymealplanner.domain.model.UnitConversion
+import com.familymealplanner.domain.model.roundEggQuantity
 import com.familymealplanner.domain.usecase.StartCookingUseCase
+import com.familymealplanner.ui.components.formatNutritionValue
+import com.familymealplanner.domain.model.NutritionInfo
+import com.familymealplanner.ui.util.NutritionCalculator
 import com.familymealplanner.ui.util.RecipeImage
 import com.familymealplanner.ui.util.rememberHapticFeedback
 import java.time.Instant
@@ -218,24 +223,21 @@ fun MealPlanDetailScreen(
                             ) {
                                 val items = mutableListOf<@Composable () -> Unit>()
                                 
-                                // Calculate time adjustments based on servings and ingredient count
-                                val prepTimeAdjustment = when (selectedServings) {
-                                    4 -> if (mealPlan.meal.ingredients.size < 10) 5 else 10
-                                    6 -> if (mealPlan.meal.ingredients.size < 10) 15 else 20
-                                    else -> 0
-                                }
+                                // Calculate time adjustments based on servings multiplier
+                                // Prep scales ~35% per doubling; cook scales ~5% (method-dependent)
+                                val basePrepTime = mealPlan.meal.prepTimeMinutes ?: 0
+                                val baseCookTime = mealPlan.meal.cookTimeMinutes ?: 0
+                                val baseRecipeServings = mealPlan.meal.servings ?: 2
                                 
-                                // Only add cook time adjustment if the recipe has cook time > 0
-                                val recipeCookTime = mealPlan.meal.cookTimeMinutes ?: 0
-                                val cookTimeAdjustment = if (recipeCookTime > 0) {
-                                    when (selectedServings) {
-                                        4 -> if (mealPlan.meal.ingredients.size < 8) 5 else 10
-                                        6 -> if (mealPlan.meal.ingredients.size < 8) 10 else 15
-                                        else -> 0
-                                    }
-                                } else {
-                                    0
-                                }
+                                val prepTimeAdjustment = if (basePrepTime > 0 && baseRecipeServings > 0) {
+                                    val ratio = selectedServings.toDouble() / baseRecipeServings.toDouble()
+                                    (basePrepTime * (ratio - 1.0) * 0.35).toInt().coerceAtLeast(0)
+                                } else 0
+                                
+                                val cookTimeAdjustment = if (baseCookTime > 0 && baseRecipeServings > 0) {
+                                    val ratio = selectedServings.toDouble() / baseRecipeServings.toDouble()
+                                    (baseCookTime * (ratio - 1.0) * 0.05).toInt().coerceAtLeast(0)
+                                } else 0
                                 
                                 // Prep time
                                 mealPlan.meal.prepTimeMinutes?.let { prepTime ->
@@ -270,8 +272,10 @@ fun MealPlanDetailScreen(
                                             modifier = Modifier.clickable(enabled = canChangeServings) {
                                                 val newServings = when (selectedServings) {
                                                     1 -> 2
-                                                    2 -> 4
-                                                    4 -> 6
+                                                    2 -> 3
+                                                    3 -> 4
+                                                    4 -> 5
+                                                    5 -> 6
                                                     else -> 1
                                                 }
                                                 selectedServings = newServings
@@ -330,18 +334,80 @@ fun MealPlanDetailScreen(
                                         ) {
                                             Divider(
                                                 modifier = Modifier.fillMaxHeight(),
-                                                color = MaterialTheme.colorScheme.outlineVariant
+                                                color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f)
                                             )
                                         }
                                     }
                                 }
                             }
-                            
+
+                    // Nutrition info per serving
+                    val originalServings = mealPlan.meal.servings ?: 2
+                    val nutritionInfo = remember(mealPlan.meal.ingredients, selectedServings, originalServings) {
+                        val portions = mealPlan.meal.ingredients.map { mealIngredient ->
+                            NutritionCalculator.IngredientPortion(
+                                name = mealIngredient.ingredient.name,
+                                quantity = mealIngredient.quantity,
+                                unit = mealIngredient.unit ?: "g"
+                            )
+                        }
+                        NutritionCalculator.calculate(portions, originalServings, viewModel.nutritionLoader)
+                    }
+                    if (nutritionInfo != NutritionInfo.EMPTY) {
+                        Box(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .height(1.dp)
+                                .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
+                        )
+                        Row(
+                            modifier = Modifier
+                                .fillMaxWidth()
+                                .padding(start = 0.dp, end = 0.dp, top = 12.dp, bottom = 8.dp),
+                            horizontalArrangement = Arrangement.SpaceEvenly,
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            InfoColumn(
+                                value = formatNutritionValue(nutritionInfo.calories),
+                                label = stringResource(R.string.nutrition_calories_short)
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .width(1.dp)
+                                    .height(28.dp)
+                                    .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
+                            )
+                            InfoColumn(
+                                value = formatNutritionValue(nutritionInfo.fatsG),
+                                label = stringResource(R.string.nutrition_fats_short)
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .width(1.dp)
+                                    .height(28.dp)
+                                    .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
+                            )
+                            InfoColumn(
+                                value = formatNutritionValue(nutritionInfo.carbsG),
+                                label = stringResource(R.string.nutrition_carbs_short)
+                            )
+                            Box(
+                                modifier = Modifier
+                                    .width(1.dp)
+                                    .height(28.dp)
+                                    .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
+                            )
+                            InfoColumn(
+                                value = formatNutritionValue(nutritionInfo.proteinG),
+                                label = stringResource(R.string.nutrition_protein_short)
+                            )
+                        }
+                    }
+
                             Spacer(modifier = Modifier.height(12.dp))
                             Divider()
                             Spacer(modifier = Modifier.height(12.dp))
-                            
-                            // Status and Meal Type
+
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
                                 horizontalArrangement = Arrangement.SpaceBetween
@@ -542,8 +608,9 @@ fun MealPlanDetailScreen(
                                             
                                             Text(
                                                 text = run {
+                                                    val adjustedQty = roundEggQuantity(mealIngredient.quantity * servingsMultiplier, displayIngredient.name)
                                                     val formatted = UnitConversion.formatForDisplay(
-                                                        mealIngredient.quantity * servingsMultiplier,
+                                                        adjustedQty,
                                                         displayIngredient.unit
                                                     )
                                                     // Extract quantity and unit, then translate unit

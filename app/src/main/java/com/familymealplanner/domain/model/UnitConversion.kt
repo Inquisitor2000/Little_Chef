@@ -437,3 +437,28 @@ object UnitConversion {
      */
     fun getAllUnits(): List<String> = getWeightUnits() + getVolumeUnits() + listOf("pcs")
 }
+
+/**
+ * Rounds a quantity to the nearest 0.5 if the ingredient name matches
+ * egg-related ingredients (eggs, egg yolks, egg whites) in English, Russian, or Romanian.
+ * 
+ * Eggs are sold as whole pieces, so fractional quantities should be at minimum
+ * half increments when scaling recipes for different serving sizes.
+ */
+fun roundEggQuantity(quantity: Double, ingredientName: String): Double {
+    val lower = ingredientName.lowercase().trim()
+    val isEggIngredient = lower == "egg" ||
+            lower == "eggs" ||
+            lower.contains("egg yolk") ||
+            lower.contains("egg white") ||
+            lower.contains("яйц") || // Russian: яйцо, яйца, яичный
+            lower == "ou" || // Romanian: egg
+            lower == "ouă" || // Romanian: eggs
+            lower.contains("gălbenuș") || // Romanian: yolk
+            lower.contains("albuș")   // Romanian: white
+    return if (isEggIngredient) {
+        kotlin.math.round(quantity * 2) / 2.0
+    } else {
+        quantity
+    }
+}

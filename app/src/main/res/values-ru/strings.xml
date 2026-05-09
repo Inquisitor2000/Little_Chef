@@ -245,6 +245,7 @@
     <string name="recipe_cook">Приготовление</string>
     <string name="recipe_total">Всего</string>
     <string name="recipe_servings">Порции</string>
+    <string name="recipe_servings_one">Порция</string>
     <string name="recipe_min">мин</string>
     <string name="recipe_plan_it">Запланировать</string>
     <string name="recipe_buy_ingredients">Купить ингр.</string>
@@ -522,7 +523,7 @@
     <string name="onboarding_welcome_subtitle">Планируйте блюда, управляйте кладовой\nи создавайте списки покупок с легкостью</string>
     <string name="onboarding_serving_size_question">На сколько человек вы обычно готовите?</string>
     <string name="onboarding_serving_size_helper">Это поможет нам предложить правильные размеры порций</string>
-    <string name="onboarding_serving_size_me">Я</string>
+
 
     <!-- Two Fast Two Hungry Premium Recipe Names -->
     <string name="premium_2fast_cheese_omelette">Омлет с сыром</string>
@@ -565,5 +566,11 @@
     <string name="premium_recipe_coconut_shrimp">Креветки в кокосе</string>
     <string name="premium_recipe_pineapple_salsa">Сальса с ананасом</string>
     <string name="premium_recipe_banana_fritters">Банановые оладьи</string>
+
+    <!-- Nutrition -->
+    <string name="nutrition_calories_short">Ккал</string>
+    <string name="nutrition_fats_short">Жиры</string>
+    <string name="nutrition_carbs_short">Углев.</string>
+    <string name="nutrition_protein_short">Белки</string>
 
 </resources>

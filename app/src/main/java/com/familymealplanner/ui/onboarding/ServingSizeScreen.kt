@@ -1,19 +1,21 @@
 package com.familymealplanner.ui.onboarding
 
-import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.familymealplanner.R
+import com.familymealplanner.ui.util.rememberHapticFeedback
 
 @Composable
 fun ServingSizeScreen(
@@ -22,12 +24,14 @@ fun ServingSizeScreen(
     onComplete: () -> Unit,
     isLoading: Boolean
 ) {
+    val haptic = rememberHapticFeedback()
+
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
         // Decorative background
         OnboardingBackground()
-        
+
         // Content
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
@@ -38,12 +42,12 @@ fun ServingSizeScreen(
         ) {
             // Fixed top spacing to pin icon position
             Spacer(modifier = Modifier.height(80.dp))
-            
+
             // App icon - pinned at fixed position
             OnboardingAppIcon()
-            
+
             Spacer(modifier = Modifier.height(32.dp))
-            
+
             // Question text
             Text(
                 text = stringResource(R.string.onboarding_serving_size_question),
@@ -55,164 +59,111 @@ fun ServingSizeScreen(
                 lineHeight = 28.sp,
                 modifier = Modifier.padding(horizontal = 16.dp)
             )
-            
-            Spacer(modifier = Modifier.height(24.dp))
 
-            // Single filled button with 4 sections
-            Surface(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .height(48.dp),
-                shape = RoundedCornerShape(24.dp),
-                color = MaterialTheme.colorScheme.primary
+            Spacer(modifier = Modifier.height(32.dp))
+
+            // +/- Stepper for serving size selection
+            Row(
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxWidth()
             ) {
-                Row(
-                    modifier = Modifier.fillMaxSize(),
-                    horizontalArrangement = Arrangement.SpaceEvenly,
-                    verticalAlignment = Alignment.CenterVertically
+                // Minus button
+                val canDecrement = selectedServingSize > 1 && !isLoading
+                Surface(
+                    shape = CircleShape,
+                    color = if (canDecrement)
+                        MaterialTheme.colorScheme.secondaryContainer
+                    else
+                        MaterialTheme.colorScheme.surfaceVariant,
+                    modifier = Modifier
+                        .size(48.dp)
+                        .clip(CircleShape)
+                        .clickable(enabled = canDecrement) {
+                            haptic.performLight()
+                            onServingSizeChange(selectedServingSize - 1)
+                        }
                 ) {
-                    // Me section
                     Box(
-                        modifier = Modifier
-                            .weight(1f)
-                            .fillMaxHeight()
-                            .clickable(enabled = !isLoading) {
-                                onServingSizeChange(1)
-                                onComplete()
-                            }
-                            .then(
-                                if (selectedServingSize == 1) {
-                                    Modifier.background(
-                                        MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
-                                        RoundedCornerShape(topStart = 24.dp, bottomStart = 24.dp)
-                                    )
-                                } else {
-                                    Modifier
-                                }
-                            ),
-                        contentAlignment = Alignment.Center
+                        contentAlignment = Alignment.Center,
+                        modifier = Modifier.fillMaxSize()
                     ) {
                         Text(
-                            text = stringResource(R.string.onboarding_serving_size_me),
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onPrimary,
-                            fontWeight = if (selectedServingSize == 1) FontWeight.Bold else FontWeight.Normal
+                            text = "−",
+                            style = MaterialTheme.typography.headlineMedium,
+                            color = if (canDecrement)
+                                MaterialTheme.colorScheme.onSecondaryContainer
+                            else
+                                MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.3f)
                         )
                     }
-                    
-                    // Divider
-                    Box(
-                        modifier = Modifier
-                            .width(1.dp)
-                            .height(32.dp)
-                            .background(MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.3f))
-                    )
-                    
-                    // 2 section
-                    Box(
-                        modifier = Modifier
-                            .weight(1f)
-                            .fillMaxHeight()
-                            .clickable(enabled = !isLoading) {
-                                onServingSizeChange(2)
-                                onComplete()
-                            }
-                            .then(
-                                if (selectedServingSize == 2) {
-                                    Modifier.background(
-                                        MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
-                                    )
-                                } else {
-                                    Modifier
-                                }
-                            ),
-                        contentAlignment = Alignment.Center
+                }
+
+                Spacer(modifier = Modifier.width(24.dp))
+
+                // Value display
+                Surface(
+                    shape = RoundedCornerShape(16.dp),
+                    color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
+                    modifier = Modifier.width(80.dp)
+                ) {
+                    Column(
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        modifier = Modifier.padding(vertical = 12.dp)
                     ) {
                         Text(
-                            text = "2",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onPrimary,
-                            fontWeight = if (selectedServingSize == 2) FontWeight.Bold else FontWeight.Normal
+                            text = selectedServingSize.toString(),
+                            style = MaterialTheme.typography.headlineMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = MaterialTheme.colorScheme.onSurface,
+                            textAlign = TextAlign.Center
+                        )
+                        Text(
+                            text = if (selectedServingSize == 1)
+                                stringResource(R.string.recipe_servings_one)
+                            else
+                                stringResource(R.string.recipe_servings),
+                            style = MaterialTheme.typography.labelSmall,
+                            color = MaterialTheme.colorScheme.onSurfaceVariant,
+                            textAlign = TextAlign.Center
                         )
                     }
-                    
-                    // Divider
+                }
+
+                Spacer(modifier = Modifier.width(24.dp))
+
+                // Plus button
+                val canIncrement = selectedServingSize < 6 && !isLoading
+                Surface(
+                    shape = CircleShape,
+                    color = if (canIncrement)
+                        MaterialTheme.colorScheme.secondaryContainer
+                    else
+                        MaterialTheme.colorScheme.surfaceVariant,
+                    modifier = Modifier
+                        .size(48.dp)
+                        .clip(CircleShape)
+                        .clickable(enabled = canIncrement) {
+                            haptic.performLight()
+                            onServingSizeChange(selectedServingSize + 1)
+                        }
+                ) {
                     Box(
-                        modifier = Modifier
-                            .width(1.dp)
-                            .height(32.dp)
-                            .background(MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.3f))
-                    )
-                    
-                    // 4 section
-                    Box(
-                        modifier = Modifier
-                            .weight(1f)
-                            .fillMaxHeight()
-                            .clickable(enabled = !isLoading) {
-                                onServingSizeChange(4)
-                                onComplete()
-                            }
-                            .then(
-                                if (selectedServingSize == 4) {
-                                    Modifier.background(
-                                        MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
-                                    )
-                                } else {
-                                    Modifier
-                                }
-                            ),
-                        contentAlignment = Alignment.Center
+                        contentAlignment = Alignment.Center,
+                        modifier = Modifier.fillMaxSize()
                     ) {
                         Text(
-                            text = "4",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onPrimary,
-                            fontWeight = if (selectedServingSize == 4) FontWeight.Bold else FontWeight.Normal
-                        )
-                    }
-                    
-                    // Divider
-                    Box(
-                        modifier = Modifier
-                            .width(1.dp)
-                            .height(32.dp)
-                            .background(MaterialTheme.colorScheme.onPrimary.copy(alpha = 0.3f))
-                    )
-                    
-                    // 6 section
-                    Box(
-                        modifier = Modifier
-                            .weight(1f)
-                            .fillMaxHeight()
-                            .clickable(enabled = !isLoading) {
-                                onServingSizeChange(6)
-                                onComplete()
-                            }
-                            .then(
-                                if (selectedServingSize == 6) {
-                                    Modifier.background(
-                                        MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f),
-                                        RoundedCornerShape(topEnd = 24.dp, bottomEnd = 24.dp)
-                                    )
-                                } else {
-                                    Modifier
-                                }
-                            ),
-                        contentAlignment = Alignment.Center
-                    ) {
-                        Text(
-                            text = "6",
-                            style = MaterialTheme.typography.bodyMedium,
-                            color = MaterialTheme.colorScheme.onPrimary,
-                            fontWeight = if (selectedServingSize == 6) FontWeight.Bold else FontWeight.Normal
+                            text = "+",
+                            style = MaterialTheme.typography.headlineMedium,
+                            color = if (canIncrement)
+                                MaterialTheme.colorScheme.onSecondaryContainer
+                            else
+                                MaterialTheme.colorScheme.onSecondaryContainer
                         )
                     }
                 }
             }
-            
-            Spacer(modifier = Modifier.height(16.dp))
-            
+
             // Helper text
             Text(
                 text = stringResource(R.string.onboarding_serving_size_helper),
@@ -220,11 +171,35 @@ fun ServingSizeScreen(
                 textAlign = TextAlign.Center,
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
                 lineHeight = 20.sp,
-                modifier = Modifier.padding(horizontal = 16.dp)
+                modifier = Modifier.padding(top = 16.dp, start = 16.dp, end = 16.dp)
             )
-            
+
             Spacer(modifier = Modifier.weight(1f))
-            
+
+            // Next button
+            Button(
+                onClick = {
+                    haptic.performLight()
+                    onComplete()
+                },
+                enabled = !isLoading,
+                shape = RoundedCornerShape(50),
+                colors = ButtonDefaults.buttonColors(
+                    containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.85f)
+                ),
+                contentPadding = PaddingValues(horizontal = 32.dp, vertical = 12.dp),
+                modifier = Modifier
+                    .fillMaxWidth(0.65f)
+                    .height(48.dp)
+            ) {
+                Text(
+                    text = stringResource(R.string.onboarding_next),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontSize = 16.sp,
+                    fontWeight = FontWeight.Medium
+                )
+            }
+
             Spacer(modifier = Modifier.height(32.dp))
         }
     }

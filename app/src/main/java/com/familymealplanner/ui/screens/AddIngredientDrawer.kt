@@ -731,7 +731,7 @@ private fun DrawerIngredientItem(
     Surface(
         modifier = Modifier
             .fillMaxWidth()
-            .height(48.dp)
+            .height(54.dp)
             .padding(vertical = 2.dp)
             .clip(RoundedCornerShape(12.dp))
             .clickable(
@@ -753,7 +753,7 @@ private fun DrawerIngredientItem(
             Text(
                 text = translateIngredient(ingredient.nameKey),
                 style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.Medium
+                fontWeight = FontWeight.SemiBold
             )
         }
     }
@@ -771,7 +771,7 @@ private fun DrawerCustomIngredientItem(
     Surface(
         modifier = Modifier
             .fillMaxWidth()
-            .height(48.dp)
+            .height(54.dp)
             .padding(vertical = 2.dp)
             .clip(RoundedCornerShape(12.dp))
             .clickable(
@@ -792,7 +792,7 @@ private fun DrawerCustomIngredientItem(
             Text(
                 text = translateIngredient(ingredient.name),
                 style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.Medium,
+                fontWeight = FontWeight.SemiBold,
                 modifier = Modifier.weight(1f)
             )
             Surface(

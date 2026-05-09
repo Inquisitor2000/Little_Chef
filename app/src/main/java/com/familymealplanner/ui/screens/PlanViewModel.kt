@@ -5,6 +5,7 @@ import androidx.lifecycle.viewModelScope
 import com.familymealplanner.domain.model.MealPlan
 import com.familymealplanner.domain.model.MealPlanStatus
 import com.familymealplanner.domain.model.MealType
+import com.familymealplanner.domain.model.roundEggQuantity
 import com.familymealplanner.domain.repository.MealPlanRepository
 import com.familymealplanner.domain.usecase.CreateMealPlanUseCase
 import com.familymealplanner.domain.usecase.StartCookingUseCase
@@ -32,8 +33,15 @@ class PlanViewModel @Inject constructor(
     private val abortCookingUseCase: AbortCookingUseCase,
     private val preferences: com.familymealplanner.data.preferences.OnboardingPreferences,
     private val substituteInitializer: com.familymealplanner.data.local.SubstituteInitializer,
-    private val translationSystem: com.familymealplanner.data.local.TranslationSystem
+    private val translationSystem: com.familymealplanner.data.local.TranslationSystem,
+    val nutritionLoader: com.familymealplanner.data.local.NutritionLoader
 ) : ViewModel() {
+
+    init {
+        viewModelScope.launch {
+            nutritionLoader.load()
+        }
+    }
 
     private val _uiState = MutableStateFlow<PlanUiState>(PlanUiState.Loading)
     val uiState: StateFlow<PlanUiState> = _uiState.asStateFlow()
@@ -426,7 +434,7 @@ class PlanViewModel @Inject constructor(
             } ?: mealIngredient.ingredient
             
             // Adjust quantity based on servings
-            val requiredQuantity = mealIngredient.quantity * servingsMultiplier
+            val requiredQuantity = roundEggQuantity(mealIngredient.quantity * servingsMultiplier, mealIngredient.ingredient.name)
             
             val available = inventoryRepository.getAvailableQuantity(ingredientToCheck.id)
             if (available < requiredQuantity) {

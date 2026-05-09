@@ -103,6 +103,7 @@ fun GroceriesScreen(
     var showClearDialog by remember { mutableStateOf(false) }
     val expandedMeals = remember { mutableStateMapOf<String, Boolean>() }
     val context = LocalContext.current
+    val haptic = rememberHapticFeedback()
 
     LaunchedEffect(Unit) {
         viewModel.loadGroceries()
@@ -219,7 +220,10 @@ fun GroceriesScreen(
                         else -> {}
                     }
                     Button(
-                        onClick = { viewModel.showAddDialog() },
+                        onClick = {
+                            haptic.performLight()
+                            viewModel.showAddDialog()
+                        },
                         shape = RoundedCornerShape(50),
                         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                         modifier = Modifier.padding(end = 8.dp)

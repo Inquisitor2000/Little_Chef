@@ -41,6 +41,7 @@ import com.familymealplanner.domain.model.Meal
 import com.familymealplanner.ui.components.PremiumPackPreview
 import com.familymealplanner.ui.components.PremiumPreviewDrawer
 import com.familymealplanner.ui.util.RecipeImage
+import com.familymealplanner.ui.util.rememberHapticFeedback
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -104,6 +105,8 @@ fun MealsScreen(
         cuisineViewModel.preloadRecipes(Cuisine.ITALIAN)
     }
     
+    val haptic = rememberHapticFeedback()
+
     // Handle cuisine click with DLC check
     val handleCuisineClick: (Cuisine) -> Unit = { cuisine ->
         if (cuisine.isDLC) {
@@ -122,7 +125,10 @@ fun MealsScreen(
                 ),
                 actions = {
                     Button(
-                        onClick = onNavigateToAddMeal,
+                        onClick = {
+                            haptic.performLight()
+                            onNavigateToAddMeal()
+                        },
                         shape = RoundedCornerShape(50),
                         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                         modifier = Modifier.padding(end = 8.dp)

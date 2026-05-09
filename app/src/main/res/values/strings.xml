@@ -323,12 +323,18 @@
     <string name="settings_language">Language</string>
     <string name="settings_language_description">Change app language</string>
     
+    <!-- Nutrition -->
+    <string name="nutrition_calories_short">Cal</string>
+    <string name="nutrition_fats_short">Fat</string>
+    <string name="nutrition_carbs_short">Carbs</string>
+    <string name="nutrition_protein_short">Protein</string>
+    
     <!-- Onboarding -->
     <string name="onboarding_next">Next</string>
     <string name="onboarding_welcome_subtitle">Plan meals, manage your pantry,\nand create shopping lists with ease</string>
     <string name="onboarding_serving_size_question">How many people do you usually cook for?</string>
     <string name="onboarding_serving_size_helper">This helps us suggest the right portion sizes</string>
-    <string name="onboarding_serving_size_me">Me</string>
+
 
 
 
@@ -379,6 +385,7 @@
     <string name="recipe_cook">Cook</string>
     <string name="recipe_total">Total</string>
     <string name="recipe_servings">Servings</string>
+    <string name="recipe_servings_one">Serving</string>
     <string name="recipe_min">min</string>
     <string name="recipe_plan_it">Plan it</string>
     <string name="recipe_buy_ingredients">Buy ingredients</string>

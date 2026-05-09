@@ -202,12 +202,6 @@ fun SettingsScreen(
             var customHeaderInput by remember(customGroceryHeader) { mutableStateOf(customGroceryHeader ?: "") }
             var showHeaderSaveConfirmation by remember { mutableStateOf(false) }
             
-            Text(
-                text = stringResource(R.string.settings_custom_header_description),
-                style = MaterialTheme.typography.bodyMedium,
-                color = MaterialTheme.colorScheme.onSurfaceVariant
-            )
-            
             OutlinedTextField(
                 value = customHeaderInput,
                 onValueChange = { 
@@ -283,12 +277,6 @@ fun SettingsScreen(
                     Column(
                         verticalArrangement = Arrangement.spacedBy(8.dp)
                     ) {
-                        Text(
-                            text = stringResource(R.string.settings_font_family),
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = FontWeight.SemiBold
-                        )
-                        
                         val robotoFonts = com.familymealplanner.ui.theme.AppFont.values()
                             .filter { it.displayName.startsWith("Roboto") }
                         val rubikFonts = com.familymealplanner.ui.theme.AppFont.values()
@@ -327,8 +315,6 @@ fun SettingsScreen(
                             )
                         }
                     }
-                    
-                    Divider(color = MaterialTheme.colorScheme.outlineVariant)
                     
                     // Accent Color Picker
                     Column(

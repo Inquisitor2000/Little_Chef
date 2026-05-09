@@ -16,12 +16,12 @@
         },
         {
             "name": "Egg Whites",
-            "quantity": 2,
-            "unit": "pcs",
-            "isStarIngredient": true
-        },
-        {
-            "name": "Ham",
+      "quantity": 5,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ham",
             "quantity": 80,
             "unit": "g",
             "isStarIngredient": true

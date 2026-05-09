@@ -210,6 +210,7 @@
     <string name="recipe_cook">Gătire</string>
     <string name="recipe_total">Total</string>
     <string name="recipe_servings">Porții</string>
+    <string name="recipe_servings_one">Porție</string>
     <string name="recipe_min">min</string>
     <string name="recipe_plan_it">Planifică</string>
     <string name="recipe_buy_ingredients">Cumpără ingrediente</string>
@@ -487,7 +488,7 @@
     <string name="onboarding_welcome_subtitle">Planifică mese, gestionează cămara\nși creează liste de cumpărături cu ușurință</string>
     <string name="onboarding_serving_size_question">Pentru câte persoane gătești de obicei?</string>
     <string name="onboarding_serving_size_helper">Acest lucru ne ajută să sugerăm dimensiunile potrivite ale porțiilor</string>
-    <string name="onboarding_serving_size_me">Eu</string>
+
 
     <!-- Meals Screen -->
     <string name="meals_title">Rețete</string>
@@ -535,5 +536,11 @@
     <string name="premium_recipe_coconut_shrimp">Creveți cu Nucă de Coco</string>
     <string name="premium_recipe_pineapple_salsa">Salsa cu Ananas</string>
     <string name="premium_recipe_banana_fritters">Gogoși cu Banane</string>
+
+    <!-- Nutrition -->
+    <string name="nutrition_calories_short">Cal</string>
+    <string name="nutrition_fats_short">Grăsimi</string>
+    <string name="nutrition_carbs_short">Carboh.</string>
+    <string name="nutrition_protein_short">Proteine</string>
 
 </resources>

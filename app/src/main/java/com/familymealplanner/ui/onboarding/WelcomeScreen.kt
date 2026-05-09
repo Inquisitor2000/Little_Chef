@@ -12,11 +12,14 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.familymealplanner.R
+import com.familymealplanner.ui.util.rememberHapticFeedback
 
 @Composable
 fun WelcomeScreen(
     onContinue: () -> Unit
 ) {
+    val haptic = rememberHapticFeedback()
+    
     Box(
         modifier = Modifier.fillMaxSize()
     ) {
@@ -64,7 +67,10 @@ fun WelcomeScreen(
             
             // Next button
             Button(
-                onClick = onContinue,
+                onClick = {
+                    haptic.performLight()
+                    onContinue()
+                },
                 shape = RoundedCornerShape(50),
                 colors = ButtonDefaults.buttonColors(
                     containerColor = MaterialTheme.colorScheme.primary.copy(alpha = 0.85f)

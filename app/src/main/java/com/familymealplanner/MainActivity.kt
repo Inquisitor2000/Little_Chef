@@ -341,7 +341,7 @@ fun MainAppScreen() {
             Box(
                 modifier = Modifier
                     .fillMaxWidth()
-                    .padding(horizontal = navBarHorizontalPadding, vertical = 12.dp)
+                    .padding(horizontal = navBarHorizontalPadding, vertical = 24.dp)
             ) {
                 Surface(
                     modifier = Modifier

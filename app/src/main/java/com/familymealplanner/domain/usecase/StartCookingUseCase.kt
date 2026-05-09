@@ -8,6 +8,7 @@ import com.familymealplanner.domain.model.NonDeductibleIngredients
 import com.familymealplanner.domain.model.TransactionStatus
 import com.familymealplanner.domain.repository.InventoryRepository
 import com.familymealplanner.domain.repository.MealPlanRepository
+import com.familymealplanner.domain.model.roundEggQuantity
 import java.util.UUID
 import javax.inject.Inject
 
@@ -72,7 +73,7 @@ class StartCookingUseCase @Inject constructor(
             } ?: mealIngredient.ingredient
             
             // Adjust quantity based on servings
-            val requiredQuantity = mealIngredient.quantity * servingsMultiplier
+            val requiredQuantity = roundEggQuantity(mealIngredient.quantity * servingsMultiplier, mealIngredient.ingredient.name)
             
             val available = inventoryRepository.getAvailableQuantity(ingredientToCheck.id)
             if (available < requiredQuantity) {
@@ -113,7 +114,7 @@ class StartCookingUseCase @Inject constructor(
             } ?: mealIngredient.ingredient
             
             // Adjust quantity based on servings
-            val adjustedQuantity = mealIngredient.quantity * servingsMultiplier
+            val adjustedQuantity = roundEggQuantity(mealIngredient.quantity * servingsMultiplier, mealIngredient.ingredient.name)
             
             InventoryTransaction(
                 id = UUID.randomUUID().toString(),

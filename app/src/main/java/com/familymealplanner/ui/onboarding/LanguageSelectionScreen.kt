@@ -15,6 +15,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.familymealplanner.R
+import com.familymealplanner.ui.util.rememberHapticFeedback
 
 private const val TAG = "LanguageSelectionScreen"
 
@@ -27,6 +28,7 @@ fun LanguageSelectionScreen(
     val context = LocalContext.current
     
     val currentLocale = context.resources.configuration.locales[0]
+    val haptic = rememberHapticFeedback()
     
     Box(
         modifier = Modifier.fillMaxSize()
@@ -72,6 +74,7 @@ fun LanguageSelectionScreen(
                     isSelected = selectedLanguage == "en",
                     onClick = { 
                         if (selectedLanguage != "en") {
+                            haptic.performLight()
                             Log.d(TAG, "EN selected")
                             onLanguageSelect("en")
                         }
@@ -83,6 +86,7 @@ fun LanguageSelectionScreen(
                     isSelected = selectedLanguage == "ru",
                     onClick = { 
                         if (selectedLanguage != "ru") {
+                            haptic.performLight()
                             Log.d(TAG, "RU selected")
                             onLanguageSelect("ru")
                         }
@@ -94,6 +98,7 @@ fun LanguageSelectionScreen(
                     isSelected = selectedLanguage == "ro",
                     onClick = { 
                         if (selectedLanguage != "ro") {
+                            haptic.performLight()
                             Log.d(TAG, "RO selected")
                             onLanguageSelect("ro")
                         }
@@ -106,6 +111,7 @@ fun LanguageSelectionScreen(
             // Continue button
             Button(
                 onClick = {
+                    haptic.performLight()
                     onContinue()
                 },
                 shape = RoundedCornerShape(50),

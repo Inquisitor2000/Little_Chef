@@ -261,9 +261,9 @@ This is done in `Theme.kt:169` and applies to the entire app.
 - `button_*` - Common button labels
 
 ### Languages
-- English: `res/values/strings.xml` (798 lines)
-- Romanian: `res/values-ro/strings.xml`
-- Russian: `res/values-ru/strings.xml`
+- English: `res/values/strings.xml` (~805 lines)
+- Romanian: `res/values-ro/strings.xml` (~545 lines)
+- Russian: `res/values-ru/strings.xml` (~575 lines)
 - ALL user-facing strings MUST be added in all 3 languages
 
 ---
@@ -302,7 +302,53 @@ This is done in `Theme.kt:169` and applies to the entire app.
 | MealPlanDetailScreen | MealPlanDetailViewModel | Cooking mode with step-by-step, substitutions |
 | CuisineMealsScreen | CuisineMealsViewModel | Bundled recipe list per cuisine |
 | BundledRecipeDetailScreen | BundledRecipeDetailViewModel | Bundled recipe details |
-| RecipeDetailScreen | MealDetailViewModel | User recipe details |
+| RecipeDetailScreen | RecipeDetailViewModel | User recipe details |
+
+### Serving Size System
+- **Onboarding**: `ServingSizeScreen` shows a +/- stepper (circular 48dp buttons) with centered value display
+- **Range**: 1–6 with min/max enforcement (visual dimming at bounds via `alpha(0.4f)` on disabled button)
+- **Cycle**: Recipe detail screens cycle 1→2→3→4→5→6→1 via `cycleServings()` (tap servings label)
+- **Default**: Stored in DataStore as `default_serving_size`, initialized from onboarding, consumed by BundledRecipeDetailViewModel and CuisineMealsViewModel
+- **Per-plan override**: `MealPlan.plannedServings: Int?` persisted in Room
+
+### Time Adjustment Formula
+Replaced hardcoded `when` table with percentage-based formula:
+```kotlin
+prepAdj = basePrep × (ratio - 1) × 0.35
+cookAdj = baseCook × (ratio - 1) × 0.05
+```
+Applied in: BundledRecipeDetailScreen, RecipeDetailScreen, MealPlanDetailScreen.
+
+### Egg Quantity Rounding
+- `roundEggQuantity(quantity: Double, ingredientName: String): Double` in `domain/model/UnitConversion.kt`
+- Rounds egg-related ingredients to nearest 0.5 (e.g., 2.5 eggs → 2.5, 1.33 → 1.5, 0.2 → 0.5)
+- Matches on name contains "egg" (eggs, egg whites, egg yolks)
+- Applied at **15 touch points** across: RecipeDetailScreen (4), BundledRecipeDetailViewModel (5), BundledRecipeDetailScreen (1), MealPlanDetailScreen (1), PlanViewModel (1), StartCookingUseCase (2)
+
+### Nutrition Labels Per Serving
+4 files added to `domain/model/`, `data/local/`, `ui/util/`, `ui/components/`:
+- **`NutritionInfo.kt`** — data class: calories, fatsG, carbsG, proteinG, pieceG (optional, for pcs conversion)
+- **`NutritionLoader.kt`** — `@Singleton`, loads `assets/nutrition/ingredient_nutrition.json` (266 ingredients, ~355 entries) with in-memory cache
+- **`NutritionCalculator.kt`** — sums ingredient contributions:
+  - `g`/`ml` units → `qty × (per100g / 100)`
+  - `pcs` units → `qty × pieceG × (per100g / 100)`
+  - Divides total by servings → per-serving `NutritionInfo`
+- **`NutritionCard.kt`** — 4×1 Row (Cal | Fat | Carbs | Protein) with `formatNutritionValue()` (public)
+- **String keys**: `nutrition_calories_short`, `nutrition_fats_short`, `nutrition_carbs_short`, `nutrition_protein_short`
+
+**Integration**: Nutrition info rendered INSIDE the recipe info Card, below time items with a thin `onSurfaceVariant(alpha=0.2f)` divider. Reuses the same `InfoColumn` composable for visual consistency. All three detail screens load `NutritionLoader` in ViewModel `init`.
+
+### InfoColumn Composable
+```kotlin
+@Composable
+private fun InfoColumn(value: String, label: String, clickable: Boolean = false, onClick: () -> Unit = {})
+```
+- Value: `bodyMedium`, `FontWeight.Bold` (primary color if clickable)
+- Label: `bodySmall`, `onSurfaceVariant`
+- Used for: prep time, cook time, servings (clickable), total time, and nutrition values in the recipe info Card
+
+### Time/Nutrition Divider Style
+Thin vertical/horizontal dividers use `onSurfaceVariant.copy(alpha = 0.2f)` (not `outlineVariant`). Applied to both the time item vertical dividers (40dp) and the nutrition Row vertical dividers (28dp). Horizontal separator between time and nutrition sections uses a full-width `Box(height = 1.dp)`.
 
 ### Pantry Screen Specifics
 - AddIngredientDrawer is opened via `showAddIngredientDrawer` state
@@ -509,5 +555,21 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 8. **String resources naming**: `screen_*`, `nav_*`, `pantry_*`, `groceries_*`, `recipe_*`, `drawer_*`
 9. **Delete confirmation dialogs** always follow the same style: AlertDialog with background color, 20dp shape, 6dp elevation, stacked buttons
 10. **Ingredient names** in delete dialogs should be title-cased via `.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }`
+
+### Nutrition JSON Format (`assets/nutrition/ingredient_nutrition.json`)
+```json
+{
+  "ingredient_name": {
+    "kcal": 155,
+    "fats": 11.0,
+    "carbs": 1.1,
+    "protein": 13.0,
+    "pieceG": 50.0
+  }
+}
+```
+- `pieceG` is optional — only for pcs-unit ingredients (eggs: 50g, egg whites: 33g, etc.)
+- All values per 100g; `pieceG` converts pcs to grams before calculation
+- 355 entries covering 266 unique bundled ingredients
 
 **Last Updated**: May 2026

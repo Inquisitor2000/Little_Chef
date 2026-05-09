@@ -35,6 +35,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.familymealplanner.R
+import com.familymealplanner.ui.util.rememberHapticFeedback
 import com.familymealplanner.domain.model.MealPlan
 import com.familymealplanner.domain.model.MealPlanStatus
 import com.familymealplanner.domain.model.MealType
@@ -56,6 +57,7 @@ fun PlanScreen(
     val showAddMealDialog by viewModel.showAddMealDialog.collectAsState()
     val userMeals by viewModel.userMeals.collectAsState()
     var showClearDialog by remember { mutableStateOf(false) }
+    val haptic = rememberHapticFeedback()
 
     LaunchedEffect(Unit) {
         // Small delay to let UI render first
@@ -104,7 +106,10 @@ fun PlanScreen(
                         else -> {}
                     }
                     Button(
-                        onClick = onNavigateToSuggestion,
+                        onClick = {
+                            haptic.performLight()
+                            onNavigateToSuggestion()
+                        },
                         shape = RoundedCornerShape(50),
                         contentPadding = PaddingValues(horizontal = 16.dp, vertical = 8.dp),
                         modifier = Modifier.padding(end = 8.dp)
