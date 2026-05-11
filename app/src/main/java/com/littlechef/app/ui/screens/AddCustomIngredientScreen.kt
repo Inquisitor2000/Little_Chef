@@ -177,7 +177,7 @@ fun AddCustomIngredientScreen(
                 Text(
                     text = if (isEditMode) stringResource(R.string.add_recipe_unit) else stringResource(R.string.add_ingredient_quantity),
                     style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold
+                    fontWeight = FontWeight.Bold
                 )
                 
                 if (isEditMode) {
@@ -209,7 +209,7 @@ fun AddCustomIngredientScreen(
                                 Text(
                                     text = stringResource(R.string.unit_g),
                                     style = MaterialTheme.typography.titleMedium,
-                                    fontWeight = if (selectedUnit == "g") FontWeight.SemiBold else FontWeight.Normal,
+                                    fontWeight = if (selectedUnit == "g") FontWeight.Bold else FontWeight.Normal,
                                     color = if (selectedUnit == "g")
                                         MaterialTheme.colorScheme.onPrimary
                                     else
@@ -241,7 +241,7 @@ fun AddCustomIngredientScreen(
                                 Text(
                                     text = stringResource(R.string.unit_ml),
                                     style = MaterialTheme.typography.titleMedium,
-                                    fontWeight = if (selectedUnit == "ml") FontWeight.SemiBold else FontWeight.Normal,
+                                    fontWeight = if (selectedUnit == "ml") FontWeight.Bold else FontWeight.Normal,
                                     color = if (selectedUnit == "ml")
                                         MaterialTheme.colorScheme.onPrimary
                                     else
@@ -273,7 +273,7 @@ fun AddCustomIngredientScreen(
                                 Text(
                                     text = stringResource(R.string.unit_piece),
                                     style = MaterialTheme.typography.titleMedium,
-                                    fontWeight = if (selectedUnit == "pcs") FontWeight.SemiBold else FontWeight.Normal,
+                                    fontWeight = if (selectedUnit == "pcs") FontWeight.Bold else FontWeight.Normal,
                                     color = if (selectedUnit == "pcs")
                                         MaterialTheme.colorScheme.onPrimary
                                     else
@@ -397,7 +397,7 @@ fun AddCustomIngredientScreen(
                                     Text(
                                         text = stringResource(R.string.unit_g),
                                         style = MaterialTheme.typography.bodyMedium,
-                                        fontWeight = if (isWeightSelected && isGSelected) FontWeight.SemiBold else FontWeight.Normal,
+                                        fontWeight = if (isWeightSelected && isGSelected) FontWeight.Bold else FontWeight.Normal,
                                         color = if (isWeightSelected && isGSelected)
                                             MaterialTheme.colorScheme.onPrimary
                                         else
@@ -411,7 +411,7 @@ fun AddCustomIngredientScreen(
                                     Text(
                                         text = stringResource(R.string.unit_kg),
                                         style = MaterialTheme.typography.bodyMedium,
-                                        fontWeight = if (isWeightSelected && !isGSelected) FontWeight.SemiBold else FontWeight.Normal,
+                                        fontWeight = if (isWeightSelected && !isGSelected) FontWeight.Bold else FontWeight.Normal,
                                         color = if (isWeightSelected && !isGSelected)
                                             MaterialTheme.colorScheme.onPrimary
                                         else
@@ -471,7 +471,7 @@ fun AddCustomIngredientScreen(
                                     Text(
                                         text = stringResource(R.string.unit_ml),
                                         style = MaterialTheme.typography.bodyMedium,
-                                        fontWeight = if (isVolumeSelected && isMlSelected) FontWeight.SemiBold else FontWeight.Normal,
+                                        fontWeight = if (isVolumeSelected && isMlSelected) FontWeight.Bold else FontWeight.Normal,
                                         color = if (isVolumeSelected && isMlSelected)
                                             MaterialTheme.colorScheme.onPrimary
                                         else
@@ -485,7 +485,7 @@ fun AddCustomIngredientScreen(
                                     Text(
                                         text = stringResource(R.string.unit_l),
                                         style = MaterialTheme.typography.bodyMedium,
-                                        fontWeight = if (isVolumeSelected && !isMlSelected) FontWeight.SemiBold else FontWeight.Normal,
+                                        fontWeight = if (isVolumeSelected && !isMlSelected) FontWeight.Bold else FontWeight.Normal,
                                         color = if (isVolumeSelected && !isMlSelected)
                                             MaterialTheme.colorScheme.onPrimary
                                         else
@@ -518,7 +518,7 @@ fun AddCustomIngredientScreen(
                             Text(
                                 text = stringResource(R.string.unit_piece),
                                 style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = if (selectedUnit == "pcs") FontWeight.SemiBold else FontWeight.Normal,
+                                fontWeight = if (selectedUnit == "pcs") FontWeight.Bold else FontWeight.Normal,
                                 color = if (selectedUnit == "pcs")
                                     MaterialTheme.colorScheme.onPrimary
                                 else
@@ -539,7 +539,7 @@ fun AddCustomIngredientScreen(
                 Text(
                     text = stringResource(R.string.add_ingredient_category_subcategory),
                     style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold
+                    fontWeight = FontWeight.Bold
                 )
                 
                 Surface(
@@ -616,7 +616,7 @@ fun AddCustomIngredientScreen(
                 Text(
                     text = stringResource(R.string.add_ingredient_allergens),
                     style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold
+                    fontWeight = FontWeight.Bold
                 )
                 
                 // Display allergens in rows of 3
@@ -923,7 +923,7 @@ private fun <T> CupertinoPicker(
                         Text(
                             text = itemLabel(item),
                             style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
+                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
                             color = if (isSelected) 
                                 MaterialTheme.colorScheme.onPrimaryContainer 
                             else 

@@ -40,6 +40,7 @@ import com.littlechef.app.domain.usecase.CheckRecipeIngredientsUseCase
 import com.littlechef.app.ui.components.formatNutritionValue
 import com.littlechef.app.domain.model.NutritionInfo
 import com.littlechef.app.ui.util.NutritionCalculator
+import com.littlechef.app.ui.util.TimeAdjuster
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -132,26 +133,12 @@ fun BundledRecipeDetailScreen(
                                 modifier = Modifier
                                     .fillMaxWidth()
                                     .padding(16.dp),
-                                horizontalArrangement = Arrangement.SpaceEvenly,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 val items = mutableListOf<@Composable () -> Unit>()
                             
-                            // Calculate time adjustments based on servings multiplier
-                            // Prep scales ~35% per doubling; cook scales ~5% (method-dependent)
-                            val basePrepTime = r.prepTimeMinutes ?: 0
-                            val baseCookTime = r.cookTimeMinutes ?: 0
-                            val baseRecipeServings = r.servings
-                            
-                            val prepTimeAdjustment = if (basePrepTime > 0 && baseRecipeServings > 0) {
-                                val ratio = selectedServings.toDouble() / baseRecipeServings.toDouble()
-                                (basePrepTime * (ratio - 1.0) * 0.35).toInt().coerceAtLeast(0)
-                            } else 0
-                            
-                            val cookTimeAdjustment = if (baseCookTime > 0 && baseRecipeServings > 0) {
-                                val ratio = selectedServings.toDouble() / baseRecipeServings.toDouble()
-                                (baseCookTime * (ratio - 1.0) * 0.05).toInt().coerceAtLeast(0)
-                            } else 0
+                            val prepTimeAdjustment = TimeAdjuster.adjustPrepTime(r.prepTimeMinutes, r.servings, selectedServings)
+                            val cookTimeAdjustment = TimeAdjuster.adjustCookTime(r.cookTimeMinutes, r.servings, selectedServings)
                             
                             r.prepTimeMinutes?.let { basePrepTime ->
                                 val adjustedPrepTime = basePrepTime + prepTimeAdjustment
@@ -178,7 +165,12 @@ fun BundledRecipeDetailScreen(
                             }
                             
                             items.forEachIndexed { index, item ->
-                                item()
+                                Box(
+                                    modifier = Modifier.weight(1f),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    item()
+                                }
                                 if (index < items.size - 1) {
                                     Box(
                                         modifier = Modifier
@@ -212,44 +204,63 @@ fun BundledRecipeDetailScreen(
                             Row(
                                 modifier = Modifier
                                     .fillMaxWidth()
-                                    .padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 8.dp),
-                                horizontalArrangement = Arrangement.SpaceEvenly,
+                                    .padding(start = 16.dp, end = 16.dp, top = 12.dp, bottom = 16.dp),
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
-                                InfoColumn(
-                                    value = formatNutritionValue(nutritionInfo.calories),
-                                    label = stringResource(R.string.nutrition_calories_short)
-                                )
+                                Box(
+                                    modifier = Modifier.weight(1f),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    InfoColumn(
+                                        value = formatNutritionValue(nutritionInfo.calories),
+                                        label = stringResource(R.string.nutrition_calories_short)
+                                    )
+                                }
                                 Box(
                                     modifier = Modifier
                                         .width(1.dp)
                                         .height(28.dp)
                                         .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
                                 )
-                                InfoColumn(
-                                    value = formatNutritionValue(nutritionInfo.fatsG),
-                                    label = stringResource(R.string.nutrition_fats_short)
-                                )
+                                Box(
+                                    modifier = Modifier.weight(1f),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    InfoColumn(
+                                        value = formatNutritionValue(nutritionInfo.fatsG),
+                                        label = stringResource(R.string.nutrition_fats_short)
+                                    )
+                                }
                                 Box(
                                     modifier = Modifier
                                         .width(1.dp)
                                         .height(28.dp)
                                         .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
                                 )
-                                InfoColumn(
-                                    value = formatNutritionValue(nutritionInfo.carbsG),
-                                    label = stringResource(R.string.nutrition_carbs_short)
-                                )
+                                Box(
+                                    modifier = Modifier.weight(1f),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    InfoColumn(
+                                        value = formatNutritionValue(nutritionInfo.carbsG),
+                                        label = stringResource(R.string.nutrition_carbs_short)
+                                    )
+                                }
                                 Box(
                                     modifier = Modifier
                                         .width(1.dp)
                                         .height(28.dp)
                                         .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
                                 )
-                                InfoColumn(
-                                    value = formatNutritionValue(nutritionInfo.proteinG),
-                                    label = stringResource(R.string.nutrition_protein_short)
-                                )
+                                Box(
+                                    modifier = Modifier.weight(1f),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    InfoColumn(
+                                        value = formatNutritionValue(nutritionInfo.proteinG),
+                                        label = stringResource(R.string.nutrition_protein_short)
+                                    )
+                                }
                             }
                         }
                         }
@@ -367,7 +378,8 @@ fun BundledRecipeDetailScreen(
                                                 text = translatedName.replaceFirstChar { 
                                                     if (it.isLowerCase()) it.titlecase() else it.toString() 
                                                 },
-                                                style = MaterialTheme.typography.bodyMedium,
+                                                style = MaterialTheme.typography.bodyLarge,
+                                                fontWeight = FontWeight.Bold,
                                                 textDecoration = if (substituteIngredient != null) TextDecoration.LineThrough else null,
                                                 color = if (substituteIngredient != null) 
                                                     MaterialTheme.colorScheme.onSurfaceVariant 
@@ -393,17 +405,17 @@ fun BundledRecipeDetailScreen(
                                                     text = translatedSubstitute.replaceFirstChar { 
                                                         if (it.isLowerCase()) it.titlecase() else it.toString() 
                                                     },
-                                                    style = MaterialTheme.typography.bodyMedium,
+                                                    style = MaterialTheme.typography.bodyLarge,
                                                     color = MaterialTheme.colorScheme.primary,
-                                                    fontWeight = FontWeight.Medium
+                                                    fontWeight = FontWeight.Bold
                                                 )
                                             }
                                         }
                                     }
                                     Text(
                                         text = "${formatQuantity(adjustedQuantity)} ${getUnitTranslation(ingredient.unit)}",
-                                        style = MaterialTheme.typography.bodyMedium,
-                                        fontWeight = FontWeight.Medium,
+                                        style = MaterialTheme.typography.bodyLarge,
+                                        fontWeight = FontWeight.Normal,
                                         color = MaterialTheme.colorScheme.primary
                                     )
                                 }
@@ -484,7 +496,8 @@ fun BundledRecipeDetailScreen(
                             steps.forEachIndexed { index, step ->
                                 Text(
                                     text = step,
-                                    style = MaterialTheme.typography.bodyMedium,
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    fontWeight = FontWeight.Normal,
                                     modifier = Modifier.padding(bottom = if (index < steps.size - 1) 16.dp else 0.dp)
                                 )
                             }
@@ -693,7 +706,7 @@ fun BundledRecipeDetailScreen(
                                             text = "✓ Substitute available: ${sub.name}",
                                             style = MaterialTheme.typography.bodySmall,
                                             color = MaterialTheme.colorScheme.primary,
-                                            fontWeight = FontWeight.Medium
+                                            fontWeight = FontWeight.Normal
                                         )
                                     }
                                 }

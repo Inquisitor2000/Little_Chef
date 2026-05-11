@@ -11,7 +11,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.littlechef.app.R
 import com.littlechef.app.domain.model.NutritionInfo
 
@@ -71,15 +70,13 @@ private fun NutritionItem(
             style = MaterialTheme.typography.bodyMedium,
             fontWeight = FontWeight.Bold,
             color = MaterialTheme.colorScheme.onSurface,
-            textAlign = TextAlign.Center,
-            fontSize = 14.sp
+            textAlign = TextAlign.Center
         )
         Text(
             text = label,
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurfaceVariant,
-            textAlign = TextAlign.Center,
-            fontSize = 11.sp
+            textAlign = TextAlign.Center
         )
     }
 }

@@ -323,25 +323,11 @@ fun MealPlanCard(
     
     LaunchedEffect(mealPlan.status, mealPlan.startedAt) {
         if (mealPlan.status == MealPlanStatus.COOKING && mealPlan.startedAt != null) {
-            // Calculate time adjustments based on meal servings
             val servings = mealPlan.meal.servings ?: 2
-            val ingredientCount = mealPlan.meal.ingredients.size
+            val plannedServings = mealPlan.plannedServings ?: servings
             
-            val prepTimeAdjustment = when (servings) {
-                4 -> if (ingredientCount < 10) 5 else 10
-                6 -> if (ingredientCount < 10) 15 else 20
-                else -> 0
-            }
-            
-            val cookTimeAdjustment = if ((mealPlan.meal.cookTimeMinutes ?: 0) > 0) {
-                when (servings) {
-                    4 -> if (ingredientCount < 8) 5 else 10
-                    6 -> if (ingredientCount < 8) 10 else 15
-                    else -> 0
-                }
-            } else {
-                0
-            }
+            val prepTimeAdjustment = com.littlechef.app.ui.util.TimeAdjuster.adjustPrepTime(mealPlan.meal.prepTimeMinutes, servings, plannedServings)
+            val cookTimeAdjustment = com.littlechef.app.ui.util.TimeAdjuster.adjustCookTime(mealPlan.meal.cookTimeMinutes, servings, plannedServings)
             
             val basePrepTime = mealPlan.meal.prepTimeMinutes ?: 0
             val baseCookTime = mealPlan.meal.cookTimeMinutes ?: 0
@@ -447,25 +433,11 @@ fun MealPlanCard(
                                 fontWeight = FontWeight.Bold
                             )
                         } else if (mealPlan.status != MealPlanStatus.COMPLETED) {
-                            // Calculate time adjustments based on meal servings
                             val servings = mealPlan.meal.servings ?: 2
-                            val ingredientCount = mealPlan.meal.ingredients.size
+                            val plannedServings = mealPlan.plannedServings ?: servings
                             
-                            val prepTimeAdjustment = when (servings) {
-                                4 -> if (ingredientCount < 10) 5 else 10
-                                6 -> if (ingredientCount < 10) 15 else 20
-                                else -> 0
-                            }
-                            
-                            val cookTimeAdjustment = if ((mealPlan.meal.cookTimeMinutes ?: 0) > 0) {
-                                when (servings) {
-                                    4 -> if (ingredientCount < 8) 5 else 10
-                                    6 -> if (ingredientCount < 8) 10 else 15
-                                    else -> 0
-                                }
-                            } else {
-                                0
-                            }
+                            val prepTimeAdjustment = com.littlechef.app.ui.util.TimeAdjuster.adjustPrepTime(mealPlan.meal.prepTimeMinutes, servings, plannedServings)
+                            val cookTimeAdjustment = com.littlechef.app.ui.util.TimeAdjuster.adjustCookTime(mealPlan.meal.cookTimeMinutes, servings, plannedServings)
                             
                             val basePrepTime = mealPlan.meal.prepTimeMinutes ?: 0
                             val baseCookTime = mealPlan.meal.cookTimeMinutes ?: 0
@@ -689,7 +661,7 @@ private fun AddMealPlanDialog(
                                                 Text(
                                                     text = meal.name,
                                                     style = MaterialTheme.typography.bodyMedium,
-                                                    fontWeight = FontWeight.Medium
+                                                    fontWeight = FontWeight.Normal
                                                 )
                                                 val totalTime = (meal.prepTimeMinutes ?: 0) + (meal.cookTimeMinutes ?: 0)
                                                 if (totalTime > 0) {

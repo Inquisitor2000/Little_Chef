@@ -311,13 +311,14 @@ This is done in `Theme.kt:169` and applies to the entire app.
 - **Default**: Stored in DataStore as `default_serving_size`, initialized from onboarding, consumed by BundledRecipeDetailViewModel and CuisineMealsViewModel
 - **Per-plan override**: `MealPlan.plannedServings: Int?` persisted in Room
 
-### Time Adjustment Formula
-Replaced hardcoded `when` table with percentage-based formula:
+### Time Adjustment Formula (`ui/util/TimeAdjuster.kt`)
+Shared utility used by ALL screens — preview cards and detail screens now produce the same math:
 ```kotlin
-prepAdj = basePrep × (ratio - 1) × 0.35
-cookAdj = baseCook × (ratio - 1) × 0.05
+TimeAdjuster.adjustPrepTime(baseMinutes, baseServings, selectedServings)
+TimeAdjuster.adjustCookTime(baseMinutes, baseServings, selectedServings)
 ```
-Applied in: BundledRecipeDetailScreen, RecipeDetailScreen, MealPlanDetailScreen.
+Formula: `prepAdj = basePrep × (ratio - 1) × 0.35`, `cookAdj = baseCook × (ratio - 1) × 0.05`
+Used by: CuisineMealsScreen, PlanScreen, RecipeDetailScreen, BundledRecipeDetailScreen, MealPlanDetailScreen.
 
 ### Egg Quantity Rounding
 - `roundEggQuantity(quantity: Double, ingredientName: String): Double` in `domain/model/UnitConversion.kt`
@@ -337,6 +338,12 @@ Applied in: BundledRecipeDetailScreen, RecipeDetailScreen, MealPlanDetailScreen.
 - **String keys**: `nutrition_calories_short`, `nutrition_fats_short`, `nutrition_carbs_short`, `nutrition_protein_short`
 
 **Integration**: Nutrition info rendered INSIDE the recipe info Card, below time items with a thin `onSurfaceVariant(alpha=0.2f)` divider. Reuses the same `InfoColumn` composable for visual consistency. All three detail screens load `NutritionLoader` in ViewModel `init`.
+
+### TimeAdjuster (`ui/util/TimeAdjuster.kt`)
+Singleton with two pure functions for serving-based time scaling:
+- `adjustPrepTime(baseMinutes, baseServings, selectedServings)` — scales prep 35% per doubling
+- `adjustCookTime(baseMinutes, baseServings, selectedServings)` — scales cook 5% per doubling
+Shared by all preview cards and detail screens for consistency.
 
 ### InfoColumn Composable
 ```kotlin
@@ -569,4 +576,4 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 - All values per 100g; `pieceG` converts pcs to grams before calculation
 - 355 entries covering 266 unique bundled ingredients
 
-**Last Updated**: May 2026 (package renamed to `com.littlechef.app`, theme function → `LittleChefTheme`)
+**Last Updated**: May 2026 (unified time adjustment via `TimeAdjuster`, package → `com.littlechef.app`, theme → `LittleChefTheme`)

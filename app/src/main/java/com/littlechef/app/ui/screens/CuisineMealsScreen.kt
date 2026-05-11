@@ -447,22 +447,8 @@ private fun BundledRecipeCard(
 ) {
     val context = LocalContext.current
     
-    // Calculate time adjustments based on default serving size and ingredient count
-    val prepTimeAdjustment = when (defaultServingSize) {
-        4 -> if (recipe.ingredients.size < 10) 5 else 10
-        6 -> if (recipe.ingredients.size < 10) 15 else 20
-        else -> 0
-    }
-    
-    val cookTimeAdjustment = if ((recipe.cookTimeMinutes ?: 0) > 0) {
-        when (defaultServingSize) {
-            4 -> if (recipe.ingredients.size < 8) 5 else 10
-            6 -> if (recipe.ingredients.size < 8) 10 else 15
-            else -> 0
-        }
-    } else {
-        0
-    }
+    val prepTimeAdjustment = com.littlechef.app.ui.util.TimeAdjuster.adjustPrepTime(recipe.prepTimeMinutes, recipe.servings, defaultServingSize)
+    val cookTimeAdjustment = com.littlechef.app.ui.util.TimeAdjuster.adjustCookTime(recipe.cookTimeMinutes, recipe.servings, defaultServingSize)
     
     Card(
         modifier = modifier

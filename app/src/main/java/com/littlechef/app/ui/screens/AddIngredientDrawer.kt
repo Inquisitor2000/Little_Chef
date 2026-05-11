@@ -584,7 +584,7 @@ private fun DrawerCategoryHeader(
                     Text(
                         text = translateCategory(category.displayName),
                         style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.SemiBold,
+                        fontWeight = FontWeight.Bold,
                         color = if (isExpanded) {
                             MaterialTheme.colorScheme.primary
                         } else {
@@ -669,7 +669,7 @@ private fun DrawerSubcategoryHeader(
                     Text(
                         text = translateCategory(subcategory),
                         style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.SemiBold,
+                        fontWeight = FontWeight.Bold,
                         color = if (isExpanded) {
                             MaterialTheme.colorScheme.primary
                         } else {
@@ -729,7 +729,7 @@ private fun DrawerIngredientItem(
             Text(
                 text = translateIngredient(ingredient.nameKey),
                 style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.SemiBold
+                fontWeight = FontWeight.Bold
             )
         }
     }
@@ -768,7 +768,7 @@ private fun DrawerCustomIngredientItem(
             Text(
                 text = translateIngredient(ingredient.name),
                 style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier.weight(1f)
             )
             Surface(
@@ -995,7 +995,7 @@ private fun DrawerQuantityDialog(
                                         Text(
                                             text = translateUnit(selectedUnit),
                                             style = MaterialTheme.typography.bodyMedium,
-                                            fontWeight = FontWeight.SemiBold,
+                                            fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onPrimary
                                         )
                                     }
@@ -1185,7 +1185,7 @@ private fun DrawerCustomQuantityDialog(
                                         Text(
                                             text = translateUnit(selectedUnit),
                                             style = MaterialTheme.typography.bodyMedium,
-                                            fontWeight = FontWeight.SemiBold,
+                                            fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onPrimary
                                         )
                                     }

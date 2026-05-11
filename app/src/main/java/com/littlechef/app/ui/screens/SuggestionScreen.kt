@@ -226,7 +226,7 @@ private fun SuccessContent(
                 Text(
                     text = androidx.compose.ui.res.stringResource(R.string.suggestions_filter_selection),
                     style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(top = 0.dp, bottom = 4.dp)
@@ -696,7 +696,7 @@ private fun MealSuggestionCard(
                         is MealSuggestion.BundledMeal -> suggestion.recipe.name
                     },
                     style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
                 )

@@ -33,7 +33,6 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.littlechef.app.R
 import com.littlechef.app.domain.model.Cuisine
@@ -344,7 +343,7 @@ private fun CuisineChip(
                     Text(
                         text = cuisine.getLocalizedName(context),
                         style = MaterialTheme.typography.bodyLarge,
-                        fontWeight = FontWeight.SemiBold
+                        fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = cuisine.getLocalizedDescription(context),
@@ -537,8 +536,7 @@ private fun RecipeChip(
                     text = recipe.name,
                     style = MaterialTheme.typography.bodyMedium,
                     maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
-                    lineHeight = 18.sp
+                    overflow = TextOverflow.Ellipsis
                 )
                 
                 // Allergen count badge
@@ -630,7 +628,7 @@ private fun CuisineCard(
                 Text(
                     text = cuisine.getLocalizedName(context),
                     style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     maxLines = 1,
                     overflow = TextOverflow.Ellipsis
                 )

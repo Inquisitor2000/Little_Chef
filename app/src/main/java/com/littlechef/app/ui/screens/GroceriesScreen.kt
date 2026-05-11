@@ -380,7 +380,7 @@ fun GroceriesScreen(
                                                 Text(
                                                     text = viewModel.translateCategory(categoryName),
                                                     style = MaterialTheme.typography.bodyMedium,
-                                                    fontWeight = FontWeight.SemiBold,
+                                                    fontWeight = FontWeight.Bold,
                                                     color = MaterialTheme.colorScheme.primary
                                                 )
                                             }
@@ -500,7 +500,7 @@ fun GroceriesScreen(
                                                 Text(
                                                     text = viewModel.translateCategory(categoryName),
                                                     style = MaterialTheme.typography.bodyMedium,
-                                                    fontWeight = FontWeight.SemiBold,
+                                                    fontWeight = FontWeight.Bold,
                                                     color = MaterialTheme.colorScheme.primary
                                                 )
                                             }
@@ -901,7 +901,7 @@ private fun MealGroupHeader(
                     Text(
                         text = translateCategory(recipeName),
                         style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.SemiBold,
+                        fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onSurface
                     )
                     // Show meal types and planned date if available
@@ -1132,7 +1132,7 @@ private fun CompactGroceryItemCard(
                     if (it.isLowerCase()) it.titlecase() else it.toString() 
                 },
                 style = MaterialTheme.typography.bodyMedium,
-                fontWeight = if (item.isChecked) FontWeight.Normal else FontWeight.Medium,
+                fontWeight = if (item.isChecked) FontWeight.Normal else FontWeight.Bold,
                 textDecoration = if (item.isChecked) TextDecoration.LineThrough else null,
                 color = if (item.isChecked) 
                     MaterialTheme.colorScheme.onSurfaceVariant 
@@ -1374,7 +1374,7 @@ private fun PurchaseQuantityDialog(
                                         Text(
                                             text = translateUnit(selectedUnit),
                                             style = MaterialTheme.typography.bodyMedium,
-                                            fontWeight = FontWeight.SemiBold,
+                                            fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onPrimary
                                         )
                                     }

@@ -10,7 +10,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.littlechef.app.R
 import com.littlechef.app.ui.util.rememberHapticFeedback
 
@@ -47,8 +46,7 @@ fun WelcomeScreen(
                 style = MaterialTheme.typography.headlineMedium,
                 fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
-                color = MaterialTheme.colorScheme.onSurface,
-                fontSize = 28.sp
+                color = MaterialTheme.colorScheme.onSurface
             )
             
             Spacer(modifier = Modifier.height(16.dp))
@@ -59,7 +57,6 @@ fun WelcomeScreen(
                 style = MaterialTheme.typography.bodyLarge,
                 textAlign = TextAlign.Center,
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.7f),
-                lineHeight = 24.sp,
                 modifier = Modifier.padding(horizontal = 16.dp)
             )
             
@@ -83,8 +80,7 @@ fun WelcomeScreen(
                 Text(
                     text = stringResource(R.string.onboarding_next),
                     style = MaterialTheme.typography.titleMedium,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium
+                    fontWeight = FontWeight.Normal
                 )
             }
             

@@ -495,7 +495,7 @@ fun PantryItemCard(
                                     if (it.isLowerCase()) it.titlecase() else it.toString() 
                                 },
                                 style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.Medium
+                                fontWeight = FontWeight.Normal
                             )
                             // Show language indicator if ingredient was created in a different language
                             val createdLanguage = pantryItem.ingredient.createdInLanguage
@@ -517,7 +517,7 @@ fun PantryItemCard(
                     Text(
                         text = availableDisplay,
                         style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Medium,
+                        fontWeight = FontWeight.Normal,
                         color = MaterialTheme.colorScheme.primary
                     )
                 }
@@ -934,7 +934,7 @@ private fun EditPantryItemDialog(
                                                     else -> selectedUnit
                                                 },
                                                 style = MaterialTheme.typography.bodyMedium,
-                                                fontWeight = FontWeight.SemiBold,
+                                                fontWeight = FontWeight.Bold,
                                                 color = MaterialTheme.colorScheme.onPrimary
                                             )
                                         }
@@ -1081,7 +1081,7 @@ private fun PantryCategoryHeader(
                     Text(
                         text = translatedCategory,
                         style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Medium
+                        fontWeight = FontWeight.Normal
                     )
                     Text(
                         text = "$itemCount items",
@@ -1146,7 +1146,7 @@ private fun PantrySubcategoryHeader(
                     Text(
                         text = translatedSubcategory,
                         style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Medium
+                        fontWeight = FontWeight.Normal
                     )
                     Text(
                         text = "$itemCount items",

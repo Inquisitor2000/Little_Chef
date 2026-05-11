@@ -260,7 +260,7 @@ fun SettingsDrawer(
                         Text(
                             text = "Accent Color",
                             style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = FontWeight.SemiBold
+                            fontWeight = FontWeight.Bold
                         )
                         
                         // Preset color bubbles - different for light and dark mode
@@ -329,7 +329,7 @@ fun SettingsDrawer(
                             Text(
                                 text = "Text Size",
                                 style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.SemiBold
+                                fontWeight = FontWeight.Bold
                             )
                             Text(
                                 text = "${(roundToNearest5Percent(currentTextScale) * 100).toInt()}%",
@@ -409,7 +409,7 @@ private fun FontFamilyCard(
                 Text(
                     text = familyName,
                     style = MaterialTheme.typography.titleMedium.copy(fontFamily = previewFontFamily),
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                     maxLines = 1,
                     modifier = Modifier.height(24.dp)
@@ -440,8 +440,7 @@ private fun FontFamilyCard(
                     ) {
                         Text(
                             text = weightName.first().toString(),
-                            style = MaterialTheme.typography.labelSmall,
-                            fontSize = 10.sp
+                            style = MaterialTheme.typography.labelSmall
                         )
                     }
                 }

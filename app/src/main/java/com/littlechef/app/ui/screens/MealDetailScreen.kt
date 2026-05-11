@@ -17,6 +17,7 @@ import com.littlechef.app.domain.model.Meal
 import com.littlechef.app.domain.model.UnitConversion
 import com.littlechef.app.R
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 
 // Helper function to translate units in formatted display strings
 @Composable
@@ -144,7 +145,8 @@ fun MealDetailScreen(
                                 Spacer(modifier = Modifier.height(4.dp))
                                 Text(
                                     text = it,
-                                    style = MaterialTheme.typography.bodyMedium
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    fontWeight = FontWeight.Normal
                                 )
                             }
                         }
@@ -176,7 +178,7 @@ fun MealDetailScreen(
                                     },
                                     style = MaterialTheme.typography.labelMedium,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
-                                    fontWeight = androidx.compose.ui.text.font.FontWeight.Medium
+                                    fontWeight = androidx.compose.ui.text.font.FontWeight.Normal
                                 )
                             }
                         }
@@ -200,7 +202,7 @@ fun MealDetailScreen(
                                         text = mealType.getLocalizedName(context),
                                         style = MaterialTheme.typography.labelMedium,
                                         color = MaterialTheme.colorScheme.onPrimaryContainer,
-                                        fontWeight = androidx.compose.ui.text.font.FontWeight.Medium
+                                        fontWeight = androidx.compose.ui.text.font.FontWeight.Normal
                                     )
                                 }
                             }
@@ -225,7 +227,7 @@ fun MealDetailScreen(
                                         text = category.getLocalizedName(context),
                                         style = MaterialTheme.typography.labelMedium,
                                         color = MaterialTheme.colorScheme.onSecondaryContainer,
-                                        fontWeight = androidx.compose.ui.text.font.FontWeight.Medium
+                                        fontWeight = androidx.compose.ui.text.font.FontWeight.Normal
                                     )
                                 }
                             }
@@ -279,7 +281,8 @@ fun MealDetailScreen(
                             Column(modifier = Modifier.weight(1f)) {
                                 Text(
                                     text = mealIngredient.ingredient.name,
-                                    style = MaterialTheme.typography.bodyMedium
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    fontWeight = FontWeight.Bold
                                 )
                                 if (mealIngredient.ingredient.allergens.isNotEmpty()) {
                                     Text(
@@ -296,7 +299,7 @@ fun MealDetailScreen(
                                         mealIngredient.ingredient.unit
                                     )
                                 ),
-                                style = MaterialTheme.typography.bodyMedium,
+                                style = MaterialTheme.typography.bodyLarge,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant
                             )
                         }

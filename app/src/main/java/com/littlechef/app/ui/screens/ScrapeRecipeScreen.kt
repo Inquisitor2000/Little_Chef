@@ -273,7 +273,7 @@ private fun InitialContent(
                         Text(
                             text = stringResource(R.string.add_recipe_url_title),
                             style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.SemiBold,
+                            fontWeight = FontWeight.Bold,
                             color = MaterialTheme.colorScheme.onBackground
                         )
                         Text(
@@ -430,13 +430,13 @@ private fun RecipePreviewContent(
             Text(
                 text = stringResource(R.string.add_recipe_meal_type),
                 style = MaterialTheme.typography.titleSmall,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier.weight(1f)
             )
             Text(
                 text = stringResource(R.string.add_recipe_dish_type),
                 style = MaterialTheme.typography.titleSmall,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 modifier = Modifier.weight(1f)
             )
         }
@@ -534,7 +534,7 @@ private fun RecipePreviewContent(
             Text(
                 text = stringResource(R.string.add_recipe_ingredients) + " (${editedIngredients.size})",
                 style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onBackground
             )
             Text(
@@ -664,7 +664,7 @@ private fun RecipePreviewContent(
             Text(
                 text = stringResource(R.string.add_recipe_instructions),
                 style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onBackground
             )
             Row(
@@ -791,7 +791,7 @@ private fun DishImageSection(
             Text(
                 text = stringResource(R.string.add_recipe_dish_photo),
                 style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onBackground
             )
             if (dishImage != null) {
@@ -1007,7 +1007,7 @@ private fun EditIngredientDialog(
                                         Text(
                                             text = translateUnit(selectedUnit),
                                             style = MaterialTheme.typography.bodyMedium,
-                                            fontWeight = FontWeight.SemiBold,
+                                            fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onPrimary
                                         )
                                     }
@@ -1053,7 +1053,7 @@ private fun EditIngredientDialog(
                                     Text(
                                         text = translateUnit(unit),
                                         style = MaterialTheme.typography.bodyLarge,
-                                        fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
+                                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
                                         color = if (isSelected) {
                                             MaterialTheme.colorScheme.onPrimary
                                         } else {
@@ -1278,7 +1278,7 @@ internal fun MealTypePicker(
                                 "${item.emoji} ${translateMealType(item)}"
                             },
                             style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
+                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
                             color = if (isSelected) 
                                 MaterialTheme.colorScheme.onPrimaryContainer 
                             else 
@@ -1472,7 +1472,7 @@ internal fun DishCategoryPicker(
                                 "${item.emoji} ${translateDishCategory(item)}"
                             },
                             style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
+                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
                             color = if (isSelected) 
                                 MaterialTheme.colorScheme.onPrimaryContainer 
                             else 
@@ -1585,7 +1585,7 @@ internal fun ManualDishImageSection(
             Text(
                 text = stringResource(R.string.add_recipe_dish_photo),
                 style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onBackground
             )
             if (dishImage != null) {
@@ -2185,7 +2185,7 @@ fun EditRecipeScreen(
                     textStyle = MaterialTheme.typography.bodyLarge.copy(textAlign = TextAlign.Center)
                 )
                 
-                // Servings selector - cycles through 1, 2, 4, 6
+                // Servings selector - cycles through 1 through 6
                 Box(
                     modifier = Modifier
                         .weight(1f)
@@ -2193,8 +2193,10 @@ fun EditRecipeScreen(
                             val currentServings = state.servings.toIntOrNull() ?: 2
                             val nextServings = when (currentServings) {
                                 1 -> 2
-                                2 -> 4
-                                4 -> 6
+                                2 -> 3
+                                3 -> 4
+                                4 -> 5
+                                5 -> 6
                                 else -> 1
                             }
                             viewModel.updateServings(nextServings.toString())
@@ -2226,13 +2228,13 @@ fun EditRecipeScreen(
                 Text(
                     text = stringResource(R.string.add_recipe_meal_type),
                     style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     modifier = Modifier.weight(1f)
                 )
                 Text(
                     text = stringResource(R.string.add_recipe_dish_type),
                     style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     modifier = Modifier.weight(1f)
                 )
             }
@@ -2277,7 +2279,7 @@ fun EditRecipeScreen(
             Text(
                 text = stringResource(R.string.add_recipe_ingredients_count, state.ingredients.size),
                 style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.padding(top = 8.dp)
             )
@@ -2372,7 +2374,7 @@ fun EditRecipeScreen(
             Text(
                 text = stringResource(R.string.add_recipe_instructions),
                 style = MaterialTheme.typography.titleMedium,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.padding(top = 8.dp)
             )
@@ -2493,7 +2495,10 @@ private fun ServingsSelector(
                 val currentServings = servings.toIntOrNull() ?: 2
                 val nextServings = when (currentServings) {
                     1 -> 2
-                    2 -> 4
+                    2 -> 3
+                    3 -> 4
+                    4 -> 5
+                    5 -> 6
                     else -> 1
                 }
                 onServingsChange(nextServings.toString())

@@ -203,10 +203,9 @@ private fun RecipePreviewCard(
                 Text(
                     text = recipeName,
                     style = MaterialTheme.typography.bodySmall,
-                    fontWeight = FontWeight.Medium,
+                    fontWeight = FontWeight.Normal,
                     maxLines = 2,
-                    overflow = TextOverflow.Ellipsis,
-                    lineHeight = 14.sp
+                    overflow = TextOverflow.Ellipsis
                 )
             }
         }

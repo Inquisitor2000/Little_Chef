@@ -1,6 +1,6 @@
 # Little Chef — Family Meal Planner
 
-AI-powered meal planning app for Android. Plan meals, scale servings, track pantry inventory, generate grocery lists, and cook with voice-controlled ingredient tracking — all offline-first with 176 bundled recipes.
+AI-powered meal planning app for Android. Plan meals, scale servings, track pantry inventory, generate grocery lists, and cook with step-by-step cooking mode — all offline-first with 176 bundled recipes.
 
 **Stack:** Kotlin · Jetpack Compose · Material 3 · Clean Architecture + MVVM · Dagger Hilt · Room · DataStore
 
@@ -72,6 +72,7 @@ Relationships:
 - User-adjustable servings (1–6) via stepper or tap-to-cycle
 - Ingredient quantities scale proportionally with `selectedServings / originalServings`
 - Prep time adjusts ~35% per scaling ratio; cook time adjusts ~5%
+- Unified `TimeAdjuster` utility ensures preview cards and detail screens show identical times
 - Egg quantities round to nearest 0.5 (for partial-egg scenarios)
 - Per-plan serving overrides persisted in `MealPlan.plannedServings`
 - Default serving size set during onboarding (DataStore)
@@ -90,7 +91,7 @@ Relationships:
 
 ### Grocery List
 - Auto-generated from meal plans with ingredient merging
-- Voice input for quick additions (speech-to-text ingredient parsing)
+- Quick ingredient search with catalog matching
 - Custom header naming, category-based sorting
 - Text export for sharing
 
@@ -133,7 +134,7 @@ Little_Chef/
 │       ├── assets/
 │       │   ├── recipes/          # 164 bundled recipes (11 cuisines)
 │       │   └── translations/     # RU/RO ingredient & category translations
-│       ├── java/com/familymealplanner/
+│       ├── java/com/littlechef/app/
 │       └── res/                  # Layouts, strings (en/ru/ro), themes
 ├── 2fast_2hungry_pack/           # DLC recipe pack (12 recipes)
 ├── eastern_traditional_pack/     # DLC recipe pack

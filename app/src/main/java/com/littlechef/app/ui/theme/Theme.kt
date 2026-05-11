@@ -19,7 +19,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalView
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.view.WindowCompat
@@ -143,25 +145,27 @@ fun LittleChefTheme(
         }
     }
 
-    // Scale typography based on user preference and apply custom font
-    // Also override base sizes for labelSmall, bodySmall, and titleSmall
+    // Unified 3-size typography: all 15 M3 styles collapse to 3 sizes
+    // heading (24sp Bold) – screen titles, hero text
+    // title   (16sp Normal) – buttons, headers, descriptions, subtext
+    // body    (14sp Normal) – all reading text, labels, chips, annotations
     val scaledTypography = MaterialTheme.typography.let { typography ->
         typography.copy(
-            displayLarge = typography.displayLarge.copy(fontSize = typography.displayLarge.fontSize * textScale, fontFamily = fontFamily),
-            displayMedium = typography.displayMedium.copy(fontSize = typography.displayMedium.fontSize * textScale, fontFamily = fontFamily),
-            displaySmall = typography.displaySmall.copy(fontSize = typography.displaySmall.fontSize * textScale, fontFamily = fontFamily),
-            headlineLarge = typography.headlineLarge.copy(fontSize = typography.headlineLarge.fontSize * textScale, fontFamily = fontFamily),
-            headlineMedium = typography.headlineMedium.copy(fontSize = typography.headlineMedium.fontSize * textScale, fontFamily = fontFamily),
-            headlineSmall = typography.headlineSmall.copy(fontSize = typography.headlineSmall.fontSize * textScale, fontFamily = fontFamily),
-            titleLarge = typography.titleLarge.copy(fontSize = typography.titleLarge.fontSize * textScale, fontFamily = fontFamily),
-            titleMedium = typography.titleMedium.copy(fontSize = typography.titleMedium.fontSize * textScale, fontFamily = fontFamily),
-            titleSmall = typography.titleSmall.copy(fontSize = 16.sp * textScale, fontFamily = fontFamily), // Changed from 14sp to 16sp
-            bodyLarge = typography.bodyLarge.copy(fontSize = typography.bodyLarge.fontSize * textScale, fontFamily = fontFamily),
-            bodyMedium = typography.bodyMedium.copy(fontSize = typography.bodyMedium.fontSize * textScale, fontFamily = fontFamily),
-            bodySmall = typography.bodySmall.copy(fontSize = 14.sp * textScale, fontFamily = fontFamily), // Changed from 12sp to 14sp
-            labelLarge = typography.labelLarge.copy(fontSize = 16.sp * textScale, fontFamily = fontFamily), // Changed from 14sp to 16sp
-            labelMedium = typography.labelMedium.copy(fontSize = typography.labelMedium.fontSize * textScale, fontFamily = fontFamily),
-            labelSmall = typography.labelSmall.copy(fontSize = 12.sp * textScale, fontFamily = fontFamily) // Changed from 11sp to 12sp
+            displayLarge = TextStyle(fontSize = 24.sp * textScale, fontWeight = FontWeight.Bold, fontFamily = fontFamily),
+            displayMedium = TextStyle(fontSize = 24.sp * textScale, fontWeight = FontWeight.Bold, fontFamily = fontFamily),
+            displaySmall = TextStyle(fontSize = 24.sp * textScale, fontWeight = FontWeight.Bold, fontFamily = fontFamily),
+            headlineLarge = TextStyle(fontSize = 24.sp * textScale, fontWeight = FontWeight.Bold, fontFamily = fontFamily),
+            headlineMedium = TextStyle(fontSize = 24.sp * textScale, fontWeight = FontWeight.Bold, fontFamily = fontFamily),
+            headlineSmall = TextStyle(fontSize = 24.sp * textScale, fontWeight = FontWeight.Bold, fontFamily = fontFamily),
+            titleLarge = TextStyle(fontSize = 24.sp * textScale, fontWeight = FontWeight.Bold, fontFamily = fontFamily),
+            titleMedium = TextStyle(fontSize = 16.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
+            titleSmall = TextStyle(fontSize = 16.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
+            bodyLarge = TextStyle(fontSize = 16.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
+            bodyMedium = TextStyle(fontSize = 14.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
+            bodySmall = TextStyle(fontSize = 14.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
+            labelLarge = TextStyle(fontSize = 16.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
+            labelMedium = TextStyle(fontSize = 14.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
+            labelSmall = TextStyle(fontSize = 14.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily)
         )
     }
 

@@ -190,7 +190,7 @@ fun ManualRecipeScreen(
                         textStyle = MaterialTheme.typography.bodyLarge.copy(textAlign = TextAlign.Center)
                     )
                     
-                    // Servings selector - cycles through 1, 2, 4, 6
+                    // Servings selector - cycles through 1 through 6
                     Box(
                         modifier = Modifier
                             .weight(1f)
@@ -198,8 +198,10 @@ fun ManualRecipeScreen(
                                 val currentServings = state.servings.toIntOrNull() ?: 2
                                 val nextServings = when (currentServings) {
                                     1 -> 2
-                                    2 -> 4
-                                    4 -> 6
+                                    2 -> 3
+                                    3 -> 4
+                                    4 -> 5
+                                    5 -> 6
                                     else -> 1
                                 }
                                 viewModel.updateServings(nextServings.toString())
@@ -232,13 +234,13 @@ fun ManualRecipeScreen(
                     Text(
                         text = stringResource(R.string.add_recipe_meal_type),
                         style = MaterialTheme.typography.titleSmall,
-                        fontWeight = FontWeight.SemiBold,
+                        fontWeight = FontWeight.Bold,
                         modifier = Modifier.weight(1f)
                     )
                     Text(
                         text = stringResource(R.string.add_recipe_dish_type),
                         style = MaterialTheme.typography.titleSmall,
-                        fontWeight = FontWeight.SemiBold,
+                        fontWeight = FontWeight.Bold,
                         modifier = Modifier.weight(1f)
                     )
                 }
@@ -285,7 +287,7 @@ fun ManualRecipeScreen(
                 Text(
                     text = stringResource(R.string.add_recipe_ingredients_count, state.ingredients.size),
                     style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onBackground,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -339,7 +341,7 @@ fun ManualRecipeScreen(
                 Text(
                     text = stringResource(R.string.add_recipe_instructions),
                     style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     color = MaterialTheme.colorScheme.onBackground,
                     modifier = Modifier.padding(top = 8.dp)
                 )
@@ -511,7 +513,7 @@ internal fun ManualIngredientItem(
                 Text(
                     text = displayName,
                     style = MaterialTheme.typography.bodyLarge,
-                    fontWeight = FontWeight.Medium
+                    fontWeight = FontWeight.Normal
                 )
                 Text(
                     text = "${ingredient.quantity} $translatedUnit",
@@ -612,7 +614,7 @@ private fun EditManualIngredientDialog(
                     Text(
                         text = translateIngredient(ingredient.name),
                         style = MaterialTheme.typography.titleLarge,
-                        fontWeight = FontWeight.Medium
+                        fontWeight = FontWeight.Normal
                     )
                 }
                 
@@ -758,7 +760,7 @@ private fun EditManualIngredientDialog(
                                         Text(
                                             text = translateUnit(selectedUnit),
                                             style = MaterialTheme.typography.bodyMedium,
-                                            fontWeight = FontWeight.SemiBold,
+                                            fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onPrimary
                                         )
                                     }
@@ -804,7 +806,7 @@ private fun EditManualIngredientDialog(
                                     Text(
                                         text = translateUnit(unit),
                                         style = MaterialTheme.typography.bodyLarge,
-                                        fontWeight = if (isSelected) FontWeight.SemiBold else FontWeight.Normal,
+                                        fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
                                         color = if (isSelected) {
                                             MaterialTheme.colorScheme.onPrimary
                                         } else {

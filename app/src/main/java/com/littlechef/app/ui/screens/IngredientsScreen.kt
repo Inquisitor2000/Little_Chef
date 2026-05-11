@@ -185,7 +185,7 @@ fun IngredientCard(
                     if (it.isLowerCase()) it.titlecase() else it.toString() 
                 },
                 style = MaterialTheme.typography.bodyMedium,
-                fontWeight = FontWeight.Medium
+                fontWeight = FontWeight.Normal
             )
             Spacer(modifier = Modifier.height(4.dp))
             Text(

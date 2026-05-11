@@ -13,7 +13,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.littlechef.app.R
 import com.littlechef.app.ui.util.rememberHapticFeedback
 
@@ -55,10 +54,9 @@ fun LanguageSelectionScreen(
             Text(
                 text = stringResource(R.string.language_selection_title),
                 style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
-                color = MaterialTheme.colorScheme.onSurface,
-                fontSize = 22.sp
+                color = MaterialTheme.colorScheme.onSurface
             )
             
             Spacer(modifier = Modifier.height(24.dp))
@@ -126,8 +124,7 @@ fun LanguageSelectionScreen(
                 Text(
                     text = stringResource(R.string.onboarding_next),
                     style = MaterialTheme.typography.titleMedium,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium
+                    fontWeight = FontWeight.Normal
                 )
             }
             
@@ -169,7 +166,6 @@ private fun LanguageOption(
             Text(
                 text = languageName,
                 style = MaterialTheme.typography.bodyLarge,
-                fontSize = 16.sp,
                 color = if (isSelected) {
                     MaterialTheme.colorScheme.onPrimaryContainer
                 } else {

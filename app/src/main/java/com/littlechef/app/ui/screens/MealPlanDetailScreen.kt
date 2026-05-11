@@ -38,6 +38,7 @@ import com.littlechef.app.ui.components.formatNutritionValue
 import com.littlechef.app.domain.model.NutritionInfo
 import com.littlechef.app.ui.util.NutritionCalculator
 import com.littlechef.app.ui.util.RecipeImage
+import com.littlechef.app.ui.util.TimeAdjuster
 import com.littlechef.app.ui.util.rememberHapticFeedback
 import java.time.Instant
 import java.time.ZoneId
@@ -218,26 +219,12 @@ fun MealPlanDetailScreen(
                         Column(modifier = Modifier.padding(16.dp)) {
                             Row(
                                 modifier = Modifier.fillMaxWidth(),
-                                horizontalArrangement = Arrangement.SpaceEvenly,
                                 verticalAlignment = Alignment.CenterVertically
                             ) {
                                 val items = mutableListOf<@Composable () -> Unit>()
                                 
-                                // Calculate time adjustments based on servings multiplier
-                                // Prep scales ~35% per doubling; cook scales ~5% (method-dependent)
-                                val basePrepTime = mealPlan.meal.prepTimeMinutes ?: 0
-                                val baseCookTime = mealPlan.meal.cookTimeMinutes ?: 0
-                                val baseRecipeServings = mealPlan.meal.servings ?: 2
-                                
-                                val prepTimeAdjustment = if (basePrepTime > 0 && baseRecipeServings > 0) {
-                                    val ratio = selectedServings.toDouble() / baseRecipeServings.toDouble()
-                                    (basePrepTime * (ratio - 1.0) * 0.35).toInt().coerceAtLeast(0)
-                                } else 0
-                                
-                                val cookTimeAdjustment = if (baseCookTime > 0 && baseRecipeServings > 0) {
-                                    val ratio = selectedServings.toDouble() / baseRecipeServings.toDouble()
-                                    (baseCookTime * (ratio - 1.0) * 0.05).toInt().coerceAtLeast(0)
-                                } else 0
+                                val prepTimeAdjustment = TimeAdjuster.adjustPrepTime(mealPlan.meal.prepTimeMinutes, mealPlan.meal.servings, selectedServings)
+                                val cookTimeAdjustment = TimeAdjuster.adjustCookTime(mealPlan.meal.cookTimeMinutes, mealPlan.meal.servings, selectedServings)
                                 
                                 // Prep time
                                 mealPlan.meal.prepTimeMinutes?.let { prepTime ->
@@ -324,7 +311,12 @@ fun MealPlanDetailScreen(
                                 }
                                 
                                 items.forEachIndexed { index, item ->
-                                    item()
+                                    Box(
+                                        modifier = Modifier.weight(1f),
+                                        contentAlignment = Alignment.Center
+                                    ) {
+                                        item()
+                                    }
                                     if (index < items.size - 1) {
                                         Box(
                                             modifier = Modifier
@@ -360,48 +352,67 @@ fun MealPlanDetailScreen(
                                 .height(1.dp)
                                 .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
                         )
-                        Row(
-                            modifier = Modifier
-                                .fillMaxWidth()
-                                .padding(start = 0.dp, end = 0.dp, top = 12.dp, bottom = 8.dp),
-                            horizontalArrangement = Arrangement.SpaceEvenly,
-                            verticalAlignment = Alignment.CenterVertically
-                        ) {
-                            InfoColumn(
-                                value = formatNutritionValue(nutritionInfo.calories),
-                                label = stringResource(R.string.nutrition_calories_short)
-                            )
-                            Box(
+                            Row(
                                 modifier = Modifier
-                                    .width(1.dp)
-                                    .height(28.dp)
-                                    .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
-                            )
-                            InfoColumn(
-                                value = formatNutritionValue(nutritionInfo.fatsG),
-                                label = stringResource(R.string.nutrition_fats_short)
-                            )
-                            Box(
-                                modifier = Modifier
-                                    .width(1.dp)
-                                    .height(28.dp)
-                                    .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
-                            )
-                            InfoColumn(
-                                value = formatNutritionValue(nutritionInfo.carbsG),
-                                label = stringResource(R.string.nutrition_carbs_short)
-                            )
-                            Box(
-                                modifier = Modifier
-                                    .width(1.dp)
-                                    .height(28.dp)
-                                    .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
-                            )
-                            InfoColumn(
-                                value = formatNutritionValue(nutritionInfo.proteinG),
-                                label = stringResource(R.string.nutrition_protein_short)
-                            )
-                        }
+                                    .fillMaxWidth()
+                                    .padding(top = 12.dp),
+                                verticalAlignment = Alignment.CenterVertically
+                            ) {
+                                Box(
+                                    modifier = Modifier.weight(1f),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    InfoColumn(
+                                        value = formatNutritionValue(nutritionInfo.calories),
+                                        label = stringResource(R.string.nutrition_calories_short)
+                                    )
+                                }
+                                Box(
+                                    modifier = Modifier
+                                        .width(1.dp)
+                                        .height(28.dp)
+                                        .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
+                                )
+                                Box(
+                                    modifier = Modifier.weight(1f),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    InfoColumn(
+                                        value = formatNutritionValue(nutritionInfo.fatsG),
+                                        label = stringResource(R.string.nutrition_fats_short)
+                                    )
+                                }
+                                Box(
+                                    modifier = Modifier
+                                        .width(1.dp)
+                                        .height(28.dp)
+                                        .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
+                                )
+                                Box(
+                                    modifier = Modifier.weight(1f),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    InfoColumn(
+                                        value = formatNutritionValue(nutritionInfo.carbsG),
+                                        label = stringResource(R.string.nutrition_carbs_short)
+                                    )
+                                }
+                                Box(
+                                    modifier = Modifier
+                                        .width(1.dp)
+                                        .height(28.dp)
+                                        .background(MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.2f))
+                                )
+                                Box(
+                                    modifier = Modifier.weight(1f),
+                                    contentAlignment = Alignment.Center
+                                ) {
+                                    InfoColumn(
+                                        value = formatNutritionValue(nutritionInfo.proteinG),
+                                        label = stringResource(R.string.nutrition_protein_short)
+                                    )
+                                }
+                            }
                     }
 
                             Spacer(modifier = Modifier.height(12.dp))
@@ -427,7 +438,7 @@ fun MealPlanDetailScreen(
                                             com.littlechef.app.domain.model.MealType.DESSERT -> stringResource(R.string.meal_type_dessert)
                                         },
                                         style = MaterialTheme.typography.bodyMedium,
-                                        fontWeight = FontWeight.Medium
+                                        fontWeight = FontWeight.Normal
                                     )
                                 }
                                 Column(horizontalAlignment = Alignment.End) {
@@ -511,7 +522,7 @@ fun MealPlanDetailScreen(
                             if (mealPlan.meal.ingredients.isEmpty()) {
                                 Text(
                                     text = stringResource(R.string.meal_plan_no_ingredients),
-                                    style = MaterialTheme.typography.bodyMedium,
+                                    style = MaterialTheme.typography.bodyLarge,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             } else {
@@ -560,7 +571,8 @@ fun MealPlanDetailScreen(
                                                         text = viewModel.translateIngredientName(displayIngredient.name).replaceFirstChar { 
                                                             if (it.isLowerCase()) it.titlecase() else it.toString() 
                                                         },
-                                                        style = MaterialTheme.typography.bodyMedium
+                                                        style = MaterialTheme.typography.bodyLarge,
+                                                        fontWeight = FontWeight.Bold
                                                     )
                                                     
                                                     // Show "Substituting for [original]" if this is a substitute
@@ -607,22 +619,22 @@ fun MealPlanDetailScreen(
                                             }
                                             
                                             Text(
-                                                text = run {
-                                                    val adjustedQty = roundEggQuantity(mealIngredient.quantity * servingsMultiplier, displayIngredient.name)
-                                                    val formatted = UnitConversion.formatForDisplay(
-                                                        adjustedQty,
-                                                        displayIngredient.unit
-                                                    )
-                                                    // Extract quantity and unit, then translate unit
-                                                    val parts = formatted.split(" ", limit = 2)
-                                                    if (parts.size == 2) {
-                                                        "${parts[0]} ${getUnitTranslation(parts[1])}"
-                                                    } else {
-                                                        formatted
-                                                    }
-                                                },
-                                                style = MaterialTheme.typography.bodyMedium,
-                                                fontWeight = FontWeight.Medium,
+                                            text = run {
+                                                val adjustedQty = roundEggQuantity(mealIngredient.quantity * servingsMultiplier, displayIngredient.name)
+                                                val formatted = UnitConversion.formatForDisplay(
+                                                    adjustedQty,
+                                                    displayIngredient.unit
+                                                )
+                                                // Extract quantity and unit, then translate unit
+                                                val parts = formatted.split(" ", limit = 2)
+                                                if (parts.size == 2) {
+                                                    "${parts[0]} ${getUnitTranslation(parts[1])}"
+                                                } else {
+                                                    formatted
+                                                }
+                                            },
+                                            style = MaterialTheme.typography.bodyLarge,
+                                            fontWeight = FontWeight.Normal,
                                                 color = if (isSubstituted) 
                                                     MaterialTheme.colorScheme.primary 
                                                 else 
@@ -684,7 +696,8 @@ fun MealPlanDetailScreen(
                                                 text = viewModel.translateIngredientName(shortage.ingredientName).replaceFirstChar { 
                                                     if (it.isLowerCase()) it.titlecase() else it.toString() 
                                                 },
-                                                style = MaterialTheme.typography.bodyMedium
+                                                style = MaterialTheme.typography.bodyMedium,
+                                                fontWeight = FontWeight.Bold
                                             )
                                             
                                             // Show "Substituting for [original]" if this is a substitute
@@ -736,7 +749,7 @@ fun MealPlanDetailScreen(
                                                     text = stringResource(R.string.meal_plan_revert_to_original, viewModel.translateIngredientName(originalIngredient.name)),
                                                     style = MaterialTheme.typography.bodySmall,
                                                     color = MaterialTheme.colorScheme.secondary,
-                                                    fontWeight = FontWeight.Medium,
+                                                    fontWeight = FontWeight.Normal,
                                                     modifier = Modifier.weight(1f)
                                                 )
                                                 
@@ -785,7 +798,7 @@ fun MealPlanDetailScreen(
                                                         text = stringResource(R.string.meal_plan_use_substitute, viewModel.translateIngredientName(sub.name)),
                                                         style = MaterialTheme.typography.bodySmall,
                                                         color = MaterialTheme.colorScheme.secondary,
-                                                        fontWeight = FontWeight.Medium,
+                                                        fontWeight = FontWeight.Normal,
                                                         modifier = Modifier.weight(1f)
                                                     )
                                                     
@@ -892,7 +905,8 @@ fun MealPlanDetailScreen(
                                 steps.forEachIndexed { index, step ->
                                     Text(
                                         text = step,
-                                        style = MaterialTheme.typography.bodyMedium,
+                                        style = MaterialTheme.typography.bodyLarge,
+                                        fontWeight = FontWeight.Normal,
                                         modifier = Modifier.padding(bottom = if (index < steps.size - 1) 16.dp else 0.dp)
                                     )
                                 }
@@ -914,7 +928,7 @@ fun MealPlanDetailScreen(
                             Text(
                                 text = stringResource(R.string.meal_plan_cooking_actions),
                                 style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.SemiBold
+                                fontWeight = FontWeight.Bold
                             )
                             
                             when (mealPlan.status) {

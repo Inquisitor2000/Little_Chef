@@ -13,7 +13,6 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import com.littlechef.app.R
 import com.littlechef.app.ui.util.rememberHapticFeedback
 
@@ -52,11 +51,9 @@ fun ServingSizeScreen(
             Text(
                 text = stringResource(R.string.onboarding_serving_size_question),
                 style = MaterialTheme.typography.headlineSmall,
-                fontWeight = FontWeight.SemiBold,
+                fontWeight = FontWeight.Bold,
                 textAlign = TextAlign.Center,
                 color = MaterialTheme.colorScheme.onSurface,
-                fontSize = 22.sp,
-                lineHeight = 28.sp,
                 modifier = Modifier.padding(horizontal = 16.dp)
             )
 
@@ -170,7 +167,6 @@ fun ServingSizeScreen(
                 style = MaterialTheme.typography.bodyMedium,
                 textAlign = TextAlign.Center,
                 color = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.6f),
-                lineHeight = 20.sp,
                 modifier = Modifier.padding(top = 16.dp, start = 16.dp, end = 16.dp)
             )
 
@@ -195,8 +191,7 @@ fun ServingSizeScreen(
                 Text(
                     text = stringResource(R.string.onboarding_next),
                     style = MaterialTheme.typography.titleMedium,
-                    fontSize = 16.sp,
-                    fontWeight = FontWeight.Medium
+                    fontWeight = FontWeight.Normal
                 )
             }
 

@@ -105,9 +105,9 @@
     
     <!-- Meal Plan Detail Screen -->
     <string name="meal_plan_prep">Подготовка</string>
-    <string name="meal_plan_cook">Приготовление</string>
+    <string name="meal_plan_cook">Готовка</string>
     <string name="meal_plan_total">Всего</string>
-    <string name="meal_plan_cook_time">Приготовление</string>
+    <string name="meal_plan_cook_time">Готовка</string>
     <string name="meal_plan_cooking_actions">Действия</string>
     <string name="meal_plan_insufficient_ingredients">Недостаточно ингредиентов</string>
     <string name="meal_plan_no_ingredients">Ингредиенты не указаны</string>
@@ -212,7 +212,7 @@
     
     <!-- Recipe Detail Screen -->
     <string name="recipe_prep">Подготовка</string>
-    <string name="recipe_cook">Приготовление</string>
+    <string name="recipe_cook">Готовка</string>
     <string name="recipe_total">Всего</string>
     <string name="recipe_servings">Порции</string>
     <string name="recipe_servings_one">Порция</string>
@@ -381,7 +381,7 @@
     <string name="add_recipe_dish_type">Категория</string>
     <string name="add_recipe_none">Любое</string>
     <string name="add_recipe_prep">Подготовка</string>
-    <string name="add_recipe_cook">Приготовление</string>
+    <string name="add_recipe_cook">Готовка</string>
     <string name="add_recipe_min">мин</string>
     <string name="add_recipe_servings">Порции</string>
     <string name="add_recipe_ingredients">Ингредиенты</string>
@@ -405,7 +405,7 @@
     <string name="add_recipe_error_title">Что-то пошло не так</string>
     <string name="add_recipe_ok">ОК</string>
     <string name="add_recipe_prep_min">Подготовка (мин)</string>
-    <string name="add_recipe_cook_min">Приготовление (мин)</string>
+    <string name="add_recipe_cook_min">Готовка (мин)</string>
     <string name="add_recipe_add_ingredient">Добавить ингредиент</string>
     <string name="edit_ingredient_title">Редактировать ингредиент</string>
     

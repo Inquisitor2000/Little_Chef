@@ -323,7 +323,7 @@ fun SettingsScreen(
                         Text(
                             text = stringResource(R.string.settings_accent_color),
                             style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = FontWeight.SemiBold
+                            fontWeight = FontWeight.Bold
                         )
                         
                         val presetColors = if (isDarkTheme) {
@@ -399,7 +399,7 @@ fun SettingsScreen(
                             Text(
                                 text = stringResource(R.string.settings_text_size),
                                 style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.SemiBold
+                                fontWeight = FontWeight.Bold
                             )
                         }
                         
@@ -520,7 +520,7 @@ private fun FontFamilyCard(
                 Text(
                     text = familyName,
                     style = MaterialTheme.typography.titleMedium.copy(fontFamily = previewFontFamily),
-                    fontWeight = FontWeight.SemiBold,
+                    fontWeight = FontWeight.Bold,
                     textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                     maxLines = 1,
                     modifier = Modifier.height(24.dp)
@@ -550,8 +550,7 @@ private fun FontFamilyCard(
                     ) {
                         Text(
                             text = weightName.first().toString(),
-                            style = MaterialTheme.typography.labelSmall,
-                            fontSize = 10.sp
+                            style = MaterialTheme.typography.labelSmall
                         )
                     }
                 }
