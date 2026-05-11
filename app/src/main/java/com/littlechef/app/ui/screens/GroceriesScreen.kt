@@ -379,9 +379,9 @@ fun GroceriesScreen(
                                                 )
                                                 Text(
                                                     text = viewModel.translateCategory(categoryName),
-                                                    style = MaterialTheme.typography.bodyMedium,
-                                                    fontWeight = FontWeight.Bold,
-                                                    color = MaterialTheme.colorScheme.primary
+                                                style = MaterialTheme.typography.bodyLarge,
+                                                fontWeight = FontWeight.Bold,
+                                                color = MaterialTheme.colorScheme.primary
                                                 )
                                             }
                                         }
@@ -499,9 +499,9 @@ fun GroceriesScreen(
                                                 )
                                                 Text(
                                                     text = viewModel.translateCategory(categoryName),
-                                                    style = MaterialTheme.typography.bodyMedium,
-                                                    fontWeight = FontWeight.Bold,
-                                                    color = MaterialTheme.colorScheme.primary
+                                                style = MaterialTheme.typography.bodyLarge,
+                                                fontWeight = FontWeight.Bold,
+                                                color = MaterialTheme.colorScheme.primary
                                                 )
                                             }
                                         }
@@ -900,7 +900,7 @@ private fun MealGroupHeader(
                 Column {
                     Text(
                         text = translateCategory(recipeName),
-                        style = MaterialTheme.typography.bodyMedium,
+                        style = MaterialTheme.typography.titleMedium,
                         fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.onSurface
                     )
@@ -932,19 +932,19 @@ private fun MealGroupHeader(
                         }
                         Text(
                             text = infoText,
-                            style = MaterialTheme.typography.bodySmall,
+                            style = MaterialTheme.typography.bodyLarge,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     } else if (servings != null) {
                         Text(
                             text = stringResource(R.string.groceries_servings, servings),
-                            style = MaterialTheme.typography.bodySmall,
+                            style = MaterialTheme.typography.bodyLarge,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     } else {
                         Text(
                             text = "$itemCount items",
-                            style = MaterialTheme.typography.bodySmall,
+                            style = MaterialTheme.typography.bodyLarge,
                             color = MaterialTheme.colorScheme.onSurfaceVariant
                         )
                     }
@@ -1131,7 +1131,7 @@ private fun CompactGroceryItemCard(
                 text = translatedName.replaceFirstChar { 
                     if (it.isLowerCase()) it.titlecase() else it.toString() 
                 },
-                style = MaterialTheme.typography.bodyMedium,
+                style = MaterialTheme.typography.bodyLarge,
                 fontWeight = if (item.isChecked) FontWeight.Normal else FontWeight.Bold,
                 textDecoration = if (item.isChecked) TextDecoration.LineThrough else null,
                 color = if (item.isChecked) 
