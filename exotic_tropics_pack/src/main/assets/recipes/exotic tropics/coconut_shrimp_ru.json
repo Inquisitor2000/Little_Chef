@@ -1,0 +1,23 @@
+{
+  "id": "coconut_shrimp",
+  "name": "Креветки в кокосе",
+  "instructions": "1. Очистите креветки, удалите кишечную вену, оставив хвостики. Промокните бумажными полотенцами. Приправьте солью и перцем.\n\n2. Подготовьте три миски для панировки: одна с мукой, вторая со взбитыми яйцами, третья со смесью кокосовой стружки и панировочных сухарей.\n\n3. Обваляйте каждую креветку в муке, стряхивая излишки. Окуните во взбитые яйца, затем плотно прижмите к кокосово-сухарной смеси.\n\n4. Разогрейте масло в глубокой сковороде до 175°C. Нужно около 3 см масла.\n\n5. Жарьте креветки порциями по 2-3 минуты, переворачивая один раз, до золотистого цвета.\n\n6. Выложите на бумажные полотенца. Подавайте сразу с ананасовой сальсой или сладким чили-соусом и дольками лайма.",
+  "simpleInstructions": "1. Промокните креветки и приправьте.\n\n2. Обваляйте в муке, яйце, затем в кокосово-сухарной смеси.\n\n3. Жарьте в горячем масле 2-3 минуты до золотистого цвета.\n\n4. Выложите на бумажные полотенца.\n\n5. Подавайте с соусом и лаймом.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 10,
+  "servings": 4,
+  "cuisine": "Exotic Tropics",
+  "mealType": "DINNER",
+  "dishCategory": "SEAFOOD",
+  "ingredients": [
+    { "name": "Shrimp", "quantity": 400, "unit": "g", "isStarIngredient": true },
+    { "name": "Shredded Coconut", "quantity": 100, "unit": "g", "isStarIngredient": false },
+    { "name": "Breadcrumbs", "quantity": 50, "unit": "g", "isStarIngredient": false },
+    { "name": "Flour", "quantity": 60, "unit": "g", "isStarIngredient": false },
+    { "name": "Eggs", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Sunflower Oil", "quantity": 500, "unit": "ml", "isStarIngredient": false },
+    { "name": "Lime", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false },
+    { "name": "Black Pepper", "quantity": 0.25, "unit": "tsp", "isStarIngredient": false }
+  ]
+}

@@ -740,7 +740,21 @@ private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
                 stringResource(R.string.premium_recipe_blini),
                 stringResource(R.string.premium_recipe_solyanka)
             ),
-            price = "$1.99"
+            price = "$1.99",
+            recipeImageUrls = listOf(
+                "recipes/images/easterntraditional/borscht.jpg",
+                "recipes/images/easterntraditional/pierogi.jpg",
+                "recipes/images/easterntraditional/golubtsy.jpg",
+                "recipes/images/easterntraditional/beef_stroganoff.jpg",
+                "recipes/images/easterntraditional/pelmeni.jpg",
+                "recipes/images/easterntraditional/kasha.jpg",
+                "recipes/images/easterntraditional/shchi.jpg",
+                "recipes/images/easterntraditional/kotleti.jpg",
+                "recipes/images/easterntraditional/vareniki.jpg",
+                "recipes/images/easterntraditional/olivier_salad.jpg",
+                "recipes/images/easterntraditional/blini.jpg",
+                "recipes/images/easterntraditional/solyanka.jpg"
+            )
         )
         Cuisine.EXOTIC_TROPICS -> PremiumPackPreview(
             cuisine = cuisine,
@@ -758,7 +772,21 @@ private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
                 stringResource(R.string.premium_recipe_pineapple_salsa),
                 stringResource(R.string.premium_recipe_banana_fritters)
             ),
-            price = "$1.99"
+            price = "$1.99",
+            recipeImageUrls = listOf(
+                "recipes/images/exotictropics/coconut_curry.jpg",
+                "recipes/images/exotictropics/mango_sticky_rice.jpg",
+                "recipes/images/exotictropics/pineapple_fried_rice.jpg",
+                "recipes/images/exotictropics/grilled_plantains.jpg",
+                "recipes/images/exotictropics/papaya_salad.jpg",
+                "recipes/images/exotictropics/coconut_rice.jpg",
+                "recipes/images/exotictropics/tuna_poke_bowl.jpg",
+                "recipes/images/exotictropics/mango_lassi.jpg",
+                "recipes/images/exotictropics/tropical_fruit_salad.jpg",
+                "recipes/images/exotictropics/coconut_shrimp.jpg",
+                "recipes/images/exotictropics/pineapple_salsa.jpg",
+                "recipes/images/exotictropics/banana_fritters.jpg"
+            )
         )
         else -> PremiumPackPreview(
             cuisine = cuisine,

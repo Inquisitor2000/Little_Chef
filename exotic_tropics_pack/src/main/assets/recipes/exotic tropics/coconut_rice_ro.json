@@ -1,0 +1,19 @@
+{
+  "id": "coconut_rice",
+  "name": "Orez cu Nucă de Coco",
+  "instructions": "1. Clătește orezul în apă rece până apa devine clară. Strecoară bine.\n\n2. Într-o cratiță medie, combină laptele de cocos, apa și sarea. Adu la fierbere ușoară la foc mediu.\n\n3. Adaugă orezul clătit și amestecă o dată. Adu înapoi la fierbere.\n\n4. Reduce focul la mic, acoperă bine și gătește 15-18 minute până tot lichidul este absorbit.\n\n5. Oprește focul și lasă acoperit 5 minute.\n\n6. Afânce orezul cu o furculiță. Adaugă zahărul și amestecă până se dizolvă.\n\n7. Servește cald ca garnitură la curry, carne la grătar sau preparate tropicale. Decorează cu fulgi de cocos prăjiți sau coriandru tocat, dacă dorești.",
+  "simpleInstructions": "1. Clătește orezul bine.\n\n2. Fierbe ușor laptele de cocos, apa și sarea.\n\n3. Adaugă orezul și adu la fierbere.\n\n4. Acoperă și gătește la foc mic 15-18 minute.\n\n5. Lasă să se odihnească 5 minute, apoi afânce.\n\n6. Adaugă zahărul și servește.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 25,
+  "servings": 6,
+  "cuisine": "Exotic Tropics",
+  "mealType": "LUNCH",
+  "dishCategory": "SIDE_DISH",
+  "ingredients": [
+    { "name": "Rice", "quantity": 300, "unit": "g", "isStarIngredient": true },
+    { "name": "Coconut Milk", "quantity": 200, "unit": "ml", "isStarIngredient": false },
+    { "name": "Water", "quantity": 250, "unit": "ml", "isStarIngredient": false },
+    { "name": "Sugar", "quantity": 10, "unit": "g", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
+  ]
+}

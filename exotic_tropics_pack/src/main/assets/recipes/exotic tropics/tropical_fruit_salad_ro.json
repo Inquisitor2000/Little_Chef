@@ -1,0 +1,23 @@
+{
+  "id": "tropical_fruit_salad",
+  "name": "Salată de Fructe Tropicale",
+  "instructions": "1. Curăță și taie mango, ananasul, papaya și banana în cuburi de o gură.\n\n2. Taie fructul dragon în jumătate și scoate pulpa cu o linguriță sau taie-o cuburi.\n\n3. Pune toate fructele tăiate într-un bol mare.\n\n4. Într-un bol mic, amestecă zeama de lime cu mierea pentru dressing.\n\n5. Toarnă dressingul peste fructe și amestecă ușor, fără a zdrobi fructele.\n\n6. Adaugă nuca de cocos rasă și frunzele de mentă. Amestecă ușor încă o dată.\n\n7. Dă la frigider 15 minute înainte de servire. Decorează cu mentă suplimentară și un praf de nucă de cocos.",
+  "simpleInstructions": "1. Taie toate fructele tropicale cuburi potrivite.\n\n2. Amestecă zeama de lime cu mierea pentru dressing.\n\n3. Amestecă fructele cu dressingul.\n\n4. Adaugă nucă de cocos rasă și mentă.\n\n5. Dă la frigider 15 minute și servește.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 0,
+  "servings": 6,
+  "cuisine": "Exotic Tropics",
+  "mealType": "SNACK",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    { "name": "Mango", "quantity": 1, "unit": "pcs", "isStarIngredient": true },
+    { "name": "Pineapple", "quantity": 200, "unit": "g", "isStarIngredient": false },
+    { "name": "Papaya", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Banana", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Dragon Fruit", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Lime", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Honey", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Shredded Coconut", "quantity": 30, "unit": "g", "isStarIngredient": false },
+    { "name": "Mint", "quantity": 10, "unit": "g", "isStarIngredient": false }
+  ]
+}

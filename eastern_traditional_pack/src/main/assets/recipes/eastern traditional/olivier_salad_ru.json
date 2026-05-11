@@ -1,0 +1,26 @@
+{
+  "id": "olivier_salad",
+  "name": "Салат Оливье",
+  "instructions": "1. Отварите картофель, морковь и яйца до готовности. Дайте остыть.\n\n2. Нарежьте картофель, морковь, яйца и яблоко мелкими кубиками около 1 см.\n\n3. Нарежьте соленые огурцы и куриное мясо (или ветчину) такими же кубиками.\n\n4. Мелко нарежьте зеленый лук и укроп.\n\n5. Сложите все нарезанные ингредиенты в большую миску.\n\n6. Добавьте слитый консервированный горошек.\n\n7. Приправьте солью и перцем. Добавьте майонез и хорошо перемешайте до равномерного покрытия.\n\n8. Охладите в холодильнике не менее часа перед подачей, чтобы ароматы смешались. Подавайте холодным, украсив свежим укропом.",
+  "simpleInstructions": "1. Отварите картофель, морковь и яйца. Дайте остыть.\n\n2. Нарежьте все мелкими кубиками.\n\n3. Смешайте все ингредиенты в миске.\n\n4. Добавьте майонез и хорошо перемешайте.\n\n5. Охладите не менее часа.\n\n6. Подавайте холодным, украсив укропом.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 25,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "LUNCH",
+  "dishCategory": "SALAD",
+  "ingredients": [
+    { "name": "Potatoes", "quantity": 4, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Carrots", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Eggs", "quantity": 4, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Pickles", "quantity": 3, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Chicken Breast", "quantity": 200, "unit": "g", "isStarIngredient": true },
+    { "name": "Peas Canned", "quantity": 150, "unit": "g", "isStarIngredient": false },
+    { "name": "Apple", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Mayonnaise", "quantity": 150, "unit": "g", "isStarIngredient": false },
+    { "name": "Dill", "quantity": 10, "unit": "g", "isStarIngredient": false },
+    { "name": "Spring Onions", "quantity": 30, "unit": "g", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false },
+    { "name": "Black Pepper", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
+  ]
+}

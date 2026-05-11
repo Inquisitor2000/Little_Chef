@@ -1,0 +1,74 @@
+{
+  "id": "pierogi",
+  "name": "Pierogi",
+  "instructions": "1. For the dough: Mix flour with a pinch of salt. Add the egg, sour cream, and gradually the warm water. Knead for 5-7 minutes until smooth. Wrap in plastic and let rest for 30 minutes.\n\n2. For the filling: Peel the potatoes and boil in salted water until tender, about 15-20 minutes. Drain and mash well.\n\n3. Mix the mashed potatoes with grated cheese, golden fried onion, and salt and pepper to taste.\n\n4. Roll out the dough on a floured surface to 3mm thickness. Cut into circles using a glass or 8cm cutter.\n\n5. Place a teaspoon of filling in the center of each circle. Fold the edges and press firmly to seal.\n\n6. Boil the pierogi in salted water in batches for 3-4 minutes after they float to the surface.\n\n7. Serve hot with sour cream, fried onions, and fresh dill.",
+  "simpleInstructions": "1. Make dough from flour, egg, sour cream, and water. Let rest.\n\n2. Boil potatoes and mash.\n\n3. Mix mash with cheese, fried onion, and seasonings.\n\n4. Roll dough and cut circles.\n\n5. Fill and seal dumplings.\n\n6. Boil 3-4 minutes after floating.\n\n7. Serve with sour cream and onion.",
+  "prepTimeMinutes": 40,
+  "cookTimeMinutes": 25,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Flour",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Potatoes",
+      "quantity": 500,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 150,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "id": "coconut_curry",
+  "name": "Карри с кокосом",
+  "instructions": "1. Нарежьте куриную грудку кусочками на один укус. Приправьте солью и перцем.\n\n2. Разогрейте масло в большой сковороде на средне-сильном огне. Обжарьте курицу 4-5 минут до золотистого цвета. Отложите.\n\n3. В той же сковороде добавьте лук и готовьте 3 минуты до мягкости. Добавьте чеснок и имбирь, готовьте 1 минуту.\n\n4. Добавьте порошок карри и помешивайте 30 секунд до появления аромата.\n\n5. Влейте кокосовое молоко и доведите до слабого кипения. Верните курицу.\n\n6. Готовьте 10-12 минут, пока курица не пропечется, а соус слегка не загустеет.\n\n7. Приправьте солью и перцем по вкусу. Подавайте с рисом, украсив свежим кинзой.",
+  "simpleInstructions": "1. Нарежьте курицу кусочками и обжарьте.\n\n2. Обжарьте лук, чеснок и имбирь.\n\n3. Добавьте карри, затем кокосовое молоко.\n\n4. Верните курицу и тушите 10-12 минут.\n\n5. Приправьте и подавайте с рисом и кинзой.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 25,
+  "servings": 4,
+  "cuisine": "Exotic Tropics",
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    { "name": "Chicken Breast", "quantity": 500, "unit": "g", "isStarIngredient": true },
+    { "name": "Coconut Milk", "quantity": 400, "unit": "ml", "isStarIngredient": false },
+    { "name": "Onion", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Garlic", "quantity": 3, "unit": "cloves", "isStarIngredient": false },
+    { "name": "Ginger", "quantity": 15, "unit": "g", "isStarIngredient": false },
+    { "name": "Curry Powder", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Rice", "quantity": 200, "unit": "g", "isStarIngredient": false },
+    { "name": "Sunflower Oil", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Cilantro", "quantity": 10, "unit": "g", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
+    { "name": "Black Pepper", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
+  ]
+}

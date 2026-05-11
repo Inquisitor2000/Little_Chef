@@ -1,0 +1,20 @@
+{
+  "id": "mango_sticky_rice",
+  "name": "Orez Lipicios cu Mango",
+  "instructions": "1. Clătește orezul lipicios în apă rece până apa devine clară. Lasă la înmuiat cel puțin 4 ore sau peste noapte.\n\n2. Strecoară orezul și fierbe-l la aburi 20-25 minute până se înmoaie. Poți folosi și un orezar cu mai puțină apă.\n\n3. În timp ce orezul fierbe, încălzește laptele de cocos într-o cratiță mică la foc mediu. Rezervă 2 linguri pentru decor.\n\n4. Adaugă zahărul și sarea în laptele de cocos. Amestecă până se dizolvă.\n\n5. Toarnă amestecul cald de cocos peste orezul lipicios fiert. Amestecă ușor și lasă să se odihnească 10 minute să absoarbă.\n\n6. Curăță mango și taie-l felii subțiri.\n\n7. Servește orezul lipicios cu felii de mango deasupra. Stropește cu laptele de cocos rezervat și presară semințe de susan.",
+  "simpleInstructions": "1. Înmoaie orezul 4+ ore, apoi fierbe-l la aburi 20-25 minute.\n\n2. Încălzește laptele de cocos cu zahăr și sare.\n\n3. Toarnă peste orez și lasă să absoarbă 10 minute.\n\n4. Taie mango felii și pune peste orez.\n\n5. Stropește cu lapte de cocos și semințe de susan.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 30,
+  "servings": 4,
+  "cuisine": "Exotic Tropics",
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    { "name": "Rice", "quantity": 250, "unit": "g", "isStarIngredient": true },
+    { "name": "Coconut Milk", "quantity": 400, "unit": "ml", "isStarIngredient": false },
+    { "name": "Mango", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Sugar", "quantity": 60, "unit": "g", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 0.25, "unit": "tsp", "isStarIngredient": false },
+    { "name": "Sesame Seeds", "quantity": 10, "unit": "g", "isStarIngredient": false }
+  ]
+}

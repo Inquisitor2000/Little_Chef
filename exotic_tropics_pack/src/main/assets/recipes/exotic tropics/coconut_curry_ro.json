@@ -1,0 +1,25 @@
+{
+  "id": "coconut_curry",
+  "name": "Curry cu Nucă de Coco",
+  "instructions": "1. Taie pieptul de pui în bucăți de o gură. Condimentează cu sare și piper.\n\n2. Încinge uleiul într-o tigaie mare la foc mediu-înalt. Prăjește carnea de pui 4-5 minute până se rumenește. Scoate și păstrează.\n\n3. În aceeași tigaie, adaugă ceapa și gătește 3 minute până se înmoaie. Adaugă usturoiul și ghimbirul, gătește 1 minut.\n\n4. Adaugă praful de curry și amestecă 30 de secunde până devine aromat.\n\n5. Toarnă laptele de cocos și adu la fierbere ușoară. Întoarce carnea de pui în tigaie.\n\n6. Gătește 10-12 minute până carnea de pui este gătită complet și sosul s-a îngroșat ușor.\n\n7. Asezonează cu sare și piper după gust. Servește peste orez fiert, decorat cu coriandru proaspăt.",
+  "simpleInstructions": "1. Taie puiul bucăți și rumenește-l.\n\n2. Gătește ceapa, usturoiul și ghimbirul.\n\n3. Adaugă curry, apoi laptele de cocos.\n\n4. Întoarce puiul și fierbe 10-12 minute.\n\n5. Asezonează și servește cu orez și coriandru.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 25,
+  "servings": 4,
+  "cuisine": "Exotic Tropics",
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    { "name": "Chicken Breast", "quantity": 500, "unit": "g", "isStarIngredient": true },
+    { "name": "Coconut Milk", "quantity": 400, "unit": "ml", "isStarIngredient": false },
+    { "name": "Onion", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Garlic", "quantity": 3, "unit": "cloves", "isStarIngredient": false },
+    { "name": "Ginger", "quantity": 15, "unit": "g", "isStarIngredient": false },
+    { "name": "Curry Powder", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Rice", "quantity": 200, "unit": "g", "isStarIngredient": false },
+    { "name": "Sunflower Oil", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Cilantro", "quantity": 10, "unit": "g", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
+    { "name": "Black Pepper", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
+  ]
+}

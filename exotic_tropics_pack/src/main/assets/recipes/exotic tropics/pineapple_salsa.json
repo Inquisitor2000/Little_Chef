@@ -1,0 +1,21 @@
+{
+  "id": "pineapple_salsa",
+  "name": "Pineapple Salsa",
+  "instructions": "1. Dice the pineapple into small cubes, about 0.5 cm. Place in a medium bowl.\n\n2. Finely dice the red onion and bell pepper. Add to the bowl.\n\n3. Mince the jalapeño (remove seeds for less heat) and add it.\n\n4. Chop the cilantro finely and add.\n\n5. Squeeze the lime juice over everything. Add salt and stir well.\n\n6. Taste and adjust seasoning, adding more lime or salt as needed.\n\n7. Let the salsa rest at room temperature for 10 minutes to allow flavors to meld.\n\n8. Serve with tortilla chips, grilled fish, chicken, or tacos. Best enjoyed fresh.",
+  "simpleInstructions": "1. Dice pineapple, onion, and bell pepper.\n\n2. Add minced jalapeño and cilantro.\n\n3. Add lime juice and salt, stir well.\n\n4. Let rest 10 minutes for flavors to meld.\n\n5. Serve with chips or grilled dishes.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 0,
+  "servings": 6,
+  "cuisine": "Exotic Tropics",
+  "mealType": "SNACK",
+  "dishCategory": "APPETIZER",
+  "ingredients": [
+    { "name": "Pineapple", "quantity": 300, "unit": "g", "isStarIngredient": true },
+    { "name": "Red Onion", "quantity": 0.5, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Bell Pepper", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Cilantro", "quantity": 15, "unit": "g", "isStarIngredient": false },
+    { "name": "Lime", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Jalapeño", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
+  ]
+}

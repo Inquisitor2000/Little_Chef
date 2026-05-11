@@ -1,0 +1,68 @@
+{
+  "id": "vareniki",
+  "name": "Vareniki",
+  "instructions": "1. For the dough: Sift flour with salt. Beat the egg with warm water and sour cream. Pour the liquid into the flour and knead until smooth. Let rest covered for 30 minutes.\n\n2. For the filling: Wash the cherries and remove the pits. Mix them with sugar and cornstarch.\n\n3. Roll the dough on a floured surface to 2-3mm thickness. Cut into 8cm circles.\n\n4. Place 3-4 cherries in the center of each circle. Fold in half and press the edges firmly to seal.\n\n5. Boil the vareniki in boiling salted water in batches for 4-5 minutes after they float to the surface.\n\n6. Serve warm with sour cream and a drizzle of honey or dusting of powdered sugar.",
+  "simpleInstructions": "1. Make dough from flour, egg, sour cream, and water. Let rest.\n\n2. Pit cherries and mix with sugar.\n\n3. Roll dough and cut circles.\n\n4. Fill with cherries and seal.\n\n5. Boil 4-5 minutes after floating.\n\n6. Serve with sour cream and honey.",
+  "prepTimeMinutes": 40,
+  "cookTimeMinutes": 15,
+  "servings": 4,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Flour",
+      "quantity": 350,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cherry",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Sugar",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Corn Starch",
+      "quantity": 1,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ]
+}

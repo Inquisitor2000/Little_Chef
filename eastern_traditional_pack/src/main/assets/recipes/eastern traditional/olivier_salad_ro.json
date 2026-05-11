@@ -1,0 +1,26 @@
+{
+  "id": "olivier_salad",
+  "name": "Salata Olivier (Salată rusească)",
+  "instructions": "1. Fierbe cartofii, morcovii și ouăle până se înmoaie. Lasă să se răcească.\n\n2. Taie cartofii, morcovii, ouăle și mărul cubulețe mici de aproximativ 1 cm.\n\n3. Taie castraveții murați și carnea de pui (sau șunca) în cubulețe similare.\n\n4. Toacă mărunt ceapa verde și mărarul.\n\n5. Pun toate ingredientele tăiate într-un bol mare.\n\n6. Adaugă mazărea conservată scursă.\n\n7. Condimentează cu sare și piper. Adaugă maioneza și amestecă bine până totul este uniform acoperit.\n\n8. Dă la frigider cel puțin o oră înainte de servire pentru ca aromele să se amestece. Servește rece, decorat cu mărar proaspăt.",
+  "simpleInstructions": "1. Fierbe cartofii, morcovii și ouăle. Lasă să se răcească.\n\n2. Taie totul cubulețe mici.\n\n3. Amestecă toate ingredientele într-un bol.\n\n4. Adaugă maioneza și amestecă bine.\n\n5. Dă la frigider cel puțin o oră.\n\n6. Servește rece decorat cu mărar.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 25,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "LUNCH",
+  "dishCategory": "SALAD",
+  "ingredients": [
+    { "name": "Potatoes", "quantity": 4, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Carrots", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Eggs", "quantity": 4, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Pickles", "quantity": 3, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Chicken Breast", "quantity": 200, "unit": "g", "isStarIngredient": true },
+    { "name": "Peas Canned", "quantity": 150, "unit": "g", "isStarIngredient": false },
+    { "name": "Apple", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Mayonnaise", "quantity": 150, "unit": "g", "isStarIngredient": false },
+    { "name": "Dill", "quantity": 10, "unit": "g", "isStarIngredient": false },
+    { "name": "Spring Onions", "quantity": 30, "unit": "g", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false },
+    { "name": "Black Pepper", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
+  ]
+}

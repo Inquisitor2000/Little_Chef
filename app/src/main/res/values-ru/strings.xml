@@ -296,8 +296,8 @@
     <string name="cuisine_vegetarian_vegan_desc">Блюда на растительной основе</string>
     <string name="cuisine_meat_dishes_desc">Говядина, свинина, баранина и другое</string>
     <string name="cuisine_desserts_sweets_desc">Торты, печенье и сладкие угощения</string>
-    <string name="cuisine_2fast_2hungry_desc">Когда начались голодные игры</string>
-    <string name="cuisine_eastern_traditional_desc">Традиционные восточноевропейские блюда</string>
+    <string name="cuisine_2fast_2hungry_desc">Когда вы очень голодны</string>
+    <string name="cuisine_eastern_traditional_desc">Восточноевропейские блюда</string>
     <string name="cuisine_exotic_tropics_desc">Яркие тропические вкусы</string>
     
     <!-- Meal Type Labels for Planning Dialog -->

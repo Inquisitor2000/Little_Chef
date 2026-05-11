@@ -1,0 +1,74 @@
+{
+  "id": "golubtsy",
+  "name": "Golubtsy",
+  "instructions": "1. Carefully separate large cabbage leaves. Blanch them in salted water for 3-5 minutes until soft. Trim thick stems.\n\n2. For the filling: Mix ground beef and pork with cooked rice, finely chopped onion, dill, salt, and pepper.\n\n3. Place about 2-3 tablespoons of filling on each cabbage leaf. Roll tightly, tucking the sides in.\n\n4. Place the rolls seam-side down in a large pot in a single compact layer.\n\n5. Mix tomato paste with sour cream and pour over the rolls. Add enough water to cover.\n\n6. Cover and simmer on low heat for 1.5 hours until the cabbage is very tender.\n\n7. Serve hot with extra sour cream and fresh dill.",
+  "simpleInstructions": "1. Blanch cabbage leaves until soft.\n\n2. Mix meat with rice, onion, and spices.\n\n3. Fill and roll each leaf.\n\n4. Arrange rolls in a pot.\n\n5. Pour tomato and sour cream sauce over.\n\n6. Simmer on low for 1.5 hours.\n\n7. Serve with sour cream and dill.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 90,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Cabbage",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ground Pork",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ground Beef",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rice",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato Paste",
+      "quantity": 4,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dill",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    }
+  ]
+}

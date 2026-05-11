@@ -1,0 +1,20 @@
+{
+  "id": "mango_lassi",
+  "name": "Mango Lassi",
+  "instructions": "1. Peel the mango and cut the flesh into chunks. Reserve a few small pieces for garnish.\n\n2. Add the mango chunks to a blender along with the yogurt, milk, sugar, and a pinch of cardamom.\n\n3. Blend on high speed for 1-2 minutes until completely smooth and creamy.\n\n4. Taste and add more sugar if the mango is not sweet enough.\n\n5. Pour into chilled glasses over ice cubes if desired.\n\n6. Garnish with the reserved mango pieces and a sprinkle of ground cardamom or pistachios. Serve immediately.",
+  "simpleInstructions": "1. Peel and chop mango.\n\n2. Blend mango with yogurt, milk, sugar, and cardamom.\n\n3. Blend until smooth and creamy.\n\n4. Pour into glasses over ice.\n\n5. Garnish with mango pieces and cardamom.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "cuisine": "Exotic Tropics",
+  "mealType": "BREAKFAST",
+  "dishCategory": "BEVERAGE",
+  "ingredients": [
+    { "name": "Mango", "quantity": 2, "unit": "pcs", "isStarIngredient": true },
+    { "name": "Yogurt", "quantity": 200, "unit": "g", "isStarIngredient": false },
+    { "name": "Milk", "quantity": 150, "unit": "ml", "isStarIngredient": false },
+    { "name": "Sugar", "quantity": 20, "unit": "g", "isStarIngredient": false },
+    { "name": "Cardamom", "quantity": 0.25, "unit": "tsp", "isStarIngredient": false },
+    { "name": "Ice Cubes", "quantity": 6, "unit": "pcs", "isStarIngredient": false }
+  ]
+}

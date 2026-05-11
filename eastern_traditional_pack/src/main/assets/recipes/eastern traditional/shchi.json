@@ -1,0 +1,74 @@
+{
+  "id": "shchi",
+  "name": "Shchi",
+  "instructions": "1. Shred the cabbage into thin strips. Peel and dice the potatoes, and finely chop the carrots and onion.\n\n2. Heat sunflower oil in a large pot over medium heat. Sauté the onion for 3 minutes, then add the carrots and cook for 3 more minutes.\n\n3. Add the cabbage and stir well. Cook for 5 minutes until slightly softened.\n\n4. Pour in the vegetable broth, add the potatoes and bay leaf. Bring to a boil.\n\n5. Reduce heat and simmer for 20-25 minutes until the vegetables are tender.\n\n6. Season with salt and pepper and extra bay leaf to taste.\n\n7. Serve hot with sour cream and rye bread.",
+  "simpleInstructions": "1. Shred cabbage, dice potatoes and carrots, chop onion.\n\n2. Sauté onion and carrots.\n\n3. Add cabbage and cook 5 minutes.\n\n4. Pour in broth, add potatoes and bay leaf. Boil.\n\n5. Simmer 20-25 minutes.\n\n6. Season with salt and pepper.\n\n7. Serve with sour cream and rye bread.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 40,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    {
+      "name": "Cabbage",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Potatoes",
+      "quantity": 3,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrots",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Broth",
+      "quantity": 1.5,
+      "unit": "l",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bay Leaves",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 2,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    }
+  ]
+}

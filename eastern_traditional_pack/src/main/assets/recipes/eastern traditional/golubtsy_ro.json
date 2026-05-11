@@ -1,0 +1,24 @@
+{
+  "id": "golubtsy",
+  "name": "Golubtsy (Sarmale în foi de varză)",
+  "instructions": "1. Scoate cu grijă frunzele mari de varză. Fierbe-le în apă cu sare 3-5 minute până se înmoaie. Taie nervurile groase.\n\n2. Pentru umplutură: Amestecă carnea tocată cu orezul fiert, ceapa tocată mărunt, mărarul, sarea și piperul.\n\n3. Pune aproximativ 2-3 linguri de umplutură pe fiecare frunză de varză. Rulează strâns, îndoind marginile înăuntru.\n\n4. Așază sarmalele într-o oală mare, cu cusătura în jos, într-un strat compact.\n\n5. Amestecă supa de roșii cu smântâna și toarnă peste sarmale. Adaugă apă cât să le acopere.\n\n6. Acoperă și fierbe la foc mic 1.5 ore, până când varza este foarte fragedă.\n\n7. Servește fierbinți cu smântână suplimentară și mărar proaspăt.",
+  "simpleInstructions": "1. Fierbe frunzele de varză până se înmoaie.\n\n2. Amestecă carnea tocată cu orez, ceapă și condimente.\n\n3. Umple și rulează fiecare frunză de varză.\n\n4. Așază sarmalele într-o oală.\n\n5. Toarnă sos de roșii și smântână peste ele.\n\n6. Fierbe la foc mic 1.5 ore.\n\n7. Servește cu smântână și mărar.",
+  "prepTimeMinutes": 30,
+  "cookTimeMinutes": 90,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    { "name": "Cabbage", "quantity": 1, "unit": "pcs", "isStarIngredient": true },
+    { "name": "Ground Pork", "quantity": 400, "unit": "g", "isStarIngredient": false },
+    { "name": "Ground Beef", "quantity": 300, "unit": "g", "isStarIngredient": false },
+    { "name": "Rice", "quantity": 150, "unit": "g", "isStarIngredient": false },
+    { "name": "Onion", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Tomato Paste", "quantity": 4, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Sour Cream", "quantity": 200, "unit": "g", "isStarIngredient": false },
+    { "name": "Dill", "quantity": 10, "unit": "g", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
+    { "name": "Black Pepper", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "id": "shchi",
+  "name": "Щи (Щи из свежей капусты)",
+  "instructions": "1. Нашинкуйте капусту тонкими полосками. Очистите и нарежьте картофель кубиками, морковь и лук мелко нарежьте.\n\n2. В большой кастрюле разогрейте масло на среднем огне. Обжарьте лук 3 минуты, затем добавьте морковь и готовьте еще 3 минуты.\n\n3. Добавьте капусту и хорошо перемешайте. Готовьте 5 минут, пока она слегка не размягчится.\n\n4. Влейте овощной бульон, добавьте картофель и лавровый лист. Доведите до кипения.\n\n5. Уменьшите огонь и варите на медленном огне 20-25 минут, пока овощи не станут мягкими.\n\n6. Приправьте солью, перцем и добавьте еще лавровый лист по вкусу.\n\n7. Подавайте горячими со сметаной и ржаным хлебом.",
+  "simpleInstructions": "1. Нашинкуйте капусту, нарежьте овощи.\n\n2. Обжарьте лук и морковь.\n\n3. Добавьте капусту и готовьте 5 минут.\n\n4. Влейте бульон, добавьте картофель и лавровый лист. Доведите до кипения.\n\n5. Варите на медленном огне 20-25 минут.\n\n6. Приправьте солью и перцем.\n\n7. Подавайте со сметаной и ржаным хлебом.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 40,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    { "name": "Cabbage", "quantity": 400, "unit": "g", "isStarIngredient": true },
+    { "name": "Potatoes", "quantity": 3, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Carrots", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Onion", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Vegetable Broth", "quantity": 1.5, "unit": "l", "isStarIngredient": false },
+    { "name": "Bay Leaves", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Sunflower Oil", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Sour Cream", "quantity": 100, "unit": "g", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
+    { "name": "Black Pepper", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
+  ]
+}

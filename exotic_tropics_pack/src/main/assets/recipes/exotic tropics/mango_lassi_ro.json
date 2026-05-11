@@ -1,0 +1,20 @@
+{
+  "id": "mango_lassi",
+  "name": "Lassi cu Mango",
+  "instructions": "1. Curăță mango și taie pulpa în bucăți. Rezervă câteva bucăți mici pentru decor.\n\n2. Adaugă bucățile de mango într-un blender împreună cu iaurtul, laptele, zahărul și un praf de cardamom.\n\n3. Amestecă la viteză maximă 1-2 minute până devine complet fin și cremos.\n\n4. Gustă și adaugă mai mult zahăr dacă mango nu este suficient de dulce.\n\n5. Toarnă în pahare reci peste cuburi de gheață, dacă dorești.\n\n6. Decorează cu bucățile de mango rezervate și un praf de cardamom sau fistic măcinat. Servește imediat.",
+  "simpleInstructions": "1. Curăță și taie mango cuburi.\n\n2. Amestecă mango cu iaurt, lapte, zahăr și cardamom.\n\n3. Amestecă până devine fin și cremos.\n\n4. Toarnă în pahare cu gheață.\n\n5. Decorează cu mango și cardamom.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 0,
+  "servings": 2,
+  "cuisine": "Exotic Tropics",
+  "mealType": "BREAKFAST",
+  "dishCategory": "BEVERAGE",
+  "ingredients": [
+    { "name": "Mango", "quantity": 2, "unit": "pcs", "isStarIngredient": true },
+    { "name": "Yogurt", "quantity": 200, "unit": "g", "isStarIngredient": false },
+    { "name": "Milk", "quantity": 150, "unit": "ml", "isStarIngredient": false },
+    { "name": "Sugar", "quantity": 20, "unit": "g", "isStarIngredient": false },
+    { "name": "Cardamom", "quantity": 0.25, "unit": "tsp", "isStarIngredient": false },
+    { "name": "Ice Cubes", "quantity": 6, "unit": "pcs", "isStarIngredient": false }
+  ]
+}

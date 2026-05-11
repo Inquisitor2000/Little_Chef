@@ -1,0 +1,21 @@
+{
+  "id": "pineapple_salsa",
+  "name": "Сальса с ананасом",
+  "instructions": "1. Нарежьте ананас мелкими кубиками около 0.5 см. Выложите в среднюю миску.\n\n2. Мелко нарежьте красный лук и болгарский перец. Добавьте в миску.\n\n3. Мелко нарежьте халапеньо (удалите семена для меньшей остроты) и добавьте.\n\n4. Мелко нарежьте кинзу и добавьте.\n\n5. Выжмите сок лайма. Добавьте соль и хорошо перемешайте.\n\n6. Попробуйте и отрегулируйте приправы, добавив больше лайма или соли по необходимости.\n\n7. Дайте сальсе постоять при комнатной температуре 10 минут, чтобы ароматы соединились.\n\n8. Подавайте с тортильей, рыбой на гриле, курицей или тако. Лучше всего употреблять свежей.",
+  "simpleInstructions": "1. Нарежьте ананас, лук и перец кубиками.\n\n2. Добавьте измельченный халапеньо и кинзу.\n\n3. Добавьте сок лайма и соль, хорошо перемешайте.\n\n4. Дайте постоять 10 минут.\n\n5. Подавайте с чипсами или блюдами на гриле.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 0,
+  "servings": 6,
+  "cuisine": "Exotic Tropics",
+  "mealType": "SNACK",
+  "dishCategory": "APPETIZER",
+  "ingredients": [
+    { "name": "Pineapple", "quantity": 300, "unit": "g", "isStarIngredient": true },
+    { "name": "Red Onion", "quantity": 0.5, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Bell Pepper", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Cilantro", "quantity": 15, "unit": "g", "isStarIngredient": false },
+    { "name": "Lime", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Jalapeño", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
+  ]
+}

@@ -476,10 +476,54 @@ enum class Cuisine(
 **Preview Images**: `app/src/main/assets/recipes/images/2fast2hungry/` (main assets, accessible before purchase)
 
 ### Eastern Traditional Pack (`:eastern_traditional_pack`)
-- **Status**: Empty stub (`.gitkeep` only) — awaiting content
+- **Status**: COMPLETE — 12 recipes, 3 languages (EN/RO/RU)
+- **Asset Pack Name**: `eastern_traditional_pack`
+- **Folder**: `eastern traditional/` (lowercase of displayName)
+- **Price**: $1.99
+- **12 Recipes** (each in EN/RO/RU):
+
+| # | Recipe | EN File ID | String ID | Meal Type | Category |
+|---|--------|-----------|-----------|-----------|----------|
+| 1 | Borscht (Beet Soup) | `borscht.json` | `premium_recipe_borscht` | DINNER | SOUP |
+| 2 | Pierogi (Potato & Cheese Dumplings) | `pierogi.json` | `premium_recipe_pierogi` | DINNER | MAIN_COURSE |
+| 3 | Golubtsy (Stuffed Cabbage Rolls) | `golubtsy.json` | `premium_recipe_golubtsy` | DINNER | MAIN_COURSE |
+| 4 | Beef Stroganoff | `beef_stroganoff.json` | `premium_recipe_stroganoff` | DINNER | MAIN_COURSE |
+| 5 | Pelmeni (Siberian Dumplings) | `pelmeni.json` | `premium_recipe_pelmeni` | DINNER | MAIN_COURSE |
+| 6 | Kasha (Buckwheat Porridge) | `kasha.json` | `premium_recipe_kasha` | LUNCH | SIDE_DISH |
+| 7 | Shchi (Cabbage Soup) | `shchi.json` | `premium_recipe_shchi` | DINNER | SOUP |
+| 8 | Kotleti (Russian Meat Patties) | `kotleti.json` | `premium_recipe_kotleti` | DINNER | MAIN_COURSE |
+| 9 | Vareniki (Cherry Dumplings) | `vareniki.json` | `premium_recipe_vareniki` | DESSERT | DESSERT |
+| 10 | Olivier Salad (Russian Salad) | `olivier_salad.json` | `premium_recipe_olivier` | LUNCH | SALAD |
+| 11 | Blini (Russian Pancakes) | `blini.json` | `premium_recipe_blini` | BREAKFAST | MAIN_COURSE |
+| 12 | Solyanka (Meat Soup) | `solyanka.json` | `premium_recipe_solyanka` | DINNER | SOUP |
+
+**String IDs** (EN/RO/RU strings.xml): `premium_recipe_borscht` through `premium_recipe_solyanka`
+**Preview Images**: `app/src/main/assets/recipes/images/easterntraditional/` (main assets, accessible before purchase) — placeholder images created, replace with real images
 
 ### Exotic Tropics Pack (`:exotic_tropics_pack`)
-- **Status**: Empty stub (`.gitkeep` only) — awaiting content
+- **Status**: COMPLETE — 12 recipes, 3 languages (EN/RO/RU)
+- **Asset Pack Name**: `exotic_tropics_pack`
+- **Folder**: `exotic tropics/` (lowercase of displayName)
+- **Price**: $1.99
+- **12 Recipes** (each in EN/RO/RU):
+
+| # | Recipe | EN File ID | String ID | Meal Type | Category |
+|---|--------|-----------|-----------|-----------|----------|
+| 1 | Coconut Curry | `coconut_curry.json` | `premium_recipe_coconut_curry` | DINNER | MAIN_COURSE |
+| 2 | Mango Sticky Rice | `mango_sticky_rice.json` | `premium_recipe_mango_sticky_rice` | DESSERT | DESSERT |
+| 3 | Pineapple Fried Rice | `pineapple_fried_rice.json` | `premium_recipe_pineapple_fried_rice` | LUNCH | RICE_BOWL |
+| 4 | Grilled Plantains | `grilled_plantains.json` | `premium_recipe_plantains` | SNACK | SIDE_DISH |
+| 5 | Papaya Salad | `papaya_salad.json` | `premium_recipe_papaya_salad` | LUNCH | SALAD |
+| 6 | Coconut Rice | `coconut_rice.json` | `premium_recipe_coconut_rice` | LUNCH | SIDE_DISH |
+| 7 | Tuna Poke Bowl | `tuna_poke_bowl.json` | `premium_recipe_tuna_poke` | DINNER | RICE_BOWL |
+| 8 | Mango Lassi | `mango_lassi.json` | `premium_recipe_mango_lassi` | BREAKFAST | BEVERAGE |
+| 9 | Tropical Fruit Salad | `tropical_fruit_salad.json` | `premium_recipe_tropical_fruit_salad` | SNACK | DESSERT |
+| 10 | Coconut Shrimp | `coconut_shrimp.json` | `premium_recipe_coconut_shrimp` | DINNER | SEAFOOD |
+| 11 | Pineapple Salsa | `pineapple_salsa.json` | `premium_recipe_pineapple_salsa` | SNACK | APPETIZER |
+| 12 | Banana Fritters | `banana_fritters.json` | `premium_recipe_banana_fritters` | DESSERT | DESSERT |
+
+**String IDs** (EN/RO/RU strings.xml): `premium_recipe_coconut_curry` through `premium_recipe_banana_fritters`
+**Preview Images**: `app/src/main/assets/recipes/images/exotictropics/` (main assets, accessible before purchase) — placeholder images created, replace with real images
 
 ### Technical
 - Uses Play Asset Delivery + Google Play Billing
@@ -574,6 +618,6 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 ```
 - `pieceG` is optional — only for pcs-unit ingredients (eggs: 50g, egg whites: 33g, etc.)
 - All values per 100g; `pieceG` converts pcs to grams before calculation
-- 355 entries covering 266 unique bundled ingredients
+- 365 entries covering 84 unique DLC + 266 unique bundled ingredients
 
 **Last Updated**: May 2026 (unified time adjustment via `TimeAdjuster`, package → `com.littlechef.app`, theme → `LittleChefTheme`)

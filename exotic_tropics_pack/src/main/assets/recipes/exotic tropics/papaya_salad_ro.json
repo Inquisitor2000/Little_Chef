@@ -1,0 +1,23 @@
+{
+  "id": "papaya_salad",
+  "name": "Salată de Papaya",
+  "instructions": "1. Curăță papaya, taie-o în jumătate și îndepărtează semințele. Răzuiește pulpa în fâșii subțiri cu un julienne sau răzătoare.\n\n2. Taie roșiile cherry în jumătăți. Taie fasolea verde în bucăți de 2 cm.\n\n3. Într-un bol mic, amestecă zeama de lime, sosul de pește, zahărul și usturoiul pisat. Amestecă până se dizolvă zahărul.\n\n4. Într-un mojar mare sau bol, pisează ușor usturoiul și ardeiul iute cu un pistil. Alternativ, toacă-le mărunt.\n\n5. Adaugă papaya rasă, roșiile, fasolea verde și arahidele. Toarnă dressingul peste.\n\n6. Amestecă totul, presând ușor ingredientele să absoarbă aromele.\n\n7. Decorează cu arahide suplimentare și servește imediat ca garnitură răcoritoare sau prânz ușor.",
+  "simpleInstructions": "1. Răzuiește papaya în fâșii subțiri.\n\n2. Taie roșiile în jumătate, fasolea în bucăți.\n\n3. Amestecă zeama de lime, sosul de pește, zahărul și usturoiul.\n\n4. Combină totul într-un bol.\n\n5. Amestecă cu dressingul și arahidele.\n\n6. Servește imediat.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 0,
+  "servings": 4,
+  "cuisine": "Exotic Tropics",
+  "mealType": "LUNCH",
+  "dishCategory": "SALAD",
+  "ingredients": [
+    { "name": "Papaya", "quantity": 1, "unit": "pcs", "isStarIngredient": true },
+    { "name": "Cherry Tomatoes", "quantity": 150, "unit": "g", "isStarIngredient": false },
+    { "name": "Green Beans", "quantity": 100, "unit": "g", "isStarIngredient": false },
+    { "name": "Lime", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Fish Sauce", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Sugar", "quantity": 15, "unit": "g", "isStarIngredient": false },
+    { "name": "Garlic", "quantity": 2, "unit": "cloves", "isStarIngredient": false },
+    { "name": "Peanuts", "quantity": 30, "unit": "g", "isStarIngredient": false },
+    { "name": "Chili Pepper", "quantity": 1, "unit": "pcs", "isStarIngredient": false }
+  ]
+}

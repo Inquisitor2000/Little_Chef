@@ -1,0 +1,24 @@
+{
+  "id": "tuna_poke_bowl",
+  "name": "Bol Poke cu Ton",
+  "instructions": "1. Taie tonul proaspăt de calitate sushi în cuburi de 1.5 cm. Pune într-un bol.\n\n2. Într-un bol mic, amestecă sosul de soia, uleiul de susan și zeama de lime. Toarnă peste cuburile de ton și amestecă ușor. Marinează 10 minute la frigider.\n\n3. Gătește orezul conform instrucțiunilor de pe ambalaj. Lasă să se răcească ușor.\n\n4. Taie castravetele și avocado felii. Dacă folosești edamame, gătește conform instrucțiunilor.\n\n5. Împarte orezul între bolurile de servire.\n\n6. Aranjează tonul marinat, castravetele, avocado și edamame deasupra orezului.\n\n7. Presară semințe de susan și ceapă verde tăiată. Servește cu sos de soia suplimentar.",
+  "simpleInstructions": "1. Taie tonul cuburi și marinează în sos de soia, ulei de susan, lime.\n\n2. Gătește orezul și lasă să se răcească.\n\n3. Taie castravetele și avocado felii.\n\n4. Asamblează bolurile: orez, ton, legume.\n\n5. Presară semințe de susan și ceapă verde.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 15,
+  "servings": 2,
+  "cuisine": "Exotic Tropics",
+  "mealType": "DINNER",
+  "dishCategory": "RICE_BOWL",
+  "ingredients": [
+    { "name": "Tuna", "quantity": 300, "unit": "g", "isStarIngredient": true },
+    { "name": "Rice", "quantity": 200, "unit": "g", "isStarIngredient": false },
+    { "name": "Soy Sauce", "quantity": 3, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Sesame Oil", "quantity": 1, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Lime", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Cucumber", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Avocado", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Edamame", "quantity": 100, "unit": "g", "isStarIngredient": false },
+    { "name": "Sesame Seeds", "quantity": 10, "unit": "g", "isStarIngredient": false },
+    { "name": "Spring Onions", "quantity": 20, "unit": "g", "isStarIngredient": false }
+  ]
+}

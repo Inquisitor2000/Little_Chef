@@ -2131,5 +2131,65 @@
     "fats": 0.2,
     "carbs": 3.7,
     "protein": 1.8
+  },
+  "mango": {
+    "kcal": 60,
+    "fats": 0.4,
+    "carbs": 15,
+    "protein": 0.8
+  },
+  "papaya": {
+    "kcal": 43,
+    "fats": 0.3,
+    "carbs": 11,
+    "protein": 0.5
+  },
+  "plantains": {
+    "kcal": 122,
+    "fats": 0.4,
+    "carbs": 32,
+    "protein": 1.3
+  },
+  "buckwheat": {
+    "kcal": 155,
+    "fats": 1,
+    "carbs": 34,
+    "protein": 5.7
+  },
+  "ground pork": {
+    "kcal": 260,
+    "fats": 20,
+    "carbs": 0,
+    "protein": 19
+  },
+  "pickles": {
+    "kcal": 11,
+    "fats": 0.2,
+    "carbs": 2.4,
+    "protein": 0.4
+  },
+  "edamame": {
+    "kcal": 121,
+    "fats": 5,
+    "carbs": 9,
+    "protein": 12
+  },
+  "dragon fruit": {
+    "kcal": 60,
+    "fats": 1.5,
+    "carbs": 13,
+    "protein": 1.2
+  },
+  "cardamom": {
+    "kcal": 311,
+    "fats": 6.7,
+    "carbs": 68,
+    "protein": 11
+  },
+  "ice cubes": {
+    "kcal": 0,
+    "fats": 0,
+    "carbs": 0,
+    "protein": 0
   }
 }

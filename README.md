@@ -1,6 +1,6 @@
 # Little Chef — Family Meal Planner
 
-AI-powered meal planning app for Android. Plan meals, scale servings, track pantry inventory, generate grocery lists, and cook with step-by-step cooking mode — all offline-first with 176 bundled recipes.
+AI-powered meal planning app for Android. Plan meals, scale servings, track pantry inventory, generate grocery lists, and cook with step-by-step cooking mode — all offline-first with 200 bundled recipes.
 
 **Stack:** Kotlin · Jetpack Compose · Material 3 · Clean Architecture + MVVM · Dagger Hilt · Room · DataStore
 
@@ -61,10 +61,10 @@ Relationships:
 
 ## Key Features
 
-### Recipe Library — 176 Bundled Recipes
+### Recipe Library — 200 Bundled Recipes
 - 11 cuisines (Asian, Italian, Mexican, French, Mediterranean, etc.)
 - JSON-based recipe bundles loaded from assets
-- **DLC packs** delivered via Google Play Asset Delivery (2 Fast 2 Hungry, Eastern Traditional, Exotic Tropics)
+- **3 DLC packs** delivered via Google Play Asset Delivery — 36 premium recipes across Eastern Traditional, Exotic Tropics, and 2 Fast 2 Hungry cuisines
 - Each recipe: ingredients with quantities, prep/cook time, servings, instructions + simple instructions
 - Per-recipe nutrition labels (calories, fats, carbs, protein per serving)
 
@@ -132,17 +132,25 @@ Little_Chef/
 ├── app/                          # Main application module
 │   └── src/main/
 │       ├── assets/
-│       │   ├── recipes/          # 164 bundled recipes (11 cuisines)
+│       │   ├── recipes/          # 200+ bundled recipes (14 cuisines, incl. 3 DLC packs)
 │       │   └── translations/     # RU/RO ingredient & category translations
 │       ├── java/com/littlechef/app/
 │       └── res/                  # Layouts, strings (en/ru/ro), themes
-├── 2fast_2hungry_pack/           # DLC recipe pack (12 recipes)
-├── eastern_traditional_pack/     # DLC recipe pack
-├── exotic_tropics_pack/          # DLC recipe pack
+├── 2fast_2hungry_pack/           # DLC: 12 quick meals ($1.99)
+├── eastern_traditional_pack/     # DLC: 12 Eastern European recipes ($1.99)
+├── exotic_tropics_pack/          # DLC: 12 tropical recipes ($1.99)
 ├── scraper/                      # Recipe scraping scripts
 └── onboard/                      # Onboarding assets
 ```
 
 ## DLC Recipe Packs
 
-Delivered via Google Play Asset Delivery + Billing. Each pack is a separate Android asset pack module. Currently **12 recipes** in the "2 Fast 2 Hungry" pack; other packs are stubs ready for content.
+Delivered via Google Play Asset Delivery + Billing. Each pack is a separate Android asset pack module.
+
+| Pack | Recipes | Price | Status |
+|------|---------|-------|--------|
+| 2 Fast 2 Hungry | 12 quick meals | $1.99 | ✅ Complete |
+| Eastern Traditional | 12 Eastern European classics | $1.99 | ✅ Complete |
+| Exotic Tropics | 12 tropical dishes | $1.99 | ✅ Complete |
+
+All 36 recipes translated in English, Romanian, and Russian. Preview images served from main app assets (accessible before purchase), recipe data delivered on-demand.

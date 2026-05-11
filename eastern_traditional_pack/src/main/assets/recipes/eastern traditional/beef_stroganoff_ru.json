@@ -1,0 +1,26 @@
+{
+  "id": "beef_stroganoff",
+  "name": "Бефстроганов (Говядина по-строгановски)",
+  "instructions": "1. Нарежьте говядину тонкими полосками толщиной около 1 см поперек волокон. Приправьте солью и перцем.\n\n2. В большой сковороде разогрейте масло на сильном огне. Обжаривайте мясо порциями по 2-3 минуты с каждой стороны до румяной корочки. Отложите мясо в сторону.\n\n3. В той же сковороде уменьшите огонь до среднего и растопите сливочное масло. Обжарьте лук и грибы 5-6 минут до мягкости.\n\n4. Посыпьте мукой лук и грибы, хорошо перемешайте и готовьте 1 минуту.\n\n5. Постепенно влейте говяжий бульон, непрерывно помешивая, пока соус не загустеет.\n\n6. Добавьте сметану и горчицу. Хорошо перемешайте и доведите до слабого кипения.\n\n7. Верните мясо в сковороду вместе с выделившимся соком. Тушите на слабом огне 5 минут, пока мясо не станет мягким, а соус кремообразным.\n\n8. Подавайте поверх лапши или риса, посыпав свежей нарезанной петрушкой.",
+  "simpleInstructions": "1. Нарежьте мясо полосками и обжарьте в масле. Отложите.\n\n2. Обжарьте лук и грибы в сливочном масле.\n\n3. Добавьте муку, затем постепенно влейте бульон.\n\n4. Добавьте сметану и горчицу.\n\n5. Верните мясо и тушите 5 минут.\n\n6. Подавайте с лапшой или рисом, посыпьте петрушкой.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 30,
+  "servings": 4,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    { "name": "Beef", "quantity": 500, "unit": "g", "isStarIngredient": true },
+    { "name": "Mushrooms", "quantity": 200, "unit": "g", "isStarIngredient": false },
+    { "name": "Onion", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
+    { "name": "Sour Cream", "quantity": 200, "unit": "g", "isStarIngredient": false },
+    { "name": "Flour", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Beef Broth", "quantity": 200, "unit": "ml", "isStarIngredient": false },
+    { "name": "Butter", "quantity": 30, "unit": "g", "isStarIngredient": false },
+    { "name": "Sunflower Oil", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Mustard", "quantity": 1, "unit": "tbsp", "isStarIngredient": false },
+    { "name": "Parsley", "quantity": 10, "unit": "g", "isStarIngredient": false },
+    { "name": "Salt", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
+    { "name": "Black Pepper", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
+  ]
+}
