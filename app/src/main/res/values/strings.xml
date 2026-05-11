@@ -7,7 +7,6 @@
     <string name="nav_groceries">Groceries</string>
     <string name="nav_groceries_short">Shopping</string>
     <string name="nav_pantry">Pantry</string>
-    <string name="nav_family">Family</string>
     <string name="nav_settings">Settings</string>
 
     <!-- Screen Titles -->
@@ -78,34 +77,7 @@
     <string name="suggestions_ingredients">ingredients</string>
     <string name="suggestions_missing">missing</string>
 
-    <!-- Vibe Recommendation -->
-    <string name="vibe_recommendation_title">Chef\'s Pick</string>
-    <string name="vibe_recommendation_subtitle">Get a personalized recommendation</string>
-    <string name="vibe_mood_label">What\'s your mood?</string>
-    <string name="vibe_quick">Quick</string>
-    <string name="vibe_comfort">Comfort</string>
-    <string name="vibe_healthy">Healthy</string>
-    <string name="vibe_fancy">Fancy</string>
-    <string name="effort_level_label">How much effort?</string>
-    <string name="effort_easy">Easy</string>
-    <string name="effort_moderate">Moderate</string>
-    <string name="effort_challenging">Challenge</string>
-    <string name="effort_expert">Expert</string>
-    <string name="serving_size_label">How many people?</string>
-    <string name="serving_solo">Solo</string>
-    <string name="serving_couple">Couple</string>
-    <string name="serving_family">Family</string>
-    <string name="serving_party">Party</string>
-    <string name="vibe_get_recommendation">Get Recommendation</string>
-    <string name="vibe_your_match">Your Match</string>
     
-    <!-- Flavor Profiles -->
-    <string name="flavor_sweet">Sweet</string>
-    <string name="flavor_sour">Sour</string>
-    <string name="flavor_earthy">Earthy</string>
-    <string name="flavor_spicy">Spicy</string>
-    <string name="flavor_umami">Umami</string>
-
     <!-- Categories -->
     <string name="category_produce">Produce</string>
     <string name="category_dairy">Dairy</string>
@@ -317,11 +289,6 @@
 
     <!-- Language Selection -->
     <string name="language_selection_title">Choose your language</string>
-    <string name="language_english">English</string>
-    <string name="language_russian">Русский</string>
-    <string name="language_romanian">Română</string>
-    <string name="settings_language">Language</string>
-    <string name="settings_language_description">Change app language</string>
     
     <!-- Nutrition -->
     <string name="nutrition_calories_short">Cal</string>
@@ -441,8 +408,6 @@
     <string name="meals_premium_headline">Chef\'s Choice</string>
     <string name="meals_cuisines_headline">Cuisines</string>
     <string name="meals_meal_types_headline">Meal Types</string>
-    <string name="meals_choose_cuisine">Choose a cuisine</string>
-    <string name="unlock_premium">Unlock</string>
     <string name="cuisine_italian">Italian</string>
     <string name="cuisine_mexican">Mexican</string>
     <string name="cuisine_asian">Asian</string>
@@ -457,9 +422,7 @@
     <string name="cuisine_italian_desc">Pasta, pizza, risotto &amp; more</string>
     <string name="cuisine_mexican_desc">Tacos, burritos, enchiladas</string>
     <string name="cuisine_asian_desc">Chinese, Japanese, Thai &amp; more</string>
-    <string name="cuisine_american_desc">Burgers, BBQ, comfort food</string>
     <string name="cuisine_mediterranean_desc">Greek, Turkish, Middle Eastern</string>
-    <string name="cuisine_indian_desc">Curries, tandoori, biryani</string>
     <string name="cuisine_french_desc">Classic &amp; refined dishes</string>
     <string name="cuisine_bread_bakery_desc">Breads, pastries &amp; baked goods</string>
     <string name="cuisine_soups_stews_desc">Hearty soups &amp; comforting stews</string>
@@ -471,7 +434,6 @@
     <string name="cuisine_eastern_traditional_desc">Traditional Eastern European dishes</string>
     <string name="cuisine_exotic_tropics">Exotic Tropics</string>
     <string name="cuisine_exotic_tropics_desc">Vibrant tropical flavors</string>
-    <string name="cuisine_other_desc">Miscellaneous recipes</string>
     
     <string name="meal_plan_meal_type">Meal Type</string>
     <string name="meal_plan_status">Status</string>
@@ -535,14 +497,11 @@
 
     <!-- Additional UI Strings -->
     <string name="add_ingredient_add_button">Add</string>
-    <string name="add_ingredient_all_categories">All categories</string>
     <string name="add_ingredient_cancel_button">Cancel</string>
-    <string name="add_ingredient_category">Category</string>
     <string name="add_ingredient_quantity">Quantity</string>
     <string name="add_ingredient_ingredient_name">Ingredient Name</string>
     <string name="add_ingredient_category_subcategory">Category &amp; Subcategory</string>
     <string name="add_ingredient_allergens">Allergens</string>
-    <string name="add_ingredient_search">Search ingredients</string>
     <string name="add_ingredient_title">Add Ingredient</string>
     <string name="add_ingredient_unit">Unit</string>
     
@@ -599,7 +558,6 @@
     <string name="pantry_add_ingredient">Add Ingredient</string>
     <string name="pantry_empty_message">Add ingredients to your pantry</string>
     <string name="pantry_empty_title">Pantry is empty</string>
-    <string name="pantry_search_hint">Search ingredients</string>
     <string name="pantry_title">Pantry</string>
     
     <!-- Common buttons -->
@@ -626,39 +584,9 @@
     <string name="pantry_cancel_button">Cancel</string>
     <string name="drawer_delete_custom_title">Delete %1$s?</string>
     <string name="drawer_delete_custom_message">This will permanently delete the ingredient from your database.</string>
-    <string name="voice_input">Voice input</string>
-    <string name="voice_listening">Listening...</string>
-    <string name="voice_start_speaking">Start speaking...</string>
-    <string name="voice_pull_down_cancel">Pull down to cancel</string>
-    <string name="voice_permission_title">Microphone Permission</string>
-    <string name="voice_permission_message">Voice input requires microphone access to recognize your speech. Your voice data is processed on-device and not stored.</string>
-    <string name="voice_permission_denied_title">Microphone Access Needed</string>
-    <string name="voice_permission_denied_message">To use voice input, please allow microphone access in your device settings. Tap \"Open Settings\" below to enable it.</string>
-    <string name="voice_button_cancel">Cancel</string>
-    <string name="voice_button_allow">Allow</string>
-    <string name="voice_button_open_settings">Open Settings</string>
-    <string name="voice_button_done">Done</string>
-    <string name="voice_button_save">Save</string>
-    <string name="voice_processing">Processing...</string>
-    <string name="voice_no_ingredients">No ingredients detected. Please try again.</string>
-    <string name="voice_error_retry">Retry</string>
-    <string name="voice_tutorial_title">How to Use Voice Input</string>
-    <string name="voice_tutorial_intro">Speak naturally to add ingredients to your pantry:</string>
-    <string name="voice_tutorial_step1">Speak naturally: \"chicken 500 grams\"</string>
-    <string name="voice_tutorial_step2">List multiple items: \"eggs 12 pieces and milk 2 liters\"</string>
-    <string name="voice_tutorial_step3">Review and edit before adding</string>
-    <string name="voice_tutorial_examples_title">Examples:</string>
-    <string name="voice_tutorial_example1">• \"tomatoes three kilograms\"</string>
-    <string name="voice_tutorial_example2">• \"flour, sugar 500 grams, butter\"</string>
-    <string name="voice_tutorial_example3">• \"onions two pounds and garlic\"</string>
-    <string name="voice_tutorial_dont_show">Don\'t show again</string>
-    <string name="voice_tutorial_got_it">Got it</string>
-    <string name="voice_recording">Recording</string>
-    <string name="voice_not_recording">Not recording</string>
     
     <!-- Settings Screen -->
     <string name="settings_title">Settings</string>
-    <string name="settings_back">Back</string>
     <string name="settings_recipe_gathering">Recipe Gathering</string>
     <string name="settings_api_key_description">Add your API key to enable recipe scraping.</string>
     <string name="settings_openai_api_key">OpenAI API Key</string>
@@ -670,7 +598,6 @@
     <string name="settings_custom_header_placeholder">Shopping List</string>
     <string name="settings_custom_header_saved">✓ Custom header saved</string>
     <string name="settings_appearance">Appearance &amp; Accessibility</string>
-    <string name="settings_font_family">Font Family</string>
     <string name="settings_accent_color">Accent Color</string>
     <string name="settings_text_size">Text Size</string>
     
@@ -709,7 +636,6 @@
     <string name="add_recipe_save">Save Recipe</string>
     <string name="add_recipe_remove">Remove</string>
     <string name="add_recipe_name">Name</string>
-    <string name="add_recipe_quantity">Quantity</string>
     <string name="add_recipe_unit">Unit</string>
     <string name="add_recipe_mark_as_essential">Mark as essential</string>
     <string name="add_recipe_no_ingredients_yet">No ingredients so far</string>
@@ -760,7 +686,6 @@
     <string name="premium_unlock_button">Unlock for %1$s</string>
     <string name="premium_more_recipes">+%1$d more recipes</string>
     <string name="premium_recipe_count_simple">%1$d recipes</string>
-    <string name="close">Close</string>
 
     <!-- Two Fast Two Hungry Premium Recipe Names -->
     <string name="premium_2fast_cheese_omelette">Cheese Omelette</string>

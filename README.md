@@ -27,7 +27,7 @@ AI-powered meal planning app for Android. Plan meals, scale servings, track pant
 ## Architecture
 
 ```
-com.familymealplanner/
+com.littlechef.app/
 ├── data/
 │   ├── local/          # Room DB (9 entities), DAOs, bundled recipe loader
 │   ├── preferences/    # DataStore preferences (onboarding, locale, theme)

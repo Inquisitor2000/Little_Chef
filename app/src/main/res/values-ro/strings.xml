@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="add_ingredient_add_button">Adaugă</string>
-    <string name="add_ingredient_all_categories">Toate categoriile</string>
     <string name="add_ingredient_cancel_button">Anulează</string>
-    <string name="add_ingredient_category">Categorie</string>
     <string name="add_ingredient_quantity">Cantitate</string>
     <string name="add_ingredient_ingredient_name">Nume ingredient</string>
     <string name="add_ingredient_category_subcategory">Categorie și subcategorie</string>
     <string name="add_ingredient_allergens">Alergeni</string>
-    <string name="add_ingredient_search">Caută ingrediente</string>
     <string name="add_ingredient_title">Adaugă ingredient</string>
     <string name="add_ingredient_unit">Unitate</string>
     <string name="app_name">Micul Chef</string>
@@ -76,33 +73,6 @@
     <string name="suggestions_ingredients">ingrediente</string>
     <string name="suggestions_missing">lipsesc</string>
 
-    <!-- Vibe Recommendation -->
-    <string name="vibe_recommendation_title">Alegerea Chefului</string>
-    <string name="vibe_recommendation_subtitle">Primește o recomandare personalizată</string>
-    <string name="vibe_mood_label">Ce dispoziție ai ?</string>
-    <string name="vibe_quick">Rapid</string>
-    <string name="vibe_comfort">Confort</string>
-    <string name="vibe_healthy">Sănătos</string>
-    <string name="vibe_fancy">Elegant</string>
-    <string name="effort_level_label">Cât efort ?</string>
-    <string name="effort_easy">Ușor</string>
-    <string name="effort_moderate">Moderat</string>
-    <string name="effort_challenging">Provocator</string>
-    <string name="effort_expert">Expert</string>
-    <string name="serving_size_label">Câte persoane ?</string>
-    <string name="serving_solo">Solo</string>
-    <string name="serving_couple">Cuplu</string>
-    <string name="serving_family">Familie</string>
-    <string name="serving_party">Petrecere</string>
-    <string name="vibe_get_recommendation">Obține Recomandare</string>
-    <string name="vibe_your_match">Potrivirea Ta</string>
-    
-    <!-- Flavor Profiles -->
-    <string name="flavor_sweet">Dulce</string>
-    <string name="flavor_sour">Acru</string>
-    <string name="flavor_earthy">Pământesc</string>
-    <string name="flavor_spicy">Picant</string>
-    <string name="flavor_umami">Umami</string>
     
     <!-- Meal Plan Detail Screen -->
     <string name="meal_plan_prep">Pregătire</string>
@@ -267,8 +237,6 @@
     <string name="meals_premium_headline">Alegerea Șefului</string>
     <string name="meals_cuisines_headline">Bucătării</string>
     <string name="meals_meal_types_headline">Tipuri de preparate</string>
-    <string name="meals_choose_cuisine">Alege o bucătărie</string>
-    <string name="unlock_premium">Deblochează</string>
     <string name="premium_recipe_count_simple">%1$d rețete</string>
     <string name="cuisine_italian">Italiană</string>
     <string name="cuisine_mexican">Mexicană</string>
@@ -286,9 +254,7 @@
     <string name="cuisine_italian_desc">Paste, pizza, risotto &amp; altele</string>
     <string name="cuisine_mexican_desc">Tacos, burrito, enchiladas</string>
     <string name="cuisine_asian_desc">Chineză, japoneză, thailandeză &amp; altele</string>
-    <string name="cuisine_american_desc">Burgeri, BBQ, mâncare reconfortantă</string>
     <string name="cuisine_mediterranean_desc">Greacă, turcească, orientul mijlociu</string>
-    <string name="cuisine_indian_desc">Curry, tandoori, biryani</string>
     <string name="cuisine_french_desc">Preparate clasice &amp; rafinate</string>
     <string name="cuisine_bread_bakery_desc">Pâine, patiserie și produse de cofetărie</string>
     <string name="cuisine_soups_stews_desc">Supe consistente și tocane reconfortante</string>
@@ -298,7 +264,6 @@
     <string name="cuisine_2fast_2hungry_desc">Mese rapide când ești grăbit</string>
     <string name="cuisine_eastern_traditional_desc">Preparate tradiționale est-europene</string>
     <string name="cuisine_exotic_tropics_desc">Arome tropicale vibrante</string>
-    <string name="cuisine_other_desc">Rețete diverse</string>
     
     <!-- Meal Type Labels for Planning Dialog -->
     <string name="plan_breakfast">Mic dejun</string>
@@ -307,7 +272,7 @@
     <string name="plan_snack">Gustare</string>
     <string name="plan_dessert">Desert</string>
     
-    <string name="nav_family">Familie</string>
+    
     <string name="nav_groceries">Cumpărături</string>
     <string name="nav_groceries_short">Listă</string>
     <string name="nav_home">Acasă</string>
@@ -318,7 +283,6 @@
     <string name="pantry_add_ingredient">Adaugă ingredient</string>
     <string name="pantry_empty_message">Adaugă ingrediente în cămară</string>
     <string name="pantry_empty_title">Cămara este goală</string>
-    <string name="pantry_search_hint">Caută ingrediente</string>
     <string name="pantry_title">Cămară</string>
     <string name="screen_add_custom_ingredient">Adaugă ingredient</string>
     <string name="no_ingredients_found">Nu s-au găsit ingrediente</string>
@@ -348,39 +312,9 @@
     <string name="pantry_cancel_button">Anulează</string>
     <string name="drawer_delete_custom_title">Șterge %1$s?</string>
     <string name="drawer_delete_custom_message">Aceasta va șterge permanent ingredientul din baza de date.</string>
-    <string name="voice_input">Intrare vocală</string>
-    <string name="voice_listening">Ascult...</string>
-    <string name="voice_start_speaking">Începe să vorbești...</string>
-    <string name="voice_pull_down_cancel">Trage în jos pentru a anula</string>
-    <string name="voice_permission_title">Permisiune microfon</string>
-    <string name="voice_permission_message">Intrarea vocală necesită acces la microfon pentru a recunoaște vorbirea ta. Datele vocale sunt procesate pe dispozitiv și nu sunt stocate.</string>
-    <string name="voice_permission_denied_title">Acces la microfon necesar</string>
-    <string name="voice_permission_denied_message">Pentru a utiliza intrarea vocală, te rugăm să permiți accesul la microfon în setările dispozitivului. Apasă \"Deschide setări\" mai jos pentru a-l activa.</string>
-    <string name="voice_button_cancel">Anulează</string>
-    <string name="voice_button_allow">Permite</string>
-    <string name="voice_button_open_settings">Deschide setări</string>
-    <string name="voice_button_done">Gata</string>
-    <string name="voice_button_save">Salvează</string>
-    <string name="voice_processing">Se procesează...</string>
-    <string name="voice_no_ingredients">Nu s-au detectat ingrediente. Te rugăm să încerci din nou.</string>
-    <string name="voice_error_retry">Reîncearcă</string>
-    <string name="voice_tutorial_title">Cum să folosești intrarea vocală</string>
-    <string name="voice_tutorial_intro">Vorbește natural pentru a adăuga ingrediente în cămară:</string>
-    <string name="voice_tutorial_step1">Vorbește natural: \"pui 500 grame\"</string>
-    <string name="voice_tutorial_step2">Enumeră mai multe articole: \"ouă 12 bucăți și lapte 2 litri\"</string>
-    <string name="voice_tutorial_step3">Revizuiește și editează înainte de a adăuga</string>
-    <string name="voice_tutorial_examples_title">Exemple:</string>
-    <string name="voice_tutorial_example1">• \"roșii trei kilograme\"</string>
-    <string name="voice_tutorial_example2">• \"făină, zahăr 500 grame, unt\"</string>
-    <string name="voice_tutorial_example3">• \"ceapă două livre și usturoi\"</string>
-    <string name="voice_tutorial_dont_show">Nu mai afișa</string>
-    <string name="voice_tutorial_got_it">Am înțeles</string>
-    <string name="voice_recording">Se înregistrează</string>
-    <string name="voice_not_recording">Nu se înregistrează</string>
     
     <!-- Settings Screen -->
     <string name="settings_title">Setări</string>
-    <string name="settings_back">Înapoi</string>
     <string name="settings_recipe_gathering">Colectare rețete</string>
     <string name="settings_api_key_description">Adaugă cheia API pentru a activa extragerea rețetelor.</string>
     <string name="settings_openai_api_key">Cheie API OpenAI</string>
@@ -392,7 +326,6 @@
     <string name="settings_custom_header_placeholder">Lista de cumpărături</string>
     <string name="settings_custom_header_saved">✓ Antet personalizat salvat</string>
     <string name="settings_appearance">Aspect și accesibilitate</string>
-    <string name="settings_font_family">Familie de fonturi</string>
     <string name="settings_accent_color">Culoare accent</string>
     <string name="settings_text_size">Dimensiune text</string>
     
@@ -427,7 +360,6 @@
     <string name="add_recipe_save">Salvează rețeta</string>
     <string name="add_recipe_remove">Elimină</string>
     <string name="add_recipe_name">Nume</string>
-    <string name="add_recipe_quantity">Cantitate</string>
     <string name="add_recipe_unit">Unitate</string>
     <string name="add_recipe_mark_as_essential">Marchează ca esențial</string>
     <string name="add_recipe_no_ingredients_yet">Niciun ingredient deocamdată</string>
@@ -480,8 +412,6 @@
     
     <!-- Language Selection -->
     <string name="language_selection_title">Alege limba</string>
-    <string name="settings_language">Limba</string>
-    <string name="settings_language_description">Schimbă limba aplicației</string>
     
     <!-- Onboarding -->
     <string name="onboarding_next">Următorul</string>

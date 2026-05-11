@@ -3,7 +3,7 @@
 ## Project Overview
 Little Chef is a comprehensive Android meal planning application built with Kotlin and Jetpack Compose. It helps families organize recipes, manage pantry inventory, create grocery lists, and plan meals with smart ingredient matching and AI-powered recipe scraping.
 
-**Package**: `com.familymealplanner`
+**Package**: `com.littlechef.app`
 **Min SDK**: 26 (Android 8.0), **Target SDK**: 34 (Android 14)
 **App Name**: "Little Chef"
 **Build System**: Gradle with Kotlin DSL, Kotlin 1.9.21, Compose BOM 2023.10.01, compileSdk 34
@@ -14,7 +14,7 @@ Little Chef is a comprehensive Android meal planning application built with Kotl
 
 ### Clean Architecture + MVVM
 ```
-app/src/main/java/com/familymealplanner/
+app/src/main/java/com/littlechef/app/
 ├── data/              # Data layer (Room, DataStore, repositories)
 ├── domain/            # Business logic (models, interfaces, use cases)
 ├── ui/                # Presentation (screens, viewmodels, navigation, theme)
@@ -97,7 +97,7 @@ sealed interface ScreenUiState {
 
 ## Database (Room)
 
-### Database Name: `family_meal_planner_db`
+### Database Name: `little_chef_db`
 ### Version: 1 (destructive migrations during development)
 
 ### 9 Entities
@@ -273,8 +273,8 @@ This is done in `Theme.kt:169` and applies to the entire app.
 ### 5 Modules (all `SingletonComponent`)
 | Module | Provides |
 |--------|----------|
-| `AppModule` | Coroutine dispatchers, PermissionChecker, VoiceRecognitionManager |
-| `DatabaseModule` | AppDatabase, all 9 DAOs |
+| `AppModule` | Coroutine dispatchers, `StringBuilder` |
+| `DatabaseModule` | AppDatabase, db file migration, all 9 DAOs |
 | `RepositoryModule` | `@Binds` all 6 repository interfaces → implementations |
 | `NetworkModule` | Ktor HttpClient, Json serializer |
 | `ImageModule` | Coil ImageLoader |
@@ -413,10 +413,7 @@ Three-tier ingredient matching:
 2. Good Matches: 80-99% available
 3. Partial Matches: 50-79% available
 
-Chef's Pick (vibe-based, independent of pantry):
-- Mood: Quick, Comfort, Healthy, Fancy
-- Effort: Easy, Moderate, Challenging
-- Serving Size: Solo, Couple, Family, Party
+*(Vibe-based Chef's Pick feature was removed — unused strings deleted)*
 
 ---
 
@@ -472,10 +469,10 @@ enum class Cuisine(
 **Preview Images**: `app/src/main/assets/recipes/images/2fast2hungry/` (main assets, accessible before purchase)
 
 ### Eastern Traditional Pack (`:eastern_traditional_pack`)
-- 12 recipes: Borscht, Pierogi, Golubtsy/Sarmale, Beef Stroganoff, Pelmeni, Kasha/Crișă, Shchi, Kotleti/Parjoale, Vareniki, Olivier Salad, Blini/Clătite, Solyanka/Soleanca
+- **Status**: Empty stub (`.gitkeep` only) — awaiting content
 
 ### Exotic Tropics Pack (`:exotic_tropics_pack`)
-- 12 recipes: Coconut Curry, Mango Sticky Rice, Pineapple Fried Rice, Grilled Plantains, Papaya Salad, Coconut Rice, Tuna Poke Bowl, Mango Lassi, Tropical Fruit Salad, Coconut Shrimp, Pineapple Salsa, Banana Fritters
+- **Status**: Empty stub (`.gitkeep` only) — awaiting content
 
 ### Technical
 - Uses Play Asset Delivery + Google Play Billing
@@ -539,7 +536,7 @@ AlertDialog(
 - Non-deductible ingredients: water, salt, pepper, oil, spices, etc.
 
 ### NonDeductibleIngredients
-Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc.). Located in `domain/model/NonDeductibleIngredients.kt`.
+Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc.). Located in `domain/model/NonDeductibleIngredients.kt`. The deprecated `isNonDeductibleByName()` method was removed — all ingredients are now deductible.
 
 ---
 
@@ -572,4 +569,4 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 - All values per 100g; `pieceG` converts pcs to grams before calculation
 - 355 entries covering 266 unique bundled ingredients
 
-**Last Updated**: May 2026
+**Last Updated**: May 2026 (package renamed to `com.littlechef.app`, theme function → `LittleChefTheme`)
