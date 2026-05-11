@@ -160,7 +160,7 @@ fun LittleChefTheme(
             titleLarge = TextStyle(fontSize = 24.sp * textScale, fontWeight = FontWeight.Bold, fontFamily = fontFamily),
             titleMedium = TextStyle(fontSize = 16.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
             titleSmall = TextStyle(fontSize = 16.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
-            bodyLarge = TextStyle(fontSize = 16.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
+            bodyLarge = TextStyle(fontSize = 16.sp * textScale, lineHeight = 24.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
             bodyMedium = TextStyle(fontSize = 14.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
             bodySmall = TextStyle(fontSize = 14.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),
             labelLarge = TextStyle(fontSize = 16.sp * textScale, fontWeight = FontWeight.Normal, fontFamily = fontFamily),

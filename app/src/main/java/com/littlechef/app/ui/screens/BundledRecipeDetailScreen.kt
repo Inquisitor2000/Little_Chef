@@ -41,6 +41,7 @@ import com.littlechef.app.ui.components.formatNutritionValue
 import com.littlechef.app.domain.model.NutritionInfo
 import com.littlechef.app.ui.util.NutritionCalculator
 import com.littlechef.app.ui.util.TimeAdjuster
+import com.littlechef.app.ui.util.rememberHapticFeedback
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -62,6 +63,8 @@ fun BundledRecipeDetailScreen(
     val hasAllIngredients by viewModel.hasAllIngredients.collectAsState()
     val selectedServings by viewModel.selectedServings.collectAsState()
     val ingredientSubstitutions by viewModel.ingredientSubstitutions.collectAsState()
+    
+    val haptic = rememberHapticFeedback()
     
     // Calculate multiplier reactively based on selectedServings
     val servingsMultiplier = remember(selectedServings, recipe) {
@@ -153,7 +156,7 @@ fun BundledRecipeDetailScreen(
                                     value = "$selectedServings", 
                                     label = stringResource(R.string.recipe_servings),
                                     clickable = true,
-                                    onClick = { viewModel.cycleServings() }
+                                    onClick = { haptic.performLight(); viewModel.cycleServings() }
                                 ) 
                             }
                             
@@ -345,7 +348,8 @@ fun BundledRecipeDetailScreen(
                         Column(
                             modifier = Modifier.padding(16.dp)
                         ) {
-                            r.ingredients.sortedByDescending { it.isStarIngredient }.forEach { ingredient ->
+                            val sortedIngredients = r.ingredients.sortedByDescending { it.isStarIngredient }
+                            sortedIngredients.forEach { ingredient ->
                                 val adjustedQuantity = roundEggQuantity(ingredient.quantity * servingsMultiplier, ingredient.name)
                                 val substituteIngredient = ingredientSubstitutions[ingredient.name]
                                 
@@ -419,7 +423,7 @@ fun BundledRecipeDetailScreen(
                                         color = MaterialTheme.colorScheme.primary
                                     )
                                 }
-                                if (ingredient != r.ingredients.last()) {
+                                if (ingredient != sortedIngredients.last()) {
                                     Divider(
                                         modifier = Modifier.padding(vertical = 4.dp),
                                         color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.12f)

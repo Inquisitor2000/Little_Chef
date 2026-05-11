@@ -48,6 +48,7 @@ import com.littlechef.app.domain.model.NutritionInfo
 import com.littlechef.app.ui.util.NutritionCalculator
 import com.littlechef.app.ui.util.RecipeImage
 import com.littlechef.app.ui.util.TimeAdjuster
+import com.littlechef.app.ui.util.rememberHapticFeedback
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -643,6 +644,7 @@ fun RecipeDetailScreen(
     val hasAllIngredients by viewModel.hasAllIngredients.collectAsState()
     var showDeleteDialog by remember { mutableStateOf(false) }
     var isUploadingImage by remember { mutableStateOf(false) }
+    val haptic = rememberHapticFeedback()
 
     val imagePickerLauncher = rememberLauncherForActivityResult(
         contract = ActivityResultContracts.GetContent()
@@ -819,7 +821,7 @@ fun RecipeDetailScreen(
                                         value = "$selectedServings", 
                                         label = stringResource(R.string.recipe_servings),
                                         clickable = canCycle,
-                                        onClick = { viewModel.cycleServings() }
+                                        onClick = { haptic.performLight(); viewModel.cycleServings() }
                                     ) 
                                 }
                             }

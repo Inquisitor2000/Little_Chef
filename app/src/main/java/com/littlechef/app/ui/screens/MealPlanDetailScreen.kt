@@ -526,7 +526,8 @@ fun MealPlanDetailScreen(
                                     color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             } else {
-                                mealPlan.meal.ingredients.forEach { mealIngredient ->
+                                val sortedIngredients = mealPlan.meal.ingredients.sortedByDescending { it.isStarIngredient }
+                                sortedIngredients.forEach { mealIngredient ->
                                     // Check if a substitute is applied for this ingredient
                                     val substituteId = mealPlan.ingredientSubstitutions[mealIngredient.ingredient.id]
                                     val substituteIngredient = substituteId?.let { subId ->
@@ -559,7 +560,7 @@ fun MealPlanDetailScreen(
                                                     Icon(
                                                         imageVector = Icons.Filled.Star,
                                                         contentDescription = "Essential ingredient",
-                                                        tint = Color(0xFFFFD700),
+                                                        tint = MaterialTheme.colorScheme.primary,
                                                         modifier = Modifier.size(16.dp)
                                                     )
                                                 }
@@ -633,17 +634,14 @@ fun MealPlanDetailScreen(
                                                     formatted
                                                 }
                                             },
-                                            style = MaterialTheme.typography.bodyLarge,
-                                            fontWeight = FontWeight.Normal,
-                                                color = if (isSubstituted) 
-                                                    MaterialTheme.colorScheme.primary 
-                                                else 
-                                                    MaterialTheme.colorScheme.onSurface
+                                                style = MaterialTheme.typography.bodyLarge,
+                                                fontWeight = FontWeight.Bold,
+                                                color = MaterialTheme.colorScheme.primary
                                             )
                                         }
                                     }
                                     
-                                    if (mealIngredient != mealPlan.meal.ingredients.last()) {
+                                    if (mealIngredient != sortedIngredients.last()) {
                                         Divider(
                                             modifier = Modifier.padding(vertical = 4.dp),
                                             color = MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.12f)

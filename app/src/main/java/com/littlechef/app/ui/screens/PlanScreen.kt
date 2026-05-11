@@ -32,6 +32,7 @@ import androidx.compose.ui.text.style.TextAlign
 import com.littlechef.app.ui.theme.md_theme_light_background
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.isUnspecified
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.littlechef.app.R
@@ -853,7 +854,12 @@ private fun AutoSizeText(
         },
         onTextLayout = { textLayoutResult ->
             if (textLayoutResult.hasVisualOverflow) {
-                textStyle = textStyle.copy(fontSize = textStyle.fontSize * 0.9)
+                val currentSize = textStyle.fontSize
+                if (!currentSize.isUnspecified) {
+                    textStyle = textStyle.copy(fontSize = currentSize * 0.9)
+                } else {
+                    readyToDraw = true
+                }
             } else {
                 readyToDraw = true
             }
