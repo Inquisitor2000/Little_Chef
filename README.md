@@ -136,9 +136,9 @@ Little_Chef/
 │       │   └── translations/     # RU/RO ingredient & category translations
 │       ├── java/com/littlechef/app/
 │       └── res/                  # Layouts, strings (en/ru/ro), themes
-├── 2fast_2hungry_pack/           # DLC: 12 quick meals ($1.99)
-├── eastern_traditional_pack/     # DLC: 12 Eastern European recipes ($1.99)
-├── exotic_tropics_pack/          # DLC: 12 tropical recipes ($1.99)
+├── 2fast_2hungry_pack/           # DLC: 12 quick meals ($0.99)
+├── eastern_traditional_pack/     # DLC: 12 Eastern European recipes ($1.49)
+├── exotic_tropics_pack/          # DLC: 12 tropical recipes ($1.49)
 ├── scraper/                      # Recipe scraping scripts
 └── onboard/                      # Onboarding assets
 ```
@@ -149,8 +149,8 @@ Delivered via Google Play Asset Delivery + Billing. Each pack is a separate Andr
 
 | Pack | Recipes | Price | Status |
 |------|---------|-------|--------|
-| 2 Fast 2 Hungry | 12 quick meals | $1.99 | ✅ Complete |
-| Eastern Traditional | 12 Eastern European classics | $1.99 | ✅ Complete |
-| Exotic Tropics | 12 tropical dishes | $1.99 | ✅ Complete |
+| 2 Fast 2 Hungry | 12 quick meals | $0.99 | ✅ Complete |
+| Eastern Traditional | 12 Eastern European classics | $1.49 | ✅ Complete |
+| Exotic Tropics | 12 tropical dishes | $1.49 | ✅ Complete |
 
 All 36 recipes translated in English, Romanian, and Russian. Preview images served from main app assets (accessible before purchase), recipe data delivered on-demand.

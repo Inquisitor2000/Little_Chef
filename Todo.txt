@@ -1,6 +1,2 @@
 # More recipes
 Add the rest of the recipes
-
-
-# Remove the old Voice implementation
-As we no longer use it.

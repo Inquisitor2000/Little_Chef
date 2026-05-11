@@ -708,7 +708,7 @@ private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
                 stringResource(R.string.premium_2fast_shrimp_noodles),
                 stringResource(R.string.premium_2fast_toast_egg_scramble)
             ),
-            price = "$1.99",
+            price = "$0.99",
             recipeImageUrls = listOf(
                 "recipes/images/2fast2hungry/5_minute_omelette.jpg",
                 "recipes/images/2fast2hungry/speedy_stir_fry.jpg",
@@ -740,7 +740,7 @@ private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
                 stringResource(R.string.premium_recipe_blini),
                 stringResource(R.string.premium_recipe_solyanka)
             ),
-            price = "$1.99",
+            price = "$1.49",
             recipeImageUrls = listOf(
                 "recipes/images/easterntraditional/borscht.jpg",
                 "recipes/images/easterntraditional/pierogi.jpg",
@@ -772,7 +772,7 @@ private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
                 stringResource(R.string.premium_recipe_pineapple_salsa),
                 stringResource(R.string.premium_recipe_banana_fritters)
             ),
-            price = "$1.99",
+            price = "$1.49",
             recipeImageUrls = listOf(
                 "recipes/images/exotictropics/coconut_curry.jpg",
                 "recipes/images/exotictropics/mango_sticky_rice.jpg",

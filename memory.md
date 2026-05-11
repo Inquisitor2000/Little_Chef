@@ -457,7 +457,7 @@ enum class Cuisine(
 ### Two Fast Two Hungry Pack (`:2fast_2hungry_pack`)
 - **Asset Pack Name**: `2fast_2hungry_pack`
 - **Folder**: `two fast two hungry/` (lowercase of displayName)
-- **Price**: $1.99
+- **Price**: $0.99
 - **12 Recipes** (each in EN/RO/RU):
   1. Cheese Omelette (`5_minute_omelette.json`)
   2. Chicken Stir Fry (`speedy_stir_fry.json`)
@@ -479,7 +479,7 @@ enum class Cuisine(
 - **Status**: COMPLETE — 12 recipes, 3 languages (EN/RO/RU)
 - **Asset Pack Name**: `eastern_traditional_pack`
 - **Folder**: `eastern traditional/` (lowercase of displayName)
-- **Price**: $1.99
+- **Price**: $1.49
 - **12 Recipes** (each in EN/RO/RU):
 
 | # | Recipe | EN File ID | String ID | Meal Type | Category |
@@ -504,7 +504,7 @@ enum class Cuisine(
 - **Status**: COMPLETE — 12 recipes, 3 languages (EN/RO/RU)
 - **Asset Pack Name**: `exotic_tropics_pack`
 - **Folder**: `exotic tropics/` (lowercase of displayName)
-- **Price**: $1.99
+- **Price**: $1.49
 - **12 Recipes** (each in EN/RO/RU):
 
 | # | Recipe | EN File ID | String ID | Meal Type | Category |
