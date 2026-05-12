@@ -710,18 +710,18 @@ private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
             ),
             price = "$0.99",
             recipeImageUrls = listOf(
-                "recipes/images/2fast2hungry/5_minute_omelette.jpg",
-                "recipes/images/2fast2hungry/speedy_stir_fry.jpg",
-                "recipes/images/2fast2hungry/quick_pasta_aglio_e_olio.jpg",
-                "recipes/images/2fast2hungry/10_minute_tacos.jpg",
-                "recipes/images/2fast2hungry/fast_fried_rice.jpg",
+                "recipes/images/2fast2hungry/5_minute_omelette.webp",
+                "recipes/images/2fast2hungry/speedy_stir_fry.webp",
+                "recipes/images/2fast2hungry/quick_pasta_aglio_e_olio.webp",
+                "recipes/images/2fast2hungry/10_minute_tacos.webp",
+                "recipes/images/2fast2hungry/fast_fried_rice.webp",
                 "recipes/images/2fast2hungry/express_quesadilla.webp",
-                "recipes/images/2fast2hungry/rapid_ramen_bowl.jpg",
-                "recipes/images/2fast2hungry/quick_grilled_cheese.jpg",
-                "recipes/images/2fast2hungry/speedy_chicken_wrap.jpg",
-                "recipes/images/2fast2hungry/15_minute_curry.jpg",
-                "recipes/images/2fast2hungry/fast_noodle_bowl.jpg",
-                "recipes/images/2fast2hungry/quick_toast_skillet.jpg"
+                "recipes/images/2fast2hungry/rapid_ramen_bowl.webp",
+                "recipes/images/2fast2hungry/quick_grilled_cheese.webp",
+                "recipes/images/2fast2hungry/speedy_chicken_wrap.webp",
+                "recipes/images/2fast2hungry/15_minute_curry.webp",
+                "recipes/images/2fast2hungry/fast_noodle_bowl.webp",
+                "recipes/images/2fast2hungry/quick_toast_skillet.webp"
             )
         )
         Cuisine.EASTERN_TRADITIONAL -> PremiumPackPreview(
@@ -742,18 +742,18 @@ private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
             ),
             price = "$1.49",
             recipeImageUrls = listOf(
-                "recipes/images/easterntraditional/borscht.jpg",
-                "recipes/images/easterntraditional/pierogi.jpg",
-                "recipes/images/easterntraditional/golubtsy.jpg",
-                "recipes/images/easterntraditional/beef_stroganoff.jpg",
-                "recipes/images/easterntraditional/pelmeni.jpg",
-                "recipes/images/easterntraditional/kasha.jpg",
-                "recipes/images/easterntraditional/shchi.jpg",
-                "recipes/images/easterntraditional/kotleti.jpg",
-                "recipes/images/easterntraditional/vareniki.jpg",
-                "recipes/images/easterntraditional/olivier_salad.jpg",
-                "recipes/images/easterntraditional/blini.jpg",
-                "recipes/images/easterntraditional/solyanka.jpg"
+                "recipes/images/easterntraditional/borscht.webp",
+                "recipes/images/easterntraditional/pierogi.webp",
+                "recipes/images/easterntraditional/golubtsy.webp",
+                "recipes/images/easterntraditional/beef_stroganoff.webp",
+                "recipes/images/easterntraditional/pelmeni.webp",
+                "recipes/images/easterntraditional/kasha.webp",
+                "recipes/images/easterntraditional/shchi.webp",
+                "recipes/images/easterntraditional/kotleti.webp",
+                "recipes/images/easterntraditional/vareniki.webp",
+                "recipes/images/easterntraditional/olivier_salad.webp",
+                "recipes/images/easterntraditional/blini.webp",
+                "recipes/images/easterntraditional/solyanka.webp"
             )
         )
         Cuisine.EXOTIC_TROPICS -> PremiumPackPreview(
@@ -774,18 +774,18 @@ private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
             ),
             price = "$1.49",
             recipeImageUrls = listOf(
-                "recipes/images/exotictropics/coconut_curry.jpg",
-                "recipes/images/exotictropics/mango_sticky_rice.jpg",
-                "recipes/images/exotictropics/pineapple_fried_rice.jpg",
-                "recipes/images/exotictropics/grilled_plantains.jpg",
-                "recipes/images/exotictropics/papaya_salad.jpg",
-                "recipes/images/exotictropics/coconut_rice.jpg",
-                "recipes/images/exotictropics/tuna_poke_bowl.jpg",
-                "recipes/images/exotictropics/mango_lassi.jpg",
-                "recipes/images/exotictropics/tropical_fruit_salad.jpg",
-                "recipes/images/exotictropics/coconut_shrimp.jpg",
-                "recipes/images/exotictropics/pineapple_salsa.jpg",
-                "recipes/images/exotictropics/banana_fritters.jpg"
+                "recipes/images/exotictropics/coconut_curry.webp",
+                "recipes/images/exotictropics/mango_sticky_rice.webp",
+                "recipes/images/exotictropics/pineapple_fried_rice.webp",
+                "recipes/images/exotictropics/grilled_plantains.webp",
+                "recipes/images/exotictropics/papaya_salad.webp",
+                "recipes/images/exotictropics/coconut_rice.webp",
+                "recipes/images/exotictropics/tuna_poke_bowl.webp",
+                "recipes/images/exotictropics/mango_lassi.webp",
+                "recipes/images/exotictropics/tropical_fruit_salad.webp",
+                "recipes/images/exotictropics/coconut_shrimp.webp",
+                "recipes/images/exotictropics/pineapple_salsa.webp",
+                "recipes/images/exotictropics/banana_fritters.webp"
             )
         )
         else -> PremiumPackPreview(

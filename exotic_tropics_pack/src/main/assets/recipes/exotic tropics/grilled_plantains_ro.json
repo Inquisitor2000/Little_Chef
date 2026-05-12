@@ -10,12 +10,48 @@
   "mealType": "SNACK",
   "dishCategory": "SIDE_DISH",
   "ingredients": [
-    { "name": "Plantains", "quantity": 3, "unit": "pcs", "isStarIngredient": true },
-    { "name": "Butter", "quantity": 30, "unit": "g", "isStarIngredient": false },
-    { "name": "Cinnamon", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Brown Sugar", "quantity": 20, "unit": "g", "isStarIngredient": false },
-    { "name": "Honey", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
-    { "name": "Lime", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 0.25, "unit": "tsp", "isStarIngredient": false }
-  ]
+    {
+      "name": "Plantains",
+      "quantity": 3,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 1,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Brown Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Honey",
+      "quantity": 2,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.25,
+      "unit": "tsp",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/grilled_plantains.webp"
 }

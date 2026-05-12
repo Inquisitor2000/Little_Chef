@@ -10,11 +10,42 @@
   "mealType": "DESSERT",
   "dishCategory": "DESSERT",
   "ingredients": [
-    { "name": "Rice", "quantity": 250, "unit": "g", "isStarIngredient": true },
-    { "name": "Coconut Milk", "quantity": 400, "unit": "ml", "isStarIngredient": false },
-    { "name": "Mango", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Sugar", "quantity": 60, "unit": "g", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 0.25, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Sesame Seeds", "quantity": 10, "unit": "g", "isStarIngredient": false }
-  ]
+    {
+      "name": "Rice",
+      "quantity": 250,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Coconut Milk",
+      "quantity": 400,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Mango",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sugar",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.25,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/mango_sticky_rice.webp"
 }

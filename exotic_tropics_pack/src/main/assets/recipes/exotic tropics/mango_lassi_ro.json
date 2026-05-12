@@ -10,11 +10,42 @@
   "mealType": "BREAKFAST",
   "dishCategory": "BEVERAGE",
   "ingredients": [
-    { "name": "Mango", "quantity": 2, "unit": "pcs", "isStarIngredient": true },
-    { "name": "Yogurt", "quantity": 200, "unit": "g", "isStarIngredient": false },
-    { "name": "Milk", "quantity": 150, "unit": "ml", "isStarIngredient": false },
-    { "name": "Sugar", "quantity": 20, "unit": "g", "isStarIngredient": false },
-    { "name": "Cardamom", "quantity": 0.25, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Ice Cubes", "quantity": 6, "unit": "pcs", "isStarIngredient": false }
-  ]
+    {
+      "name": "Mango",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Yogurt",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 150,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cardamom",
+      "quantity": 0.25,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ice Cubes",
+      "quantity": 6,
+      "unit": "pcs",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/mango_lassi.webp"
 }

@@ -10,12 +10,48 @@
   "mealType": "SNACK",
   "dishCategory": "APPETIZER",
   "ingredients": [
-    { "name": "Pineapple", "quantity": 300, "unit": "g", "isStarIngredient": true },
-    { "name": "Red Onion", "quantity": 0.5, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Bell Pepper", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Cilantro", "quantity": 15, "unit": "g", "isStarIngredient": false },
-    { "name": "Lime", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Jalapeño", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
-  ]
+    {
+      "name": "Pineapple",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Red Onion",
+      "quantity": 0.5,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cilantro",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jalapeño",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/pineapple_salsa.webp"
 }

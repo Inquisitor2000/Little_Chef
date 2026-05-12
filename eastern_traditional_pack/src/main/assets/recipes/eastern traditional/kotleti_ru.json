@@ -10,15 +10,66 @@
   "mealType": "DINNER",
   "dishCategory": "MAIN_COURSE",
   "ingredients": [
-    { "name": "Ground Beef", "quantity": 400, "unit": "g", "isStarIngredient": true },
-    { "name": "Ground Pork", "quantity": 200, "unit": "g", "isStarIngredient": false },
-    { "name": "Onion", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Garlic", "quantity": 3, "unit": "cloves", "isStarIngredient": false },
-    { "name": "White Bread", "quantity": 2, "unit": "slices", "isStarIngredient": false },
-    { "name": "Eggs", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Breadcrumbs", "quantity": 100, "unit": "g", "isStarIngredient": false },
-    { "name": "Sunflower Oil", "quantity": 4, "unit": "tbsp", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Black Pepper", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
-  ]
+    {
+      "name": "Ground Beef",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ground Pork",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 3,
+      "unit": "cloves",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Bread",
+      "quantity": 2,
+      "unit": "slices",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Breadcrumbs",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 4,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/kotleti.webp"
 }

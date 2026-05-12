@@ -10,12 +10,48 @@
   "mealType": "BREAKFAST",
   "dishCategory": "MAIN_COURSE",
   "ingredients": [
-    { "name": "Flour", "quantity": 250, "unit": "g", "isStarIngredient": false },
-    { "name": "Eggs", "quantity": 3, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Milk", "quantity": 500, "unit": "ml", "isStarIngredient": true },
-    { "name": "Butter", "quantity": 50, "unit": "g", "isStarIngredient": false },
-    { "name": "Sugar", "quantity": 20, "unit": "g", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Sour Cream", "quantity": 150, "unit": "g", "isStarIngredient": false }
-  ]
+    {
+      "name": "Flour",
+      "quantity": 250,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 3,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/blini.webp"
 }

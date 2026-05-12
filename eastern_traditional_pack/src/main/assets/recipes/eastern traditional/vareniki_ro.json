@@ -10,14 +10,60 @@
   "mealType": "DESSERT",
   "dishCategory": "DESSERT",
   "ingredients": [
-    { "name": "Flour", "quantity": 350, "unit": "g", "isStarIngredient": false },
-    { "name": "Eggs", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Sour Cream", "quantity": 50, "unit": "g", "isStarIngredient": false },
-    { "name": "Cherry", "quantity": 400, "unit": "g", "isStarIngredient": true },
-    { "name": "Sugar", "quantity": 60, "unit": "g", "isStarIngredient": false },
-    { "name": "Corn Starch", "quantity": 1, "unit": "tbsp", "isStarIngredient": false },
-    { "name": "Butter", "quantity": 30, "unit": "g", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Water", "quantity": 120, "unit": "ml", "isStarIngredient": false }
-  ]
+    {
+      "name": "Flour",
+      "quantity": 350,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cherry",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Sugar",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Corn Starch",
+      "quantity": 1,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/vareniki.webp"
 }

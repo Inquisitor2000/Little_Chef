@@ -10,10 +10,36 @@
   "mealType": "LUNCH",
   "dishCategory": "SIDE_DISH",
   "ingredients": [
-    { "name": "Rice", "quantity": 300, "unit": "g", "isStarIngredient": true },
-    { "name": "Coconut Milk", "quantity": 200, "unit": "ml", "isStarIngredient": false },
-    { "name": "Water", "quantity": 250, "unit": "ml", "isStarIngredient": false },
-    { "name": "Sugar", "quantity": 10, "unit": "g", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
-  ]
+    {
+      "name": "Rice",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Coconut Milk",
+      "quantity": 200,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 250,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/coconut_rice.webp"
 }

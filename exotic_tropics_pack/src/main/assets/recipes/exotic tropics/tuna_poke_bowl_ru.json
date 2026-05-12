@@ -10,15 +10,66 @@
   "mealType": "DINNER",
   "dishCategory": "RICE_BOWL",
   "ingredients": [
-    { "name": "Tuna", "quantity": 300, "unit": "g", "isStarIngredient": true },
-    { "name": "Rice", "quantity": 200, "unit": "g", "isStarIngredient": false },
-    { "name": "Soy Sauce", "quantity": 3, "unit": "tbsp", "isStarIngredient": false },
-    { "name": "Sesame Oil", "quantity": 1, "unit": "tbsp", "isStarIngredient": false },
-    { "name": "Lime", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Cucumber", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Avocado", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Edamame", "quantity": 100, "unit": "g", "isStarIngredient": false },
-    { "name": "Sesame Seeds", "quantity": 10, "unit": "g", "isStarIngredient": false },
-    { "name": "Spring Onions", "quantity": 20, "unit": "g", "isStarIngredient": false }
-  ]
+    {
+      "name": "Tuna",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Rice",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 3,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 1,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cucumber",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Avocado",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Edamame",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Spring Onions",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/tuna_poke_bowl.webp"
 }

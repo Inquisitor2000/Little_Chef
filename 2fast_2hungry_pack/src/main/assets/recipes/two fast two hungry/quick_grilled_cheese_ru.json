@@ -9,7 +9,7 @@
   "mealType": "LUNCH",
   "dishCategory": "SANDWICH",
   "cuisine": "Two Fast Two Hungry",
-  "imageUrl": "recipes/images/2fast2hungry/quick_grilled_cheese.jpg",
+  "imageUrl": "recipes/images/2fast2hungry/quick_grilled_cheese.webp",
   "ingredients": [
     {
       "name": "White Bread",

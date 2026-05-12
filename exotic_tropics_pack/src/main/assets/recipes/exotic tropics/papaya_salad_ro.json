@@ -10,14 +10,60 @@
   "mealType": "LUNCH",
   "dishCategory": "SALAD",
   "ingredients": [
-    { "name": "Papaya", "quantity": 1, "unit": "pcs", "isStarIngredient": true },
-    { "name": "Cherry Tomatoes", "quantity": 150, "unit": "g", "isStarIngredient": false },
-    { "name": "Green Beans", "quantity": 100, "unit": "g", "isStarIngredient": false },
-    { "name": "Lime", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Fish Sauce", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
-    { "name": "Sugar", "quantity": 15, "unit": "g", "isStarIngredient": false },
-    { "name": "Garlic", "quantity": 2, "unit": "cloves", "isStarIngredient": false },
-    { "name": "Peanuts", "quantity": 30, "unit": "g", "isStarIngredient": false },
-    { "name": "Chili Pepper", "quantity": 1, "unit": "pcs", "isStarIngredient": false }
-  ]
+    {
+      "name": "Papaya",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cherry Tomatoes",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Green Beans",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fish Sauce",
+      "quantity": 2,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sugar",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 2,
+      "unit": "cloves",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Peanuts",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/papaya_salad.webp"
 }

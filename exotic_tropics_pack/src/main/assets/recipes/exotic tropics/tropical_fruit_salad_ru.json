@@ -10,14 +10,60 @@
   "mealType": "SNACK",
   "dishCategory": "DESSERT",
   "ingredients": [
-    { "name": "Mango", "quantity": 1, "unit": "pcs", "isStarIngredient": true },
-    { "name": "Pineapple", "quantity": 200, "unit": "g", "isStarIngredient": false },
-    { "name": "Papaya", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Banana", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Dragon Fruit", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Lime", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Honey", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
-    { "name": "Shredded Coconut", "quantity": 30, "unit": "g", "isStarIngredient": false },
-    { "name": "Mint", "quantity": 10, "unit": "g", "isStarIngredient": false }
-  ]
+    {
+      "name": "Mango",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pineapple",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Papaya",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Banana",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dragon Fruit",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Honey",
+      "quantity": 2,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Shredded Coconut",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Mint",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/tropical_fruit_salad.webp"
 }

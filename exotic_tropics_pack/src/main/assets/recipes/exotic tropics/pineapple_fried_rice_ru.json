@@ -10,17 +10,78 @@
   "mealType": "LUNCH",
   "dishCategory": "RICE_BOWL",
   "ingredients": [
-    { "name": "Rice", "quantity": 400, "unit": "g", "isStarIngredient": true },
-    { "name": "Pineapple", "quantity": 200, "unit": "g", "isStarIngredient": false },
-    { "name": "Shrimp", "quantity": 200, "unit": "g", "isStarIngredient": false },
-    { "name": "Eggs", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Peas", "quantity": 100, "unit": "g", "isStarIngredient": false },
-    { "name": "Carrots", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Soy Sauce", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
-    { "name": "Spring Onions", "quantity": 30, "unit": "g", "isStarIngredient": false },
-    { "name": "Sunflower Oil", "quantity": 3, "unit": "tbsp", "isStarIngredient": false },
-    { "name": "Cilantro", "quantity": 10, "unit": "g", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false },
-    { "name": "White Pepper", "quantity": 0.25, "unit": "tsp", "isStarIngredient": false }
-  ]
+    {
+      "name": "Rice",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pineapple",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Shrimp",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Peas",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrots",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 2,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Spring Onions",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 3,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cilantro",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Pepper",
+      "quantity": 0.25,
+      "unit": "tsp",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/pineapple_fried_rice.webp"
 }

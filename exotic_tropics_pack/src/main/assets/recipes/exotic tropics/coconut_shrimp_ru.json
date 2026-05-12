@@ -10,14 +10,60 @@
   "mealType": "DINNER",
   "dishCategory": "SEAFOOD",
   "ingredients": [
-    { "name": "Shrimp", "quantity": 400, "unit": "g", "isStarIngredient": true },
-    { "name": "Shredded Coconut", "quantity": 100, "unit": "g", "isStarIngredient": false },
-    { "name": "Breadcrumbs", "quantity": 50, "unit": "g", "isStarIngredient": false },
-    { "name": "Flour", "quantity": 60, "unit": "g", "isStarIngredient": false },
-    { "name": "Eggs", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Sunflower Oil", "quantity": 500, "unit": "ml", "isStarIngredient": false },
-    { "name": "Lime", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Black Pepper", "quantity": 0.25, "unit": "tsp", "isStarIngredient": false }
-  ]
+    {
+      "name": "Shrimp",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Shredded Coconut",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Breadcrumbs",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Flour",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.25,
+      "unit": "tsp",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/coconut_shrimp.webp"
 }

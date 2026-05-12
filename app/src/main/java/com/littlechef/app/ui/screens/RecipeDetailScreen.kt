@@ -673,11 +673,7 @@ fun RecipeDetailScreen(
                 title = { 
                     Text(
                         text = meal?.name ?: "Recipe",
-                        style = if ((meal?.name?.length ?: 0) > 30) {
-                            MaterialTheme.typography.titleLarge
-                        } else {
-                            MaterialTheme.typography.headlineSmall
-                        },
+                        style = MaterialTheme.typography.headlineSmall.copy(fontSize = 22.sp),
                         maxLines = 2,
                         overflow = TextOverflow.Ellipsis
                     )

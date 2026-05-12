@@ -10,15 +10,66 @@
   "mealType": "DESSERT",
   "dishCategory": "DESSERT",
   "ingredients": [
-    { "name": "Banana", "quantity": 4, "unit": "pcs", "isStarIngredient": true },
-    { "name": "Flour", "quantity": 150, "unit": "g", "isStarIngredient": false },
-    { "name": "Sugar", "quantity": 30, "unit": "g", "isStarIngredient": false },
-    { "name": "Baking Powder", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Cinnamon", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Milk", "quantity": 60, "unit": "ml", "isStarIngredient": false },
-    { "name": "Vanilla Extract", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Sunflower Oil", "quantity": 500, "unit": "ml", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 0.25, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Powdered Sugar", "quantity": 20, "unit": "g", "isStarIngredient": false }
-  ]
+    {
+      "name": "Banana",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Flour",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sugar",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 1,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 1,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 1,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.25,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/banana_fritters.webp"
 }

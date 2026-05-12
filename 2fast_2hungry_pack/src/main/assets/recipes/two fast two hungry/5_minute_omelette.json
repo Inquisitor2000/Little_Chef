@@ -9,7 +9,7 @@
   "mealType": "BREAKFAST",
   "dishCategory": "MAIN_COURSE",
   "cuisine": "Two Fast Two Hungry",
-  "imageUrl": "recipes/images/2fast2hungry/5_minute_omelette.jpg",
+  "imageUrl": "recipes/images/2fast2hungry/5_minute_omelette.webp",
   "ingredients": [
     {
       "name": "Eggs",

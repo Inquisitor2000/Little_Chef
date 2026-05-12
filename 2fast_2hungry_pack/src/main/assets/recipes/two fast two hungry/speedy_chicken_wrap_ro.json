@@ -9,7 +9,7 @@
   "mealType": "LUNCH",
   "dishCategory": "CHICKEN",
   "cuisine": "Two Fast Two Hungry",
-  "imageUrl": "recipes/images/2fast2hungry/speedy_chicken_wrap.jpg",
+  "imageUrl": "recipes/images/2fast2hungry/speedy_chicken_wrap.webp",
   "ingredients": [
     {
       "name": "Chicken Breast",

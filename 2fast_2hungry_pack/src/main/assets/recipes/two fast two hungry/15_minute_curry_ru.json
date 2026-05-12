@@ -9,7 +9,7 @@
   "mealType": "DINNER",
   "dishCategory": "CHICKEN",
   "cuisine": "Two Fast Two Hungry",
-  "imageUrl": "recipes/images/2fast2hungry/15_minute_curry.jpg",
+  "imageUrl": "recipes/images/2fast2hungry/15_minute_curry.webp",
   "ingredients": [
     {
       "name": "Chicken Breast",

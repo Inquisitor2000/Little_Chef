@@ -10,15 +10,66 @@
   "mealType": "DINNER",
   "dishCategory": "MAIN_COURSE",
   "ingredients": [
-    { "name": "Cabbage", "quantity": 1, "unit": "pcs", "isStarIngredient": true },
-    { "name": "Ground Pork", "quantity": 400, "unit": "g", "isStarIngredient": false },
-    { "name": "Ground Beef", "quantity": 300, "unit": "g", "isStarIngredient": false },
-    { "name": "Rice", "quantity": 150, "unit": "g", "isStarIngredient": false },
-    { "name": "Onion", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Tomato Paste", "quantity": 4, "unit": "tbsp", "isStarIngredient": false },
-    { "name": "Sour Cream", "quantity": 200, "unit": "g", "isStarIngredient": false },
-    { "name": "Dill", "quantity": 10, "unit": "g", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Black Pepper", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
-  ]
+    {
+      "name": "Cabbage",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ground Pork",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ground Beef",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Rice",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato Paste",
+      "quantity": 4,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dill",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/golubtsy.webp"
 }

@@ -9,7 +9,7 @@
   "mealType": "DINNER",
   "dishCategory": "BEEF",
   "cuisine": "Two Fast Two Hungry",
-  "imageUrl": "recipes/images/2fast2hungry/10_minute_tacos.jpg",
+  "imageUrl": "recipes/images/2fast2hungry/10_minute_tacos.webp",
   "ingredients": [
     {
       "name": "Ground Beef",

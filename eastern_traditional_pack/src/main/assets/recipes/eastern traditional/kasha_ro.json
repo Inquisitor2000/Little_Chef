@@ -10,9 +10,30 @@
   "mealType": "LUNCH",
   "dishCategory": "SIDE_DISH",
   "ingredients": [
-    { "name": "Buckwheat", "quantity": 200, "unit": "g", "isStarIngredient": true },
-    { "name": "Butter", "quantity": 40, "unit": "g", "isStarIngredient": false },
-    { "name": "Water", "quantity": 400, "unit": "ml", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
-  ]
+    {
+      "name": "Buckwheat",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 400,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/kasha.webp"
 }

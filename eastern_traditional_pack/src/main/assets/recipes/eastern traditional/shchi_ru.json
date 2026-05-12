@@ -10,15 +10,66 @@
   "mealType": "DINNER",
   "dishCategory": "SOUP",
   "ingredients": [
-    { "name": "Cabbage", "quantity": 400, "unit": "g", "isStarIngredient": true },
-    { "name": "Potatoes", "quantity": 3, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Carrots", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Onion", "quantity": 1, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Vegetable Broth", "quantity": 1.5, "unit": "l", "isStarIngredient": false },
-    { "name": "Bay Leaves", "quantity": 2, "unit": "pcs", "isStarIngredient": false },
-    { "name": "Sunflower Oil", "quantity": 2, "unit": "tbsp", "isStarIngredient": false },
-    { "name": "Sour Cream", "quantity": 100, "unit": "g", "isStarIngredient": false },
-    { "name": "Salt", "quantity": 1, "unit": "tsp", "isStarIngredient": false },
-    { "name": "Black Pepper", "quantity": 0.5, "unit": "tsp", "isStarIngredient": false }
-  ]
+    {
+      "name": "Cabbage",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Potatoes",
+      "quantity": 3,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrots",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Broth",
+      "quantity": 1.5,
+      "unit": "l",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bay Leaves",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 2,
+      "unit": "tbsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "tsp",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 0.5,
+      "unit": "tsp",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/shchi.webp"
 }
