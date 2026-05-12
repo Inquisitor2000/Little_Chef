@@ -193,17 +193,19 @@ fun PantryScreen(
                                 androidx.compose.foundation.Image(
                                     painter = androidx.compose.ui.res.painterResource(id = R.drawable.ic_empty_pantry),
                                     contentDescription = "Empty pantry",
-                                    modifier = Modifier.size(120.dp),
+                                    modifier = Modifier.size(100.dp),
                                     alpha = 0.6f
                                 )
                                 Text(
                                     text = stringResource(R.string.pantry_empty_title),
-                                    style = MaterialTheme.typography.titleMedium,
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    fontWeight = FontWeight.Bold,
                                     textAlign = TextAlign.Center
                                 )
                                 Text(
                                     text = stringResource(R.string.pantry_empty_message_full),
-                                    style = MaterialTheme.typography.bodyMedium,
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     textAlign = TextAlign.Center
                                 )

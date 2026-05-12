@@ -182,43 +182,49 @@ private fun SuccessContent(
     onBundledRecipeClick: (Cuisine, String) -> Unit,
     modifier: Modifier = Modifier
 ) {
+    // If no pantry-based meals, show centered empty state
+    if (perfectMatches.isEmpty() && goodMatches.isEmpty() && partialMatches.isEmpty()) {
+        Box(
+            modifier = modifier.fillMaxSize(),
+            contentAlignment = Alignment.Center
+        ) {
+            Column(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(32.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(12.dp)
+            ) {
+                Image(
+                    painter = androidx.compose.ui.res.painterResource(id = R.drawable.ic_sub_whole_spices),
+                    contentDescription = "No suggestions",
+                    modifier = Modifier.size(100.dp),
+                    alpha = 0.6f
+                )
+                Text(
+                    text = androidx.compose.ui.res.stringResource(R.string.suggestions_empty_pantry_title),
+                    style = MaterialTheme.typography.bodyLarge,
+                    fontWeight = FontWeight.Bold,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center
+                )
+                Text(
+                    text = androidx.compose.ui.res.stringResource(R.string.suggestions_empty_pantry_subtitle),
+                    style = MaterialTheme.typography.bodyLarge,
+                    fontWeight = FontWeight.Bold,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                    modifier = Modifier.padding(horizontal = 16.dp)
+                )
+            }
+        }
+        return
+    }
+
     LazyColumn(
         modifier = modifier.fillMaxSize(),
         contentPadding = PaddingValues(start = 16.dp, end = 16.dp, top = 8.dp, bottom = 56.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
-        // If no pantry-based meals, show message
-        if (perfectMatches.isEmpty() && goodMatches.isEmpty() && partialMatches.isEmpty()) {
-            item {
-                Column(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(vertical = 24.dp),
-                    horizontalAlignment = Alignment.CenterHorizontally,
-                    verticalArrangement = Arrangement.spacedBy(12.dp)
-                ) {
-                    Text(
-                        text = "💡",
-                        style = MaterialTheme.typography.displaySmall
-                    )
-                    Text(
-                        text = androidx.compose.ui.res.stringResource(R.string.suggestions_empty_pantry_title),
-                        style = MaterialTheme.typography.titleMedium,
-                        fontWeight = FontWeight.Bold,
-                        textAlign = androidx.compose.ui.text.style.TextAlign.Center
-                    )
-                    Text(
-                        text = androidx.compose.ui.res.stringResource(R.string.suggestions_empty_pantry_subtitle),
-                        style = MaterialTheme.typography.bodyMedium,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        textAlign = androidx.compose.ui.text.style.TextAlign.Center,
-                        modifier = Modifier.padding(horizontal = 16.dp)
-                    )
-                }
-            }
-            return@LazyColumn
-        }
-
         // Filter carousel - always visible
         item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {

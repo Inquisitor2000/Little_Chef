@@ -151,17 +151,19 @@ fun PlanScreen(
                                 androidx.compose.foundation.Image(
                                     painter = androidx.compose.ui.res.painterResource(id = R.drawable.ic_empty_plan),
                                     contentDescription = "No plans",
-                                    modifier = Modifier.size(120.dp),
+                                    modifier = Modifier.size(100.dp),
                                     alpha = 0.6f
                                 )
                                 Text(
                                     text = androidx.compose.ui.res.stringResource(R.string.plan_empty_title),
-                                    style = MaterialTheme.typography.titleMedium,
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    fontWeight = FontWeight.Bold,
                                     textAlign = TextAlign.Center
                                 )
                                 Text(
                                     text = androidx.compose.ui.res.stringResource(R.string.plan_empty_subtitle),
-                                    style = MaterialTheme.typography.bodyMedium,
+                                    style = MaterialTheme.typography.bodyLarge,
+                                    fontWeight = FontWeight.Bold,
                                     color = MaterialTheme.colorScheme.onSurfaceVariant,
                                     textAlign = TextAlign.Center
                                 )

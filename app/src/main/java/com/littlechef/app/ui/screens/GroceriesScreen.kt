@@ -259,17 +259,19 @@ fun GroceriesScreen(
                             androidx.compose.foundation.Image(
                                 painter = androidx.compose.ui.res.painterResource(id = R.drawable.ic_empty_groceries),
                                 contentDescription = "Empty groceries",
-                                modifier = Modifier.size(120.dp),
+                                modifier = Modifier.size(100.dp),
                                 alpha = 0.6f
                             )
                             Text(
                                 text = stringResource(R.string.groceries_no_items),
-                                style = MaterialTheme.typography.titleMedium,
+                                style = MaterialTheme.typography.bodyLarge,
+                                fontWeight = FontWeight.Bold,
                                 textAlign = TextAlign.Center
                             )
                             Text(
                                 text = stringResource(R.string.groceries_empty_hint),
-                                style = MaterialTheme.typography.bodyMedium,
+                                style = MaterialTheme.typography.bodyLarge,
+                                fontWeight = FontWeight.Bold,
                                 color = MaterialTheme.colorScheme.onSurfaceVariant,
                                 textAlign = TextAlign.Center,
                                 modifier = Modifier.padding(horizontal = 32.dp)

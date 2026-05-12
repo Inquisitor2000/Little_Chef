@@ -367,6 +367,29 @@ Thin vertical/horizontal dividers use `onSurfaceVariant.copy(alpha = 0.2f)` (not
 - Delete confirmation dialog: primary/cancel buttons, colored background, specific shape
 - AddIngredientDrawer opens for adding custom items
 
+### Empty State Pattern (Unified)
+All 4 main screens (Plan, Meals→Suggestions, Groceries, Pantry) share an identical empty state layout:
+
+```
+Icon (100dp, alpha=0.6f)  ← specific to each screen
+Title (bodyLarge + Bold, centered)
+Subtitle (bodyLarge + Bold, onSurfaceVariant, centered, hPadding)
+```
+
+Unified in May 2026 across all 4 screens:
+- **Icon size**: 120dp → **100dp** (consistent sizing)
+- **Title text**: `titleMedium` → **`bodyLarge` + `FontWeight.Bold`** (follows the 3-size typography system)
+- **Subtitle text**: `bodyMedium` → **`bodyLarge` + `FontWeight.Bold`** (consistent sizing)
+- **SuggestionScreen empty state**: Moved from inside `LazyColumn` (with emoji `💡`) to standalone `Box` centered on screen (with `ic_sub_whole_spices` icon), matching the other 3 screens
+
+Screen-specific icons:
+| Screen | Icon Resource |
+|--------|--------------|
+| Plan | `ic_empty_plan` |
+| Meals (Suggestions) | `ic_sub_whole_spices` |
+| Groceries | `ic_empty_groceries` |
+| Pantry | `ic_empty_pantry` |
+
 ---
 
 ## Ingredient Catalog
@@ -620,4 +643,4 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 - All values per 100g; `pieceG` converts pcs to grams before calculation
 - 365 entries covering 84 unique DLC + 266 unique bundled ingredients
 
-**Last Updated**: May 2026 (unified time adjustment via `TimeAdjuster`, package → `com.littlechef.app`, theme → `LittleChefTheme`)
+**Last Updated**: May 12, 2026 (unified empty state pattern across all 4 main screens)
