@@ -397,7 +397,7 @@ fun ManualRecipeScreen(
                     }
                 }
                 
-                Spacer(modifier = Modifier.height(16.dp))
+                Spacer(modifier = Modifier.height(80.dp))
             }
             
             // AddIngredientDrawer
@@ -831,7 +831,8 @@ private fun EditManualIngredientDialog(
                         colors = ButtonDefaults.buttonColors(
                             containerColor = MaterialTheme.colorScheme.secondaryContainer,
                             contentColor = MaterialTheme.colorScheme.onSecondaryContainer
-                        )
+                        ),
+                        contentPadding = PaddingValues(horizontal = 12.dp)
                     ) {
                         Text(stringResource(R.string.button_cancel))
                     }
@@ -849,7 +850,8 @@ private fun EditManualIngredientDialog(
                             }
                         },
                         modifier = Modifier.weight(1f),
-                        enabled = quantity.toDoubleOrNull() != null
+                        enabled = quantity.toDoubleOrNull() != null,
+                        contentPadding = PaddingValues(horizontal = 12.dp)
                     ) {
                         Text(stringResource(R.string.button_save))
                     }

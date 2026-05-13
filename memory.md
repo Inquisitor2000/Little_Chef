@@ -658,6 +658,18 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 - Problem: When opening a recipe, `selectedServings` was initialized to a hardcoded `2`, then the ViewModel loaded the recipe/DataStore and updated it. If the recipe had a different serving size (e.g. 4), users saw a ~1s flash of stale servings → correct value, causing ingredient quantities to visibly recalculate.
 - Fix: Reordered assignments in `loadMeal()` and `loadRecipe()` so `_selectedServings` is set **before** `_meal`/`_recipe` is published to the UI. The screen now renders with the correct serving size on first composition.
 
+### Edit Ingredient Dialog Button Padding (ManualRecipeScreen.kt)
+- Problem: Both Save and Cancel buttons used default Material 3 horizontal padding (24dp). Russian "Сохранить" wrapped to 2 lines.
+- Fix: Reduced `contentPadding` to `horizontal = 12.dp` on both buttons.
+
+### Grocery Export Separator (GroceriesTextExport.kt)
+- Problem: Horizontal separator line was 26 `━` characters.
+- Fix: Changed all 4 occurrences from 26→23 characters.
+
+### ManualRecipeScreen Bottom Padding
+- Problem: Scrollable content ended with only 16dp bottom spacing — navbar pill obstructed the last fields.
+- Fix: Increased bottom Spacer from 16dp → 80dp (matches LazyColumn `contentPadding` pattern used on other screens).
+
 ---
 
 ## Development Guidelines
@@ -689,4 +701,4 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 - All values per 100g; `pieceG` converts pcs to grams before calculation
 - 365 entries covering 84 unique DLC + 266 unique bundled ingredients
 
-**Last Updated**: May 13, 2026 (minSdk 27, bundle language split, lint cleanup, asset pack rename, ABC Delight fix, serving size flicker fix)
+**Last Updated**: May 13, 2026 (edit ingredient dialog padding, grocery separator length, ManualRecipeScreen bottom padding)
