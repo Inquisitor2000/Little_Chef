@@ -46,11 +46,11 @@ object GroceriesTextExport {
         // Header - use custom header if provided, otherwise use default
         if (!customHeader.isNullOrBlank()) {
             builder.appendLine(customHeader)
-            builder.appendLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+            builder.appendLine("━━━━━━━━━━━━━━━━━━━━━━━")
             builder.appendLine()
         } else {
             builder.appendLine("🛒 $defaultHeader")
-            builder.appendLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+            builder.appendLine("━━━━━━━━━━━━━━━━━━━━━━━")
             builder.appendLine()
         }
         
@@ -88,7 +88,7 @@ object GroceriesTextExport {
         }
         
         // Footer
-        builder.appendLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+        builder.appendLine("━━━━━━━━━━━━━━━━━━━━━━━")
         builder.appendLine("$taskFromText 👨‍🍳")
         
         return builder.toString()
@@ -292,7 +292,7 @@ object GroceriesTextExport {
             
             // Add separator if both meal and category groups exist
             if (mealGroups.isNotEmpty() && categoryGroups.isNotEmpty()) {
-                builder.appendLine("━━━━━━━━━━━━━━━━━━━━━━━━━━━━")
+                builder.appendLine("━━━━━━━━━━━━━━━━━━━━━━━")
                 builder.appendLine()
             }
             
