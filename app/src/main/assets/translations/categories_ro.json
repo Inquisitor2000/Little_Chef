@@ -43,9 +43,6 @@
   "Turkey": "Curcan",
   "Duck": "Rață",
   "Processed": "Procesate",
-  "Chicken": "Pui",
-  "Beef": "Carne de vită",
-  "Pork": "Carne de porc",
   "Leafy Greens": "Verdeață",
   "Root Vegetables": "Legume rădăcinoase",
   "Nightshades": "Solanacee",
@@ -60,8 +57,6 @@
   "Tropical": "Tropicale",
   "Melons": "Pepeni",
   "Rice": "Orez",
-  "Pasta": "Paste",
-  "Bread": "Pâine",
   "Flour": "Făină",
   "Cereals": "Cereale",
   "Other Grains": "Alte cereale",
@@ -117,6 +112,5 @@
   "Shellfish": "Crustacee",
   "Cephalopods": "Cefalopode",
   "Alcoholic": "Alcoolice",
-  "Snacks & Misc": "Gustări și diverse",
-  "Other": "Altele"
+  "Snacks & Misc": "Gustări și diverse"
 }

@@ -122,17 +122,15 @@ class RecipeDetailViewModel @Inject constructor(
 
     fun loadMeal(mealId: String) {
         viewModelScope.launch {
-            _meal.value = mealRepository.getMealById(mealId)
+            val meal = mealRepository.getMealById(mealId)
             
-            // For scraped/manual recipes, set selected servings to the recipe's original servings
-            // Only use default for bundled recipes or if servings is null
-            val meal = _meal.value
+            // Resolve selected servings from the recipe's own serving size BEFORE
+            // publishing the meal to the UI, so the screen renders with the correct
+            // value on first composition (no stale "2" flash).
             if (meal != null) {
-                val originalServings = meal.servings ?: 2
-                // If recipe has more than 4 servings, keep it as-is (no cycling)
-                // Otherwise, set to original servings
-                _selectedServings.value = originalServings
+                _selectedServings.value = meal.servings ?: 2
             }
+            _meal.value = meal
             
             // Check ingredient availability when meal loads
             checkIngredientsAvailability()

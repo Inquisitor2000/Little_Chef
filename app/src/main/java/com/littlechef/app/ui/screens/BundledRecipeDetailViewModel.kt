@@ -132,6 +132,14 @@ class BundledRecipeDetailViewModel @Inject constructor(
         viewModelScope.launch {
             // Use TranslationSystem to load translated recipe
             val translatedRecipe = translationSystem.translateRecipe(recipeId, cuisine.displayName.lowercase())
+            
+            // Resolve serving size from DataStore preference BEFORE publishing the recipe
+            // to the UI. This prevents a render with stale "2" followed by a flash to the
+            // correct value (the DataStore read is a suspension point that could yield the
+            // Main thread, allowing a frame to compose with the wrong serving size).
+            val defaultServingSize = preferences.defaultServingSize.first()
+            _selectedServings.value = defaultServingSize
+            
             _recipe.value = translatedRecipe
             
             // Load allergens from ingredients using catalog-first approach
@@ -154,10 +162,6 @@ class BundledRecipeDetailViewModel @Inject constructor(
                 
                 _allergens.value = allergensSet.toList()
             }
-            
-            // Load default serving size from preferences
-            val defaultServingSize = preferences.defaultServingSize.first()
-            _selectedServings.value = defaultServingSize
             
             // Check ingredient availability when recipe loads
             checkIngredientsAvailability()

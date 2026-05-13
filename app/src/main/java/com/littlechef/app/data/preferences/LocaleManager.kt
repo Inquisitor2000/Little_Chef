@@ -3,7 +3,6 @@ package com.littlechef.app.data.preferences
 import android.app.Activity
 import android.content.Context
 import android.content.SharedPreferences
-import android.os.Build
 import android.util.Log
 import dagger.hilt.android.qualifiers.ApplicationContext
 import java.util.Locale
@@ -76,13 +75,7 @@ class LocaleManager @Inject constructor(
         val configuration = context.resources.configuration
         configuration.setLocale(locale)
 
-        return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            context.createConfigurationContext(configuration)
-        } else {
-            @Suppress("DEPRECATION")
-            context.resources.updateConfiguration(configuration, context.resources.displayMetrics)
-            context
-        }
+        return context.createConfigurationContext(configuration)
     }
 
     /**

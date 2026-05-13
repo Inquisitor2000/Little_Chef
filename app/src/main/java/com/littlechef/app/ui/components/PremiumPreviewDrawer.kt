@@ -140,8 +140,8 @@ fun PremiumPreviewDrawer(
 @Composable
 private fun RecipePreviewCard(
     recipeName: String,
-    imageUrl: String? = null,
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
+    imageUrl: String? = null
 ) {
     Card(
         modifier = modifier

@@ -43,9 +43,6 @@
   "Turkey": "Индейка",
   "Duck": "Утка",
   "Processed": "Переработанное",
-  "Chicken": "Курица",
-  "Beef": "Говядина",
-  "Pork": "Свинина",
   "Leafy Greens": "Листовая зелень",
   "Root Vegetables": "Корнеплоды",
   "Nightshades": "Пасленовые",
@@ -60,8 +57,6 @@
   "Tropical": "Тропические",
   "Melons": "Дыни",
   "Rice": "Рис",
-  "Pasta": "Паста",
-  "Bread": "Хлеб",
   "Flour": "Мука",
   "Cereals": "Крупы",
   "Other Grains": "Другие зерновые",
@@ -117,6 +112,5 @@
   "Shellfish": "Моллюски",
   "Cephalopods": "Головоногие",
   "Alcoholic": "Алкогольные",
-  "Snacks & Misc": "Закуски и разное",
-  "Other": "Другое"
+  "Snacks & Misc": "Закуски и разное"
 }

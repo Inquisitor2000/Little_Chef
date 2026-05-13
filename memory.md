@@ -4,9 +4,10 @@
 Little Chef is a comprehensive Android meal planning application built with Kotlin and Jetpack Compose. It helps families organize recipes, manage pantry inventory, create grocery lists, and plan meals with smart ingredient matching and AI-powered recipe scraping.
 
 **Package**: `com.littlechef.app`
-**Min SDK**: 26 (Android 8.0), **Target SDK**: 34 (Android 14)
+**Min SDK**: 27 (Android 8.1), **Target SDK**: 34 (Android 14)
 **App Name**: "Little Chef"
 **Build System**: Gradle with Kotlin DSL, Kotlin 1.9.21, Compose BOM 2023.10.01, compileSdk 34
+**App Bundle**: Language split disabled (`language { enableSplit = false }`) so all 3 locales ship in every APK split
 
 ---
 
@@ -466,7 +467,7 @@ enum class Cuisine(
     TWO_FAST_TWO_HUNGRY(
         displayName = "Two Fast Two Hungry",
         isDLC = true,
-        assetPackName = "2fast_2hungry_pack"
+        assetPackName = "fast_hungry_pack"
     ),
     EASTERN_TRADITIONAL(
         displayName = "Eastern Traditional",
@@ -483,8 +484,8 @@ enum class Cuisine(
 
 **Important:** Recipe folder name = `cuisine.displayName.lowercase()` (see `BundledRecipeLoader.kt:43`)
 
-### Two Fast Two Hungry Pack (`:2fast_2hungry_pack`)
-- **Asset Pack Name**: `2fast_2hungry_pack`
+### Two Fast Two Hungry Pack (`:fast_hungry_pack`)
+- **Asset Pack Name**: `fast_hungry_pack`
 - **Folder**: `two fast two hungry/` (lowercase of displayName)
 - **Price**: $0.99
 - **12 Recipes** (each in EN/RO/RU):
@@ -638,6 +639,25 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 - Problem: Expandable section groups (meal/recipe groups, category groups) used plain `if (expanded)` — content popped in/out instantly
 - Fix: Merged header + content into single `item {}` blocks, wrapped content in `AnimatedVisibility` with `expandVertically() + fadeIn()` / `shrinkVertically() + fadeOut()`, used `Column` + `forEach` instead of lazy calls
 
+### minSdk 26→27 + Lint Cleanup
+- **minSdk bumped to 27** (`app/build.gradle.kts:15`) — eliminates `windowLightNavigationBar` API lint in themes.xml. All deps support API 21+. No refactor needed.
+- **App Bundle language split disabled** — `bundle { language { enableSplit = false } }` added so all 3 languages (EN/RO/RU) ship in every APK split; LocaleManager changes locale at runtime and would miss strings otherwise.
+- **Dead SDK_INT branch removed** from `LocaleManager.applyLocale()` — `Build.VERSION.SDK_INT >= N` is always true at minSdk 27.
+- **Modifier parameter order** fixed in `PremiumPreviewDrawer.kt` — optional `imageUrl` before optional `modifier` is bad Compose convention; swapped.
+- **@InternalSerializationApi opt-in** suppressed via `lint { disable += "UnsafeOptInUsageError" }` — false positive with kotlinx.serialization + KSP plugin.
+
+### Asset Pack Rename (`2fast_2hungry_pack` → `fast_hungry_pack`)
+- Problem: Play Asset Pack names can't start with a digit. Renamed from `2fast_2hungry_pack` to `fast_hungry_pack`.
+- Updated 7 files: asset pack folder, build.gradle.kts pack name, settings.gradle.kts include, Cuisine.kt enum, memory docs.
+
+### ABC Delight Recipe Not Rendering
+- Problem: RecipeTranslator generates filenames from JSON `id` field. ABC Delight had `id: "abc_delight"` but file was named `abc_pudding_avocado_banana_chocolate_delight_desserts & sweets.json` — no pattern matched.
+- Fix: Renamed 3 locale files (EN/RU/RO) to `abc_delight.json`, `abc_delight_ru.json`, `abc_delight_ro.json`. Verified: only 1 mismatch across 164 EN recipes.
+
+### Serving Size Flicker Fix (RecipeDetail + BundledRecipeDetail ViewModels)
+- Problem: When opening a recipe, `selectedServings` was initialized to a hardcoded `2`, then the ViewModel loaded the recipe/DataStore and updated it. If the recipe had a different serving size (e.g. 4), users saw a ~1s flash of stale servings → correct value, causing ingredient quantities to visibly recalculate.
+- Fix: Reordered assignments in `loadMeal()` and `loadRecipe()` so `_selectedServings` is set **before** `_meal`/`_recipe` is published to the UI. The screen now renders with the correct serving size on first composition.
+
 ---
 
 ## Development Guidelines
@@ -669,4 +689,4 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 - All values per 100g; `pieceG` converts pcs to grams before calculation
 - 365 entries covering 84 unique DLC + 266 unique bundled ingredients
 
-**Last Updated**: May 13, 2026 (translation system refactor, navbar haptic fix, MealsScreen spoiler fix, GroceriesScreen animations)
+**Last Updated**: May 13, 2026 (minSdk 27, bundle language split, lint cleanup, asset pack rename, ABC Delight fix, serving size flicker fix)

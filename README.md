@@ -136,7 +136,7 @@ Little_Chef/
 │       │   └── translations/     # RU/RO ingredient & category translations
 │       ├── java/com/littlechef/app/
 │       └── res/                  # Layouts, strings (en/ru/ro), themes
-├── 2fast_2hungry_pack/           # DLC: 12 quick meals ($0.99)
+├── fast_hungry_pack/              # DLC: 12 quick meals ($0.99)
 ├── eastern_traditional_pack/     # DLC: 12 Eastern European recipes ($1.49)
 ├── exotic_tropics_pack/          # DLC: 12 tropical recipes ($1.49)
 ├── scraper/                      # Recipe scraping scripts

@@ -18,7 +18,7 @@ Converted all image assets to WebP format for ~17.5MB APK size savings (from ~38
 - **Images**: 154 recipe photos in `app/src/main/assets/recipes/images/` — JPG data re-encoded as lossy WebP q60, then renamed `.jpg` → `.webp`.
 - **Drawables**: 96 PNGs in `app/src/main/res/drawable/` — lossless WebP (PNG source replaced in-place, same filenames).
 - **Mipmaps**: 15 launcher icon PNGs in `app/src/main/res/mipmap-*/` — lossless WebP.
-- **JSON imageUrl refs** (528 files): `app/src/main/assets/recipes/` and `2fast_2hungry_pack/src/main/assets/recipes/` — all `.jpg` → `.webp`.
+- **JSON imageUrl refs** (528 files): `app/src/main/assets/recipes/` and `fast_hungry_pack/src/main/assets/recipes/` — all `.jpg` → `.webp`.
 - **DLC pack JSONs** (72 files): `eastern_traditional_pack/` and `exotic_tropics_pack/` — were missing `imageUrl` fields entirely. Added them pointing to main app assets.
 - **MealsScreen.kt**: Hardcoded DLC preview URLs updated from `.jpg` → `.webp`.
 
@@ -43,7 +43,7 @@ Converted all image assets to WebP format for ~17.5MB APK size savings (from ~38
 | `app/src/main/res/drawable/*.webp` | Drawable icons (96 files) |
 | `app/src/main/res/mipmap-*/*.webp` | Launcher icons (15 files) |
 | `app/src/main/assets/recipes/**/*.json` | Recipe data with imageUrl refs |
-| `2fast_2hungry_pack/src/main/assets/recipes/**/*.json` | DLC recipe data |
+| `fast_hungry_pack/src/main/assets/recipes/**/*.json` | DLC recipe data |
 | `eastern_traditional_pack/src/main/assets/recipes/**/*.json` | DLC pack (imageUrl added) |
 | `exotic_tropics_pack/src/main/assets/recipes/**/*.json` | DLC pack (imageUrl added) |
 | `app/src/main/java/com/munchies/kitchen/MealsScreen.kt` | DLC preview URLs |

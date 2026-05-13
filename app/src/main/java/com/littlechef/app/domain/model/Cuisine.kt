@@ -76,7 +76,7 @@ enum class Cuisine(
         iconRes = R.drawable.ic_sub_cereals,
         description = "Quick meals when you are in a rush",
         isDLC = true,
-        assetPackName = "2fast_2hungry_pack"
+        assetPackName = "fast_hungry_pack"
     ),
     EASTERN_TRADITIONAL(
         displayName = "Eastern Traditional",

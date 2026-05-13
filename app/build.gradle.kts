@@ -12,7 +12,7 @@ android {
 
     defaultConfig {
         applicationId = "com.littlechef.app"
-        minSdk = 26
+        minSdk = 27
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -54,6 +54,14 @@ android {
         }
     }
     
+    lint {
+        // kotlinx.serialization generates serializer code that lint flags as requiring
+        // @OptIn(InternalSerializationApi) — a known false positive with KSP. The
+        // serialization compiler plugin handles this correctly at compile time.
+        disable += "UnsafeOptInUsageError"
+    }
+
+    @Suppress("UnstableApiUsage")
     testOptions {
         unitTests {
             isIncludeAndroidResources = true
@@ -63,8 +71,16 @@ android {
         }
     }
     
+    // Disable language split — users can switch languages at runtime via LocaleManager
+    // With only 3 languages (EN/RO/RU), the APK size impact is negligible
+    bundle {
+        language {
+            enableSplit = false
+        }
+    }
+
     // Link asset packs for DLC recipe packs
-    assetPacks += listOf(":2fast_2hungry_pack", ":eastern_traditional_pack", ":exotic_tropics_pack")
+    assetPacks += listOf(":fast_hungry_pack", ":eastern_traditional_pack", ":exotic_tropics_pack")
 }
 
 dependencies {
