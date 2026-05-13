@@ -64,6 +64,7 @@ import com.littlechef.app.ui.onboarding.OnboardingScreen
 import com.littlechef.app.ui.theme.LittleChefTheme
 import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -81,11 +82,11 @@ class MainActivity : ComponentActivity() {
     }
     
     @Inject
-    lateinit var localeManager: LocaleManager
-    
-    @Inject
     lateinit var translationSystem: com.littlechef.app.data.local.TranslationSystem
-    
+
+    @Inject
+    lateinit var localeManager: LocaleManager
+
     @Inject
     lateinit var preloadCuisineAllergensUseCase: com.littlechef.app.domain.usecase.PreloadCuisineAllergensUseCase
     
@@ -111,9 +112,17 @@ class MainActivity : ComponentActivity() {
             }
         }
         
-        // Reload translations after activity recreation to apply new locale
+        // Sync language from saved preference — needed after activity recreation post-onboarding
+        // (Application.onCreate() already ran with the default language, so TranslationSystem
+        // needs to pick up the language the user selected during onboarding).
         val currentLanguage = localeManager.getLanguage()
-        translationSystem.reloadTranslations(currentLanguage)
+        translationSystem.setLanguage(currentLanguage)
+
+        // Load translation data (ingredient/category name maps) off the main thread.
+        // This is ~29KB I/O + JSON parsing for non-English users; English users skip it.
+        lifecycleScope.launch(Dispatchers.IO) {
+            translationSystem.loadTranslationData(currentLanguage)
+        }
         
         // Preload allergen cache in background to prevent frame drops when opening cuisine screens
         preloadCuisineAllergensUseCase.preload()
@@ -385,14 +394,18 @@ fun MainAppScreen() {
                                             interactionSource = remember { MutableInteractionSource() },
                                             indication = null
                                         ) {
-                                            haptic.performLight()
-                                            lastInteractionTime = System.currentTimeMillis()
-                                            navController.navigate(destination.route) {
-                                                popUpTo(navController.graph.findStartDestination().id) {
-                                                    inclusive = false
+                                            if (!selected) {
+                                                haptic.performLight()
+                                                lastInteractionTime = System.currentTimeMillis()
+                                                navController.navigate(destination.route) {
+                                                    popUpTo(navController.graph.findStartDestination().id) {
+                                                        inclusive = false
+                                                    }
+                                                    launchSingleTop = true
+                                                    restoreState = false
                                                 }
-                                                launchSingleTop = true
-                                                restoreState = false
+                                            } else {
+                                                lastInteractionTime = System.currentTimeMillis()
                                             }
                                         },
                                     contentAlignment = Alignment.Center

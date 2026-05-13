@@ -34,9 +34,18 @@ class MealPlannerApp : Application(), ImageLoaderFactory {
     override fun onCreate() {
         super.onCreate()
         
-        // Initialize translation system with saved language preference
+        // Set language synchronously — needed immediately so recipe loading decisions
+        // (which recipe JSON files to load) use the correct language.
         val savedLanguage = localeManager.getLanguage()
-        translationSystem.initialize(savedLanguage)
+        translationSystem.setLanguage(savedLanguage)
+        
+        // Load translation data (ingredient/category name maps) asynchronously —
+        // this is ~29KB of I/O + JSON parsing for non-English users. The data is not
+        // needed for startup; all callers fall back to English gracefully if the cache
+        // is empty, and it populates before any UI needs it.
+        applicationScope.launch(Dispatchers.IO) {
+            translationSystem.loadTranslationData(savedLanguage)
+        }
         
         // Preload recipe images in the background
         imagePreloader.preloadAllRecipeImages()

@@ -30,62 +30,37 @@ class TranslationSystem @Inject constructor(
     }
     
     /**
-     * Initializes the translation system by loading all translations for the specified language.
-     * 
-     * This method should be called during app startup with the user's saved language preference.
-     * 
-     * @param languageCode The language code to load translations for (e.g., "en", "ru", "ro")
+     * Sets the current language without loading any translation data.
+     * Must be called synchronously at startup so that [getCurrentLanguage] 
+     * returns the correct value immediately for recipe loading decisions.
      */
-    fun initialize(languageCode: String) {
+    fun setLanguage(languageCode: String) {
         currentLanguage = languageCode
-        
-        try {
-            ingredientTranslator.loadTranslations(languageCode)
-        } catch (e: Exception) {
-            Log.e(TAG, "Failed to load ingredient translations during initialization for $languageCode: ${e.message}. Continuing with English fallback.", e)
-        }
-        
-        try {
-            categoryTranslator.loadTranslations(languageCode)
-        } catch (e: Exception) {
-            Log.e(TAG, "Failed to load category translations during initialization for $languageCode: ${e.message}. Continuing with English fallback.", e)
-        }
-        
-        // RecipeTranslator loads on-demand, no initialization needed
     }
     
     /**
-     * Reloads all translations for a new language.
-     * 
-     * This method clears all translation caches and loads translations for the new language.
-     * Should be called when the user changes their language preference.
-     * 
-     * @param languageCode The new language code to load translations for
+     * Loads translation data for the specified language into memory.
+     * This performs I/O (reads and parses JSON files from assets) and should
+     * be called off the main thread. The translation caches are not needed
+     * for startup — all callers fall back to English gracefully if the cache
+     * is empty. Only ingredient and category name lookups depend on this data;
+     * recipe language selection uses [getCurrentLanguage] instead.
+     *
+     * @param languageCode The language code to load translations for (e.g., "en", "ru", "ro")
      */
-    fun reloadTranslations(languageCode: String) {
-        currentLanguage = languageCode
+    fun loadTranslationData(languageCode: String) {
+        if (languageCode == "en") return
         
         try {
-            // Clear all caches
-            ingredientTranslator.clearCache()
-            recipeTranslator.clearCache()
-            categoryTranslator.clearCache()
-            
-        } catch (e: Exception) {
-            Log.e(TAG, "Error clearing translation caches: ${e.message}", e)
-        }
-        
-        try {
-            // Load new translations
             ingredientTranslator.loadTranslations(languageCode)
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to reload ingredient translations for $languageCode: ${e.message}. Continuing with English fallback.", e)
+            Log.e(TAG, "Failed to load ingredient translations for $languageCode: ${e.message}. Continuing with English fallback.", e)
         }
         
         try {
             categoryTranslator.loadTranslations(languageCode)
         } catch (e: Exception) {
-            Log.e(TAG, "Failed to reload category translations for $languageCode: ${e.message}. Continuing with English fallback.", e)
+            Log.e(TAG, "Failed to load category translations for $languageCode: ${e.message}. Continuing with English fallback.", e)
         }
         
         // RecipeTranslator loads on-demand, no initialization needed

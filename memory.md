@@ -411,6 +411,12 @@ Screen-specific icons:
 - Ingredients tagged with `createdInLanguage`
 - Falls back to original name if translation unavailable
 
+### Architecture (refactored May 2026)
+- `setLanguage()` — sync, ~0ns, sets currentLanguage field. Called on main thread.
+- `loadTranslationData()` — I/O-bound, loads JSON files on Dispatchers.IO. Called async.
+- Called twice: once in `MealPlannerApp.onCreate()` (after super.onCreate), once in `MainActivity.onCreate()` (for activity recreation after onboarding language change)
+- `reloadTranslations()` removed — was causing double-load
+
 ---
 
 ## Utility Components
@@ -614,6 +620,26 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 
 ---
 
+## Recent Fixes (May 2026)
+
+### Navbar Haptic/Navigate on Same Tab (`MainActivity.kt:384-397`)
+- Problem: Tapping an already-selected bottom nav tab fired haptic + navigated (refreshing screen)
+- Fix: Wrapped haptic + navigate in `if (!selected)` check; only `lastInteractionTime` updates when already on tab
+
+### My Recipes Spoiler Flash (`MealsScreen.kt`)
+- Problem: Loading state showed MyRecipesPlaceholder ("My Recipes" + spinner) even for users with zero recipes, then vanished when Room emitted empty data — brief flash
+- Fix: Changed condition from `if (isLoading || scrapedMeals.isNotEmpty())` to `if (scrapedMeals.isNotEmpty())`, removed dead code (MyRecipesPlaceholder, isLoading variable)
+
+### Translation System Double-Load (Cold Start Issue 2)
+- Problem: `initialize()` loaded 2 JSON files on main thread, then `reloadTranslations()` in MainActivity cleared cache and reloaded same files — double-load (~58KB I/O + JSON parsing on main thread for non-English)
+- Fix: Split into `setLanguage()` (sync) + `loadTranslationData()` (async I/O). Applied in both `MealPlannerApp.onCreate()` (cold start) and `MainActivity.onCreate()` (activity recreation after onboarding). Ensures correct language immediately after onboarding without restart.
+
+### Groceries AnimatedVisibility (GroceriesScreen.kt)
+- Problem: Expandable section groups (meal/recipe groups, category groups) used plain `if (expanded)` — content popped in/out instantly
+- Fix: Merged header + content into single `item {}` blocks, wrapped content in `AnimatedVisibility` with `expandVertically() + fadeIn()` / `shrinkVertically() + fadeOut()`, used `Column` + `forEach` instead of lazy calls
+
+---
+
 ## Development Guidelines
 
 1. **Always use Hilt for DI** - No manual instantiation
@@ -643,4 +669,4 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 - All values per 100g; `pieceG` converts pcs to grams before calculation
 - 365 entries covering 84 unique DLC + 266 unique bundled ingredients
 
-**Last Updated**: May 12, 2026 (unified empty state pattern across all 4 main screens)
+**Last Updated**: May 13, 2026 (translation system refactor, navbar haptic fix, MealsScreen spoiler fix, GroceriesScreen animations)

@@ -323,84 +323,84 @@ fun GroceriesScreen(
                                     },
                                     translateCategory = viewModel::translateCategory
                                 )
-                            }
-                            
-                            if (expandedMeals.getOrPut(groupKey) { false }) {
-                                // Check if this is a category group or a meal group
-                                val knownCategoryNames = listOf(
-                                    "Meat & Poultry", "Seafood", "Dairy & Eggs", "Vegetables", 
-                                    "Fruits", "Grains & Bread", "Canned Goods", "Beverages", 
-                                    "Snacks", "Spices & Seasonings", "Other"
-                                )
-                                val isCategoryGroup = knownCategoryNames.any { it.equals(mealGroup.mealName, ignoreCase = true) }
                                 
-                                // Group items by category
-                                val itemsByCategory = mealGroup.items.groupBy { item ->
-                                    val translatedName = viewModel.translateIngredient(item.ingredientName)
-                                    ingredientCategories[translatedName] ?: "Other"
-                                }
-                                
-                                // Define category display order: Meat, Seafood, Dairy, Vegetables, then rest
-                                val categoryOrder = listOf(
-                                    "Meat & Poultry", "Seafood", "Dairy & Eggs", "Vegetables",
-                                    "Fruits", "Grains & Bread", "Canned Goods",
-                                    "Beverages", "Snacks", "Spices & Seasonings", "Other"
-                                )
-                                
-                                // Sort categories: first by checked status, then by predefined order
-                                val sortedCategories = itemsByCategory.entries.sortedWith(
-                                    compareBy<Map.Entry<String, List<GroceryItem>>>(
-                                        // Priority 1: Unchecked categories first, fully checked last
-                                        { (_, categoryItems) -> if (categoryItems.all { it.isChecked }) 1 else 0 },
-                                        // Priority 2: Predefined category order
-                                        { (categoryName, _) -> 
-                                            val index = categoryOrder.indexOfFirst { it.equals(categoryName, ignoreCase = true) }
-                                            if (index >= 0) index else categoryOrder.size
+                                AnimatedVisibility(
+                                    visible = isExpanded,
+                                    enter = expandVertically() + fadeIn(),
+                                    exit = shrinkVertically() + fadeOut()
+                                ) {
+                                    Column {
+                                        // Check if this is a category group or a meal group
+                                        val knownCategoryNames = listOf(
+                                            "Meat & Poultry", "Seafood", "Dairy & Eggs", "Vegetables", 
+                                            "Fruits", "Grains & Bread", "Canned Goods", "Beverages", 
+                                            "Snacks", "Spices & Seasonings", "Other"
+                                        )
+                                        val isCategoryGroup = knownCategoryNames.any { it.equals(mealGroup.mealName, ignoreCase = true) }
+                                        
+                                        // Group items by category
+                                        val itemsByCategory = mealGroup.items.groupBy { item ->
+                                            val translatedName = viewModel.translateIngredient(item.ingredientName)
+                                            ingredientCategories[translatedName] ?: "Other"
                                         }
-                                    )
-                                )
-                                
-                                // Display each category with its items
-                                sortedCategories.forEach { (categoryName, categoryItems) ->
-                                    // Only show category header for meal groups, not for category groups
-                                    if (!isCategoryGroup) {
-                                        item(key = "${groupKey}_category_$categoryName") {
-                                            Row(
-                                                modifier = Modifier
-                                                    .fillMaxWidth()
-                                                    .padding(horizontal = 8.dp, vertical = 4.dp),
-                                                verticalAlignment = Alignment.CenterVertically,
-                                                horizontalArrangement = Arrangement.spacedBy(8.dp)
-                                            ) {
-                                                Image(
-                                                    painter = painterResource(
-                                                        id = com.littlechef.app.domain.model.CategoryIcons.getIconForCategory(categoryName)
-                                                    ),
-                                                    contentDescription = null,
-                                                    modifier = Modifier.size(24.dp)
-                                                )
-                                                Text(
-                                                    text = viewModel.translateCategory(categoryName),
-                                                style = MaterialTheme.typography.bodyLarge,
-                                                fontWeight = FontWeight.Bold,
-                                                color = MaterialTheme.colorScheme.primary
+                                        
+                                        // Define category display order: Meat, Seafood, Dairy, Vegetables, then rest
+                                        val categoryOrder = listOf(
+                                            "Meat & Poultry", "Seafood", "Dairy & Eggs", "Vegetables",
+                                            "Fruits", "Grains & Bread", "Canned Goods",
+                                            "Beverages", "Snacks", "Spices & Seasonings", "Other"
+                                        )
+                                        
+                                        // Sort categories: first by checked status, then by predefined order
+                                        val sortedCategories = itemsByCategory.entries.sortedWith(
+                                            compareBy<Map.Entry<String, List<GroceryItem>>>(
+                                                // Priority 1: Unchecked categories first, fully checked last
+                                                { (_, categoryItems) -> if (categoryItems.all { it.isChecked }) 1 else 0 },
+                                                // Priority 2: Predefined category order
+                                                { (categoryName, _) -> 
+                                                    val index = categoryOrder.indexOfFirst { it.equals(categoryName, ignoreCase = true) }
+                                                    if (index >= 0) index else categoryOrder.size
+                                                }
+                                            )
+                                        )
+                                        
+                                        // Display each category with its items
+                                        sortedCategories.forEach { (categoryName, categoryItems) ->
+                                            // Only show category header for meal groups, not for category groups
+                                            if (!isCategoryGroup) {
+                                                Row(
+                                                    modifier = Modifier
+                                                        .fillMaxWidth()
+                                                        .padding(horizontal = 8.dp, vertical = 4.dp),
+                                                    verticalAlignment = Alignment.CenterVertically,
+                                                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                                ) {
+                                                    Image(
+                                                        painter = painterResource(
+                                                            id = com.littlechef.app.domain.model.CategoryIcons.getIconForCategory(categoryName)
+                                                        ),
+                                                        contentDescription = null,
+                                                        modifier = Modifier.size(24.dp)
+                                                    )
+                                                    Text(
+                                                        text = viewModel.translateCategory(categoryName),
+                                                        style = MaterialTheme.typography.bodyLarge,
+                                                        fontWeight = FontWeight.Bold,
+                                                        color = MaterialTheme.colorScheme.primary
+                                                    )
+                                                }
+                                            }
+                                            
+                                            categoryItems.forEach { item ->
+                                                val translatedName = viewModel.translateIngredient(item.ingredientName)
+                                                SwipeToDeleteGroceryItem(
+                                                    item = item,
+                                                    onCheckedChange = { viewModel.toggleItemChecked(item) },
+                                                    onDelete = { viewModel.deleteItem(item.id) },
+                                                    translatedName = translatedName
                                                 )
                                             }
                                         }
-                                    }
-                                    
-                                    items(
-                                        items = categoryItems,
-                                        key = { it.id }
-                                    ) { item ->
-                                        
-                                        val translatedName = viewModel.translateIngredient(item.ingredientName)
-                                        SwipeToDeleteGroceryItem(
-                                            item = item,
-                                            onCheckedChange = { viewModel.toggleItemChecked(item) },
-                                            onDelete = { viewModel.deleteItem(item.id) },
-                                            translatedName = translatedName
-                                        )
                                     }
                                 }
                             }
@@ -443,84 +443,84 @@ fun GroceriesScreen(
                                     },
                                     translateCategory = viewModel::translateCategory
                                 )
-                            }
-                            
-                            if (expandedMeals.getOrPut(groupKey) { false }) {
-                                // Check if this is a category group or a meal group
-                                val knownCategoryNames = listOf(
-                                    "Meat & Poultry", "Seafood", "Dairy & Eggs", "Vegetables", 
-                                    "Fruits", "Grains & Bread", "Canned Goods", "Beverages", 
-                                    "Snacks", "Spices & Seasonings", "Other"
-                                )
-                                val isCategoryGroup = knownCategoryNames.any { it.equals(mealGroup.mealName, ignoreCase = true) }
                                 
-                                // Group items by category
-                                val itemsByCategory = mealGroup.items.groupBy { item ->
-                                    val translatedName = viewModel.translateIngredient(item.ingredientName)
-                                    ingredientCategories[translatedName] ?: "Other"
-                                }
-                                
-                                // Define category display order: Meat, Seafood, Dairy, Vegetables, then rest
-                                val categoryOrder = listOf(
-                                    "Meat & Poultry", "Seafood", "Dairy & Eggs", "Vegetables",
-                                    "Fruits", "Grains & Bread", "Canned Goods",
-                                    "Beverages", "Snacks", "Spices & Seasonings", "Other"
-                                )
-                                
-                                // Sort categories: first by checked status, then by predefined order
-                                val sortedCategories = itemsByCategory.entries.sortedWith(
-                                    compareBy<Map.Entry<String, List<GroceryItem>>>(
-                                        // Priority 1: Unchecked categories first, fully checked last
-                                        { (_, categoryItems) -> if (categoryItems.all { it.isChecked }) 1 else 0 },
-                                        // Priority 2: Predefined category order
-                                        { (categoryName, _) -> 
-                                            val index = categoryOrder.indexOfFirst { it.equals(categoryName, ignoreCase = true) }
-                                            if (index >= 0) index else categoryOrder.size
+                                AnimatedVisibility(
+                                    visible = isExpanded,
+                                    enter = expandVertically() + fadeIn(),
+                                    exit = shrinkVertically() + fadeOut()
+                                ) {
+                                    Column {
+                                        // Check if this is a category group or a meal group
+                                        val knownCategoryNames = listOf(
+                                            "Meat & Poultry", "Seafood", "Dairy & Eggs", "Vegetables", 
+                                            "Fruits", "Grains & Bread", "Canned Goods", "Beverages", 
+                                            "Snacks", "Spices & Seasonings", "Other"
+                                        )
+                                        val isCategoryGroup = knownCategoryNames.any { it.equals(mealGroup.mealName, ignoreCase = true) }
+                                        
+                                        // Group items by category
+                                        val itemsByCategory = mealGroup.items.groupBy { item ->
+                                            val translatedName = viewModel.translateIngredient(item.ingredientName)
+                                            ingredientCategories[translatedName] ?: "Other"
                                         }
-                                    )
-                                )
-                                
-                                // Display each category with its items
-                                sortedCategories.forEach { (categoryName, categoryItems) ->
-                                    // Only show category header for meal groups, not for category groups
-                                    if (!isCategoryGroup) {
-                                        item(key = "${groupKey}_category_$categoryName") {
-                                            Row(
-                                                modifier = Modifier
-                                                    .fillMaxWidth()
-                                                    .padding(horizontal = 8.dp, vertical = 4.dp),
-                                                verticalAlignment = Alignment.CenterVertically,
-                                                horizontalArrangement = Arrangement.spacedBy(8.dp)
-                                            ) {
-                                                Image(
-                                                    painter = painterResource(
-                                                        id = com.littlechef.app.domain.model.CategoryIcons.getIconForCategory(categoryName)
-                                                    ),
-                                                    contentDescription = null,
-                                                    modifier = Modifier.size(24.dp)
-                                                )
-                                                Text(
-                                                    text = viewModel.translateCategory(categoryName),
-                                                style = MaterialTheme.typography.bodyLarge,
-                                                fontWeight = FontWeight.Bold,
-                                                color = MaterialTheme.colorScheme.primary
+                                        
+                                        // Define category display order: Meat, Seafood, Dairy, Vegetables, then rest
+                                        val categoryOrder = listOf(
+                                            "Meat & Poultry", "Seafood", "Dairy & Eggs", "Vegetables",
+                                            "Fruits", "Grains & Bread", "Canned Goods",
+                                            "Beverages", "Snacks", "Spices & Seasonings", "Other"
+                                        )
+                                        
+                                        // Sort categories: first by checked status, then by predefined order
+                                        val sortedCategories = itemsByCategory.entries.sortedWith(
+                                            compareBy<Map.Entry<String, List<GroceryItem>>>(
+                                                // Priority 1: Unchecked categories first, fully checked last
+                                                { (_, categoryItems) -> if (categoryItems.all { it.isChecked }) 1 else 0 },
+                                                // Priority 2: Predefined category order
+                                                { (categoryName, _) -> 
+                                                    val index = categoryOrder.indexOfFirst { it.equals(categoryName, ignoreCase = true) }
+                                                    if (index >= 0) index else categoryOrder.size
+                                                }
+                                            )
+                                        )
+                                        
+                                        // Display each category with its items
+                                        sortedCategories.forEach { (categoryName, categoryItems) ->
+                                            // Only show category header for meal groups, not for category groups
+                                            if (!isCategoryGroup) {
+                                                Row(
+                                                    modifier = Modifier
+                                                        .fillMaxWidth()
+                                                        .padding(horizontal = 8.dp, vertical = 4.dp),
+                                                    verticalAlignment = Alignment.CenterVertically,
+                                                    horizontalArrangement = Arrangement.spacedBy(8.dp)
+                                                ) {
+                                                    Image(
+                                                        painter = painterResource(
+                                                            id = com.littlechef.app.domain.model.CategoryIcons.getIconForCategory(categoryName)
+                                                        ),
+                                                        contentDescription = null,
+                                                        modifier = Modifier.size(24.dp)
+                                                    )
+                                                    Text(
+                                                        text = viewModel.translateCategory(categoryName),
+                                                        style = MaterialTheme.typography.bodyLarge,
+                                                        fontWeight = FontWeight.Bold,
+                                                        color = MaterialTheme.colorScheme.primary
+                                                    )
+                                                }
+                                            }
+                                            
+                                            categoryItems.forEach { item ->
+                                                val translatedName = viewModel.translateIngredient(item.ingredientName)
+                                                SwipeToDeleteGroceryItem(
+                                                    item = item,
+                                                    onCheckedChange = { viewModel.toggleItemChecked(item) },
+                                                    onDelete = { viewModel.deleteItem(item.id) },
+                                                    translatedName = translatedName
                                                 )
                                             }
                                         }
-                                    }
-                                    
-                                    items(
-                                        items = categoryItems,
-                                        key = { it.id }
-                                    ) { item ->
-                                        
-                                        val translatedName = viewModel.translateIngredient(item.ingredientName)
-                                        SwipeToDeleteGroceryItem(
-                                            item = item,
-                                            onCheckedChange = { viewModel.toggleItemChecked(item) },
-                                            onDelete = { viewModel.deleteItem(item.id) },
-                                            translatedName = translatedName
-                                        )
                                     }
                                 }
                             }

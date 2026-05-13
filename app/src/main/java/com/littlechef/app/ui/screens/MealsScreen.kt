@@ -151,8 +151,6 @@ fun MealsScreen(
             else -> emptyList()
         }
         
-        val isLoading = uiState is MealsUiState.Loading
-        
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -163,17 +161,13 @@ fun MealsScreen(
                 .padding(horizontal = 16.dp),
             contentPadding = PaddingValues(top = 16.dp, bottom = 80.dp)
         ) {
-            // My Recipes section - show placeholder while loading or if there are recipes
-            if (isLoading || scrapedMeals.isNotEmpty()) {
+            // My Recipes section - show only when there are user recipes
+            if (scrapedMeals.isNotEmpty()) {
                 item(span = { GridItemSpan(2) }) {
-                    if (isLoading) {
-                        MyRecipesPlaceholder()
-                    } else {
-                        MyRecipesSection(
-                            recipes = scrapedMeals,
-                            onRecipeClick = { meal -> onNavigateToRecipe(meal.id) }
-                        )
-                    }
+                    MyRecipesSection(
+                        recipes = scrapedMeals,
+                        onRecipeClick = { meal -> onNavigateToRecipe(meal.id) }
+                    )
                 }
                 
                 item(span = { GridItemSpan(2) }) {
@@ -353,36 +347,6 @@ private fun CuisineChip(
                         overflow = TextOverflow.Ellipsis
                     )
                 }
-            }
-        }
-    }
-}
-
-@Composable
-private fun MyRecipesPlaceholder() {
-    Card(
-        modifier = Modifier.fillMaxWidth(),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
-        )
-    ) {
-        Column(
-            modifier = Modifier.padding(16.dp)
-        ) {
-            Row(
-                modifier = Modifier.fillMaxWidth(),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Text(
-                    text = stringResource(R.string.my_recipes),
-                    style = MaterialTheme.typography.titleLarge,
-                    fontWeight = FontWeight.Bold
-                )
-                CircularProgressIndicator(
-                    modifier = Modifier.size(20.dp),
-                    strokeWidth = 2.dp
-                )
             }
         }
     }
