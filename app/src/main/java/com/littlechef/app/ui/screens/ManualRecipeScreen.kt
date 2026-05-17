@@ -635,6 +635,7 @@ private fun EditManualIngredientDialog(
                             .size(48.dp)
                             .clip(CircleShape)
                             .clickable {
+                                haptic.performDestructive()
                                 onDelete()
                             }
                     ) {

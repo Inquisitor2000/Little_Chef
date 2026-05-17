@@ -18,6 +18,7 @@ import com.littlechef.app.domain.model.UnitConversion
 import com.littlechef.app.R
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
+import com.littlechef.app.ui.util.rememberHapticFeedback
 
 // Helper function to translate units in formatted display strings
 @Composable
@@ -57,6 +58,7 @@ fun MealDetailScreen(
     val context = androidx.compose.ui.platform.LocalContext.current
     val uiState by viewModel.uiState.collectAsState()
     var showDeleteDialog by remember { mutableStateOf(false) }
+    val haptic = rememberHapticFeedback()
     
     val meal = remember(uiState) {
         if (uiState is MealsUiState.Success) {
@@ -77,7 +79,7 @@ fun MealDetailScreen(
                     IconButton(onClick = { onNavigateToEdit(mealId) }) {
                         Icon(Icons.Default.Edit, contentDescription = "Edit")
                     }
-                    IconButton(onClick = { showDeleteDialog = true }) {
+                    IconButton(onClick = { haptic.performLight(); showDeleteDialog = true }) {
                         Icon(Icons.Default.Delete, contentDescription = "Delete")
                     }
                 }

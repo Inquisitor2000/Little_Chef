@@ -82,7 +82,7 @@ fun PlanScreen(
                             }
                             if (hasCompletedMeals) {
                                 Surface(
-                                    onClick = { showClearDialog = true },
+                                    onClick = { haptic.performLight(); showClearDialog = true },
                                     shape = CircleShape,
                                     color = MaterialTheme.colorScheme.primary,
                                     modifier = Modifier

@@ -22,8 +22,7 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectVerticalDragGestures
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.rememberLazyListState
+import com.littlechef.app.ui.components.CupertinoPicker
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -40,7 +39,7 @@ import androidx.compose.material.icons.filled.Star
 import androidx.compose.material.icons.outlined.StarBorder
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.snapshotFlow
+
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
@@ -70,8 +69,7 @@ import com.littlechef.app.domain.model.UnitConversion
 import com.littlechef.app.domain.model.UnitOptions
 import com.littlechef.app.ui.util.rememberHapticFeedback
 import com.littlechef.app.R
-import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.flow.debounce
+
 import kotlinx.coroutines.launch
 
 @Composable
@@ -1100,7 +1098,6 @@ private fun EditIngredientDialog(
     )
 }
 
-@OptIn(FlowPreview::class)
 @Composable
 internal fun MealTypePicker(
     selectedMealType: com.littlechef.app.domain.model.MealType?,
@@ -1108,193 +1105,27 @@ internal fun MealTypePicker(
     modifier: Modifier = Modifier,
     includeNoneOption: Boolean = true
 ) {
-    // Create list with None option first (if included), then all meal types
     val items = if (includeNoneOption) {
         listOf<com.littlechef.app.domain.model.MealType?>(null) + com.littlechef.app.domain.model.MealType.entries
     } else {
         com.littlechef.app.domain.model.MealType.entries.toList()
     }
-    
-    val listState = rememberLazyListState()
-    val coroutineScope = rememberCoroutineScope()
-    val haptic = com.littlechef.app.ui.util.rememberHapticFeedback()
-    val itemHeightDp = 40.dp
-    val itemHeightPx = with(androidx.compose.ui.platform.LocalDensity.current) { itemHeightDp.toPx() }
-    // For 120dp container with 40dp items: 40dp padding top + 40dp centered item + 40dp padding bottom = 120dp
-    val verticalPaddingDp = 40.dp
-    
-    // Create infinite list
-    val repeatCount = 1000
-    val totalItems = items.size * repeatCount
-    val middleStart = (repeatCount / 2) * items.size
-    
-    val selectedIndex = items.indexOf(selectedMealType).takeIf { it >= 0 } ?: 0
-    val initialScrollIndex = middleStart + selectedIndex
-    
-    // Track previous items size to detect when list changes
-    var previousItemsSize by remember { mutableStateOf(items.size) }
-    var hasInitialized by remember { mutableStateOf(false) }
-    var previousMealType by remember { mutableStateOf<com.littlechef.app.domain.model.MealType?>(selectedMealType) }
-    
-    // Only scroll on initial load or when items list changes (not on every selection change)
-    LaunchedEffect(items.size) {
-        val itemsChanged = items.size != previousItemsSize
-        previousItemsSize = items.size
-        
-        val targetIndex = middleStart + (items.indexOf(selectedMealType).takeIf { it >= 0 } ?: 0)
-        if (!hasInitialized || itemsChanged) {
-            listState.scrollToItem(targetIndex)
-            hasInitialized = true
-        }
-    }
-    
-    // Scroll to "Any" (null) when clear button is clicked
-    LaunchedEffect(selectedMealType) {
-        if (hasInitialized && selectedMealType == null && previousMealType != null) {
-            val targetIndex = middleStart // First item (null/"Any") in middle section
-            coroutineScope.launch {
-                listState.animateScrollToItem(targetIndex)
+
+    CupertinoPicker(
+        items = items,
+        selectedItem = selectedMealType,
+        onItemSelected = { onMealTypeSelected(it) },
+        itemLabel = { item ->
+            if (item == null) {
+                stringResource(R.string.add_recipe_none)
+            } else {
+                "${item.emoji} ${translateMealType(item)}"
             }
-        }
-        previousMealType = selectedMealType
-    }
-    
-    LaunchedEffect(listState) {
-        snapshotFlow { 
-            listState.firstVisibleItemIndex to listState.firstVisibleItemScrollOffset 
-        }
-        .debounce(100)
-        .collect { (firstIndex, offset) ->
-            val scrollPosition = offset.toFloat()
-            val centeredIndex = if (scrollPosition < itemHeightPx / 2) firstIndex else firstIndex + 1
-            val actualIndex = centeredIndex % items.size
-            val actualItem = items[actualIndex]
-            
-            if (actualItem != selectedMealType) {
-                onMealTypeSelected(actualItem)
-                haptic.performLight()
-            }
-        }
-    }
-    
-    LaunchedEffect(listState.isScrollInProgress) {
-        if (!listState.isScrollInProgress) {
-            val firstIndex = listState.firstVisibleItemIndex
-            val offset = listState.firstVisibleItemScrollOffset
-            val targetIndex = if (offset < itemHeightPx / 2) firstIndex else firstIndex + 1
-            
-            coroutineScope.launch {
-                listState.animateScrollToItem(targetIndex)
-                
-                // Update selection after snap completes
-                val actualIndex = targetIndex % items.size
-                val actualItem = items[actualIndex]
-                if (actualItem != selectedMealType) {
-                    onMealTypeSelected(actualItem)
-                    haptic.performLight()
-                }
-            }
-        }
-    }
-    
-    Box(
-        modifier = modifier.fillMaxHeight(),
-        contentAlignment = Alignment.Center
-    ) {
-        Surface(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 6.dp)
-                .height(itemHeightDp),
-            shape = RoundedCornerShape(10.dp),
-            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
-        ) {}
-        
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(itemHeightDp)
-                .align(Alignment.TopCenter)
-                .background(
-                    androidx.compose.ui.graphics.Brush.verticalGradient(
-                        colors = listOf(
-                            MaterialTheme.colorScheme.surface,
-                            MaterialTheme.colorScheme.surface.copy(alpha = 0f)
-                        )
-                    )
-                )
-        )
-        
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(itemHeightDp)
-                .align(Alignment.BottomCenter)
-                .background(
-                    androidx.compose.ui.graphics.Brush.verticalGradient(
-                        colors = listOf(
-                            MaterialTheme.colorScheme.surface.copy(alpha = 0f),
-                            MaterialTheme.colorScheme.surface
-                        )
-                    )
-                )
-        )
-        
-        LazyColumn(
-            state = listState,
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(vertical = verticalPaddingDp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            items(totalItems) { index ->
-                val actualIndex = index % items.size
-                val item = items[actualIndex]
-                val isSelected = item == selectedMealType
-                
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(itemHeightDp)
-                        .clickable { 
-                            onMealTypeSelected(item)
-                            coroutineScope.launch {
-                                listState.animateScrollToItem(index)
-                            }
-                        },
-                    contentAlignment = Alignment.Center
-                ) {
-                    Row(
-                        horizontalArrangement = Arrangement.Center,
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .fillMaxHeight()
-                            .padding(horizontal = 8.dp)
-                    ) {
-                        Text(
-                            text = if (item == null) {
-                                stringResource(R.string.add_recipe_none)
-                            } else {
-                                "${item.emoji} ${translateMealType(item)}"
-                            },
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                            color = if (isSelected) 
-                                MaterialTheme.colorScheme.onPrimaryContainer 
-                            else 
-                                MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
-                            textAlign = TextAlign.Center,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                    }
-                }
-            }
-        }
-    }
+        },
+        modifier = modifier
+    )
 }
 
-@OptIn(FlowPreview::class)
 @Composable
 internal fun DishCategoryPicker(
     selectedDishCategory: com.littlechef.app.domain.model.DishCategory?,
@@ -1302,190 +1133,25 @@ internal fun DishCategoryPicker(
     modifier: Modifier = Modifier,
     includeNoneOption: Boolean = true
 ) {
-    // Create list with None option first (if included), then all dish categories
     val items = if (includeNoneOption) {
         listOf<com.littlechef.app.domain.model.DishCategory?>(null) + com.littlechef.app.domain.model.DishCategory.entries
     } else {
         com.littlechef.app.domain.model.DishCategory.entries.toList()
     }
-    
-    val listState = rememberLazyListState()
-    val coroutineScope = rememberCoroutineScope()
-    val haptic = com.littlechef.app.ui.util.rememberHapticFeedback()
-    val itemHeightDp = 40.dp
-    val itemHeightPx = with(androidx.compose.ui.platform.LocalDensity.current) { itemHeightDp.toPx() }
-    // For 120dp container with 40dp items: 40dp padding top + 40dp centered item + 40dp padding bottom = 120dp
-    val verticalPaddingDp = 40.dp
-    
-    // Create infinite list
-    val repeatCount = 1000
-    val totalItems = items.size * repeatCount
-    val middleStart = (repeatCount / 2) * items.size
-    
-    val selectedIndex = items.indexOf(selectedDishCategory).takeIf { it >= 0 } ?: 0
-    val initialScrollIndex = middleStart + selectedIndex
-    
-    // Track previous items size to detect when list changes
-    var previousItemsSize by remember { mutableStateOf(items.size) }
-    var hasInitialized by remember { mutableStateOf(false) }
-    var previousDishCategory by remember { mutableStateOf<com.littlechef.app.domain.model.DishCategory?>(selectedDishCategory) }
-    
-    // Only scroll on initial load or when items list changes (not on every selection change)
-    LaunchedEffect(items.size) {
-        val itemsChanged = items.size != previousItemsSize
-        previousItemsSize = items.size
-        
-        val targetIndex = middleStart + (items.indexOf(selectedDishCategory).takeIf { it >= 0 } ?: 0)
-        if (!hasInitialized || itemsChanged) {
-            listState.scrollToItem(targetIndex)
-            hasInitialized = true
-        }
-    }
-    
-    // Scroll to "Any" (null) when clear button is clicked
-    LaunchedEffect(selectedDishCategory) {
-        if (hasInitialized && selectedDishCategory == null && previousDishCategory != null) {
-            val targetIndex = middleStart // First item (null/"Any") in middle section
-            coroutineScope.launch {
-                listState.animateScrollToItem(targetIndex)
+
+    CupertinoPicker(
+        items = items,
+        selectedItem = selectedDishCategory,
+        onItemSelected = { onDishCategorySelected(it) },
+        itemLabel = { item ->
+            if (item == null) {
+                stringResource(R.string.add_recipe_none)
+            } else {
+                "${item.emoji} ${translateDishCategory(item)}"
             }
-        }
-        previousDishCategory = selectedDishCategory
-    }
-    
-    LaunchedEffect(listState) {
-        snapshotFlow { 
-            listState.firstVisibleItemIndex to listState.firstVisibleItemScrollOffset 
-        }
-        .debounce(100)
-        .collect { (firstIndex, offset) ->
-            val scrollPosition = offset.toFloat()
-            val centeredIndex = if (scrollPosition < itemHeightPx / 2) firstIndex else firstIndex + 1
-            val actualIndex = centeredIndex % items.size
-            val actualItem = items[actualIndex]
-            
-            if (actualItem != selectedDishCategory) {
-                onDishCategorySelected(actualItem)
-                haptic.performLight()
-            }
-        }
-    }
-    
-    LaunchedEffect(listState.isScrollInProgress) {
-        if (!listState.isScrollInProgress) {
-            val firstIndex = listState.firstVisibleItemIndex
-            val offset = listState.firstVisibleItemScrollOffset
-            val targetIndex = if (offset < itemHeightPx / 2) firstIndex else firstIndex + 1
-            
-            coroutineScope.launch {
-                listState.animateScrollToItem(targetIndex)
-                
-                // Update selection after snap completes
-                val actualIndex = targetIndex % items.size
-                val actualItem = items[actualIndex]
-                if (actualItem != selectedDishCategory) {
-                    onDishCategorySelected(actualItem)
-                    haptic.performLight()
-                }
-            }
-        }
-    }
-    
-    Box(
-        modifier = modifier.fillMaxHeight(),
-        contentAlignment = Alignment.Center
-    ) {
-        Surface(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 6.dp)
-                .height(itemHeightDp),
-            shape = RoundedCornerShape(10.dp),
-            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
-        ) {}
-        
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(itemHeightDp)
-                .align(Alignment.TopCenter)
-                .background(
-                    androidx.compose.ui.graphics.Brush.verticalGradient(
-                        colors = listOf(
-                            MaterialTheme.colorScheme.surface,
-                            MaterialTheme.colorScheme.surface.copy(alpha = 0f)
-                        )
-                    )
-                )
-        )
-        
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(itemHeightDp)
-                .align(Alignment.BottomCenter)
-                .background(
-                    androidx.compose.ui.graphics.Brush.verticalGradient(
-                        colors = listOf(
-                            MaterialTheme.colorScheme.surface.copy(alpha = 0f),
-                            MaterialTheme.colorScheme.surface
-                        )
-                    )
-                )
-        )
-        
-        LazyColumn(
-            state = listState,
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(vertical = verticalPaddingDp),
-            horizontalAlignment = Alignment.CenterHorizontally
-        ) {
-            items(totalItems) { index ->
-                val actualIndex = index % items.size
-                val item = items[actualIndex]
-                val isSelected = item == selectedDishCategory
-                
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(itemHeightDp)
-                        .clickable { 
-                            onDishCategorySelected(item)
-                            coroutineScope.launch {
-                                listState.animateScrollToItem(index)
-                            }
-                        },
-                    contentAlignment = Alignment.Center
-                ) {
-                    Row(
-                        horizontalArrangement = Arrangement.Center,
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .fillMaxHeight()
-                            .padding(horizontal = 8.dp)
-                    ) {
-                        Text(
-                            text = if (item == null) {
-                                stringResource(R.string.add_recipe_none)
-                            } else {
-                                "${item.emoji} ${translateDishCategory(item)}"
-                            },
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                            color = if (isSelected) 
-                                MaterialTheme.colorScheme.onPrimaryContainer 
-                            else 
-                                MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
-                            textAlign = TextAlign.Center,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                    }
-                }
-            }
-        }
-    }
+        },
+        modifier = modifier
+    )
 }
 
 @Composable

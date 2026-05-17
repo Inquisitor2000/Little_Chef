@@ -708,6 +708,7 @@ private fun EditPantryItemDialog(
                 ) {
                     Button(
                         onClick = {
+                            haptic.performDestructive()
                             showDeleteConfirm = false
                             onDelete()
                         },
@@ -800,7 +801,7 @@ private fun EditPantryItemDialog(
                     
                     // Delete/Discard icon button - aligned with unit switcher position
                     IconButton(
-                        onClick = { showDeleteConfirm = true },
+                        onClick = { haptic.performLight(); showDeleteConfirm = true },
                         colors = IconButtonDefaults.iconButtonColors(
                             containerColor = Color(0xFFE57373), // Softer red background
                             contentColor = Color(0xFF8B0000) // Dark red icon
@@ -982,7 +983,8 @@ private fun EditPantryItemDialog(
                             colors = ButtonDefaults.buttonColors(
                                 containerColor = MaterialTheme.colorScheme.secondaryContainer,
                                 contentColor = MaterialTheme.colorScheme.onSecondaryContainer
-                            )
+                            ),
+                            contentPadding = PaddingValues(horizontal = 12.dp)
                         ) {
                             Text(stringResource(R.string.button_cancel))
                         }
@@ -1013,7 +1015,8 @@ private fun EditPantryItemDialog(
                                 } 
                             },
                             enabled = newQty != null && newQty >= 0,
-                            modifier = Modifier.weight(1f)
+                            modifier = Modifier.weight(1f),
+                            contentPadding = PaddingValues(horizontal = 12.dp)
                         ) {
                             Text(stringResource(R.string.button_save))
                         }

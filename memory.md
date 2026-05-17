@@ -430,6 +430,26 @@ fun performError()       // REJECT
 fun performLight()       // CLOCK_TICK
 ```
 
+#### Barrel Selector (CupertinoPicker)
+- Shared component: `ui/components/CupertinoPicker.kt`
+- Fires haptic (`VIRTUAL_KEY`) on scroll settle when item changes, not during scroll
+- Uses `lastHapticItem` guard + `isSnapping` flag to prevent double-fire
+- `rememberHapticFeedback()` composable in same util file
+
+#### Bin Icon (Delete) Button Haptic Pattern
+Used across all screens with `Icons.Default.Delete` icon buttons. Pattern: `performLight()` on bin icon press (opens confirmation dialog), `performDestructive()` on confirm delete:
+
+| Screen | Bin icon press | Confirm delete |
+|---|---|---|
+| PantryScreen | `performLight()` | `performDestructive()` |
+| AddIngredientDrawer | `performLight()` | (in dialog) |
+| ManualRecipeScreen | `performDestructive()` (direct delete) | — |
+| RecipeDetailScreen | `performLight()` | (in dialog) |
+| PlanScreen | `performLight()` (clear completed) | (in dialog) |
+| IngredientDetailScreen | `performLight()` | (in dialog) |
+| MealDetailScreen | `performLight()` | (in dialog) |
+| MealFormScreen | `performLight()` (remove from form) | — |
+
 ### GroceriesTextExport (`ui/export/`)
 - Two formats: full (organized by meals/categories with emojis) and compact (simple list)
 - Fully localized in all 3 languages
@@ -701,4 +721,4 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
 - All values per 100g; `pieceG` converts pcs to grams before calculation
 - 365 entries covering 84 unique DLC + 266 unique bundled ingredients
 
-**Last Updated**: May 13, 2026 (edit ingredient dialog padding, grocery separator length, ManualRecipeScreen bottom padding)
+**Last Updated**: May 17, 2026 (barrel selector haptic fix, bin icon delete haptic pattern)

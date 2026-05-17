@@ -328,11 +328,12 @@ fun MealFormScreen(
 
 @Composable
 fun IngredientQuantityRow(
-    ingredient: Ingredient,
+    ingredient: com.littlechef.app.domain.model.Ingredient,
     quantity: String,
     onQuantityChange: (String) -> Unit,
     onRemove: () -> Unit
 ) {
+    val haptic = rememberHapticFeedback()
     Row(
         modifier = Modifier.fillMaxWidth(),
         horizontalArrangement = Arrangement.spacedBy(8.dp)
@@ -353,7 +354,7 @@ fun IngredientQuantityRow(
             suffix = { Text(ingredient.unit) }
         )
         
-        IconButton(onClick = onRemove) {
+        IconButton(onClick = { haptic.performLight(); onRemove() }) {
             Icon(Icons.Default.Delete, contentDescription = "Remove")
         }
     }

@@ -1422,7 +1422,8 @@ private fun PurchaseQuantityDialog(
                         colors = ButtonDefaults.buttonColors(
                             containerColor = MaterialTheme.colorScheme.secondaryContainer,
                             contentColor = MaterialTheme.colorScheme.onSecondaryContainer
-                        )
+                        ),
+                        contentPadding = PaddingValues(horizontal = 12.dp)
                     ) {
                         Text(stringResource(R.string.button_cancel))
                     }
@@ -1434,7 +1435,8 @@ private fun PurchaseQuantityDialog(
                             }
                         },
                         enabled = qty != null && qty > 0,
-                        modifier = Modifier.weight(1f)
+                        modifier = Modifier.weight(1f),
+                        contentPadding = PaddingValues(horizontal = 12.dp)
                     ) {
                         Text(stringResource(R.string.groceries_add_to_pantry))
                     }

@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.littlechef.app.domain.model.Ingredient
+import com.littlechef.app.ui.util.rememberHapticFeedback
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -27,6 +28,7 @@ fun IngredientDetailScreen(
     val uiState by viewModel.uiState.collectAsState()
     var showDeleteDialog by remember { mutableStateOf(false) }
     var ingredient by remember { mutableStateOf<Ingredient?>(null) }
+    val haptic = rememberHapticFeedback()
 
     LaunchedEffect(ingredientId, uiState) {
         if (uiState is IngredientsUiState.Success) {
@@ -52,7 +54,7 @@ fun IngredientDetailScreen(
                     IconButton(onClick = { onNavigateToEdit(ingredientId) }) {
                         Icon(Icons.Default.Edit, contentDescription = "Edit")
                     }
-                    IconButton(onClick = { showDeleteDialog = true }) {
+                    IconButton(onClick = { haptic.performLight(); showDeleteDialog = true }) {
                         Icon(Icons.Default.Delete, contentDescription = "Delete")
                     }
                 }

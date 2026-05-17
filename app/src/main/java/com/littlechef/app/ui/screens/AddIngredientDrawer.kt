@@ -758,6 +758,7 @@ private fun DrawerCustomIngredientItem(
         color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
         shape = RoundedCornerShape(12.dp)
     ) {
+        val haptic = rememberHapticFeedback()
         Row(
             modifier = Modifier
                 .fillMaxWidth()
@@ -772,7 +773,7 @@ private fun DrawerCustomIngredientItem(
                 modifier = Modifier.weight(1f)
             )
             Surface(
-                onClick = { showDeleteConfirm = true },
+                onClick = { haptic.performLight(); showDeleteConfirm = true },
                 shape = CircleShape,
                 color = MaterialTheme.colorScheme.errorContainer.copy(alpha = 0.5f),
                 modifier = Modifier.size(32.dp)
@@ -1023,7 +1024,8 @@ private fun DrawerQuantityDialog(
                         colors = ButtonDefaults.buttonColors(
                             containerColor = MaterialTheme.colorScheme.secondaryContainer,
                             contentColor = MaterialTheme.colorScheme.onSecondaryContainer
-                        )
+                        ),
+                        contentPadding = PaddingValues(horizontal = 12.dp)
                     ) {
                         Text(stringResource(R.string.button_cancel))
                     }
@@ -1031,7 +1033,8 @@ private fun DrawerQuantityDialog(
                     Button(
                         onClick = { onConfirm(qty!!, selectedUnit) },
                         enabled = qty != null && qty > 0,
-                        modifier = Modifier.weight(1f)
+                        modifier = Modifier.weight(1f),
+                        contentPadding = PaddingValues(horizontal = 12.dp)
                     ) {
                         Text(stringResource(R.string.button_add))
                     }
@@ -1213,7 +1216,8 @@ private fun DrawerCustomQuantityDialog(
                         colors = ButtonDefaults.buttonColors(
                             containerColor = MaterialTheme.colorScheme.secondaryContainer,
                             contentColor = MaterialTheme.colorScheme.onSecondaryContainer
-                        )
+                        ),
+                        contentPadding = PaddingValues(horizontal = 12.dp)
                     ) {
                         Text(stringResource(R.string.button_cancel))
                     }
@@ -1221,7 +1225,8 @@ private fun DrawerCustomQuantityDialog(
                     Button(
                         onClick = { onConfirm(qty!!, selectedUnit) },
                         enabled = qty != null && qty > 0,
-                        modifier = Modifier.weight(1f)
+                        modifier = Modifier.weight(1f),
+                        contentPadding = PaddingValues(horizontal = 12.dp)
                     ) {
                         Text(stringResource(R.string.button_add))
                     }

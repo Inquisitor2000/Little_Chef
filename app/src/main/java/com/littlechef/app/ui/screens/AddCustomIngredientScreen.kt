@@ -1,12 +1,8 @@
 package com.littlechef.app.ui.screens
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -18,25 +14,21 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Info
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.snapshotFlow
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.littlechef.app.R
 import com.littlechef.app.domain.model.CommonAllergen
 import com.littlechef.app.domain.model.IngredientCatalog
 import com.littlechef.app.domain.model.IngredientCategory
+import com.littlechef.app.ui.components.CupertinoPicker
 import com.littlechef.app.ui.util.rememberHapticFeedback
-import kotlinx.coroutines.FlowPreview
-import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
@@ -557,10 +549,9 @@ fun AddCustomIngredientScreen(
                         CupertinoPicker(
                             items = categories,
                             selectedItem = selectedCategory,
-                            onItemSelected = { category ->
-                                selectedCategory = category
-                                haptic.performLight()
-                            },
+                                    onItemSelected = { category ->
+                                        selectedCategory = category
+                                    },
                             itemLabel = { it?.getLocalizedName(context) ?: "" },
                             showIcon = true,
                             getIcon = { it?.let { cat -> 
@@ -588,7 +579,6 @@ fun AddCustomIngredientScreen(
                                     selectedItem = selectedSubcategory.takeIf { it.isNotEmpty() },
                                     onItemSelected = { subcategory ->
                                         selectedSubcategory = subcategory ?: ""
-                                        haptic.performLight()
                                     },
                                     itemLabel = { it?.let { sub -> 
                                         translationSystem?.translateCategory(sub) ?: com.littlechef.app.domain.model.getLocalizedSubcategoryName(context, sub)
@@ -740,202 +730,6 @@ fun AddCustomIngredientScreen(
                 pendingUnit = null
             }
         )
-    }
-}
-
-@OptIn(FlowPreview::class)
-@Composable
-private fun <T> CupertinoPicker(
-    items: List<T>,
-    selectedItem: T?,
-    onItemSelected: (T?) -> Unit,
-    itemLabel: (T?) -> String,
-    modifier: Modifier = Modifier,
-    showIcon: Boolean = false,
-    getIcon: ((T?) -> Int)? = null
-) {
-    val listState = rememberLazyListState()
-    val coroutineScope = rememberCoroutineScope()
-    val itemHeightDp = 40.dp
-    val itemHeightPx = with(androidx.compose.ui.platform.LocalDensity.current) { itemHeightDp.toPx() }
-    val visibleItems = 3
-    
-    // Calculate proper padding to center the middle item
-    // Using 36dp for better visual centering
-    val verticalPaddingDp = 36.dp
-    
-    // Create infinite list by repeating items
-    val repeatCount = 1000 // Large enough to feel infinite
-    val totalItems = items.size * repeatCount
-    val middleStart = (repeatCount / 2) * items.size
-    
-    // Find selected index in the middle section
-    val selectedIndex = items.indexOf(selectedItem).takeIf { it >= 0 } ?: 0
-    val initialScrollIndex = middleStart + selectedIndex
-    
-    // Scroll to selected item when it changes
-    LaunchedEffect(selectedItem) {
-        val targetIndex = middleStart + (items.indexOf(selectedItem).takeIf { it >= 0 } ?: 0)
-        listState.scrollToItem(targetIndex)
-    }
-    
-    // Auto-select based on scroll position - item in center of highlight
-    // Use debouncing and distinctUntilChanged to reduce callback frequency
-    LaunchedEffect(listState) {
-        snapshotFlow { 
-            listState.firstVisibleItemIndex to listState.firstVisibleItemScrollOffset 
-        }
-        .debounce(100) // Increased debounce to reduce update frequency
-        .collect { (firstIndex, offset) ->
-            // Calculate which item is in the center
-            val scrollPosition = offset.toFloat()
-            
-            // The centered item is the one whose center aligns with the highlight center
-            val centeredIndex = if (scrollPosition < itemHeightPx / 2) {
-                firstIndex
-            } else {
-                firstIndex + 1
-            }
-            
-            // Map back to original items using modulo
-            val actualIndex = centeredIndex % items.size
-            val actualItem = items[actualIndex]
-            
-            // Only update if different to avoid infinite loops
-            if (actualItem != selectedItem) {
-                onItemSelected(actualItem)
-            }
-        }
-    }
-    
-    // Snap to center when scrolling stops
-    LaunchedEffect(listState.isScrollInProgress) {
-        if (!listState.isScrollInProgress) {
-            // Calculate the closest item to center
-            val firstIndex = listState.firstVisibleItemIndex
-            val offset = listState.firstVisibleItemScrollOffset
-            
-            // Determine which item should be centered
-            val targetIndex = if (offset < itemHeightPx / 2) {
-                firstIndex
-            } else {
-                firstIndex + 1
-            }
-            
-            // Animate to center the target item
-            coroutineScope.launch {
-                listState.animateScrollToItem(targetIndex)
-            }
-        }
-    }
-    
-    Box(
-        modifier = modifier.fillMaxHeight(),
-        contentAlignment = Alignment.Center
-    ) {
-        // Selection highlight in the center
-        Surface(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 6.dp)
-                .height(itemHeightDp),
-            shape = RoundedCornerShape(10.dp),
-            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.35f)
-        ) {}
-        
-        // Fade gradients at top and bottom
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(itemHeightDp)
-                .align(Alignment.TopCenter)
-                .background(
-                    androidx.compose.ui.graphics.Brush.verticalGradient(
-                        colors = listOf(
-                            MaterialTheme.colorScheme.surface,
-                            MaterialTheme.colorScheme.surface.copy(alpha = 0f)
-                        )
-                    )
-                )
-        )
-        
-        Box(
-            modifier = Modifier
-                .fillMaxWidth()
-                .height(itemHeightDp)
-                .align(Alignment.BottomCenter)
-                .background(
-                    androidx.compose.ui.graphics.Brush.verticalGradient(
-                        colors = listOf(
-                            MaterialTheme.colorScheme.surface.copy(alpha = 0f),
-                            MaterialTheme.colorScheme.surface
-                        )
-                    )
-                )
-        )
-        
-        // Scrollable list with infinite items
-        LazyColumn(
-            state = listState,
-            modifier = Modifier.fillMaxSize(),
-            contentPadding = PaddingValues(vertical = verticalPaddingDp),
-            horizontalAlignment = Alignment.CenterHorizontally,
-            userScrollEnabled = true
-        ) {
-            items(totalItems) { index ->
-                val actualIndex = index % items.size
-                val item = items[actualIndex]
-                val isSelected = item == selectedItem
-                
-                Box(
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .height(itemHeightDp)
-                        .clickable { 
-                            onItemSelected(item)
-                            coroutineScope.launch {
-                                listState.animateScrollToItem(index)
-                            }
-                        },
-                    contentAlignment = Alignment.Center
-                ) {
-                    Row(
-                        horizontalArrangement = Arrangement.Center,
-                        verticalAlignment = Alignment.CenterVertically,
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .fillMaxHeight()
-                            .padding(horizontal = 8.dp)
-                    ) {
-                        // Show icon if enabled
-                        if (showIcon && getIcon != null) {
-                            val iconRes = getIcon(item)
-                            if (iconRes != 0) {
-                                Image(
-                                    painter = painterResource(id = iconRes),
-                                    contentDescription = null,
-                                    modifier = Modifier.size(20.dp)
-                                )
-                                Spacer(modifier = Modifier.width(6.dp))
-                            }
-                        }
-                        
-                        Text(
-                            text = itemLabel(item),
-                            style = MaterialTheme.typography.bodyMedium,
-                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
-                            color = if (isSelected) 
-                                MaterialTheme.colorScheme.onPrimaryContainer 
-                            else 
-                                MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f),
-                            textAlign = TextAlign.Center,
-                            maxLines = 1,
-                            overflow = TextOverflow.Ellipsis
-                        )
-                    }
-                }
-            }
-        }
     }
 }
 

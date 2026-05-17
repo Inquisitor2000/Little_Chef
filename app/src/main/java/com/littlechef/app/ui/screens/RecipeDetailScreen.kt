@@ -682,7 +682,7 @@ fun RecipeDetailScreen(
                     }
                 },
                 actions = {
-                    IconButton(onClick = { showDeleteDialog = true }) {
+                    IconButton(onClick = { haptic.performLight(); showDeleteDialog = true }) {
                         Box(
                             modifier = Modifier
                                 .size(40.dp)
