@@ -39,7 +39,8 @@ class BundledRecipeDetailViewModel @Inject constructor(
     private val inventoryRepository: com.littlechef.app.domain.repository.InventoryRepository,
     private val ingredientRepository: com.littlechef.app.domain.repository.IngredientRepository,
     private val ingredientMatcher: IngredientMatcher,
-    val nutritionLoader: com.littlechef.app.data.local.NutritionLoader
+    val nutritionLoader: com.littlechef.app.data.local.NutritionLoader,
+    private val analyticsService: com.littlechef.app.data.analytics.AnalyticsService
 ) : ViewModel() {
 
     init {
@@ -129,6 +130,10 @@ class BundledRecipeDetailViewModel @Inject constructor(
     val ingredientSubstitutions: StateFlow<Map<String, String>> = _ingredientSubstitutions
     
     fun loadRecipe(cuisine: Cuisine, recipeId: String) {
+        analyticsService.trackBundledRecipeViewed(
+            recipeName = recipeId,
+            cuisineName = cuisine.name
+        )
         viewModelScope.launch {
             // Use TranslationSystem to load translated recipe
             val translatedRecipe = translationSystem.translateRecipe(recipeId, cuisine.displayName.lowercase())

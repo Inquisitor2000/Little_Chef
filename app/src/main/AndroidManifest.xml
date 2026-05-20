@@ -15,6 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LittleChef"
         tools:targetApi="34">
+
+        <!-- Disable automatic screen reporting — we track screens manually via
+             Compose Navigation to get proper screen names instead of "MainActivity" -->
+        <meta-data
+            android:name="google_analytics_automatic_screen_reporting_enabled"
+            android:value="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true"

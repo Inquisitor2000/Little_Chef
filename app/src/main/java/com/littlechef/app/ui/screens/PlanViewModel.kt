@@ -34,7 +34,8 @@ class PlanViewModel @Inject constructor(
     private val preferences: com.littlechef.app.data.preferences.OnboardingPreferences,
     private val substituteInitializer: com.littlechef.app.data.local.SubstituteInitializer,
     private val translationSystem: com.littlechef.app.data.local.TranslationSystem,
-    val nutritionLoader: com.littlechef.app.data.local.NutritionLoader
+    val nutritionLoader: com.littlechef.app.data.local.NutritionLoader,
+    private val analyticsService: com.littlechef.app.data.analytics.AnalyticsService
 ) : ViewModel() {
 
     init {
@@ -187,8 +188,12 @@ class PlanViewModel @Inject constructor(
     ) {
         viewModelScope.launch {
             when (val result = createMealPlanUseCase(mealId, plannedDate, mealType)) {
-                is CreateMealPlanUseCase.Result.Success -> onSuccess()
-                is CreateMealPlanUseCase.Result.InsufficientIngredients -> onInsufficientIngredients(result.shortages)
+                is CreateMealPlanUseCase.Result.Success -> {
+                    onSuccess()
+                }
+                is CreateMealPlanUseCase.Result.InsufficientIngredients -> {
+                    onInsufficientIngredients(result.shortages)
+                }
                 is CreateMealPlanUseCase.Result.Error -> onError(result.message)
             }
         }
@@ -254,7 +259,9 @@ class PlanViewModel @Inject constructor(
     ) {
         viewModelScope.launch {
             when (val result = completeCookingUseCase(mealPlanId)) {
-                is CompleteCookingUseCase.Result.Success -> onSuccess()
+                is CompleteCookingUseCase.Result.Success -> {
+                    onSuccess()
+                }
                 is CompleteCookingUseCase.Result.Error -> onError(result.message)
             }
         }
@@ -271,7 +278,6 @@ class PlanViewModel @Inject constructor(
             
             when (val result = abortCookingUseCase(mealPlanId)) {
                 is AbortCookingUseCase.Result.Success -> {
-                    // Delete grocery items for this specific meal plan
                     if (mealPlan != null) {
                         deleteGroceryItemsForMealPlan(mealPlan)
                     }
@@ -565,6 +571,11 @@ class PlanViewModel @Inject constructor(
             )
             
             mealPlanRepository.update(updatedMealPlan)
+            
+            analyticsService.trackSubstituteApplied(
+                recipeName = mealPlan.meal.name,
+                ingredientName = originalIngredient.name
+            )
             
             // Update grocery items: replace original ingredient with substitute
             updateGroceryItemsForSubstitution(

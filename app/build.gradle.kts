@@ -4,6 +4,7 @@ plugins {
     id("com.google.dagger.hilt.android")
     id("com.google.devtools.ksp")
     id("org.jetbrains.kotlin.plugin.serialization")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -139,6 +140,10 @@ dependencies {
     // Google Play Billing (for in-app purchases)
     implementation("com.android.billingclient:billing:6.1.0")
     implementation("com.android.billingclient:billing-ktx:6.1.0")
+    
+    // Firebase Analytics
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0"))
+    implementation("com.google.firebase:firebase-analytics-ktx")
 
     // Testing
     testImplementation("junit:junit:4.13.2")

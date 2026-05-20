@@ -17,6 +17,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
+import com.littlechef.app.data.analytics.AnalyticsService
 import com.littlechef.app.data.preferences.OnboardingPreferences
 import com.littlechef.app.domain.model.Cuisine
 import com.littlechef.app.ui.screens.BundledRecipeDetailScreen
@@ -41,7 +42,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class NavViewModel @Inject constructor(
-    val onboardingPreferences: OnboardingPreferences
+    val onboardingPreferences: OnboardingPreferences,
+    private val analyticsService: AnalyticsService
 ) : ViewModel() {
     val isFirstLaunchAfterOnboarding: StateFlow<Boolean?> = onboardingPreferences.isFirstLaunchAfterOnboarding
         .stateIn(
@@ -52,6 +54,35 @@ class NavViewModel @Inject constructor(
     
     suspend fun clearFirstLaunchFlag() {
         onboardingPreferences.clearFirstLaunchFlag()
+    }
+
+    /**
+     * Map a navigation route to a human-readable screen name for analytics.
+     */
+    fun screenNameForRoute(route: String?): String = when {
+        route == null -> "unknown"
+        route == NavDestination.Plan.route -> AnalyticsService.SCREEN_PLAN
+        route == NavDestination.Meals.route -> AnalyticsService.SCREEN_MEALS
+        route == NavDestination.Groceries.route -> AnalyticsService.SCREEN_GROCERIES
+        route == NavDestination.Pantry.route -> AnalyticsService.SCREEN_PANTRY
+        route.startsWith("recipe_detail/") -> AnalyticsService.SCREEN_RECIPE_DETAIL
+        route.startsWith("cuisine_meals/") -> AnalyticsService.SCREEN_CUISINE_MEALS
+        route.startsWith("bundled_recipe/") -> AnalyticsService.SCREEN_BUNDLED_RECIPE
+        route.startsWith("scrape_recipe") -> AnalyticsService.SCREEN_SCRAPE_RECIPE
+        route.startsWith("manual_recipe") -> AnalyticsService.SCREEN_MANUAL_RECIPE
+        route.startsWith("edit_recipe/") -> AnalyticsService.SCREEN_RECIPE_DETAIL
+        route.startsWith("meal_plan_detail/") -> AnalyticsService.SCREEN_MEAL_PLAN_DETAIL
+        route.startsWith("suggestion") -> AnalyticsService.SCREEN_SUGGESTION
+        route.startsWith("settings") -> AnalyticsService.SCREEN_SETTINGS
+        route.startsWith("add_custom_ingredient") -> AnalyticsService.SCREEN_INGREDIENT_FORM
+        else -> route
+    }
+
+    /**
+     * Track a screen view event via analytics.
+     */
+    fun trackScreenView(screenName: String) {
+        analyticsService.trackScreenView(screenName)
     }
 }
 
@@ -90,6 +121,10 @@ fun AppNavHost(
         Log.d("AppNavHost", "Setting up navigation listener")
         var isInitialNavigation = true
         navController.addOnDestinationChangedListener { _, destination, _ ->
+            // Track screen view for every navigation — including initial
+            val screenName = navViewModel.screenNameForRoute(destination.route)
+            navViewModel.trackScreenView(screenName)
+            
             Log.d("AppNavHost", "Navigation changed to: ${destination.route}, firstLaunchFlag: $isFirstLaunchAfterOnboarding, isInitial: $isInitialNavigation")
             if (isInitialNavigation) {
                 Log.d("AppNavHost", "Skipping initial navigation event")

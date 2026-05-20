@@ -4,6 +4,7 @@ import android.graphics.Bitmap
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.littlechef.app.data.local.ImageStorage
+import com.littlechef.app.data.analytics.AnalyticsService
 import com.littlechef.app.data.preferences.OnboardingPreferences
 import com.littlechef.app.domain.model.CatalogIngredient
 import com.littlechef.app.domain.model.IngredientCatalog
@@ -55,7 +56,8 @@ class ManualRecipeViewModel @Inject constructor(
     val ingredientRepository: IngredientRepository,
     private val imageStorage: ImageStorage,
     val preferences: OnboardingPreferences,
-    private val ingredientMatcher: IngredientMatcher
+    private val ingredientMatcher: IngredientMatcher,
+    private val analyticsService: com.littlechef.app.data.analytics.AnalyticsService
 ) : ViewModel() {
 
     private val _state = MutableStateFlow(ManualRecipeState())
@@ -316,6 +318,11 @@ class ManualRecipeViewModel @Inject constructor(
                     mealRepository.createMeal(meal, ingredientInputs)
                 }
                 
+                analyticsService.trackRecipeCreatedManual(
+                    recipeName = currentState.name,
+                    ingredientCount = ingredientInputs.size,
+                    mealType = currentState.mealType?.name
+                )
                 _uiState.value = ManualRecipeUiState.Saved
             } catch (e: Exception) {
                 android.util.Log.e("ManualRecipe", "Error saving recipe", e)

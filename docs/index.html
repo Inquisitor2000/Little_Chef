@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Little Chef — meal planner for Android. Plan meals, manage your pantry, create shopping lists." />
+  <title>Little Chef — Meal Planner</title>
+  <link rel="icon" type="image/x-icon" href="icon.jpg" />
+  <style>
+    /* ═══════════════════════════════════════════════════
+       CSS Variables — Light & Dark
+       ═══════════════════════════════════════════════════ */
+    :root,
+    [data-theme="light"] {
+      --brand:      #D68C45;
+      --brand-bg:   rgba(214,140,69,.12);
+      --brand-soft: rgba(214,140,69,.06);
+      --accent:     #5398BE;
+      --bg:         #F6F5F2;
+      --card:       #FFFFFF;
+      --card-hover: #FFFFFF;
+      --text:       #1C1C1C;
+      --text-muted: #8A8A8A;
+      --text-soft:  #5C5C5C;
+      --nav-text:   #1C1C1C;
+      --nav-blur:   rgba(246,245,242,.85);
+      --hero-bg:    #FFFFFF;
+      --border:     rgba(0,0,0,.06);
+      --shadow:     0 4px 20px rgba(0,0,0,.06);
+      --shadow-hov: 0 8px 32px rgba(0,0,0,.10);
+
+      --btn-text:   #FFFFFF;
+    }
+
+    [data-theme="dark"] {
+      --bg:         #161616;
+      --card:       #222222;
+      --card-hover: #2A2A2A;
+      --text:       #EDEDED;
+      --text-muted: #777777;
+      --text-soft:  #AAAAAA;
+      --nav-text:   #EDEDED;
+      --nav-blur:   rgba(22,22,22,.85);
+      --hero-bg:    #1A1A1A;
+      --border:     rgba(255,255,255,.07);
+      --shadow:     0 4px 20px rgba(0,0,0,.25);
+      --shadow-hov: 0 8px 32px rgba(0,0,0,.35);
+      --btn-text:   #1C1C1C;
+    }
+
+    /* ── Reset ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      transition: background .35s, color .35s;
+    }
+
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── Utilities ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .6s ease, transform .6s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    .label {
+      display: inline-block;
+      font-size: .65rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--brand);
+      margin-bottom: 6px;
+    }
+
+    .title-lg {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      line-height: 1.25;
+      margin-bottom: 10px;
+    }
+
+    .title-sm {
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 4px;
+    }
+
+    .sub {
+      font-size: .85rem;
+      color: var(--text-soft);
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       Navigation + Theme Toggle
+       ═══════════════════════════════════════════════════ */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 14px 0;
+      transition: background .35s, padding .35s;
+    }
+    nav.scrolled {
+      background: var(--nav-blur);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+    }
+    nav .container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--nav-text);
+    }
+    .nav-left img {
+      width: 30px; height: 30px;
+      border-radius: 6px;
+    }
+    #navLinks {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+    }
+    .nav-right a {
+      font-size: .82rem;
+      font-weight: 500;
+      color: var(--text-muted);
+      transition: color .25s;
+    }
+    .nav-right a:hover { color: var(--brand); }
+
+    .theme-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px; height: 34px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: transparent;
+      cursor: pointer;
+      color: var(--text-muted);
+      font-size: 1rem;
+      transition: background .3s, color .3s, border-color .3s;
+    }
+    .theme-btn:hover {
+      background: var(--brand-soft);
+      color: var(--brand);
+      border-color: var(--brand);
+    }
+
+    .nav-cta-sm {
+      background: var(--brand);
+      color: #fff !important;
+      padding: 6px 16px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: .78rem;
+      transition: background .25s;
+    }
+    .nav-cta-sm:hover { background: #B8732E !important; color: #fff !important; }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 4px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .hamburger span {
+      width: 22px; height: 2px;
+      background: var(--nav-text);
+      border-radius: 2px;
+      transition: .3s;
+    }
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4px,4px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(4px,-4px); }
+
+    /* ═══════════════════════════════════════════════════
+       Hero
+       ═══════════════════════════════════════════════════ */
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--hero-bg);
+      padding: 80px 0 32px;
+      text-align: center;
+      transition: background .35s;
+    }
+    .hero .container {
+      max-width: 480px;
+    }
+    .hero-icon {
+      width: 72px; height: 72px;
+      border-radius: 18px;
+      margin: 0 auto 14px;
+      box-shadow: 0 4px 16px rgba(0,0,0,.08);
+    }
+    .hero h1 {
+      font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 6px;
+      letter-spacing: -.02em;
+    }
+    .hero h1 .branded { color: var(--brand); }
+    .hero .tagline {
+      font-size: .82rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+    }
+
+    .btn-play {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--text);
+      color: var(--btn-text);
+      padding: 8px 16px;
+      border-radius: 100px;
+      font-weight: 600;
+      font-size: .78rem;
+      transition: opacity .25s, transform .25s;
+    }
+    .btn-play:hover { opacity: .85; transform: scale(1.03); }
+    .btn-play svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ═══════════════════════════════════════════════════
+       Features — Paired Preview Cards
+       ═══════════════════════════════════════════════════ */
+    #features {
+      padding: 48px 0;
+    }
+    #features .section-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+    #features .section-header .sub {
+      margin: 0 auto;
+      max-width: 480px;
+    }
+
+    .feat-pair {
+      display: flex;
+      align-items: stretch;
+      margin-bottom: 24px;
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: background .35s, box-shadow .3s, transform .3s;
+    }
+    .feat-pair:hover {
+      box-shadow: var(--shadow-hov);
+      transform: translateY(-2px);
+      background: var(--card-hover);
+    }
+
+    .fp-img {
+      width: 240px;
+      flex-shrink: 0;
+      overflow: hidden;
+      min-height: 220px;
+    }
+    .fp-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+
+    .fp-texts {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .fp-item {
+      padding: 18px 22px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 3px;
+    }
+    .fp-item .title-sm {
+      font-size: .9rem;
+    }
+    .fp-item .sub {
+      font-size: .78rem;
+    }
+    .fp-item .insight {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      font-size: .65rem;
+      font-weight: 600;
+      color: var(--brand);
+      margin-top: 4px;
+      letter-spacing: .02em;
+    }
+    .fp-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 0 22px;
+    }
+
+    .feat-solo {
+      display: flex;
+      align-items: stretch;
+      max-width: 640px;
+      margin: 0 auto;
+      background: var(--card);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: background .35s, box-shadow .3s, transform .3s;
+    }
+    .feat-solo:hover {
+      box-shadow: var(--shadow-hov);
+      transform: translateY(-2px);
+      background: var(--card-hover);
+    }
+    .feat-solo .fp-img {
+      width: 200px;
+      min-height: 180px;
+    }
+
+
+    /* ═══════════════════════════════════════════════════
+       Stats
+       ═══════════════════════════════════════════════════ */
+    #stats {
+      width: 100%;
+      max-width: 720px;
+      margin: 20px auto 0;
+      border: 1px solid var(--brand);
+      border-radius: 12px;
+      padding: 24px 24px 22px;
+      transition: border-color .35s;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 0;
+      text-align: center;
+    }
+    .stat-item {
+      padding: 0 18px;
+      border-right: 1px solid var(--brand);
+    }
+    .stat-item:last-child {
+      border-right: none;
+    }
+    .stat-item .num {
+      font-size: 1.6rem;
+      font-weight: 800;
+      color: var(--brand);
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+    .stat-item .lbl {
+      font-size: .68rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       CTA
+       ═══════════════════════════════════════════════════ */
+    #cta {
+      padding: 48px 0;
+      text-align: center;
+    }
+    #cta p {
+      font-size: .8rem;
+      color: var(--text-muted);
+      margin-top: 10px;
+    }
+
+    /* ═══════════════════════════════════════════════════
+       Footer
+       ═══════════════════════════════════════════════════ */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 24px 0 20px;
+      text-align: center;
+      font-size: .75rem;
+      color: var(--text-muted);
+    }
+    footer .brand { font-weight: 600; color: var(--text-soft); }
+
+    /* ═══════════════════════════════════════════════════
+       Responsive
+       ═══════════════════════════════════════════════════ */
+    @media (max-width: 860px) {
+      .feat-pair { flex-wrap: wrap; }
+      .feat-pair .fp-img { width: 50%; min-height: 180px; }
+      .feat-pair .fp-texts { width: 100%; order: 3; }
+      .feat-solo { flex-wrap: wrap; }
+      .feat-solo .fp-img { width: 100%; min-height: 200px; max-height: 260px; }
+      .hero { padding: 64px 0 24px; }
+
+      .nav-links { display: none; }
+      .nav-links.open {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: var(--nav-blur);
+        backdrop-filter: blur(14px);
+        padding: 24px 28px;
+        gap: 20px;
+        border-bottom: 1px solid var(--border);
+      }
+      .hamburger { display: flex; }
+    }
+
+    @media (max-width: 600px) {
+      .feat-pair .fp-img { width: 100%; min-height: 200px; max-height: 240px; }
+      .fp-item { padding: 14px 16px; }
+      .fp-item .title-sm { font-size: .82rem; }
+      .fp-item .sub { font-size: .72rem; }
+      .fp-divider { margin: 0 16px; }
+      .hero-icon { width: 60px; height: 60px; border-radius: 15px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero { padding: 48px 0 20px; }
+      .hero-icon { width: 52px; height: 52px; border-radius: 13px; }
+      .stats-grid { grid-template-columns: repeat(3, 1fr); gap: 12px; }
+      .btn-play { width: 100%; justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ═══════════════════ Navigation ═══════════════════ -->
+  <nav id="navbar">
+    <div class="container">
+      <a href="#" class="nav-left">
+        <img src="icon.jpg" alt="" width="30" height="30" />
+        Little Chef
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="#features">Features</a>
+        <a href="#stats">Overview</a>
+        <a href="#cta" class="nav-cta-sm">Get the App</a>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme">
+          <span id="themeIcon">☀️</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ Hero ═══════════════════ -->
+  <section class="hero">
+    <div class="container">
+      <img src="icon.jpg" alt="Little Chef" class="hero-icon" />
+      <h1><span class="branded">Little</span> Chef</h1>
+      <p class="tagline">Plan meals. Cook smarter.</p>
+      <a href="#cta" class="btn-play">
+        <svg viewBox="0 0 24 24"><polyline points="14 3 14 9 20 9"/><line x1="3" y1="21" x2="13" y2="11"/><path d="M3 20.5v-17a.5.5 0 0 1 .5-.5h11.5l6 6v11.5a.5.5 0 0 1-.5.5h-17a.5.5 0 0 1-.5-.5z"/></svg>
+        Download on Google Play
+      </a>
+    </div>
+
+    <section id="stats">
+      <div class="stats-grid reveal">
+        <div class="stat-item"><div class="num">200+</div><div class="lbl">Recipes</div></div>
+        <div class="stat-item"><div class="num">14</div><div class="lbl">Cuisines</div></div>
+        <div class="stat-item"><div class="num">500+</div><div class="lbl">Ingredients</div></div>
+        <div class="stat-item"><div class="num">9</div><div class="lbl">Allergens</div></div>
+        <div class="stat-item"><div class="num">3</div><div class="lbl">Languages</div></div>
+        <div class="stat-item"><div class="num">Offline</div><div class="lbl">First</div></div>
+      </div>
+    </section>
+  </section>
+
+  <!-- ═══════════════════ Features ═══════════════════ -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="label">Features</span>
+        <h2 class="title-lg">Everything at your fingertips</h2>
+        <p class="sub">Every feature designed around how you actually cook.</p>
+      </div>
+
+      <!-- Pair 1 -->
+      <div class="feat-pair reveal">
+        <div class="fp-img">
+          <img src="language selection.webp" alt="Language selection" loading="lazy" />
+        </div>
+        <div class="fp-texts">
+          <div class="fp-item">
+            <h3 class="title-sm">🌍 Three languages</h3>
+            <p class="sub">English, Russian, and Romanian.</p>
+            <span class="insight">✦ Everyone at the table</span>
+          </div>
+          <div class="fp-divider"></div>
+          <div class="fp-item">
+            <h3 class="title-sm">🍽️ 14 cuisines, 200+ recipes</h3>
+            <p class="sub">From Asian to Mediterranean, each with nutrition labels, prep times, and step-by-step instructions.</p>
+            <span class="insight">✦ Never run out of ideas</span>
+          </div>
+        </div>
+        <div class="fp-img">
+          <img src="your favourite selections.webp" alt="Cuisine selection" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Pair 2 -->
+      <div class="feat-pair reveal">
+        <div class="fp-img">
+          <img src="The recipe layed out.webp" alt="Recipe detail" loading="lazy" />
+        </div>
+        <div class="fp-texts">
+          <div class="fp-item">
+            <h3 class="title-sm">🧑‍🍳 Cooking mode</h3>
+            <p class="sub">Step-by-step guidance with ingredient substitutions, serving scaling, and auto pantry deduction when you finish.</p>
+            <span class="insight">✦ Cook with confidence</span>
+          </div>
+          <div class="fp-divider"></div>
+          <div class="fp-item">
+            <h3 class="title-sm">🧺 Pantry at a glance</h3>
+            <p class="sub">Track 500+ ingredients across 15 categories. Fuzzy matching links recipes to what you have.</p>
+            <span class="insight">✦ Know what's in stock</span>
+          </div>
+        </div>
+        <div class="fp-img">
+          <img src="Manage the pantry.webp" alt="Pantry overview" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Pair 3 -->
+      <div class="feat-pair reveal">
+        <div class="fp-img">
+          <img src="Manage and categorize the pantry in 2 clicks.webp" alt="Pantry categories" loading="lazy" />
+        </div>
+        <div class="fp-texts">
+          <div class="fp-item">
+            <h3 class="title-sm">📂 Organized in seconds</h3>
+            <p class="sub">Categorize ingredients in two taps. 9 allergens tracked across all recipes — warnings before you cook.</p>
+            <span class="insight">✦ Safety first</span>
+          </div>
+          <div class="fp-divider"></div>
+          <div class="fp-item">
+            <h3 class="title-sm">🛒 Smart grocery lists</h3>
+            <p class="sub">Auto-generated from meal plans with duplicate merging. Check off as you shop, export to share.</p>
+            <span class="insight">✦ Shop once, done</span>
+          </div>
+        </div>
+        <div class="fp-img">
+          <img src="Plan the grocerie list with little to no effort , and share it with your little helper.webp" alt="Grocery list" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Solo -->
+      <div class="feat-solo reveal">
+        <div class="fp-img">
+          <img src="Customize it , its yours to use and enjoy.webp" alt="Customization" loading="lazy" />
+        </div>
+        <div class="fp-texts">
+          <div class="fp-item">
+            <h3 class="title-sm">🎨 Make it yours</h3>
+            <p class="sub">Accent color, font choice, text scaling, dark mode — each with its own look. Your app, your way.</p>
+            <span class="insight">✦ Feel at home</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════ CTA ═══════════════════ -->
+  <section id="cta">
+    <div class="container reveal">
+      <a href="#" class="btn-play">
+        <svg viewBox="0 0 24 24"><polyline points="14 3 14 9 20 9"/><line x1="3" y1="21" x2="13" y2="11"/><path d="M3 20.5v-17a.5.5 0 0 1 .5-.5h11.5l6 6v11.5a.5.5 0 0 1-.5.5h-17a.5.5 0 0 1-.5-.5z"/></svg>
+        Download on Google Play
+      </a>
+      <p>Free on Android — no account, no internet required</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ Footer ═══════════════════ -->
+  <footer>
+    <div class="brand">Little Chef</div>
+    <div style="display:flex;justify-content:center;gap:16px;margin:6px 0 4px;">
+      <a href="privacy.html" style="color:var(--text-muted);text-decoration:none;font-size:.75rem;">Privacy Policy</a>
+      <a href="terms.html" style="color:var(--text-muted);text-decoration:none;font-size:.75rem;">Terms &amp; Conditions</a>
+    </div>
+    <div>&copy; 2026 Little Chef</div>
+  </footer>
+
+  <!-- ═══════════════════ JavaScript ═══════════════════ -->
+  <script>
+    (function() {
+      'use strict';
+
+      // ── Theme ──
+      const html = document.documentElement;
+      const icon = document.getElementById('themeIcon');
+      const saved = localStorage.getItem('lc-theme');
+
+      function setTheme(theme) {
+        html.setAttribute('data-theme', theme);
+        icon.textContent = theme === 'dark' ? '🌙' : '☀️';
+        localStorage.setItem('lc-theme', theme);
+      }
+
+      // Init: saved > system > light
+      const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+      setTheme(saved || (prefersDark ? 'dark' : 'light'));
+
+      document.getElementById('themeToggle').addEventListener('click', () => {
+        setTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+      });
+
+      // ── Nav scroll ──
+      const nav = document.getElementById('navbar');
+      let ticking = false;
+      window.addEventListener('scroll', () => {
+        if (!ticking) {
+          requestAnimationFrame(() => {
+            nav.classList.toggle('scrolled', window.scrollY > 40);
+            ticking = false;
+          });
+          ticking = true;
+        }
+      });
+
+      // ── Hamburger ──
+      const h = document.getElementById('hamburger');
+      const nl = document.getElementById('navLinks');
+      h.addEventListener('click', () => {
+        h.classList.toggle('active');
+        nl.classList.toggle('open');
+      });
+      nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        h.classList.remove('active');
+        nl.classList.remove('open');
+      }));
+
+      // ── Scroll reveal ──
+      const reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(
+          entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+          { threshold: .08, rootMargin: '0px 0px -40px 0px' }
+        );
+        reveals.forEach(el => observer.observe(el));
+      } else {
+        reveals.forEach(el => el.classList.add('visible'));
+      }
+
+      // ── Smooth scroll ──
+      document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', function(e) {
+          const t = document.querySelector(this.getAttribute('href'));
+          if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
