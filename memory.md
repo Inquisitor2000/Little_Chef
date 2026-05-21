@@ -1,13 +1,13 @@
 # Little Chef - Family Meal Planner App Memory
 
 ## Project Overview
-Little Chef is a comprehensive Android meal planning application built with Kotlin and Jetpack Compose. It helps families organize recipes, manage pantry inventory, create grocery lists, and plan meals with smart ingredient matching and AI-powered recipe scraping.
+Android meal planning app. Kotlin + Jetpack Compose. Organize recipes, manage pantry, grocery lists, plan meals with smart ingredient matching + AI recipe scraping.
 
 **Package**: `com.littlechef.app`
 **Min SDK**: 27 (Android 8.1), **Target SDK**: 34 (Android 14)
 **App Name**: "Little Chef"
-**Build System**: Gradle with Kotlin DSL, Kotlin 1.9.21, Compose BOM 2023.10.01, compileSdk 34
-**App Bundle**: Language split disabled (`language { enableSplit = false }`) so all 3 locales ship in every APK split
+**Build**: Gradle Kotlin DSL, Kotlin 1.9.21, Compose BOM 2023.10.01, compileSdk 34
+**App Bundle**: `language { enableSplit = false }` — all 3 locales in every APK split
 
 ---
 
@@ -26,7 +26,7 @@ app/src/main/java/com/littlechef/app/
 ### Key Libraries
 - **UI**: Jetpack Compose Material3 (BOM 2023.10.01)
 - **DI**: Dagger Hilt 2.48.1
-- **Database**: Room 2.6.1 (with KSP)
+- **Database**: Room 2.6.1 (KSP)
 - **Navigation**: Navigation Compose 2.7.6
 - **Image Loading**: Coil Compose 2.5.0
 - **HTTP Client**: Ktor 2.3.7 (OkHttp engine)
@@ -40,15 +40,15 @@ app/src/main/java/com/littlechef/app/
 ## Navigation System
 
 ### NavHost Setup (`ui/navigation/AppNavHost.kt`)
-- Uses `NavHost` with `NavController`
+- `NavHost` + `NavController`
 - Onboarding-aware start destination
-- Routes defined in `NavDestination` sealed class (`ui/navigation/NavDestination.kt`)
+- Routes in `NavDestination` sealed class (`ui/navigation/NavDestination.kt`)
 
 ### Bottom Navigation (4 tabs)
-1. **Plan** (`route = "plan"`) - Weekly meal planning calendar
-2. **Meals** (`route = "meals"`) - Recipe browsing (cuisines + user recipes)
-3. **Groceries** (`route = "groceries"`) - Shopping list
-4. **Pantry** (`route = "pantry"`) - Ingredient inventory
+1. **Plan** (`route = "plan"`) — Weekly meal planning calendar
+2. **Meals** (`route = "meals"`) — Recipe browsing (cuisines + user recipes)
+3. **Groceries** (`route = "groceries"`) — Shopping list
+4. **Pantry** (`route = "pantry"`) — Ingredient inventory
 
 ### Routes with Arguments
 ```kotlin
@@ -62,9 +62,9 @@ NavDestination.AddCustomIngredientForRecipe.createRoute(initialName)
 ```
 
 ### Special Navigation Patterns
-- SavedStateHandle for passing data back between screens (e.g., ManualRecipeScreen receives custom ingredient data)
+- SavedStateHandle for passing data back between screens
 - `navController.popBackStack()` with inclusive flag for removing intermediate screens
-- Scraped/manual recipe flow navigates to the new recipe detail after creation
+- Scraped/manual recipe flow navigates to new recipe detail after creation
 
 ---
 
@@ -91,15 +91,15 @@ sealed interface ScreenUiState {
 ```
 
 ### State Collection
-- Use `collectAsStateWithLifecycle()` for lifecycle-aware collection (preferred)
-- Use `by` delegate pattern: `val uiState by viewModel.uiState.collectAsState()`
+- Prefer `collectAsStateWithLifecycle()`
+- `by` delegate: `val uiState by viewModel.uiState.collectAsState()`
 
 ---
 
 ## Database (Room)
 
 ### Database Name: `little_chef_db`
-### Version: 1 (destructive migrations during development)
+### Version: 1 (destructive migrations during dev)
 
 ### 9 Entities
 | Entity | Table | Key Fields |
@@ -165,17 +165,17 @@ PLANNED → (Start Cooking) → COOKING → (Complete) → COMPLETED
 - Custom light/dark schemes (dynamic colors disabled)
 - **Light default**: Toasted Almond (#FFD68C45)
 - **Dark default**: Blue Bell (#FF5398be)
-- User-customizable accent colors stored in DataStore
+- User-customizable accent colors via DataStore
 - Status bar color matches background
 
 ### Font System
-6 font options via Google Fonts (Roboto + Rubik families):
+6 options via Google Fonts (Roboto + Rubik):
 1. Roboto Light, Regular (default), Medium
 2. Rubik Light, Regular, Medium
 
 ### Text Scale
-- User-adjustable, applies multiplier to ALL typography levels
-- Base sizes customized: titleSmall 16sp, bodySmall 14sp, labelLarge 16sp, labelSmall 12sp
+- User-adjustable multiplier for ALL typography
+- Base sizes: titleSmall 16sp, bodySmall 14sp, labelLarge 16sp, labelSmall 12sp
 
 ### Shapes (AppShapes)
 | Shape | Radius |
@@ -187,85 +187,82 @@ PLANNED → (Start Cooking) → COOKING → (Complete) → COMPLETED
 | extraLarge | 28.dp |
 
 ### Overscroll
-**CRITICAL**: Overscroll/bounce effects are disabled globally at the theme level:
+**CRITICAL**: Disabled globally in `Theme.kt:169`:
 ```kotlin
 CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
     MaterialTheme(..., content = content)
 }
 ```
-This is done in `Theme.kt:169` and applies to the entire app.
 
 ---
 
 ## UI Components & Patterns
 
 ### BottomDrawer (`ui/util/BottomDrawer.kt`)
-- Reusable `ModalBottomSheet` wrapper used for ingredient addition, settings, etc.
-- Uses `skipPartiallyExpanded = true` (opens fully expanded)
-- **IMPORTANT QUIRK**: Must use `modifier.statusBarsPadding()` to prevent the drag handle from overlapping the status bar
-- Content receives `ColumnScope` for composable content
+- `ModalBottomSheet` wrapper for ingredient addition, settings, etc.
+- `skipPartiallyExpanded = true` (full expanded)
+- **QUIRK**: Must use `modifier.statusBarsPadding()` to prevent drag handle from overlapping status bar
+- Content receives `ColumnScope`
 
 ### Delete Confirmation Dialog Pattern
-**Two styles used in the codebase:**
+**Two styles:**
 
 #### 1. Pantry Item Delete (SwipeToDeleteContainer + Dialog in SwipeToDelete.kt)
 - `SwipeToDeleteContainer` wraps list items
-- Shows swipe action, triggers `Dialog` with `RoundedCornerShape(28.dp)` surface
-- Buttons stacked vertically: Delete (primary) + Cancel (secondaryContainer)
-- Title + message in centered Text
+- Swipe triggers `Dialog` with `RoundedCornerShape(28.dp)`
+- Buttons stacked: Delete (primary) + Cancel (secondaryContainer)
 
 #### 2. Custom Ingredient Delete (AlertDialog in AddIngredientDrawer.kt)
-**This is the pattern we use for custom ingredient deletion.** The `DrawerCustomIngredientItem` has a delete bin button directly visible (not swipe). Clicking it shows an `AlertDialog` with:
+**Pattern used for custom ingredient deletion.** Bin button visible (not swipe). `AlertDialog`:
 - `containerColor = MaterialTheme.colorScheme.background`
 - `shape = RoundedCornerShape(20.dp)`
 - `tonalElevation = 6.dp`
-- Title: "Delete {Name}?" (uses `drawer_delete_custom_title` string resource with ingredient name as `%1$s`, title-cased)
-- Text: "This will permanently delete the ingredient from your database." (uses `drawer_delete_custom_message`)
-- Two buttons stacked vertically:
-  - Delete: `primary` color, full width, horizontal padding 16.dp, text from `pantry_delete_button`
-  - Cancel: `secondaryContainer` color, full width, horizontal padding 16.dp, text from `pantry_cancel_button`
+- Title: "Delete {Name}?" (`drawer_delete_custom_title` string, `%1$s` title-cased)
+- Text: "This will permanently delete the ingredient from your database." (`drawer_delete_custom_message`)
+- Two stacked buttons:
+  - Delete: `primary`, full width, hPadding 16.dp, `pantry_delete_button`
+  - Cancel: `secondaryContainer`, full width, hPadding 16.dp, `pantry_cancel_button`
 
-#### 3. EditPantryItemDialog delete (PantryScreen.kt, lines 659-725)
-- AlertDialog triggered from the edit dialog's delete icon button
-- Same style as #2 (background, shape 20dp, tonalElevation 6dp, same button layout)
-- Title: "Delete {Name}?" with ingredient name
-- Message: "This will remove the item from your pantry." (`pantry_delete_message`)
+#### 3. EditPantryItemDialog delete (PantryScreen.kt:659-725)
+- AlertDialog from edit dialog delete icon
+- Same style as #2
+- Title: "Delete {Name}?", Message: "This will remove the item from your pantry." (`pantry_delete_message`)
 
 ### AddIngredientDrawer (`ui/screens/AddIngredientDrawer.kt`)
-- Large composable (~1260 lines) used from both GroceriesScreen and PantryScreen
-- Modes: search mode (`isSearchActive`) or category browse mode (`showCategories`)
-- Custom ingredients have a delete bin button (trash icon) directly visible on each item (not swipe-to-delete)
-- Deleting a custom ingredient shows confirmation dialog (see pattern #2 above)
-- After deletion: `refreshTrigger` increments → `LaunchedEffect` reloads all custom ingredients
+- ~1260 lines, used from GroceriesScreen and PantryScreen
+- Modes: search (`isSearchActive`) or category browse (`showCategories`)
+- Custom ingredients show trash icon directly (not swipe-to-delete)
+- Delete shows confirmation (see pattern #2 above)
+- Delete: `refreshTrigger` increments → `LaunchedEffect(visible, refreshTrigger)` reloads
 - `onDeleteCustomIngredient` calls `ingredientRepository.deleteIngredient(ingredient)` directly
-- Selection flows: if `onEditExistingIngredient` is provided → navigates to edit screen, else → shows in-drawer quantity dialog
+- Selection: if `onEditExistingIngredient` provided → edit screen, else → in-drawer quantity dialog
 
 ### SwipeToDeleteContainer (`ui/util/SwipeToDelete.kt`)
-- Used for the pantry edit dialog (trash icon button, not swipe)
-- And for meal/recipe lists
-- Shows a delete icon with scaling animation (0.8f → 1.2f) with spring physics
-- Confirmation dialog uses `Dialog` composable (not AlertDialog) with `RoundedCornerShape(28.dp)`
+- Used for pantry edit dialog (trash icon, not swipe)
+- Also for meal/recipe lists
+- Delete icon scaling animation (0.8f → 1.2f) with spring physics
+- Confirmation uses `Dialog` composable with `RoundedCornerShape(28.dp)`
 
 ---
 
 ## String Resources
 
 ### Naming Conventions
-- `screen_*` - Screen titles
-- `nav_*` - Navigation labels
-- `pantry_*` - Pantry screen
-- `groceries_*` - Groceries screen
-- `recipe_*` - Recipe related
-- `meal_plan_*` - Meal plan related
-- `add_ingredient_*` - Ingredient addition drawer
-- `drawer_*` - Drawer-specific strings
-- `button_*` - Common button labels
+- `screen_*` — Screen titles
+- `nav_*` — Navigation labels
+- `pantry_*` — Pantry screen
+- `groceries_*` — Groceries screen
+- `recipe_*` — Recipe related
+- `meal_plan_*` — Meal plan related
+- `add_ingredient_*` — Ingredient addition drawer
+- `drawer_*` — Drawer-specific strings
+- `button_*` — Common button labels
 
 ### Languages
 - English: `res/values/strings.xml` (~805 lines)
 - Romanian: `res/values-ro/strings.xml` (~545 lines)
 - Russian: `res/values-ru/strings.xml` (~575 lines)
-- ALL user-facing strings MUST be added in all 3 languages
+- ALL user-facing strings in all 3 languages
 
 ---
 
@@ -281,10 +278,10 @@ This is done in `Theme.kt:169` and applies to the entire app.
 | `ImageModule` | Coil ImageLoader |
 
 ### Hilt Annotations
-- `@HiltAndroidApp` - Application (`MealPlannerApp`)
-- `@AndroidEntryPoint` - MainActivity
-- `@HiltViewModel` - All ViewModels
-- `@Inject constructor` - Constructor injection
+- `@HiltAndroidApp` — Application (`MealPlannerApp`)
+- `@AndroidEntryPoint` — MainActivity
+- `@HiltViewModel` — All ViewModels
+- `@Inject constructor` — Constructor injection
 
 ---
 
@@ -306,14 +303,14 @@ This is done in `Theme.kt:169` and applies to the entire app.
 | RecipeDetailScreen | RecipeDetailViewModel | User recipe details |
 
 ### Serving Size System
-- **Onboarding**: `ServingSizeScreen` shows a +/- stepper (circular 48dp buttons) with centered value display
-- **Range**: 1–6 with min/max enforcement (visual dimming at bounds via `alpha(0.4f)` on disabled button)
+- **Onboarding**: `ServingSizeScreen` +/- stepper (circular 48dp buttons), centered value
+- **Range**: 1–6 with min/max enforcement (`alpha(0.4f)` on disabled)
 - **Cycle**: Recipe detail screens cycle 1→2→3→4→5→6→1 via `cycleServings()` (tap servings label)
-- **Default**: Stored in DataStore as `default_serving_size`, initialized from onboarding, consumed by BundledRecipeDetailViewModel and CuisineMealsViewModel
-- **Per-plan override**: `MealPlan.plannedServings: Int?` persisted in Room
+- **Default**: Stored in DataStore as `default_serving_size`, from onboarding, consumed by BundledRecipeDetailViewModel + CuisineMealsViewModel
+- **Per-plan override**: `MealPlan.plannedServings: Int?` in Room
 
 ### Time Adjustment Formula (`ui/util/TimeAdjuster.kt`)
-Shared utility used by ALL screens — preview cards and detail screens now produce the same math:
+Shared by ALL screens — preview cards + detail screens use same math:
 ```kotlin
 TimeAdjuster.adjustPrepTime(baseMinutes, baseServings, selectedServings)
 TimeAdjuster.adjustCookTime(baseMinutes, baseServings, selectedServings)
@@ -323,69 +320,67 @@ Used by: CuisineMealsScreen, PlanScreen, RecipeDetailScreen, BundledRecipeDetail
 
 ### Egg Quantity Rounding
 - `roundEggQuantity(quantity: Double, ingredientName: String): Double` in `domain/model/UnitConversion.kt`
-- Rounds egg-related ingredients to nearest 0.5 (e.g., 2.5 eggs → 2.5, 1.33 → 1.5, 0.2 → 0.5)
-- Matches on name contains "egg" (eggs, egg whites, egg yolks)
+- Rounds egg ingredients to nearest 0.5
+- Matches name contains "egg" (eggs, egg whites, egg yolks)
 - Applied at **15 touch points** across: RecipeDetailScreen (4), BundledRecipeDetailViewModel (5), BundledRecipeDetailScreen (1), MealPlanDetailScreen (1), PlanViewModel (1), StartCookingUseCase (2)
 
 ### Nutrition Labels Per Serving
-4 files added to `domain/model/`, `data/local/`, `ui/util/`, `ui/components/`:
-- **`NutritionInfo.kt`** — data class: calories, fatsG, carbsG, proteinG, pieceG (optional, for pcs conversion)
+4 files in `domain/model/`, `data/local/`, `ui/util/`, `ui/components/`:
+- **`NutritionInfo.kt`** — data class: calories, fatsG, carbsG, proteinG, pieceG (optional)
 - **`NutritionLoader.kt`** — `@Singleton`, loads `assets/nutrition/ingredient_nutrition.json` (266 ingredients, ~355 entries) with in-memory cache
 - **`NutritionCalculator.kt`** — sums ingredient contributions:
-  - `g`/`ml` units → `qty × (per100g / 100)`
-  - `pcs` units → `qty × pieceG × (per100g / 100)`
-  - Divides total by servings → per-serving `NutritionInfo`
+  - `g`/`ml` → `qty × (per100g / 100)`
+  - `pcs` → `qty × pieceG × (per100g / 100)`
+  - Divide by servings → per-serving `NutritionInfo`
 - **`NutritionCard.kt`** — 4×1 Row (Cal | Fat | Carbs | Protein) with `formatNutritionValue()` (public)
 - **String keys**: `nutrition_calories_short`, `nutrition_fats_short`, `nutrition_carbs_short`, `nutrition_protein_short`
 
-**Integration**: Nutrition info rendered INSIDE the recipe info Card, below time items with a thin `onSurfaceVariant(alpha=0.2f)` divider. Reuses the same `InfoColumn` composable for visual consistency. All three detail screens load `NutritionLoader` in ViewModel `init`.
+**Integration**: Rendered INSIDE recipe info Card, below time items with `onSurfaceVariant(alpha=0.2f)` divider. Uses `InfoColumn`. All three detail screens load `NutritionLoader` in ViewModel `init`.
 
 ### TimeAdjuster (`ui/util/TimeAdjuster.kt`)
-Singleton with two pure functions for serving-based time scaling:
+Singleton with two pure functions:
 - `adjustPrepTime(baseMinutes, baseServings, selectedServings)` — scales prep 35% per doubling
 - `adjustCookTime(baseMinutes, baseServings, selectedServings)` — scales cook 5% per doubling
-Shared by all preview cards and detail screens for consistency.
+Shared by all preview cards + detail screens.
 
 ### InfoColumn Composable
 ```kotlin
 @Composable
 private fun InfoColumn(value: String, label: String, clickable: Boolean = false, onClick: () -> Unit = {})
 ```
-- Value: `bodyMedium`, `FontWeight.Bold` (primary color if clickable)
+- Value: `bodyMedium`, `FontWeight.Bold` (primary if clickable)
 - Label: `bodySmall`, `onSurfaceVariant`
-- Used for: prep time, cook time, servings (clickable), total time, and nutrition values in the recipe info Card
+- Used for: prep time, cook time, servings (clickable), total time, nutrition
 
 ### Time/Nutrition Divider Style
-Thin vertical/horizontal dividers use `onSurfaceVariant.copy(alpha = 0.2f)` (not `outlineVariant`). Applied to both the time item vertical dividers (40dp) and the nutrition Row vertical dividers (28dp). Horizontal separator between time and nutrition sections uses a full-width `Box(height = 1.dp)`.
+Dividers use `onSurfaceVariant.copy(alpha = 0.2f)` (not `outlineVariant`). Time dividers 40dp, nutrition Row dividers 28dp. Horizontal separator between sections = `Box(height = 1.dp)`.
 
 ### Pantry Screen Specifics
-- AddIngredientDrawer is opened via `showAddIngredientDrawer` state
-- Edit/delete via EditPantryItemDialog (trash icon in title bar → confirmation dialog → adjust inventory to 0)
-- Swipe-to-delete is NOT used in pantry screen (despite SwipeToDeleteContainer existing)
+- AddIngredientDrawer via `showAddIngredientDrawer` state
+- Edit/delete via EditPantryItemDialog (trash icon → confirm → adjust inventory to 0)
+- Swipe-to-delete NOT used in pantry
 
 ### Groceries Screen Specifics
-- SwipeToDeleteGroceryItem: swipe left reveals delete bin (confirms via AlertDialog), swipe right checks item
-- Delete confirmation dialog: primary/cancel buttons, colored background, specific shape
-- AddIngredientDrawer opens for adding custom items
+- SwipeToDeleteGroceryItem: swipe left = delete bin (AlertDialog), swipe right = check
+- Delete confirm: primary/cancel buttons, colored background, specific shape
+- AddIngredientDrawer for custom items
 
 ### Empty State Pattern (Unified)
-All 4 main screens (Plan, Meals→Suggestions, Groceries, Pantry) share an identical empty state layout:
-
+All 4 main screens share identical empty state:
 ```
-Icon (100dp, alpha=0.6f)  ← specific to each screen
+Icon (100dp, alpha=0.6f)  ← screen-specific
 Title (bodyLarge + Bold, centered)
 Subtitle (bodyLarge + Bold, onSurfaceVariant, centered, hPadding)
 ```
+Unified May 2026:
+- **Icon size**: 120dp → **100dp**
+- **Title**: `titleMedium` → **`bodyLarge` + `FontWeight.Bold`**
+- **Subtitle**: `bodyMedium` → **`bodyLarge` + `FontWeight.Bold`**
+- **SuggestionScreen**: Moved from `LazyColumn` (emoji `💡`) to standalone centered `Box` (`ic_sub_whole_spices`)
 
-Unified in May 2026 across all 4 screens:
-- **Icon size**: 120dp → **100dp** (consistent sizing)
-- **Title text**: `titleMedium` → **`bodyLarge` + `FontWeight.Bold`** (follows the 3-size typography system)
-- **Subtitle text**: `bodyMedium` → **`bodyLarge` + `FontWeight.Bold`** (consistent sizing)
-- **SuggestionScreen empty state**: Moved from inside `LazyColumn` (with emoji `💡`) to standalone `Box` centered on screen (with `ic_sub_whole_spices` icon), matching the other 3 screens
-
-Screen-specific icons:
-| Screen | Icon Resource |
-|--------|--------------|
+Screen icons:
+| Screen | Icon |
+|--------|------|
 | Plan | `ic_empty_plan` |
 | Meals (Suggestions) | `ic_sub_whole_spices` |
 | Groceries | `ic_empty_groceries` |
@@ -395,28 +390,28 @@ Screen-specific icons:
 
 ## Ingredient Catalog
 
-- `IngredientCatalog` (domain/model/IngredientCatalog.kt) contains 500+ common ingredients
-- Organized into 15 categories with 60+ subcategories
-- Each catalog ingredient has: nameKey, category, subcategory, unit, allergens
-- Custom ingredients created by user are stored in Room (IngredientEntity)
-- AddIngredientDrawer combines catalog + custom ingredients
+- `IngredientCatalog` (`domain/model/IngredientCatalog.kt`): 500+ common ingredients
+- 15 categories, 60+ subcategories
+- Each: nameKey, category, subcategory, unit, allergens
+- Custom ingredients in Room (`IngredientEntity`)
+- AddIngredientDrawer combines catalog + custom
 
 ### Category Structure
-- 15 categories: Meat & Poultry, Seafood, Dairy & Eggs, Vegetables, Fruits, Grains & Bread, Legumes & Beans, Nuts & Seeds, Oils & Fats, Spices & Herbs, Condiments & Sauces, Sweeteners & Baking, Canned & Preserved, Beverages, Snacks & Misc
+Meat & Poultry, Seafood, Dairy & Eggs, Vegetables, Fruits, Grains & Bread, Legumes & Beans, Nuts & Seeds, Oils & Fats, Spices & Herbs, Condiments & Sauces, Sweeteners & Baking, Canned & Preserved, Beverages, Snacks & Misc
 
 ---
 
 ## Translation System (`data/local/TranslationSystem.kt`)
-- Supports 3 languages: English (en), Russian (ru), Romanian (ro)
-- Dynamic translation via JSON-based translation maps
-- Ingredients tagged with `createdInLanguage`
+- 3 languages: English (en), Russian (ru), Romanian (ro)
+- Dynamic via JSON translation maps
+- Ingredients tagged `createdInLanguage`
 - Falls back to original name if translation unavailable
 
 ### Architecture (refactored May 2026)
-- `setLanguage()` — sync, ~0ns, sets currentLanguage field. Called on main thread.
-- `loadTranslationData()` — I/O-bound, loads JSON files on Dispatchers.IO. Called async.
-- Called twice: once in `MealPlannerApp.onCreate()` (after super.onCreate), once in `MainActivity.onCreate()` (for activity recreation after onboarding language change)
-- `reloadTranslations()` removed — was causing double-load
+- `setLanguage()` — sync, ~0ns, sets currentLanguage field. Main thread.
+- `loadTranslationData()` — I/O-bound, loads JSON on Dispatchers.IO. Async.
+- Called twice: `MealPlannerApp.onCreate()` (cold start) + `MainActivity.onCreate()` (activity recreation after onboarding)
+- `reloadTranslations()` removed (caused double-load)
 
 ---
 
@@ -431,19 +426,19 @@ fun performLight()       // CLOCK_TICK
 ```
 
 #### Barrel Selector (CupertinoPicker)
-- Shared component: `ui/components/CupertinoPicker.kt`
-- Fires haptic (`VIRTUAL_KEY`) on scroll settle when item changes, not during scroll
-- Uses `lastHapticItem` guard + `isSnapping` flag to prevent double-fire
-- `rememberHapticFeedback()` composable in same util file
+- `ui/components/CupertinoPicker.kt`
+- Haptic (`VIRTUAL_KEY`) on scroll settle when item changes, not during scroll
+- `lastHapticItem` guard + `isSnapping` flag prevent double-fire
+- `rememberHapticFeedback()` in same util file
 
 #### Bin Icon (Delete) Button Haptic Pattern
-Used across all screens with `Icons.Default.Delete` icon buttons. Pattern: `performLight()` on bin icon press (opens confirmation dialog), `performDestructive()` on confirm delete:
+`Icons.Default.Delete` buttons: `performLight()` on press, `performDestructive()` on confirm:
 
-| Screen | Bin icon press | Confirm delete |
-|---|---|---|
+| Screen | Bin press | Confirm delete |
+|--------|-----------|----------------|
 | PantryScreen | `performLight()` | `performDestructive()` |
 | AddIngredientDrawer | `performLight()` | (in dialog) |
-| ManualRecipeScreen | `performDestructive()` (direct delete) | — |
+| ManualRecipeScreen | `performDestructive()` (direct) | — |
 | RecipeDetailScreen | `performLight()` | (in dialog) |
 | PlanScreen | `performLight()` (clear completed) | (in dialog) |
 | IngredientDetailScreen | `performLight()` | (in dialog) |
@@ -452,25 +447,25 @@ Used across all screens with `Icons.Default.Delete` icon buttons. Pattern: `perf
 
 ### GroceriesTextExport (`ui/export/`)
 - Two formats: full (organized by meals/categories with emojis) and compact (simple list)
-- Fully localized in all 3 languages
-- Custom header support (max 100 chars, stored in OnboardingPreferences)
+- Fully localized in 3 languages
+- Custom header (max 100 chars, stored in OnboardingPreferences)
 
 ---
 
 ## Onboarding Flow
-Screens (in order): Welcome → Language Selection → Serving Size → (accent color theme applied)
-- Entry points: `MealsScreen` if first launch after onboarding, else `PlanScreen`
-- State tracked via `OnboardingPreferences` (DataStore)
+Welcome → Language Selection → Serving Size → (accent color theme applied)
+- Entry: `MealsScreen` if first launch after onboarding, else `PlanScreen`
+- State: `OnboardingPreferences` (DataStore)
 
 ---
 
 ## Meal Suggestions System
 Three-tier ingredient matching:
-1. Perfect Matches: 100% ingredients available
+1. Perfect Matches: 100% available
 2. Good Matches: 80-99% available
 3. Partial Matches: 50-79% available
 
-*(Vibe-based Chef's Pick feature was removed — unused strings deleted)*
+*(Vibe-based Chef's Pick removed — unused strings deleted)*
 
 ---
 
@@ -506,7 +501,7 @@ enum class Cuisine(
 
 ### Two Fast Two Hungry Pack (`:fast_hungry_pack`)
 - **Asset Pack Name**: `fast_hungry_pack`
-- **Folder**: `two fast two hungry/` (lowercase of displayName)
+- **Folder**: `two fast two hungry/`
 - **Price**: $0.99
 - **12 Recipes** (each in EN/RO/RU):
   1. Cheese Omelette (`5_minute_omelette.json`)
@@ -522,43 +517,43 @@ enum class Cuisine(
   11. Shrimp Noodles (`fast_noodle_bowl.json`)
   12. Toast and Egg Scramble (`quick_toast_skillet.json`)
 
-**String IDs** (EN/RO/RU strings.xml): `premium_2fast_cheese_omelette`, `premium_2fast_chicken_stir_fry`, etc.
-**Preview Images**: `app/src/main/assets/recipes/images/2fast2hungry/` (main assets, accessible before purchase)
+**String IDs**: `premium_2fast_cheese_omelette`, `premium_2fast_chicken_stir_fry`, etc.
+**Preview Images**: `app/src/main/assets/recipes/images/2fast2hungry/` (accessible before purchase)
 
 ### Eastern Traditional Pack (`:eastern_traditional_pack`)
-- **Status**: COMPLETE — 12 recipes, 3 languages (EN/RO/RU)
+- **Status**: COMPLETE — 12 recipes, 3 languages
 - **Asset Pack Name**: `eastern_traditional_pack`
-- **Folder**: `eastern traditional/` (lowercase of displayName)
+- **Folder**: `eastern traditional/`
 - **Price**: $1.49
-- **12 Recipes** (each in EN/RO/RU):
+- **12 Recipes**:
 
-| # | Recipe | EN File ID | String ID | Meal Type | Category |
-|---|--------|-----------|-----------|-----------|----------|
-| 1 | Borscht (Beet Soup) | `borscht.json` | `premium_recipe_borscht` | DINNER | SOUP |
-| 2 | Pierogi (Potato & Cheese Dumplings) | `pierogi.json` | `premium_recipe_pierogi` | DINNER | MAIN_COURSE |
-| 3 | Golubtsy (Stuffed Cabbage Rolls) | `golubtsy.json` | `premium_recipe_golubtsy` | DINNER | MAIN_COURSE |
+| # | Recipe | EN File | String ID | Meal | Category |
+|---|--------|---------|-----------|------|----------|
+| 1 | Borscht | `borscht.json` | `premium_recipe_borscht` | DINNER | SOUP |
+| 2 | Pierogi | `pierogi.json` | `premium_recipe_pierogi` | DINNER | MAIN_COURSE |
+| 3 | Golubtsy | `golubtsy.json` | `premium_recipe_golubtsy` | DINNER | MAIN_COURSE |
 | 4 | Beef Stroganoff | `beef_stroganoff.json` | `premium_recipe_stroganoff` | DINNER | MAIN_COURSE |
-| 5 | Pelmeni (Siberian Dumplings) | `pelmeni.json` | `premium_recipe_pelmeni` | DINNER | MAIN_COURSE |
-| 6 | Kasha (Buckwheat Porridge) | `kasha.json` | `premium_recipe_kasha` | LUNCH | SIDE_DISH |
-| 7 | Shchi (Cabbage Soup) | `shchi.json` | `premium_recipe_shchi` | DINNER | SOUP |
-| 8 | Kotleti (Russian Meat Patties) | `kotleti.json` | `premium_recipe_kotleti` | DINNER | MAIN_COURSE |
-| 9 | Vareniki (Cherry Dumplings) | `vareniki.json` | `premium_recipe_vareniki` | DESSERT | DESSERT |
-| 10 | Olivier Salad (Russian Salad) | `olivier_salad.json` | `premium_recipe_olivier` | LUNCH | SALAD |
-| 11 | Blini (Russian Pancakes) | `blini.json` | `premium_recipe_blini` | BREAKFAST | MAIN_COURSE |
-| 12 | Solyanka (Meat Soup) | `solyanka.json` | `premium_recipe_solyanka` | DINNER | SOUP |
+| 5 | Pelmeni | `pelmeni.json` | `premium_recipe_pelmeni` | DINNER | MAIN_COURSE |
+| 6 | Kasha | `kasha.json` | `premium_recipe_kasha` | LUNCH | SIDE_DISH |
+| 7 | Shchi | `shchi.json` | `premium_recipe_shchi` | DINNER | SOUP |
+| 8 | Kotleti | `kotleti.json` | `premium_recipe_kotleti` | DINNER | MAIN_COURSE |
+| 9 | Vareniki | `vareniki.json` | `premium_recipe_vareniki` | DESSERT | DESSERT |
+| 10 | Olivier Salad | `olivier_salad.json` | `premium_recipe_olivier` | LUNCH | SALAD |
+| 11 | Blini | `blini.json` | `premium_recipe_blini` | BREAKFAST | MAIN_COURSE |
+| 12 | Solyanka | `solyanka.json` | `premium_recipe_solyanka` | DINNER | SOUP |
 
-**String IDs** (EN/RO/RU strings.xml): `premium_recipe_borscht` through `premium_recipe_solyanka`
-**Preview Images**: `app/src/main/assets/recipes/images/easterntraditional/` (main assets, accessible before purchase) — placeholder images created, replace with real images
+**String IDs**: `premium_recipe_borscht`–`premium_recipe_solyanka`
+**Preview Images**: `app/src/main/assets/recipes/images/easterntraditional/` — placeholders, replace with real
 
 ### Exotic Tropics Pack (`:exotic_tropics_pack`)
-- **Status**: COMPLETE — 12 recipes, 3 languages (EN/RO/RU)
+- **Status**: COMPLETE — 12 recipes, 3 languages
 - **Asset Pack Name**: `exotic_tropics_pack`
-- **Folder**: `exotic tropics/` (lowercase of displayName)
+- **Folder**: `exotic tropics/`
 - **Price**: $1.49
-- **12 Recipes** (each in EN/RO/RU):
+- **12 Recipes**:
 
-| # | Recipe | EN File ID | String ID | Meal Type | Category |
-|---|--------|-----------|-----------|-----------|----------|
+| # | Recipe | EN File | String ID | Meal | Category |
+|---|--------|---------|-----------|------|----------|
 | 1 | Coconut Curry | `coconut_curry.json` | `premium_recipe_coconut_curry` | DINNER | MAIN_COURSE |
 | 2 | Mango Sticky Rice | `mango_sticky_rice.json` | `premium_recipe_mango_sticky_rice` | DESSERT | DESSERT |
 | 3 | Pineapple Fried Rice | `pineapple_fried_rice.json` | `premium_recipe_pineapple_fried_rice` | LUNCH | RICE_BOWL |
@@ -572,11 +567,11 @@ enum class Cuisine(
 | 11 | Pineapple Salsa | `pineapple_salsa.json` | `premium_recipe_pineapple_salsa` | SNACK | APPETIZER |
 | 12 | Banana Fritters | `banana_fritters.json` | `premium_recipe_banana_fritters` | DESSERT | DESSERT |
 
-**String IDs** (EN/RO/RU strings.xml): `premium_recipe_coconut_curry` through `premium_recipe_banana_fritters`
-**Preview Images**: `app/src/main/assets/recipes/images/exotictropics/` (main assets, accessible before purchase) — placeholder images created, replace with real images
+**String IDs**: `premium_recipe_coconut_curry`–`premium_recipe_banana_fritters`
+**Preview Images**: `app/src/main/assets/recipes/images/exotictropics/` — placeholders, replace with real
 
 ### Technical
-- Uses Play Asset Delivery + Google Play Billing
+- Play Asset Delivery + Google Play Billing
 - JSON schema: `BundledRecipe` + `BundledIngredient` in `BundledRecipeLoader.kt`
 - Valid `mealType`: BREAKFAST, LUNCH, DINNER, SNACK, DESSERT
 - Valid `dishCategory`: PASTA, SALAD, SOUP, MAIN_COURSE, APPETIZER, SIDE_DISH, BREAD, SEAFOOD, CHICKEN, BEEF, PORK, VEGETARIAN, RICE_BOWL, SANDWICH, PIZZA, DESSERT, BEVERAGE, BAKED_DISH
@@ -586,17 +581,17 @@ enum class Cuisine(
 ## Important Implementation Details & Quirks
 
 ### ModalBottomSheet (BottomDrawer)
-- CRITICAL: Always use `Modifier.statusBarsPadding()` on the `ModalBottomSheet`'s `modifier` parameter to prevent the drag handle from going behind the status bar.
-- Uses `skipPartiallyExpanded = true` for full-screen appearance.
-- The `title` parameter in `BottomDrawer` is unused (legacy).
+- **CRITICAL**: Use `Modifier.statusBarsPadding()` on `ModalBottomSheet`'s `modifier` — prevents drag handle from going behind status bar
+- `skipPartiallyExpanded = true`
+- `title` parameter unused (legacy)
 
 ### Custom Ingredient Delete Flow
-- Delete button is directly visible (not swipe-to-delete): a circular red Surface with delete icon
-- Shows confirmation AlertDialog (see pattern #2 above)
-- After deletion: `refreshTrigger` is incremented, which triggers `LaunchedEffect(visible, refreshTrigger)` to reload ingredients
+- Delete button directly visible: circular red Surface with delete icon
+- Shows confirmation AlertDialog (pattern #2 above)
+- After delete: `refreshTrigger` increments → `LaunchedEffect(visible, refreshTrigger)` reloads
 
 ### Confirmation Dialog Style Reference
-Always use this style for delete confirmations:
+Use this for delete confirmations:
 ```kotlin
 AlertDialog(
     onDismissRequest = { /* dismiss */ },
@@ -616,94 +611,92 @@ AlertDialog(
 
 ### Overscroll
 - Disabled globally in `Theme.kt:169` via `CompositionLocalProvider(LocalOverscrollConfiguration provides null)`
-- Do NOT add additional overscroll disabling at the screen level
+- Do NOT add screen-level overscroll disabling
 
 ### LazyColumn / LazyVerticalGrid
-- Used throughout for lists (recipes, ingredients, meal plans)
-- `contentPadding` with `bottom = 76.dp` to account for nav bar
-- Overscroll is already disabled globally, no need for extra modifiers
+- `contentPadding` with `bottom = 76.dp` for nav bar
+- Overscroll already disabled globally
 
 ### Navigation Arguments
-- Arguments passed via route strings, not NavArguments objects
+- Passed via route strings, not NavArguments objects
 - Use `backStackEntry.arguments?.getString("key")` or SavedStateHandle
 
 ### Allergen Colors
-- 9 allergens with specific display colors (imported as vector icons)
+- 9 allergens with display colors (vector icons)
 
 ### Unit Conversion (`domain/model/UnitConversion.kt`)
 - Weight: g ↔ kg ↔ oz ↔ lb
 - Volume: ml ↔ L ↔ cup ↔ tbsp ↔ tsp
 - Piece: pcs (no conversion)
-- Non-deductible ingredients: water, salt, pepper, oil, spices, etc.
 
 ### NonDeductibleIngredients
-Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc.). Located in `domain/model/NonDeductibleIngredients.kt`. The deprecated `isNonDeductibleByName()` method was removed — all ingredients are now deductible.
+Located in `domain/model/NonDeductibleIngredients.kt`. `isNonDeductibleByName()` removed — all ingredients now deductible.
 
 ---
 
 ## Recent Fixes (May 2026)
 
 ### Navbar Haptic/Navigate on Same Tab (`MainActivity.kt:384-397`)
-- Problem: Tapping an already-selected bottom nav tab fired haptic + navigated (refreshing screen)
-- Fix: Wrapped haptic + navigate in `if (!selected)` check; only `lastInteractionTime` updates when already on tab
+- Problem: Tapping selected tab fired haptic + navigated (refresh)
+- Fix: Wrap haptic + navigate in `if (!selected)` check
 
 ### My Recipes Spoiler Flash (`MealsScreen.kt`)
-- Problem: Loading state showed MyRecipesPlaceholder ("My Recipes" + spinner) even for users with zero recipes, then vanished when Room emitted empty data — brief flash
-- Fix: Changed condition from `if (isLoading || scrapedMeals.isNotEmpty())` to `if (scrapedMeals.isNotEmpty())`, removed dead code (MyRecipesPlaceholder, isLoading variable)
+- Problem: Loading showed MyRecipesPlaceholder even for zero recipes, then vanished — brief flash
+- Fix: Changed to `if (scrapedMeals.isNotEmpty())`, removed dead code
 
-### Translation System Double-Load (Cold Start Issue 2)
-- Problem: `initialize()` loaded 2 JSON files on main thread, then `reloadTranslations()` in MainActivity cleared cache and reloaded same files — double-load (~58KB I/O + JSON parsing on main thread for non-English)
-- Fix: Split into `setLanguage()` (sync) + `loadTranslationData()` (async I/O). Applied in both `MealPlannerApp.onCreate()` (cold start) and `MainActivity.onCreate()` (activity recreation after onboarding). Ensures correct language immediately after onboarding without restart.
+### Translation System Double-Load (Cold Start)
+- Problem: `initialize()` + `reloadTranslations()` loaded same JSON twice (~58KB I/O + parsing on main thread)
+- Fix: Split into `setLanguage()` (sync) + `loadTranslationData()` (async). Applied in both `MealPlannerApp.onCreate()` and `MainActivity.onCreate()`.
 
 ### Groceries AnimatedVisibility (GroceriesScreen.kt)
-- Problem: Expandable section groups (meal/recipe groups, category groups) used plain `if (expanded)` — content popped in/out instantly
-- Fix: Merged header + content into single `item {}` blocks, wrapped content in `AnimatedVisibility` with `expandVertically() + fadeIn()` / `shrinkVertically() + fadeOut()`, used `Column` + `forEach` instead of lazy calls
+- Problem: Expandable groups used `if (expanded)` — popped in/out instantly
+- Fix: Merged header + content into `item {}` blocks, wrapped in `AnimatedVisibility` with `expandVertically() + fadeIn()` / `shrinkVertically() + fadeOut()`
 
 ### minSdk 26→27 + Lint Cleanup
-- **minSdk bumped to 27** (`app/build.gradle.kts:15`) — eliminates `windowLightNavigationBar` API lint in themes.xml. All deps support API 21+. No refactor needed.
-- **App Bundle language split disabled** — `bundle { language { enableSplit = false } }` added so all 3 languages (EN/RO/RU) ship in every APK split; LocaleManager changes locale at runtime and would miss strings otherwise.
-- **Dead SDK_INT branch removed** from `LocaleManager.applyLocale()` — `Build.VERSION.SDK_INT >= N` is always true at minSdk 27.
-- **Modifier parameter order** fixed in `PremiumPreviewDrawer.kt` — optional `imageUrl` before optional `modifier` is bad Compose convention; swapped.
-- **@InternalSerializationApi opt-in** suppressed via `lint { disable += "UnsafeOptInUsageError" }` — false positive with kotlinx.serialization + KSP plugin.
+- **minSdk 27** (`app/build.gradle.kts:15`) — eliminates `windowLightNavigationBar` lint
+- **App Bundle language split disabled** — `bundle { language { enableSplit = false } }`
+- **Dead SDK_INT branch removed** from `LocaleManager.applyLocale()`
+- **Modifier order** fixed in `PremiumPreviewDrawer.kt`
+- **@InternalSerializationApi opt-in** suppressed via `lint { disable += "UnsafeOptInUsageError" }`
 
 ### Asset Pack Rename (`2fast_2hungry_pack` → `fast_hungry_pack`)
-- Problem: Play Asset Pack names can't start with a digit. Renamed from `2fast_2hungry_pack` to `fast_hungry_pack`.
-- Updated 7 files: asset pack folder, build.gradle.kts pack name, settings.gradle.kts include, Cuisine.kt enum, memory docs.
+- Problem: Asset pack names can't start with digit
+- Updated 7 files
 
 ### ABC Delight Recipe Not Rendering
-- Problem: RecipeTranslator generates filenames from JSON `id` field. ABC Delight had `id: "abc_delight"` but file was named `abc_pudding_avocado_banana_chocolate_delight_desserts & sweets.json` — no pattern matched.
-- Fix: Renamed 3 locale files (EN/RU/RO) to `abc_delight.json`, `abc_delight_ru.json`, `abc_delight_ro.json`. Verified: only 1 mismatch across 164 EN recipes.
+- Problem: JSON `id: "abc_delight"` but filename was different — no pattern match
+- Fix: Renamed 3 locale files to `abc_delight.json`, `abc_delight_ru.json`, `abc_delight_ro.json`
 
-### Serving Size Flicker Fix (RecipeDetail + BundledRecipeDetail ViewModels)
-- Problem: When opening a recipe, `selectedServings` was initialized to a hardcoded `2`, then the ViewModel loaded the recipe/DataStore and updated it. If the recipe had a different serving size (e.g. 4), users saw a ~1s flash of stale servings → correct value, causing ingredient quantities to visibly recalculate.
-- Fix: Reordered assignments in `loadMeal()` and `loadRecipe()` so `_selectedServings` is set **before** `_meal`/`_recipe` is published to the UI. The screen now renders with the correct serving size on first composition.
+### Serving Size Flicker Fix
+- Problem: `selectedServings` initialized to 2, then VM loaded recipe/DataStore — flicker
+- Fix: Set `_selectedServings` **before** publishing `_meal`/`_recipe`
 
 ### Edit Ingredient Dialog Button Padding (ManualRecipeScreen.kt)
-- Problem: Both Save and Cancel buttons used default Material 3 horizontal padding (24dp). Russian "Сохранить" wrapped to 2 lines.
-- Fix: Reduced `contentPadding` to `horizontal = 12.dp` on both buttons.
+- Problem: Default 24dp padding caused Russian "Сохранить" to wrap
+- Fix: Reduced `contentPadding` to `horizontal = 12.dp`
 
 ### Grocery Export Separator (GroceriesTextExport.kt)
-- Problem: Horizontal separator line was 26 `━` characters.
-- Fix: Changed all 4 occurrences from 26→23 characters.
+- Problem: 26 `━` characters
+- Fix: Changed to 23
 
 ### ManualRecipeScreen Bottom Padding
-- Problem: Scrollable content ended with only 16dp bottom spacing — navbar pill obstructed the last fields.
-- Fix: Increased bottom Spacer from 16dp → 80dp (matches LazyColumn `contentPadding` pattern used on other screens).
+- Problem: 16dp bottom spacing — navbar obstructed last fields
+- Fix: Bottom Spacer 16dp → 80dp
 
 ---
 
 ## Development Guidelines
 
-1. **Always use Hilt for DI** - No manual instantiation
-2. **Respect layer boundaries** - UI doesn't import data layer directly (except ViewModels)
-3. **Use StateFlow for UI state** - MutableStateFlow → asStateFlow → collect
-4. **Localize all strings** - Must add in English, Romanian, AND Russian
-5. **Handle loading/error states** - Every screen should handle Loading/Success/Error
-6. **Use coroutines properly** - viewModelScope for ViewModels, lifecycleScope for composables
-7. **Follow Material 3** - Use MaterialTheme colors, shapes, typography
-8. **String resources naming**: `screen_*`, `nav_*`, `pantry_*`, `groceries_*`, `recipe_*`, `drawer_*`
-9. **Delete confirmation dialogs** always follow the same style: AlertDialog with background color, 20dp shape, 6dp elevation, stacked buttons
-10. **Ingredient names** in delete dialogs should be title-cased via `.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }`
+1. **Always use Hilt for DI** — no manual instantiation
+2. **Respect layer boundaries** — UI doesn't import data layer directly (except ViewModels)
+3. **Use StateFlow** — MutableStateFlow → asStateFlow → collect
+4. **Localize all strings** — English, Romanian, Russian
+5. **Handle loading/error states** — every screen: Loading/Success/Error
+6. **Use coroutines properly** — viewModelScope for ViewModels, lifecycleScope for composables
+7. **Follow Material 3** — MaterialTheme colors, shapes, typography
+8. **String naming**: `screen_*`, `nav_*`, `pantry_*`, `groceries_*`, `recipe_*`, `drawer_*`
+9. **Delete confirmations**: AlertDialog, background color, 20dp shape, 6dp elevation, stacked buttons
+10. **Ingredient names**: title-cased via `.replaceFirstChar { if (it.isLowerCase()) it.titlecase() else it.toString() }`
 
 ### Nutrition JSON Format (`assets/nutrition/ingredient_nutrition.json`)
 ```json
@@ -717,8 +710,8 @@ Certain ingredients are NOT deducted when cooking (water, salt, pepper, oil, etc
   }
 }
 ```
-- `pieceG` is optional — only for pcs-unit ingredients (eggs: 50g, egg whites: 33g, etc.)
-- All values per 100g; `pieceG` converts pcs to grams before calculation
-- 365 entries covering 84 unique DLC + 266 unique bundled ingredients
+- `pieceG` optional — for pcs-unit ingredients (eggs: 50g, egg whites: 33g, etc.)
+- All values per 100g; `pieceG` converts pcs to grams
+- 365 entries: 84 DLC + 266 bundled
 
-**Last Updated**: May 17, 2026 (barrel selector haptic fix, bin icon delete haptic pattern)
+**Last Updated**: May 17, 2026

@@ -30,6 +30,8 @@ import androidx.compose.ui.graphics.asImageBitmap
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
+import com.littlechef.app.ui.util.rememberHapticFeedback
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
@@ -93,10 +95,8 @@ fun SuggestionScreen(
                     filteredPerfectMatches = state.filteredPerfectMatches,
                     filteredGoodMatches = state.filteredGoodMatches,
                     filteredPartialMatches = state.filteredPartialMatches,
-                    selectedMealType = state.selectedMealType,
                     selectedDishCategory = state.selectedDishCategory,
-                    hasActiveFilters = state.selectedMealType != null || state.selectedDishCategory != null,
-                    onMealTypeSelected = { viewModel.filterByMealType(it) },
+                    hasActiveFilters = state.selectedDishCategory != null,
                     onDishCategorySelected = { viewModel.filterByDishCategory(it) },
                     onUserMealClick = onNavigateToUserMeal,
                     onBundledRecipeClick = onNavigateToBundledRecipe,
@@ -173,10 +173,8 @@ private fun SuccessContent(
     filteredPerfectMatches: List<MealSuggestion>,
     filteredGoodMatches: List<MealSuggestion>,
     filteredPartialMatches: List<MealSuggestion>,
-    selectedMealType: com.littlechef.app.domain.model.MealType?,
     selectedDishCategory: com.littlechef.app.domain.model.DishCategory?,
     hasActiveFilters: Boolean,
-    onMealTypeSelected: (com.littlechef.app.domain.model.MealType?) -> Unit,
     onDishCategorySelected: (com.littlechef.app.domain.model.DishCategory?) -> Unit,
     onUserMealClick: (String) -> Unit,
     onBundledRecipeClick: (Cuisine, String) -> Unit,
@@ -238,49 +236,12 @@ private fun SuccessContent(
                         .padding(top = 0.dp, bottom = 4.dp)
                 )
                 
-                // Filter picker
-                val context = LocalContext.current
-                val anyTimeLabel = "🍽️ ${androidx.compose.ui.res.stringResource(R.string.suggestions_any_time)}"
-                
-                Surface(
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(12.dp),
-                    color = MaterialTheme.colorScheme.surfaceVariant,
-                    tonalElevation = 1.dp
-                ) {
-                    Row(
-                        modifier = Modifier
-                            .fillMaxWidth()
-                            .height(120.dp)
-                    ) {
-                        // Left column - Meal Time
-                        com.littlechef.app.ui.screens.MealTypePicker(
-                            selectedMealType = selectedMealType,
-                            onMealTypeSelected = { 
-                                onMealTypeSelected(it)
-                            },
-                            modifier = Modifier.weight(1f)
-                        )
-                        
-                        // Divider
-                        Box(
-                            modifier = Modifier
-                                .width(1.dp)
-                                .fillMaxHeight()
-                                .padding(vertical = 12.dp)
-                                .background(MaterialTheme.colorScheme.outlineVariant)
-                        )
-                        
-                        // Right column - Dish Category
-                        com.littlechef.app.ui.screens.DishCategoryPicker(
-                            selectedDishCategory = selectedDishCategory,
-                            onDishCategorySelected = { 
-                                onDishCategorySelected(it)
-                            },
-                            modifier = Modifier.weight(1f)
-                        )
-                    }
-                }
+                // Dish Category stepper (only filter)
+                DishCategoryStepper(
+                    selectedDishCategory = selectedDishCategory,
+                    onDishCategorySelected = onDishCategorySelected,
+                    modifier = Modifier.fillMaxWidth()
+                )
             }
         }
 
@@ -530,7 +491,6 @@ private fun EmptyStateContent(modifier: Modifier = Modifier) {
 
 @Composable
 private fun FilteredResultsHeader(
-    selectedMealType: com.littlechef.app.domain.model.MealType?,
     selectedDishCategory: com.littlechef.app.domain.model.DishCategory?,
     modifier: Modifier = Modifier
 ) {
@@ -556,39 +516,19 @@ private fun FilteredResultsHeader(
                 color = MaterialTheme.colorScheme.onPrimaryContainer
             )
             
-            // Filter badges
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(8.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.fillMaxWidth()
-            ) {
-                selectedMealType?.let {
-                    Surface(
-                        shape = RoundedCornerShape(8.dp),
-                        color = MaterialTheme.colorScheme.primary,
-                        shadowElevation = 1.dp
-                    ) {
-                        Text(
-                            text = "${it.emoji} ${it.displayName}",
-                            style = MaterialTheme.typography.labelLarge,
-                            color = MaterialTheme.colorScheme.onPrimary,
-                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
-                        )
-                    }
-                }
-                selectedDishCategory?.let {
-                    Surface(
-                        shape = RoundedCornerShape(8.dp),
-                        color = MaterialTheme.colorScheme.tertiary,
-                        shadowElevation = 1.dp
-                    ) {
-                        Text(
-                            text = "${it.emoji} ${it.displayName}",
-                            style = MaterialTheme.typography.labelLarge,
-                            color = MaterialTheme.colorScheme.onTertiary,
-                            modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
-                        )
-                    }
+            // Filter badge
+            selectedDishCategory?.let {
+                Surface(
+                    shape = RoundedCornerShape(8.dp),
+                    color = MaterialTheme.colorScheme.tertiary,
+                    shadowElevation = 1.dp
+                ) {
+                    Text(
+                        text = "${it.emoji} ${it.displayName}",
+                        style = MaterialTheme.typography.labelLarge,
+                        color = MaterialTheme.colorScheme.onTertiary,
+                        modifier = Modifier.padding(horizontal = 12.dp, vertical = 6.dp)
+                    )
                 }
             }
         }
@@ -655,7 +595,8 @@ private fun MealSuggestionCard(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(140.dp)
+                .heightIn(min = 140.dp)
+                .height(IntrinsicSize.Min)
         ) {
             // Meal Image
             Box {
@@ -912,5 +853,165 @@ private fun MatchPercentageBadge(
             color = textColor,
             modifier = Modifier.padding(horizontal = 8.dp, vertical = 4.dp)
         )
+    }
+}
+
+@OptIn(FlowPreview::class)
+@Composable
+private fun DishCategoryStepper(
+    selectedDishCategory: com.littlechef.app.domain.model.DishCategory?,
+    onDishCategorySelected: (com.littlechef.app.domain.model.DishCategory?) -> Unit,
+    modifier: Modifier = Modifier
+) {
+    val baseItems = remember {
+        listOf<com.littlechef.app.domain.model.DishCategory?>(null) + com.littlechef.app.domain.model.DishCategory.entries
+    }
+    val repeatCount = 1000
+    val totalItems = baseItems.size * repeatCount
+    val middleStart = (repeatCount / 2) * baseItems.size
+
+    val listState = rememberLazyListState()
+    val coroutineScope = rememberCoroutineScope()
+    val haptic = rememberHapticFeedback()
+    val context = LocalContext.current
+    val density = LocalDensity.current
+    val itemWidthPx = with(density) { 100.dp.toPx() }.toInt()
+
+    // Map total index → base item
+    fun itemAt(idx: Int): com.littlechef.app.domain.model.DishCategory? = baseItems[idx % baseItems.size]
+
+    // Find the total index nearest the viewport center.
+    // Uses scroll position directly (always fresh) instead of layoutInfo.visibleItemsInfo
+    // which can be stale when settle fires.
+    fun findCenterItem(): Int {
+        val firstIdx = listState.firstVisibleItemIndex
+        val scrollOff = listState.firstVisibleItemScrollOffset
+        return if (scrollOff > itemWidthPx / 2f) firstIdx + 1 else firstIdx
+    }
+
+    // The unique item currently centered — used for visual highlighting during scroll
+    var centerItem by remember {
+        mutableStateOf(itemAt(middleStart + (baseItems.indexOf(selectedDishCategory).coerceAtLeast(0))))
+    }
+    // Haptic guards: only fire once per unique item per gesture phase
+    var lastLightItem by remember { mutableStateOf<Any?>(null) }
+    var lastSuccessItem by remember { mutableStateOf<Any?>(null) }
+
+    // Scroll to initial selection (in the middle of the infinite range)
+    LaunchedEffect(Unit) {
+        val target = middleStart + (baseItems.indexOf(selectedDishCategory).coerceAtLeast(0))
+        listState.scrollToItem(target)
+    }
+
+    // During scroll: track center for visual + light haptic when center swaps
+    // Does NOT call onDishCategorySelected — selection only commits on settle
+    LaunchedEffect(listState) {
+        snapshotFlow { listState.firstVisibleItemIndex }
+            .debounce(40)
+            .collect { _ ->
+                val idx = findCenterItem()
+                val item = itemAt(idx)
+                centerItem = item
+                if (item != lastLightItem) {
+                    haptic.performLight()
+                    lastLightItem = item
+                }
+            }
+    }
+
+    // On scroll settle: commit selection + success haptic + snap to center
+    LaunchedEffect(listState.isScrollInProgress) {
+        if (!listState.isScrollInProgress) {
+            val idx = findCenterItem()
+            val settledItem = itemAt(idx)
+            centerItem = settledItem
+
+            if (settledItem != selectedDishCategory) {
+                onDishCategorySelected(settledItem)
+            }
+            if (settledItem != lastSuccessItem) {
+                haptic.performSuccess()
+                lastSuccessItem = settledItem
+            }
+
+            // Snap nearest item to the centered slot
+            if (listState.firstVisibleItemScrollOffset != 0) {
+                coroutineScope.launch {
+                    listState.animateScrollToItem(idx)
+                }
+            }
+        }
+    }
+
+    BoxWithConstraints(
+        modifier = modifier,
+        contentAlignment = Alignment.Center
+    ) {
+        val itemWidth = 100.dp
+        val sidePad = (maxWidth - itemWidth) / 2
+
+        // Subtle bar rail
+        Surface(
+            modifier = Modifier.fillMaxWidth().height(80.dp),
+            shape = RoundedCornerShape(16.dp),
+            color = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.35f)
+        ) {}
+
+        // Center selection highlight
+        Surface(
+            modifier = Modifier
+                .width(itemWidth)
+                .height(80.dp),
+            shape = RoundedCornerShape(16.dp),
+            color = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.3f)
+        ) {}
+
+        // Scrollable items (infinite via repeated list)
+        LazyRow(
+            state = listState,
+            modifier = Modifier.fillMaxWidth().height(80.dp),
+            contentPadding = PaddingValues(horizontal = sidePad)
+        ) {
+            items(totalItems) { index ->
+                val item = itemAt(index)
+                val isSelected = item == centerItem
+                Box(
+                    modifier = Modifier
+                        .width(itemWidth)
+                        .fillMaxHeight()
+                        .clickable {
+                            onDishCategorySelected(item)
+                            centerItem = item
+                            lastSuccessItem = item
+                            coroutineScope.launch {
+                                listState.animateScrollToItem(index)
+                            }
+                        },
+                    contentAlignment = Alignment.Center
+                ) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text(
+                            text = if (item == null) "🍽️" else item.emoji,
+                            style = MaterialTheme.typography.headlineMedium,
+                            color = MaterialTheme.colorScheme.onSurface.copy(alpha = if (isSelected) 1f else 0.4f)
+                        )
+                        Spacer(Modifier.height(2.dp))
+                        Text(
+                            text = if (item == null)
+                                androidx.compose.ui.res.stringResource(R.string.add_recipe_none)
+                            else
+                                item.getLocalizedName(context),
+                            style = MaterialTheme.typography.labelSmall,
+                            fontWeight = if (isSelected) FontWeight.Bold else FontWeight.Normal,
+                            textAlign = androidx.compose.ui.text.style.TextAlign.Center,
+                            color = if (isSelected)
+                                MaterialTheme.colorScheme.onSurface
+                            else
+                                MaterialTheme.colorScheme.onSurfaceVariant.copy(alpha = 0.5f)
+                        )
+                    }
+                }
+            }
+        }
     }
 }

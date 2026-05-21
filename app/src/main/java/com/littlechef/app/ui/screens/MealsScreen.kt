@@ -476,7 +476,8 @@ private fun RecipeChip(
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .height(140.dp)
+                .heightIn(min = 140.dp)
+                .height(IntrinsicSize.Min)
         ) {
             // Recipe image
             RecipeImage(

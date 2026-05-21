@@ -496,8 +496,8 @@ fun PantryItemCard(
                                 text = translatedName.replaceFirstChar { 
                                     if (it.isLowerCase()) it.titlecase() else it.toString() 
                                 },
-                                style = MaterialTheme.typography.bodyMedium,
-                                fontWeight = FontWeight.Normal
+                                style = MaterialTheme.typography.bodyLarge,
+                                fontWeight = FontWeight.Bold
                             )
                             // Show language indicator if ingredient was created in a different language
                             val createdLanguage = pantryItem.ingredient.createdInLanguage
@@ -518,8 +518,8 @@ fun PantryItemCard(
                     }
                     Text(
                         text = availableDisplay,
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Normal,
+                        style = MaterialTheme.typography.bodyLarge,
+                        fontWeight = FontWeight.Bold,
                         color = MaterialTheme.colorScheme.primary
                     )
                 }
@@ -534,7 +534,7 @@ fun PantryItemCard(
                     )
                     Text(
                         text = "Reserved: $reservedDisplay",
-                        style = MaterialTheme.typography.bodyMedium,
+                        style = MaterialTheme.typography.bodyLarge,
                         color = MaterialTheme.colorScheme.secondary
                     )
                     
@@ -547,7 +547,7 @@ fun PantryItemCard(
                         )
                         Text(
                             text = "  • $resDisplay for ${reservation.mealName}",
-                            style = MaterialTheme.typography.bodySmall,
+                            style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.padding(start = 8.dp, top = 2.dp)
                         )
@@ -1085,12 +1085,12 @@ private fun PantryCategoryHeader(
                 Column {
                     Text(
                         text = translatedCategory,
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Normal
+                        style = MaterialTheme.typography.bodyLarge,
+                        fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "$itemCount items",
-                        style = MaterialTheme.typography.bodySmall,
+                        style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }
@@ -1150,12 +1150,12 @@ private fun PantrySubcategoryHeader(
                 Column {
                     Text(
                         text = translatedSubcategory,
-                        style = MaterialTheme.typography.bodyMedium,
-                        fontWeight = FontWeight.Normal
+                        style = MaterialTheme.typography.bodyLarge,
+                        fontWeight = FontWeight.Bold
                     )
                     Text(
                         text = "$itemCount items",
-                        style = MaterialTheme.typography.bodySmall,
+                        style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.onSurfaceVariant
                     )
                 }

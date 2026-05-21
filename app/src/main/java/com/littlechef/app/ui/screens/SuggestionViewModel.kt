@@ -29,15 +29,6 @@ sealed class MealSuggestion {
     abstract val missingIngredientNames: List<String>
     
     /**
-     * Get meal type as string for filtering
-     */
-    val mealTypeString: String?
-        get() = when (this) {
-            is UserMeal -> meal.mealType?.name
-            is BundledMeal -> recipe.mealType
-        }
-    
-    /**
      * Get dish category as string for filtering
      */
     val dishCategoryString: String?
@@ -82,7 +73,6 @@ sealed interface SuggestionUiState {
         val filteredPerfectMatches: List<MealSuggestion>,
         val filteredGoodMatches: List<MealSuggestion>,
         val filteredPartialMatches: List<MealSuggestion>,
-        val selectedMealType: com.littlechef.app.domain.model.MealType? = null,
         val selectedDishCategory: com.littlechef.app.domain.model.DishCategory? = null
     ) : SuggestionUiState
     data class Error(val message: String) : SuggestionUiState
@@ -163,7 +153,6 @@ class SuggestionViewModel @Inject constructor(
                     filteredPerfectMatches = perfectMatches,
                     filteredGoodMatches = goodMatches,
                     filteredPartialMatches = partialMatches,
-                    selectedMealType = null,
                     selectedDishCategory = null
                 )
                 
@@ -355,58 +344,6 @@ class SuggestionViewModel @Inject constructor(
     }
     
     /**
-     * Filter suggestions by meal type
-     */
-    fun filterByMealType(mealType: com.littlechef.app.domain.model.MealType?) {
-        val currentState = _uiState.value
-        if (currentState is SuggestionUiState.Success) {
-            val filteredPerfect = if (mealType == null) {
-                currentState.allPerfectMatches
-            } else {
-                currentState.allPerfectMatches.filter { it.mealTypeString == mealType.name }
-            }
-            
-            val filteredGood = if (mealType == null) {
-                currentState.allGoodMatches
-            } else {
-                currentState.allGoodMatches.filter { it.mealTypeString == mealType.name }
-            }
-            
-            val filteredPartial = if (mealType == null) {
-                currentState.allPartialMatches
-            } else {
-                currentState.allPartialMatches.filter { it.mealTypeString == mealType.name }
-            }
-            
-            // Apply dish category filter if active
-            val finalPerfect = if (currentState.selectedDishCategory != null) {
-                filteredPerfect.filter { it.dishCategoryString == currentState.selectedDishCategory.name }
-            } else {
-                filteredPerfect
-            }
-            
-            val finalGood = if (currentState.selectedDishCategory != null) {
-                filteredGood.filter { it.dishCategoryString == currentState.selectedDishCategory.name }
-            } else {
-                filteredGood
-            }
-            
-            val finalPartial = if (currentState.selectedDishCategory != null) {
-                filteredPartial.filter { it.dishCategoryString == currentState.selectedDishCategory.name }
-            } else {
-                filteredPartial
-            }
-            
-            _uiState.value = currentState.copy(
-                selectedMealType = mealType,
-                filteredPerfectMatches = finalPerfect,
-                filteredGoodMatches = finalGood,
-                filteredPartialMatches = finalPartial
-            )
-        }
-    }
-    
-    /**
      * Filter suggestions by dish category
      */
     fun filterByDishCategory(dishCategory: com.littlechef.app.domain.model.DishCategory?) {
@@ -430,30 +367,11 @@ class SuggestionViewModel @Inject constructor(
                 currentState.allPartialMatches.filter { it.dishCategoryString == dishCategory.name }
             }
             
-            // Apply meal type filter if active
-            val finalPerfect = if (currentState.selectedMealType != null) {
-                filteredPerfect.filter { it.mealTypeString == currentState.selectedMealType.name }
-            } else {
-                filteredPerfect
-            }
-            
-            val finalGood = if (currentState.selectedMealType != null) {
-                filteredGood.filter { it.mealTypeString == currentState.selectedMealType.name }
-            } else {
-                filteredGood
-            }
-            
-            val finalPartial = if (currentState.selectedMealType != null) {
-                filteredPartial.filter { it.mealTypeString == currentState.selectedMealType.name }
-            } else {
-                filteredPartial
-            }
-            
             _uiState.value = currentState.copy(
                 selectedDishCategory = dishCategory,
-                filteredPerfectMatches = finalPerfect,
-                filteredGoodMatches = finalGood,
-                filteredPartialMatches = finalPartial
+                filteredPerfectMatches = filteredPerfect,
+                filteredGoodMatches = filteredGood,
+                filteredPartialMatches = filteredPartial
             )
         }
     }
@@ -465,7 +383,6 @@ class SuggestionViewModel @Inject constructor(
         val currentState = _uiState.value
         if (currentState is SuggestionUiState.Success) {
             _uiState.value = currentState.copy(
-                selectedMealType = null,
                 selectedDishCategory = null,
                 filteredPerfectMatches = currentState.allPerfectMatches,
                 filteredGoodMatches = currentState.allGoodMatches,

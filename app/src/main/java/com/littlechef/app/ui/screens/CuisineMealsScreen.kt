@@ -454,19 +454,24 @@ private fun BundledRecipeCard(
     Card(
         modifier = modifier
             .fillMaxWidth()
-            .height(140.dp)
+            .heightIn(min = 140.dp)
             .clickable {
                 onClick()
             },
         shape = RoundedCornerShape(12.dp)
     ) {
-        Box(modifier = Modifier.fillMaxSize()) {
+        Box {
             Row(
-                modifier = Modifier.fillMaxWidth()
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .heightIn(min = 140.dp)
+                    .height(IntrinsicSize.Min)
             ) {
                 // Recipe image - wrapped in Box to prevent driving height
                 Box(
-                    modifier = Modifier.width(100.dp)
+                    modifier = Modifier
+                        .width(100.dp)
+                        .fillMaxHeight()
                 ) {
                 if (recipe.imageUrl != null) {
                     // Use Coil for async image loading with size optimization
@@ -538,6 +543,9 @@ private fun BundledRecipeCard(
                         )
                     }
                 }
+                
+                // Push time to bottom so long names don't clip it
+                Spacer(modifier = Modifier.weight(1f))
                 
                 val prepLabel = androidx.compose.ui.res.stringResource(R.string.meal_plan_prep)
                 val cookLabel = androidx.compose.ui.res.stringResource(R.string.meal_plan_cook)

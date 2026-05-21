@@ -353,7 +353,7 @@ fun MealPlanCard(
     Card(
         modifier = Modifier
             .fillMaxWidth()
-            .height(140.dp)
+            .heightIn(min = 140.dp)
             .clickable(onClick = onClick),
         border = if (mealPlan.status != MealPlanStatus.COMPLETED) {
             BorderStroke(1.dp, MaterialTheme.colorScheme.primary.copy(alpha = 0.3f))
@@ -362,11 +362,16 @@ fun MealPlanCard(
         }
     ) {
         Row(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier
+                .fillMaxWidth()
+                .heightIn(min = 140.dp)
+                .height(IntrinsicSize.Min)
         ) {
             // Recipe image - wrapped in Box to scale with card height
             Box(
-                modifier = Modifier.width(100.dp)
+                modifier = Modifier
+                    .width(100.dp)
+                    .fillMaxHeight()
             ) {
                 com.littlechef.app.ui.util.RecipeImage(
                     imagePath = mealPlan.meal.imagePath,
