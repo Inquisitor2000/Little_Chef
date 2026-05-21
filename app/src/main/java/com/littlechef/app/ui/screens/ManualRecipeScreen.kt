@@ -760,7 +760,7 @@ private fun EditManualIngredientDialog(
                                     ) {
                                         Text(
                                             text = translateUnit(selectedUnit),
-                                            style = MaterialTheme.typography.bodyMedium,
+                                            style = MaterialTheme.typography.bodyLarge,
                                             fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onPrimary
                                         )

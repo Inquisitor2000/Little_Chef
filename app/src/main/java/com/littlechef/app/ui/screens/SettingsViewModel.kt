@@ -44,13 +44,13 @@ class SettingsViewModel @Inject constructor(
     val accentColorLight: StateFlow<Long> = preferences.accentColorLight.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5000),
-        initialValue = 0xFFD68C45 // Toasted Almond
+        initialValue = 0xFFCB6565 // Lobster Pink
     )
 
     val accentColorDark: StateFlow<Long> = preferences.accentColorDark.stateIn(
         scope = viewModelScope,
         started = SharingStarted.WhileSubscribed(5000),
-        initialValue = 0xFF5398be // Blue Bell
+        initialValue = 0xFF80A1D4 // Wisteria Blue
     )
     
     val customGroceryHeader: StateFlow<String?> = preferences.customGroceryHeader.stateIn(

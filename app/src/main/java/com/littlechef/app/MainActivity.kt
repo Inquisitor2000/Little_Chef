@@ -394,7 +394,8 @@ fun MainAppScreen() {
                                             interactionSource = remember { MutableInteractionSource() },
                                             indication = null
                                         ) {
-                                            if (!selected) {
+                                            // Navigate unless we're exactly on this tab's root screen
+                                            if (currentDestination?.route != destination.route) {
                                                 haptic.performLight()
                                                 lastInteractionTime = System.currentTimeMillis()
                                                 navController.navigate(destination.route) {

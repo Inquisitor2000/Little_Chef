@@ -812,7 +812,7 @@ private fun DrawerCustomIngredientItem(
             text = {
                 Text(
                     text = stringResource(R.string.drawer_delete_custom_message),
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodyLarge,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -995,7 +995,7 @@ private fun DrawerQuantityDialog(
                                     ) {
                                         Text(
                                             text = translateUnit(selectedUnit),
-                                            style = MaterialTheme.typography.bodyMedium,
+                                            style = MaterialTheme.typography.bodyLarge,
                                             fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onPrimary
                                         )
@@ -1187,7 +1187,7 @@ private fun DrawerCustomQuantityDialog(
                                     ) {
                                         Text(
                                             text = translateUnit(selectedUnit),
-                                            style = MaterialTheme.typography.bodyMedium,
+                                            style = MaterialTheme.typography.bodyLarge,
                                             fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onPrimary
                                         )

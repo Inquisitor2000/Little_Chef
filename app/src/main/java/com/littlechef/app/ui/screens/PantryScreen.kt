@@ -696,7 +696,7 @@ private fun EditPantryItemDialog(
             text = { 
                 Text(
                     text = stringResource(R.string.pantry_delete_message),
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodyLarge,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 ) 
@@ -936,7 +936,7 @@ private fun EditPantryItemDialog(
                                                     "lb" -> stringResource(R.string.unit_lb)
                                                     else -> selectedUnit
                                                 },
-                                                style = MaterialTheme.typography.bodyMedium,
+                                                style = MaterialTheme.typography.bodyLarge,
                                                 fontWeight = FontWeight.Bold,
                                                 color = MaterialTheme.colorScheme.onPrimary
                                             )

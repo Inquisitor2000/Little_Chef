@@ -758,7 +758,7 @@ private fun PcsWarningDialog(
         text = {
             Text(
                 stringResource(R.string.pcs_warning_message),
-                style = MaterialTheme.typography.bodyMedium
+                style = MaterialTheme.typography.bodyLarge
             )
         },
         confirmButton = {

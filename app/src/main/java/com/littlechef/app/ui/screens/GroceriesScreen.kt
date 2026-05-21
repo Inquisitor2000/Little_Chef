@@ -546,7 +546,7 @@ fun GroceriesScreen(
             text = { 
                 Text(
                     text = androidx.compose.ui.res.stringResource(R.string.groceries_clear_checked_message),
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodyLarge,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -784,7 +784,7 @@ private fun SwipeToDeleteMealGroup(
             text = { 
                 Text(
                     text = message,
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodyLarge,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -1270,7 +1270,7 @@ private fun PurchaseQuantityDialog(
             ) {
                 Text(
                     text = stringResource(R.string.groceries_how_much_buy),
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodyLarge,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 
@@ -1375,7 +1375,7 @@ private fun PurchaseQuantityDialog(
                                     ) {
                                         Text(
                                             text = translateUnit(selectedUnit),
-                                            style = MaterialTheme.typography.bodyMedium,
+                                            style = MaterialTheme.typography.bodyLarge,
                                             fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onPrimary
                                         )
@@ -1405,7 +1405,7 @@ private fun PurchaseQuantityDialog(
                     } else {
                         stringResource(R.string.groceries_recipe_needs, translateFormattedUnit(UnitConversion.formatForDisplay(item.quantity, item.unit)))
                     },
-                    style = MaterialTheme.typography.bodySmall,
+                    style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 

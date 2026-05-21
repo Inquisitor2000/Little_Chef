@@ -279,7 +279,7 @@ fun PlanScreen(
             text = { 
                 Text(
                     text = stringResource(R.string.plan_clear_completed_message),
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodyLarge,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -636,9 +636,9 @@ private fun AddMealPlanDialog(
                                 contentAlignment = Alignment.Center
                             ) {
                                 Text(
-                                    text = "No saved recipes yet",
-                                    style = MaterialTheme.typography.bodyMedium,
-                                    color = MaterialTheme.colorScheme.onSurfaceVariant
+                                text = "No saved recipes yet",
+                                style = MaterialTheme.typography.bodyLarge,
+                                color = MaterialTheme.colorScheme.onSurfaceVariant
                                 )
                             }
                         } else {
@@ -667,15 +667,15 @@ private fun AddMealPlanDialog(
                                         ) {
                                             Column(modifier = Modifier.weight(1f)) {
                                                 Text(
-                                                    text = meal.name,
-                                                    style = MaterialTheme.typography.bodyMedium,
-                                                    fontWeight = FontWeight.Normal
+                                                text = meal.name,
+                                                style = MaterialTheme.typography.bodyLarge,
+                                                fontWeight = FontWeight.Normal
                                                 )
                                                 val totalTime = (meal.prepTimeMinutes ?: 0) + (meal.cookTimeMinutes ?: 0)
                                                 if (totalTime > 0) {
                                                     Text(
-                                                        text = "$totalTime min",
-                                                        style = MaterialTheme.typography.bodySmall,
+                                                    text = "$totalTime min",
+                                                    style = MaterialTheme.typography.bodyMedium,
                                                         color = MaterialTheme.colorScheme.onSurfaceVariant
                                                     )
                                                 }
@@ -725,8 +725,8 @@ private fun AddMealPlanDialog(
                                                 modifier = Modifier.size(28.dp)
                                             )
                                             Text(
-                                                text = cuisine.displayName,
-                                                style = MaterialTheme.typography.bodyMedium
+                                            text = cuisine.displayName,
+                                            style = MaterialTheme.typography.bodyLarge
                                             )
                                         }
                                         Icon(

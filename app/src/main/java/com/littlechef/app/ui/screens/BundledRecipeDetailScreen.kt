@@ -559,7 +559,7 @@ fun BundledRecipeDetailScreen(
                 text = {
                     Text(
                         text = stringResource(bodyTextRes),
-                        style = MaterialTheme.typography.bodyMedium,
+                        style = MaterialTheme.typography.bodyLarge,
                         textAlign = TextAlign.Center,
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -640,7 +640,7 @@ fun BundledRecipeDetailScreen(
                     )
                     Text(
                         text = result.message,
-                        style = MaterialTheme.typography.bodyMedium,
+                        style = MaterialTheme.typography.bodyLarge,
                         textAlign = TextAlign.Center
                     )
                 }
@@ -691,11 +691,11 @@ fun BundledRecipeDetailScreen(
                                     Spacer(modifier = Modifier.height(4.dp))
                                     Text(
                                         text = "${stringResource(R.string.meal_plan_need)}: ${UnitConversion.formatQuantity(missing.required)} ${getUnitTranslation(missing.unit)}",
-                                        style = MaterialTheme.typography.bodyMedium
+                                        style = MaterialTheme.typography.bodyLarge
                                     )
                                     Text(
                                         text = "${stringResource(R.string.meal_plan_have)}: ${UnitConversion.formatQuantity(missing.available)} ${getUnitTranslation(missing.unit)}",
-                                        style = MaterialTheme.typography.bodyMedium,
+                                        style = MaterialTheme.typography.bodyLarge,
                                         color = MaterialTheme.colorScheme.error
                                     )
                                     
@@ -705,7 +705,7 @@ fun BundledRecipeDetailScreen(
                                         Divider(modifier = Modifier.padding(vertical = 4.dp))
                                         Text(
                                             text = "✓ Substitute available: ${sub.name}",
-                                            style = MaterialTheme.typography.bodySmall,
+                                            style = MaterialTheme.typography.bodyMedium,
                                             color = MaterialTheme.colorScheme.primary,
                                             fontWeight = FontWeight.Normal
                                         )
@@ -848,7 +848,7 @@ private fun PlanMealDialog(
             ) {
                 Text(
                     text = stringResource(R.string.recipe_when_plan),
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodyLarge,
                     textAlign = androidx.compose.ui.text.style.TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )

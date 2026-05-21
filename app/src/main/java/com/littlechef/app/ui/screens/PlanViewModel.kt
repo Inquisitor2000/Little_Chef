@@ -62,7 +62,7 @@ class PlanViewModel @Inject constructor(
     private val _insufficientIngredients = MutableStateFlow<List<StartCookingUseCase.InsufficientIngredient>?>(null)
     val insufficientIngredients: StateFlow<List<StartCookingUseCase.InsufficientIngredient>?> = _insufficientIngredients.asStateFlow()
     
-    private val _useDetailedInstructions = MutableStateFlow(true)
+    private val _useDetailedInstructions = MutableStateFlow(false)
     val useDetailedInstructions: StateFlow<Boolean> = _useDetailedInstructions.asStateFlow()
     
     // Job for observing ingredient availability - can be cancelled and restarted

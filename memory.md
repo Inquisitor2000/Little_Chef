@@ -6,7 +6,7 @@ Android meal planning app. Kotlin + Jetpack Compose. Organize recipes, manage pa
 **Package**: `com.littlechef.app`
 **Min SDK**: 27 (Android 8.1), **Target SDK**: 34 (Android 14)
 **App Name**: "Little Chef"
-**Build**: Gradle Kotlin DSL, Kotlin 1.9.21, Compose BOM 2023.10.01, compileSdk 34
+**Build**: Gradle Kotlin DSL, Kotlin 1.9.21, Compose BOM 2023.10.01, compileSdk 34, Google Services plugin + `google-services.json`
 **App Bundle**: `language { enableSplit = false }` — all 3 locales in every APK split
 
 ---
@@ -33,6 +33,7 @@ app/src/main/java/com/littlechef/app/
 - **Serialization**: Kotlinx Serialization 1.6.2
 - **Preferences**: DataStore Preferences 1.0.0
 - **Billing**: Google Play Billing 6.1.0
+- **Analytics**: Firebase Analytics (BOM 32.7.0)
 - **Asset Delivery**: Play Asset Delivery 2.2.2
 
 ---
@@ -65,6 +66,26 @@ NavDestination.AddCustomIngredientForRecipe.createRoute(initialName)
 - SavedStateHandle for passing data back between screens
 - `navController.popBackStack()` with inclusive flag for removing intermediate screens
 - Scraped/manual recipe flow navigates to new recipe detail after creation
+
+### Screen View Tracking (Analytics)
+- `NavViewModel.screenNameForRoute(route)` maps routes → analytics screen names
+- `navController.addOnDestinationChangedListener` fires `trackScreenView()` on every navigation (except initial)
+- Tracked screens: plan, meals, groceries, pantry, recipe_detail, cuisine_meals, bundled_recipe, scrape_recipe, manual_recipe, settings, suggestion, ingredient_form, meal_plan_detail
+
+---
+
+## Analytics (`data/analytics/AnalyticsService.kt`)
+- `@Singleton` wrapper around Firebase Analytics, no-op safe without `google-services.json`
+- Events tracked:
+  - `onboarding_started`, `onboarding_completed`, `language_selected`
+  - `recipe_scraped` (name, ingredient count, token usage, success/error)
+  - `recipe_created_manual` (name, ingredient count, meal type)
+  - `recipe_viewed`, `cuisine_browsed`, `bundled_recipe_viewed`
+  - `meal_suggestion_viewed`, `substitute_applied` (recipe name, ingredient name)
+- Init: `MealPlannerApp.onCreate()` via `analyticsService.init(this)`
+- DI: `AnalyticsModule` (`@Provides @Singleton`)
+- Google Services plugin + `firebase-bom:32.7.0` + `google-services.json` in `app/`
+- No Firebase UI components — bare `FirebaseAnalytics.logEvent`
 
 ---
 
@@ -243,6 +264,14 @@ CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
 - Delete icon scaling animation (0.8f → 1.2f) with spring physics
 - Confirmation uses `Dialog` composable with `RoundedCornerShape(28.dp)`
 
+### CupertinoPicker (`ui/components/CupertinoPicker.kt`)
+- Shared barrel/carousel selector extracted from 3 duplicates (AddCustomIngredientScreen, ScrapeRecipeScreen, SuggestionScreen)
+- Infinite scroll via repeated item list + snap-to-center
+- Haptic (`VIRTUAL_KEY`) fires only on scroll settle when item changes — `lastHapticItem` guard + `isSnapping` flag prevent double-fire
+- Item height 40dp, vertical padding 40dp (120dp container)
+- Used via `DishCategoryStepper`, `MealTypePicker`, `UnitPicker`
+- Replaces manual `LazyColumn` + `snapshotFlow` + `debounce` approach
+
 ---
 
 ## String Resources
@@ -268,7 +297,7 @@ CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
 
 ## Dependency Injection (Hilt)
 
-### 5 Modules (all `SingletonComponent`)
+### 6 Modules (all `SingletonComponent`)
 | Module | Provides |
 |--------|----------|
 | `AppModule` | Coroutine dispatchers, `StringBuilder` |
@@ -276,6 +305,7 @@ CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
 | `RepositoryModule` | `@Binds` all 6 repository interfaces → implementations |
 | `NetworkModule` | Ktor HttpClient, Json serializer |
 | `ImageModule` | Coil ImageLoader |
+| `AnalyticsModule` | `AnalyticsService` — Firebase Analytics wrapper |
 
 ### Hilt Annotations
 - `@HiltAndroidApp` — Application (`MealPlannerApp`)
@@ -359,6 +389,8 @@ Dividers use `onSurfaceVariant.copy(alpha = 0.2f)` (not `outlineVariant`). Time 
 - AddIngredientDrawer via `showAddIngredientDrawer` state
 - Edit/delete via EditPantryItemDialog (trash icon → confirm → adjust inventory to 0)
 - Swipe-to-delete NOT used in pantry
+- **Text scaling**: Item names + availability use `bodyLarge` + `FontWeight.Bold` (was `bodyMedium` + `Normal`)
+- **Category/subcategory headers**: `bodyMedium`→`bodyLarge` + `Bold`, item count `bodySmall`→`bodyMedium`
 
 ### Groceries Screen Specifics
 - SwipeToDeleteGroceryItem: swipe left = delete bin (AlertDialog), swipe right = check
@@ -466,6 +498,12 @@ Three-tier ingredient matching:
 3. Partial Matches: 50-79% available
 
 *(Vibe-based Chef's Pick removed — unused strings deleted)*
+
+### Filtering (refactored May 21)
+- **Removed**: meal type filter (`MealTypePicker` + `filterByMealType()` in VM) — was redundant with dish category
+- **Replaced**: dual-column `MealTypePicker` + `DishCategoryPicker` → single `DishCategoryStepper` (CupertinoPicker-based)
+- `selectedMealType` removed from `SuggestionUiState.Success`
+- `MealSuggestion.mealTypeString` removed
 
 ---
 
@@ -663,6 +701,14 @@ Located in `domain/model/NonDeductibleIngredients.kt`. `isNonDeductibleByName()`
 - Problem: Asset pack names can't start with digit
 - Updated 7 files
 
+### WebP Image Conversion (~17.5MB APK savings)
+- **Problem**: 265 image assets in JPG/PNG — APK size ~38.5MB
+- **Fix**: Converted all recipe photos to lossy WebP q60, drawables + mipmaps to lossless WebP. Updated 528 JSON `imageUrl` refs `.jpg`→`.webp`. Added missing `imageUrl` to DLC packs. Updated `MealsScreen.kt` hardcoded DLC preview URLs
+- **Result**: APK ~20.9MB (recipe images 30.9→14.6MB, drawables 944→560KB, mipmaps 528→340KB)
+
+### Recipe Name Styling (Detail TopAppBar)
+- Changed recipe name in detail TopAppBars to `headlineSmall.copy(fontSize = 22.sp)` (22sp Bold with user font). Removed redundant `titleLarge` vs `headlineSmall` conditional
+
 ### ABC Delight Recipe Not Rendering
 - Problem: JSON `id: "abc_delight"` but filename was different — no pattern match
 - Fix: Renamed 3 locale files to `abc_delight.json`, `abc_delight_ru.json`, `abc_delight_ro.json`
@@ -682,6 +728,40 @@ Located in `domain/model/NonDeductibleIngredients.kt`. `isNonDeductibleByName()`
 ### ManualRecipeScreen Bottom Padding
 - Problem: 16dp bottom spacing — navbar obstructed last fields
 - Fix: Bottom Spacer 16dp → 80dp
+
+### CupertinoPicker Extraction (shared component)
+- Problem: 3 duplicate barrel pickers (AddCustomIngredientScreen, ScrapeRecipeScreen, SuggestionScreen) — ~150 lines each, haptic bugs
+- Fix: Extracted into `ui/components/CupertinoPicker.kt` (228 lines). Single source. Haptic fires only on settle (VIRTUAL_KEY), `lastHapticItem` + `isSnapping` guards prevent double-fire
+
+### Delete Button Haptic Pattern (8 screens)
+- Problem: Delete bin buttons had no haptic feedback — inconsistent UX
+- Fix: `performLight()` on bin icon press, `performDestructive()` on confirm delete. Applied across PantryScreen, AddIngredientDrawer, ManualRecipeScreen, RecipeDetailScreen, PlanScreen, IngredientDetailScreen, MealDetailScreen, MealFormScreen
+
+### Suggestion Screen Filter Refactor
+- Problem: Meal type + dish category dual picker was redundant (meal plan always shows all types)
+- Fix: Removed `MealTypePicker`, `filterByMealType()`, `selectedMealType` from state. Single `DishCategoryStepper` (CupertinoPicker)
+
+### Pantry Text Scaling
+- Problem: Pantry used `bodyMedium` + `Normal` for item text — smaller than Groceries screen
+- Fix: All pantry text `bodyMedium`→`bodyLarge` + `FontWeight.Bold`. Category headers same. Item count `bodySmall`→`bodyMedium`
+
+### Card Heights (PlanScreen + CuisineMealsScreen)
+- Problem: Fixed `height(140.dp)` on meal plan cards — overflow with long content
+- Fix: `height(140.dp)`→`heightIn(min = 140.dp)`. Row uses `height(IntrinsicSize.Min)`. Image uses `fillMaxHeight()`
+
+### Analytics Module
+- Added: `AnalyticsService` (Firebase Analytics wrapper), events for onboarding, recipe scrape/create/view, screen views, substitutions. DI via `AnalyticsModule`. Init in `MealPlannerApp.onCreate()`. Google Services plugin + BOM 32.7.0
+
+### Landing Page + GitHub Pages
+- Added: `docs/` static site (HTML + 7 screenshots + privacy/terms). GitHub Actions workflow deploys to Pages on push to main
+
+---
+
+## Landing Page & GitHub Pages (`docs/`)
+- Static HTML landing page in `docs/` with screenshots, feature highlights, privacy + terms pages
+- GitHub Pages deployment via `.github/workflows/deploy-pages.yml` — auto-deploys `docs/` on push to main
+- Screenshots: 7 `.webp` images showing key app screens (plan, groceries, pantry, recipe detail, language selection, cuisine selections)
+- Privacy policy: `docs/privacy.html`, Terms: `docs/terms.html`
 
 ---
 
@@ -714,4 +794,4 @@ Located in `domain/model/NonDeductibleIngredients.kt`. `isNonDeductibleByName()`
 - All values per 100g; `pieceG` converts pcs to grams
 - 365 entries: 84 DLC + 266 bundled
 
-**Last Updated**: May 17, 2026
+**Last Updated**: May 21, 2026

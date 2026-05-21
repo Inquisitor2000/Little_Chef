@@ -226,16 +226,6 @@ private fun SuccessContent(
         // Filter carousel - always visible
         item {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
-                // Filter header
-                Text(
-                    text = androidx.compose.ui.res.stringResource(R.string.suggestions_filter_selection),
-                    style = MaterialTheme.typography.titleSmall,
-                    fontWeight = FontWeight.Bold,
-                    modifier = Modifier
-                        .fillMaxWidth()
-                        .padding(top = 0.dp, bottom = 4.dp)
-                )
-                
                 // Dish Category stepper (only filter)
                 DishCategoryStepper(
                     selectedDishCategory = selectedDishCategory,
@@ -592,50 +582,49 @@ private fun MealSuggestionCard(
         modifier = modifier.fillMaxWidth(),
         shape = RoundedCornerShape(16.dp)
     ) {
-        Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .heightIn(min = 140.dp)
-                .height(IntrinsicSize.Min)
-        ) {
-            // Meal Image
-            Box {
-                val imagePath = when (suggestion) {
-                    is MealSuggestion.UserMeal -> suggestion.meal.imagePath
-                    is MealSuggestion.BundledMeal -> suggestion.recipe.imageUrl
-                }
-                
-                RecipeImage(
-                    imagePath = imagePath,
-                    contentDescription = when (suggestion) {
-                        is MealSuggestion.UserMeal -> suggestion.meal.name
-                        is MealSuggestion.BundledMeal -> suggestion.recipe.name
-                    },
-                    modifier = Modifier
-                        .width(120.dp)
-                        .fillMaxHeight()
-                        .clip(RoundedCornerShape(topStart = 16.dp, bottomStart = 16.dp))
-                )
-                
-                // Match Percentage Badge (only show if showMatchPercentage is true)
-                if (showMatchPercentage) {
-                    MatchPercentageBadge(
-                        percentage = suggestion.matchPercentage,
-                        modifier = Modifier
-                            .align(Alignment.TopEnd)
-                            .padding(8.dp)
-                    )
-                }
-            }
-
-            // Meal Info
-            Column(
+            Row(
                 modifier = Modifier
-                    .weight(1f)
-                    .fillMaxHeight()
-                    .padding(12.dp),
-                verticalArrangement = Arrangement.spacedBy(6.dp)
+                    .fillMaxWidth()
+                    .height(160.dp)
             ) {
+                // Meal Image
+                Box {
+                    val imagePath = when (suggestion) {
+                        is MealSuggestion.UserMeal -> suggestion.meal.imagePath
+                        is MealSuggestion.BundledMeal -> suggestion.recipe.imageUrl
+                    }
+
+                    RecipeImage(
+                        imagePath = imagePath,
+                        contentDescription = when (suggestion) {
+                            is MealSuggestion.UserMeal -> suggestion.meal.name
+                            is MealSuggestion.BundledMeal -> suggestion.recipe.name
+                        },
+                        modifier = Modifier
+                            .width(120.dp)
+                            .fillMaxHeight()
+                            .clip(RoundedCornerShape(topStart = 16.dp, bottomStart = 16.dp))
+                    )
+
+                    // Match Percentage Badge (only show if showMatchPercentage is true)
+                    if (showMatchPercentage) {
+                        MatchPercentageBadge(
+                            percentage = suggestion.matchPercentage,
+                            modifier = Modifier
+                                .align(Alignment.TopEnd)
+                                .padding(8.dp)
+                        )
+                    }
+                }
+
+                // Meal Info
+                Column(
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxHeight()
+                        .padding(12.dp),
+                    verticalArrangement = Arrangement.spacedBy(6.dp)
+                ) {
                 // Meal Name
                 Text(
                     text = when (suggestion) {

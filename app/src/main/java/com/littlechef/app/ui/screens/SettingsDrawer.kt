@@ -266,15 +266,15 @@ fun SettingsDrawer(
                         // Preset color bubbles - different for light and dark mode
                         val presetColors = if (isDarkTheme) {
                             listOf(
-                                0xFF5398be, // Blue Bell (default)
-                                0xFFe65f5c, // Lobster Pink
-                                0xFFAF4287  // Plum Purple
+                                0xFF80A1D4, // Wisteria Blue (default)
+                                0xFFC27F63, // Cinnamon Wood
+                                0xFF9F99B8  // Lavender Grey
                             )
                         } else {
                             listOf(
-                                0xFFD68C45, // Toasted Almond (default)
-                                0xFFD3594B, // Coral Red
-                                0xFFA33DC5  // Purple
+                                0xFFCB6565, // Lobster Pink (default)
+                                0xFF85BA5E, // Willow Green
+                                0xFF8D7ECB  // Soft Periwinkle
                             )
                         }
                         

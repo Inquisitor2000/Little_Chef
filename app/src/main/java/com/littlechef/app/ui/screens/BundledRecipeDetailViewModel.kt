@@ -59,7 +59,7 @@ class BundledRecipeDetailViewModel @Inject constructor(
     private val _allergens = MutableStateFlow<List<com.littlechef.app.domain.model.Allergen>>(emptyList())
     val allergens: StateFlow<List<com.littlechef.app.domain.model.Allergen>> = _allergens
     
-    private val _useDetailedInstructions = MutableStateFlow(true)
+    private val _useDetailedInstructions = MutableStateFlow(false)
     val useDetailedInstructions: StateFlow<Boolean> = _useDetailedInstructions
 
     private val _ingredientCheckResult = MutableStateFlow<CheckRecipeIngredientsUseCase.Result?>(null)

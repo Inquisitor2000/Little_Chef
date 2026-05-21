@@ -15,8 +15,8 @@ val md_theme_dark_onBackground = Color(0xFFF5F5F5)
 val md_theme_dark_onBackgroundVariant = Color(0xFFF0F0F0)
 
 // Default accent color (will be customizable by user)
-val default_accent_light = Color(0xFFD68C45) // Toasted Almond (light mode default)
-val default_accent_dark = Color(0xFF5398be) // Blue Bell (dark mode default)
+val default_accent_light = Color(0xFFCB6565) // Lobster Pink (light mode default)
+val default_accent_dark = Color(0xFF80A1D4) // Wisteria Blue (dark mode default)
 
 // Error/Delete color (consistent across themes)
 val error_color = Color(0xFFD32F2F) // Red for delete/error actions

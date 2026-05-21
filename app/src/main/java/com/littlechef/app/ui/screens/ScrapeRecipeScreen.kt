@@ -1004,7 +1004,7 @@ private fun EditIngredientDialog(
                                     ) {
                                         Text(
                                             text = translateUnit(selectedUnit),
-                                            style = MaterialTheme.typography.bodyMedium,
+                                            style = MaterialTheme.typography.bodyLarge,
                                             fontWeight = FontWeight.Bold,
                                             color = MaterialTheme.colorScheme.onPrimary
                                         )
@@ -1587,7 +1587,7 @@ internal fun EditManualIngredientDialog(
                         )
                         Text(
                             text = stringResource(R.string.add_recipe_mark_as_essential),
-                            style = MaterialTheme.typography.bodyMedium
+                            style = MaterialTheme.typography.bodyLarge
                         )
                     }
                     Switch(
@@ -1611,7 +1611,7 @@ internal fun EditManualIngredientDialog(
                     Column(modifier = Modifier.fillMaxWidth()) {
                         Text(
                             text = stringResource(R.string.add_recipe_unit),
-                            style = MaterialTheme.typography.bodySmall,
+                            style = MaterialTheme.typography.bodyMedium,
                             color = MaterialTheme.colorScheme.onSurfaceVariant,
                             modifier = Modifier.padding(bottom = 4.dp)
                         )
@@ -1636,7 +1636,7 @@ internal fun EditManualIngredientDialog(
                                 ) {
                                     Text(
                                         text = unit,
-                                        style = MaterialTheme.typography.bodyMedium
+                                        style = MaterialTheme.typography.bodyLarge
                                     )
                                 }
                             }

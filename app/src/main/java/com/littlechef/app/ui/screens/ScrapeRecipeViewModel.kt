@@ -27,7 +27,7 @@ sealed interface ScrapeRecipeUiState {
         val mealType: com.littlechef.app.domain.model.MealType? = null,
         val dishCategory: com.littlechef.app.domain.model.DishCategory? = null,
         val dishImage: Bitmap? = null,
-        val useDetailedInstructions: Boolean = true
+        val useDetailedInstructions: Boolean = false
     ) : ScrapeRecipeUiState
     data object Saved : ScrapeRecipeUiState
     data class Error(val message: String) : ScrapeRecipeUiState

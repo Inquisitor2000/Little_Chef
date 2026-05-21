@@ -56,11 +56,11 @@ class OnboardingPreferences @Inject constructor(
     }
     
     val accentColorLight: Flow<Long> = context.dataStore.data.map { preferences ->
-        preferences[ACCENT_COLOR_LIGHT]?.toLongOrNull() ?: 0xFFD68C45 // Toasted Almond default
+        preferences[ACCENT_COLOR_LIGHT]?.toLongOrNull() ?: 0xFFCB6565 // Lobster Pink default
     }
     
     val accentColorDark: Flow<Long> = context.dataStore.data.map { preferences ->
-        preferences[ACCENT_COLOR_DARK]?.toLongOrNull() ?: 0xFF5398be // Blue Bell default
+        preferences[ACCENT_COLOR_DARK]?.toLongOrNull() ?: 0xFF80A1D4 // Wisteria Blue default
     }
     
     val defaultServingSize: Flow<Int> = context.dataStore.data.map { preferences ->

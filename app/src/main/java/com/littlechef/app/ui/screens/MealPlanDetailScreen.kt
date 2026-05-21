@@ -1044,7 +1044,7 @@ fun MealPlanDetailScreen(
                         R.string.meal_plan_start_cooking_message,
                         mealPlan?.meal?.name ?: ""
                     ),
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodyLarge,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -1114,7 +1114,7 @@ fun MealPlanDetailScreen(
                         R.string.meal_plan_complete_cooking_message,
                         mealPlan?.meal?.name ?: ""
                     ),
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodyLarge,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
@@ -1184,7 +1184,7 @@ fun MealPlanDetailScreen(
                         else R.string.meal_plan_abort_cooking_message,
                         mealPlan?.meal?.name ?: ""
                     ),
-                    style = MaterialTheme.typography.bodyMedium,
+                    style = MaterialTheme.typography.bodyLarge,
                     textAlign = TextAlign.Center,
                     modifier = Modifier.fillMaxWidth()
                 )
