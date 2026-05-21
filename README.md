@@ -4,6 +4,8 @@ AI-powered meal planning app for Android. Plan meals, scale servings, track pant
 
 **Stack:** Kotlin · Jetpack Compose · Material 3 · Clean Architecture + MVVM · Dagger Hilt · Room · DataStore
 
+🌐 **Website:** [inquisitor2000.github.io/Little_Chef](https://inquisitor2000.github.io/Little_Chef/) — landing page with screenshots, privacy policy & terms
+
 ## Tech Stack
 
 | Layer | Technology |
