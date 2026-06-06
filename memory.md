@@ -794,4 +794,28 @@ Located in `domain/model/NonDeductibleIngredients.kt`. `isNonDeductibleByName()`
 - All values per 100g; `pieceG` converts pcs to grams
 - 365 entries: 84 DLC + 266 bundled
 
-**Last Updated**: May 21, 2026
+---
+
+## Pending Work (Findings from 2026-06-06 Deep Analysis)
+
+### P0 — Before Play Store
+- **#1 Room migration strategy** — add `Migration` objects, remove `fallbackToDestructiveMigration()` (HIGH data loss risk)
+- **#2 Add Crashlytics** — add `firebase-crashlytics-ktx` dep + mapping upload. Already on Firebase BOM. (~30min)
+
+### P1 — Quick Wins
+- **#6 Encrypt API key** — migrate OpenAI key from plaintext DataStore to `EncryptedSharedPreferences` (androidx.security:security-crypto). Combined with #10.
+- **#10 Fix allowBackup** — set `android:allowBackup="false"` in manifest (or exclude DataStore from backup_rules.xml). API key backup leak.
+- **#9 Add shrinkResources** — add `shrinkResources = true` to release build. Saves ~1-2MB APK. One line.
+
+### P2 — Low Effort
+- **#8 Fix BillingManager leak** — call `billingClient?.endConnection()` before reassigning in `onBillingServiceDisconnected()` (~1 line)
+- **#4 Extract prompts to assets** — move ~310 lines of OpenAI prompts from `OpenAiService.kt` to `assets/prompts/`. Better DX.
+- **#7 Clean ~50 Kotlin warnings** — batch pass: unused params, shadowed names, dead code. Check PlanScreen navigation gap.
+
+### P3 — Plan Later
+- **#3 Kotlin 1.9.21→2.1.x + Compose BOM upgrade** — non-trivial (KSP→built-in compiler, Hilt 2.50+, Room 2.6.1+). Budget 1-2 days.
+- **#5 Split AddIngredientDrawer.kt** — 1260-line file. Split when next feature touches ingredient selection.
+
+---
+
+**Last Updated**: June 6, 2026
