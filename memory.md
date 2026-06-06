@@ -812,6 +812,9 @@ Located in `domain/model/NonDeductibleIngredients.kt`. `isNonDeductibleByName()`
 - **#4 Extract prompts to assets** — move ~310 lines of OpenAI prompts from `OpenAiService.kt` to `assets/prompts/`. Better DX.
 - **#7 Clean ~50 Kotlin warnings** — batch pass: unused params, shadowed names, dead code. Check PlanScreen navigation gap.
 
+### Infrastructure
+- **GitHub Pages** — repo now private. Landing page (`docs/`) needs separate public repo or alternative hosting (Netlify, Vercel). Deploy from there instead.
+
 ### P3 — Plan Later
 - **#3 Kotlin 1.9.21→2.1.x + Compose BOM upgrade** — non-trivial (KSP→built-in compiler, Hilt 2.50+, Room 2.6.1+). Budget 1-2 days.
 - **#5 Split AddIngredientDrawer.kt** — 1260-line file. Split when next feature touches ingredient selection.
