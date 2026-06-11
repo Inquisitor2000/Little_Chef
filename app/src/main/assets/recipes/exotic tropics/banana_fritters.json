@@ -1,0 +1,75 @@
+{
+  "id": "banana_fritters",
+  "name": "Banana Fritters",
+  "instructions": "1. Peel the bananas and mash them in a bowl with a fork until smooth but with some small chunks remaining.\n\n2. In a separate bowl, mix the flour, sugar, baking powder, cinnamon, and salt.\n\n3. Add the dry ingredients to the mashed bananas. Pour in the milk and vanilla extract. Stir until just combined. Do not overmix.\n\n4. Heat oil in a deep pan over medium heat (about 175°C / 350°F).\n\n5. Drop spoonfuls of batter into the hot oil, about 2 tablespoons each. Flatten slightly with the back of the spoon.\n\n6. Fry for 2-3 minutes per side until golden brown and cooked through.\n\n7. Drain on paper towels. Dust with powdered sugar or drizzle with honey and serve warm. Great with a scoop of coconut ice cream.",
+  "simpleInstructions": "1. Mash bananas in a bowl.\n\n2. Mix in flour, sugar, baking powder, cinnamon, salt.\n\n3. Add milk and vanilla, stir to combine.\n\n4. Drop spoonfuls into hot oil.\n\n5. Fry 2-3 minutes per side until golden.\n\n6. Dust with powdered sugar and serve warm.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 15,
+  "servings": 6,
+  "cuisine": "Exotic Tropics",
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Banana",
+      "quantity": 320,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 4.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/banana_fritters.webp"
+}

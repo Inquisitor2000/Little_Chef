@@ -5,20 +5,34 @@ import com.littlechef.app.R
 
 /**
  * Represents different cuisine types for meal categorization.
- * 
+ *
  * @param displayName The display name of the cuisine
  * @param iconRes The drawable resource for the cuisine icon
  * @param description A brief description of the cuisine
- * @param isDLC Whether this cuisine is part of a DLC pack
- * @param assetPackName The name of the asset pack module (for DLC cuisines)
  */
 enum class Cuisine(
     val displayName: String,
     @DrawableRes val iconRes: Int,
-    val description: String,
-    val isDLC: Boolean = false,
-    val assetPackName: String? = null
+    val description: String
 ) {
+    // Premium cuisines — always at top
+    TWO_FAST_TWO_HUNGRY(
+        displayName = "Two Fast Two Hungry",
+        iconRes = R.drawable.ic_sub_cereals,
+        description = "Quick meals when you are in a rush"
+    ),
+    EASTERN_TRADITIONAL(
+        displayName = "Eastern Traditional",
+        iconRes = R.drawable.ic_sub_squash,
+        description = "Traditional Eastern European dishes"
+    ),
+    EXOTIC_TROPICS(
+        displayName = "Exotic Tropics",
+        iconRes = R.drawable.ic_sub_tropical,
+        description = "Vibrant tropical flavors"
+    ),
+
+    // Country-based cuisines
     ITALIAN(
         displayName = "Italian",
         iconRes = R.drawable.ic_sub_pasta,
@@ -44,6 +58,8 @@ enum class Cuisine(
         iconRes = R.drawable.ic_sub_bars_cookies,
         description = "Classic & refined dishes"
     ),
+
+    // Meal type cuisines
     BREAD_BAKERY(
         displayName = "Bread & Bakery",
         iconRes = R.drawable.ic_sub_bread,
@@ -68,33 +84,13 @@ enum class Cuisine(
         displayName = "Desserts & Sweets",
         iconRes = R.drawable.ic_sub_chocolate_candy,
         description = "Cakes, cookies & sweet treats"
-    ),
-    
-    // DLC Cuisines
-    TWO_FAST_TWO_HUNGRY(
-        displayName = "Two Fast Two Hungry",
-        iconRes = R.drawable.ic_sub_cereals,
-        description = "Quick meals when you are in a rush",
-        isDLC = true,
-        assetPackName = "fast_hungry_pack"
-    ),
-    EASTERN_TRADITIONAL(
-        displayName = "Eastern Traditional",
-        iconRes = R.drawable.ic_sub_squash,
-        description = "Traditional Eastern European dishes",
-        isDLC = true,
-        assetPackName = "eastern_traditional_pack"
-    ),
-    EXOTIC_TROPICS(
-        displayName = "Exotic Tropics",
-        iconRes = R.drawable.ic_sub_tropical,
-        description = "Vibrant tropical flavors",
-        isDLC = true,
-        assetPackName = "exotic_tropics_pack"
     );
 
     fun getLocalizedName(context: android.content.Context): String {
         return when (this) {
+            TWO_FAST_TWO_HUNGRY -> context.getString(com.littlechef.app.R.string.cuisine_2fast_2hungry)
+            EASTERN_TRADITIONAL -> context.getString(com.littlechef.app.R.string.cuisine_eastern_traditional)
+            EXOTIC_TROPICS -> context.getString(com.littlechef.app.R.string.cuisine_exotic_tropics)
             ITALIAN -> context.getString(com.littlechef.app.R.string.cuisine_italian)
             MEXICAN -> context.getString(com.littlechef.app.R.string.cuisine_mexican)
             ASIAN -> context.getString(com.littlechef.app.R.string.cuisine_asian)
@@ -105,14 +101,14 @@ enum class Cuisine(
             VEGETARIAN_VEGAN -> context.getString(com.littlechef.app.R.string.cuisine_vegetarian_vegan)
             MEAT_DISHES -> context.getString(com.littlechef.app.R.string.cuisine_meat_dishes)
             DESSERTS_SWEETS -> context.getString(com.littlechef.app.R.string.cuisine_desserts_sweets)
-            TWO_FAST_TWO_HUNGRY -> context.getString(com.littlechef.app.R.string.cuisine_2fast_2hungry)
-            EASTERN_TRADITIONAL -> context.getString(com.littlechef.app.R.string.cuisine_eastern_traditional)
-            EXOTIC_TROPICS -> context.getString(com.littlechef.app.R.string.cuisine_exotic_tropics)
         }
     }
 
     fun getLocalizedDescription(context: android.content.Context): String {
         return when (this) {
+            TWO_FAST_TWO_HUNGRY -> context.getString(com.littlechef.app.R.string.cuisine_2fast_2hungry_desc)
+            EASTERN_TRADITIONAL -> context.getString(com.littlechef.app.R.string.cuisine_eastern_traditional_desc)
+            EXOTIC_TROPICS -> context.getString(com.littlechef.app.R.string.cuisine_exotic_tropics_desc)
             ITALIAN -> context.getString(com.littlechef.app.R.string.cuisine_italian_desc)
             MEXICAN -> context.getString(com.littlechef.app.R.string.cuisine_mexican_desc)
             ASIAN -> context.getString(com.littlechef.app.R.string.cuisine_asian_desc)
@@ -123,9 +119,6 @@ enum class Cuisine(
             VEGETARIAN_VEGAN -> context.getString(com.littlechef.app.R.string.cuisine_vegetarian_vegan_desc)
             MEAT_DISHES -> context.getString(com.littlechef.app.R.string.cuisine_meat_dishes_desc)
             DESSERTS_SWEETS -> context.getString(com.littlechef.app.R.string.cuisine_desserts_sweets_desc)
-            TWO_FAST_TWO_HUNGRY -> context.getString(com.littlechef.app.R.string.cuisine_2fast_2hungry_desc)
-            EASTERN_TRADITIONAL -> context.getString(com.littlechef.app.R.string.cuisine_eastern_traditional_desc)
-            EXOTIC_TROPICS -> context.getString(com.littlechef.app.R.string.cuisine_exotic_tropics_desc)
         }
     }
 

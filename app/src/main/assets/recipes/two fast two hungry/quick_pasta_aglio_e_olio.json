@@ -1,0 +1,51 @@
+{
+  "id": "quick_pasta_aglio_e_olio",
+  "name": "Pasta Aglio e Olio",
+  "instructions": "1. Bring a large pot of salted water to a rolling boil. Add spaghetti and cook according to package directions until al dente.\n\n2. While pasta cooks, slice the garlic thinly. Heat olive oil in a large skillet over medium-low heat.\n\n3. Add sliced garlic to the oil. Cook gently for 2-3 minutes until fragrant and lightly golden - don't let it burn.\n\n4. Add red pepper flakes and oregano to the skillet. Stir for 30 seconds.\n\n5. When pasta is done, reserve 60ml of pasta water, then drain the rest.\n\n6. Add hot pasta to the skillet with garlic oil. Toss well to coat, adding reserved pasta water a splash at a time.\n\n7. Season with salt to taste. Serve immediately.",
+  "simpleInstructions": "1. Cook spaghetti in boiling salted water until al dente.\n\n2. Meanwhile, sauté sliced garlic gently in olive oil until golden.\n\n3. Add red pepper flakes and oregano, stir 30 seconds.\n\n4. Drain pasta, reserving some cooking water.\n\n5. Toss pasta with garlic oil, adding reserved water as needed.\n\n6. Season with salt and serve immediately.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 10,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "PASTA",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/quick_pasta_aglio_e_olio.webp",
+  "ingredients": [
+    {
+      "name": "Spaghetti",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 45,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Garlic",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Red Pepper Flakes",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Oregano",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

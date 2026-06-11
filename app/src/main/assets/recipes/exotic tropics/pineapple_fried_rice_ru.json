@@ -1,0 +1,87 @@
+{
+  "id": "pineapple_fried_rice",
+  "name": "Жареный рис с ананасом",
+  "instructions": "1. Если используете свежий ананас, разрежьте его пополам, выньте мякоть и нарежьте кубиками. Половинки ананаса можно сохранить для подачи (по желанию).\n\n2. Разогрейте масло в воке или большой сковороде на сильном огне. Добавьте креветки и обжарьте 2 минуты до розового цвета. Отложите.\n\n3. В том же воке добавьте еще немного масла. Быстро обжарьте яйца, разбивая на мелкие кусочки.\n\n4. Добавьте вареный рис, разбивая комочки. Обжаривайте 3-4 минуты.\n\n5. Добавьте ананас, горошек, нарезанную кубиками морковь и соевый соус. Обжаривайте 2 минуты.\n\n6. Верните креветки в вок. Добавьте зеленый лук и все перемешайте.\n\n7. Приправьте солью и белым перцем. Подавайте в половинках ананаса или в миске, украсив кинзой.",
+  "simpleInstructions": "1. Нарежьте ананас кубиками; обжарьте креветки, отложите.\n\n2. Обжарьте яйца в масле.\n\n3. Добавьте рис, обжаривайте 3-4 минуты.\n\n4. Добавьте ананас, овощи и соевый соус.\n\n5. Верните креветки, добавьте зеленый лук.\n\n6. Приправьте и подавайте с кинзой.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 20,
+  "servings": 4,
+  "cuisine": "Exotic Tropics",
+  "mealType": "LUNCH",
+  "dishCategory": "RICE_BOWL",
+  "ingredients": [
+    {
+      "name": "White Rice",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pineapple",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Shrimp",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Peas",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrot",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 45,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cilantro",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/pineapple_fried_rice.webp"
+}

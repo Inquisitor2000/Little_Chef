@@ -1,0 +1,51 @@
+{
+  "id": "speedy_chicken_wrap",
+  "name": "Куриный ролл",
+  "instructions": "1. Нарежьте куриную грудку тонкими полосками. Посолите.\n\n2. Разогрейте оливковое масло на сковороде на средне-сильном огне. Добавьте полоски курицы и готовьте 4-5 минут до золотистого цвета и готовности.\n\n3. Пока курица готовится, натрите сыр чеддер.\n\n4. Слегка разогрейте тортильи на сухой сковороде или в микроволновке 20 секунд, чтобы они стали гибкими.\n\n5. Нанесите слой майонеза на каждую тортилью. Добавьте нарезанную курицу в центр.\n\n6. Сверху положите натертый сыр чеддер.\n\n7. Заверните боковые части тортильи над начинкой, затем сверните снизу вверх, чтобы создать плотный рулет. Разрежьте по диагонали пополам и сразу подавайте.",
+  "simpleInstructions": "1. Нарежьте куриную грудку и посолите.\n\n2. Готовьте курицу на горячей сковороде с оливковым маслом 4-5 минут.\n\n3. Натрите чеддер. Слегка разогрейте тортильи.\n\n4. Нанесите майонез на тортилью, добавьте курицу и сыр.\n\n5. Заверните в рулеты. Разрежьте и подавайте.",
+  "prepTimeMinutes": 3,
+  "cookTimeMinutes": 7,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "CHICKEN",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/speedy_chicken_wrap.webp",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Tortillas",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olive Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

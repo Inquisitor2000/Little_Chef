@@ -16,6 +16,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "FamilyMealPlanner"
 include(":app")
-include(":fast_hungry_pack")
-include(":eastern_traditional_pack")
-include(":exotic_tropics_pack")

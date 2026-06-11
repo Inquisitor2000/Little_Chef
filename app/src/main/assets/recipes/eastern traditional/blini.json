@@ -1,0 +1,57 @@
+{
+  "id": "blini",
+  "name": "Blini",
+  "instructions": "1. Beat the eggs with sugar and salt until frothy.\n\n2. Gradually add flour, alternating with milk, whisking continuously until smooth with no lumps.\n\n3. Fold in the melted butter and mix well. The batter should be thin, like crêpe batter.\n\n4. Heat a non-stick pan over medium heat and lightly grease with butter.\n\n5. Pour a small ladleful of batter and swirl the pan to coat the bottom evenly.\n\n6. Cook for 1-2 minutes until bubbles form on the surface and edges lift. Flip and cook for 30-60 seconds.\n\n7. Serve blini warm with sour cream, caviar, or jam. For the sweet version, dust with powdered sugar and drizzle with honey.",
+  "simpleInstructions": "1. Beat eggs with sugar and salt.\n\n2. Add flour alternating with milk.\n\n3. Fold in melted butter.\n\n4. Pour thin batter into hot pan.\n\n5. Cook 1-2 minutes per side.\n\n6. Serve with sour cream, caviar, or jam.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 250,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 3,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/blini.webp"
+}

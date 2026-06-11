@@ -1,0 +1,69 @@
+{
+  "id": "vareniki",
+  "name": "Вареники (Вареники с вишней)",
+  "instructions": "1. Для теста: Просейте муку с солью. Взбейте яйцо с теплой водой и сметаной. Влейте жидкость в муку и замесите гладкое тесто. Оставьте отдыхать на 30 минут под пленкой.\n\n2. Для начинки: Вымойте вишню и удалите косточки. Смешайте с сахаром и крахмалом.\n\n3. Раскатайте тесто на посыпанной мукой поверхности до толщины 2-3 мм. Вырежьте круги диаметром 8 см.\n\n4. Выложите 3-4 вишни в центр каждого круга. Сложите пополам и плотно защипните края.\n\n5. Варите вареники в кипящей подсоленной воде порциями по 4-5 минут после всплытия.\n\n6. Подавайте теплыми со сметаной и капелькой меда или сахарной пудрой.",
+  "simpleInstructions": "1. Замесите тесто из муки, яйца, сметаны и воды. Дайте отдохнуть.\n\n2. Удалите косточки из вишни, смешайте с сахаром.\n\n3. Раскатайте тесто и вырежьте круги.\n\n4. Наполните вишней и запечатайте.\n\n5. Варите 4-5 минут после всплытия.\n\n6. Подавайте со сметаной и медом.",
+  "prepTimeMinutes": 40,
+  "cookTimeMinutes": 15,
+  "servings": 4,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 350,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cherry",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cornstarch",
+      "quantity": 8,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 120,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/vareniki.webp"
+}

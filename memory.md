@@ -6,7 +6,7 @@ Android meal planning app. Kotlin + Jetpack Compose. Organize recipes, manage pa
 **Package**: `com.littlechef.app`
 **Min SDK**: 27 (Android 8.1), **Target SDK**: 34 (Android 14)
 **App Name**: "Little Chef"
-**Build**: Gradle Kotlin DSL, Kotlin 1.9.21, Compose BOM 2023.10.01, compileSdk 34, Google Services plugin + `google-services.json`
+**Build**: Gradle Kotlin DSL, Kotlin 1.9.21, Compose BOM 2023.10.01, compileSdk 34
 **App Bundle**: `language { enableSplit = false }` — all 3 locales in every APK split
 
 ---
@@ -32,9 +32,7 @@ app/src/main/java/com/littlechef/app/
 - **HTTP Client**: Ktor 2.3.7 (OkHttp engine)
 - **Serialization**: Kotlinx Serialization 1.6.2
 - **Preferences**: DataStore Preferences 1.0.0
-- **Billing**: Google Play Billing 6.1.0
-- **Analytics**: Firebase Analytics (BOM 32.7.0)
-- **Asset Delivery**: Play Asset Delivery 2.2.2
+
 
 ---
 
@@ -67,27 +65,7 @@ NavDestination.AddCustomIngredientForRecipe.createRoute(initialName)
 - `navController.popBackStack()` with inclusive flag for removing intermediate screens
 - Scraped/manual recipe flow navigates to new recipe detail after creation
 
-### Screen View Tracking (Analytics)
-- `NavViewModel.screenNameForRoute(route)` maps routes → analytics screen names
-- `navController.addOnDestinationChangedListener` fires `trackScreenView()` on every navigation (except initial)
-- Tracked screens: plan, meals, groceries, pantry, recipe_detail, cuisine_meals, bundled_recipe, scrape_recipe, manual_recipe, settings, suggestion, ingredient_form, meal_plan_detail
 
----
-
-## Analytics (`data/analytics/AnalyticsService.kt`)
-- `@Singleton` wrapper around Firebase Analytics, no-op safe without `google-services.json`
-- Events tracked:
-  - `onboarding_started`, `onboarding_completed`, `language_selected`
-  - `recipe_scraped` (name, ingredient count, token usage, success/error)
-  - `recipe_created_manual` (name, ingredient count, meal type)
-  - `recipe_viewed`, `cuisine_browsed`, `bundled_recipe_viewed`
-  - `meal_suggestion_viewed`, `substitute_applied` (recipe name, ingredient name)
-- Init: `MealPlannerApp.onCreate()` via `analyticsService.init(this)`
-- DI: `AnalyticsModule` (`@Provides @Singleton`)
-- Google Services plugin + `firebase-bom:32.7.0` + `google-services.json` in `app/`
-- No Firebase UI components — bare `FirebaseAnalytics.logEvent`
-
----
 
 ## State Management
 
@@ -297,7 +275,7 @@ CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
 
 ## Dependency Injection (Hilt)
 
-### 6 Modules (all `SingletonComponent`)
+### 5 Modules (all `SingletonComponent`)
 | Module | Provides |
 |--------|----------|
 | `AppModule` | Coroutine dispatchers, `StringBuilder` |
@@ -305,7 +283,6 @@ CompositionLocalProvider(LocalOverscrollConfiguration provides null) {
 | `RepositoryModule` | `@Binds` all 6 repository interfaces → implementations |
 | `NetworkModule` | Ktor HttpClient, Json serializer |
 | `ImageModule` | Coil ImageLoader |
-| `AnalyticsModule` | `AnalyticsService` — Firebase Analytics wrapper |
 
 ### Hilt Annotations
 - `@HiltAndroidApp` — Application (`MealPlannerApp`)
@@ -507,109 +484,26 @@ Three-tier ingredient matching:
 
 ---
 
-## Asset Packs (DLC)
+## Recipe Assets (All Bundled)
 
-### Cuisine Enum (`domain/model/Cuisine.kt`)
-```kotlin
-enum class Cuisine(
-    val displayName: String,
-    val isDLC: Boolean = false,
-    val assetPackName: String? = null
-) {
-    // ... built-in cuisines ...
-    TWO_FAST_TWO_HUNGRY(
-        displayName = "Two Fast Two Hungry",
-        isDLC = true,
-        assetPackName = "fast_hungry_pack"
-    ),
-    EASTERN_TRADITIONAL(
-        displayName = "Eastern Traditional",
-        isDLC = true,
-        assetPackName = "eastern_traditional_pack"
-    ),
-    EXOTIC_TROPICS(
-        displayName = "Exotic Tropics",
-        isDLC = true,
-        assetPackName = "exotic_tropics_pack"
-    )
-}
-```
+All 230+ recipes (14 cuisines) ship with the app — no in-app purchases, no DLC packs, no asset delivery.
 
-**Important:** Recipe folder name = `cuisine.displayName.lowercase()` (see `BundledRecipeLoader.kt:43`)
+`Cuisine` enum has no `isDLC` or `assetPackName` fields. All recipes are JSON files under `app/src/main/assets/recipes/` organized by cuisine folder.
 
-### Two Fast Two Hungry Pack (`:fast_hungry_pack`)
-- **Asset Pack Name**: `fast_hungry_pack`
-- **Folder**: `two fast two hungry/`
-- **Price**: $0.99
-- **12 Recipes** (each in EN/RO/RU):
-  1. Cheese Omelette (`5_minute_omelette.json`)
-  2. Chicken Stir Fry (`speedy_stir_fry.json`)
-  3. Pasta Aglio e Olio (`quick_pasta_aglio_e_olio.json`)
-  4. Beef Tacos (`10_minute_tacos.json`)
-  5. Egg Fried Rice (`fast_fried_rice.json`)
-  6. Cheese Quesadilla (`express_quesadilla.json`)
-  7. Egg Ramen (`rapid_ramen_bowl.json`)
-  8. Grilled Cheese (`quick_grilled_cheese.json`)
-  9. Chicken Wrap (`speedy_chicken_wrap.json`)
-  10. Coconut Chicken Curry (`15_minute_curry.json`)
-  11. Shrimp Noodles (`fast_noodle_bowl.json`)
-  12. Toast and Egg Scramble (`quick_toast_skillet.json`)
+Recipe folder name = `cuisine.displayName.lowercase()` (see `BundledRecipeLoader.kt:43`)
 
-**String IDs**: `premium_2fast_cheese_omelette`, `premium_2fast_chicken_stir_fry`, etc.
-**Preview Images**: `app/src/main/assets/recipes/images/2fast2hungry/` (accessible before purchase)
+### Recipe List by Cuisine
 
-### Eastern Traditional Pack (`:eastern_traditional_pack`)
-- **Status**: COMPLETE — 12 recipes, 3 languages
-- **Asset Pack Name**: `eastern_traditional_pack`
-- **Folder**: `eastern traditional/`
-- **Price**: $1.49
-- **12 Recipes**:
+#### Two Fast Two Hungry (12 recipes)
+1. Cheese Omelette · Chicken Stir Fry · Pasta Aglio e Olio · Beef Tacos · Egg Fried Rice · Cheese Quesadilla · Egg Ramen · Grilled Cheese · Chicken Wrap · Coconut Chicken Curry · Shrimp Noodles · Toast and Egg Scramble
 
-| # | Recipe | EN File | String ID | Meal | Category |
-|---|--------|---------|-----------|------|----------|
-| 1 | Borscht | `borscht.json` | `premium_recipe_borscht` | DINNER | SOUP |
-| 2 | Pierogi | `pierogi.json` | `premium_recipe_pierogi` | DINNER | MAIN_COURSE |
-| 3 | Golubtsy | `golubtsy.json` | `premium_recipe_golubtsy` | DINNER | MAIN_COURSE |
-| 4 | Beef Stroganoff | `beef_stroganoff.json` | `premium_recipe_stroganoff` | DINNER | MAIN_COURSE |
-| 5 | Pelmeni | `pelmeni.json` | `premium_recipe_pelmeni` | DINNER | MAIN_COURSE |
-| 6 | Kasha | `kasha.json` | `premium_recipe_kasha` | LUNCH | SIDE_DISH |
-| 7 | Shchi | `shchi.json` | `premium_recipe_shchi` | DINNER | SOUP |
-| 8 | Kotleti | `kotleti.json` | `premium_recipe_kotleti` | DINNER | MAIN_COURSE |
-| 9 | Vareniki | `vareniki.json` | `premium_recipe_vareniki` | DESSERT | DESSERT |
-| 10 | Olivier Salad | `olivier_salad.json` | `premium_recipe_olivier` | LUNCH | SALAD |
-| 11 | Blini | `blini.json` | `premium_recipe_blini` | BREAKFAST | MAIN_COURSE |
-| 12 | Solyanka | `solyanka.json` | `premium_recipe_solyanka` | DINNER | SOUP |
+#### Eastern Traditional (12 recipes)
+Borscht · Pierogi · Golubtsy · Beef Stroganoff · Pelmeni · Kasha · Shchi · Kotleti · Vareniki · Olivier Salad · Blini · Solyanka
 
-**String IDs**: `premium_recipe_borscht`–`premium_recipe_solyanka`
-**Preview Images**: `app/src/main/assets/recipes/images/easterntraditional/` — placeholders, replace with real
-
-### Exotic Tropics Pack (`:exotic_tropics_pack`)
-- **Status**: COMPLETE — 12 recipes, 3 languages
-- **Asset Pack Name**: `exotic_tropics_pack`
-- **Folder**: `exotic tropics/`
-- **Price**: $1.49
-- **12 Recipes**:
-
-| # | Recipe | EN File | String ID | Meal | Category |
-|---|--------|---------|-----------|------|----------|
-| 1 | Coconut Curry | `coconut_curry.json` | `premium_recipe_coconut_curry` | DINNER | MAIN_COURSE |
-| 2 | Mango Sticky Rice | `mango_sticky_rice.json` | `premium_recipe_mango_sticky_rice` | DESSERT | DESSERT |
-| 3 | Pineapple Fried Rice | `pineapple_fried_rice.json` | `premium_recipe_pineapple_fried_rice` | LUNCH | RICE_BOWL |
-| 4 | Grilled Plantains | `grilled_plantains.json` | `premium_recipe_plantains` | SNACK | SIDE_DISH |
-| 5 | Papaya Salad | `papaya_salad.json` | `premium_recipe_papaya_salad` | LUNCH | SALAD |
-| 6 | Coconut Rice | `coconut_rice.json` | `premium_recipe_coconut_rice` | LUNCH | SIDE_DISH |
-| 7 | Tuna Poke Bowl | `tuna_poke_bowl.json` | `premium_recipe_tuna_poke` | DINNER | RICE_BOWL |
-| 8 | Mango Lassi | `mango_lassi.json` | `premium_recipe_mango_lassi` | BREAKFAST | BEVERAGE |
-| 9 | Tropical Fruit Salad | `tropical_fruit_salad.json` | `premium_recipe_tropical_fruit_salad` | SNACK | DESSERT |
-| 10 | Coconut Shrimp | `coconut_shrimp.json` | `premium_recipe_coconut_shrimp` | DINNER | SEAFOOD |
-| 11 | Pineapple Salsa | `pineapple_salsa.json` | `premium_recipe_pineapple_salsa` | SNACK | APPETIZER |
-| 12 | Banana Fritters | `banana_fritters.json` | `premium_recipe_banana_fritters` | DESSERT | DESSERT |
-
-**String IDs**: `premium_recipe_coconut_curry`–`premium_recipe_banana_fritters`
-**Preview Images**: `app/src/main/assets/recipes/images/exotictropics/` — placeholders, replace with real
+#### Exotic Tropics (12 recipes)
+Coconut Curry · Mango Sticky Rice · Pineapple Fried Rice · Grilled Plantains · Papaya Salad · Coconut Rice · Tuna Poke Bowl · Mango Lassi · Tropical Fruit Salad · Coconut Shrimp · Pineapple Salsa · Banana Fritters
 
 ### Technical
-- Play Asset Delivery + Google Play Billing
 - JSON schema: `BundledRecipe` + `BundledIngredient` in `BundledRecipeLoader.kt`
 - Valid `mealType`: BREAKFAST, LUNCH, DINNER, SNACK, DESSERT
 - Valid `dishCategory`: PASTA, SALAD, SOUP, MAIN_COURSE, APPETIZER, SIDE_DISH, BREAD, SEAFOOD, CHICKEN, BEEF, PORK, VEGETARIAN, RICE_BOWL, SANDWICH, PIZZA, DESSERT, BEVERAGE, BAKED_DISH
@@ -749,9 +643,6 @@ Located in `domain/model/NonDeductibleIngredients.kt`. `isNonDeductibleByName()`
 - Problem: Fixed `height(140.dp)` on meal plan cards — overflow with long content
 - Fix: `height(140.dp)`→`heightIn(min = 140.dp)`. Row uses `height(IntrinsicSize.Min)`. Image uses `fillMaxHeight()`
 
-### Analytics Module
-- Added: `AnalyticsService` (Firebase Analytics wrapper), events for onboarding, recipe scrape/create/view, screen views, substitutions. DI via `AnalyticsModule`. Init in `MealPlannerApp.onCreate()`. Google Services plugin + BOM 32.7.0
-
 ### Landing Page + GitHub Pages
 - Added: `docs/` static site (HTML + 7 screenshots + privacy/terms). GitHub Actions workflow deploys to Pages on push to main
 
@@ -792,33 +683,31 @@ Located in `domain/model/NonDeductibleIngredients.kt`. `isNonDeductibleByName()`
 ```
 - `pieceG` optional — for pcs-unit ingredients (eggs: 50g, egg whites: 33g, etc.)
 - All values per 100g; `pieceG` converts pcs to grams
-- 365 entries: 84 DLC + 266 bundled
+- 365 entries
 
 ---
 
-## Pending Work (Findings from 2026-06-06 Deep Analysis)
+## Pending Work
 
 ### P0 — Before Play Store
-- **#1 Room migration strategy** — add `Migration` objects, remove `fallbackToDestructiveMigration()` (HIGH data loss risk)
-- **#2 Add Crashlytics** — add `firebase-crashlytics-ktx` dep + mapping upload. Already on Firebase BOM. (~30min)
+- **Room migration strategy** — add `Migration` objects, remove `fallbackToDestructiveMigration()` (HIGH data loss risk)
 
 ### P1 — Quick Wins
-- **#6 Encrypt API key** — migrate OpenAI key from plaintext DataStore to `EncryptedSharedPreferences` (androidx.security:security-crypto). Combined with #10.
-- **#10 Fix allowBackup** — set `android:allowBackup="false"` in manifest (or exclude DataStore from backup_rules.xml). API key backup leak.
-- **#9 Add shrinkResources** — add `shrinkResources = true` to release build. Saves ~1-2MB APK. One line.
+- **Encrypt API key** — migrate OpenAI key from plaintext DataStore to `EncryptedSharedPreferences` (androidx.security:security-crypto). Combined with allowBackup.
+- **Fix allowBackup** — set `android:allowBackup="false"` in manifest (or exclude DataStore from backup_rules.xml). API key backup leak.
+- **Add shrinkResources** — add `shrinkResources = true` to release build. Saves ~1-2MB APK. One line.
 
 ### P2 — Low Effort
-- **#8 Fix BillingManager leak** — call `billingClient?.endConnection()` before reassigning in `onBillingServiceDisconnected()` (~1 line)
-- **#4 Extract prompts to assets** — move ~310 lines of OpenAI prompts from `OpenAiService.kt` to `assets/prompts/`. Better DX.
-- **#7 Clean ~50 Kotlin warnings** — batch pass: unused params, shadowed names, dead code. Check PlanScreen navigation gap.
+- **Extract prompts to assets** — move ~310 lines of OpenAI prompts from `OpenAiService.kt` to `assets/prompts/`. Better DX.
+- **Clean ~50 Kotlin warnings** — batch pass: unused params, shadowed names, dead code. Check PlanScreen navigation gap.
 
 ### Infrastructure
 - **GitHub Pages** — repo now private. Landing page (`docs/`) needs separate public repo or alternative hosting (Netlify, Vercel). Deploy from there instead.
 
 ### P3 — Plan Later
-- **#3 Kotlin 1.9.21→2.1.x + Compose BOM upgrade** — non-trivial (KSP→built-in compiler, Hilt 2.50+, Room 2.6.1+). Budget 1-2 days.
-- **#5 Split AddIngredientDrawer.kt** — 1260-line file. Split when next feature touches ingredient selection.
+- **Kotlin 1.9.21→2.1.x + Compose BOM upgrade** — non-trivial (KSP→built-in compiler, Hilt 2.50+, Room 2.6.1+). Budget 1-2 days.
+- **Split AddIngredientDrawer.kt** — 1260-line file. Split when next feature touches ingredient selection.
 
 ---
 
-**Last Updated**: June 6, 2026
+**Last Updated**: June 11, 2026

@@ -1,0 +1,75 @@
+{
+  "id": "kotleti",
+  "name": "Котлеты (Домашние котлеты)",
+  "instructions": "1. Смешайте мясной фарш с мелко нарезанным луком, измельченным чесноком, размоченным и отжатым хлебом, яйцом, солью и перцем.\n\n2. Вымешивайте фарш руками 3-4 минуты, пока он не станет липким и однородным.\n\n3. Накройте и уберите в холодильник на 20 минут для уплотнения.\n\n4. Сформируйте овальные, слегка приплюснутые котлеты толщиной около 2 см.\n\n5. Обваляйте каждую котлету в панировочных сухарях, равномерно покрывая.\n\n6. В большой сковороде разогрейте достаточно масла, чтобы покрыть дно. Жарьте котлеты по 4-5 минут с каждой стороны до золотистой корочки и полной готовности.\n\n7. Подавайте горячими с картофельным пюре, гречкой или овощами. Сметана отлично дополняет блюдо.",
+  "simpleInstructions": "1. Смешайте все ингредиенты для котлет.\n\n2. Вымесите и уберите в холодильник на 20 минут.\n\n3. Сформируйте овальные котлеты.\n\n4. Обваляйте в сухарях.\n\n5. Жарьте по 4-5 минут с каждой стороны.\n\n6. Подавайте с пюре или гречкой.",
+  "prepTimeMinutes": 25,
+  "cookTimeMinutes": 15,
+  "servings": 4,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Ground Beef",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Ground Pork",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 12,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Bread",
+      "quantity": 2,
+      "unit": "slices",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Breadcrumbs",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 6,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/kotleti.webp"
+}

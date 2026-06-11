@@ -18,17 +18,13 @@
 
 ---
 
-## 2. Crash Reporting — WORTH FIXING
+## 2. Crash Reporting — SUPERSEDED
 
-| Status | Impact | Effort |
-|--------|--------|--------|
-| **REAL** — no crash reporting at all | **HIGH** — crashes invisible | Low |
+| Status | Impact |
+|--------|--------|
+| **RESOLVED** — Firebase Analytics + Crashlytics removed entirely (June 11, 2026) | No crash reporting — intentional, no Firebase deps at all |
 
-**Evidence**: Grep for `crashlytics`, `sentry`, `bugsnag`, `timber` — zero matches. Only Firebase Analytics present (events only, no crash reporting). Analytics BOM 32.7.0 already in deps — Crashlytics is a single dependency add.
-
-**False-positive check**: Could argue Analytics logEvent captures some errors, but it's not a crash reporter. Uncaught exceptions, ANRs, native crashes are invisible. With minify+R8 enabled, stack traces from Play Console are deobfuscated but require user-submitted reports (Play Store only). Dev builds have no reporting.
-
-**Verdict**: ✅ Worth fixing — add `firebase-crashlytics-ktx`. Already on Firebase BOM, so it's one line + upload mapping file in build.gradle.
+**Note**: Firebase + all analytics code was removed from the app. App has no crash reporting. Acceptable for current scope.
 
 ---
 
@@ -119,20 +115,6 @@ The upgrade path is non-trivial: Kotlin 1.9→2.0+ requires updating all KSP plu
 
 ---
 
-## 8. Bonus Finding — BillingManager Reconnection Loop
-
-| Status | Impact | Effort |
-|--------|--------|--------|
-| **REAL** — potential leak | **LOW** — edge case | Low |
-
-**Evidence**: `BillingManager.kt:53-57` — `onBillingServiceDisconnected()` calls `initializeBillingClient()` which creates a new `BillingClient` but does NOT end the old one. The old client is replaced in the `billingClient` var and becomes GC-ineligible (still has listeners). If Billing service disconnects repeatedly (low signal, Play Store updates), clients accumulate.
-
-**False-positive nuance**: In practice, `onBillingServiceDisconnected()` fires rarely (once per app session at most). The old client tends to get GC'd eventually since nothing holds a strong reference. The `endConnection()` method exists but is only callable externally.
-
-**Verdict**: ✅ Worth fixing — call `billingClient?.endConnection()` before reassigning. One-line fix.
-
----
-
 ## 9. Bonus Finding — No `shrinkResources` in Release Build
 
 | Status | Impact | Effort |
@@ -165,18 +147,15 @@ The upgrade path is non-trivial: Kotlin 1.9→2.0+ requires updating all KSP plu
 
 | Priority | Finding | Impact | Effort | Quick Win? |
 |----------|---------|--------|--------|------------|
-| **P0** | #1 Room migration strategy | HIGH | Med | ⚠️ Before Play Store |
-| **P0** | #2 Add Crashlytics | HIGH | Low | ✅ 1 line + gradle |
-| **P1** | #6 Encrypt API key | MED | Med | ✅ |
-| **P1** | #10 Fix allowBackup | MED | Low | ✅ 1 attribute |
-| **P1** | #9 Add shrinkResources | LOW | Low | ✅ 1 line |
-| **P2** | #8 BillingManager leak fix | LOW | Low | ✅ 1 line |
-| **P2** | #4 Extract prompts to assets | LOW | Low | ✅ |
-| **P2** | #7 Clean Kotlin warnings | LOW-MED | Med | ⚠️ Check PlanScreen nav |
-| **P3** | #3 Kotlin/Compose upgrade | MED | High | Schedule later |
-| **P3** | #5 Split AddIngredientDrawer | LOW | Med | On next feature touch |
+| **P0** | Room migration strategy | HIGH | Med | ⚠️ Before Play Store |
+| **P1** | Encrypt API key | MED | Med | ✅ |
+| **P1** | Fix allowBackup | MED | Low | ✅ 1 attribute |
+| **P1** | Add shrinkResources | LOW | Low | ✅ 1 line |
+| **P2** | Extract prompts to assets | LOW | Low | ✅ |
+| **P2** | Clean Kotlin warnings | LOW-MED | Med | ⚠️ Check PlanScreen nav |
+| **P3** | Kotlin/Compose upgrade | MED | High | Schedule later |
+| **P3** | Split AddIngredientDrawer | LOW | Med | On next feature touch |
 
-**Top 3 quick wins** (can do in <30min):
-1. Add Crashlytics dependency + upload mapping
-2. Add `shrinkResources = true` to release build
-3. Fix `allowBackup` to `false`
+**Superseded items** (removed June 11, 2026):
+- #2 Crashlytics — Firebase/Analytics removed entirely
+- #8 BillingManager leak — Google Play Billing removed entirely, all recipes bundled free

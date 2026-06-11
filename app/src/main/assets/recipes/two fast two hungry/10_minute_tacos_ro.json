@@ -1,0 +1,57 @@
+{
+  "id": "10_minute_tacos",
+  "name": "Tacos cu Vită",
+  "instructions": "1. Încălziți tigaia pe foc mediu-mare. Adăugați carnea tocată de vită și gătiți 4-5 minute, despărțind-o cu o lingură până se rumenește.\n\n2. Scurgeți grăsimea în exces. Adăugați condiment pentru taco și 60ml apă. Amestecați și gătiți 2-3 minute până când sosul se îngroașă.\n\n3. În timp ce carnea se gătește, încălziți tortilele într-o tigaie uscată sau la microunde 20 secunde.\n\n4. Pregătiți garniturile: tăiați salata, tăiați roșiile cubulețe, răsuciți brânza.\n\n5. Asamblați: Puneți carnea condimentată pe fiecare tortilă încălzită.\n\n6. Acoperiți cu brânză, salată și roșii. Serviți imediat.",
+  "simpleInstructions": "1. Gătiți carnea tocată de vită în tigaie până se rumenește, 4-5 minute.\n\n2. Scurgeți grăsimea, adăugați condiment și apă, gătiți 2-3 minute.\n\n3. Încălziți tortilele scurt.\n\n4. Pregătiți garniturile: tăiați salata, roșiile, răsuciți brânza.\n\n5. Puneți carnea pe tortile, acoperiți cu brânză, salată, roșii.\n\n6. Serviți imediat.",
+  "prepTimeMinutes": 4,
+  "cookTimeMinutes": 6,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "BEEF",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/10_minute_tacos.webp",
+  "ingredients": [
+    {
+      "name": "Ground Beef",
+      "quantity": 250,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Tortillas",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Taco Seasoning",
+      "quantity": 8,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lettuce",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

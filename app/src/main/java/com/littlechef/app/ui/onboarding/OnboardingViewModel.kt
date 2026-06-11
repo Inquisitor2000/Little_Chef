@@ -6,7 +6,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.littlechef.app.data.analytics.AnalyticsService
 import com.littlechef.app.data.preferences.LocaleManager
 import com.littlechef.app.data.preferences.OnboardingPreferences
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -38,8 +37,7 @@ data class OnboardingState(
 @HiltViewModel
 class OnboardingViewModel @Inject constructor(
     private val onboardingPreferences: OnboardingPreferences,
-    private val localeManager: LocaleManager,
-    private val analyticsService: AnalyticsService
+    private val localeManager: LocaleManager
 ) : ViewModel() {
 
     companion object {
@@ -67,12 +65,9 @@ class OnboardingViewModel @Inject constructor(
             ) 
         }
         
-        analyticsService.trackLanguageSelected(languageCode)
-        
         // Do I/O work in background
         viewModelScope.launch {
             localeManager.setLanguage(languageCode)
-            analyticsService.setUserLanguage(languageCode)
             
             val locale = Locale(languageCode)
             Locale.setDefault(locale)
@@ -85,8 +80,6 @@ class OnboardingViewModel @Inject constructor(
             it.copy(
                 currentStep = when (it.currentStep) {
                     OnboardingStep.LanguageSelection -> {
-                        // Onboarding officially started — user chose language and pressed continue
-                        analyticsService.trackOnboardingStarted(it.selectedLanguage)
                         OnboardingStep.Welcome
                     }
                     OnboardingStep.Welcome -> OnboardingStep.ServingSize
@@ -116,17 +109,6 @@ class OnboardingViewModel @Inject constructor(
                 // No recreation needed, complete immediately
                 onboardingPreferences.setOnboardingCompleted()
             }
-            
-            // Track onboarding completion
-            val state = _state.value
-            analyticsService.trackOnboardingCompleted(
-                selectedLanguage = state.selectedLanguage,
-                servingSize = state.selectedServingSize,
-                accentColorLight = "#D68C45",  // Default — user can change later via settings
-                accentColorDark = "#5398be",
-                appFont = "Roboto Medium",
-                textScale = 1.0f
-            )
             
             // Small delay to ensure preferences are written
             delay(100)

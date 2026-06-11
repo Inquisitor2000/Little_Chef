@@ -4,7 +4,22 @@ AI-powered meal planning app for Android. Plan meals, scale servings, track pant
 
 **Stack:** Kotlin · Jetpack Compose · Material 3 · Clean Architecture + MVVM · Dagger Hilt · Room · DataStore
 
-🌐 **Website:** [inquisitor2000.github.io/Little_Chef](https://inquisitor2000.github.io/Little_Chef/) — landing page with screenshots, privacy policy & terms
+🌐 **Website:** [inquisitor2000.github.io/Little_Chef](https://inquisitor2000.github.io/Little_Chef/) — landing page, privacy policy & terms
+
+## Screenshots
+
+<table>
+  <tr>
+    <td><img src="Screenshots/Screenshot_20260611_215712.png" width="200"/></td>
+    <td><img src="Screenshots/Screenshot_20260611_215718.png" width="200"/></td>
+    <td><img src="Screenshots/Screenshot_20260611_215722.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="Screenshots/Screenshot_20260611_215736.png" width="200"/></td>
+    <td><img src="Screenshots/Screenshot_20260611_215828.png" width="200"/></td>
+    <td><img src="Screenshots/Screenshot_20260611_215844.png" width="200"/></td>
+  </tr>
+</table>
 
 ## Tech Stack
 
@@ -22,9 +37,8 @@ AI-powered meal planning app for Android. Plan meals, scale servings, track pant
 | Serialization | Kotlinx Serialization 1.6.2 |
 | Fonts | Google Fonts via Compose |
 | Tests | Kotest 5.8.0 + Robolectric 4.11.1 + MockK 1.13.8 |
-| DLC | Google Play Asset Delivery 2.2.2 + Billing 6.1.0 |
 
-**Build:** Kotlin 1.9.21 · AGP 8.2.2 · Min SDK 26 · Target SDK 34 · JVM 17
+**Build:** Kotlin 1.9.21 · AGP 8.2.2 · Min SDK 27 · Target SDK 34 · JVM 17
 
 ## Architecture
 
@@ -47,7 +61,6 @@ com.littlechef.app/
 │   ├── theme/          # Material 3 theme, colors, typography
 │   └── util/           # QuantityStepper, formatting, haptics
 ├── di/                 # Hilt modules (5 modules)
-├── billing/            # Google Play Billing integration
 └── utils/              # App-level utilities
 ```
 
@@ -63,10 +76,10 @@ Relationships:
 
 ## Key Features
 
-### Recipe Library — 200 Bundled Recipes
-- 11 cuisines (Asian, Italian, Mexican, French, Mediterranean, etc.)
+### Recipe Library — 230+ Bundled Recipes
+- 14 cuisines (Asian, Italian, Mexican, French, Mediterranean, Eastern Traditional, Exotic Tropics, Two Fast Two Hungry, etc.)
 - JSON-based recipe bundles loaded from assets
-- **3 DLC packs** delivered via Google Play Asset Delivery — 36 premium recipes across Eastern Traditional, Exotic Tropics, and 2 Fast 2 Hungry cuisines
+- All recipes free and included — no in-app purchases or DLC
 - Each recipe: ingredients with quantities, prep/cook time, servings, instructions + simple instructions
 - Per-recipe nutrition labels (calories, fats, carbs, protein per serving)
 
@@ -133,26 +146,13 @@ Relationships:
 Little_Chef/
 ├── app/                          # Main application module
 │   └── src/main/
-│       ├── assets/
-│       │   ├── recipes/          # 200+ bundled recipes (14 cuisines, incl. 3 DLC packs)
-│       │   └── translations/     # RU/RO ingredient & category translations
-│       ├── java/com/littlechef/app/
-│       └── res/                  # Layouts, strings (en/ru/ro), themes
-├── fast_hungry_pack/              # DLC: 12 quick meals ($0.99)
-├── eastern_traditional_pack/     # DLC: 12 Eastern European recipes ($1.49)
-├── exotic_tropics_pack/          # DLC: 12 tropical recipes ($1.49)
+│   ├── assets/
+│   │   ├── recipes/          # 230+ bundled recipes (14 cuisines)
+│   │   └── translations/     # RU/RO ingredient & category translations
+│   ├── java/com/littlechef/app/
+│   └── res/                  # Layouts, strings (en/ru/ro), themes
 ├── scraper/                      # Recipe scraping scripts
 └── onboard/                      # Onboarding assets
 ```
 
-## DLC Recipe Packs
-
-Delivered via Google Play Asset Delivery + Billing. Each pack is a separate Android asset pack module.
-
-| Pack | Recipes | Price | Status |
-|------|---------|-------|--------|
-| 2 Fast 2 Hungry | 12 quick meals | $0.99 | ✅ Complete |
-| Eastern Traditional | 12 Eastern European classics | $1.49 | ✅ Complete |
-| Exotic Tropics | 12 tropical dishes | $1.49 | ✅ Complete |
-
-All 36 recipes translated in English, Romanian, and Russian. Preview images served from main app assets (accessible before purchase), recipe data delivered on-demand.
+All 230+ recipes are fully translated in English, Romanian, and Russian — no in-app purchases, no downloads, everything included in the app.

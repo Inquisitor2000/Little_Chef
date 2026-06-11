@@ -1,0 +1,69 @@
+{
+  "id": "tropical_fruit_salad",
+  "name": "Салат из тропических фруктов",
+  "instructions": "1. Очистите и нарежьте манго, ананас, папайю и банан кусочками на один укус.\n\n2. Разрежьте питахайю (драконий фрукт) пополам и выньте мякоть ложкой или нарежьте кубиками.\n\n3. Сложите все нарезанные фрукты в большую миску.\n\n4. В маленькой миске смешайте сок лайма с медом для заправки.\n\n5. Залейте заправкой фрукты и аккуратно перемешайте, не раздавливая.\n\n6. Добавьте кокосовую стружку и листья мяты. Еще раз аккуратно перемешайте.\n\n7. Охладите в холодильнике 15 минут перед подачей. Украсьте дополнительной мятой и щепоткой кокосовой стружки.",
+  "simpleInstructions": "1. Нарежьте все тропические фрукты кусочками.\n\n2. Смешайте сок лайма с медом для заправки.\n\n3. Перемешайте фрукты с заправкой.\n\n4. Добавьте кокосовую стружку и мяту.\n\n5. Охладите 15 минут и подавайте.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 0,
+  "servings": 6,
+  "cuisine": "Exotic Tropics",
+  "mealType": "SNACK",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Mango",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pineapple",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Papaya",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Banana",
+      "quantity": 160,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Dragon Fruit",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Honey",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Shredded Coconut",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Mint",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/tropical_fruit_salad.webp"
+}

@@ -1,9 +1,7 @@
 package com.littlechef.app.ui.screens
 
-import android.app.Activity
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.littlechef.app.billing.BillingManager
 import com.littlechef.app.domain.model.Meal
 import com.littlechef.app.domain.repository.MealRepository
 import com.littlechef.app.domain.usecase.CreateMealUseCase
@@ -13,7 +11,6 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -23,8 +20,7 @@ class MealsViewModel @Inject constructor(
     private val translationSystem: com.littlechef.app.data.local.TranslationSystem,
     private val createMealUseCase: CreateMealUseCase,
     private val updateMealUseCase: UpdateMealUseCase,
-    private val deleteMealUseCase: DeleteMealUseCase,
-    private val billingManager: BillingManager
+    private val deleteMealUseCase: DeleteMealUseCase
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<MealsUiState>(MealsUiState.Loading)
@@ -32,8 +28,6 @@ class MealsViewModel @Inject constructor(
 
     private val _searchQuery = MutableStateFlow("")
     val searchQuery: StateFlow<String> = _searchQuery.asStateFlow()
-    
-    val purchaseState = billingManager.purchaseState
 
     init {
         loadMeals()
@@ -65,7 +59,7 @@ class MealsViewModel @Inject constructor(
 
     private fun filterMeals(meals: List<Meal>, query: String): List<Meal> {
         if (query.isBlank()) return meals
-        return meals.filter { 
+        return meals.filter {
             it.name.contains(query, ignoreCase = true)
         }
     }
@@ -128,41 +122,13 @@ class MealsViewModel @Inject constructor(
             loadMeals()
         }
     }
-    
+
     /**
      * Translates a category name to the current language.
      * Used for displaying category names in the UI.
      */
     fun translateCategoryName(categoryName: String): String {
         return translationSystem.translateCategory(categoryName)
-    }
-    
-    /**
-     * Launch DLC purchase flow
-     */
-    fun purchaseDLC(activity: Activity, productId: String) {
-        billingManager.launchPurchaseFlow(activity, productId)
-    }
-    
-    /**
-     * Reset purchase state
-     */
-    fun resetPurchaseState() {
-        billingManager.resetPurchaseState()
-    }
-    
-    /**
-     * Check if a DLC pack is purchased
-     */
-    fun isDLCPurchased(packName: String): kotlinx.coroutines.flow.Flow<Boolean> {
-        return if (packName.isEmpty()) {
-            kotlinx.coroutines.flow.flowOf(false)
-        } else {
-            kotlinx.coroutines.flow.flow {
-                val isPurchased = billingManager.isPurchased(packName)
-                emit(isPurchased)
-            }
-        }
     }
 }
 

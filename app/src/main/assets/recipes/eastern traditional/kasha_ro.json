@@ -1,0 +1,39 @@
+{
+  "id": "kasha",
+  "name": "Casha (Terci de hrișcă)",
+  "instructions": "1. Clătește bine hrișca sub apă rece, ștergând-o ușor între degete. Strecoară bine.\n\n2. Într-o cratiță, topește untul la foc mediu. Adaugă hrișca și prăjește-o 2-3 minute, amestecând constant, până devine aromată.\n\n3. Toarnă apa fierbinte și adaugă sare. Adu la fierbere, apoi reduce focul la minim.\n\n4. Acoperă cratița cu un capac și fierbe la foc mic 15-18 minute până când toată apa este absorbită. Nu amesteca în timpul fierberii.\n\n5. Oprește focul și lasă hrișca să stea acoperită 5 minute.\n\n6. Dă cu furculița să se afâncze și adaugă unt proaspăt. Servește ca garnitură sau ca fel principal cu ceapă prăjită și ciuperci.",
+  "simpleInstructions": "1. Clătește hrișca bine.\n\n2. Prăjește-o în unt 2-3 minute.\n\n3. Adaugă apă și sare, adu la fierbere.\n\n4. Fierbe la foc mic 15-18 minute acoperit.\n\n5. Lasă să stea 5 minute după fierbere.\n\n6. Servește cu unt proaspăt, ca garnitură sau fel principal.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 25,
+  "servings": 4,
+  "cuisine": "Eastern Traditional",
+  "mealType": "LUNCH",
+  "dishCategory": "SIDE_DISH",
+  "ingredients": [
+    {
+      "name": "Buckwheat",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 400,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/kasha.webp"
+}

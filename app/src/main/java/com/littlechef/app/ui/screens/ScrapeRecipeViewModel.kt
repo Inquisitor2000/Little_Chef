@@ -3,7 +3,6 @@ package com.littlechef.app.ui.screens
 import android.graphics.Bitmap
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.littlechef.app.data.analytics.AnalyticsService
 import com.littlechef.app.data.preferences.OnboardingPreferences
 import com.littlechef.app.data.remote.OpenAiService
 import com.littlechef.app.data.remote.ScrapedIngredient
@@ -37,8 +36,7 @@ sealed interface ScrapeRecipeUiState {
 class ScrapeRecipeViewModel @Inject constructor(
     private val openAiService: OpenAiService,
     private val createScrapedMealUseCase: CreateScrapedMealUseCase,
-    private val preferences: OnboardingPreferences,
-    private val analyticsService: com.littlechef.app.data.analytics.AnalyticsService
+    private val preferences: OnboardingPreferences
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow<ScrapeRecipeUiState>(ScrapeRecipeUiState.Initial)
@@ -62,13 +60,6 @@ class ScrapeRecipeViewModel @Inject constructor(
                 is OpenAiService.Result.Success -> {
                     currentRecipe = result.recipe
                     
-                    analyticsService.trackRecipeScraped(
-                        recipeName = result.recipe.name,
-                        ingredientCount = result.recipe.ingredients.size,
-                        tokenUsage = result.tokenUsage?.totalTokens,
-                        success = true
-                    )
-                    
                     // Normalize ingredient units before displaying
                     val normalizedIngredients = result.recipe.ingredients.map { ingredient ->
                         normalizeIngredientUnit(ingredient)
@@ -82,12 +73,6 @@ class ScrapeRecipeViewModel @Inject constructor(
                     )
                 }
                 is OpenAiService.Result.Error -> {
-                    analyticsService.trackRecipeScraped(
-                        recipeName = lastSourceUrl ?: "unknown",
-                        ingredientCount = 0,
-                        success = false,
-                        errorMessage = result.message
-                    )
                     _uiState.value = ScrapeRecipeUiState.Error(result.message)
                 }
             }

@@ -112,6 +112,7 @@ object IngredientCatalog {
         CatalogIngredient("meat_006", "Ground Chicken", "g", "kg", IngredientCategory.MEAT_POULTRY, "Chicken"),
         CatalogIngredient("meat_007", "Chicken Liver", "g", "kg", IngredientCategory.MEAT_POULTRY, "Chicken"),
         // Beef
+        CatalogIngredient("meat_009", "Beef", "g", "kg", IngredientCategory.MEAT_POULTRY, "Beef"),
         CatalogIngredient("meat_010", "Beef Steak", "g", "kg", IngredientCategory.MEAT_POULTRY, "Beef"),
         CatalogIngredient("meat_011", "Ground Beef", "g", "kg", IngredientCategory.MEAT_POULTRY, "Beef"),
         CatalogIngredient("meat_012", "Beef Ribs", "g", "kg", IngredientCategory.MEAT_POULTRY, "Beef"),
@@ -158,7 +159,8 @@ object IngredientCatalog {
         CatalogIngredient("meat_068", "Bulk Pork Sausage", "g", "kg", IngredientCategory.MEAT_POULTRY, "Pork"),
         CatalogIngredient("meat_069", "Chorizo", "g", "kg", IngredientCategory.MEAT_POULTRY, "Processed"),
         CatalogIngredient("meat_070", "Pork Tenderloin", "g", "kg", IngredientCategory.MEAT_POULTRY, "Pork"),
-        CatalogIngredient("meat_071", "Liver Paté", "g", "kg", IngredientCategory.MEAT_POULTRY, "Processed")
+        CatalogIngredient("meat_071", "Liver Paté", "g", "kg", IngredientCategory.MEAT_POULTRY, "Processed"),
+        CatalogIngredient("meat_072", "Smoked Sausage", "g", "kg", IngredientCategory.MEAT_POULTRY, "Processed")
     )
 
 
@@ -300,6 +302,7 @@ object IngredientCatalog {
         CatalogIngredient("veg_072", "Celery", "g", "kg", IngredientCategory.VEGETABLES, "Other"),
         CatalogIngredient("veg_073", "Green Beans", "g", "kg", IngredientCategory.VEGETABLES, "Other"),
         CatalogIngredient("veg_074", "Snap Peas", "g", "kg", IngredientCategory.VEGETABLES, "Other"),
+        CatalogIngredient("veg_085", "Peas", "g", "kg", IngredientCategory.VEGETABLES, "Other"),
         CatalogIngredient("veg_075", "Artichoke", "g", "kg", IngredientCategory.VEGETABLES, "Other"),
         CatalogIngredient("veg_076", "Baby Spinach", "g", "kg", IngredientCategory.VEGETABLES, "Leafy Greens"),
         CatalogIngredient("veg_077", "Cherry Tomatoes", "g", "kg", IngredientCategory.VEGETABLES, "Nightshades"),
@@ -343,6 +346,8 @@ object IngredientCatalog {
         CatalogIngredient("fruit_044", "Kiwi", "g", "kg", IngredientCategory.FRUITS, "Tropical"),
         CatalogIngredient("fruit_045", "Coconut", "g", "kg", IngredientCategory.FRUITS, "Tropical"),
         CatalogIngredient("fruit_046", "Passion Fruit", "g", "kg", IngredientCategory.FRUITS, "Tropical"),
+        CatalogIngredient("fruit_047", "Dragon Fruit", "g", "kg", IngredientCategory.FRUITS, "Tropical"),
+        CatalogIngredient("fruit_048", "Plantains", "g", "kg", IngredientCategory.FRUITS, "Tropical"),
         // Melons
         CatalogIngredient("fruit_050", "Watermelon", "g", "kg", IngredientCategory.FRUITS, "Melons"),
         CatalogIngredient("fruit_051", "Cantaloupe", "g", "kg", IngredientCategory.FRUITS, "Melons"),
@@ -414,7 +419,8 @@ object IngredientCatalog {
         CatalogIngredient("grain_064", "Bolillo Rolls", "g", "kg", IngredientCategory.GRAINS_BREAD, "Bread", listOf(CommonAllergen.GLUTEN)),
         CatalogIngredient("grain_065", "Glutinous Rice Flour", "g", "kg", IngredientCategory.GRAINS_BREAD, "Flour"),
         CatalogIngredient("grain_066", "Farro", "g", "kg", IngredientCategory.GRAINS_BREAD, "Other Grains", listOf(CommonAllergen.GLUTEN)),
-        CatalogIngredient("grain_067", "Gnocchi", "g", "kg", IngredientCategory.GRAINS_BREAD, "Pasta", listOf(CommonAllergen.GLUTEN))
+        CatalogIngredient("grain_067", "Gnocchi", "g", "kg", IngredientCategory.GRAINS_BREAD, "Pasta", listOf(CommonAllergen.GLUTEN)),
+        CatalogIngredient("grain_068", "Buckwheat", "g", "kg", IngredientCategory.GRAINS_BREAD, "Other Grains")
     )
 
     // ==================== LEGUMES & BEANS ====================
@@ -471,7 +477,8 @@ object IngredientCatalog {
         // Nut Butters
         CatalogIngredient("nut_040", "Almond Butter", "g", "kg", IngredientCategory.NUTS_SEEDS, "Nut Butters", listOf(CommonAllergen.TREE_NUTS)),
         CatalogIngredient("nut_041", "Cashew Butter", "g", "kg", IngredientCategory.NUTS_SEEDS, "Nut Butters", listOf(CommonAllergen.TREE_NUTS)),
-        CatalogIngredient("nut_042", "Tahini", "g", "kg", IngredientCategory.NUTS_SEEDS, "Nut Butters", listOf(CommonAllergen.SESAME))
+        CatalogIngredient("nut_042", "Tahini", "g", "kg", IngredientCategory.NUTS_SEEDS, "Nut Butters", listOf(CommonAllergen.SESAME)),
+        CatalogIngredient("nut_043", "Shredded Coconut", "g", "kg", IngredientCategory.NUTS_SEEDS, "Coconut")
     )
 
     // ==================== OILS & FATS ====================
@@ -742,6 +749,7 @@ object IngredientCatalog {
     val snacks = listOf(
         // Chips & Crackers
         CatalogIngredient("snack_001", "Potato Chips", "g", "kg", IngredientCategory.SNACKS, "Chips & Crackers"),
+        CatalogIngredient("snack_002", "Ice Cubes", "pcs", null, IngredientCategory.SNACKS, "Other"),
         CatalogIngredient("snack_002", "Tortilla Chips", "g", "kg", IngredientCategory.SNACKS, "Chips & Crackers"),
         CatalogIngredient("snack_003", "Pretzels", "g", "kg", IngredientCategory.SNACKS, "Chips & Crackers", listOf(CommonAllergen.GLUTEN)),
         CatalogIngredient("snack_004", "Crackers", "g", "kg", IngredientCategory.SNACKS, "Chips & Crackers", listOf(CommonAllergen.GLUTEN)),

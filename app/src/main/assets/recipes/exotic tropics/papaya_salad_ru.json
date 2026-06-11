@@ -1,0 +1,69 @@
+{
+  "id": "papaya_salad",
+  "name": "Салат из папайи",
+  "instructions": "1. Очистите папайю, разрежьте пополам и удалите семена. Натрите мякоть тонкими полосками с помощью терки или овощечистки.\n\n2. Разрежьте помидоры черри пополам. Нарежьте стручковую фасоль кусочками по 2 см.\n\n3. В небольшой миске смешайте сок лайма, рыбный соус, сахар и измельченный чеснок. Размешайте до растворения сахара.\n\n4. В большой ступке слегка разотрите чеснок и перец чили пестиком. Можно просто мелко нарезать.\n\n5. Добавьте тертую папайю, помидоры, фасоль и арахис. Залейте заправкой.\n\n6. Перемешайте, слегка прижимая ингредиенты, чтобы они впитали ароматы.\n\n7. Украсьте дополнительным арахисом и подавайте сразу как освежающий гарнир или легкий обед.",
+  "simpleInstructions": "1. Натрите папайю тонкими полосками.\n\n2. Разрежьте помидоры пополам, фасоль на кусочки.\n\n3. Смешайте сок лайма, рыбный соус, сахар и чеснок.\n\n4. Соедините все в миске.\n\n5. Перемешайте с заправкой и арахисом.\n\n6. Подавайте сразу.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 0,
+  "servings": 4,
+  "cuisine": "Exotic Tropics",
+  "mealType": "LUNCH",
+  "dishCategory": "SALAD",
+  "ingredients": [
+    {
+      "name": "Papaya",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cherry Tomatoes",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Green Beans",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fish Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 8,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Peanuts",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/papaya_salad.webp"
+}

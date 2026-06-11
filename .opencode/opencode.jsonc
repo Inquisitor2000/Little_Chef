@@ -1,0 +1,15 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+
+  // Override global codegraph MCP: auto-init+sync on every opencode startup
+  "mcp": {
+    "codegraph": {
+      "type": "local",
+      "command": [
+        "sh", "-c",
+        "codegraph init >/dev/null 2>&1; codegraph sync -q >/dev/null 2>&1; exec codegraph serve --mcp"
+      ],
+      "enabled": true
+    }
+  }
+}

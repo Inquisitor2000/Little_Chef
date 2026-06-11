@@ -34,34 +34,20 @@ data class BundledIngredient(
 
 @Singleton
 class BundledRecipeLoader @Inject constructor(
-    @ApplicationContext private val context: Context,
-    private val assetPackManager: AssetPackManager
+    @ApplicationContext private val context: Context
 ) {
     private val json = Json { ignoreUnknownKeys = true }
-    
+
     fun loadRecipesForCuisine(cuisine: Cuisine, languageCode: String = "en"): List<BundledRecipe> {
         val folderName = "recipes/${cuisine.displayName.lowercase()}"
-        
+
         return try {
-            // Check if this is a DLC cuisine
-            if (cuisine.isDLC && cuisine.assetPackName != null) {
-                // Try to load from asset pack first
-                val recipesFromPack = loadFromAssetPack(cuisine.assetPackName, folderName, languageCode)
-                
-                // If asset pack is not available (e.g., in debug builds), fallback to main assets
-                if (recipesFromPack.isEmpty()) {
-                    loadFromAssets(folderName, languageCode)
-                } else {
-                    recipesFromPack
-                }
-            } else {
-                loadFromAssets(folderName, languageCode)
-            }
+            loadFromAssets(folderName, languageCode)
         } catch (e: Exception) {
             emptyList()
         }
     }
-    
+
     private fun loadFromAssets(folderName: String, languageCode: String): List<BundledRecipe> {
         val files = context.assets.list(folderName) ?: emptyArray()
         return parseRecipeFiles(files, languageCode) { fileName ->
@@ -70,26 +56,7 @@ class BundledRecipeLoader @Inject constructor(
                 .use { it.readText() }
         }
     }
-    
-    private fun loadFromAssetPack(
-        packName: String,
-        folderName: String,
-        languageCode: String
-    ): List<BundledRecipe> {
-        val packLocation = assetPackManager.getPackLocation(packName) ?: return emptyList()
-        
-        // Asset packs are stored as APK assets
-        val assetsPath = packLocation.assetsPath()
-        val folder = java.io.File(assetsPath, folderName)
-        
-        if (!folder.exists()) return emptyList()
-        
-        val files = folder.listFiles()?.map { it.name }?.toTypedArray() ?: emptyArray()
-        return parseRecipeFiles(files, languageCode) { fileName ->
-            java.io.File(folder, fileName).readText()
-        }
-    }
-    
+
     private fun parseRecipeFiles(
         files: Array<String>,
         languageCode: String,
@@ -109,7 +76,7 @@ class BundledRecipeLoader @Inject constructor(
                 files.filter { it.endsWith(".json") && !it.contains("_ru.json") && !it.contains("_ro.json") }
             }
         }
-        
+
         return relevantFiles.mapNotNull { fileName ->
             try {
                 val content = readFile(fileName)
@@ -119,7 +86,7 @@ class BundledRecipeLoader @Inject constructor(
             }
         }
     }
-    
+
     fun loadAllBundledRecipes(languageCode: String = "en"): Map<Cuisine, List<BundledRecipe>> {
         return Cuisine.entries.associateWith { loadRecipesForCuisine(it, languageCode) }
     }

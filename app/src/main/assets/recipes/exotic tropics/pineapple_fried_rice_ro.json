@@ -1,0 +1,87 @@
+{
+  "id": "pineapple_fried_rice",
+  "name": "Orez Prăjit cu Ananas",
+  "instructions": "1. Dacă folosești ananas proaspăt, taie-l în jumătate, scoate pulpa și taie-o cubulețe. Păstrează jumătățile de ananas pentru servire (opțional).\n\n2. Încinge uleiul într-un wok sau tigaie mare la foc înalt. Adaugă creveții și prăjește-i 2 minute până devin roz. Scoate și păstrează.\n\n3. În același wok, adaugă puțin ulei. Prăjește ouăle repede, spărgându-le în bucăți mici.\n\n4. Adaugă orezul fiert, desfăcând cocoloașele. Prăjește 3-4 minute.\n\n5. Adaugă ananasul, mazărea, morcovii tăiați cubulețe și sosul de soia. Prăjește 2 minute.\n\n6. Întoarce creveții în wok. Adaugă ceapa verde și amestecă totul.\n\n7. Asezonează cu sare și piper alb. Servește în jumătățile de ananas sau într-un castron, decorat cu coriandru.",
+  "simpleInstructions": "1. Taie ananasul cubulețe; gătește creveții, scoate-i.\n\n2. Prăjește ouăle în ulei.\n\n3. Adaugă orezul, prăjește 3-4 minute.\n\n4. Adaugă ananasul, legumele și sosul de soia.\n\n5. Întoarce creveții, adaugă ceapa verde.\n\n6. Asezonează și servește cu coriandru.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 20,
+  "servings": 4,
+  "cuisine": "Exotic Tropics",
+  "mealType": "LUNCH",
+  "dishCategory": "RICE_BOWL",
+  "ingredients": [
+    {
+      "name": "White Rice",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pineapple",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Shrimp",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Peas",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrot",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 45,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cilantro",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/pineapple_fried_rice.webp"
+}

@@ -34,8 +34,7 @@ class PlanViewModel @Inject constructor(
     private val preferences: com.littlechef.app.data.preferences.OnboardingPreferences,
     private val substituteInitializer: com.littlechef.app.data.local.SubstituteInitializer,
     private val translationSystem: com.littlechef.app.data.local.TranslationSystem,
-    val nutritionLoader: com.littlechef.app.data.local.NutritionLoader,
-    private val analyticsService: com.littlechef.app.data.analytics.AnalyticsService
+    val nutritionLoader: com.littlechef.app.data.local.NutritionLoader
 ) : ViewModel() {
 
     init {
@@ -572,10 +571,6 @@ class PlanViewModel @Inject constructor(
             
             mealPlanRepository.update(updatedMealPlan)
             
-            analyticsService.trackSubstituteApplied(
-                recipeName = mealPlan.meal.name,
-                ingredientName = originalIngredient.name
-            )
             
             // Update grocery items: replace original ingredient with substitute
             updateGroceryItemsForSubstitution(

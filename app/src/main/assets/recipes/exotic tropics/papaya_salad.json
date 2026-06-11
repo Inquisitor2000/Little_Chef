@@ -1,0 +1,69 @@
+{
+  "id": "papaya_salad",
+  "name": "Papaya Salad",
+  "instructions": "1. Peel the papaya, cut it in half, and remove the seeds. Shred the flesh into thin strips using a julienne peeler or grater.\n\n2. Cut the cherry tomatoes in half. Slice the green beans into 2 cm pieces.\n\n3. In a small bowl, mix together the lime juice, fish sauce, sugar, and minced garlic. Stir until the sugar dissolves.\n\n4. In a large mortar or mixing bowl, lightly pound the garlic and chili with a pestle to release flavors. Alternatively, just mince them finely.\n\n5. Add the shredded papaya, tomatoes, green beans, and peanuts. Pour the dressing over.\n\n6. Toss everything together, gently pressing the ingredients to absorb the flavors.\n\n7. Garnish with extra peanuts and serve immediately as a refreshing side or light lunch.",
+  "simpleInstructions": "1. Shred papaya into thin strips.\n\n2. Halve tomatoes, slice green beans.\n\n3. Mix lime juice, fish sauce, sugar, garlic for dressing.\n\n4. Combine everything in a bowl.\n\n5. Toss with dressing and peanuts.\n\n6. Serve immediately.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 0,
+  "servings": 4,
+  "cuisine": "Exotic Tropics",
+  "mealType": "LUNCH",
+  "dishCategory": "SALAD",
+  "ingredients": [
+    {
+      "name": "Papaya",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cherry Tomatoes",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Green Beans",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fish Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 8,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Peanuts",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chili Pepper",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/papaya_salad.webp"
+}

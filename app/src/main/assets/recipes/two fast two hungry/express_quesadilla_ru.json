@@ -1,0 +1,51 @@
+{
+  "id": "express_quesadilla",
+  "name": "Сырная кесадилья",
+  "instructions": "1. Разогрейте сковороду на среднем огне. Смажьте маслом одну сторону каждой тортильи.\n\n2. Положите 2 тортильи маслом вниз на сковороду. Равномерно посыпьте сыром чеддер и моцареллой.\n\n3. Накройте оставшимися 2 тортильями, маслом вверх.\n\n4. Готовьте 2-3 минуты, пока нижняя сторона не станет золотистой, а сыр не начнет плавиться.\n\n5. Аккуратно переверните каждую кесадилью лопаткой. Готовьте еще 2 минуты, пока вторая сторона не станет золотистой, а сыр не расплавится полностью.\n\n6. Снимите со сковороды и дайте отдохнуть 1 минуту. Разрежьте каждую на 4 треугольника.\n\n7. Подавайте со сметаной.",
+  "simpleInstructions": "1. Разогрейте сковороду. Смажьте маслом одну сторону тортилий.\n\n2. Положите 2 тортильи маслом вниз. Посыпьте сыром.\n\n3. Накройте остальными тортильями, маслом вверх.\n\n4. Готовьте 2-3 минуты с каждой стороны до золотистого цвета.\n\n5. Отдохните 1 минуту, разрежьте на треугольники.\n\n6. Подавайте со сметаной.",
+  "prepTimeMinutes": 3,
+  "cookTimeMinutes": 5,
+  "servings": 2,
+  "mealType": "LUNCH",
+  "dishCategory": "SANDWICH",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/express_quesadilla.webp",
+  "ingredients": [
+    {
+      "name": "Tortillas",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Mozzarella",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

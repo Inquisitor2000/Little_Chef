@@ -1,0 +1,75 @@
+{
+  "id": "speedy_stir_fry",
+  "name": "Chicken Stir Fry",
+  "instructions": "1. Slice the chicken breast into thin strips. Cut the bell pepper and carrot into matchsticks. Shred the cabbage thinly. Mince the garlic and grate the ginger.\n\n2. Heat vegetable oil in a wok or large skillet over high heat.\n\n3. Add garlic and ginger, stir-fry for 30 seconds until fragrant.\n\n4. Add chicken strips and cook for 3-4 minutes until golden and almost cooked through.\n\n5. Add bell pepper, carrot, and cabbage. Stir-fry for 2-3 minutes until vegetables are crisp-tender.\n\n6. Pour in soy sauce and season with salt. Stir everything together and cook for 1 more minute.\n\n7. Garnish with sliced scallion. Serve hot immediately.",
+  "simpleInstructions": "1. Slice chicken and prep vegetables: bell pepper, carrot, cabbage, garlic, ginger.\n\n2. Heat oil in a hot skillet. Add garlic and ginger, cook 30 seconds.\n\n3. Add chicken and cook 3-4 minutes. Add vegetables and cook 2-3 minutes.\n\n4. Season with soy sauce and salt. Garnish with scallion. Serve hot.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 8,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "CHICKEN",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/speedy_stir_fry.webp",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Carrot",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cabbage",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

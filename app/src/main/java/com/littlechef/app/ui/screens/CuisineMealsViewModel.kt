@@ -58,8 +58,7 @@ class CuisineMealsViewModel @Inject constructor(
     private val onboardingPreferences: com.littlechef.app.data.preferences.OnboardingPreferences,
     private val ingredientMatcher: IngredientMatcher,
     private val preloadCuisineAllergensUseCase: PreloadCuisineAllergensUseCase,
-    private val favoriteRecipesPreferences: com.littlechef.app.data.preferences.FavoriteRecipesPreferences,
-    private val analyticsService: com.littlechef.app.data.analytics.AnalyticsService
+    private val favoriteRecipesPreferences: com.littlechef.app.data.preferences.FavoriteRecipesPreferences
 ) : ViewModel() {
     
     private val _recipes = MutableStateFlow<List<RecipeWithAllergens>>(emptyList())
@@ -173,7 +172,6 @@ class CuisineMealsViewModel @Inject constructor(
     }
     
     fun loadRecipes(cuisine: Cuisine) {
-        analyticsService.trackCuisineBrowsed(cuisineName = cuisine.name)
         viewModelScope.launch {
             val perfStart = System.currentTimeMillis()
             

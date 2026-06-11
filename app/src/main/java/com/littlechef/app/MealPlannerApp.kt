@@ -4,7 +4,6 @@ import android.app.Application
 import android.content.Context
 import coil.ImageLoader
 import coil.ImageLoaderFactory
-import com.littlechef.app.data.analytics.AnalyticsService
 import com.littlechef.app.data.local.TranslationSystem
 import com.littlechef.app.data.preferences.LocaleManager
 import com.littlechef.app.utils.ImageLoaderConfig
@@ -30,16 +29,10 @@ class MealPlannerApp : Application(), ImageLoaderFactory {
     @Inject
     lateinit var localeManager: LocaleManager
 
-    @Inject
-    lateinit var analyticsService: AnalyticsService
-    
     private val applicationScope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
 
     override fun onCreate() {
         super.onCreate()
-        
-        // Initialize Firebase Analytics — safe to call even without google-services.json
-        analyticsService.init(this)
         
         // Set language synchronously — needed immediately so recipe loading decisions
         // (which recipe JSON files to load) use the correct language.

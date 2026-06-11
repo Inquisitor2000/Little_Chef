@@ -90,3 +90,7 @@ lint/tmp/
 # macOS
 .DS_Store
 *.DS_Store
+
+# OpenCode / Agent data
+data/
+*.original

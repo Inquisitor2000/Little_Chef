@@ -1,0 +1,87 @@
+{
+  "id": "olivier_salad",
+  "name": "Olivier Salad",
+  "instructions": "1. Boil the potatoes, carrots, and eggs until tender. Let them cool.\n\n2. Dice the potatoes, carrots, eggs, and apple into small cubes of about 1cm.\n\n3. Dice the pickles and chicken meat (or ham) into similar-sized cubes.\n\n4. Finely chop the spring onions and dill.\n\n5. Place all the diced ingredients into a large bowl.\n\n6. Add the drained canned peas.\n\n7. Season with salt and pepper. Add the mayonnaise and mix well until everything is evenly coated.\n\n8. Refrigerate for at least one hour before serving to let the flavors meld. Serve cold, garnished with fresh dill.",
+  "simpleInstructions": "1. Boil potatoes, carrots, and eggs. Let cool.\n\n2. Dice everything into small cubes.\n\n3. Mix all ingredients in a bowl.\n\n4. Add mayonnaise and mix well.\n\n5. Refrigerate for at least an hour.\n\n6. Serve cold, garnished with dill.",
+  "prepTimeMinutes": 20,
+  "cookTimeMinutes": 25,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "LUNCH",
+  "dishCategory": "SALAD",
+  "ingredients": [
+    {
+      "name": "Potato",
+      "quantity": 480,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrot",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Pickles",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Chicken Breast",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Canned Peas",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Apple",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Mayonnaise",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Dill",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/olivier_salad.webp"
+}

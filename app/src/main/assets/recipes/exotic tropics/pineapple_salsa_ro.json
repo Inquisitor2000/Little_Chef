@@ -1,0 +1,57 @@
+{
+  "id": "pineapple_salsa",
+  "name": "Salsa cu Ananas",
+  "instructions": "1. Taie ananasul cubulețe mici, de aproximativ 0.5 cm. Pune într-un bol mediu.\n\n2. Taie ceapa roșie și ardeiul gras cubulețe mici. Adaugă în bol.\n\n3. Toacă mărunt jalapeño (îndepărtează semințele pentru mai puțină iuțeală) și adaugă.\n\n4. Toacă coriandrul fin și adaugă.\n\n5. Stoarce zeama de lime peste toate. Adaugă sare și amestecă bine.\n\n6. Gustă și ajustează condimentele, adăugând mai mult lime sau sare după nevoie.\n\n7. Lasă salsă să se odihnească la temperatura camerei 10 minute pentru ca aromele să se îmbine.\n\n8. Servește cu chipsuri de tortilla, pește la grătar, pui sau tacos. Cel mai bună proaspătă.",
+  "simpleInstructions": "1. Taie ananasul, ceapa și ardeiul cubulețe.\n\n2. Adaugă jalapeño tocat și coriandru.\n\n3. Adaugă zeamă de lime și sare, amestecă bine.\n\n4. Lasă să se odihnească 10 minute.\n\n5. Servește cu chipsuri sau preparate la grătar.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 0,
+  "servings": 6,
+  "cuisine": "Exotic Tropics",
+  "mealType": "SNACK",
+  "dishCategory": "APPETIZER",
+  "ingredients": [
+    {
+      "name": "Pineapple",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Red Onion",
+      "quantity": 75,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cilantro",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Jalapeño",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/pineapple_salsa.webp"
+}

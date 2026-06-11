@@ -1,0 +1,75 @@
+{
+  "id": "tuna_poke_bowl",
+  "name": "Tuna Poke Bowl",
+  "instructions": "1. Cut the sushi-grade tuna into 1.5 cm cubes. Place in a bowl.\n\n2. In a small bowl, whisk together soy sauce, sesame oil, and lime juice. Pour over the cubed tuna and gently toss. Marinate for 10 minutes in the refrigerator.\n\n3. Cook the rice according to package instructions. Let it cool slightly.\n\n4. Slice the cucumber and avocado. If using edamame, cook according to package instructions.\n\n5. Divide the rice between serving bowls.\n\n6. Arrange the marinated tuna, cucumber slices, avocado, and edamame on top of the rice.\n\n7. Sprinkle with sesame seeds and sliced green onions. Serve with extra soy sauce on the side.",
+  "simpleInstructions": "1. Cube tuna and marinate in soy sauce, sesame oil, lime juice.\n\n2. Cook rice and let cool slightly.\n\n3. Slice cucumber and avocado.\n\n4. Assemble bowls: rice, tuna, veggies.\n\n5. Top with sesame seeds and green onions.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 15,
+  "servings": 2,
+  "cuisine": "Exotic Tropics",
+  "mealType": "DINNER",
+  "dishCategory": "RICE_BOWL",
+  "ingredients": [
+    {
+      "name": "Tuna",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "White Rice",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 45,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lime",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cucumber",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Avocado",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Edamame",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Seeds",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/tuna_poke_bowl.webp"
+}

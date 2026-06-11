@@ -1,0 +1,93 @@
+{
+  "id": "solyanka",
+  "name": "Solyanka",
+  "instructions": "1. Cut the beef into 2cm cubes. Slice the smoked sausage into rounds.\n\n2. Finely chop the onion and dice the pickles into small cubes.\n\n3. In a large pot, heat sunflower oil over medium-high heat. Brown the beef on all sides for about 5-6 minutes.\n\n4. Add the onion and cook for 3-4 minutes. Add the pickles and tomato paste, cook for another 2 minutes.\n\n5. Pour in the beef broth and add the sausage. Bring to a boil, then reduce heat. Cover and simmer for 30 minutes.\n\n6. Slice the olives and add to the pot along with the lemon juice. Simmer for another 5 minutes.\n\n7. Season with salt and pepper to taste.\n\n8. Serve hot with a slice of lemon, sour cream, and rye bread. Sprinkle fresh dill or parsley on top.",
+  "simpleInstructions": "1. Cube the beef and slice the sausage.\n\n2. Chop onion and dice pickles.\n\n3. Brown beef, then add onion and pickles.\n\n4. Add broth and sausage, simmer 30 minutes.\n\n5. Add olives and lemon juice.\n\n6. Serve with lemon, sour cream, and bread.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 50,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    {
+      "name": "Beef",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Smoked Sausage",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Pickles",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Olives",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Tomato Paste",
+      "quantity": 48,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Beef Broth",
+      "quantity": 1.5,
+      "unit": "l",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Lemon",
+      "quantity": 40,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Fresh Dill",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/solyanka.webp"
+}

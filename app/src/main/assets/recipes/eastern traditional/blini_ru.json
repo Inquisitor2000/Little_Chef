@@ -1,0 +1,57 @@
+{
+  "id": "blini",
+  "name": "Блины",
+  "instructions": "1. Взбейте яйца с сахаром и солью до пышности.\n\n2. Постепенно добавляйте муку, чередуя с молоком, непрерывно помешивая, чтобы не было комочков.\n\n3. Добавьте растопленное сливочное масло и хорошо перемешайте. Тесто должно быть жидким, как для тонких блинов.\n\n4. Разогрейте антипригарную сковороду на среднем огне и слегка смажьте маслом.\n\n5. Налейте небольшой половник теста и покрутите сковороду, чтобы равномерно распределить по дну.\n\n6. Готовьте 1-2 минуты, пока на поверхности не появятся пузырьки, а края не начнут отставать. Переверните и готовьте еще 30-60 секунд.\n\n7. Подавайте блины горячими со сметаной, икрой или вареньем. Для сладкого варианта посыпьте сахарной пудрой и полейте медом.",
+  "simpleInstructions": "1. Взбейте яйца с сахаром и солью.\n\n2. Добавьте муку, чередуя с молоком.\n\n3. Добавьте растопленное масло.\n\n4. Наливайте тонкий слой теста на горячую сковороду.\n\n5. Готовьте по 1-2 минуты с каждой стороны.\n\n6. Подавайте со сметаной, икрой или вареньем.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 20,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 250,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 3,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/blini.webp"
+}

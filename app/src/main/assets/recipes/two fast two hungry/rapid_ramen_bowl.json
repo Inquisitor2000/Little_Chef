@@ -1,0 +1,63 @@
+{
+  "id": "rapid_ramen_bowl",
+  "name": "Egg Ramen",
+  "instructions": "1. Bring 400ml water to boil in a small pot. Add egg noodles and cook for 3-4 minutes until tender.\n\n2. While noodles cook, heat sesame oil in a small skillet over medium heat. Add minced garlic and grated ginger, cook for 30 seconds until fragrant.\n\n3. In a bowl, beat eggs with a pinch of salt. Push cooked noodles to one side of the pot. Pour beaten eggs into the water and stir gently to create egg strands.\n\n4. Add soy sauce to the pot, stir to combine.\n\n5. Add the garlic and ginger mixture. Stir well.\n\n6. Divide noodles and broth between 2 bowls. Garnish with sliced green onions.\n\n7. Serve immediately while hot.",
+  "simpleInstructions": "1. Boil water, cook noodles 3-4 minutes.\n\n2. Meanwhile, sauté garlic and ginger in sesame oil.\n\n3. Push noodles aside, pour beaten eggs into water to create strands.\n\n4. Add soy sauce, garlic and ginger.\n\n5. Divide into 2 bowls, garnish with green onions.\n\n6. Serve hot.",
+  "prepTimeMinutes": 3,
+  "cookTimeMinutes": 5,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/rapid_ramen_bowl.webp",
+  "ingredients": [
+    {
+      "name": "Egg Noodles",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

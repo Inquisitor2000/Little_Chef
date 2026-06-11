@@ -1,24 +1,18 @@
 package com.littlechef.app.ui.screens
 
-import android.app.Activity
 import androidx.compose.animation.*
 import androidx.compose.animation.core.*
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.GridItemSpan
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
-import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.ArrowDropDown
-import androidx.compose.material.icons.filled.Lock
-import androidx.compose.material.icons.filled.LockOpen
 import androidx.compose.material.icons.filled.Star
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
@@ -30,15 +24,12 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.littlechef.app.R
 import com.littlechef.app.domain.model.Cuisine
 import com.littlechef.app.domain.model.Meal
-import com.littlechef.app.ui.components.PremiumPackPreview
-import com.littlechef.app.ui.components.PremiumPreviewDrawer
 import com.littlechef.app.ui.util.RecipeImage
 import com.littlechef.app.ui.util.rememberHapticFeedback
 
@@ -53,68 +44,14 @@ fun MealsScreen(
 ) {
     val uiState by viewModel.uiState.collectAsState()
     val context = LocalContext.current
-    val activity = context as? Activity
-    
-    // Observe purchase state
-    val purchaseState by viewModel.purchaseState.collectAsState()
-    
-    // State for premium preview drawer
-    var showPremiumCuisine by remember { mutableStateOf<Cuisine?>(null) }
-    val showPremiumPreview = showPremiumCuisine?.let { getPremiumPackPreview(it) }
-    
-    // Handle purchase state changes
-    LaunchedEffect(purchaseState) {
-        when (val state = purchaseState) {
-            is com.littlechef.app.billing.PurchaseState.Success -> {
-                // Purchase successful, close drawer and navigate
-                android.widget.Toast.makeText(context, "Purchase successful! Recipes unlocked.", android.widget.Toast.LENGTH_SHORT).show()
-                showPremiumPreview?.let { preview ->
-                    showPremiumCuisine = null
-                    onNavigateToCuisine(preview.cuisine)
-                }
-                viewModel.resetPurchaseState()
-            }
-            is com.littlechef.app.billing.PurchaseState.Cancelled -> {
-                // User cancelled, just reset state
-                android.widget.Toast.makeText(context, "Purchase cancelled", android.widget.Toast.LENGTH_SHORT).show()
-                viewModel.resetPurchaseState()
-            }
-            is com.littlechef.app.billing.PurchaseState.Error -> {
-                // Show error
-                android.widget.Toast.makeText(context, "Error: ${state.message}", android.widget.Toast.LENGTH_LONG).show()
-                viewModel.resetPurchaseState()
-            }
-            is com.littlechef.app.billing.PurchaseState.Loading -> {
-                android.widget.Toast.makeText(context, "Opening Google Play...", android.widget.Toast.LENGTH_SHORT).show()
-            }
-            is com.littlechef.app.billing.PurchaseState.Downloading -> {
-                android.widget.Toast.makeText(context, "Downloading recipes... ${state.progress}%", android.widget.Toast.LENGTH_SHORT).show()
-            }
-            else -> { /* Idle */ }
-        }
-    }
-    
-    // Track initial composition
-    LaunchedEffect(Unit) {
-        // Composition complete
-    }
-    
+
     // Preload Italian cuisine (most popular) when screen is first displayed
     LaunchedEffect(Unit) {
         cuisineViewModel.preloadRecipes(Cuisine.ITALIAN)
     }
-    
+
     val haptic = rememberHapticFeedback()
 
-    // Handle cuisine click with DLC check
-    val handleCuisineClick: (Cuisine) -> Unit = { cuisine ->
-        if (cuisine.isDLC) {
-            showPremiumCuisine = cuisine
-        } else {
-            onNavigateToCuisine(cuisine)
-        }
-    }
-    
     Scaffold(
         topBar = {
             TopAppBar(
@@ -145,12 +82,12 @@ fun MealsScreen(
         }
     ) { padding ->
         val uiState by viewModel.uiState.collectAsState()
-        
+
         val scrapedMeals = when (uiState) {
             is MealsUiState.Success -> (uiState as MealsUiState.Success).scrapedMeals
             else -> emptyList()
         }
-        
+
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             horizontalArrangement = Arrangement.spacedBy(12.dp),
@@ -169,43 +106,19 @@ fun MealsScreen(
                         onRecipeClick = { meal -> onNavigateToRecipe(meal.id) }
                     )
                 }
-                
+
                 item(span = { GridItemSpan(2) }) {
                     Spacer(modifier = Modifier.height(8.dp))
                 }
             }
-            
+
             // Cuisines section
             item(span = { GridItemSpan(2) }) {
                 CuisinesSection(
-                    onCuisineClick = handleCuisineClick
+                    onCuisineClick = onNavigateToCuisine
                 )
             }
         }
-    }
-    
-    // Show premium preview drawer if needed
-    showPremiumPreview?.let { preview ->
-        PremiumPreviewDrawer(
-            packPreview = preview,
-            onDismiss = { showPremiumCuisine = null },
-            onPurchase = {
-                // Launch billing flow
-                val act = activity
-                val productId = preview.cuisine.assetPackName ?: ""
-                
-                android.util.Log.d("MealsScreen", "Purchase button clicked")
-                android.util.Log.d("MealsScreen", "Activity: $act")
-                android.util.Log.d("MealsScreen", "Product ID: $productId")
-                
-                if (act != null && productId.isNotEmpty()) {
-                    android.util.Log.d("MealsScreen", "Launching billing flow for: $productId")
-                    viewModel.purchaseDLC(act, productId)
-                } else {
-                    android.util.Log.e("MealsScreen", "Cannot launch billing - Activity: $act, ProductId: $productId")
-                }
-            }
-        )
     }
 }
 
@@ -213,140 +126,110 @@ fun MealsScreen(
 private fun CuisinesSection(
     onCuisineClick: (Cuisine) -> Unit
 ) {
-    val allCuisines = Cuisine.entries
-    
-    // Separate DLC and regular cuisines
-    val premiumCuisines = allCuisines.filter { it.isDLC }
-    val regularCuisines = allCuisines.filter { !it.isDLC }
-    
-    // Split regular cuisines into country-based (first 5) and type-based (rest)
-    val countryBasedCuisines = regularCuisines.take(5) // Italian, Mexican, Asian, Mediterranean, French
-    val typeBasedCuisines = regularCuisines.drop(5)    // Bread & Bakery, Soups & Stews, etc.
-    
     Column(
         modifier = Modifier.fillMaxWidth()
     ) {
-        // Premium Section (if any DLC cuisines exist)
-        if (premiumCuisines.isNotEmpty()) {
-            Text(
-                text = stringResource(R.string.meals_premium_headline),
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(bottom = 12.dp)
-            )
-            
-            Column(
-                verticalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                premiumCuisines.forEach { cuisine ->
-                    CuisineCard(
-                        cuisine = cuisine,
-                        onClick = { onCuisineClick(cuisine) }
-                    )
-                }
-            }
-            
-            // Divider after Premium section
-            Divider(
-                modifier = Modifier.padding(vertical = 16.dp),
-                thickness = 1.dp,
-                color = MaterialTheme.colorScheme.outlineVariant
-            )
-        }
-        
-        // Cuisines by Country Section
+        // Split cuisines: first 8 (former-DLC + country-based) and last 5 (meal types)
+        val allCuisines = Cuisine.entries
+        val topCuisines = allCuisines.take(8) // Two Fast, Eastern, Exotic, Italian, Mexican, Asian, Mediterranean, French
+        val typeCuisines = allCuisines.drop(8) // Bread & Bakery, Soups, Veg, Meat, Desserts
+
+        // Cuisines headline
         Text(
             text = stringResource(R.string.meals_cuisines_headline),
             style = MaterialTheme.typography.titleLarge,
             fontWeight = FontWeight.Bold,
             modifier = Modifier.padding(bottom = 12.dp)
         )
-        
+
         Column(
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            countryBasedCuisines.forEach { cuisine ->
+            topCuisines.forEach { cuisine ->
                 CuisineCard(
                     cuisine = cuisine,
                     onClick = { onCuisineClick(cuisine) }
                 )
             }
         }
-        
+
         // Divider before Meal Types section
-        if (typeBasedCuisines.isNotEmpty()) {
-            Divider(
-                modifier = Modifier.padding(vertical = 16.dp),
-                thickness = 1.dp,
-                color = MaterialTheme.colorScheme.outlineVariant
-            )
-            
-            // Meal Types Section
-            Text(
-                text = stringResource(R.string.meals_meal_types_headline),
-                style = MaterialTheme.typography.titleLarge,
-                fontWeight = FontWeight.Bold,
-                modifier = Modifier.padding(bottom = 12.dp)
-            )
-            
-            Column(
-                verticalArrangement = Arrangement.spacedBy(12.dp)
-            ) {
-                typeBasedCuisines.forEach { cuisine ->
-                    CuisineCard(
-                        cuisine = cuisine,
-                        onClick = { onCuisineClick(cuisine) }
-                    )
-                }
+        Divider(
+            modifier = Modifier.padding(vertical = 16.dp),
+            thickness = 1.dp,
+            color = MaterialTheme.colorScheme.outlineVariant
+        )
+
+        // Meal Types Section
+        Text(
+            text = stringResource(R.string.meals_meal_types_headline),
+            style = MaterialTheme.typography.titleLarge,
+            fontWeight = FontWeight.Bold,
+            modifier = Modifier.padding(bottom = 12.dp)
+        )
+
+        Column(
+            verticalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            typeCuisines.forEach { cuisine ->
+                CuisineCard(
+                    cuisine = cuisine,
+                    onClick = { onCuisineClick(cuisine) }
+                )
             }
         }
     }
 }
 
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-private fun CuisineChip(
+private fun CuisineCard(
     cuisine: Cuisine,
     onClick: () -> Unit
 ) {
-    val context = androidx.compose.ui.platform.LocalContext.current
-    
+    val context = LocalContext.current
+
     Card(
-        onClick = onClick,
-        modifier = Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(12.dp)
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(70.dp)
+            .clickable { onClick() },
+        shape = RoundedCornerShape(12.dp),
+        colors = CardDefaults.cardColors(
+            containerColor = MaterialTheme.colorScheme.surfaceVariant
+        )
     ) {
         Row(
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(16.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
+            modifier = Modifier.fillMaxSize(),
             verticalAlignment = Alignment.CenterVertically
         ) {
-            Row(
-                horizontalArrangement = Arrangement.spacedBy(12.dp),
-                verticalAlignment = Alignment.CenterVertically,
-                modifier = Modifier.weight(1f)
+            Image(
+                painter = painterResource(id = cuisine.iconRes),
+                contentDescription = null,
+                modifier = Modifier
+                    .size(64.dp)
+                    .padding(start = 16.dp, end = 12.dp)
+            )
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(end = 12.dp),
+                verticalArrangement = Arrangement.Center
             ) {
-                Image(
-                    painter = painterResource(id = cuisine.iconRes),
-                    contentDescription = null,
-                    modifier = Modifier.size(48.dp)
+                Text(
+                    text = cuisine.getLocalizedName(context),
+                    style = MaterialTheme.typography.titleMedium,
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
                 )
-                Column {
-                    Text(
-                        text = cuisine.getLocalizedName(context),
-                        style = MaterialTheme.typography.bodyLarge,
-                        fontWeight = FontWeight.Bold
-                    )
-                    Text(
-                        text = cuisine.getLocalizedDescription(context),
-                        style = MaterialTheme.typography.bodySmall,
-                        color = MaterialTheme.colorScheme.onSurfaceVariant,
-                        maxLines = 1,
-                        overflow = TextOverflow.Ellipsis
-                    )
-                }
+                Spacer(modifier = Modifier.height(4.dp))
+                Text(
+                    text = cuisine.getLocalizedDescription(context),
+                    style = MaterialTheme.typography.bodySmall,
+                    color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    maxLines = 2,
+                    overflow = TextOverflow.Ellipsis
+                )
             }
         }
     }
@@ -363,7 +246,7 @@ private fun MyRecipesSection(
         animationSpec = tween(durationMillis = 300, easing = FastOutSlowInEasing),
         label = "arrow rotation"
     )
-    
+
     Column(
         modifier = Modifier.fillMaxWidth(),
         verticalArrangement = Arrangement.spacedBy(12.dp)
@@ -425,7 +308,7 @@ private fun MyRecipesSection(
                 }
             }
         }
-        
+
         // Expanded content
         AnimatedVisibility(
             visible = isExpanded,
@@ -467,7 +350,7 @@ private fun RecipeChip(
             .flatMap { it.ingredient.allergens }
             .distinctBy { it.id }
     }
-    
+
     Card(
         onClick = onClick,
         modifier = Modifier.fillMaxWidth(),
@@ -488,7 +371,7 @@ private fun RecipeChip(
                     .fillMaxHeight()
                     .clip(RoundedCornerShape(topStart = 12.dp, bottomStart = 12.dp))
             )
-            
+
             // Recipe info
             Column(
                 modifier = Modifier
@@ -503,7 +386,7 @@ private fun RecipeChip(
                     maxLines = 2,
                     overflow = TextOverflow.Ellipsis
                 )
-                
+
                 // Allergen count badge
                 if (allergens.isNotEmpty()) {
                     val resources = LocalContext.current.resources
@@ -520,14 +403,14 @@ private fun RecipeChip(
                         )
                     }
                 }
-                
+
                 Spacer(modifier = Modifier.weight(1f))
-                
+
                 // Time info on separate lines
                 val prepLabel = androidx.compose.ui.res.stringResource(R.string.meal_plan_prep)
                 val cookLabel = androidx.compose.ui.res.stringResource(R.string.meal_plan_cook)
                 val minLabel = androidx.compose.ui.res.stringResource(R.string.meal_plan_min)
-                
+
                 Column(
                     verticalArrangement = Arrangement.spacedBy(2.dp)
                 ) {
@@ -548,220 +431,5 @@ private fun RecipeChip(
                 }
             }
         }
-    }
-}
-
-@Composable
-private fun CuisineCard(
-    cuisine: Cuisine,
-    onClick: () -> Unit,
-    viewModel: MealsViewModel = hiltViewModel()
-) {
-    val context = LocalContext.current
-    
-    // Check if DLC is purchased
-    val isPurchased by viewModel.isDLCPurchased(cuisine.assetPackName ?: "")
-        .collectAsState(initial = false)
-    
-    Card(
-        modifier = Modifier
-            .fillMaxWidth()
-            .height(70.dp)
-            .clickable { onClick() },
-        shape = RoundedCornerShape(12.dp),
-        colors = CardDefaults.cardColors(
-            containerColor = MaterialTheme.colorScheme.surfaceVariant
-        )
-    ) {
-        Row(
-            modifier = Modifier.fillMaxSize(),
-            verticalAlignment = Alignment.CenterVertically
-        ) {
-            Image(
-                painter = painterResource(id = cuisine.iconRes),
-                contentDescription = null,
-                modifier = Modifier
-                    .size(64.dp)
-                    .padding(start = 16.dp, end = 12.dp)
-            )
-            Column(
-                modifier = Modifier
-                    .weight(1f)
-                    .padding(end = 12.dp),
-                verticalArrangement = Arrangement.Center
-            ) {
-                Text(
-                    text = cuisine.getLocalizedName(context),
-                    style = MaterialTheme.typography.titleMedium,
-                    fontWeight = FontWeight.Bold,
-                    maxLines = 1,
-                    overflow = TextOverflow.Ellipsis
-                )
-                Spacer(modifier = Modifier.height(4.dp))
-                Text(
-                    text = cuisine.getLocalizedDescription(context),
-                    style = MaterialTheme.typography.bodySmall,
-                    color = MaterialTheme.colorScheme.onSurfaceVariant,
-                    maxLines = 2,
-                    overflow = TextOverflow.Ellipsis
-                )
-            }
-            
-            // Show lock/unlock icon for DLC cuisines in a circular badge
-            if (cuisine.isDLC) {
-                Surface(
-                    modifier = Modifier
-                        .padding(end = 16.dp)
-                        .size(36.dp),
-                    shape = CircleShape,
-                    color = MaterialTheme.colorScheme.primary
-                ) {
-                    Box(
-                        contentAlignment = Alignment.Center,
-                        modifier = Modifier.fillMaxSize()
-                    ) {
-                        Icon(
-                            imageVector = if (isPurchased) Icons.Default.LockOpen else Icons.Default.Lock,
-                            contentDescription = if (isPurchased) "Unlocked" else "Locked",
-                            modifier = Modifier.size(20.dp),
-                            tint = MaterialTheme.colorScheme.onPrimary
-                        )
-                    }
-                }
-            }
-        }
-    }
-}
-
-@Composable
-private fun getCuisineDescription(cuisine: Cuisine): String {
-    return when (cuisine) {
-        Cuisine.ITALIAN -> stringResource(R.string.cuisine_italian_desc)
-        Cuisine.MEXICAN -> stringResource(R.string.cuisine_mexican_desc)
-        Cuisine.ASIAN -> stringResource(R.string.cuisine_asian_desc)
-        Cuisine.MEDITERRANEAN -> stringResource(R.string.cuisine_mediterranean_desc)
-        Cuisine.FRENCH -> stringResource(R.string.cuisine_french_desc)
-        Cuisine.BREAD_BAKERY -> stringResource(R.string.cuisine_bread_bakery_desc)
-        Cuisine.SOUPS_STEWS -> stringResource(R.string.cuisine_soups_stews_desc)
-        Cuisine.VEGETARIAN_VEGAN -> stringResource(R.string.cuisine_vegetarian_vegan_desc)
-        Cuisine.MEAT_DISHES -> stringResource(R.string.cuisine_meat_dishes_desc)
-        Cuisine.DESSERTS_SWEETS -> stringResource(R.string.cuisine_desserts_sweets_desc)
-        Cuisine.TWO_FAST_TWO_HUNGRY -> cuisine.description // DLC cuisines use their description
-        else -> cuisine.description
-    }
-}
-
-/**
- * Creates a premium pack preview for a given DLC cuisine
- */
-@Composable
-private fun getPremiumPackPreview(cuisine: Cuisine): PremiumPackPreview {
-    return when (cuisine) {
-        Cuisine.TWO_FAST_TWO_HUNGRY -> PremiumPackPreview(
-            cuisine = cuisine,
-            recipeNames = listOf(
-                stringResource(R.string.premium_2fast_cheese_omelette),
-                stringResource(R.string.premium_2fast_chicken_stir_fry),
-                stringResource(R.string.premium_2fast_pasta_aglio_e_olio),
-                stringResource(R.string.premium_2fast_beef_tacos),
-                stringResource(R.string.premium_2fast_egg_fried_rice),
-                stringResource(R.string.premium_2fast_cheese_quesadilla),
-                stringResource(R.string.premium_2fast_egg_ramen),
-                stringResource(R.string.premium_2fast_grilled_cheese),
-                stringResource(R.string.premium_2fast_chicken_wrap),
-                stringResource(R.string.premium_2fast_coconut_chicken_curry),
-                stringResource(R.string.premium_2fast_shrimp_noodles),
-                stringResource(R.string.premium_2fast_toast_egg_scramble)
-            ),
-            price = "$0.99",
-            recipeImageUrls = listOf(
-                "recipes/images/2fast2hungry/5_minute_omelette.webp",
-                "recipes/images/2fast2hungry/speedy_stir_fry.webp",
-                "recipes/images/2fast2hungry/quick_pasta_aglio_e_olio.webp",
-                "recipes/images/2fast2hungry/10_minute_tacos.webp",
-                "recipes/images/2fast2hungry/fast_fried_rice.webp",
-                "recipes/images/2fast2hungry/express_quesadilla.webp",
-                "recipes/images/2fast2hungry/rapid_ramen_bowl.webp",
-                "recipes/images/2fast2hungry/quick_grilled_cheese.webp",
-                "recipes/images/2fast2hungry/speedy_chicken_wrap.webp",
-                "recipes/images/2fast2hungry/15_minute_curry.webp",
-                "recipes/images/2fast2hungry/fast_noodle_bowl.webp",
-                "recipes/images/2fast2hungry/quick_toast_skillet.webp"
-            )
-        )
-        Cuisine.EASTERN_TRADITIONAL -> PremiumPackPreview(
-            cuisine = cuisine,
-            recipeNames = listOf(
-                stringResource(R.string.premium_recipe_borscht),
-                stringResource(R.string.premium_recipe_pierogi),
-                stringResource(R.string.premium_recipe_golubtsy),
-                stringResource(R.string.premium_recipe_stroganoff),
-                stringResource(R.string.premium_recipe_pelmeni),
-                stringResource(R.string.premium_recipe_kasha),
-                stringResource(R.string.premium_recipe_shchi),
-                stringResource(R.string.premium_recipe_kotleti),
-                stringResource(R.string.premium_recipe_vareniki),
-                stringResource(R.string.premium_recipe_olivier),
-                stringResource(R.string.premium_recipe_blini),
-                stringResource(R.string.premium_recipe_solyanka)
-            ),
-            price = "$1.49",
-            recipeImageUrls = listOf(
-                "recipes/images/easterntraditional/borscht.webp",
-                "recipes/images/easterntraditional/pierogi.webp",
-                "recipes/images/easterntraditional/golubtsy.webp",
-                "recipes/images/easterntraditional/beef_stroganoff.webp",
-                "recipes/images/easterntraditional/pelmeni.webp",
-                "recipes/images/easterntraditional/kasha.webp",
-                "recipes/images/easterntraditional/shchi.webp",
-                "recipes/images/easterntraditional/kotleti.webp",
-                "recipes/images/easterntraditional/vareniki.webp",
-                "recipes/images/easterntraditional/olivier_salad.webp",
-                "recipes/images/easterntraditional/blini.webp",
-                "recipes/images/easterntraditional/solyanka.webp"
-            )
-        )
-        Cuisine.EXOTIC_TROPICS -> PremiumPackPreview(
-            cuisine = cuisine,
-            recipeNames = listOf(
-                stringResource(R.string.premium_recipe_coconut_curry),
-                stringResource(R.string.premium_recipe_mango_sticky_rice),
-                stringResource(R.string.premium_recipe_pineapple_fried_rice),
-                stringResource(R.string.premium_recipe_plantains),
-                stringResource(R.string.premium_recipe_papaya_salad),
-                stringResource(R.string.premium_recipe_coconut_rice),
-                stringResource(R.string.premium_recipe_tuna_poke),
-                stringResource(R.string.premium_recipe_mango_lassi),
-                stringResource(R.string.premium_recipe_tropical_fruit_salad),
-                stringResource(R.string.premium_recipe_coconut_shrimp),
-                stringResource(R.string.premium_recipe_pineapple_salsa),
-                stringResource(R.string.premium_recipe_banana_fritters)
-            ),
-            price = "$1.49",
-            recipeImageUrls = listOf(
-                "recipes/images/exotictropics/coconut_curry.webp",
-                "recipes/images/exotictropics/mango_sticky_rice.webp",
-                "recipes/images/exotictropics/pineapple_fried_rice.webp",
-                "recipes/images/exotictropics/grilled_plantains.webp",
-                "recipes/images/exotictropics/papaya_salad.webp",
-                "recipes/images/exotictropics/coconut_rice.webp",
-                "recipes/images/exotictropics/tuna_poke_bowl.webp",
-                "recipes/images/exotictropics/mango_lassi.webp",
-                "recipes/images/exotictropics/tropical_fruit_salad.webp",
-                "recipes/images/exotictropics/coconut_shrimp.webp",
-                "recipes/images/exotictropics/pineapple_salsa.webp",
-                "recipes/images/exotictropics/banana_fritters.webp"
-            )
-        )
-        else -> PremiumPackPreview(
-            cuisine = cuisine,
-            recipeNames = listOf(
-                "Recipe 1", "Recipe 2", "Recipe 3",
-                "Recipe 4", "Recipe 5", "Recipe 6",
-                "Recipe 7", "Recipe 8", "Recipe 9",
-                "Recipe 10", "Recipe 11", "Recipe 12"
-            ),
-            price = "$1.99"
-        )
     }
 }

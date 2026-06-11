@@ -1,0 +1,75 @@
+{
+  "id": "speedy_stir_fry",
+  "name": "Stir Fry cu Pui",
+  "instructions": "1. Tăiați pieptul de pui în fâșii subțiri. Tăiați ardeiul gras și morcovul în julienne. Tăiați varza subțire. Tăiați usturoiul și răzuiți ghimbirul.\n\n2. Încălziți uleiul vegetal într-o tigaie mare pe foc puternic.\n\n3. Adăugați usturoiul și ghimbirul, gătiți 30 de secunde până devin parfumate.\n\n4. Adăugați fâșiile de pui și gătiți 3-4 minute până devin aurii și aproape gătite.\n\n5. Adăugați ardeiul gras, morcovul și varza. Gătiți 2-3 minute până legumele sunt crocante.\n\n6. Turnați sosul de soia și condimentați cu sare. Amestecați totul și gătiți încă 1 minut.\n\n7. Decorați cu ceapă verde. Serviți fierbinte imediat.",
+  "simpleInstructions": "1. Tăiați puiul și pregătiți legumele: ardei gras, morcov, varză, usturoi, ghimbir.\n\n2. Încălziți uleiul. Adăugați usturoi și ghimbir, gătiți 30 secunde.\n\n3. Adăugați puiul și gătiți 3-4 minute. Adăugați legumele și gătiți 2-3 minute.\n\n4. Condimentați cu sos de soia și sare. Decorați cu ceapă verde. Serviți.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 8,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "CHICKEN",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/speedy_stir_fry.webp",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Bell Pepper",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Carrot",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cabbage",
+      "quantity": 80,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

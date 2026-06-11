@@ -1,0 +1,45 @@
+{
+  "id": "5_minute_omelette",
+  "name": "Cheese Omelette",
+  "instructions": "1. Crack the eggs into a medium bowl. Add salt and black pepper. Whisk vigorously for 30 seconds until pale yellow and frothy.\n\n2. Heat the butter in a non-stick skillet over medium heat. Tilt the pan to coat evenly as butter melts.\n\n3. When butter is foamy, pour in the beaten eggs. Let set for 10 seconds, then gently push cooked edges toward center while tilting pan to let uncooked egg flow to edges.\n\n4. When eggs are mostly set but still slightly runny on top (about 2 minutes), sprinkle cheddar cheese evenly over surface.\n\n5. Fold one half of the omelette over the cheese. Press gently to seal.\n\n6. Cook for 30 more seconds until cheese melts. Slide onto plate and serve immediately.",
+  "simpleInstructions": "1. Whisk eggs with salt and pepper.\n\n2. Melt butter in skillet over medium heat.\n\n3. Pour in eggs, push edges toward center as they cook.\n\n4. When mostly set, sprinkle with cheese.\n\n5. Fold omelette over, cook until cheese melts.\n\n6. Serve immediately.",
+  "prepTimeMinutes": 2,
+  "cookTimeMinutes": 3,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/5_minute_omelette.webp",
+  "ingredients": [
+    {
+      "name": "Eggs",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

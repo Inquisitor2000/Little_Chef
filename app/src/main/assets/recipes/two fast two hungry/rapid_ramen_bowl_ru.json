@@ -1,0 +1,63 @@
+{
+  "id": "rapid_ramen_bowl",
+  "name": "Яичный рамэн",
+  "instructions": "1. Доведите 400мл воды до кипения в маленькой кастрюле. Добавьте яичную лапшу и варите 3-4 минуты до мягкости.\n\n2. Пока лапша варится, разогрейте кунжутное масло на маленькой сковороде на среднем огне. Добавьте измельченный чеснок и тертый имбирь, готовьте 30 секунд до аромата.\n\n3. В миске взбейте яйца с щепоткой соли. Отодвиньте готовую лапшу на одну сторону кастрюли. Влейте взбитые яйца в воду и осторожно помешивайте, чтобы создать нити яиц.\n\n4. Добавьте соевый соус в кастрюлю, перемешайте.\n\n5. Добавьте смесь чеснока и имбиря. Хорошо перемешайте.\n\n6. Разделите лапшу и бульон между 2 мисками. Украсьте нарезанным зеленым луком.\n\n7. Сразу подавайте горячими.",
+  "simpleInstructions": "1. Вскипятите воду, варите лапшу 3-4 минуты.\n\n2. Тем временем обжарите чеснок и имбирь в кунжутном масле.\n\n3. Отодвиньте лапшу, влейте яйца в воду для создания нитей.\n\n4. Добавьте соевый соус, чеснок и имбирь.\n\n5. Разделите по 2 мискам, украсьте зеленым луком.\n\n6. Подавайте горячими.",
+  "prepTimeMinutes": 3,
+  "cookTimeMinutes": 5,
+  "servings": 2,
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/rapid_ramen_bowl.webp",
+  "ingredients": [
+    {
+      "name": "Egg Noodles",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sesame Oil",
+      "quantity": 15,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

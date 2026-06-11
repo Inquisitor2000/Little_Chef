@@ -1,0 +1,75 @@
+{
+  "id": "banana_fritters",
+  "name": "Банановые оладьи",
+  "instructions": "1. Очистите бананы и разомните вилкой в миске до однородности, но с небольшими кусочками.\n\n2. В отдельной миске смешайте муку, сахар, разрыхлитель, корицу и соль.\n\n3. Добавьте сухие ингредиенты к размятым бананам. Влейте молоко и ванильный экстракт. Перемешайте до объединения. Не перемешивайте слишком долго.\n\n4. Разогрейте масло в глубокой сковороде на среднем огне (около 175°C).\n\n5. Выкладывайте ложкой тесто в горячее масло, примерно по 2 столовые ложки. Слегка приплюсните обратной стороной ложки.\n\n6. Жарьте по 2-3 минуты с каждой стороны до золотистого цвета и полной готовности.\n\n7. Выложите на бумажные полотенца. Посыпьте сахарной пудрой или полейте медом и подавайте теплыми. Отлично сочетаются с шариком кокосового мороженого.",
+  "simpleInstructions": "1. Разомните бананы в миске.\n\n2. Смешайте муку, сахар, разрыхлитель, корицу и соль.\n\n3. Добавьте молоко и ваниль, перемешайте.\n\n4. Выкладывайте ложкой тесто в горячее масло.\n\n5. Жарьте по 2-3 минуты с каждой стороны до золотистого цвета.\n\n6. Посыпьте сахарной пудрой и подавайте теплыми.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 15,
+  "servings": 6,
+  "cuisine": "Exotic Tropics",
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Banana",
+      "quantity": 320,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 4.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/banana_fritters.webp"
+}

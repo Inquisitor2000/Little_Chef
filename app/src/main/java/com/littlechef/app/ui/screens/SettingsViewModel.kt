@@ -2,7 +2,6 @@ package com.littlechef.app.ui.screens
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.littlechef.app.data.analytics.AnalyticsService
 import com.littlechef.app.data.preferences.LocaleManager
 import com.littlechef.app.data.preferences.OnboardingPreferences
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,8 +15,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SettingsViewModel @Inject constructor(
     private val preferences: OnboardingPreferences,
-    private val localeManager: LocaleManager,
-    private val analyticsService: com.littlechef.app.data.analytics.AnalyticsService
+    private val localeManager: LocaleManager
 ) : ViewModel() {
 
     private val _currentLanguage = MutableStateFlow(localeManager.getLanguage())
@@ -62,7 +60,6 @@ class SettingsViewModel @Inject constructor(
     fun setLanguage(languageCode: String) {
         localeManager.setLanguage(languageCode)
         _currentLanguage.value = languageCode
-        analyticsService.setUserLanguage(languageCode)
     }
 
     suspend fun saveApiKey(apiKey: String?) {

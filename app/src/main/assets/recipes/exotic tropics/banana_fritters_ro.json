@@ -1,0 +1,75 @@
+{
+  "id": "banana_fritters",
+  "name": "Gogoși cu Banane",
+  "instructions": "1. Curăță bananele și pasează-le într-un bol cu o furculiță până devin netede, dar cu mici bucăți rămase.\n\n2. Într-un bol separat, amestecă făina, zahărul, praful de copt, scorțișoara și sarea.\n\n3. Adaugă ingredientele uscate peste bananele pasate. Toarnă laptele și extractul de vanilie. Amestecă până se combină. Nu amesteca prea mult.\n\n4. Încinge uleiul într-o tigaie adâncă la foc mediu (aproximativ 175°C).\n\n5. Pune linguri de aluat în uleiul încins, câte 2 linguri fiecare. Aplatizează ușor cu spatele lingurii.\n\n6. Prăjește 2-3 minute pe fiecare parte până devin aurii și gătite complet.\n\n7. Scoate pe prosoape de hârtie. Presară zahăr pudră sau stropește cu miere și servește calde. Excelente cu o cupă de înghețată de cocos.",
+  "simpleInstructions": "1. Pasează bananele într-un bol.\n\n2. Amestecă făina, zahărul, praful de copt, scorțișoara și sarea.\n\n3. Adaugă laptele și vanilia, amestecă.\n\n4. Pune linguri de aluat în uleiul încins.\n\n5. Prăjește 2-3 minute pe fiecare parte până aurii.\n\n6. Presară zahăr pudră și servește cald.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 15,
+  "servings": 6,
+  "cuisine": "Exotic Tropics",
+  "mealType": "DESSERT",
+  "dishCategory": "DESSERT",
+  "ingredients": [
+    {
+      "name": "Banana",
+      "quantity": 320,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Baking Powder",
+      "quantity": 4.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cinnamon",
+      "quantity": 2.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Milk",
+      "quantity": 60,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vanilla Extract",
+      "quantity": 5,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 500,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1.5,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Powdered Sugar",
+      "quantity": 20,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/banana_fritters.webp"
+}

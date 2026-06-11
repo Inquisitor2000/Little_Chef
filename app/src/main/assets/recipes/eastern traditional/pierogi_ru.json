@@ -1,0 +1,75 @@
+{
+  "id": "pierogi",
+  "name": "Пироги (Вареники с картофелем и сыром)",
+  "instructions": "1. Для теста: Смешайте муку с щепоткой соли. Добавьте яйцо, сметану и постепенно теплую воду. Месите 5-7 минут до получения гладкого теста. Заверните в пленку и оставьте отдыхать на 30 минут.\n\n2. Для начинки: Очистите картофель и отварите в подсоленной воде до мягкости, около 15-20 минут. Слейте воду и хорошо разомните.\n\n3. Смешайте картофельное пюре с тертым сыром, золотистым жареным луком, солью и перцем по вкусу.\n\n4. Раскатайте тесто на посыпанной мукой поверхности до толщины 3 мм. Вырежьте круги стаканом или формой диаметром около 8 см.\n\n5. Выложите чайную ложку начинки в центр каждого круга. Защипните края, чтобы плотно запечатать.\n\n6. Варите пироги в подсоленной воде порциями по 3-4 минуты после всплытия.\n\n7. Подавайте горячими со сметаной, жареным луком и свежим укропом.",
+  "simpleInstructions": "1. Замесите тесто из муки, яйца, сметаны и воды. Дайте отдохнуть.\n\n2. Отварите картофель и разомните.\n\n3. Смешайте пюре с сыром, жареным луком и специями.\n\n4. Раскатайте тесто и вырежьте круги.\n\n5. Наполните и запечатайте вареники.\n\n6. Варите 3-4 минуты после всплытия.\n\n7. Подавайте со сметаной и луком.",
+  "prepTimeMinutes": 40,
+  "cookTimeMinutes": 25,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "All-Purpose Flour",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Potato",
+      "quantity": 500,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Eggs",
+      "quantity": 1,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 150,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Butter",
+      "quantity": 50,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 6,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 150,
+      "unit": "ml",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/pierogi.webp"
+}

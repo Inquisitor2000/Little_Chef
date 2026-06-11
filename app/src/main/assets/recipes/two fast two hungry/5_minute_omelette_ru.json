@@ -1,0 +1,45 @@
+{
+  "id": "5_minute_omelette",
+  "name": "Омлет с сыром",
+  "instructions": "1. Разбейте яйца в среднюю миску. Добавьте соль и черный перец. Энергично взбейте 30 секунд до бледно-желтого цвета и пены.\n\n2. Растопите сливочное масло на антипригарной сковороде на среднем огне. Наклоните сковороду, чтобы равномерно покрыть дно.\n\n3. Когда масло начнет пениться, влейте взбитые яйца. Дайте схватиться 10 секунд, затем осторожно сдвигайте готовые края к центру, наклоняя сковороду.\n\n4. Когда яйца почти готовы, но еще слегка жидкие сверху (около 2 минут), равномерно посыпьте сыром чеддер.\n\n5. Сложите одну половину омлета над сыром. Слегка прижмите.\n\n6. Готовьте еще 30 секунд, пока сыр не расплавится. Переложите на тарелку и сразу подавайте.",
+  "simpleInstructions": "1. Взбейте яйца с солью и перцем.\n\n2. Растопите масло на сковороде на среднем огне.\n\n3. Влейте яйца, сдвигайте края к центру.\n\n4. Когда почти готовы, посыпьте сыром.\n\n5. Сложите омлет, готовьте пока сыр не расплавится.\n\n6. Сразу подавайте.",
+  "prepTimeMinutes": 2,
+  "cookTimeMinutes": 3,
+  "servings": 2,
+  "mealType": "BREAKFAST",
+  "dishCategory": "MAIN_COURSE",
+  "cuisine": "Two Fast Two Hungry",
+  "imageUrl": "recipes/images/2fast2hungry/5_minute_omelette.webp",
+  "ingredients": [
+    {
+      "name": "Eggs",
+      "quantity": 4,
+      "unit": "pcs",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Butter",
+      "quantity": 25,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cheddar Cheese",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ]
+}

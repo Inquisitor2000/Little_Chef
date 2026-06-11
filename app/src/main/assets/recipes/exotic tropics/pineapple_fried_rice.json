@@ -1,0 +1,87 @@
+{
+  "id": "pineapple_fried_rice",
+  "name": "Pineapple Fried Rice",
+  "instructions": "1. If using fresh pineapple, cut it in half, scoop out the flesh, and dice it. Reserve the hollowed pineapple halves for serving (optional).\n\n2. Heat oil in a wok or large pan over high heat. Add the shrimp and stir-fry for 2 minutes until pink. Remove and set aside.\n\n3. In the same wok, add a little more oil. Scramble the eggs quickly, breaking them into small pieces.\n\n4. Add the cooked rice, breaking up any clumps. Stir-fry for 3-4 minutes.\n\n5. Add the pineapple, peas, diced carrots, and soy sauce. Stir-fry for 2 minutes.\n\n6. Return the shrimp to the wok. Add green onions and toss everything together.\n\n7. Season with salt and white pepper. Serve in the hollowed pineapple halves or a bowl, garnished with cilantro.",
+  "simpleInstructions": "1. Dice pineapple; cook shrimp until pink, set aside.\n\n2. Scramble eggs in oil.\n\n3. Add rice, stir-fry 3-4 minutes.\n\n4. Add pineapple, veggies, soy sauce.\n\n5. Return shrimp, add green onions.\n\n6. Season and serve with cilantro.",
+  "prepTimeMinutes": 15,
+  "cookTimeMinutes": 20,
+  "servings": 4,
+  "cuisine": "Exotic Tropics",
+  "mealType": "LUNCH",
+  "dishCategory": "RICE_BOWL",
+  "ingredients": [
+    {
+      "name": "White Rice",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Pineapple",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Shrimp",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Eggs",
+      "quantity": 2,
+      "unit": "pcs",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Peas",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrot",
+      "quantity": 60,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Soy Sauce",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Scallion",
+      "quantity": 30,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 45,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cilantro",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/pineapple_fried_rice.webp"
+}

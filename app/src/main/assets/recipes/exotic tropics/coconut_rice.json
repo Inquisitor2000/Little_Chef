@@ -1,0 +1,45 @@
+{
+  "id": "coconut_rice",
+  "name": "Coconut Rice",
+  "instructions": "1. Rinse the rice in cold water until the water runs clear. Drain well.\n\n2. In a medium saucepan, combine the coconut milk, water, and salt. Bring to a gentle simmer over medium heat.\n\n3. Add the rinsed rice and stir once. Return to a simmer.\n\n4. Reduce heat to low, cover tightly, and cook for 15-18 minutes until all liquid is absorbed.\n\n5. Remove from heat and let it sit covered for 5 minutes.\n\n6. Fluff the rice with a fork. Stir in the sugar until dissolved.\n\n7. Serve warm as a side dish to curries, grilled meats, or tropical dishes. Garnish with toasted coconut flakes or chopped cilantro if desired.",
+  "simpleInstructions": "1. Rinse rice well.\n\n2. Simmer coconut milk, water, and salt.\n\n3. Add rice and return to simmer.\n\n4. Cover and cook on low 15-18 minutes.\n\n5. Let rest 5 minutes, then fluff.\n\n6. Stir in sugar and serve.",
+  "prepTimeMinutes": 5,
+  "cookTimeMinutes": 25,
+  "servings": 6,
+  "cuisine": "Exotic Tropics",
+  "mealType": "LUNCH",
+  "dishCategory": "SIDE_DISH",
+  "ingredients": [
+    {
+      "name": "White Rice",
+      "quantity": 300,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Coconut Milk",
+      "quantity": 200,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Water",
+      "quantity": 250,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Sugar",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 3,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/coconut_rice.webp"
+}

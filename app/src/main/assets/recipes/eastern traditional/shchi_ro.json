@@ -1,0 +1,75 @@
+{
+  "id": "shchi",
+  "name": "Șci (Ciorbă de varză)",
+  "instructions": "1. Taie varza fâșii subțiri. Curăță și taie cartofii cubulețe, iar morcovii și ceapa toacă-le mărunt.\n\n2. Într-o oală mare, încălzește uleiul la foc mediu. Călește ceapa 3 minute, apoi adaugă morcovii și gătește încă 3 minute.\n\n3. Adaugă varza și amestecă bine. Gătește 5 minute până se înmoaie ușor.\n\n4. Toarnă supa de legume, adaugă cartofii și frunza de dafin. Adu la fierbere.\n\n5. Reduce focul și fierbe la foc mic 20-25 minute până când legumele sunt fragede.\n\n6. Asezonează cu sare, piper și foi de dafin suplimentare după gust.\n\n7. Servește fierbinte cu smântână și pâine de secară.",
+  "simpleInstructions": "1. Taie varza, cartofii, morcovii și ceapa.\n\n2. Călește ceapa și morcovii.\n\n3. Adaugă varza și gătește 5 minute.\n\n4. Toarnă supa, adaugă cartofii și dafinul. Fierbe.\n\n5. Fierbe la foc mic 20-25 minute.\n\n6. Asezonează cu sare și piper.\n\n7. Servește cu smântână și pâine de secară.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 40,
+  "servings": 6,
+  "cuisine": "Eastern Traditional",
+  "mealType": "DINNER",
+  "dishCategory": "SOUP",
+  "ingredients": [
+    {
+      "name": "Cabbage",
+      "quantity": 400,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Potato",
+      "quantity": 360,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Carrot",
+      "quantity": 120,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Vegetable Broth",
+      "quantity": 1.5,
+      "unit": "l",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Bay Leaves",
+      "quantity": 2,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sour Cream",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 6,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/easterntraditional/shchi.webp"
+}

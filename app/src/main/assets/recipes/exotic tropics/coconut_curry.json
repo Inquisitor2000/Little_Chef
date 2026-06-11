@@ -1,0 +1,81 @@
+{
+  "id": "coconut_curry",
+  "name": "Coconut Curry",
+  "instructions": "1. Cut the chicken breast into bite-sized chunks. Season with salt and pepper.\n\n2. Heat oil in a large pan over medium-high heat. Sear the chicken for 4-5 minutes until golden. Remove and set aside.\n\n3. In the same pan, add the onion and cook for 3 minutes until softened. Add garlic and ginger, cook for 1 minute.\n\n4. Add curry powder and stir for 30 seconds until fragrant.\n\n5. Pour in the coconut milk and bring to a gentle simmer. Add the chicken back in.\n\n6. Cook for 10-12 minutes until the chicken is cooked through and the sauce has thickened slightly.\n\n7. Season with salt and pepper to taste. Serve over steamed rice, garnished with fresh cilantro.",
+  "simpleInstructions": "1. Cut chicken into chunks and sear until golden.\n\n2. Cook onion, garlic and ginger.\n\n3. Add curry powder, then coconut milk.\n\n4. Return chicken and simmer 10-12 minutes.\n\n5. Season and serve over rice with cilantro.",
+  "prepTimeMinutes": 10,
+  "cookTimeMinutes": 25,
+  "servings": 4,
+  "cuisine": "Exotic Tropics",
+  "mealType": "DINNER",
+  "dishCategory": "MAIN_COURSE",
+  "ingredients": [
+    {
+      "name": "Chicken Breast",
+      "quantity": 500,
+      "unit": "g",
+      "isStarIngredient": true
+    },
+    {
+      "name": "Coconut Milk",
+      "quantity": 400,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Onion",
+      "quantity": 100,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Garlic",
+      "quantity": 12,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Ginger",
+      "quantity": 15,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Curry Powder",
+      "quantity": 12,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "White Rice",
+      "quantity": 200,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Sunflower Oil",
+      "quantity": 30,
+      "unit": "ml",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Cilantro",
+      "quantity": 10,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Salt",
+      "quantity": 6,
+      "unit": "g",
+      "isStarIngredient": false
+    },
+    {
+      "name": "Black Pepper",
+      "quantity": 1,
+      "unit": "g",
+      "isStarIngredient": false
+    }
+  ],
+  "imageUrl": "recipes/images/exotictropics/coconut_curry.webp"
+}
