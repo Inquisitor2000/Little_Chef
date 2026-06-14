@@ -96,8 +96,6 @@ IOS_MIGRATION_PLAN.md
 # Scraper tool (separate Python project)
 scraper/
 
-# Screenshots (media, not source)
-Screenshots/
 
 # Onboarding design assets (not referenced by app)
 onboard/

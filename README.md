@@ -4,6 +4,21 @@ AI-powered meal planning app for Android. Plan meals, scale servings, track pant
 
 **Stack:** Kotlin · Jetpack Compose · Material 3 · Clean Architecture + MVVM · Dagger Hilt · Room · DataStore
 
+## Screenshots
+
+<table>
+  <tr>
+    <td><img src="Screenshots/Screenshot_20260611_215712.png" width="200"/></td>
+    <td><img src="Screenshots/Screenshot_20260611_215718.png" width="200"/></td>
+    <td><img src="Screenshots/Screenshot_20260611_215722.png" width="200"/></td>
+  </tr>
+  <tr>
+    <td><img src="Screenshots/Screenshot_20260611_215736.png" width="200"/></td>
+    <td><img src="Screenshots/Screenshot_20260611_215828.png" width="200"/></td>
+    <td><img src="Screenshots/Screenshot_20260611_215844.png" width="200"/></td>
+  </tr>
+</table>
+
 ## Tech Stack
 
 | Layer | Technology |
