@@ -109,9 +109,6 @@ powers/
 gradlew
 gradlew.bat
 
-# Readme (you know your project)
-README.md
-
 # Dev helper scripts & source icon
 verify_phase1.sh
 generate_*.py
