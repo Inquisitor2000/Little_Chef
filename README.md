@@ -4,21 +4,6 @@ AI-powered meal planning app for Android. Plan meals, scale servings, track pant
 
 **Stack:** Kotlin · Jetpack Compose · Material 3 · Clean Architecture + MVVM · Dagger Hilt · Room · DataStore
 
-## Screenshots
-
-<table>
-  <tr>
-    <td><img src="Screenshots/Screenshot_20260611_215712.png" width="200"/></td>
-    <td><img src="Screenshots/Screenshot_20260611_215718.png" width="200"/></td>
-    <td><img src="Screenshots/Screenshot_20260611_215722.png" width="200"/></td>
-  </tr>
-  <tr>
-    <td><img src="Screenshots/Screenshot_20260611_215736.png" width="200"/></td>
-    <td><img src="Screenshots/Screenshot_20260611_215828.png" width="200"/></td>
-    <td><img src="Screenshots/Screenshot_20260611_215844.png" width="200"/></td>
-  </tr>
-</table>
-
 ## Tech Stack
 
 | Layer | Technology |
@@ -142,15 +127,13 @@ Relationships:
 
 ```
 Little_Chef/
-├── app/                          # Main application module
-│   └── src/main/
-│   ├── assets/
-│   │   ├── recipes/          # 230+ bundled recipes (14 cuisines)
-│   │   └── translations/     # RU/RO ingredient & category translations
-│   ├── java/com/littlechef/app/
-│   └── res/                  # Layouts, strings (en/ru/ro), themes
-├── scraper/                      # Recipe scraping scripts
-└── onboard/                      # Onboarding assets
+└── app/                          # Main application module
+    └── src/main/
+        ├── assets/
+        │   ├── recipes/          # 230+ bundled recipes (14 cuisines)
+        │   └── translations/     # RU/RO ingredient & category translations
+        ├── java/com/littlechef/app/
+        └── res/                  # Layouts, strings (en/ru/ro), themes
 ```
 
 All 230+ recipes are fully translated in English, Romanian, and Russian — no in-app purchases, no downloads, everything included in the app.
