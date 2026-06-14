@@ -23,8 +23,18 @@ android {
         }
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("littlechef.keystore")
+            storePassword = "littlechef"
+            keyAlias = "littlechef"
+            keyPassword = "littlechef"
+        }
+    }
+
     buildTypes {
         release {
+            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
